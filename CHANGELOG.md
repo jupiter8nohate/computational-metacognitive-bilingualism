@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- HARMONI-666 bounded proof gate for CMB-66 with six epistemic states, six proof gates, and six sovereignty failsafes.
+- `MISSINGNO_666` fail-closed sentinel when a requested `PROOF` exceeds the verified domain or fails any proof gate.
+- `cmb-machine harmoni-manifest` and `cmb-machine harmoni-evaluate` commands for machine-readable inspection and release gating.
+- JSON Schema and normative specification for HARMONI-666.
+- Machine index discovery metadata and unit tests for proof retention, fail-closed behavior, strict gate typing, and the 6/6/6 protocol contract.
+
+
 All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
