@@ -19,18 +19,18 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## The 12 principles
 
-1. **Human appeal** — consequential automated decisions should have a meaningful path to human review and contest.
-2. **Profile ≠ person** — behavioral or statistical profiles are partial representations, not complete human identities.
-3. **Prediction ≠ destiny** — probability should not become irreversible judgment.
-4. **Attention ≠ consent** — clicks, scrolling, viewing, and engagement are not blanket permission for unrelated profiling or secondary use.
-5. **Difference ≠ defect** — atypical communication, cognition, movement, attention, or affect should not automatically be treated as error, deception, or low value.
-6. **AI disclosure** — people should know when automated inference materially affects consequential decisions about them.
-7. **Human override and Recovery** — high-impact systems need operational paths to stop, correct, reverse, and recover from failure.
-8. **Data minimization and purpose limitation** — the ability to collect data is not sufficient justification to collect or reuse it.
-9. **Authorship and provenance** — preserve useful provenance while distinguishing integrity evidence from legal ownership.
-10. **Independent evaluation** — developers should not be the only parties deciding whether their own systems are safe, fair, secure, or appropriate.
-11. **Cognitive freedom** — a model's inference should not become final authority over a person's identity, motives, intelligence, emotional meaning, or self-definition.
-12. **Capability ≠ authority** — greater computational ability does not automatically create moral, legal, political, medical, or social legitimacy.
+1. **Human appeal** ✦ consequential automated decisions should have a meaningful path to human review and contest.
+2. **Profile ≠ person** ✦ behavioral or statistical profiles are partial representations, not complete human identities.
+3. **Prediction ≠ destiny** ✦ probability should not become irreversible judgment.
+4. **Attention ≠ consent** ✦ clicks, scrolling, viewing, and engagement are not blanket permission for unrelated profiling or secondary use.
+5. **Difference ≠ defect** ✦ atypical communication, cognition, movement, attention, or affect should not automatically be treated as error, deception, or low value.
+6. **AI disclosure** ✦ people should know when automated inference materially affects consequential decisions about them.
+7. **Human override and Recovery** ✦ high-impact systems need operational paths to stop, correct, reverse, and recover from failure.
+8. **Data minimization and purpose limitation** ✦ the ability to collect data is not sufficient justification to collect or reuse it.
+9. **Authorship and provenance** ✦ preserve useful provenance while distinguishing integrity evidence from legal ownership.
+10. **Independent evaluation** ✦ developers should not be the only parties deciding whether their own systems are safe, fair, secure, or appropriate.
+11. **Cognitive freedom** ✦ a model's inference should not become final authority over a person's identity, motives, intelligence, emotional meaning, or self-definition.
+12. **Capability ≠ authority** ✦ greater computational ability does not automatically create moral, legal, political, medical, or social legitimacy.
 
 ## Existing foundations
 
