@@ -1,4 +1,5 @@
 # COMPUTATIONAL METACOGNITIVE BILINGUALISM
+
 ## CMB // HUMAN SOVEREIGNTY MANIFESTO
 
 **Author:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8
@@ -16,16 +17,26 @@ OPTIMIZATION != MORALITY
 INTELLIGENCE != SOVEREIGNTY
 
 HUMAN_AGENCY > MACHINE_AUTHORITY
-OBSERVE
-CLASSIFY
-PREDICT
-GENERATE
-SIMULATE
-MEANING
-CONSENT
-AUTHORSHIP
-JUDGMENT
-SELF_DEFINITION
+```
+
+```text
+MACHINE_CAN = {
+    OBSERVE,
+    CLASSIFY,
+    PREDICT,
+    GENERATE,
+    SIMULATE,
+}
+
+HUMAN_RETAINS = {
+    MEANING,
+    CONSENT,
+    AUTHORSHIP,
+    JUDGMENT,
+    SELF_DEFINITION,
+}
+```
+
 CMB rejects the assumption that a statistical representation of a human being is equivalent to the human being.
 
 A prediction is not destiny.
@@ -36,23 +47,33 @@ A model is not a mind.
 
 Computational capability does not automatically create moral authority.
 
-Sovereign Integration
+## Sovereign Integration
 
 The purpose of CMB is not to reject artificial intelligence.
 
 The purpose is sovereign integration:
+
+```text
 HUMAN + MACHINE
        !=
 HUMAN SUBMISSION TO MACHINE
- AI may assist human cognition.
+```
+
+AI may assist human cognition.
 
 AI may not become the unquestioned authority over human identity.
+
+```text
 LEARN THE MACHINE.
 AUDIT THE MACHINE.
 QUESTION THE MACHINE.
 USE THE MACHINE.
 
 DO NOT SURRENDER THE HUMAN.
-CMB // Computational Metacognitive Bilingualism
-Jupiter Hudson / WisdomLoveThePoet / Jupiter 8
-2026
+```
+
+**CMB // Computational Metacognitive Bilingualism**
+
+**Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
+
+**2026**
