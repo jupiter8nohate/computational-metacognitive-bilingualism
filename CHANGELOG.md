@@ -28,6 +28,7 @@ All notable changes to the CMB provenance tool are documented here.
 ### Changed
 
 - The CMB Sovereignty Gate now feeds pull-request scan reports into `cmbc gate-report`; high-friction findings fail closed instead of being printed without enforcement.
+- Governance bootstrap recovery now requires both repository-owner GitHub authentication and an explicit latest-commit `CMB-AUTHORIZED:` marker when a high-friction workflow change would otherwise self-lock the gate. This marker is documented as weaker than CMB Ed25519 authorization and does not replace branch protection or independent review.
 - Ed25519 key files are now created exclusively with restrictive creation modes and no overwrite window.
 - MCP, documentation, and C2PA workflow path filters now cover the source/schema dependencies they actually consume.
 - Security support documentation now tracks the 1.4.x development line while keeping v1.4.0 unreleased until tag gates succeed.
