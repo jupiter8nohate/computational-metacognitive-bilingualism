@@ -6,13 +6,13 @@ on:
       - "src/cmb_agents/**"
       - "agents/**"
       - "tests/test_mcp_adapter.py"
-      - "tests/test_mcp_adapter.py"
       - "pyproject.toml"
       - ".github/workflows/mcp-compatibility.yml"
   pull_request:
     paths:
       - "src/cmb_agents/**"
       - "agents/**"
+      - "tests/test_mcp_adapter.py"
       - "pyproject.toml"
       - ".github/workflows/mcp-compatibility.yml"
 
