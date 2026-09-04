@@ -153,7 +153,7 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB-EDU Kids`](docs/CMB_EDU_KIDS.md) - the canonical child-facing Flamingoglyph computational-literacy curriculum.
 - [`CMB Metacognitive Context Envelope v1`](schemas/cmb.edu.v1.schema.json) - the canonical strict schema for declared context, sovereignty boundaries, and deny-by-default privacy declarations.
 
-CMB-Z13, HARMONI, and the Creator Provenance bundle are part of the canonical provenance sealing set. The next tag-triggered signed release will seal their exact bytes together with the rest of the canonical CMB corpus as one explicit file set.
+Reclaiming the Pen, CMB-Z13, HARMONI, and the Creator Provenance bundle are part of the canonical provenance sealing set. The next tag-triggered signed release will seal their exact bytes together with the rest of the canonical CMB corpus as one explicit file set.
 
 The project now has a deliberate progression:
 
