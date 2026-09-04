@@ -68,6 +68,13 @@ jobs:
           grep -Fq '<link rel="canonical" href="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/">' /tmp/cmb-gsb-pages/index.html
           grep -Fq '<loc>https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/</loc>' /tmp/cmb-gsb-pages/sitemap.xml
           grep -Fq 'Sitemap: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/sitemap.xml' /tmp/cmb-gsb-pages/robots.txt
+          grep -Fq 'Provenance Ledger' /tmp/cmb-gsb-pages/index.html
+          grep -Fq 'Human ↔ Machine Boundary' /tmp/cmb-gsb-pages/index.html
+          grep -Fq 'Publication Surfaces' /tmp/cmb-gsb-pages/index.html
+          if grep -n '—' /tmp/cmb-gsb-pages/index.html /tmp/cmb-gsb-pages/site.css /tmp/cmb-gsb-pages/source.md; then
+            echo "Em dash regression detected in the public publication surface"
+            exit 1
+          fi
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'

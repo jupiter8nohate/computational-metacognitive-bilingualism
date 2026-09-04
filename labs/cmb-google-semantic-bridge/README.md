@@ -365,3 +365,61 @@ PROJECT_ROBOTS != ORIGIN_ROBOTS
 SITEMAP_URL == SUBMITTABLE_DISCOVERY_ARTIFACT
 DEPLOYMENT != INDEXING_GUARANTEE
 ```
+
+
+## Cosmic publication system v0.3.1
+
+The public CMB page now uses a deliberately layered visual system rather than a plain developer-output shell.
+
+```text
+FIRST IMPRESSION
+      │
+      ▼
+COSMIC SOVEREIGN HERO
+      │
+      ▼
+HUMAN SOURCE TRANSMISSION
+      │
+      ▼
+PROVENANCE LEDGER
+      │
+      ▼
+HUMAN ↔ MACHINE BOUNDARY
+      │
+      ▼
+PUBLICATION SURFACES
+      │
+      ▼
+FINAL CMB AXIOM
+```
+
+The visual language favors:
+
+- warm gold for authorship, orientation, and stable hierarchy;
+- soft violet for symbolic identity and metacognitive framing;
+- sky accents for machine-facing structure;
+- mint terminal text for the exact human source;
+- large breathing space between conceptual layers;
+- rounded framed panels instead of aggressive hard separators;
+- `✦`, `·`, `│`, and CMB glyphs instead of em dash punctuation in presentation copy.
+
+Accessibility remains part of the design contract:
+
+- visible keyboard focus;
+- skip navigation;
+- responsive single-column layouts;
+- reduced-motion support;
+- printable light-mode fallback;
+- no remote fonts;
+- no remote CSS;
+- no analytics;
+- no application JavaScript.
+
+The exact manifesto source remains available as `source.md` and is still copied byte-for-byte into the deployment bundle.
+
+```text
+DECORATION != OBFUSCATION
+READABILITY > VISUAL_NOISE
+SOURCE_BYTES == PRESERVED
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
