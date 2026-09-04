@@ -50,6 +50,68 @@ class ProofGate(str, Enum):
     VERIFIER_PASSED = "VERIFIER_PASSED"
 
 
+class DiscoveryStage(str, Enum):
+    """Six ordered stages that formalize an anomaly into a justified claim."""
+
+    UNKNOWN = "UNKNOWN"
+    MISSINGNO = "MISSINGNO"
+    QUESTION = "QUESTION"
+    TEST = "TEST"
+    EVIDENCE = "EVIDENCE"
+    JUSTIFIED_CLAIM = "JUSTIFIED_CLAIM"
+
+
+DISCOVERY_LADDER: Final[tuple[DiscoveryStage, ...]] = (
+    DiscoveryStage.UNKNOWN,
+    DiscoveryStage.MISSINGNO,
+    DiscoveryStage.QUESTION,
+    DiscoveryStage.TEST,
+    DiscoveryStage.EVIDENCE,
+    DiscoveryStage.JUSTIFIED_CLAIM,
+)
+
+TRUTH_DISTINCTIONS: Final[tuple[str, ...]] = (
+    "PROVENANCE != MYTHOLOGY",
+    "MYTHOLOGY != FALSEHOOD",
+    "SYMBOLISM != EVIDENCE",
+    "EVIDENCE != TOTAL_MEANING",
+)
+
+
+def next_discovery_stage(stage: DiscoveryStage | str) -> DiscoveryStage | None:
+    """Return the only valid next stage in the HARMONI discovery ladder."""
+
+    try:
+        current = (
+            stage if isinstance(stage, DiscoveryStage)
+            else DiscoveryStage(str(stage).upper())
+        )
+    except ValueError as exc:
+        raise ValueError(f"Unknown discovery stage: {stage!r}") from exc
+
+    index = DISCOVERY_LADDER.index(current)
+    if index == len(DISCOVERY_LADDER) - 1:
+        return None
+    return DISCOVERY_LADDER[index + 1]
+
+
+def validate_discovery_transition(
+    current: DiscoveryStage | str,
+    proposed: DiscoveryStage | str,
+) -> bool:
+    """Permit only the next adjacent discovery stage; stage skipping fails closed."""
+
+    try:
+        target = (
+            proposed if isinstance(proposed, DiscoveryStage)
+            else DiscoveryStage(str(proposed).upper())
+        )
+    except ValueError as exc:
+        raise ValueError(f"Unknown discovery stage: {proposed!r}") from exc
+
+    return next_discovery_stage(current) is target
+
+
 SOVEREIGNTY_FAILSAFES: Final[tuple[str, ...]] = (
     "PROFILE != PERSON",
     "MODEL != MIND",
@@ -197,6 +259,20 @@ def harmoni_manifest() -> dict[str, object]:
                 "HUMAN": HUMAN_FINAL,
             },
             "boundary": "SCRIPTURAL_MOTIF_NOT_EMPIRICAL_PROOF",
+        },
+        "epistemological_ladder": {
+            "creative_model_inputs": ["REALITY", "FICTION", "FANTASY"],
+            "creative_model_output": "CREATIVE_MODEL_OF_THE_UNKNOWN",
+            "stages": [stage.value for stage in DISCOVERY_LADDER],
+            "truth_distinctions": list(TRUTH_DISTINCTIONS),
+            "final_authority": HUMAN_FINAL,
+            "rules": {
+                "stage_skipping": "DENIED",
+                "missingno_role": "ANOMALY_PLACEHOLDER_AND_MODEL_BOUNDARY",
+                "machine_role": "TEST_AND_VERIFICATION",
+                "human_role": "QUESTION_MEANING_JUDGMENT",
+                "justified_claim_is_proof": False,
+            },
         },
         "epistemic_states": [state.value for state in EpistemicState],
         "proof_gates": [gate.value for gate in ProofGate],
