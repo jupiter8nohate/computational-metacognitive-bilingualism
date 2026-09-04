@@ -331,6 +331,47 @@
         "external validation"
       ],
       "declared_meaning": "Publicly documents the current lack of independent certification and defines a narrow, reproducible external review scope."
+    },
+    {
+      "id": "cmb-edu-kids",
+      "title": "CMB-EDU Kids - Flamingoglyph Learning Layer",
+      "path": "docs/CMB_EDU_KIDS.md",
+      "format": "markdown",
+      "kind": "child-facing computational and metacognitive literacy curriculum",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "computational literacy",
+        "metacognition",
+        "Flamingoglyph Code",
+        "privacy",
+        "consent",
+        "verification",
+        "human-machine collaboration"
+      ],
+      "declared_meaning": "Elementary-school-facing CMB learning layer that teaches children to notice, question, verify, decide, create, protect privacy, and distinguish human self-description from machine inference."
+    },
+    {
+      "id": "cmb-edu-schema",
+      "title": "CMB Metacognitive Context Envelope v1 Schema",
+      "path": "schemas/cmb.edu.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable educational context schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "human-declared context",
+        "epistemic source",
+        "privacy defaults",
+        "sovereignty boundaries",
+        "temporary context",
+        "machine-readable education"
+      ],
+      "declared_meaning": "Strict schema for CMB-EDU envelopes. It records declared context as human-declared, forbids machine-inferred state in the v1 envelope, and encodes deny-by-default privacy declarations without claiming external enforcement."
     }
   ]
 }
