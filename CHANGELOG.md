@@ -11,6 +11,8 @@
 - Machine index discovery metadata and unit tests for proof retention, fail-closed behavior, strict gate typing, and the 6/6/6 protocol contract.
 - Revelation 13:18 literary design key mapping wisdom to human judgment, understanding to HARMONI interpretation, calculation to machine verification, and the human vertex to `HUMAN_FINAL`.
 - Canonical release sealing expanded to include HARMONI-666 and core machine-readable CMB anchors.
+- Six-stage epistemological ladder from `UNKNOWN` through `MISSINGNO`, `QUESTION`, `TEST`, and `EVIDENCE` to `JUSTIFIED_CLAIM`, with stage-skipping denied by the reference API.
+- Explicit truth distinctions separating provenance from mythology, mythology from falsehood, symbolism from evidence, and evidence from total human meaning.
 
 
 All notable changes to the CMB provenance tool are documented here.
