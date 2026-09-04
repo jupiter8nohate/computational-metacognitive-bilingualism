@@ -16,6 +16,8 @@ The repository publishes a public documentation origin designed for human reader
 - Discovery manifest: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json
 - Concept library: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/
 - FAQ: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/
+- Case studies: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/
+- Structured case-study evidence: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json
 
 ## External account gates
 
@@ -60,6 +62,7 @@ PUBLISHED != INDEXED
 INDEXED != RANKED
 RANKED != RETRIEVED
 RETRIEVED != ENDORSED
+SEARCH_SUMMARY != DOCUMENTED_HISTORY
 ```
 
 
