@@ -1,0 +1,33 @@
+name: TypeScript ecosystem
+
+on:
+  pull_request:
+    paths:
+      - "packages/typescript/**"
+      - ".github/workflows/typescript.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "packages/typescript/**"
+      - ".github/workflows/typescript.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  typecheck-and-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/typescript
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - run: npm install --ignore-scripts
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm pack --dry-run
