@@ -83,6 +83,11 @@ def issue_capability(
 
     parent_digest: str | None = None
     if parent_credential is not None:
+        if parent_credential.get("parent_credential_digest") is not None:
+            raise CapabilityError(
+                "CMB-CAP-1 supports one delegated hop; verify a full chain "
+                "before introducing additional delegation."
+            )
         parent_ok, parent_failures = _verify_single(parent_credential, now=current)
         if not parent_ok:
             raise CapabilityError(
@@ -117,16 +122,12 @@ def issue_capability(
     if len(token_nonce) < 16:
         raise CapabilityError("nonce must contain at least 16 characters")
 
-    id_seed = {
-        "authority_digest": authority_ir["digest"],
-        "issued_at": issued_at,
-        "nonce": token_nonce,
-        "key_fingerprint": fingerprint,
-        "parent_credential_digest": parent_digest,
-    }
-    credential_id = (
-        "urn:cmb:cap:"
-        + hashlib.sha256(canonical_json(id_seed)).hexdigest()
+    credential_id = _credential_id(
+        authority_digest=str(authority_ir["digest"]),
+        issued_at=issued_at,
+        nonce=token_nonce,
+        key_fingerprint=fingerprint,
+        parent_credential_digest=parent_digest,
     )
 
     proof_meta = {
@@ -185,10 +186,15 @@ def verify_capability(
             if parent_credential is None:
                 result.append("CAP_PARENT_REQUIRED")
             else:
-                parent_ok, parent_failures = _verify_single(
-                    parent_credential,
-                    now=current,
-                )
+                if parent_credential.get("parent_credential_digest") is not None:
+                    result.append("CAP_PARENT_CHAIN_UNSUPPORTED")
+                    parent_ok = False
+                    parent_failures = ()
+                else:
+                    parent_ok, parent_failures = _verify_single(
+                        parent_credential,
+                        now=current,
+                    )
                 if not parent_ok:
                     result.extend(
                         f"CAP_PARENT_INVALID:{item}" for item in parent_failures
@@ -259,6 +265,16 @@ def _verify_single(
             and fingerprint != expected_key_fingerprint
         ):
             failures.append("CAP_EXPECTED_KEY_MISMATCH")
+
+        expected_id = _credential_id(
+            authority_digest=str(authority["digest"]),
+            issued_at=str(credential["issued_at"]),
+            nonce=str(credential["nonce"]),
+            key_fingerprint=fingerprint,
+            parent_credential_digest=credential.get("parent_credential_digest"),
+        )
+        if credential.get("credential_id") != expected_id:
+            failures.append("CAP_CREDENTIAL_ID_MISMATCH")
 
         unsigned = dict(credential)
         unsigned["proof"] = {
@@ -360,6 +376,24 @@ def vc_projection(credential: Mapping[str, Any]) -> dict[str, Any]:
             "VC_2_0_projection_only_not_W3C_Data_Integrity_proof"
         ),
     }
+
+
+def _credential_id(
+    *,
+    authority_digest: str,
+    issued_at: str,
+    nonce: str,
+    key_fingerprint: str,
+    parent_credential_digest: str | None,
+) -> str:
+    seed = {
+        "authority_digest": authority_digest,
+        "issued_at": issued_at,
+        "nonce": nonce,
+        "key_fingerprint": key_fingerprint,
+        "parent_credential_digest": parent_credential_digest,
+    }
+    return "urn:cmb:cap:" + hashlib.sha256(canonical_json(seed)).hexdigest()
 
 
 def _text_hash(value: str) -> str:
