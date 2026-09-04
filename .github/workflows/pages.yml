@@ -61,7 +61,7 @@ jobs:
           mkdir -p site/.well-known site/agents site/machine/generated site/schemas site/spec
           cp llms.txt site/llms.txt
           cp llms-full.txt site/llms-full.txt
-          cp robots.txt site/robots.txt
+          cp docs/robots.txt site/robots.txt
           cp CITATION.cff site/CITATION.cff
           cp CITATION.bib site/CITATION.bib
           cp 12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176.txt site/12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176.txt
