@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/sitemap.xml
