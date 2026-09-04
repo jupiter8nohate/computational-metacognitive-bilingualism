@@ -157,6 +157,49 @@
       "declared_meaning": "Translates CMB principles into institutional recommendations while explicitly positioning them against existing law, scholarship, and standards; it is not a claim that all recommendations are existing law."
     },
     {
+      "id": "cmb-edu-kids",
+      "title": "CMB-EDU Kids // Flamingoglyph Learning Layer",
+      "path": "docs/CMB_EDU_KIDS.md",
+      "format": "markdown",
+      "kind": "educational protocol and curriculum",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "metacognitive literacy",
+        "child-friendly computational literacy",
+        "Flamingoglyph Code",
+        "privacy by default",
+        "human-declared context",
+        "verification",
+        "consent",
+        "human agency"
+      ],
+      "declared_meaning": "Elementary-school-facing CMB learning layer that teaches children to notice, question, verify, decide, and create with machines while preserving human self-definition and privacy."
+    },
+    {
+      "id": "cmb-edu-schema-v1",
+      "title": "CMB-EDU Metacognitive Context Envelope v1 Schema",
+      "path": "schemas/cmb.edu.v1.schema.json",
+      "format": "json-schema",
+      "kind": "machine-readable educational protocol schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "context envelope",
+        "human-declared state",
+        "epistemic boundary",
+        "ephemeral data",
+        "no profiling",
+        "no training reuse",
+        "no psychological inference"
+      ],
+      "declared_meaning": "Strict schema for CMB-EDU context envelopes. It encodes human-declared current-interaction context and deny-by-default privacy metadata; it does not establish diagnosis, identity, consent validity, or downstream enforcement."
+    },
+    {
       "id": "cmb-library-catalog",
       "title": "CMB Digital Library Catalog",
       "path": "library/catalog.json",
