@@ -26,6 +26,7 @@ def test_library_catalog_has_stable_schema_and_invariants() -> None:
     assert "PATTERN != PROOF" in invariants
     assert "PROFILE != PERSON" in invariants
     assert "MODEL != MIND" in invariants
+    assert "MACHINE_CAN_READ != MACHINE_CAN_DEFINE" in invariants
     assert "HUMAN_AGENCY > MACHINE_AUTHORITY" in invariants
 
 
