@@ -84,3 +84,32 @@ def test_boundary_event_matches_public_json_schema() -> None:
 
     assert payload["schema_version"] == BOUNDARY_SCHEMA_VERSION
     Draft202012Validator(schema).validate(payload)
+
+
+def test_context_rejects_non_boolean_policy_facts() -> None:
+    with pytest.raises(TypeError, match="ai_involved"):
+        BoundaryContext(ai_involved=1)  # type: ignore[arg-type]
+
+
+def test_context_rejects_non_string_event_id() -> None:
+    with pytest.raises(TypeError, match="event_id"):
+        BoundaryContext(event_id=42)  # type: ignore[arg-type]
+
+
+def test_boundary_decision_cannot_override_human_authority() -> None:
+    from cmb_provenance.boundary import BoundaryDecision
+
+    with pytest.raises(TypeError):
+        BoundaryDecision(allowed=True, violations=(), authority="MACHINE_FINAL")  # type: ignore[call-arg]
+
+
+def test_boundary_decision_rejects_inconsistent_allowed_state() -> None:
+    from cmb_provenance.boundary import BoundaryDecision, BoundaryViolation
+
+    violation = BoundaryViolation(
+        code=BoundaryCode.PROFILE_IS_NOT_PERSON,
+        invariant="PROFILE != PERSON",
+        message="test",
+    )
+    with pytest.raises(ValueError, match="allowed"):
+        BoundaryDecision(allowed=True, violations=(violation,))
