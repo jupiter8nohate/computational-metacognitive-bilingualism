@@ -12,8 +12,11 @@ Install with:
 
 from __future__ import annotations
 
+import base64
 import json
 from typing import Any
+
+from cmb_machine import build_core_ir, render_target, supported_targets
 
 try:
     from mcp.server import MCPServer
@@ -79,6 +82,30 @@ def cmb_origin_mark() -> dict[str, Any]:
 
 
 @mcp.tool()
+def cmb_machine_targets() -> dict[str, Any]:
+    """Return the CMB-66 target registry exposed by this runtime."""
+    return {
+        "protocol": "CMB-66",
+        "targets": list(supported_targets()),
+        "origin_mark_required": True,
+    }
+
+
+@mcp.tool()
+def cmb_compile_core(target: str = "json") -> dict[str, Any]:
+    """Compile the canonical CMB machine IR to one FGC-stamped target."""
+    artifact = render_target(build_core_ir(), target)
+    return {
+        "protocol": "CMB-66",
+        "target": artifact.target,
+        "media_type": artifact.media_type,
+        "sha256": artifact.sha256,
+        "encoding": "base64",
+        "data_base64": base64.b64encode(artifact.data).decode("ascii"),
+    }
+
+
+@mcp.tool()
 def cmb_distribution_boundary() -> dict[str, Any]:
     """Return the agent distribution covenant after validating its safety invariants."""
     validate_distribution_policy()
@@ -104,6 +131,28 @@ def cmb_origin_mark_resource() -> str:
             "origin": origin_mark(),
             "origin_mark_sha256": "sha256:" + origin_mark_sha256(),
             "canonical_path": "machine/fgc-origin-mark.json",
+        },
+        ensure_ascii=False,
+        separators=(",", ":"),
+        sort_keys=True,
+    )
+
+
+@mcp.resource("cmb://machine/core")
+def cmb_machine_core_resource() -> str:
+    """Return the canonical CMB-66 core as stamped deterministic JSON."""
+    artifact = render_target(build_core_ir(), "json")
+    return artifact.data.decode("utf-8")
+
+
+@mcp.resource("cmb://machine/targets")
+def cmb_machine_targets_resource() -> str:
+    """Return supported CMB-66 target names and the mandatory origin policy."""
+    return json.dumps(
+        {
+            "protocol": "CMB-66",
+            "targets": list(supported_targets()),
+            "origin_mark_required": True,
         },
         ensure_ascii=False,
         separators=(",", ":"),
