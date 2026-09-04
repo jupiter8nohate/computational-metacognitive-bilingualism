@@ -9,6 +9,8 @@ on:
       - ".github/workflows/cmb-google-semantic-pages.yml"
       - "agents/**"
       - "src/cmb_agents/**"
+      - "library/canon.json"
+      - "schemas/cmb.canon.v1.schema.json"
   pull_request:
     branches: ["main"]
     paths:
@@ -55,6 +57,7 @@ jobs:
             -in examples/sovereign-transmission.json \
             -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md \
             -out /tmp/cmb-gsb-pages \
+            -canon ../../library/canon.json \
             -url https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/ \
             -site-base https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
           touch /tmp/cmb-gsb-pages/.nojekyll
@@ -67,6 +70,8 @@ jobs:
           test -s /tmp/cmb-gsb-pages/index.html
           test -s /tmp/cmb-gsb-pages/article.jsonld
           test -s /tmp/cmb-gsb-pages/cmb-semantic.json
+          test -s /tmp/cmb-gsb-pages/cmb-canon.json
+          cmp ../../library/canon.json /tmp/cmb-gsb-pages/cmb-canon.json
           test -s /tmp/cmb-gsb-pages/sitemap.xml
           test -s /tmp/cmb-gsb-pages/robots.txt
           test -s /tmp/cmb-gsb-pages/manifest.json
