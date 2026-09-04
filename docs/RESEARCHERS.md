@@ -4,10 +4,12 @@ CMB should be evaluated against prior work, not as if automated-decision rights,
 
 Start with:
 
-1. [Prior Art & Positioning](PRIOR_ART_AND_POSITIONING.md)
-2. the public policy one-pager:
+1. [CMB: Three Dimensions of Distinction](CMB_DISTINCTION.md)
+2. [CMB Research Position](CMB_RESEARCH_POSITION.md)
+3. [Prior Art & Positioning](PRIOR_ART_AND_POSITIONING.md)
+4. the public policy one-pager:
    https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_POLICY_ONE_PAGER.md
-3. the full Global Advocacy Charter:
+5. the full Global Advocacy Charter:
    https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_GLOBAL_ADVOCACY_CHARTER.md
 
 ## CMB's narrower contribution
