@@ -168,9 +168,11 @@
         "software-language mapping",
         "human-machine notation",
         "human agency",
-        "machine interpretation boundaries"
+        "machine interpretation boundaries",
+        "guardian modes",
+        "accessible computational literacy"
       ],
-      "declared_meaning": "Public manifesto for CMB-Z13, defining thirteen zodiac-inspired software-language lenses while preserving human authority and rejecting deterministic classification."
+      "declared_meaning": "Public manifesto for CMB-Z13, defining thirteen zodiac-inspired software-language lenses plus the Guardian Modes teaching layer while preserving human authority and rejecting deterministic classification."
     },
     {
       "id": "cmb-z13-language-spec",
@@ -188,9 +190,11 @@
         "software-language mapping",
         "metacognition",
         "human agency",
-        "machine interpretation boundaries"
+        "machine interpretation boundaries",
+        "guardian modes",
+        "accessible computational literacy"
       ],
-      "declared_meaning": "Defines thirteen zodiac-inspired software-language operators as symbolic CMB reasoning lenses. The mappings are creative notation, not scientific personality claims or deterministic human classification."
+      "declared_meaning": "Defines thirteen zodiac-inspired software-language operators as symbolic CMB reasoning lenses and formally maps the Guardian Modes story layer onto those operators. The mappings are creative notation, not scientific personality claims or deterministic human classification."
     },
     {
       "id": "cmb-z13-machine-registry",
@@ -207,9 +211,11 @@
         "operator registry",
         "symbolic vectors",
         "human self-definition",
-        "interpretation policy"
+        "interpretation policy",
+        "guardian modes",
+        "accessible computational literacy"
       ],
-      "declared_meaning": "Machine-readable representation of the CMB-Z13 mapping, vectors, processing cycle, invariants, and epistemic boundaries."
+      "declared_meaning": "Machine-readable representation of the CMB-Z13 mapping, symbolic vectors, Guardian Modes aliases, reasoning pipeline, invariants, and epistemic boundaries."
     },
     {
       "id": "cmb-policy-one-pager",

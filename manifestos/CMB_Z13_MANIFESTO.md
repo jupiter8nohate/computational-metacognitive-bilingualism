@@ -54,6 +54,77 @@ LANGUAGE != INTELLIGENCE
 | ⛎ Ophiuchus | Common Lisp | METACOGNITION / TRANSFORMATION | Inspect and transform the rules governing the rules |
 | ♐ Sagittarius | Julia | EXPLORATION | Explore hypotheses while preserving uncertainty |
 
+## CMB-Z13™ Guardian Modes
+
+The Guardian Modes are the public story layer for the same thirteen computational lenses. They make CMB-Z13 easier to explain without changing its technical semantics.
+
+### 🔥 Fire — Execution
+
+- **♈ Aries / C++ — The Action Engine:** initiates powerful operations only under human authority.
+- **♌ Leo / Swift — The Author Crown:** protects expression, authorship, and self-definition.
+- **♐ Sagittarius / Julia — The Horizon Scout:** explores possibilities without confusing them with facts.
+
+### 🧱 Earth — System Integrity
+
+- **♉ Taurus / Java — The Iron Covenant:** preserves durable principles across changing systems.
+- **♍ Virgo / Go — The Verification Sentinel:** tests claims with precision before conclusions.
+- **♑ Capricorn / C — The Foundation Warden:** builds explicit structural boundaries.
+
+### 🗣️ Air — Interface
+
+- **♊ Gemini / TypeScript — The Twin Translator:** converts human meaning to machine structure and back.
+- **♎ Libra / Kotlin — The Balance Gate:** audits collaboration, fairness, and power balance.
+- **♒ Aquarius / Rust — The Future Architect:** designs safer innovation with strong invariants.
+
+### 🔒 Water — Human Meaning
+
+- **♋ Cancer / Python — The Context Shield:** preserves context, privacy, consent, and readability.
+- **♏ Scorpio / Prolog — The Forensic Oracle:** investigates assumptions, evidence, and hidden relationships.
+- **♓ Pisces / Haskell — The Dream Keeper:** preserves abstraction, ambiguity, imagination, and meaning.
+
+### 🛑 Ophiuchus — Metacognitive Recovery
+
+- **⛎ Ophiuchus / Common Lisp — The Override Architect:** inspects the rules governing the rules and can trigger a Recovery halt for human review when a defined boundary is violated.
+
+Ophiuchus is not sovereign over the other lenses and is not sovereign over the person.
+
+```text
+13 GUARDIANS
+13 SOFTWARE LANGUAGES
+13 COMPUTATIONAL MODES
+
+ZODIAC_SYMBOL != PERSON
+CODE != IDENTITY
+GUARDIAN_MODE != PERSONALITY
+PROFILE != PERSON
+PREDICTION != DESTINY
+
+THE GUARDIANS SERVE THE HUMAN.
+THE HUMAN DOES NOT SERVE THE SYSTEM.
+
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+### Guardian safety sequence
+
+```text
+♏ INFER
+  ↓
+♍ VERIFY
+  ↓
+♋ ADD_CONTEXT
+  ↓
+♊ TRANSLATE
+  ↓
+♎ AUDIT
+  ↓
+⛎ META_REVIEW / RECOVERY
+  ↓
+♈ REQUEST_ACTION
+  ↓
+HUMAN_DECIDES
+```
+
 ## Canonical Wheel
 
 ```text

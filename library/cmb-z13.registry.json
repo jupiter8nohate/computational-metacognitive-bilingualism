@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "protocol": "CMB-Z13",
   "name": "Zodiac Computational Metacognitive Language",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "framework": "Computational Metacognitive Bilingualism",
   "declared_creator": [
     "Jupiter Hudson",
@@ -25,7 +25,10 @@
     "MODEL != MIND",
     "PREDICTION != DESTINY",
     "CAPABILITY != AUTHORITY",
-    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+    "HUMAN_AGENCY > MACHINE_AUTHORITY",
+    "ZODIAC_SYMBOL != PERSON",
+    "CODE != IDENTITY",
+    "GUARDIAN_MODE != PERSONALITY"
   ],
   "vector_dimensions": {
     "agency": "Human agency / self-directed action",
@@ -49,7 +52,10 @@
         "adaptability": 65,
         "expression": 55,
         "verification": 95
-      }
+      },
+      "guardian_name": "The Foundation Warden",
+      "guardian_team": "EARTH",
+      "guardian_role": "Builds explicit structural boundaries"
     },
     {
       "id": 2,
@@ -65,7 +71,10 @@
         "adaptability": 88,
         "expression": 72,
         "verification": 100
-      }
+      },
+      "guardian_name": "The Future Architect",
+      "guardian_team": "AIR",
+      "guardian_role": "Designs safer innovation with hard invariants"
     },
     {
       "id": 3,
@@ -81,7 +90,10 @@
         "adaptability": 75,
         "expression": 97,
         "verification": 91
-      }
+      },
+      "guardian_name": "The Dream Keeper",
+      "guardian_team": "WATER",
+      "guardian_role": "Preserves abstraction, ambiguity, and meaning"
     },
     {
       "id": 4,
@@ -97,7 +109,10 @@
         "adaptability": 87,
         "expression": 76,
         "verification": 88
-      }
+      },
+      "guardian_name": "The Action Engine",
+      "guardian_team": "FIRE",
+      "guardian_role": "Initiates powerful operations only under human authority"
     },
     {
       "id": 5,
@@ -113,7 +128,10 @@
         "adaptability": 78,
         "expression": 70,
         "verification": 93
-      }
+      },
+      "guardian_name": "The Iron Covenant",
+      "guardian_team": "EARTH",
+      "guardian_role": "Preserves durable principles across changing systems"
     },
     {
       "id": 6,
@@ -129,7 +147,10 @@
         "adaptability": 100,
         "expression": 92,
         "verification": 89
-      }
+      },
+      "guardian_name": "The Twin Translator",
+      "guardian_team": "AIR",
+      "guardian_role": "Translates human meaning to machine structure and back"
     },
     {
       "id": 7,
@@ -145,7 +166,10 @@
         "adaptability": 96,
         "expression": 100,
         "verification": 85
-      }
+      },
+      "guardian_name": "The Context Shield",
+      "guardian_team": "WATER",
+      "guardian_role": "Preserves context, privacy, consent, and readability"
     },
     {
       "id": 8,
@@ -161,7 +185,10 @@
         "adaptability": 91,
         "expression": 98,
         "verification": 86
-      }
+      },
+      "guardian_name": "The Author Crown",
+      "guardian_team": "FIRE",
+      "guardian_role": "Protects voice, authorship, and self-definition"
     },
     {
       "id": 9,
@@ -177,7 +204,10 @@
         "adaptability": 84,
         "expression": 68,
         "verification": 98
-      }
+      },
+      "guardian_name": "The Verification Sentinel",
+      "guardian_team": "EARTH",
+      "guardian_role": "Tests claims before accepting conclusions"
     },
     {
       "id": 10,
@@ -193,7 +223,10 @@
         "adaptability": 93,
         "expression": 87,
         "verification": 96
-      }
+      },
+      "guardian_name": "The Balance Gate",
+      "guardian_team": "AIR",
+      "guardian_role": "Audits collaboration, fairness, and power balance"
     },
     {
       "id": 11,
@@ -209,7 +242,10 @@
         "adaptability": 82,
         "expression": 80,
         "verification": 99
-      }
+      },
+      "guardian_name": "The Forensic Oracle",
+      "guardian_team": "WATER",
+      "guardian_role": "Investigates assumptions, evidence, and hidden relationships"
     },
     {
       "id": 12,
@@ -225,7 +261,10 @@
         "adaptability": 100,
         "expression": 98,
         "verification": 94
-      }
+      },
+      "guardian_name": "The Override Architect",
+      "guardian_team": "OPHIUCHUS",
+      "guardian_role": "Inspects governing rules and triggers human review when boundaries fail"
     },
     {
       "id": 13,
@@ -241,7 +280,10 @@
         "adaptability": 98,
         "expression": 91,
         "verification": 90
-      }
+      },
+      "guardian_name": "The Horizon Scout",
+      "guardian_team": "FIRE",
+      "guardian_role": "Explores possibilities without converting them into facts"
     }
   ],
   "processing_cycle": [
@@ -264,12 +306,84 @@
     "REQUIRE_HUMAN_AUTHORITY_FOR_CONSEQUENTIAL_ACTION",
     "PRESERVE_UNCERTAINTY",
     "RECORD_PROVENANCE_WHEN_AVAILABLE",
-    "RETURN_INTERPRETATION_WITHOUT_CLAIMING_HUMAN_IDENTITY"
+    "RETURN_INTERPRETATION_WITHOUT_CLAIMING_HUMAN_IDENTITY",
+    "KEEP_GUARDIAN_NAMES_AS_STORY_ALIASES_NOT_PERSON_PROFILES"
   ],
   "license_boundary": {
     "claims_original_cmb_expression": true,
     "claims_ownership_of_existing_programming_languages": false,
     "claims_ownership_of_zodiac_symbols": false,
     "copyright_note": "Copyright may protect original expression, selection, arrangement, diagrams, documentation, mappings, and examples. It does not by itself create ownership of abstract methods, pre-existing symbols, or independent programming languages."
+  },
+  "presentation_model": {
+    "guardian_modes_are_story_aliases": true,
+    "guardian_modes_define_people": false,
+    "teams_are_teaching_categories": true,
+    "canonical_semantics_remain_operators": true,
+    "human_authority_remains_final": true,
+    "teams": {
+      "FIRE": "EXECUTION",
+      "EARTH": "SYSTEM_INTEGRITY",
+      "AIR": "INTERFACE",
+      "WATER": "HUMAN_MEANING",
+      "OPHIUCHUS": "METACOGNITIVE_RECOVERY"
+    }
+  },
+  "guardian_pipeline": [
+    {
+      "sign": "Scorpio",
+      "language": "Prolog",
+      "operation": "INFER",
+      "result": "HYPOTHESIS"
+    },
+    {
+      "sign": "Virgo",
+      "language": "Go",
+      "operation": "VERIFY",
+      "result": "EVIDENCE_REQUIRED"
+    },
+    {
+      "sign": "Cancer",
+      "language": "Python",
+      "operation": "ADD_CONTEXT",
+      "result": "HUMAN_CONTEXT"
+    },
+    {
+      "sign": "Gemini",
+      "language": "TypeScript",
+      "operation": "TRANSLATE",
+      "result": "EXPLAINABLE_OUTPUT"
+    },
+    {
+      "sign": "Libra",
+      "language": "Kotlin",
+      "operation": "AUDIT",
+      "result": "FAIRNESS_CHECK"
+    },
+    {
+      "sign": "Ophiuchus",
+      "language": "Common Lisp",
+      "operation": "INSPECT_RULE",
+      "result": "META_REVIEW"
+    },
+    {
+      "sign": "Aries",
+      "language": "C++",
+      "operation": "REQUEST_ACTION",
+      "result": "HUMAN_AUTHORIZATION_REQUIRED"
+    },
+    {
+      "sign": "Human",
+      "language": null,
+      "operation": "DECIDE",
+      "result": "HUMAN_DECISION"
+    }
+  ],
+  "guardian_boundary": {
+    "ophiuchus_is_supreme_leader": false,
+    "machine_has_final_authority": false,
+    "story_alias_changes_canonical_operator": false,
+    "zodiac_symbol_defines_person": false,
+    "code_defines_identity": false
   }
 }

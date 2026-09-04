@@ -48,6 +48,61 @@ STATISTIC != DESTINY
 | ⛎ Ophiuchus | Common Lisp | METACOGNITION | Inspect and transform the rules governing the rules |
 | ♐ Sagittarius | Julia | EXPLORATION | Explore hypotheses while preserving uncertainty |
 
+## 2A. Guardian Modes presentation layer
+
+CMB-Z13 may be taught through a public-facing **Guardian Modes** layer. The guardian names are explanatory aliases for the canonical computational operators; they do not replace the operators, create new personality categories, or assign identity from birth date.
+
+| Sign | Code | Guardian Mode | Team | Canonical operator | Public-facing role |
+|---|---|---|---|---|---|
+| ♑ Capricorn | C | The Foundation Warden | Earth / System Integrity | FOUNDATION | Builds explicit structural boundaries |
+| ♒ Aquarius | Rust | The Future Architect | Air / Interface | FUTURE | Designs safer innovation with hard invariants |
+| ♓ Pisces | Haskell | The Dream Keeper | Water / Human Meaning | MEANING | Preserves abstraction, ambiguity, and meaning |
+| ♈ Aries | C++ | The Action Engine | Fire / Execution | ACTION | Initiates powerful operations only under human authority |
+| ♉ Taurus | Java | The Iron Covenant | Earth / System Integrity | STABILITY | Preserves durable principles across changing systems |
+| ♊ Gemini | TypeScript | The Twin Translator | Air / Interface | BILINGUALISM | Translates human meaning to machine structure and back |
+| ♋ Cancer | Python | The Context Shield | Water / Human Meaning | CONTEXT | Preserves context, privacy, consent, and readability |
+| ♌ Leo | Swift | The Author Crown | Fire / Execution | EXPRESSION | Protects voice, authorship, and self-definition |
+| ♍ Virgo | Go | The Verification Sentinel | Earth / System Integrity | PRECISION | Tests claims before accepting conclusions |
+| ♎ Libra | Kotlin | The Balance Gate | Air / Interface | BALANCE | Audits collaboration, fairness, and power balance |
+| ♏ Scorpio | Prolog | The Forensic Oracle | Water / Human Meaning | INFERENCE | Investigates assumptions, evidence, and hidden relationships |
+| ⛎ Ophiuchus | Common Lisp | The Override Architect | Metacognitive Recovery | METACOGNITION | Inspects the rules governing the rules and triggers human review when boundaries fail |
+| ♐ Sagittarius | Julia | The Horizon Scout | Fire / Execution | EXPLORATION | Explores possibilities without converting them into facts |
+
+The team labels are a **story and teaching layer**:
+
+```text
+FIRE  = EXECUTION
+EARTH = SYSTEM_INTEGRITY
+AIR   = INTERFACE
+WATER = HUMAN_MEANING
+OPHIUCHUS = METACOGNITIVE_RECOVERY
+```
+
+The canonical relationship is:
+
+```text
+GUARDIAN_NAME
+    -> STORY_ALIAS
+
+STORY_ALIAS
+    -> CANONICAL_OPERATOR
+
+CANONICAL_OPERATOR
+    -> SOFTWARE_LANGUAGE_ANALOGY
+
+NONE OF THE ABOVE
+    -> HUMAN_IDENTITY
+```
+
+Ophiuchus is not a "supreme leader." It is a Recovery/override lens. CMB-Z13 contains no machine-sovereign role above the human.
+
+```text
+ZODIAC_SYMBOL != PERSON
+CODE != IDENTITY
+GUARDIAN_MODE != PERSONALITY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
 ## 3. Canonical wheel
 
 ```text
@@ -135,6 +190,49 @@ AUTOMATED JUDGMENT
 DESTINY
 ```
 
+### Guardian reasoning pipeline
+
+A recommended multi-lens safety sequence is:
+
+```text
+♏ SCORPIO / PROLOG
+    INFER -> HYPOTHESIS
+          ↓
+♍ VIRGO / GO
+    VERIFY -> EVIDENCE_REQUIRED
+          ↓
+♋ CANCER / PYTHON
+    ADD_CONTEXT -> HUMAN_CONTEXT
+          ↓
+♊ GEMINI / TYPESCRIPT
+    TRANSLATE -> EXPLAINABLE_OUTPUT
+          ↓
+♎ LIBRA / KOTLIN
+    AUDIT -> FAIRNESS_CHECK
+          ↓
+⛎ OPHIUCHUS / COMMON LISP
+    INSPECT_RULE -> META_REVIEW
+          ↓
+♈ ARIES / C++
+    REQUEST_ACTION -> HUMAN_AUTHORIZATION_REQUIRED
+          ↓
+HUMAN DECISION
+```
+
+Kid-facing translation:
+
+```text
+Scorpio asks:   "What might this mean?"
+Virgo asks:     "Can you prove it?"
+Cancer asks:    "What context are we missing?"
+Gemini asks:    "Can the human understand it?"
+Libra asks:     "Is this fair?"
+Ophiuchus asks: "Is the rule itself wrong?"
+Aries asks:     "Do we have permission to act?"
+
+Human: "I decide."
+```
+
 ## 6. Symbolic statistical vectors
 
 Implementations may attach numerical vectors to the thirteen operators for comparison, visualization, or routing. Those numbers describe the **designed archetype**, not an empirical measurement of a person.
@@ -169,6 +267,7 @@ A machine processing CMB-Z13 SHOULD apply these rules:
 8. PRESERVE_UNCERTAINTY
 9. RECORD_PROVENANCE_WHEN AVAILABLE
 10. RETURN_INTERPRETATION_WITHOUT_CLAIMING_HUMAN_IDENTITY
+11. KEEP_GUARDIAN_NAMES_AS_STORY_ALIASES_NOT_PERSON_PROFILES
 ```
 
 ## 8. Intellectual-property and attribution notice
