@@ -49,6 +49,7 @@ cmb-z13 = "cmb_provenance.z13_cli:main"
 cmb-edu = "cmb_edu.cli:main"
 cmb-agent = "cmb_agents.cli:main"
 cmb-mcp = "cmb_agents.mcp_server:main"
+cmb-machine = "cmb_machine.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
