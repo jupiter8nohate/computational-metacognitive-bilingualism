@@ -35,6 +35,14 @@ def _validate_graph(data: dict[str, Any]) -> None:
     if data.get("schema_version") != "cmb.canon.v1":
         raise ValueError("Unsupported CMB canon schema version.")
 
+    invariants = data.get("invariants")
+    if not isinstance(invariants, list) or not invariants:
+        raise ValueError("Canon graph requires an explicit invariant list.")
+    if len(invariants) != len(set(invariants)):
+        raise ValueError("Canon invariants must be unique.")
+    if data.get("root_invariant") not in invariants:
+        raise ValueError("Canon root invariant must appear in the invariant list.")
+
     raw_nodes = data.get("nodes")
     raw_edges = data.get("edges")
     if not isinstance(raw_nodes, list) or not isinstance(raw_edges, list):
