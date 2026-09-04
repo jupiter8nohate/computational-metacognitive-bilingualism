@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 import pytest
+from jsonschema import Draft202012Validator
 
 from cmb_machine.harmoni import (
     DiscoveryStage,
@@ -121,3 +125,14 @@ def test_manifest_distinguishes_myth_symbol_evidence_and_meaning() -> None:
     assert ladder["rules"]["stage_skipping"] == "DENIED"
     assert ladder["rules"]["justified_claim_is_proof"] is False
     assert ladder["final_authority"] == HUMAN_FINAL
+
+
+def test_harmoni_manifest_matches_public_schema() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+    schema = json.loads(
+        (repository_root / "schemas" / "cmb.harmoni-666.manifest.v1.schema.json").read_text(
+            encoding="utf-8"
+        )
+    )
+
+    Draft202012Validator(schema).validate(harmoni_manifest())
