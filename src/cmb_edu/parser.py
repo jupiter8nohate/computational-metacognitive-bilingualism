@@ -107,6 +107,11 @@ class CMBDualBrainParser:
 
         try:
             boundary = canonical_boundary(data["boundary"])
+        except ValueError as exc:
+            raise CMBParseError(
+                f"unknown sovereignty boundary: {data['boundary']}"
+            ) from exc
+        try:
             privacy = privacy_from_tokens(_split_double_pipe(data.get("privacy")))
         except ValueError as exc:
             raise CMBParseError(str(exc)) from exc
