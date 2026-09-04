@@ -1,0 +1,14 @@
+# Default ownership
+* @jupiter8nohate
+
+# Security/provenance critical paths
+/src/cmb_provenance/ @jupiter8nohate
+/schemas/ @jupiter8nohate
+/.github/workflows/ @jupiter8nohate
+/RELEASE.md @jupiter8nohate
+/SECURITY.md @jupiter8nohate
+
+# Canonical authored CMB material
+/manifestos/ @jupiter8nohate
+/policy/ @jupiter8nohate
+/library/ @jupiter8nohate

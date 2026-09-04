@@ -1,5 +1,11 @@
 # Computational Metacognitive Bilingualism (CMB)
 
+[![CI](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/ci.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/ci.yml)
+[![C2PA round-trip](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml)
+[![CodeQL](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+
+
 Computational Metacognitive Bilingualism is a human-agency and computational-literacy framework for learning and using computational systems while retaining human judgment, consent, authorship, meaning, and self-definition.
 
 **One-sentence position:** CMB translates established and emerging digital-rights principles into concise human-readable and machine-readable invariants; it does not claim to have invented the underlying rights, laws, scholarship, or provenance standards.
@@ -40,6 +46,17 @@ ZODIAC_SYMBOL != SCIENTIFIC_PERSONALITY_MODEL
 ```
 
 GitHub is the project's source, audit trail, provenance backend, and implementation record. The one-page policy summary is the intended public front door.
+
+## Project maturity
+
+| Layer | Status | Purpose |
+|---|---|---|
+| `cmb_provenance` | **Stable engineering** | artifact integrity, receipts, Recovery, C2PA-facing interoperability |
+| CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
+| Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
+
+See [Project structure](docs/PROJECT_STRUCTURE.md) and [Threat model](docs/THREAT_MODEL.md).
+
 
 ## v1.3.1 Recovery release
 
@@ -131,6 +148,20 @@ bytes match the corresponding committed Git blob and records
 that commit.
 
 The receipt declares `coverage.type = "explicit_file_set"` and `excludes_unlisted = true`. It therefore identifies exactly what it covers and makes no claim about unlisted files.
+
+## Five-minute examples
+
+Start with [examples/README.md](examples/README.md).
+
+The experimental CMB-Z13 reference CLI is executable:
+
+```bash
+cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
+cmb-z13 parse '♏::PROLOG -> INFER[pattern] => HYPOTHESIS;'
+cmb-z13 explain '⛎::LISP -> INSPECT[rule] => META(rule);'
+```
+
+Its AST schema is [`schemas/cmb.z13.ast.v1.schema.json`](schemas/cmb.z13.ast.v1.schema.json). The parser validates the canonical mapping; it does not classify people.
 
 ## CLI
 
@@ -242,7 +273,11 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`library/catalog.json`](library/catalog.json) — machine-indexable artifact catalog, sealed as part of the canonical public set.
 - [`src/cmb_provenance`](src/cmb_provenance) — the supported v1.3.1 package, stable sealing API, and C2PA-facing adapter.
 - [`schemas/cmb.c2pa-assertion-payload.v1.schema.json`](schemas/cmb.c2pa-assertion-payload.v1.schema.json) — strict schema for the internal C2PA-facing adapter payload.
-- [`tests`](tests) — deterministic, corruption, concurrency, schema, CLI, and canonical-artifact tests.
+- [`schemas/cmb.z13.ast.v1.schema.json`](schemas/cmb.z13.ast.v1.schema.json) — deterministic AST schema for the experimental CMB-Z13 parser.
+- [`examples`](examples) — five small install/verify/C2PA/Z13 examples.
+- [`docs`](docs) and [`mkdocs.yml`](mkdocs.yml) — buildable documentation front door for humans, developers, and researchers.
+- [`SECURITY.md`](SECURITY.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — open-source governance and security boundaries.
+- [`tests`](tests) — deterministic, corruption, concurrency, schema, CLI, CMB-Z13, and canonical-artifact tests.
 - [`receipts`](receipts) — checked-in provenance receipts and their verification-status documentation.
 - [`cmb_provenance_v1_3.py`](cmb_provenance_v1_3.py) — the retained historical v1.3.0 standalone tool.
 - [`ATTRIBUTION.md`](ATTRIBUTION.md) and [`CITATION.cff`](CITATION.cff) — authorship boundaries and citation metadata.
@@ -253,8 +288,11 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 Python 3.10 or newer is required.
 
 ```bash
-python3 -m pip install -e ".[test,build]"
+python3 -m pip install -e ".[test,build,docs]"
 pytest
+cmb-provenance selftest
+cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
+mkdocs build --strict
 python3 -m build
 ```
 

@@ -62,3 +62,15 @@ No long-lived signing key is stored in the repository. A signature establishes a
 Verify `SHA256SUMS`, then verify the Sigstore bundles using Sigstore's documented identity and issuer checks for this repository's release workflow. GitHub attestations can also be checked with `gh attestation verify` against this repository.
 
 Do not publish a public receipt registry until this release process has completed successfully. A later registry should store signed receipts and timestamp evidence, not private drafts, unpublished creative works, or unnecessary personal information.
+
+
+## Experimental CMB-Z13 release check
+
+The wheel also installs the experimental `cmb-z13` reference CLI. Before tagging:
+
+```bash
+cmb-z13 --version
+cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
+```
+
+This confirms packaging and canonical mapping behavior; it does not promote CMB-Z13 to a stable compatibility promise.

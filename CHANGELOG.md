@@ -6,6 +6,9 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Repository-maturity hardening: `SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `CODEOWNERS`, Dependabot, CodeQL, dependency review, OpenSSF Scorecard, a buildable MkDocs documentation site, an explicit threat model, project-maturity boundaries, and a public engineering roadmap.
+- Experimental CMB-Z13 reference parser and CLI (`cmb-z13 parse|validate|explain|export-json`) with deterministic AST schema, fixed 13-lens conformance checks, machine-registry synchronization tests, and human-final authority encoded in the AST.
+- Five minimal examples covering sealing, verification, C2PA interoperability, CMB-Z13 parsing, and the Guardian safety pipeline.
 - Phase 2 C2PA interoperability round-trip: deterministic C2PA manifest-definition generation, reverse-domain assertion-label validation, a pinned/checksummed c2patool integration workflow, deterministic test media, and generic-reader verification that the exact CMB payload survives asset signing/binding and readback. Test credentials remain explicitly non-production and non-conformant.
 - Deterministic `CMB receipt -> C2PA-facing assertion payload` adapter with privacy-minimized defaults, canonical JSON serialization, strict JSON Schema, CLI export, deterministic fixtures, and tests. The adapter explicitly does not create a C2PA manifest, Content Credential, signature, asset binding, or conformance result.
 - Prior-art and legal-positioning document covering GDPR Article 22, EU AI Act Article 14, relevant scholarship, and C2PA as an external provenance standard.
