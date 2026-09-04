@@ -78,3 +78,5 @@ jobs:
           cmb-agent --version
           cmb-agent selftest
           cmb-agent recommend 'algorithmic profiling evidence'
+          cmb-machine targets
+          cmb-machine compile-core --output-dir /tmp/cmb-machine
