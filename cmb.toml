@@ -1,5 +1,5 @@
 [cmb]
-protocol = "cmb.sovereignty-runtime.v1"
+protocol = "cmb.sovereignty-runtime.v2"
 default_friction = 0.20
 high_friction_threshold = 0.75
 critical_threshold = 0.90
@@ -31,6 +31,11 @@ criticality = 0.55
 reversible = true
 controls = []
 
+[operations.manage_authentication]
+criticality = 0.85
+reversible = true
+controls = []
+
 [operations.production_build]
 criticality = 0.80
 reversible = true
@@ -50,3 +55,114 @@ controls = []
 criticality = 1.00
 reversible = false
 controls = ["explicit_consent"]
+
+[detectors]
+python_ast = true
+fail_closed_on_python_parse_error = true
+max_file_bytes = 1048576
+
+[[detectors.path_rules]]
+id = "release-workflow-yml"
+glob = ".github/workflows/*release*.yml"
+operation = "deploy_production"
+
+[[detectors.path_rules]]
+id = "release-workflow-yaml"
+glob = ".github/workflows/*release*.yaml"
+operation = "deploy_production"
+
+[[detectors.path_rules]]
+id = "deploy-workflow-yml"
+glob = ".github/workflows/*deploy*.yml"
+operation = "deploy_production"
+
+[[detectors.path_rules]]
+id = "deploy-workflow-yaml"
+glob = ".github/workflows/*deploy*.yaml"
+operation = "deploy_production"
+
+[[detectors.path_rules]]
+id = "infra-tree"
+glob = "infra/**"
+operation = "deploy_production"
+
+[[detectors.path_rules]]
+id = "terraform-tree"
+glob = "terraform/**"
+operation = "deploy_production"
+
+[[detectors.path_rules]]
+id = "k8s-tree"
+glob = "k8s/**"
+operation = "deploy_production"
+
+[[detectors.path_rules]]
+id = "helm-tree"
+glob = "helm/**"
+operation = "deploy_production"
+
+[[detectors.path_rules]]
+id = "iam-tree"
+glob = "**/iam/**"
+operation = "modify_permissions"
+
+[[detectors.path_rules]]
+id = "rbac-tree"
+glob = "**/rbac/**"
+operation = "modify_permissions"
+
+[[detectors.path_rules]]
+id = "permissions-tree"
+glob = "**/permissions/**"
+operation = "modify_permissions"
+
+[[detectors.path_rules]]
+id = "auth-tree"
+glob = "**/auth/**"
+operation = "manage_authentication"
+
+[[detectors.path_rules]]
+id = "authentication-tree"
+glob = "**/authentication/**"
+operation = "manage_authentication"
+
+[[detectors.python_call_rules]]
+id = "python-permission-mutation"
+operation = "modify_permissions"
+names = [
+  "os.chmod",
+  "os.chown",
+  "os.setgid",
+  "os.setuid",
+  "pathlib.Path.chmod",
+  "Path.chmod",
+  "grant_permission",
+  "revoke_permission",
+  "set_permissions",
+  "add_role",
+  "remove_role",
+]
+
+[[detectors.python_call_rules]]
+id = "python-authentication-control"
+operation = "manage_authentication"
+names = [
+  "authenticate",
+  "create_access_token",
+  "login_user",
+  "logout_user",
+  "verify_password",
+]
+
+[[detectors.python_call_rules]]
+id = "python-tracking-call"
+operation = "collect_tracking_data"
+names = [
+  "analytics.identify",
+  "analytics.track",
+  "amplitude.track",
+  "mixpanel.track",
+  "posthog.capture",
+  "posthog.identify",
+  "segment.track",
+]

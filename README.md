@@ -72,7 +72,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)
 - **Normative core:** [CMB-CORE-1](spec/CMB-CORE-1.md) and [protocol versioning](spec/PROTOCOL_VERSIONING.md)
-- **Sovereignty runtime:** [CMB-SRP-1](spec/CMB-SRP-1.md) + [`cmb.toml`](cmb.toml) + installed `cmbc` gate
+- **Sovereignty runtime:** [CMB-SRP-1](spec/CMB-SRP-1.md) + [CMB-SRP-2](spec/CMB-SRP-2.md) + [`cmb.toml`](cmb.toml) + installed `cmbc` gate
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
@@ -104,7 +104,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | `cmb_policy` | **Experimental formal policy engine** | task containment, deny dominance, sensitive-inference authorization, revocation, audit decisions, and machine-readable conformance |
 | `cmb_agents` / CMB-ADP-1 | **Executable agent discovery layer** | relevance-first recommendation, deterministic citation, compression levels, knowledge graph export, static discovery, and local HTTP reference serving |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
-| CMB-SRP-1 / `cmbc` | **Experimental executable sovereignty runtime** | risk-adaptive friction, fail-closed critical operations, scoped Ed25519 human authorization, and verification-state transitions |
+| CMB-SRP-1/2 / `cmbc` | **Experimental executable sovereignty runtime** | risk-adaptive friction, scoped Ed25519 human authorization, path-sensitive + Python AST change classification, deterministic scan reports, and verification-state transitions |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, Rust/Actix, and Go share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
@@ -210,7 +210,18 @@ python3 -m pip install ".[sovereignty]"
 cmbc keygen --private-key .cmb/human.key --public-key .cmb/human.pub
 ```
 
-CMB-SRP-1 keeps the evidence rule constant across risk levels: low friction reduces required verification depth for reversible work, but `PATTERN != PROOF` never becomes an approximation. Critical operations fail closed when required authorization or evidence is absent. See [CMB-SRP-1](spec/CMB-SRP-1.md).
+CMB-SRP-1 keeps the evidence rule constant across risk levels: low friction reduces required verification depth for reversible work, but `PATTERN != PROOF` never becomes an approximation. CMB-SRP-2 adds deterministic path-sensitive and Python AST classification before the runtime gate, while preserving `RISK_CLASSIFICATION != INTENT`. See [CMB-SRP-1](spec/CMB-SRP-1.md) and [CMB-SRP-2](spec/CMB-SRP-2.md).
+
+Scan a file or a Git change set:
+
+```bash
+cmbc scan src/ --policy cmb.toml --output cmb-scan.json
+cmbc scan-git --base origin/main --head HEAD --policy cmb.toml --output cmb-scan.json
+cmbc gate-report --report cmb-scan.json --policy cmb.toml --project OWNER/REPOSITORY
+cmbc statement --report cmb-scan.json --policy cmb.toml --output cmb-scan.intoto.json
+```
+
+The exported in-toto Statement is intentionally unsigned. `UNSIGNED_STATEMENT != ATTESTATION` and `ATTESTATION != CORRECTNESS`.
 
 ## Stable Python API
 
@@ -411,6 +422,9 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`src/cmb_agents/mcp_server.py`](src/cmb_agents/mcp_server.py) - optional MCP adapter over the canonical CMB-ADP-1 service.
 - [`llms.txt`](llms.txt) and [`llms-full.txt`](llms-full.txt) - curated machine-reading entry points with interpretation boundaries.
 - [`spec/CMB-CORE-1.md`](spec/CMB-CORE-1.md) - minimum cross-component semantic contract and layer-separation rules.
+- [`spec/CMB-SRP-1.md`](spec/CMB-SRP-1.md) - risk-adaptive sovereignty runtime, scoped human authorization, and verification-state contract.
+- [`spec/CMB-SRP-2.md`](spec/CMB-SRP-2.md) - deterministic path/AST change classification, scan-report binding, and unsigned in-toto statement bridge.
+- [`schemas/cmb.scan-report.v1.schema.json`](schemas/cmb.scan-report.v1.schema.json) - machine-readable SRP-2 scan-report contract.
 - [`research/FALSIFIABILITY.md`](research/FALSIFIABILITY.md) - claim-specific evidence and falsification criteria.
 - [`docs`](docs) and [`mkdocs.yml`](mkdocs.yml) - buildable documentation front door for humans, developers, and researchers.
 - [`SECURITY.md`](SECURITY.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) - open-source governance and security boundaries.
@@ -428,6 +442,8 @@ Python 3.10 or newer is required.
 python3 -m pip install -e ".[test,build,docs]"
 pytest
 cmb-provenance selftest
+cmbc validate --policy cmb.toml
+cmbc selftest --policy cmb.toml
 cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
 cmb-edu validate '🪐::LEARN -> DECLARE[curious || focused] => ASK("how_do_loops_work") -> PATTERN_NOT_PROOF;'
 mkdocs build --strict
