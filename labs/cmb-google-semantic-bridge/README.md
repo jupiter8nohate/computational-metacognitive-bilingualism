@@ -84,6 +84,7 @@ Generated files:
 build/
   article.jsonld
   cmb-semantic.json
+  cmb-canon.json
   head.html
   sitemap.xml
   robots.txt
@@ -95,6 +96,7 @@ build/sovereign-transmission/
   source.md
   article.jsonld
   cmb-semantic.json
+  cmb-canon.json
   head.html
   sitemap.xml
   robots.txt
@@ -421,5 +423,72 @@ The exact manifesto source remains available as `source.md` and is still copied 
 DECORATION != OBFUSCATION
 READABILITY > VISUAL_NOISE
 SOURCE_BYTES == PRESERVED
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+
+## Canon-aware publication v0.4
+
+Version 0.4 changes the bridge from a standalone semantic renderer into a canon-aware publication compiler.
+
+```text
+library/canon.json
+      │
+      ├── explicit invariant set
+      ├── root invariant
+      └── relationship graph
+              │
+              ▼
+        CMB GO BRIDGE
+              │
+      ┌───────┼────────┐
+      ▼       ▼        ▼
+   HTML    JSON-LD   CMB semantic v2
+      │       │        │
+      └───────┼────────┘
+              ▼
+      atomic publication
+              │
+              ├── cmb-canon.json
+              ├── manifest.json
+              └── exact source.md
+```
+
+The semantic sidecar no longer carries a private hard-coded copy of CMB. It is generated from the explicit invariant list in `library/canon.json` and records the SHA-256 digest of the exact canon bytes used for the build.
+
+```text
+GO_MEMORY != CANON
+CANON_INPUT == SEMANTIC_SOURCE
+CANON_SHA256 == BUILD_BINDING
+```
+
+Publication now stages a complete generation in a temporary sibling directory and activates it only after every file and the output manifest have been written. Existing output directories are replaced as complete generations rather than modified file by file.
+
+Source-file reads reject symlinks, non-regular files, oversized input, invalid UTF-8, and identity changes while opening or reading. URL handling now shares one HTTPS parser and rejects userinfo, fragments, and surrounding whitespace.
+
+The `render` command no longer invents a source SHA-256 from an embedded JSON body. Exact source integrity is established by `publish`, which binds the supplied source file bytes through `BindSource`.
+
+Use the repository canon explicitly:
+
+```bash
+go run ./cmd/cmb-gsb render \
+  -in examples/cmb-manifesto.json \
+  -out build/ \
+  -canon ../../library/canon.json
+
+go run ./cmd/cmb-gsb publish \
+  -in examples/sovereign-transmission.json \
+  -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md \
+  -out build/sovereign-transmission/ \
+  -canon ../../library/canon.json
+```
+
+The generated `cmb-canon.json` is byte-for-byte identical to the canon consumed by the build. CI checks this equality.
+
+```text
+DECLARED METADATA != GOOGLE ENDORSEMENT
+CANON DIGEST != AUTHORSHIP
+SOURCE HASH != COPYRIGHT
+DISCOVERABILITY != OWNERSHIP
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
