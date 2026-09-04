@@ -149,7 +149,7 @@ func BuildCanonLibrary(input CanonLibraryInput) (map[string][]byte, LibraryIndex
 	published := make([]PublishedArtifact, 0, len(input.Catalog.Artifacts))
 
 	for _, entry := range input.Catalog.Artifacts {
-		if !entry.HumanReadable || !entry.MachineIndexable {
+		if !entry.HumanReadable || !entry.Indexable {
 			continue
 		}
 		source, err := ReadRepositoryUTF8File(input.RepositoryRoot, entry.Path)
@@ -337,9 +337,9 @@ func libraryCollectionJSONLD(index LibraryIndex, document catalog.Document) ([]b
 			Name:        artifact.Title,
 			Description: artifact.DeclaredMeaning,
 			URL:         artifact.URL,
-			Creator: personLD{Type: "Person", Name: document.DeclaredOriginator},
-			Keywords: cleanStrings(artifact.Concepts),
-			Encoding: encodingFormat(artifact.Format),
+			Creator:     personLD{Type: "Person", Name: document.DeclaredOriginator},
+			Keywords:    cleanStrings(artifact.Concepts),
+			Encoding:    encodingFormat(artifact.Format),
 		})
 	}
 	collection := collectionLD{
