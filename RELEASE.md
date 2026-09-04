@@ -19,6 +19,8 @@ Version 1.3.1 uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `manifestos/CMB_Z13_LANGUAGE_SPEC.md`
    - `library/cmb-z13.registry.json`
    - `policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`
+   - `docs/CMB_EDU_KIDS.md`
+   - `schemas/cmb.edu.v1.schema.json`
    - `library/catalog.json`
 
 ## Publish
@@ -50,6 +52,8 @@ manifestos/CMB_Z13_MANIFESTO.md
 manifestos/CMB_Z13_LANGUAGE_SPEC.md
 library/cmb-z13.registry.json
 policy/CMB_GLOBAL_ADVOCACY_CHARTER.md
+docs/CMB_EDU_KIDS.md
+schemas/cmb.edu.v1.schema.json
 library/catalog.json
 ```
 
@@ -76,3 +80,17 @@ cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
 ```
 
 This confirms packaging and canonical mapping behavior; it does not promote CMB-Z13 to a stable compatibility promise.
+
+## Experimental CMB-EDU release check
+
+The wheel also installs the experimental `cmb-edu` CLI. Before tagging:
+
+```bash
+cmb-edu --version
+cmb-edu validate '🪐::LEARN -> DECLARE[curious || focused] => ASK("how_do_loops_work") -> PATTERN_NOT_PROOF;'
+```
+
+The canonical receipt includes the CMB-EDU child-facing curriculum and its strict
+envelope schema. The receipt establishes integrity of those exact files; it does
+not turn declared privacy fields into external enforcement or a psychological
+assessment.
