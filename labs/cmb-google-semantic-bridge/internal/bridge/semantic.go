@@ -55,16 +55,16 @@ func (c CanonSemantics) Validate() error {
 		return fmt.Errorf("canon invariants must not be empty")
 	}
 
-	required := map[string]bool{
-		"PATTERN != PROOF":                 false,
-		"PROFILE != PERSON":                false,
-		"MODEL != MIND":                    false,
-		"PREDICTION != DESTINY":            false,
-		"DIFFERENCE != DEFECT":             false,
-		"CAPABILITY != AUTHORITY":          false,
-		"OPTIMIZATION != MORALITY":         false,
-		"INTELLIGENCE != SOVEREIGNTY":      false,
-		"HUMAN_AGENCY > MACHINE_AUTHORITY": false,
+	required := []string{
+		"PATTERN != PROOF",
+		"PROFILE != PERSON",
+		"MODEL != MIND",
+		"PREDICTION != DESTINY",
+		"DIFFERENCE != DEFECT",
+		"CAPABILITY != AUTHORITY",
+		"OPTIMIZATION != MORALITY",
+		"INTELLIGENCE != SOVEREIGNTY",
+		"HUMAN_AGENCY > MACHINE_AUTHORITY",
 	}
 	seen := make(map[string]struct{}, len(c.Invariants))
 	rootFound := false
@@ -73,9 +73,6 @@ func (c CanonSemantics) Validate() error {
 			return fmt.Errorf("duplicate canon invariant %q", invariant)
 		}
 		seen[invariant] = struct{}{}
-		if _, exists := required[invariant]; exists {
-			required[invariant] = true
-		}
 		if invariant == c.RootInvariant {
 			rootFound = true
 		}
@@ -83,8 +80,8 @@ func (c CanonSemantics) Validate() error {
 	if !rootFound {
 		return fmt.Errorf("canon root invariant must appear in invariants")
 	}
-	for invariant, present := range required {
-		if !present {
+	for _, invariant := range required {
+		if _, present := seen[invariant]; !present {
 			return fmt.Errorf("required canon invariant missing: %s", invariant)
 		}
 	}
