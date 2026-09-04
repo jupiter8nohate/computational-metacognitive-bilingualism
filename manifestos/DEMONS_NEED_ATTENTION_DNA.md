@@ -320,6 +320,128 @@ Do not confuse engagement with consent.
 
 ---
 
+## VIII // TEACH THE CHILD THE CODE
+
+The next generation may meet intelligent machines before it learns how the machines classify, predict, recommend, and remember.
+
+D.N.A. therefore gains an educational layer:
+
+```text
+TEACH THE CHILD THE CODE.
+TEACH THE CHILD TO QUESTION THE CODE.
+TEACH THE CHILD TO CREATE WITH THE CODE.
+TEACH THE MACHINE TO RESPECT THE CHILD.
+```
+
+Computational Metacognitive Bilingualism means learning two languages together.
+
+```text
+MACHINE LANGUAGE:
+INPUT • OUTPUT • IF • THEN • DATA • PATTERN
+
+HUMAN LANGUAGE:
+MEANING • FEELING • QUESTION • CONSENT • CHOICE • CREATION
+```
+
+The child should understand the machine without surrendering self-definition to it.
+
+```text
+PATTERN ≠ PROOF
+PROFILE ≠ PERSON
+PREDICTION ≠ DESTINY
+DIFFERENCE ≠ DEFECT
+
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+The Flamingoglyph Code becomes the first visual classroom.
+
+```text
+🧠 = MY THOUGHT
+❤️ = MY FEELING
+👁️ = NOTICE
+❓ = QUESTION
+🔍 = CHECK
+⚡ = ACTION
+🎨 = CREATE
+🪐 = CONTEXT
+🛡️ = BOUNDARY
+🔒 = PRIVATE
+⏳ = TEMPORARY
+✅ = YES
+🚫 = NO
+🔁 = TRY AGAIN
+🤖 = MACHINE
+🧑 = HUMAN
+```
+
+A child can learn metacognition before advanced programming:
+
+```text
+👁️ NOTICE
+   ↓
+❓ QUESTION
+   ↓
+🔍 VERIFY
+   ↓
+🧠 DECIDE
+   ↓
+🎨 CREATE
+```
+
+If a model says, "You seem angry," CMB does not store that inference as identity.
+
+```text
+MACHINE_INFERENCE < HUMAN_SELF_DESCRIPTION
+FEELING_NOW ≠ IDENTITY_FOREVER
+DECLARATION ≠ DIAGNOSIS
+```
+
+If a recommendation engine predicts what the child wants:
+
+```text
+MACHINE_GUESS ≠ HUMAN_DESTINY
+WATCHING ≠ IDENTITY
+```
+
+If a machine requests private information:
+
+```text
+🔒 PRIVATE
+🚫 DO NOT SHARE
+🧑 ASK A TRUSTED ADULT
+
+CAN_SHARE ≠ SHOULD_SHARE
+```
+
+CMB-EDU represents self-described context as temporary and human-declared.
+
+```text
+SOURCE = HUMAN_DECLARED
+TEMPORAL_SCOPE = CURRENT_INTERACTION
+MACHINE_INFERRED = FALSE
+PERSIST = FALSE
+PROFILE = FALSE
+TRAIN_ON_INPUT = FALSE
+SECONDARY_USE = FALSE
+```
+
+These declarations are machine-readable policy signals. They do not magically force every external system to comply, and a cryptographic hash does not prove psychological truth, identity, or consent.
+
+The educational objective is larger than teaching syntax.
+
+```text
+CHILD + CURIOSITY + CODE + METACOGNITION
+=
+COGNITIVE SOVEREIGNTY
+```
+
+The future is not children versus machines.
+
+It is children who understand machines well enough to build with them without forgetting who holds the final human judgment.
+
+---
+
 # D.N.A. // EIGHT-LANGUAGE TRANSMISSION
 
 ## 1 // Python
