@@ -70,3 +70,5 @@ jobs:
           python -m pip install dist/*.whl
           cmb-provenance --version
           cmb-provenance selftest
+          cmb-z13 --version
+          cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
