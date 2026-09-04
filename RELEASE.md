@@ -24,6 +24,13 @@ Version 1.4.0 uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `docs/CMB_EDU_KIDS.md`
    - `schemas/cmb.edu.v1.schema.json`
    - `library/catalog.json`
+   - `spec/CMB-HARMONI-666.md`
+   - `schemas/cmb.harmoni-666.v1.schema.json`
+   - `schemas/cmb.harmoni-666.manifest.v1.schema.json`
+   - `machine/cmb-core.ir.json`
+   - `machine/fgc-origin-mark.json`
+   - `machine/targets.json`
+   - `machine/index.json`
 
 ## Publish
 
@@ -59,6 +66,13 @@ policy/CMB_GLOBAL_ADVOCACY_CHARTER.md
 docs/CMB_EDU_KIDS.md
 schemas/cmb.edu.v1.schema.json
 library/catalog.json
+spec/CMB-HARMONI-666.md
+schemas/cmb.harmoni-666.v1.schema.json
+schemas/cmb.harmoni-666.manifest.v1.schema.json
+machine/cmb-core.ir.json
+machine/fgc-origin-mark.json
+machine/targets.json
+machine/index.json
 ```
 
 Because the receipt uses explicit-file-set coverage, adding a file to the repository does not silently add it to the provenance claim. New canonical artifacts must be deliberately added to `CANONICAL_PUBLIC_ARTIFACTS`, the tests, and this documentation.
@@ -99,6 +113,34 @@ envelope schema. The receipt establishes integrity of those exact files; it does
 not turn declared privacy fields into external enforcement or a psychological
 assessment.
 
+
+## Experimental HARMONI-666 release check
+
+The wheel installs the HARMONI-666 proof gate through `cmb-machine`. Before tagging:
+
+```bash
+cmb-machine harmoni-manifest
+cmb-machine harmoni-evaluate --state PROOF --all-proof-gates
+```
+
+CI also requires an incomplete proof request to fail closed with exit code `2`
+and emit `MISSINGNO_666`.
+
+The canonical receipt covers the HARMONI specification, decision and manifest
+schemas, CMB machine IR, FGC origin mark, target registry, and machine index.
+Revelation 13:18 is preserved in HARMONI as a literary and architectural design
+key:
+
+```text
+WISDOM -> UNDERSTANDING -> CALCULATION -> HUMAN
+```
+
+This scriptural motif does not constitute empirical proof or cryptographic
+evidence. The machine-verifiable rule remains:
+
+```text
+CLAIM_STRENGTH <= VERIFIED_EVIDENCE_STRENGTH
+```
 
 ## v1.4 interoperability checks
 
