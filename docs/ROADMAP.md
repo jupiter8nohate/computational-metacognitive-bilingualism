@@ -34,6 +34,7 @@ The project wants one serious security/provenance review before seeking broad en
 - dependency review
 - OpenSSF Scorecard
 - explicit threat model
+- enable platform-side Dependency Graph, private vulnerability reporting, and branch protections described in [Repository settings](REPOSITORY_SETTINGS.md)
 
 ## P1 — CMB-Z13 executable notation
 
