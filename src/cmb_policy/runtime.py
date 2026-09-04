@@ -44,6 +44,10 @@ _ALLOWED_TRANSITIONS = {
     state: {_STATE_ORDER[index + 1]} if index + 1 < len(_STATE_ORDER) else set()
     for index, state in enumerate(_STATE_ORDER)
 }
+_SUPPORTED_PROTOCOLS = {
+    "cmb.sovereignty-runtime.v1",
+    "cmb.sovereignty-runtime.v2",
+}
 
 
 @dataclass(frozen=True, slots=True)
@@ -113,7 +117,7 @@ class RuntimePolicy:
             )
 
         protocol = str(cmb.get("protocol", "")).strip()
-        if protocol != "cmb.sovereignty-runtime.v1":
+        if protocol not in _SUPPORTED_PROTOCOLS:
             raise RuntimePolicyError(f"unsupported runtime protocol: {protocol or '<missing>'}")
 
         return cls(
@@ -160,6 +164,26 @@ class Assessment:
         }
 
 
+def effective_friction(policy: RuntimePolicy, operation: str) -> float:
+    rule = policy.operations.get(operation)
+    if rule is None:
+        return 1.0
+    return max(policy.default_friction, rule.criticality)
+
+
+def required_controls_for(policy: RuntimePolicy, operation: str) -> tuple[str, ...]:
+    rule = policy.operations.get(operation)
+    if rule is None:
+        return ("human_signature", "isolated_verification", "two_party_review")
+    friction = effective_friction(policy, operation)
+    required = set(rule.controls)
+    if friction >= policy.high_friction_threshold:
+        required.update(("human_signature", "isolated_verification"))
+    if friction >= policy.critical_threshold:
+        required.add("two_party_review")
+    return tuple(sorted(required))
+
+
 def assess_operation(
     policy: RuntimePolicy,
     operation: str,
@@ -179,24 +203,19 @@ def assess_operation(
             mode=FrictionMode.HIGH_FRICTION,
             criticality=1.0,
             friction=1.0,
-            required_controls=("human_signature", "isolated_verification", "two_party_review"),
+            required_controls=required_controls_for(policy, operation),
             satisfied_controls=(),
             failures=("UNKNOWN_OPERATION_FAIL_CLOSED",),
             policy_digest=policy.digest,
         )
 
-    friction = max(policy.default_friction, rule.criticality)
+    friction = effective_friction(policy, operation)
     mode = (
         FrictionMode.HIGH_FRICTION
         if friction >= policy.high_friction_threshold
         else FrictionMode.LOW_FRICTION
     )
-    required = set(rule.controls)
-    if friction >= policy.high_friction_threshold:
-        required.update(("human_signature", "isolated_verification"))
-    if friction >= policy.critical_threshold:
-        required.add("two_party_review")
-
+    required = set(required_controls_for(policy, operation))
     failures: list[str] = []
     satisfied: set[str] = set()
 

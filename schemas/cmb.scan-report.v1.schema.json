@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/schemas/cmb.scan-report.v1.schema.json",
+  "title": "CMB SRP-2 Scan Report v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema",
+    "policy_digest",
+    "files",
+    "findings",
+    "errors",
+    "operations",
+    "report_digest"
+  ],
+  "properties": {
+    "schema": {"const": "cmb.scan-report.v1"},
+    "policy_digest": {"type": "string", "pattern": "^sha256:[0-9a-fA-F]{64}$"},
+    "base": {"type": ["string", "null"]},
+    "head": {"type": ["string", "null"]},
+    "files": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "operations": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "operation", "rule_id", "detector", "line", "column", "evidence"],
+        "properties": {
+          "path": {"type": "string"},
+          "operation": {"type": "string"},
+          "rule_id": {"type": "string"},
+          "detector": {"type": "string"},
+          "line": {"type": ["integer", "null"], "minimum": 1},
+          "column": {"type": ["integer", "null"], "minimum": 0},
+          "evidence": {"type": "string"}
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "code", "message"],
+        "properties": {
+          "path": {"type": "string"},
+          "code": {"type": "string"},
+          "message": {"type": "string"}
+        }
+      }
+    },
+    "report_digest": {"type": "string", "pattern": "^sha256:[0-9a-fA-F]{64}$"}
+  }
+}
