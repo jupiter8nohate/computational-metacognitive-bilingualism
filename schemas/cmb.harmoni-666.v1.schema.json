@@ -16,7 +16,7 @@
     "reason"
   ],
   "properties": {
-    "schema_version": {"const": "cmb.harmoni-666.v1"},
+    "schema_version": {"const": "cmb.harmoni-666.decision.v1"},
     "protocol": {"const": "HARMONI-666/1.0"},
     "requested_state": {
       "enum": ["PATTERN", "HYPOTHESIS", "INFERENCE", "EVIDENCE", "PROOF", "UNKNOWN"]
