@@ -13,6 +13,7 @@ CANONICAL_PUBLIC_ARTIFACTS: tuple[str, ...] = (
     "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
     "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
     "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
+    "library/catalog.json",
 )
 
 
