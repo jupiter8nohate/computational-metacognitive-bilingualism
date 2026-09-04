@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Bilingual CMB digital-library layer: human navigation in `library/README.md`, a machine-indexable `library/catalog.json`, and tests that enforce catalog/release-scope consistency.
 - **CMB // The Unclassifiable Index**, a canonical MissingNo–Pokédex manifesto defining a perspective-aware human/machine-readable library model and the CMB MissingNo Clause.
 - Installable `cmb-provenance` Python package and console entry point.
 - Stable `seal()` and `verify()` APIs for explicit artifact sets.

@@ -38,6 +38,7 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
         "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
         "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
+        "library/catalog.json",
     )
 
 
