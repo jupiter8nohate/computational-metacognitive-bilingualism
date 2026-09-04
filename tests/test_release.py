@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from cmb_provenance.release import build_checksums
+from cmb_provenance.release import CANONICAL_PUBLIC_ARTIFACTS, build_checksums
 
 
 def test_release_checksums_are_sorted_and_repeatable(tmp_path: Path) -> None:
@@ -28,3 +28,41 @@ def test_release_checksums_are_sorted_and_repeatable(tmp_path: Path) -> None:
 def test_release_checksums_require_artifacts(tmp_path: Path) -> None:
     with pytest.raises(ValueError, match="No release files"):
         build_checksums(tmp_path, tmp_path / "SHA256SUMS")
+
+
+def test_canonical_public_artifact_set_is_exact_and_includes_dna() -> None:
+    assert CANONICAL_PUBLIC_ARTIFACTS == (
+        "MANIFESTO.md",
+        "CMB_Polyglot_Firewall_Specification.md",
+        "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+    )
+
+
+def test_canonical_public_artifacts_exist_in_repository() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+    missing = [
+        path
+        for path in CANONICAL_PUBLIC_ARTIFACTS
+        if not (repository_root / path).is_file()
+    ]
+    assert missing == []
+
+
+def test_release_workflow_uses_canonical_sealing_script() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+    workflow = (
+        repository_root / ".github" / "workflows" / "release.yml"
+    ).read_text(encoding="utf-8")
+
+    assert "python scripts/seal_canonical_artifacts.py" in workflow
+    assert "--output dist/cmb-source.cmb-receipt.json" in workflow
+
+
+def test_ci_generates_and_verifies_canonical_receipt() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+    workflow = (
+        repository_root / ".github" / "workflows" / "ci.yml"
+    ).read_text(encoding="utf-8")
+
+    assert "python scripts/seal_canonical_artifacts.py" in workflow
+    assert "--print-json" in workflow
