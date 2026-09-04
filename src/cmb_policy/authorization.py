@@ -142,15 +142,44 @@ def generate_ed25519_keypair() -> tuple[str, str]:
 
 
 def write_keypair(private_path: Path, public_path: Path) -> None:
+    """Create a new keypair without an insecure permission or overwrite window."""
     private_key, public_key = generate_ed25519_keypair()
-    private_path.parent.mkdir(parents=True, exist_ok=True)
-    public_path.parent.mkdir(parents=True, exist_ok=True)
-    private_path.write_text(private_key + "\n", encoding="utf-8")
-    public_path.write_text(public_key + "\n", encoding="utf-8")
+    private_created = False
     try:
-        os.chmod(private_path, 0o600)
-    except OSError:
-        pass
+        _write_new_key_file(private_path, private_key, 0o600)
+        private_created = True
+        _write_new_key_file(public_path, public_key, 0o644)
+    except Exception:
+        if private_created:
+            try:
+                private_path.unlink()
+            except OSError:
+                pass
+        raise
+
+
+def _write_new_key_file(path: Path, value: str, mode: int) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_BINARY", 0)
+    flags |= getattr(os, "O_NOFOLLOW", 0)
+    try:
+        descriptor = os.open(path, flags, mode)
+    except FileExistsError as exc:
+        raise AuthorizationError(f"Refusing to overwrite existing key file: {path}") from exc
+    except OSError as exc:
+        raise AuthorizationError(f"Unable to create key file {path}: {exc}") from exc
+
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8", newline="\n") as handle:
+            handle.write(value + "\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+    except Exception:
+        try:
+            path.unlink()
+        except OSError:
+            pass
+        raise
 
 
 def create_authorization(
