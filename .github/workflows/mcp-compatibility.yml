@@ -7,9 +7,6 @@ on:
       - "src/cmb_cap/**"
       - "src/cmb_sdl/**"
       - "src/cmb_machine/**"
-      - "src/cmb_cap/**"
-      - "src/cmb_sdl/**"
-      - "src/cmb_machine/**"
       - "agents/**"
       - "tests/test_mcp_adapter.py"
       - "pyproject.toml"
@@ -17,6 +14,9 @@ on:
   pull_request:
     paths:
       - "src/cmb_agents/**"
+      - "src/cmb_cap/**"
+      - "src/cmb_sdl/**"
+      - "src/cmb_machine/**"
       - "agents/**"
       - "tests/test_mcp_adapter.py"
       - "pyproject.toml"
