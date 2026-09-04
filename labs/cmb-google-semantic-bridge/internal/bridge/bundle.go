@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
+	"strings"
 )
 
 type OutputManifest struct {
@@ -39,10 +40,11 @@ func WriteBundleAtomic(outputDir, artifactID, toolVersion string, outputs map[st
 
 	names := make([]string, 0, len(outputs))
 	for name := range outputs {
-		if name == "" || name != filepath.Base(name) || name == "." {
-			return fmt.Errorf("unsafe output name %q", name)
+		clean, err := safeBundlePath(name)
+		if err != nil {
+			return err
 		}
-		names = append(names, name)
+		names = append(names, clean)
 	}
 	sort.Strings(names)
 
@@ -53,7 +55,11 @@ func WriteBundleAtomic(outputDir, artifactID, toolVersion string, outputs map[st
 		Files:         make(map[string]string, len(outputs)),
 	}
 	for _, name := range names {
-		if err := writeSyncedFile(filepath.Join(stage, name), outputs[name], 0o644); err != nil {
+		path := filepath.Join(stage, filepath.FromSlash(name))
+		if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+			return fmt.Errorf("create output directory for %s: %w", name, err)
+		}
+		if err := writeSyncedFile(path, outputs[name], 0o644); err != nil {
 			return fmt.Errorf("write %s: %w", name, err)
 		}
 		manifest.Files[name] = SHA256Bytes(outputs[name])
@@ -131,4 +137,25 @@ func replaceDirectory(stage, destination string) error {
 		return fmt.Errorf("remove previous publication: %w", err)
 	}
 	return nil
+}
+
+
+func safeBundlePath(name string) (string, error) {
+	if name == "" {
+		return "", fmt.Errorf("unsafe output name %q", name)
+	}
+	slash := filepath.ToSlash(name)
+	clean := filepath.ToSlash(filepath.Clean(slash))
+	if clean != slash || clean == "." || strings.HasPrefix(clean, "/") {
+		return "", fmt.Errorf("unsafe output name %q", name)
+	}
+	for _, part := range strings.Split(clean, "/") {
+		if part == "" || part == "." || part == ".." {
+			return "", fmt.Errorf("unsafe output name %q", name)
+		}
+	}
+	if clean == "manifest.json" {
+		return "", fmt.Errorf("manifest.json is reserved for the bundle manifest")
+	}
+	return clean, nil
 }
