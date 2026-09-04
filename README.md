@@ -7,6 +7,11 @@
 [![Creative content](https://img.shields.io/badge/creative%20content-rights%20reserved-purple.svg)](CONTENT_LICENSE.md)
 
 
+<p align="center">
+  <img src="assets/cmb-hero-8k.svg" alt="CMB cosmic hero banner" width="100%">
+</p>
+
+
 ---
 
 ```text
@@ -67,7 +72,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 You should not need the entire CMB universe to understand the thesis.
 
-- **2-minute policy front door:** [CMB — 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
+- **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
 - **Full policy proposal:** [CMB Global Advocacy Charter v1.1](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md)
 - **Novelty / prior-art test:** [Prior Art, Legal Context, and Positioning](docs/PRIOR_ART_AND_POSITIONING.md)
 - **Provenance / standards bridge:** [CMB Provenance ↔ C2PA Interoperability Plan](docs/C2PA_INTEROPERABILITY.md)
@@ -106,16 +111,16 @@ Version 1.3.1 turns the original standalone experiment into an installable packa
 
 The repository treats the following public works as first-class CMB artifacts:
 
-- [`MANIFESTO.md`](MANIFESTO.md) — the core CMB human-sovereignty manifesto.
-- [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
-- [`Demon's Need Attention — D.N.A.`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — the attention-economy branch of CMB: a code-manifesto about engagement, behavioral profiling, data mining, consumption, and cognitive sovereignty.
-- [`The Chicken Run Manifesto`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) — a D.N.A./FGC literary manifesto using the coop as an allegory for institutional and algorithmic confinement, with explicit human-agency boundaries.
-- [`CMB // The Unclassifiable Index`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — the MissingNo–Pokédex manifesto defining CMB as a human/machine-readable library of perspective, uncertainty, context, and provenance.
-- [`CMB-Z13™ Manifesto`](manifestos/CMB_Z13_MANIFESTO.md) — the public declaration of the thirteen-lens Zodiac Computational Metacognitive Language.
-- [`CMB-Z13™ Language Specification`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) — the formal symbolic notation mapping zodiac archetypes to C, Rust, Haskell, C++, Java, TypeScript, Python, Swift, Go, Kotlin, Prolog, Common Lisp, and Julia while preserving `HUMAN_AGENCY > MACHINE_AUTHORITY`.
-- [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) — the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
-- [`CMB Digital Library Catalog`](library/catalog.json) — the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
-- [`CMB Global Advocacy Charter v1.1`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
+- [`MANIFESTO.md`](MANIFESTO.md) - the core CMB human-sovereignty manifesto.
+- [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) - the CMB thesis expressed across ten programming languages.
+- [`Demon's Need Attention - D.N.A.`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) - the attention-economy branch of CMB: a code-manifesto about engagement, behavioral profiling, data mining, consumption, and cognitive sovereignty.
+- [`The Chicken Run Manifesto`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - a D.N.A./FGC literary manifesto using the coop as an allegory for institutional and algorithmic confinement, with explicit human-agency boundaries.
+- [`CMB // The Unclassifiable Index`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - the MissingNo–Pokédex manifesto defining CMB as a human/machine-readable library of perspective, uncertainty, context, and provenance.
+- [`CMB-Z13™ Manifesto`](manifestos/CMB_Z13_MANIFESTO.md) - the public declaration of the thirteen-lens Zodiac Computational Metacognitive Language.
+- [`CMB-Z13™ Language Specification`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) - the formal symbolic notation mapping zodiac archetypes to C, Rust, Haskell, C++, Java, TypeScript, Python, Swift, Go, Kotlin, Prolog, Common Lisp, and Julia while preserving `HUMAN_AGENCY > MACHINE_AUTHORITY`.
+- [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) - the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
+- [`CMB Digital Library Catalog`](library/catalog.json) - the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
+- [`CMB Global Advocacy Charter v1.1`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
 
 CMB-Z13 is now part of the canonical provenance sealing set. The next tag-triggered signed release will seal the manifesto, language specification, machine registry, and the rest of the canonical CMB corpus as one explicit file set.
 
@@ -304,28 +309,28 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 
 ## Repository contents
 
-- [`MANIFESTO.md`](MANIFESTO.md) — the public CMB human-sovereignty manifesto.
-- [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
-- [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — **Demon's Need Attention — D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
-- [`manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) — **The Chicken Run Manifesto**, the D.N.A./FGC literary-allegory branch.
-- [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — **The Unclassifiable Index**, CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
-- [`manifestos/CMB_Z13_MANIFESTO.md`](manifestos/CMB_Z13_MANIFESTO.md) — **CMB-Z13™ manifesto**, the human-readable declaration of the thirteen computational lenses and Guardian Modes.
-- [`manifestos/CMB_Z13_LANGUAGE_SPEC.md`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) — **CMB-Z13™**, the Zodiac Computational Metacognitive Language specification.
-- [`library/cmb-z13.registry.json`](library/cmb-z13.registry.json) — machine-readable CMB-Z13 operator, vector, Guardian Mode, reasoning-pipeline, and interpretation registry.
-- [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the CMB Global Advocacy Charter v1.1.
-- [`library/README.md`](library/README.md) — human-readable entry point to the CMB digital library.
-- [`library/catalog.json`](library/catalog.json) — machine-indexable artifact catalog, sealed as part of the canonical public set.
-- [`src/cmb_provenance`](src/cmb_provenance) — the supported v1.3.1 package, stable sealing API, and C2PA-facing adapter.
-- [`schemas/cmb.c2pa-assertion-payload.v1.schema.json`](schemas/cmb.c2pa-assertion-payload.v1.schema.json) — strict schema for the internal C2PA-facing adapter payload.
-- [`schemas/cmb.z13.ast.v1.schema.json`](schemas/cmb.z13.ast.v1.schema.json) — deterministic AST schema for the experimental CMB-Z13 parser.
-- [`examples`](examples) — five small install/verify/C2PA/Z13 examples.
-- [`docs`](docs) and [`mkdocs.yml`](mkdocs.yml) — buildable documentation front door for humans, developers, and researchers.
-- [`SECURITY.md`](SECURITY.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — open-source governance and security boundaries.
-- [`tests`](tests) — deterministic, corruption, concurrency, schema, CLI, CMB-Z13, and canonical-artifact tests.
-- [`receipts`](receipts) — checked-in provenance receipts and their verification-status documentation.
-- [`cmb_provenance_v1_3.py`](cmb_provenance_v1_3.py) — the retained historical v1.3.0 standalone tool.
-- [`ATTRIBUTION.md`](ATTRIBUTION.md) and [`CITATION.cff`](CITATION.cff) — authorship boundaries and citation metadata.
-- [`RELEASE.md`](RELEASE.md) — the checksum, Sigstore, attestation, and canonical-sealing release procedure.
+- [`MANIFESTO.md`](MANIFESTO.md) - the public CMB human-sovereignty manifesto.
+- [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) - the CMB thesis expressed across ten programming languages.
+- [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) - **Demon's Need Attention - D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
+- [`manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - **The Chicken Run Manifesto**, the D.N.A./FGC literary-allegory branch.
+- [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - **The Unclassifiable Index**, CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
+- [`manifestos/CMB_Z13_MANIFESTO.md`](manifestos/CMB_Z13_MANIFESTO.md) - **CMB-Z13™ manifesto**, the human-readable declaration of the thirteen computational lenses and Guardian Modes.
+- [`manifestos/CMB_Z13_LANGUAGE_SPEC.md`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) - **CMB-Z13™**, the Zodiac Computational Metacognitive Language specification.
+- [`library/cmb-z13.registry.json`](library/cmb-z13.registry.json) - machine-readable CMB-Z13 operator, vector, Guardian Mode, reasoning-pipeline, and interpretation registry.
+- [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the CMB Global Advocacy Charter v1.1.
+- [`library/README.md`](library/README.md) - human-readable entry point to the CMB digital library.
+- [`library/catalog.json`](library/catalog.json) - machine-indexable artifact catalog, sealed as part of the canonical public set.
+- [`src/cmb_provenance`](src/cmb_provenance) - the supported v1.3.1 package, stable sealing API, and C2PA-facing adapter.
+- [`schemas/cmb.c2pa-assertion-payload.v1.schema.json`](schemas/cmb.c2pa-assertion-payload.v1.schema.json) - strict schema for the internal C2PA-facing adapter payload.
+- [`schemas/cmb.z13.ast.v1.schema.json`](schemas/cmb.z13.ast.v1.schema.json) - deterministic AST schema for the experimental CMB-Z13 parser.
+- [`examples`](examples) - five small install/verify/C2PA/Z13 examples.
+- [`docs`](docs) and [`mkdocs.yml`](mkdocs.yml) - buildable documentation front door for humans, developers, and researchers.
+- [`SECURITY.md`](SECURITY.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) - open-source governance and security boundaries.
+- [`tests`](tests) - deterministic, corruption, concurrency, schema, CLI, CMB-Z13, and canonical-artifact tests.
+- [`receipts`](receipts) - checked-in provenance receipts and their verification-status documentation.
+- [`cmb_provenance_v1_3.py`](cmb_provenance_v1_3.py) - the retained historical v1.3.0 standalone tool.
+- [`ATTRIBUTION.md`](ATTRIBUTION.md) and [`CITATION.cff`](CITATION.cff) - authorship boundaries and citation metadata.
+- [`RELEASE.md`](RELEASE.md) - the checksum, Sigstore, attestation, and canonical-sealing release procedure.
 
 ## Development
 
@@ -346,10 +351,10 @@ CI runs the tests on Python 3.10–3.13. The canonical-receipt CI job independen
 
 CMB keeps four categories separate:
 
-1. **Declared policy** — what a creator or system says machines may do.
-2. **Cryptographic integrity** — whether recorded bytes have changed.
-3. **Technical enforcement** — what a deployed system can actually prevent.
-4. **Legal enforceability** — what applicable law and admissible evidence support.
+1. **Declared policy** - what a creator or system says machines may do.
+2. **Cryptographic integrity** - whether recorded bytes have changed.
+3. **Technical enforcement** - what a deployed system can actually prevent.
+4. **Legal enforceability** - what applicable law and admissible evidence support.
 
 The word “firewall” in the polyglot specification is a conceptual and architectural metaphor. The examples express invariants; they do not make copying impossible or create universal enforcement. Likewise, a local hash chain is tamper-evident, not an immutable public ledger, and a signature or timestamp may support provenance without automatically proving authorship in court.
 
@@ -374,7 +379,7 @@ See [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER
 
 ## Registry gate
 
-The public registry is intentionally deferred until v1.3.1 passes CI and the signed release is published. A future registry should store signed receipts and independently checkable timestamp evidence—not unpublished creative works or unnecessary personal information.
+The public registry is intentionally deferred until v1.3.1 passes CI and the signed release is published. A future registry should store signed receipts and independently checkable timestamp evidence-not unpublished creative works or unnecessary personal information.
 
 ## Authorship and purpose
 
