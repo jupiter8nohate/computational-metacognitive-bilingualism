@@ -1,0 +1,199 @@
+# CMB HARMONI-666
+
+**Status:** Experimental bounded-proof protocol  
+**Protocol:** `HARMONI-666/1.0`  
+**Parent architecture:** CMB-66  
+**Unknown-state sentinel:** `MISSINGNO_666`
+
+## Purpose
+
+HARMONI-666 prevents an inference, pattern, prediction, or model output from
+silently escalating into proof.
+
+The design combines three jurisdictions in one triangle without pretending they
+are interchangeable.
+
+```text
+                         HARMONI
+                            △
+                           / \
+                          /   \
+                         /     \
+                AXIOMATIC ----- MACHINE
+                    \           /
+                     \         /
+                      \       /
+                       \     /
+                        HUMAN
+```
+
+### AXIOMATIC
+
+The symbolic "language of God" is represented technically as the **axiomatic
+layer**: declared first principles, values, and philosophical commitments.
+
+It is not represented as empirical proof, supernatural telemetry, or a claim
+that software can verify divine communication.
+
+### MACHINE
+
+The machine layer owns computation, search, serialization, deterministic
+transformation, cryptographic verification, and bounded formal proof.
+
+It does not receive final authority over human meaning, consent, authorship, or
+self-definition.
+
+### HUMAN
+
+The human layer retains meaning, consent, authorship, judgment, interpretation,
+and final authority.
+
+```text
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+## Why 666
+
+The number is used as a protocol mnemonic: three groups of six.
+
+### Six epistemic states
+
+```text
+PATTERN
+HYPOTHESIS
+INFERENCE
+EVIDENCE
+PROOF
+UNKNOWN
+```
+
+### Six proof gates
+
+A claim may remain `PROOF` only if all six gates pass.
+
+```text
+RULES_DEFINED
+ASSUMPTIONS_DECLARED
+DOMAIN_BOUNDED
+DERIVATION_REPRODUCIBLE
+COUNTEREXAMPLE_SEARCHED
+VERIFIER_PASSED
+```
+
+### Six sovereignty failsafes
+
+```text
+PROFILE != PERSON
+MODEL != MIND
+INFERENCE != FACT
+PREDICTION != DESTINY
+CAPABILITY != AUTHORITY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+## MissingNo.666
+
+MissingNo.666 is not an error to conceal. It is the explicit representation of a
+model boundary.
+
+```text
+MISSINGNO_666
+=
+UNKNOWN_STATE
++
+UNVERIFIED_DOMAIN
++
+COUNTEREXAMPLE_CANDIDATE
++
+HUMAN_REVIEW
+```
+
+If a machine requests the epistemic state `PROOF` and any proof gate fails,
+the protocol MUST return:
+
+```text
+effective_state = UNKNOWN
+sentinel        = MISSINGNO_666
+authority       = HUMAN_FINAL
+```
+
+A system MUST NOT manufacture certainty to avoid returning UNKNOWN.
+
+## Chess reference model
+
+Chess is a useful teaching model because it clearly separates heuristic
+strength from solved-domain proof.
+
+```text
+ENGINE EVALUATION
+    !=
+MATHEMATICAL PROOF
+
+TABLEBASE RESULT
+    =
+PROOF WITHIN THE TABLEBASE'S SOLVED DOMAIN
+
+UNKNOWN POSITION
+    =
+MISSINGNO_666
+WHEN A PROOF CLAIM EXCEEDS THE VERIFIED DOMAIN
+```
+
+The protocol does not claim that chess as a whole is solved.
+
+## Governing equation
+
+```text
+CLAIM_STRENGTH <= VERIFIED_EVIDENCE_STRENGTH
+```
+
+This is the operational extension of:
+
+```text
+PATTERN != PROOF
+```
+
+## Reference Python API
+
+```python
+from cmb_machine.harmoni import EpistemicState, ProofGate, evaluate_claim
+
+decision = evaluate_claim(
+    EpistemicState.PROOF,
+    gate_results={gate: True for gate in ProofGate},
+)
+
+assert decision.effective_state is EpistemicState.PROOF
+```
+
+If one gate is missing:
+
+```python
+decision = evaluate_claim(
+    "PROOF",
+    gate_results={
+        "RULES_DEFINED": True,
+        "ASSUMPTIONS_DECLARED": True,
+        "DOMAIN_BOUNDED": True,
+        "DERIVATION_REPRODUCIBLE": True,
+        "COUNTEREXAMPLE_SEARCHED": True,
+        "VERIFIER_PASSED": False,
+    },
+)
+
+assert decision.effective_state is EpistemicState.UNKNOWN
+assert decision.missingno is True
+```
+
+## Recovery rule
+
+```text
+WHEN PROOF FAILS:
+    DO NOT GUESS
+    DO NOT PROMOTE INFERENCE
+    DO NOT HIDE UNCERTAINTY
+
+    RETURN MISSINGNO_666
+    IDENTIFY FAILED GATES
+    PRESERVE HUMAN_FINAL
+```
