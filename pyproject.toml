@@ -42,14 +42,12 @@ test = ["pytest>=8,<10", "jsonschema>=4.23,<5"]
 build = ["build>=1.2,<2"]
 docs = ["mkdocs>=1.6,<2"]
 mcp = ["mcp>=2,<3"]
-mcp = ["mcp==2.0.0"]
 
 [project.scripts]
 cmb-provenance = "cmb_provenance.cli:main"
 cmb-z13 = "cmb_provenance.z13_cli:main"
 cmb-edu = "cmb_edu.cli:main"
 cmb-agent = "cmb_agents.cli:main"
-cmb-mcp = "cmb_agents.mcp_server:main"
 cmb-mcp = "cmb_agents.mcp_server:main"
 
 [project.urls]
