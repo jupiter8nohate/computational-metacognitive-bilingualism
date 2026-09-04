@@ -12,17 +12,15 @@ All notable changes to the CMB provenance tool are documented here.
 - Zero-dependency interactive browser playground for local SHA-256 hashing, CMB-Z13 symbolic projections, machine-readable declarations, and explicit boundary checks.
 - Human-readable manifesto library index.
 - FastAPI boundary-guard example using explicit application facts rather than behavioral inference.
+- Shared `cmb.boundary-conformance.v1` fixtures that define deterministic policy semantics and violation order across languages.
+- TypeScript/Express boundary adapter with strict runtime parsing and shared-fixture tests.
+- Rust/Actix Web boundary adapter with `deny_unknown_fields`, internal `HUMAN_FINAL` construction, and shared-fixture tests.
+- Hosted polyglot conformance workflow covering strict TypeScript build/test plus Rust fmt, Clippy, and test gates.
 
-## [Unreleased]
+### Changed
 
-### Added
-
-- Framework-agnostic CMB boundary policy evaluator with deterministic rejection codes and human-final authority.
-- Versioned `cmb.boundary-event.v1` JSON Schema for cross-language policy-event interoperability.
-- Strict `cmb.library.catalog.v1` JSON Schema with CI validation through the test suite.
-- Zero-dependency interactive browser playground for local SHA-256 hashing, CMB-Z13 symbolic projections, machine-readable declarations, and explicit boundary checks.
-- Human-readable manifesto library index.
-- FastAPI boundary-guard example using explicit application facts rather than behavioral inference.
+- Cleaned duplicated roadmap and changelog sections created during the previous rapid platform upgrade.
+- Boundary compatibility is now defined by executable shared fixtures rather than prose similarity alone.
 
 ## [1.3.1] - 2026-09-04
 
