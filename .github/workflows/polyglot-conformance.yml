@@ -1,0 +1,63 @@
+name: Polyglot boundary conformance
+
+on:
+  push:
+    paths:
+      - "adapters/**"
+      - "conformance/**"
+      - "src/cmb_provenance/boundary.py"
+      - "schemas/cmb.boundary-event.v1.schema.json"
+      - ".github/workflows/polyglot-conformance.yml"
+  pull_request:
+    paths:
+      - "adapters/**"
+      - "conformance/**"
+      - "src/cmb_provenance/boundary.py"
+      - "schemas/cmb.boundary-event.v1.schema.json"
+      - ".github/workflows/polyglot-conformance.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  typescript-express:
+    name: TypeScript + Express
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Runtime versions
+        run: |
+          node --version
+          npm --version
+      - name: Install adapter dependencies
+        working-directory: adapters/typescript-express
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Build strict TypeScript
+        working-directory: adapters/typescript-express
+        run: npm run build
+      - name: Run shared conformance
+        working-directory: adapters/typescript-express
+        run: npm test
+
+  rust-actix:
+    name: Rust + Actix Web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Toolchain versions
+        run: |
+          rustc --version
+          cargo --version
+      - name: Format check
+        working-directory: adapters/rust-actix
+        run: cargo fmt --all -- --check
+      - name: Clippy
+        working-directory: adapters/rust-actix
+        run: cargo clippy --all-targets -- -D warnings
+      - name: Run shared conformance
+        working-directory: adapters/rust-actix
+        run: cargo test --all-targets

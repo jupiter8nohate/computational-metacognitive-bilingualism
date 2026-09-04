@@ -1,0 +1,12 @@
+[package]
+name = "cmb-boundary-actix"
+version = "0.1.0"
+edition = "2024"
+publish = false
+description = "Reference Actix adapter for the CMB boundary-event v1 contract."
+license = "Apache-2.0"
+
+[dependencies]
+actix-web = "4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

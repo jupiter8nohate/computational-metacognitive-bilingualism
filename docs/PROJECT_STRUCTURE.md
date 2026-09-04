@@ -10,6 +10,8 @@ These are the parts intended to behave like conventional software infrastructure
 src/cmb_provenance/
 schemas/
 tests/
+conformance/
+adapters/
 scripts/
 .github/workflows/
 RELEASE.md
@@ -65,3 +67,12 @@ Moving a claim between maturity layers requires an explicit change, evidence, an
 - `examples/06_fastapi_boundary` - reference integration using server-supplied policy facts.
 
 These components intentionally separate symbolic meaning from executable enforcement.
+
+## Polyglot boundary layer
+
+- `conformance/boundary.v1.cases.json` - language-neutral semantic fixtures.
+- `adapters/typescript-express` - strict TypeScript parser, evaluator, and Express endpoint.
+- `adapters/rust-actix` - strict Rust evaluator, Serde input contract, and Actix endpoint.
+- `.github/workflows/polyglot-conformance.yml` - hosted TypeScript and Rust build/conformance gate.
+
+The Python implementation remains the reference engine. The adapters are compatible only insofar as they keep passing the shared fixtures.

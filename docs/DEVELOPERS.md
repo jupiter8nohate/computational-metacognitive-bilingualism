@@ -41,7 +41,14 @@ The engine enforces declared conditions only. It does not inspect prose and infe
 
 Cross-language implementations can use [`cmb.boundary-event.v1.schema.json`](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.boundary-event.v1.schema.json) as the shared event contract.
 
-The first framework example is [FastAPI boundary guard](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/examples/06_fastapi_boundary/README.md). Additional adapters should share conformance fixtures rather than independently reinterpreting the rules.
+The first framework example is [FastAPI boundary guard](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/examples/06_fastapi_boundary/README.md).
+
+The repository also contains conformance-tested reference adapters for:
+
+- [TypeScript + Express](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/adapters/typescript-express)
+- [Rust + Actix Web](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/adapters/rust-actix)
+
+All three language implementations run [the same boundary-v1 cases](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/conformance/boundary.v1.cases.json). A policy implementation that cannot pass those cases is not v1-conformant.
 
 ## Experimental CMB-Z13 reference parser
 

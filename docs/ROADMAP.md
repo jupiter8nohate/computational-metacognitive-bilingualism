@@ -26,6 +26,8 @@ The project wants one serious security/provenance review before seeking broad en
 
 ## P1 ✦ repository hardening
 
+Completed in-repository controls include:
+
 - SECURITY.md
 - CONTRIBUTING.md
 - CODEOWNERS
@@ -34,45 +36,46 @@ The project wants one serious security/provenance review before seeking broad en
 - dependency review
 - OpenSSF Scorecard
 - explicit threat model
-- enable platform-side Dependency Graph, private vulnerability reporting, and branch protections described in [Repository settings](REPOSITORY_SETTINGS.md)
+
+Platform-side controls still require repository settings:
+
+- Dependency Graph;
+- private vulnerability reporting;
+- branch protections described in [Repository settings](REPOSITORY_SETTINGS.md).
 
 ## P1 ✦ interactive human/machine front door
 
-The repository now contains a zero-dependency browser playground that demonstrates local hashing, machine-readable declarations, CMB-Z13 symbolic projections, and explicit policy-boundary evaluation.
+Implemented:
 
-The public deployment dependency remains GitHub Pages or another reviewed static host. The playground contains no external JavaScript dependencies or analytics.
+- zero-dependency browser playground;
+- local SHA-256 demonstration;
+- CMB-Z13 symbolic projection;
+- explicit policy-boundary evaluation;
+- no external JavaScript analytics or dependencies.
 
-## P1 ✦ explicit boundary contract
-
-The Python package now contains a framework-agnostic boundary evaluator and a versioned JSON event schema.
-
-Next work:
-
-- publish shared conformance fixtures;
-- add TypeScript/Express and Rust/Actix adapters only after they can run against the same fixtures;
-- keep application facts explicit instead of adding behavioral inference;
-- define versioning rules before expanding the policy surface.
-
-## P1 ✦ interactive human/machine front door
-
-The repository now contains a zero-dependency browser playground that demonstrates local hashing, machine-readable declarations, CMB-Z13 symbolic projections, and explicit policy-boundary evaluation.
-
-The public deployment dependency remains GitHub Pages or another reviewed static host. The playground contains no external JavaScript dependencies or analytics.
+Remaining deployment step: enable GitHub Pages or another reviewed static host.
 
 ## P1 ✦ explicit boundary contract
 
-The Python package now contains a framework-agnostic boundary evaluator and a versioned JSON event schema.
+Implemented:
 
-Next work:
+- Python reference evaluator;
+- versioned `cmb.boundary-event.v1` JSON contract;
+- shared language-neutral conformance fixtures;
+- TypeScript/Express reference adapter;
+- Rust/Actix Web reference adapter;
+- hosted polyglot conformance workflow.
 
-- publish shared conformance fixtures;
-- add TypeScript/Express and Rust/Actix adapters only after they can run against the same fixtures;
-- keep application facts explicit instead of adding behavioral inference;
-- define versioning rules before expanding the policy surface.
+Next boundary work:
+
+- define formal compatibility/versioning rules for v1 → v2 evolution;
+- add invalid-input conformance fixtures, not only valid semantic cases;
+- add authenticated provenance for the upstream facts feeding a boundary event;
+- avoid behavioral inference as a substitute for explicit application state.
 
 ## P1 ✦ CMB-Z13 executable notation
 
-The experimental reference parser now supports:
+The experimental reference parser supports:
 
 ```text
 cmb-z13 parse
@@ -94,7 +97,7 @@ Before production entity-specific assertions:
 
 ## P2 ✦ documentation publishing
 
-The repository now includes a buildable MkDocs site. Enable GitHub Pages only after the repository owner reviews the public information architecture and desired domain.
+The repository includes a buildable MkDocs site and browser playground. Enable GitHub Pages only after the repository owner reviews the public information architecture and desired domain.
 
 ## Rule for future expansion
 

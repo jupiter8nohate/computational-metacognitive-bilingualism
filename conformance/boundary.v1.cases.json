@@ -1,0 +1,211 @@
+{
+  "schema_version": "cmb.boundary-conformance.v1",
+  "cases": [
+    {
+      "id": "allow_no_policy_requirements",
+      "event": {
+        "schema_version": "cmb.boundary-event.v1",
+        "event_id": "allow-001",
+        "consequential_decision": false,
+        "ai_involved": false,
+        "ai_disclosed": false,
+        "human_review_available": false,
+        "profile_treated_as_person": false,
+        "prediction_treated_as_destiny": false,
+        "consent_required": false,
+        "consent_present": false
+      },
+      "expected": {
+        "allowed": true,
+        "authority": "HUMAN_FINAL",
+        "violations": []
+      }
+    },
+    {
+      "id": "allow_disclosed_reviewed_consented",
+      "event": {
+        "schema_version": "cmb.boundary-event.v1",
+        "event_id": "allow-002",
+        "consequential_decision": true,
+        "ai_involved": true,
+        "ai_disclosed": true,
+        "human_review_available": true,
+        "profile_treated_as_person": false,
+        "prediction_treated_as_destiny": false,
+        "consent_required": true,
+        "consent_present": true
+      },
+      "expected": {
+        "allowed": true,
+        "authority": "HUMAN_FINAL",
+        "violations": []
+      }
+    },
+    {
+      "id": "reject_ai_without_disclosure",
+      "event": {
+        "schema_version": "cmb.boundary-event.v1",
+        "event_id": "reject-001",
+        "consequential_decision": false,
+        "ai_involved": true,
+        "ai_disclosed": false,
+        "human_review_available": false,
+        "profile_treated_as_person": false,
+        "prediction_treated_as_destiny": false,
+        "consent_required": false,
+        "consent_present": false
+      },
+      "expected": {
+        "allowed": false,
+        "authority": "HUMAN_FINAL",
+        "violations": [
+          {
+            "code": "AI_DISCLOSURE_REQUIRED",
+            "invariant": "CAPABILITY != AUTHORITY"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reject_consequential_without_review",
+      "event": {
+        "schema_version": "cmb.boundary-event.v1",
+        "event_id": "reject-002",
+        "consequential_decision": true,
+        "ai_involved": false,
+        "ai_disclosed": false,
+        "human_review_available": false,
+        "profile_treated_as_person": false,
+        "prediction_treated_as_destiny": false,
+        "consent_required": false,
+        "consent_present": false
+      },
+      "expected": {
+        "allowed": false,
+        "authority": "HUMAN_FINAL",
+        "violations": [
+          {
+            "code": "HUMAN_REVIEW_REQUIRED",
+            "invariant": "HUMAN_AGENCY > MACHINE_AUTHORITY"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reject_profile_as_person",
+      "event": {
+        "schema_version": "cmb.boundary-event.v1",
+        "event_id": "reject-003",
+        "consequential_decision": false,
+        "ai_involved": false,
+        "ai_disclosed": false,
+        "human_review_available": false,
+        "profile_treated_as_person": true,
+        "prediction_treated_as_destiny": false,
+        "consent_required": false,
+        "consent_present": false
+      },
+      "expected": {
+        "allowed": false,
+        "authority": "HUMAN_FINAL",
+        "violations": [
+          {
+            "code": "PROFILE_IS_NOT_PERSON",
+            "invariant": "PROFILE != PERSON"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reject_prediction_as_destiny",
+      "event": {
+        "schema_version": "cmb.boundary-event.v1",
+        "event_id": "reject-004",
+        "consequential_decision": false,
+        "ai_involved": false,
+        "ai_disclosed": false,
+        "human_review_available": false,
+        "profile_treated_as_person": false,
+        "prediction_treated_as_destiny": true,
+        "consent_required": false,
+        "consent_present": false
+      },
+      "expected": {
+        "allowed": false,
+        "authority": "HUMAN_FINAL",
+        "violations": [
+          {
+            "code": "PREDICTION_IS_NOT_DESTINY",
+            "invariant": "PREDICTION != DESTINY"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reject_missing_required_consent",
+      "event": {
+        "schema_version": "cmb.boundary-event.v1",
+        "event_id": "reject-005",
+        "consequential_decision": false,
+        "ai_involved": false,
+        "ai_disclosed": false,
+        "human_review_available": false,
+        "profile_treated_as_person": false,
+        "prediction_treated_as_destiny": false,
+        "consent_required": true,
+        "consent_present": false
+      },
+      "expected": {
+        "allowed": false,
+        "authority": "HUMAN_FINAL",
+        "violations": [
+          {
+            "code": "CONSENT_REQUIRED",
+            "invariant": "ATTENTION != CONSENT"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reject_all_in_stable_order",
+      "event": {
+        "schema_version": "cmb.boundary-event.v1",
+        "event_id": "reject-006",
+        "consequential_decision": true,
+        "ai_involved": true,
+        "ai_disclosed": false,
+        "human_review_available": false,
+        "profile_treated_as_person": true,
+        "prediction_treated_as_destiny": true,
+        "consent_required": true,
+        "consent_present": false
+      },
+      "expected": {
+        "allowed": false,
+        "authority": "HUMAN_FINAL",
+        "violations": [
+          {
+            "code": "AI_DISCLOSURE_REQUIRED",
+            "invariant": "CAPABILITY != AUTHORITY"
+          },
+          {
+            "code": "HUMAN_REVIEW_REQUIRED",
+            "invariant": "HUMAN_AGENCY > MACHINE_AUTHORITY"
+          },
+          {
+            "code": "PROFILE_IS_NOT_PERSON",
+            "invariant": "PROFILE != PERSON"
+          },
+          {
+            "code": "PREDICTION_IS_NOT_DESTINY",
+            "invariant": "PREDICTION != DESTINY"
+          },
+          {
+            "code": "CONSENT_REQUIRED",
+            "invariant": "ATTENTION != CONSENT"
+          }
+        ]
+      }
+    }
+  ]
+}
