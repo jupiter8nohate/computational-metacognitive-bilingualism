@@ -28,6 +28,7 @@ These are implemented but still exploratory:
 cmb-z13 reference parser
 CMB-Z13 notation
 Guardian Modes teaching layer
+cmb-edu parser, CLI, child-facing curriculum, and privacy-first context envelope
 C2PA entity-specific assertion integration beyond the test round-trip
 ```
 
@@ -67,6 +68,19 @@ Moving a claim between maturity layers requires an explicit change, evidence, an
 - `examples/06_fastapi_boundary` - reference integration using server-supplied policy facts.
 
 These components intentionally separate symbolic meaning from executable enforcement.
+
+## CMB-EDU educational layer
+
+- `src/cmb_edu/` - experimental parser and installed `cmb-edu` CLI.
+- `schemas/cmb.edu.v1.schema.json` - strict Metacognitive Context Envelope contract.
+- `docs/CMB_EDU_KIDS.md` - child-facing Flamingoglyph computational-literacy curriculum.
+- `examples/07_cmb_edu` - minimal parse/validate example.
+- `tests/test_cmb_edu*.py` - parser, privacy, schema, and CLI regression tests.
+
+CMB-EDU stores the epistemic source of context explicitly: `human_declared`
+does not become `machine_inferred`. Its privacy fields are declarations that
+integrating applications must actually enforce.
+
 
 ## Polyglot boundary layer
 
