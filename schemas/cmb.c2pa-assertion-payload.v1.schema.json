@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.c2pa-assertion-payload.v1.schema.json",
+  "title": "CMB C2PA-facing assertion payload v1",
+  "description": "Internal deterministic adapter payload. This schema does not define a C2PA manifest, Content Credential, signature, asset binding, or conformance result.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "framework",
+    "source_receipt_schema",
+    "source_tool_version",
+    "source_manifest_sha256",
+    "hash_algorithm",
+    "coverage",
+    "git",
+    "evidence_boundary",
+    "c2pa_status"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.c2pa-assertion-payload.v1"},
+    "framework": {"const": "Computational Metacognitive Bilingualism"},
+    "source_receipt_schema": {"const": "cmb.seal-receipt.v1"},
+    "source_tool_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:[-+][0-9A-Za-z.-]+)?$"
+    },
+    "source_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "hash_algorithm": {"const": "SHA-256"},
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type","artifact_count","excludes_unlisted","paths_included","paths"],
+      "properties": {
+        "type": {"const": "explicit_file_set"},
+        "artifact_count": {"type": "integer","minimum": 1},
+        "excludes_unlisted": {"const": true},
+        "paths_included": {"type": "boolean"},
+        "paths": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string","minLength": 1}
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"paths_included": {"const": false}}},
+          "then": {"properties": {"paths": {"maxItems": 0}}}
+        }
+      ]
+    },
+    "git": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["commit","status"],
+      "properties": {
+        "commit": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        },
+        "status": {
+          "enum": ["VERIFIED_ARTIFACTS_MATCH_COMMIT","CALLER_SUPPLIED_UNVERIFIED"]
+        }
+      }
+    },
+    "evidence_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "integrity_is_authorship",
+        "signature_is_originality",
+        "provenance_is_legal_judgment",
+        "assertion_is_truth"
+      ],
+      "properties": {
+        "integrity_is_authorship": {"const": false},
+        "signature_is_originality": {"const": false},
+        "provenance_is_legal_judgment": {"const": false},
+        "assertion_is_truth": {"const": false}
+      }
+    },
+    "c2pa_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "payload_is_c2pa_manifest",
+        "payload_is_content_credential",
+        "project_claims_c2pa_conformance",
+        "requires_external_c2pa_tooling"
+      ],
+      "properties": {
+        "payload_is_c2pa_manifest": {"const": false},
+        "payload_is_content_credential": {"const": false},
+        "project_claims_c2pa_conformance": {"const": false},
+        "requires_external_c2pa_tooling": {"const": true}
+      }
+    }
+  }
+}

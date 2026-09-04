@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Deterministic `CMB receipt -> C2PA-facing assertion payload` adapter with privacy-minimized defaults, canonical JSON serialization, strict JSON Schema, CLI export, deterministic fixtures, and tests. The adapter explicitly does not create a C2PA manifest, Content Credential, signature, asset binding, or conformance result.
 - Prior-art and legal-positioning document covering GDPR Article 22, EU AI Act Article 14, relevant scholarship, and C2PA as an external provenance standard.
 - Two-minute CMB policy one-pager as the public front door, with deeper technical and symbolic materials moved to optional follow-on paths.
 - C2PA interoperability design that explicitly treats `cmb_provenance` as complementary infrastructure and forbids false conformance claims.
