@@ -20,22 +20,23 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ### Start here
 
-- [`../policy/CMB_POLICY_ONE_PAGER.md`](../policy/CMB_POLICY_ONE_PAGER.md) — two-minute policy front door.
-- [`../docs/PRIOR_ART_AND_POSITIONING.md`](../docs/PRIOR_ART_AND_POSITIONING.md) — legal, scholarly, and standards positioning.
-- [`../docs/C2PA_INTEROPERABILITY.md`](../docs/C2PA_INTEROPERABILITY.md) — provenance interoperability roadmap.
-- [`../docs/EXTERNAL_REVIEW.md`](../docs/EXTERNAL_REVIEW.md) — current independent-validation gap and review scope.
+- [`../manifestos/CMB_SOVEREIGN_TRANSMISSION.md`](../manifestos/CMB_SOVEREIGN_TRANSMISSION.md) - decorative code-poetry gateway into CMB.
+- [`../policy/CMB_POLICY_ONE_PAGER.md`](../policy/CMB_POLICY_ONE_PAGER.md) - two-minute policy front door.
+- [`../docs/PRIOR_ART_AND_POSITIONING.md`](../docs/PRIOR_ART_AND_POSITIONING.md) - legal, scholarly, and standards positioning.
+- [`../docs/C2PA_INTEROPERABILITY.md`](../docs/C2PA_INTEROPERABILITY.md) - provenance interoperability roadmap.
+- [`../docs/EXTERNAL_REVIEW.md`](../docs/EXTERNAL_REVIEW.md) - current independent-validation gap and review scope.
 
 ### Corpus
 
-- [`catalog.json`](catalog.json) — machine-indexable catalog of CMB public artifacts.
-- [`../MANIFESTO.md`](../MANIFESTO.md) — core human-sovereignty manifesto.
-- [`../manifestos/DEMONS_NEED_ATTENTION_DNA.md`](../manifestos/DEMONS_NEED_ATTENTION_DNA.md) — D.N.A. attention-economy manifesto.
-- [`../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) — D.N.A./FGC literary allegory about institutional and algorithmic confinement.
-- [`../manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](../manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — perspective-aware library model and MissingNo Clause.
-- [`../manifestos/CMB_Z13_MANIFESTO.md`](../manifestos/CMB_Z13_MANIFESTO.md) — CMB-Z13 public manifesto and thirteen-lens declaration.
-- [`../manifestos/CMB_Z13_LANGUAGE_SPEC.md`](../manifestos/CMB_Z13_LANGUAGE_SPEC.md) — CMB-Z13 symbolic language specification.
-- [`cmb-z13.registry.json`](cmb-z13.registry.json) — machine-readable CMB-Z13 mapping, vectors, processing cycle, and interpretation boundaries.
-- [`../policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](../policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — institutional policy proposal (v1.1).
+- [`catalog.json`](catalog.json) - machine-indexable catalog of CMB public artifacts.
+- [`../MANIFESTO.md`](../MANIFESTO.md) - core human-sovereignty manifesto.
+- [`../manifestos/DEMONS_NEED_ATTENTION_DNA.md`](../manifestos/DEMONS_NEED_ATTENTION_DNA.md) - D.N.A. attention-economy manifesto.
+- [`../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - D.N.A./FGC literary allegory about institutional and algorithmic confinement.
+- [`../manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](../manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - perspective-aware library model and MissingNo Clause.
+- [`../manifestos/CMB_Z13_MANIFESTO.md`](../manifestos/CMB_Z13_MANIFESTO.md) - CMB-Z13 public manifesto and thirteen-lens declaration.
+- [`../manifestos/CMB_Z13_LANGUAGE_SPEC.md`](../manifestos/CMB_Z13_LANGUAGE_SPEC.md) - CMB-Z13 symbolic language specification.
+- [`cmb-z13.registry.json`](cmb-z13.registry.json) - machine-readable CMB-Z13 mapping, vectors, processing cycle, and interpretation boundaries.
+- [`../policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](../policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - institutional policy proposal (v1.1).
 
 ## Interpretation boundary
 
