@@ -9,6 +9,10 @@ import (
 	"testing"
 )
 
+func repoCanonPath() string {
+	return filepath.Join("..", "..", "..", "..", "library", "canon.json")
+}
+
 func TestPublishCommandBuildsCompleteDeterministicSite(t *testing.T) {
 	tmp := t.TempDir()
 	input := filepath.Join(tmp, "artifact.json")
@@ -54,6 +58,7 @@ func TestPublishCommandBuildsCompleteDeterministicSite(t *testing.T) {
 			"-in", input,
 			"-source", source,
 			"-out", output,
+			"-canon", repoCanonPath(),
 			"-url", "https://example.org/published/",
 		}, &stdout, &stderr)
 		if err != nil {
@@ -70,6 +75,7 @@ func TestPublishCommandBuildsCompleteDeterministicSite(t *testing.T) {
 		"source.md",
 		"article.jsonld",
 		"cmb-semantic.json",
+		"cmb-canon.json",
 		"head.html",
 		"sitemap.xml",
 		"robots.txt",
@@ -102,6 +108,30 @@ func TestPublishCommandBuildsCompleteDeterministicSite(t *testing.T) {
 	}
 	if !strings.Contains(indexText, "&lt;script&gt;not executable source&lt;/script&gt;") {
 		t.Fatal("escaped source is missing from page")
+	}
+
+	canonCopy, err := os.ReadFile(filepath.Join(first, "cmb-canon.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	canonSource, err := os.ReadFile(repoCanonPath())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(canonCopy, canonSource) {
+		t.Fatal("published canon copy differs from canonical input")
+	}
+
+	semanticData, err := os.ReadFile(filepath.Join(first, "cmb-semantic.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var semantic map[string]any
+	if err := json.Unmarshal(semanticData, &semantic); err != nil {
+		t.Fatal(err)
+	}
+	if semantic["schema_version"] != "cmb-gsb.semantic.v2" {
+		t.Fatalf("semantic schema = %v", semantic["schema_version"])
 	}
 
 	copiedSource, err := os.ReadFile(filepath.Join(first, "source.md"))
