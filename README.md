@@ -27,8 +27,12 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
 - [`Demon's Need Attention — D.N.A.`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — the attention-economy branch of CMB: a code-manifesto about engagement, behavioral profiling, data mining, consumption, and cognitive sovereignty.
 - [`CMB // The Unclassifiable Index`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — the MissingNo–Pokédex manifesto defining CMB as a human/machine-readable library of perspective, uncertainty, context, and provenance.
+- [`CMB-Z13™ — Zodiac Computational Metacognitive Language`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) — a thirteen-lens symbolic language mapping zodiac archetypes to C, Rust, Haskell, C++, Java, TypeScript, Python, Swift, Go, Kotlin, Prolog, Common Lisp, and Julia while preserving `HUMAN_AGENCY > MACHINE_AUTHORITY`.
+- [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) — the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
 - [`CMB Digital Library Catalog`](library/catalog.json) — the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
 - [`CMB Global Advocacy Charter v1.0`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
+
+CMB-Z13 is published on `main` as a canonical language specification. It is **pending inclusion in the next signed provenance release**; the existing v1.3.1 receipt and release workflow continue to describe the older canonical artifact set until that release is deliberately expanded.
 
 The project now has a deliberate progression:
 
@@ -150,6 +154,8 @@ External locations and displayed timestamps remain explicitly unverified referen
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
 - [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — **Demon's Need Attention — D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
 - [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — **The Unclassifiable Index**, CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
+- [`manifestos/CMB_Z13_LANGUAGE_SPEC.md`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) — **CMB-Z13™**, the Zodiac Computational Metacognitive Language specification.
+- [`library/cmb-z13.registry.json`](library/cmb-z13.registry.json) — machine-readable CMB-Z13 operator, vector, and interpretation registry.
 - [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the CMB Global Advocacy Charter v1.0.
 - [`library/README.md`](library/README.md) — human-readable entry point to the CMB digital library.
 - [`library/catalog.json`](library/catalog.json) — machine-indexable artifact catalog, sealed as part of the canonical public set.
@@ -208,7 +214,7 @@ The public registry is intentionally deferred until v1.3.1 passes CI and the sig
 
 ## Authorship and purpose
 
-**Declared originator:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8
+**Declared originator:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson
 
 **Framework:** Computational Metacognitive Bilingualism (CMB)
 
