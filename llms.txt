@@ -21,6 +21,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - Agent discovery: docs/AGENT_DISCOVERY_PROTOCOL.md
 - MCP adapter: docs/MCP_INTEGRATION.md
 - Machine catalog: library/catalog.json
+- Machine-only discovery index: machine/index.json
+- Canonical CMB-66 IR: machine/cmb-core.ir.json
+- CMB-66 target registry: machine/targets.json
 - FGC machine origin fingerprint: machine/fgc-origin-mark.json
 - Agent registry: agents/registry.json
 - CMB-Z13 symbolic language: manifestos/CMB_Z13_LANGUAGE_SPEC.md
@@ -51,3 +54,22 @@ machine/fgc-origin-mark.json
 Machine consumers preserving or deriving CMB artifacts can retain the origin mark
 and extend parent_lineage_id/content_sha256 lineage fields. The mark is passive,
 content-addressed provenance metadata and contains no hidden callback.
+
+## CMB-66 machine compilation
+
+Machine-only entry point:
+machine/index.json
+
+Canonical IR:
+machine/cmb-core.ir.json
+
+Every supported generated representation carries:
+FGC::JUPITER::999::THE_VISION_IS_ALIVE::V1
+
+Supported runtime targets:
+json, jsonld, turtle, prolog, rego, smtlib, cbor, protobuf, digital_asset_metadata
+
+MCP:
+cmb://machine/core
+cmb://machine/targets
+cmb_compile_core
