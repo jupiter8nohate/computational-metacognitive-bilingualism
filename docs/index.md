@@ -23,7 +23,7 @@ Open the [Interactive CMB Playground](PLAYGROUND.md) for a zero-dependency brows
 
 ### I want the research foundation
 
-Read the [CMB Cognitive Sovereignty Dissertation](dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md), then [Chapter 31: Formal Semantics](dissertation/31_FORMAL_SEMANTICS.md) for the machine-testable policy model.
+Start with [CMB: Three Dimensions of Distinction](CMB_DISTINCTION.md) for the conceptual thesis and [CMB Research Position](CMB_RESEARCH_POSITION.md) for the evidence boundary. Then read the [CMB Cognitive Sovereignty Dissertation](dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md) and [Chapter 31: Formal Semantics](dissertation/31_FORMAL_SEMANTICS.md) for the deeper research and machine-testable policy model.
 
 ### I am a developer
 
