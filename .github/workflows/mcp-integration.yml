@@ -37,7 +37,7 @@ jobs:
         run: python -m pip install --upgrade pip ".[test,mcp]"
 
       - name: Import installed MCP server
-        run: python -c "from cmb_agents.mcp_server import mcp; print(mcp.name)"
+        run: python -c "from cmb_agents.mcp_server import mcp; print(type(mcp).__name__)"
 
       - name: Run MCP adapter tests
         run: pytest tests/test_mcp_adapter.py
