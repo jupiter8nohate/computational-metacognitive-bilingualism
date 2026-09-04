@@ -1,5 +1,5 @@
 use cmb_boundary_actix::{
-    BOUNDARY_SCHEMA_VERSION, BoundaryCode, BoundaryDecision, BoundaryEvent, evaluate_boundary,
+    BOUNDARY_SCHEMA_VERSION, BoundaryDecision, BoundaryEvent, evaluate_boundary,
 };
 use serde::Deserialize;
 
@@ -34,20 +34,13 @@ struct ExpectedViolation {
 
 fn normalize(decision: BoundaryDecision) -> ExpectedDecision {
     ExpectedDecision {
-        allowed: decision.allowed,
-        authority: decision.authority.to_owned(),
+        allowed: decision.allowed(),
+        authority: decision.authority().to_owned(),
         violations: decision
-            .violations
-            .into_iter()
+            .violations()
+            .iter()
             .map(|item| ExpectedViolation {
-                code: match item.code {
-                    BoundaryCode::AiDisclosureRequired => "AI_DISCLOSURE_REQUIRED",
-                    BoundaryCode::HumanReviewRequired => "HUMAN_REVIEW_REQUIRED",
-                    BoundaryCode::ProfileIsNotPerson => "PROFILE_IS_NOT_PERSON",
-                    BoundaryCode::PredictionIsNotDestiny => "PREDICTION_IS_NOT_DESTINY",
-                    BoundaryCode::ConsentRequired => "CONSENT_REQUIRED",
-                }
-                .to_owned(),
+                code: item.code.as_str().to_owned(),
                 invariant: item.invariant.to_owned(),
             })
             .collect(),
