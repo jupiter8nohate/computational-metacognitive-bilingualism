@@ -4,10 +4,14 @@ on:
   push:
     paths:
       - "labs/cmb-google-semantic-bridge/**"
+      - "library/canon.json"
+      - "schemas/cmb.canon.v1.schema.json"
       - ".github/workflows/cmb-google-semantic-bridge.yml"
   pull_request:
     paths:
       - "labs/cmb-google-semantic-bridge/**"
+      - "library/canon.json"
+      - "schemas/cmb.canon.v1.schema.json"
       - ".github/workflows/cmb-google-semantic-bridge.yml"
 
 permissions:
@@ -44,11 +48,13 @@ jobs:
       - name: Validate example
         run: go run ./cmd/cmb-gsb validate -in examples/cmb-manifesto.json
       - name: Render example
-        run: go run ./cmd/cmb-gsb render -in examples/cmb-manifesto.json -out /tmp/cmb-gsb-output
+        run: go run ./cmd/cmb-gsb render -in examples/cmb-manifesto.json -out /tmp/cmb-gsb-output -canon ../../library/canon.json
       - name: Check metadata render files
         run: |
           test -s /tmp/cmb-gsb-output/article.jsonld
           test -s /tmp/cmb-gsb-output/cmb-semantic.json
+          test -s /tmp/cmb-gsb-output/cmb-canon.json
+          cmp ../../library/canon.json /tmp/cmb-gsb-output/cmb-canon.json
           test -s /tmp/cmb-gsb-output/head.html
           test -s /tmp/cmb-gsb-output/sitemap.xml
           test -s /tmp/cmb-gsb-output/robots.txt
@@ -58,7 +64,8 @@ jobs:
           go run ./cmd/cmb-gsb publish \
             -in examples/sovereign-transmission.json \
             -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md \
-            -out /tmp/cmb-gsb-site
+            -out /tmp/cmb-gsb-site \
+            -canon ../../library/canon.json
       - name: Check publication bundle
         run: |
           test -s /tmp/cmb-gsb-site/index.html
@@ -66,6 +73,8 @@ jobs:
           test -s /tmp/cmb-gsb-site/source.md
           test -s /tmp/cmb-gsb-site/article.jsonld
           test -s /tmp/cmb-gsb-site/cmb-semantic.json
+          test -s /tmp/cmb-gsb-site/cmb-canon.json
+          cmp ../../library/canon.json /tmp/cmb-gsb-site/cmb-canon.json
           test -s /tmp/cmb-gsb-site/sitemap.xml
           test -s /tmp/cmb-gsb-site/robots.txt
           test -s /tmp/cmb-gsb-site/manifest.json
