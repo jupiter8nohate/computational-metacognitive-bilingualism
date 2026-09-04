@@ -78,7 +78,6 @@ func ReadUTF8Source(path string) ([]byte, error) {
 	return data, nil
 }
 
-
 func ReadRepositoryUTF8File(root, relative string) ([]byte, error) {
 	rootInfo, err := os.Lstat(root)
 	if err != nil {
