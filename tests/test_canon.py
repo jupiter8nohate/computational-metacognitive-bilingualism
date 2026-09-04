@@ -89,3 +89,19 @@ def test_canon_navigation_is_deterministic() -> None:
         "cmb-edu",
         "the-convergence",
     }
+
+
+def test_canon_invariants_are_explicit_and_complete() -> None:
+    canon = load_canon(CANON_PATH)
+    assert canon["invariants"] == [
+        "PATTERN != PROOF",
+        "PROFILE != PERSON",
+        "MODEL != MIND",
+        "PREDICTION != DESTINY",
+        "DIFFERENCE != DEFECT",
+        "CAPABILITY != AUTHORITY",
+        "OPTIMIZATION != MORALITY",
+        "INTELLIGENCE != SOVEREIGNTY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY",
+    ]
+    assert canon["root_invariant"] in canon["invariants"]
