@@ -106,6 +106,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, Rust/Actix, and Go share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
 | HARMONI-666 | **Experimental bounded-proof layer** | fails closed to `MISSINGNO_666` when a `PROOF` claim exceeds verified evidence strength |
+| CMB-SEP-1 | **Experimental sovereign epistemic state machine** | six states, six gates, six failsafes, claim truncation, parity recovery, and externally verified human authorization |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
 
 See [Project structure](docs/PROJECT_STRUCTURE.md) and [Threat model](docs/THREAT_MODEL.md).
@@ -215,6 +216,8 @@ cmb-machine harmoni-evaluate --state PROOF --all-proof-gates
 ```
 
 See [CMB HARMONI-666](spec/CMB-HARMONI-666.md).
+
+Operational follow-up: [CMB-SEP-1](spec/CMB-SEP-1.md) and [The Sovereign Epistemic Protocol manifesto](manifestos/THE_SOVEREIGN_EPISTEMIC_PROTOCOL.md).
 
 D.N.A. means **Demon's Need Attention**. In this work, “demons” is a metaphor for attention-extractive loops, incentives, feeds, and systems that become stronger when human attention is repeatedly captured. The central boundary remains:
 
