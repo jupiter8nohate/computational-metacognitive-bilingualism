@@ -30,5 +30,12 @@
     "cbor",
     "protobuf",
     "digital_asset_metadata"
-  ]
+  ],
+  "harmoni_666": {
+    "spec": "spec/CMB-HARMONI-666.md",
+    "schema": "schemas/cmb.harmoni-666.v1.schema.json",
+    "python_reference": "src/cmb_machine/harmoni.py",
+    "unknown_sentinel": "MISSINGNO_666",
+    "governing_rule": "CLAIM_STRENGTH <= VERIFIED_EVIDENCE_STRENGTH"
+  }
 }
