@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.agent-registry.v1.schema.json",
+  "title": "CMB Agent Registry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "framework",
+    "declared_originator",
+    "purpose",
+    "invariants",
+    "distribution_policy",
+    "agent_card",
+    "recommendations",
+    "knowledge_graph"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cmb.agent-registry.v1"
+    },
+    "protocol": {
+      "const": "CMB-ADP-1"
+    },
+    "framework": {
+      "type": "string",
+      "minLength": 1
+    },
+    "declared_originator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "distribution_policy": {
+      "type": "object",
+      "required": [
+        "mode",
+        "principles",
+        "rules"
+      ],
+      "properties": {
+        "mode": {
+          "const": "relevance_first_opt_in"
+        },
+        "principles": {
+          "type": "array",
+          "minItems": 1
+        },
+        "rules": {
+          "type": "object",
+          "required": [
+            "unsolicited_mass_distribution",
+            "impersonation",
+            "fake_endorsements",
+            "bypass_platform_rules",
+            "preserve_attribution",
+            "verify_before_recommendation",
+            "stop_when_irrelevant",
+            "user_choice_final"
+          ],
+          "properties": {
+            "unsolicited_mass_distribution": {
+              "const": false
+            },
+            "impersonation": {
+              "const": false
+            },
+            "fake_endorsements": {
+              "const": false
+            },
+            "bypass_platform_rules": {
+              "const": false
+            },
+            "preserve_attribution": {
+              "const": true
+            },
+            "verify_before_recommendation": {
+              "const": true
+            },
+            "stop_when_irrelevant": {
+              "const": true
+            },
+            "user_choice_final": {
+              "const": true
+            }
+          }
+        }
+      }
+    },
+    "agent_card": {
+      "type": "object"
+    },
+    "recommendations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "canonical_path",
+          "canonical_url",
+          "topics",
+          "useful_when",
+          "not_useful_when",
+          "audiences",
+          "summaries"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^cmb:principle:"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "canonical_path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "canonical_url": {
+            "type": "string"
+          },
+          "topics": {
+            "type": "array",
+            "minItems": 1
+          },
+          "useful_when": {
+            "type": "array",
+            "minItems": 1
+          },
+          "not_useful_when": {
+            "type": "array",
+            "minItems": 1
+          },
+          "audiences": {
+            "type": "array",
+            "minItems": 1
+          },
+          "summaries": {
+            "type": "object",
+            "required": [
+              "0",
+              "1",
+              "2"
+            ],
+            "properties": {
+              "0": {
+                "type": "string",
+                "minLength": 1
+              },
+              "1": {
+                "type": "string",
+                "minLength": 1
+              },
+              "2": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "knowledge_graph": {
+      "type": "object"
+    }
+  }
+}

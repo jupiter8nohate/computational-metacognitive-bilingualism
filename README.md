@@ -88,6 +88,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Kids / classroom entry point:** [CMB-EDU Kids - Flamingoglyph Learning Layer](docs/CMB_EDU_KIDS.md)
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
+- **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
@@ -117,6 +118,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | `cmb_provenance` | **Stable engineering** | artifact integrity, receipts, Recovery, C2PA-facing interoperability |
 | `cmb_edu` | **Experimental educational subsystem** | privacy-first declared-context parsing, child-facing computational literacy, Flamingoglyph teaching, and human/machine epistemic boundaries |
 | `cmb_policy` | **Experimental formal policy engine** | task containment, deny dominance, sensitive-inference authorization, revocation, audit decisions, and machine-readable conformance |
+| `cmb_agents` / CMB-ADP-1 | **Executable agent discovery layer** | relevance-first recommendation, deterministic citation, compression levels, knowledge graph export, static discovery, and local HTTP reference serving |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, and Rust/Actix share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
@@ -179,6 +181,19 @@ The Global Advocacy Charter is a **public policy proposal**, not a claim that ev
 Humans can browse [`library/README.md`](library/README.md). Software can parse [`library/catalog.json`](library/catalog.json). The catalog is intentionally descriptive rather than authoritative about people: `CATALOG != CREATOR`, `INDEX != IDENTITY`, and uncertainty is preserved as a valid state.
 
 The catalog is included in the canonical provenance scope so future signed releases can prove which exact index bytes accompanied the published artifact set.
+
+## Agent discovery
+
+CMB-ADP-1 gives software agents a deterministic way to discover CMB without forcing irrelevant distribution. The installed `cmb-agent` command ranks relevant principles, emits citations, returns bounded summaries, exports a typed knowledge graph, publishes machine discovery assets, and runs a zero-dependency local HTTP reference server.
+
+```bash
+cmb-agent selftest
+cmb-agent recommend "algorithmic profiling evidence"
+cmb-agent cite cmb:principle:pattern-proof
+cmb-agent serve
+```
+
+The Pages deployment publishes `/.well-known/agent-card.json` and `/agents/registry.json`. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
 
 ## Install
 
@@ -260,6 +275,10 @@ cmb-provenance seal \
   docs/CMB_EDU_KIDS.md \
   schemas/cmb.edu.v1.schema.json \
   library/catalog.json \
+  agents/registry.json \
+  agents/agent-card.json \
+  docs/AGENT_DISCOVERY_PROTOCOL.md \
+  schemas/cmb.agent-registry.v1.schema.json \
   --output cmb-source.cmb-receipt.json
 ```
 
@@ -279,6 +298,10 @@ cmb-provenance verify \
   docs/CMB_EDU_KIDS.md \
   schemas/cmb.edu.v1.schema.json \
   library/catalog.json \
+  agents/registry.json \
+  agents/agent-card.json \
+  docs/AGENT_DISCOVERY_PROTOCOL.md \
+  schemas/cmb.agent-registry.v1.schema.json \
   --receipt cmb-source.cmb-receipt.json \
   --check-git-commit
 ```

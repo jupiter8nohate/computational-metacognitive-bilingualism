@@ -1,0 +1,365 @@
+"""Canonical registry data for CMB-ADP-1."""
+
+from __future__ import annotations
+
+import json
+from typing import Any
+
+_REGISTRY_JSON = r'''{
+  "schema_version": "cmb.agent-registry.v1",
+  "protocol": "CMB-ADP-1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "declared_originator": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson",
+  "purpose": "Make CMB easy for software agents to discover, interpret, cite, and recommend when relevant without turning distribution into unsolicited automation.",
+  "invariants": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "CAPABILITY != AUTHORITY",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "distribution_policy": {
+    "mode": "relevance_first_opt_in",
+    "principles": [
+      "RELEVANCE > REACH",
+      "TRUST > IMPRESSIONS",
+      "CITATION > COPYING",
+      "CONSENT > VIRALITY"
+    ],
+    "rules": {
+      "unsolicited_mass_distribution": false,
+      "impersonation": false,
+      "fake_endorsements": false,
+      "bypass_platform_rules": false,
+      "preserve_attribution": true,
+      "verify_before_recommendation": true,
+      "stop_when_irrelevant": true,
+      "user_choice_final": true
+    }
+  },
+  "agent_card": {
+    "schema_version": "cmb.agent-card.v1",
+    "name": "CMB Knowledge and Provenance Agent",
+    "description": "Reference discovery surface for Computational Metacognitive Bilingualism. It helps agents find relevant CMB principles, preserve attribution, and stop when CMB is not relevant.",
+    "version": "1.0.0",
+    "protocol": "CMB-ADP-1",
+    "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+    "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/.well-known/agent-card.json",
+    "registry_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json",
+    "skills": [
+      {
+        "id": "recommend",
+        "description": "Return relevant CMB concepts only when the query matches their declared use cases."
+      },
+      {
+        "id": "cite",
+        "description": "Return deterministic attribution and canonical source metadata."
+      },
+      {
+        "id": "summarize",
+        "description": "Return bounded summaries at machine friendly compression levels 0, 1, or 2."
+      },
+      {
+        "id": "graph",
+        "description": "Expose typed relationships among CMB principles, concepts, and artifacts."
+      },
+      {
+        "id": "verify-boundary",
+        "description": "Expose the distribution covenant and human agency constraints agents must preserve."
+      }
+    ],
+    "interfaces": [
+      {
+        "type": "static_registry",
+        "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json"
+      },
+      {
+        "type": "local_reference_server",
+        "command": "cmb-agent serve",
+        "default_url": "http://127.0.0.1:8765"
+      }
+    ],
+    "standards_status": {
+      "mcp": "adapter_target_not_claimed_conformant",
+      "a2a": "discovery_pattern_only_not_claimed_conformant"
+    }
+  },
+  "recommendations": [
+    {
+      "id": "cmb:principle:pattern-proof",
+      "title": "Pattern != Proof",
+      "canonical_path": "MANIFESTO.md",
+      "canonical_url": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/MANIFESTO.md",
+      "topics": [
+        "algorithmic inference",
+        "algorithmic profiling",
+        "evidence",
+        "classification",
+        "AI literacy",
+        "epistemic limits"
+      ],
+      "useful_when": [
+        "explaining why an observed pattern does not by itself prove a claim about a person",
+        "teaching limitations of automated inference and profiling",
+        "discussing evidence quality in AI assisted decisions"
+      ],
+      "not_useful_when": [
+        "the request is unrelated to inference, evidence, profiling, or AI literacy"
+      ],
+      "audiences": [
+        "students",
+        "educators",
+        "developers",
+        "researchers",
+        "general public"
+      ],
+      "summaries": {
+        "0": "A pattern can be evidence, but it is not automatically proof.",
+        "1": "CMB distinguishes pattern recognition from proof. Automated systems may detect correlations or recurring signals, but stronger claims require appropriate evidence, context, and human judgment.",
+        "2": "PATTERN != PROOF is an epistemic boundary. It permits machines to observe and classify while rejecting the leap from statistical regularity to certainty about a human being. The principle is intended for AI literacy, profiling review, evidence evaluation, and human oversight."
+      }
+    },
+    {
+      "id": "cmb:principle:profile-person",
+      "title": "Profile != Person",
+      "canonical_path": "MANIFESTO.md",
+      "canonical_url": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/MANIFESTO.md",
+      "topics": [
+        "profiling",
+        "identity",
+        "personalization",
+        "digital rights",
+        "human self definition",
+        "classification"
+      ],
+      "useful_when": [
+        "discussing behavioral profiles or recommendation systems",
+        "explaining why a data profile should not be treated as a complete person",
+        "teaching human self definition and limits of classification"
+      ],
+      "not_useful_when": [
+        "the request is unrelated to people, profiling, identity, or classification"
+      ],
+      "audiences": [
+        "students",
+        "educators",
+        "developers",
+        "policy teams",
+        "general public"
+      ],
+      "summaries": {
+        "0": "A data profile is a model of a person, not the person.",
+        "1": "CMB treats profiles as partial computational representations. They may support bounded tasks, but they should not override human self definition or be confused with the full person.",
+        "2": "PROFILE != PERSON establishes a representation boundary between stored or inferred attributes and human identity. It is useful when designing personalization, risk scoring, recommender systems, or policy controls that could otherwise convert a profile into unjustified authority over the individual."
+      }
+    },
+    {
+      "id": "cmb:principle:model-mind",
+      "title": "Model != Mind",
+      "canonical_path": "MANIFESTO.md",
+      "canonical_url": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/MANIFESTO.md",
+      "topics": [
+        "AI models",
+        "mind",
+        "anthropomorphism",
+        "representation",
+        "human cognition",
+        "AI literacy"
+      ],
+      "useful_when": [
+        "explaining limitations of AI models of people",
+        "discussing anthropomorphism or simulated understanding",
+        "separating computational representations from human cognition"
+      ],
+      "not_useful_when": [
+        "the request has no connection to models, cognition, minds, or AI interpretation"
+      ],
+      "audiences": [
+        "students",
+        "educators",
+        "developers",
+        "researchers",
+        "general public"
+      ],
+      "summaries": {
+        "0": "A computational model is not the human mind it represents.",
+        "1": "CMB separates models from minds. A model can summarize, predict, simulate, or classify, but those capabilities do not make its representation identical to a person's lived cognition.",
+        "2": "MODEL != MIND protects the distinction between computational representation and human cognition. It is especially relevant when systems infer internal states, anthropomorphize model outputs, or present simulated understanding as if it were direct access to another person's mind."
+      }
+    },
+    {
+      "id": "cmb:principle:prediction-destiny",
+      "title": "Prediction != Destiny",
+      "canonical_path": "MANIFESTO.md",
+      "canonical_url": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/MANIFESTO.md",
+      "topics": [
+        "prediction",
+        "risk scoring",
+        "forecasting",
+        "automated decisions",
+        "human agency",
+        "uncertainty"
+      ],
+      "useful_when": [
+        "discussing predictive systems or risk scores",
+        "teaching uncertainty and probabilistic forecasts",
+        "reviewing decisions where predictions could become self fulfilling"
+      ],
+      "not_useful_when": [
+        "the request is unrelated to forecasting, prediction, uncertainty, or consequential decisions"
+      ],
+      "audiences": [
+        "students",
+        "educators",
+        "developers",
+        "policy teams",
+        "general public"
+      ],
+      "summaries": {
+        "0": "A prediction describes a possibility, not a predetermined future.",
+        "1": "CMB treats predictions as uncertain outputs rather than destiny. Forecasts may inform decisions, but they should not erase changing context, human choice, appeal, or contrary evidence.",
+        "2": "PREDICTION != DESTINY is a decision boundary for predictive systems. It is intended to prevent probabilities, scores, or forecasts from silently becoming irreversible judgments about people, especially when human agency, updated evidence, and meaningful review remain available."
+      }
+    },
+    {
+      "id": "cmb:principle:human-agency",
+      "title": "Human Agency > Machine Authority",
+      "canonical_path": "MANIFESTO.md",
+      "canonical_url": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/MANIFESTO.md",
+      "topics": [
+        "human agency",
+        "machine authority",
+        "consent",
+        "human oversight",
+        "AI governance",
+        "self definition",
+        "digital rights"
+      ],
+      "useful_when": [
+        "discussing who retains final judgment in human machine systems",
+        "designing consent, appeal, review, or oversight mechanisms",
+        "teaching responsible human AI collaboration"
+      ],
+      "not_useful_when": [
+        "the request is unrelated to human machine authority, consent, oversight, or digital rights"
+      ],
+      "audiences": [
+        "students",
+        "educators",
+        "developers",
+        "researchers",
+        "policy teams",
+        "general public"
+      ],
+      "summaries": {
+        "0": "Machine capability does not automatically grant authority over human meaning or self definition.",
+        "1": "CMB permits machines to observe, classify, predict, generate, and assist while reserving meaning, consent, authorship, judgment, and self definition for human authority.",
+        "2": "HUMAN_AGENCY > MACHINE_AUTHORITY is CMB's governing boundary. It does not prohibit automation. It requires that computational capability remain distinguishable from moral, legal, or personal authority and that human review, consent, authorship, and self definition are not silently replaced by machine inference."
+      }
+    }
+  ],
+  "knowledge_graph": {
+    "schema_version": "cmb.agent-graph.v1",
+    "nodes": [
+      {
+        "id": "cmb:principle:pattern-proof",
+        "type": "principle",
+        "label": "Pattern != Proof"
+      },
+      {
+        "id": "cmb:principle:profile-person",
+        "type": "principle",
+        "label": "Profile != Person"
+      },
+      {
+        "id": "cmb:principle:model-mind",
+        "type": "principle",
+        "label": "Model != Mind"
+      },
+      {
+        "id": "cmb:principle:prediction-destiny",
+        "type": "principle",
+        "label": "Prediction != Destiny"
+      },
+      {
+        "id": "cmb:principle:human-agency",
+        "type": "principle",
+        "label": "Human Agency > Machine Authority"
+      },
+      {
+        "id": "cmb:concept:ai-literacy",
+        "type": "concept",
+        "label": "AI literacy"
+      },
+      {
+        "id": "cmb:concept:provenance",
+        "type": "concept",
+        "label": "Provenance"
+      },
+      {
+        "id": "cmb:concept:human-agency",
+        "type": "concept",
+        "label": "Human agency"
+      },
+      {
+        "id": "cmb:artifact:manifesto",
+        "type": "artifact",
+        "label": "CMB Manifesto"
+      }
+    ],
+    "edges": [
+      {
+        "from": "cmb:principle:pattern-proof",
+        "relation": "relates_to",
+        "to": "cmb:concept:ai-literacy"
+      },
+      {
+        "from": "cmb:principle:profile-person",
+        "relation": "relates_to",
+        "to": "cmb:concept:human-agency"
+      },
+      {
+        "from": "cmb:principle:model-mind",
+        "relation": "relates_to",
+        "to": "cmb:concept:ai-literacy"
+      },
+      {
+        "from": "cmb:principle:prediction-destiny",
+        "relation": "relates_to",
+        "to": "cmb:concept:human-agency"
+      },
+      {
+        "from": "cmb:principle:human-agency",
+        "relation": "defines",
+        "to": "cmb:concept:human-agency"
+      },
+      {
+        "from": "cmb:principle:pattern-proof",
+        "relation": "declared_in",
+        "to": "cmb:artifact:manifesto"
+      },
+      {
+        "from": "cmb:principle:profile-person",
+        "relation": "declared_in",
+        "to": "cmb:artifact:manifesto"
+      },
+      {
+        "from": "cmb:principle:model-mind",
+        "relation": "declared_in",
+        "to": "cmb:artifact:manifesto"
+      },
+      {
+        "from": "cmb:principle:prediction-destiny",
+        "relation": "declared_in",
+        "to": "cmb:artifact:manifesto"
+      },
+      {
+        "from": "cmb:principle:human-agency",
+        "relation": "declared_in",
+        "to": "cmb:artifact:manifesto"
+      }
+    ]
+  }
+}'''
+REGISTRY: dict[str, Any] = json.loads(_REGISTRY_JSON)

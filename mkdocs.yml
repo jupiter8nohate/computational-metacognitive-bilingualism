@@ -8,6 +8,7 @@ nav:
   - Home: index.md
   - Interactive playground: PLAYGROUND.md
   - CMB-EDU Kids: CMB_EDU_KIDS.md
+  - Agent discovery protocol: AGENT_DISCOVERY_PROTOCOL.md
   - For developers: DEVELOPERS.md
   - For researchers & policy: RESEARCHERS.md
   - CMB dissertation: dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md

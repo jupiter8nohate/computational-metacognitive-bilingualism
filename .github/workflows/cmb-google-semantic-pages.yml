@@ -7,12 +7,16 @@ on:
       - "manifestos/CMB_SOVEREIGN_TRANSMISSION.md"
       - "labs/cmb-google-semantic-bridge/**"
       - ".github/workflows/cmb-google-semantic-pages.yml"
+      - "agents/**"
+      - "src/cmb_agents/**"
   pull_request:
     branches: ["main"]
     paths:
       - "manifestos/CMB_SOVEREIGN_TRANSMISSION.md"
       - "labs/cmb-google-semantic-bridge/**"
       - ".github/workflows/cmb-google-semantic-pages.yml"
+      - "agents/**"
+      - "src/cmb_agents/**"
   workflow_dispatch:
 
 concurrency:
@@ -54,6 +58,9 @@ jobs:
             -url https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/ \
             -site-base https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
           touch /tmp/cmb-gsb-pages/.nojekyll
+          mkdir -p /tmp/cmb-gsb-pages/.well-known /tmp/cmb-gsb-pages/agents
+          cp ../../agents/agent-card.json /tmp/cmb-gsb-pages/.well-known/agent-card.json
+          cp ../../agents/registry.json /tmp/cmb-gsb-pages/agents/registry.json
 
       - name: Verify deployment contract
         run: |
@@ -64,6 +71,8 @@ jobs:
           test -s /tmp/cmb-gsb-pages/robots.txt
           test -s /tmp/cmb-gsb-pages/manifest.json
           test -f /tmp/cmb-gsb-pages/.nojekyll
+          test -s /tmp/cmb-gsb-pages/.well-known/agent-card.json
+          test -s /tmp/cmb-gsb-pages/agents/registry.json
           cmp ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md /tmp/cmb-gsb-pages/source.md
           grep -Fq '<link rel="canonical" href="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/">' /tmp/cmb-gsb-pages/index.html
           grep -Fq '<loc>https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/</loc>' /tmp/cmb-gsb-pages/sitemap.xml

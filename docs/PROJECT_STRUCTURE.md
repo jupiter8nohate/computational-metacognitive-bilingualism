@@ -90,3 +90,15 @@ integrating applications must actually enforce.
 - `.github/workflows/polyglot-conformance.yml` - hosted TypeScript and Rust build/conformance gate.
 
 The Python implementation remains the reference engine. The adapters are compatible only insofar as they keep passing the shared fixtures.
+
+
+## Agent discovery layer
+
+- `src/cmb_agents/` - zero-dependency CMB-ADP-1 reference implementation.
+- `agents/registry.json` - canonical recommendation, citation, discovery, and graph registry.
+- `agents/agent-card.json` - compact discovery card published to the Pages well-known path.
+- `schemas/cmb.agent-registry.v1.schema.json` - strict machine-readable registry contract.
+- `conformance/cmb-agent-v1.json` - relevance and stop-when-irrelevant conformance fixtures.
+- `docs/AGENT_DISCOVERY_PROTOCOL.md` - protocol contract, HTTP surface, standards boundary, and Recovery notes.
+
+The agent layer is executable, but it deliberately optimizes for relevance and attribution rather than autonomous mass distribution.

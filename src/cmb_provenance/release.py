@@ -20,6 +20,10 @@ CANONICAL_PUBLIC_ARTIFACTS: tuple[str, ...] = (
     "docs/CMB_EDU_KIDS.md",
     "schemas/cmb.edu.v1.schema.json",
     "library/catalog.json",
+    "agents/registry.json",
+    "agents/agent-card.json",
+    "docs/AGENT_DISCOVERY_PROTOCOL.md",
+    "schemas/cmb.agent-registry.v1.schema.json",
 )
 
 
