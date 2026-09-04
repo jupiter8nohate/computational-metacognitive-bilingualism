@@ -65,12 +65,7 @@ jobs:
           cmb-provenance selftest
       - name: Seal canonical public CMB artifacts
         run: |
-          cmb-provenance seal \
-            MANIFESTO.md \
-            CMB_Polyglot_Firewall_Specification.md \
-            manifestos/DEMONS_NEED_ATTENTION_DNA.md \
-            --base-dir . \
-            --output dist/cmb-source.cmb-receipt.json
+          python scripts/seal_canonical_artifacts.py             --base-dir .             --output dist/cmb-source.cmb-receipt.json
       - name: Create checksums
         run: python scripts/build_checksums.py dist
       - name: Sign release artifacts with Sigstore
