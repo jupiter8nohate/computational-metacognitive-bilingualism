@@ -3,7 +3,8 @@
 [![CI](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/ci.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/ci.yml)
 [![C2PA round-trip](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml)
 [![CodeQL](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml)
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![Software license](https://img.shields.io/badge/software-Apache--2.0-blue.svg)](LICENSE)
+[![Creative content](https://img.shields.io/badge/creative%20content-rights%20reserved-purple.svg)](CONTENT_LICENSE.md)
 
 
 ---
@@ -204,6 +205,7 @@ cmb-provenance seal \
   MANIFESTO.md \
   CMB_Polyglot_Firewall_Specification.md \
   manifestos/DEMONS_NEED_ATTENTION_DNA.md \
+  manifestos/DNA_CHICKEN_RUN_MANIFESTO.md \
   manifestos/CMB_UNCLASSIFIABLE_INDEX.md \
   manifestos/CMB_Z13_MANIFESTO.md \
   manifestos/CMB_Z13_LANGUAGE_SPEC.md \
@@ -220,6 +222,7 @@ cmb-provenance verify \
   MANIFESTO.md \
   CMB_Polyglot_Firewall_Specification.md \
   manifestos/DEMONS_NEED_ATTENTION_DNA.md \
+  manifestos/DNA_CHICKEN_RUN_MANIFESTO.md \
   manifestos/CMB_UNCLASSIFIABLE_INDEX.md \
   manifestos/CMB_Z13_MANIFESTO.md \
   manifestos/CMB_Z13_LANGUAGE_SPEC.md \
