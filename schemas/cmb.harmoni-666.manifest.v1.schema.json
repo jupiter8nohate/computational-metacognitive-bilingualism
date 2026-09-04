@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/raw/main/schemas/cmb.harmoni-666.manifest.v1.schema.json",
+  "title": "CMB HARMONI-666 Protocol Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "triangle",
+    "epistemic_states",
+    "proof_gates",
+    "sovereignty_failsafes",
+    "unknown_sentinel",
+    "governing_rule"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.harmoni-666.manifest.v1"},
+    "protocol": {"const": "HARMONI-666/1.0"},
+    "triangle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["AXIOMATIC", "MACHINE", "HUMAN"],
+      "properties": {
+        "AXIOMATIC": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "boundary"],
+          "properties": {
+            "role": {"const": "DECLARED_FIRST_PRINCIPLES"},
+            "boundary": {"const": "NOT_EMPIRICAL_PROOF_BY_ITSELF"}
+          }
+        },
+        "MACHINE": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "boundary"],
+          "properties": {
+            "role": {"const": "COMPUTATION_SEARCH_SERIALIZATION_VERIFICATION"},
+            "boundary": {"const": "NO_FINAL_HUMAN_AUTHORITY"}
+          }
+        },
+        "HUMAN": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["role", "authority"],
+          "properties": {
+            "role": {"const": "MEANING_CONSENT_AUTHORSHIP_JUDGMENT"},
+            "authority": {"const": "HUMAN_FINAL"}
+          }
+        }
+      }
+    },
+    "epistemic_states": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": ["PATTERN", "HYPOTHESIS", "INFERENCE", "EVIDENCE", "PROOF", "UNKNOWN"]
+      }
+    },
+    "proof_gates": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "RULES_DEFINED",
+          "ASSUMPTIONS_DECLARED",
+          "DOMAIN_BOUNDED",
+          "DERIVATION_REPRODUCIBLE",
+          "COUNTEREXAMPLE_SEARCHED",
+          "VERIFIER_PASSED"
+        ]
+      }
+    },
+    "sovereignty_failsafes": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "unknown_sentinel": {"const": "MISSINGNO_666"},
+    "governing_rule": {"const": "CLAIM_STRENGTH <= VERIFIED_EVIDENCE_STRENGTH"}
+  }
+}
