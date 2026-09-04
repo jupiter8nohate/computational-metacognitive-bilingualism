@@ -320,6 +320,96 @@ Do not confuse engagement with consent.
 
 ---
 
+## VIII // TEACH THE CHILD THE CODE
+
+The next generation may meet intelligent machines before it learns how those machines classify, predict, recommend, and remember.
+
+D.N.A. therefore gains an educational layer:
+
+```text
+TEACH THE CHILD THE CODE.
+TEACH THE CHILD TO QUESTION THE CODE.
+TEACH THE CHILD TO CREATE WITH THE CODE.
+TEACH THE MACHINE TO RESPECT THE CHILD.
+```
+
+Computational Metacognitive Bilingualism teaches two languages together:
+
+```text
+MACHINE LANGUAGE:
+INPUT • OUTPUT • IF • THEN • DATA • PATTERN
+
+HUMAN LANGUAGE:
+MEANING • FEELING • QUESTION • CONSENT • CHOICE • CREATION
+```
+
+The Flamingoglyph Code becomes the visual classroom:
+
+```text
+🧠 = MY THOUGHT
+❤️ = MY FEELING
+👁️ = NOTICE
+❓ = QUESTION
+🔍 = VERIFY
+⚡ = ACTION
+🎨 = CREATE
+🪐 = CONTEXT
+🛡️ = BOUNDARY
+🔒 = PRIVATE
+⏳ = TEMPORARY
+✅ = YES
+🚫 = NO
+🔁 = TRY AGAIN
+🤖 = MACHINE
+🧑 = HUMAN
+```
+
+The child learns:
+
+```text
+👁️ NOTICE → ❓ QUESTION → 🔍 VERIFY → 🧠 DECIDE → 🎨 CREATE
+```
+
+And the machine receives an explicit boundary:
+
+```text
+SOURCE = HUMAN_DECLARED
+TEMPORAL_SCOPE = CURRENT_INTERACTION
+MACHINE_INFERRED = FALSE
+PERSISTENCE = EPHEMERAL
+TRAIN_ON_INPUT = FALSE
+PROFILE = FALSE
+PSYCHOLOGICAL_INFERENCE = FALSE
+```
+
+A feeling stated now is not a permanent identity.
+
+```text
+DECLARATION ≠ DIAGNOSIS
+FEELING_NOW ≠ IDENTITY_FOREVER
+MACHINE_INFERENCE ≠ HUMAN_SELF_DEFINITION
+```
+
+A prediction is not a sentence.
+
+```text
+PATTERN ≠ PROOF
+PROFILE ≠ PERSON
+PREDICTION ≠ DESTINY
+DIFFERENCE ≠ DEFECT
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+CMB-EDU does not teach children to fear technology. It teaches them how to collaborate with machines while keeping human judgment, privacy, consent, authorship, and self-definition intact.
+
+```text
+CHILD + CURIOSITY + CODE + METACOGNITION
+=
+COGNITIVE_SOVEREIGNTY
+```
+
+---
+
 # D.N.A. // EIGHT-LANGUAGE TRANSMISSION
 
 ## 1 // Python
