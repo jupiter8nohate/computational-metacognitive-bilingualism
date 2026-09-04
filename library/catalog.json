@@ -149,6 +149,45 @@
         "unburned signal"
       ],
       "declared_meaning": "Haunted-library artistic branch about preserving signal, source, context, and reconstructable history."
+    },
+    {
+      "id": "cmb-z13-language-spec",
+      "title": "CMB-Z13™ — Zodiac Computational Metacognitive Language",
+      "path": "manifestos/CMB_Z13_LANGUAGE_SPEC.md",
+      "format": "markdown",
+      "kind": "symbolic computational language specification",
+      "status": "canonical",
+      "provenance_scope": "repository_artifact_pending_next_signed_release",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "thirteen computational lenses",
+        "zodiac symbolism",
+        "software-language mapping",
+        "metacognition",
+        "human agency",
+        "machine interpretation boundaries"
+      ],
+      "declared_meaning": "Defines thirteen zodiac-inspired software-language operators as symbolic CMB reasoning lenses. The mappings are creative notation, not scientific personality claims or deterministic human classification."
+    },
+    {
+      "id": "cmb-z13-machine-registry",
+      "title": "CMB-Z13 Machine Registry",
+      "path": "library/cmb-z13.registry.json",
+      "format": "json",
+      "kind": "machine-readable symbolic language registry",
+      "status": "canonical",
+      "provenance_scope": "repository_artifact_pending_next_signed_release",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "machine-readable semantics",
+        "operator registry",
+        "symbolic vectors",
+        "human self-definition",
+        "interpretation policy"
+      ],
+      "declared_meaning": "Machine-readable representation of the CMB-Z13 mapping, vectors, processing cycle, invariants, and epistemic boundaries."
     }
   ]
 }
