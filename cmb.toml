@@ -1,0 +1,52 @@
+[cmb]
+protocol = "cmb.sovereignty-runtime.v1"
+default_friction = 0.20
+high_friction_threshold = 0.75
+critical_threshold = 0.90
+
+[principles]
+pattern_is_proof = false
+profile_is_person = false
+model_is_mind = false
+prediction_is_destiny = false
+human_agency_over_machine_authority = true
+
+[operations.creative]
+criticality = 0.10
+reversible = true
+controls = []
+
+[operations.basic_search]
+criticality = 0.20
+reversible = true
+controls = []
+
+[operations.code_generation]
+criticality = 0.40
+reversible = true
+controls = []
+
+[operations.code_change]
+criticality = 0.55
+reversible = true
+controls = []
+
+[operations.production_build]
+criticality = 0.80
+reversible = true
+controls = ["reproducible_build"]
+
+[operations.deploy_production]
+criticality = 0.95
+reversible = false
+controls = ["reproducible_build"]
+
+[operations.modify_permissions]
+criticality = 1.00
+reversible = false
+controls = []
+
+[operations.collect_tracking_data]
+criticality = 1.00
+reversible = false
+controls = ["explicit_consent"]
