@@ -10,6 +10,7 @@
     "PREDICTION != DESTINY",
     "DIFFERENCE != DEFECT",
     "CAPABILITY != AUTHORITY",
+    "MACHINE_CAN_READ != MACHINE_CAN_DEFINE",
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
   ],
   "interpretation_policy": {
@@ -37,6 +38,28 @@
         "classification limits"
       ],
       "declared_meaning": "Core statement of CMB human-sovereignty principles."
+    },
+    {
+      "id": "cmb-reclaiming-the-pen",
+      "title": "Reclaiming the Pen - Eight-Language CMB Poetic Manifesto",
+      "path": "manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md",
+      "format": "markdown",
+      "kind": "polyglot code-poetry manifesto",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "reclaiming the pen",
+        "code as poetry",
+        "human authorship",
+        "consent",
+        "meaning",
+        "cognitive sovereignty",
+        "machine interpretation boundaries",
+        "polyglot expression"
+      ],
+      "declared_meaning": "Expresses the CMB motto and mission across Python, Rust, Go, TypeScript, Prolog, Haskell, Common Lisp, and C while preserving the boundary between machine interpretation and human authority."
     },
     {
       "id": "cmb-polyglot-firewall",
