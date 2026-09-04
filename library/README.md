@@ -26,16 +26,20 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [`../docs/PRIOR_ART_AND_POSITIONING.md`](../docs/PRIOR_ART_AND_POSITIONING.md) - legal, scholarly, and standards positioning.
 - [`../docs/C2PA_INTEROPERABILITY.md`](../docs/C2PA_INTEROPERABILITY.md) - provenance interoperability roadmap.
 - [`../docs/EXTERNAL_REVIEW.md`](../docs/EXTERNAL_REVIEW.md) - current independent-validation gap and review scope.
+- [`../docs/CREATOR_PROVENANCE.md`](../docs/CREATOR_PROVENANCE.md) - privacy-safe creator provenance, genealogy status, intellectual lineage, symbolic lineage, and evidence boundaries.
 
 ### Corpus
 
 - [`catalog.json`](catalog.json) - machine-indexable catalog of CMB public artifacts.
+- [`creator-provenance.json`](creator-provenance.json) - machine-readable creator provenance and category-separation record.
+- [`../schemas/cmb.creator-provenance.v1.schema.json`](../schemas/cmb.creator-provenance.v1.schema.json) - strict schema for the creator-provenance contract.
 - [`../schemas/cmb.library.catalog.v1.schema.json`](../schemas/cmb.library.catalog.v1.schema.json) - strict JSON Schema for validating the catalog contract.
 - [`../schemas/cmb.edu.v1.schema.json`](../schemas/cmb.edu.v1.schema.json) - strict CMB-EDU Metacognitive Context Envelope schema.
 - [`../MANIFESTO.md`](../MANIFESTO.md) - core human-sovereignty manifesto.
 - [`../manifestos/DEMONS_NEED_ATTENTION_DNA.md`](../manifestos/DEMONS_NEED_ATTENTION_DNA.md) - D.N.A. attention-economy manifesto.
 - [`../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - D.N.A./FGC literary allegory about institutional and algorithmic confinement.
 - [`../manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](../manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - perspective-aware library model and MissingNo Clause.
+- [`../manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md`](../manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) - perfect-play epistemics, uncertainty Recovery, and human-authority code-art.
 - [`../manifestos/CMB_Z13_MANIFESTO.md`](../manifestos/CMB_Z13_MANIFESTO.md) - CMB-Z13 public manifesto and thirteen-lens declaration.
 - [`../manifestos/CMB_Z13_LANGUAGE_SPEC.md`](../manifestos/CMB_Z13_LANGUAGE_SPEC.md) - CMB-Z13 symbolic language specification.
 - [`cmb-z13.registry.json`](cmb-z13.registry.json) - machine-readable CMB-Z13 mapping, vectors, processing cycle, and interpretation boundaries.

@@ -67,7 +67,7 @@ Read [For developers](DEVELOPERS.md) for installation, stable provenance APIs, C
 
 ## 04 // Verify
 
-Start with [CMB: Three Dimensions of Distinction](CMB_DISTINCTION.md) and [CMB Research Position](CMB_RESEARCH_POSITION.md). Then move into the [CMB Cognitive Sovereignty Dissertation](dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md), [Formal Semantics](dissertation/31_FORMAL_SEMANTICS.md), and [Prior Art & Positioning](PRIOR_ART_AND_POSITIONING.md).
+Start with [CMB: Three Dimensions of Distinction](CMB_DISTINCTION.md) and [CMB Research Position](CMB_RESEARCH_POSITION.md). For authorship, genealogy status, symbolic influences, privacy, and evidence-category boundaries, read the [CMB Creator Provenance Protocol](CREATOR_PROVENANCE.md). Then move into the [CMB Cognitive Sovereignty Dissertation](dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md), [Formal Semantics](dissertation/31_FORMAL_SEMANTICS.md), and [Prior Art & Positioning](PRIOR_ART_AND_POSITIONING.md).
 
 The evidence rule is simple:
 

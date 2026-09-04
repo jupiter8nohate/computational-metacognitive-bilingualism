@@ -52,6 +52,9 @@ policy/CMB_POLICY_ONE_PAGER.md
 docs/CMB_DISTINCTION.md
 docs/CMB_RESEARCH_POSITION.md
 docs/PLAYGROUND.md
+docs/CREATOR_PROVENANCE.md
+library/creator-provenance.json
+schemas/cmb.creator-provenance.v1.schema.json
 
 ## Developer entry points
 
@@ -105,6 +108,27 @@ CMB-Z13 maps symbolic zodiac archetypes to programming/software languages as
 educational and artistic computational lenses. The mapping must not be used as
 a scientific personality model, diagnosis, risk score, or deterministic human
 classification system.
+
+## Creator provenance boundary
+
+Historical genealogy source status:
+- creator supplied;
+- access controlled;
+- not independently verified in this repository;
+- raw family-tree image not committed;
+- invitation token not committed;
+- living-relative details intentionally excluded from the public registry.
+
+Interpretation rules:
+GENEALOGY != METAPHYSICAL_PROOF
+SYMBOLISM != BIOLOGICAL_FACT
+SYMBOLISM != SCIENTIFIC_EVIDENCE
+THIRD_PARTY_REFERENCE != AFFILIATION
+
+Symbolic references including Yahweh, Thoth, Pokemon / Pokedex, MissingNo, and
+6 / 66 / 666 are stored with explicit classifications and declared roles in
+library/creator-provenance.json. They are not promoted into scientific,
+biological, or independently verified historical claims.
 
 ## Citation behavior
 
