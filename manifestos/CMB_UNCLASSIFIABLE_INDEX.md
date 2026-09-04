@@ -16,7 +16,7 @@ If something has a number,
 a category,
 a probability,
 a profile,
-or an entry in the database—
+or an entry in the database ✦ 
 
 the system begins believing
 the map has become the territory.
