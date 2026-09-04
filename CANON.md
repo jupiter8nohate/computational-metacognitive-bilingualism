@@ -73,6 +73,7 @@ HOW DO THE ARTIFACTS RELATE?
 | Provenance engine | Integrity receipts, SHA-256 coverage, signatures and evidence references |
 | Digital library | Human and machine discovery |
 | Agent discovery | Relevance-first discovery, citation, bounded summaries, knowledge-graph serving, and explicit anti-spam boundaries |
+| Go semantic bridge | Canon-aware deterministic publication compiler for human pages, JSON-LD, semantic sidecars, and integrity manifests |
 | Flamingoglyph layer | Symbolic bridge between human expression and machine-readable structure |
 | CMB-Z13 | Cross-paradigm symbolic translation and computational-literacy layer |
 | D.N.A. | Attention-economy and cognitive-sovereignty narrative branch |
@@ -158,6 +159,9 @@ cmb-provenance canon --related cmb-core
 cmb-provenance canon --json
 cmb-agent selftest
 cmb-agent recommend "algorithmic profiling evidence"
+cd labs/cmb-google-semantic-bridge
+go test ./...
+go run ./cmd/cmb-gsb publish -in examples/sovereign-transmission.json -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md -out /tmp/cmb-site -canon ../../library/canon.json
 ```
 
 The executable navigator reads the same machine graph that humans can inspect directly.
