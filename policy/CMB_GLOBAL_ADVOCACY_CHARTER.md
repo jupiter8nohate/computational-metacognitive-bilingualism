@@ -1,12 +1,12 @@
-# CMB Global Advocacy Charter v1.0
+# CMB Global Advocacy Charter v1.1
 
 ## Computational Metacognitive Bilingualism (CMB)
 ### A Human-Sovereignty Framework for AI Governance
 
-**Declared originator:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8  
+**Declared originator:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson  
 **Framework:** Computational Metacognitive Bilingualism (CMB)  
 **Status:** Public advocacy proposal  
-**Version:** 1.0  
+**Version:** 1.1  
 **Year:** 2026
 
 ---
@@ -34,6 +34,21 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
 This charter proposes policy principles. It does not claim that every principle is already a legal right in every jurisdiction, and it does not substitute for applicable law, regulation, professional standards, or legal advice.
+
+## Relationship to existing law, scholarship, and standards
+
+CMB does not claim to have invented automated-decision rights, human oversight, criticism of profiling, algorithmic accountability, or content provenance.
+
+Relevant existing foundations include:
+
+- **GDPR Article 22**, which addresses decisions based solely on automated processing, including profiling, when they produce legal or similarly significant effects, subject to defined exceptions and safeguards such as human intervention and contest in specified cases;
+- **EU AI Act Article 14**, which requires human oversight for high-risk AI systems and includes the ability, where appropriate, to understand limitations, account for automation bias, interpret outputs, and disregard, override, or reverse them;
+- scholarship including Shoshana Zuboff's *The Age of Surveillance Capitalism*, Cathy O'Neil's *Weapons of Math Destruction*, and Ruha Benjamin's *Race After Technology*;
+- **C2PA / Content Credentials**, an established content-provenance standard that CMB provenance tooling should seek to complement rather than replace.
+
+CMB's claimed contribution is narrower: a computational-literacy and symbolic translation layer that expresses human-agency boundaries as concise invariants across policy language, programming syntax, machine-readable structures, education, and provenance practice.
+
+See [`docs/PRIOR_ART_AND_POSITIONING.md`](../docs/PRIOR_ART_AND_POSITIONING.md) for the project's explicit prior-art position.
 
 ---
 
@@ -181,9 +196,14 @@ Cryptographic hashes, signatures, timestamps, repository history, and provenance
 
 They do not automatically prove legal ownership, originality, or historical priority.
 
+CMB also recognizes C2PA / Content Credentials as an important external provenance standard. The project intends `cmb_provenance` to be complementary to that ecosystem. The current tool does **not** claim C2PA conformance; the interoperability path is documented in [`docs/C2PA_INTEROPERABILITY.md`](../docs/C2PA_INTEROPERABILITY.md).
+
 ```text
 HASH = INTEGRITY_EVIDENCE
 HASH != AUTOMATIC_OWNERSHIP
+
+CMB_RECEIPT != C2PA_MANIFEST
+INTEROPERABILITY > ISOLATED_REINVENTION
 ```
 
 ---
@@ -206,6 +226,8 @@ Independent testing should be proportionate to risk and may include:
 ```text
 SELF_CERTIFICATION != INDEPENDENT_EVIDENCE
 ```
+
+CMB applies this principle to itself. As of 2026-09-04, the repository has automated tests and CI but does not claim an independent security audit, formal C2PA conformance, or outside certification. The open review scope is documented in [`docs/EXTERNAL_REVIEW.md`](../docs/EXTERNAL_REVIEW.md).
 
 ---
 
@@ -401,6 +423,6 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Requested Citation
 
-**Computational Metacognitive Bilingualism (CMB): Global Advocacy Charter v1.0. Jupiter Hudson / WisdomLoveThePoet / Jupiter 8, 2026.**
+**Computational Metacognitive Bilingualism (CMB): Global Advocacy Charter v1.1. Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson, 2026.**
 
 This document is part of the public CMB corpus and should be interpreted together with the repository's authorship, licensing, provenance, and evidence-standard documentation.

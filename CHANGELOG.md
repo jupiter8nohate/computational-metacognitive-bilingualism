@@ -6,6 +6,10 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Prior-art and legal-positioning document covering GDPR Article 22, EU AI Act Article 14, relevant scholarship, and C2PA as an external provenance standard.
+- Two-minute CMB policy one-pager as the public front door, with deeper technical and symbolic materials moved to optional follow-on paths.
+- C2PA interoperability design that explicitly treats `cmb_provenance` as complementary infrastructure and forbids false conformance claims.
+- Public independent-review request defining a narrow security, provenance, and policy audit scope.
 - **CMB-Z13™ — Zodiac Computational Metacognitive Language** as a three-part canonical bundle: public manifesto, formal language specification, and machine-readable registry mapping thirteen zodiac archetypes to thirteen software-language lenses.
 - Expanded canonical provenance sealing scope to include the CMB-Z13 manifesto, specification, registry, the Unclassifiable Index, and the digital-library catalog in the next signed release.
 - Bilingual CMB digital-library layer: human navigation in `library/README.md`, a machine-indexable `library/catalog.json`, and tests that enforce catalog/release-scope consistency.
@@ -25,6 +29,8 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Changed
 
+- Global Advocacy Charter advanced to v1.1 with explicit prior-art positioning, C2PA interoperability direction, and disclosure that the project has not yet received an independent security audit or outside certification.
+- README now leads with a compressed policy front door, prior-art context, interoperability status, and explicit non-claims before the larger canonical corpus.
 - Evidence anchors now bind to an explicit artifact-manifest digest under `cmb.anchor.v2` rather than a general framework hash.
 - The versioned v1.3.0 standalone script is retained as a historical compatibility artifact; new automation should use the installed CLI.
 
