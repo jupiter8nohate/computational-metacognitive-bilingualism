@@ -9,6 +9,7 @@ These adapters turn the CMB boundary contract into concrete framework integratio
 | Python | `src/cmb_provenance/boundary.py` | Reference engine |
 | TypeScript / Express | `adapters/typescript-express` | Shared v1 conformance |
 | Rust / Actix Web | `adapters/rust-actix` | Shared v1 conformance |
+| Go / standard library | `adapters/go` | Shared v1 conformance |
 | Go / standard library | `adapters/go` | Shared v1 conformance + strict JSON parser |
 
 Every implementation is tested against:
