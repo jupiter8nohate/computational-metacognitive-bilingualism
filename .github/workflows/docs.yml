@@ -7,6 +7,8 @@ on:
       - "docs/**"
       - "machine/**"
       - "schemas/cmb.fgc-origin-mark.v1.schema.json"
+      - "schemas/cmb.machine-ir.v1.schema.json"
+      - "src/cmb_machine/**"
       - "mkdocs.yml"
       - "pyproject.toml"
       - "llms.txt"
@@ -44,6 +46,12 @@ jobs:
           cp llms.txt docs/llms.txt
           cp llms-full.txt docs/llms-full.txt
           cp machine/fgc-origin-mark.json docs/cmb-machine-origin.json
+          mkdir -p docs/machine
+          cp machine/index.json docs/machine/index.json
+          cp machine/cmb-core.ir.json docs/machine/cmb-core.ir.json
+          cp machine/targets.json docs/machine/targets.json
+          cp machine/cmb_machine_envelope.proto docs/machine/cmb_machine_envelope.proto
+          cmb-machine compile-core --output-dir docs/machine/generated
 
       - name: Build docs
         run: mkdocs build --strict
