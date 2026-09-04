@@ -17,7 +17,8 @@
   "mcp_tools": [
     "cmb_origin_mark",
     "cmb_machine_targets",
-    "cmb_compile_core"
+    "cmb_compile_core",
+    "cmb_compile_authority"
   ],
   "static_bundle_directory": "machine/",
   "targets": [
@@ -30,5 +31,11 @@
     "cbor",
     "protobuf",
     "digital_asset_metadata"
-  ]
+  ],
+  "authority_language": {
+    "protocol": "CMB-SDL-1",
+    "specification": "spec/CMB-SDL-1.md",
+    "ir_schema": "schemas/cmb.authority-ir.v1.schema.json",
+    "cli": "cmb-sdl"
+  }
 }

@@ -82,3 +82,11 @@ MCP:
 cmb://machine/core
 cmb://machine/targets
 cmb_compile_core
+
+## Human-to-agent authority
+- CMB-SDL-1: spec/CMB-SDL-1.md
+- Authority IR schema: schemas/cmb.authority-ir.v1.schema.json
+- Reference source: examples/cmb_sdl/research.cmb
+- Installed compiler: cmb-sdl
+- Core rule: DELEGATED_AUTHORITY <= RECEIVED_AUTHORITY
+- Interpretation boundary: declared authority is not identity proof, legal permission, or enforcement by itself.

@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- CMB-SDL-1 Sovereign Delegation Language with a deterministic parser/compiler, `cmb.authority-ir.v1` schema, tamper-detecting SHA-256 IR digest, monotonic child-agent delegation checks, `cmb-sdl` CLI, MCP compilation tool, machine/agent discovery metadata, reference example, and fail-closed regression tests.
 - Experimental `cmb-edu` educational subsystem with a Dual-Brain Stream parser, strict `cmb.edu.v1` Metacognitive Context Envelope, deny-by-default privacy declarations, installed CLI, child-facing Flamingoglyph curriculum, runnable example, and parser/schema/CLI tests. Human-declared context remains explicitly distinct from machine inference.
 - Framework-agnostic CMB boundary policy evaluator with deterministic rejection codes and human-final authority.
 - Versioned `cmb.boundary-event.v1` JSON Schema for cross-language policy-event interoperability.

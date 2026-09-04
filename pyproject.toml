@@ -53,6 +53,7 @@ cmb-edu = "cmb_edu.cli:main"
 cmb-agent = "cmb_agents.cli:main"
 cmb-mcp = "cmb_agents.mcp_server:main"
 cmb-machine = "cmb_machine.cli:main"
+cmb-sdl = "cmb_sdl.cli:main"
 cmbc = "cmb_policy.runtime_cli:main"
 
 [project.urls]
@@ -68,6 +69,7 @@ cmb_provenance = ["py.typed"]
 cmb_edu = ["py.typed"]
 cmb_policy = ["py.typed"]
 cmb_agents = ["py.typed"]
+cmb_sdl = ["py.typed"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/schemas/cmb.authority-ir.v1.schema.json",
+  "title": "CMB Authority IR v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "protocol",
+    "issuer",
+    "subject",
+    "capabilities",
+    "scopes",
+    "purpose",
+    "expires_at",
+    "required_evidence",
+    "event_handlers",
+    "return_receipt",
+    "delegable",
+    "invariants",
+    "digest"
+  ],
+  "properties": {
+    "schema": {"const": "cmb.authority-ir.v1"},
+    "protocol": {"const": "CMB-SDL-1"},
+    "issuer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id"],
+      "properties": {
+        "type": {"const": "human"},
+        "id": {"type": "string", "minLength": 1}
+      }
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "id"],
+      "properties": {
+        "type": {"const": "agent"},
+        "id": {"type": "string", "minLength": 1}
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allow", "deny"],
+      "properties": {
+        "allow": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "deny": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "scopes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "value"],
+        "properties": {
+          "kind": {"type": "string", "minLength": 1},
+          "value": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "purpose": {"type": "string", "minLength": 1},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "required_evidence": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "event_handlers": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "uncertainty": {"enum": ["ASK_HUMAN", "HALT", "REVOKE"]},
+        "scope_violation": {"enum": ["ASK_HUMAN", "HALT", "REVOKE"]},
+        "expiry": {"enum": ["ASK_HUMAN", "HALT", "REVOKE"]}
+      }
+    },
+    "return_receipt": {"type": "boolean"},
+    "delegable": {"type": "boolean"},
+    "invariants": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

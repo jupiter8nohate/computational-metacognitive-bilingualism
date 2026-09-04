@@ -17,6 +17,7 @@ import json
 from typing import Any
 
 from cmb_machine import build_core_ir, render_target, supported_targets
+from cmb_sdl import compile_text as compile_authority_text
 
 try:
     from mcp.server import MCPServer
@@ -103,6 +104,12 @@ def cmb_compile_core(target: str = "json") -> dict[str, Any]:
         "encoding": "base64",
         "data_base64": base64.b64encode(artifact.data).decode("ascii"),
     }
+
+
+@mcp.tool()
+def cmb_compile_authority(source: str) -> dict[str, Any]:
+    """Compile CMB-SDL source into deterministic CMB Authority IR."""
+    return compile_authority_text(source)
 
 
 @mcp.tool()

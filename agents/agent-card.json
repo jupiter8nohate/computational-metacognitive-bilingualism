@@ -2,7 +2,7 @@
   "schema_version": "cmb.agent-card.v1",
   "name": "CMB Knowledge and Provenance Agent",
   "description": "Reference discovery surface for Computational Metacognitive Bilingualism. It helps agents find relevant CMB principles, preserve attribution, and stop when CMB is not relevant.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "protocol": "CMB-ADP-1",
   "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
   "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/.well-known/agent-card.json",
@@ -27,6 +27,10 @@
     {
       "id": "verify-boundary",
       "description": "Expose the distribution covenant and human agency constraints agents must preserve."
+    },
+    {
+      "id": "compile-authority",
+      "description": "Compile CMB-SDL human authority declarations into deterministic CMB Authority IR."
     }
   ],
   "interfaces": [
@@ -44,6 +48,11 @@
       "command": "cmb-mcp",
       "protocol_generation": "2026-07-28",
       "sdk": "mcp-python-2.x"
+    },
+    {
+      "type": "authority_cli",
+      "command": "cmb-sdl compile",
+      "protocol": "CMB-SDL-1"
     }
   ],
   "standards_status": {
