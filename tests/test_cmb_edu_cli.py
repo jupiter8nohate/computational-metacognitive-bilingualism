@@ -10,6 +10,10 @@ SOURCE = (
     '♌::CREATIVE -> STATE[confident || overstimulated] '
     '=> GENERATE("dragon_story") -> PROFILE_NOT_PERSON;'
 )
+FGC_SOURCE = (
+    "🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + "
+    "🛡️ NO_PROFILE + ⏳ EPHEMERAL"
+)
 
 
 def test_cli_validate(capsys) -> None:
@@ -38,3 +42,12 @@ def test_cli_export_json(tmp_path: Path) -> None:
 def test_cli_rejects_invalid_stream(capsys) -> None:
     assert main(["validate", "PROFILE = PERSON"]) == 2
     assert "ERROR:" in capsys.readouterr().err
+
+
+def test_cli_parse_fgc(capsys) -> None:
+    assert main(["parse-fgc", FGC_SOURCE]) == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["meta"]["human_lens"] == "FGC-KIDS"
+    assert payload["execution"]["operation"] == "draw"
+    assert payload["sovereignty_gate"]["declared_invariant"] == "PROFILE_NOT_PERSON"
+    assert payload["privacy"]["training_permission"] is False
