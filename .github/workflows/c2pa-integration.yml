@@ -34,7 +34,7 @@ jobs:
       C2PATOOL_SHA256: "839866d44227a1a09f3cb01ff060bb08700526eaa2a30ea48134e97911ecec1b"
       C2PA_TEST_LABEL: "com.example.cmb_provenance"
     steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
