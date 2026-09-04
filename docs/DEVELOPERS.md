@@ -65,6 +65,25 @@ See [MCP integration](MCP_INTEGRATION.md). The adapter is an interoperability
 surface, not independent certification or permission for unsolicited agent
 distribution.
 
+## Optional MCP server
+
+Install the current MCP adapter separately so the base provenance package keeps
+its zero-dependency runtime:
+
+~~~bash
+python -m pip install -e ".[mcp]"
+cmb-mcp
+~~~
+
+The adapter targets MCP `2026-07-28` through the official Python SDK 2.x line
+and exposes the existing CMB-ADP recommendation, citation, summary, graph, and
+distribution-boundary services. See [MCP integration](MCP_INTEGRATION.md).
+
+~~~text
+MCP_ACCESS != ENDORSEMENT
+DISCOVERY != AUTHORITY
+~~~
+
 ## Experimental CMB-Z13 reference parser
 
 The CMB-Z13 parser is an **experimental reference implementation**, not a personality engine and not a scientific astrology system.
