@@ -113,7 +113,10 @@ impl Display for BoundaryInputError {
     fn fmt(&self, formatter: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
             Self::InvalidSchemaVersion => {
-                write!(formatter, "schema_version must equal {BOUNDARY_SCHEMA_VERSION}")
+                write!(
+                    formatter,
+                    "schema_version must equal {BOUNDARY_SCHEMA_VERSION}"
+                )
             }
             Self::BlankEventId => write!(formatter, "event_id must be non-empty when supplied"),
         }
