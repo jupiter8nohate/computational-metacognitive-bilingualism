@@ -1,0 +1,45 @@
+{
+  "coverage": {
+    "excludes_unlisted": true,
+    "paths": [
+      "CMB_Polyglot_Firewall_Specification.md",
+      "MANIFESTO.md",
+      "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+      "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md"
+    ],
+    "type": "explicit_file_set"
+  },
+  "created_at_utc": "2026-09-04T10:33:49Z",
+  "manifest": {
+    "artifacts": [
+      {
+        "path": "CMB_Polyglot_Firewall_Specification.md",
+        "sha256": "508553b2e24b54c48bb2f333653e3bdba951e0f7b7b8c368c3baf5795c7ff331",
+        "size_bytes": 5757
+      },
+      {
+        "path": "MANIFESTO.md",
+        "sha256": "c3619f6122ef8575e0346275abe1a0c4e3ffb90923d479508614e69174e8befd",
+        "size_bytes": 4635
+      },
+      {
+        "path": "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+        "sha256": "9c7897ecf011dc2c405660656d545578128849276225b9621aabf7a7e87a9b87",
+        "size_bytes": 9289
+      },
+      {
+        "path": "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
+        "sha256": "b85e07d891e605854762970ae5fde651f1f559177de2c404225ee430c170b203",
+        "size_bytes": 11995
+      }
+    ],
+    "git_commit": "593fd2a6894e0061059ffb60eb43367e5765a053",
+    "git_commit_status": "CALLER_SUPPLIED_UNVERIFIED",
+    "hash_algorithm": "SHA-256",
+    "schema_version": "cmb.artifact-manifest.v1",
+    "tool_version": "1.3.1"
+  },
+  "manifest_sha256": "619308c7c322a65b2159679b742e28f61f8558c43cb48dd09229745814043abc",
+  "schema_version": "cmb.seal-receipt.v1",
+  "tool_version": "1.3.1"
+}
