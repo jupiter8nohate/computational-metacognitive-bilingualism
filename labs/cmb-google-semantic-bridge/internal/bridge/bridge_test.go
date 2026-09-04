@@ -3,10 +3,31 @@ package bridge
 import (
 	"bytes"
 	"encoding/json"
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 	"time"
 )
+
+func validCanonSemantics() CanonSemantics {
+	return CanonSemantics{
+		SchemaVersion: "cmb.canon.v1",
+		SHA256:        strings.Repeat("0", 64),
+		RootInvariant: "HUMAN_AGENCY > MACHINE_AUTHORITY",
+		Invariants: []string{
+			"PATTERN != PROOF",
+			"PROFILE != PERSON",
+			"MODEL != MIND",
+			"PREDICTION != DESTINY",
+			"DIFFERENCE != DEFECT",
+			"CAPABILITY != AUTHORITY",
+			"OPTIMIZATION != MORALITY",
+			"INTELLIGENCE != SOVEREIGNTY",
+			"HUMAN_AGENCY > MACHINE_AUTHORITY",
+		},
+	}
+}
 
 func validArtifact(t *testing.T) Artifact {
 	t.Helper()
@@ -97,7 +118,7 @@ func TestArticleJSONLDDoesNotLeakCMBPolicyMetadata(t *testing.T) {
 }
 
 func TestCMBSemanticJSONPreservesHumanAuthority(t *testing.T) {
-	data, err := CMBSemanticJSON(validArtifact(t))
+	data, err := CMBSemanticJSON(validArtifact(t), validCanonSemantics())
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -362,5 +383,119 @@ func TestSiteCSSPreservesAccessibilityModes(t *testing.T) {
 		if !strings.Contains(css, required) {
 			t.Fatalf("site CSS missing accessibility rule %q", required)
 		}
+	}
+}
+
+
+func TestCMBSemanticJSONBindsCanonDigest(t *testing.T) {
+	data, err := CMBSemanticJSON(validArtifact(t), validCanonSemantics())
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	var doc map[string]any
+	if err := json.Unmarshal(data, &doc); err != nil {
+		t.Fatal(err)
+	}
+	if got := doc["schema_version"]; got != "cmb-gsb.semantic.v2" {
+		t.Fatalf("schema_version = %v", got)
+	}
+	canonDoc, ok := doc["canon"].(map[string]any)
+	if !ok {
+		t.Fatal("canon binding missing")
+	}
+	if got := canonDoc["sha256"]; got != strings.Repeat("0", 64) {
+		t.Fatalf("canon sha256 = %v", got)
+	}
+	invariants, ok := doc["invariants"].([]any)
+	if !ok || len(invariants) != 9 {
+		t.Fatalf("invariants = %v", doc["invariants"])
+	}
+}
+
+func TestCMBSemanticJSONRejectsIncompleteCanon(t *testing.T) {
+	canon := validCanonSemantics()
+	canon.Invariants = canon.Invariants[:4]
+	if _, err := CMBSemanticJSON(validArtifact(t), canon); err == nil {
+		t.Fatal("expected incomplete canon rejection")
+	}
+}
+
+func TestArticleJSONLDPreservesExactBodyText(t *testing.T) {
+	artifact := validArtifact(t)
+	artifact.Body = "\n  PATTERN != PROOF  \n"
+	artifact.Provenance.SHA256 = SHA256Bytes([]byte(artifact.Body))
+
+	data, err := ArticleJSONLD(artifact)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var doc map[string]any
+	if err := json.Unmarshal(data, &doc); err != nil {
+		t.Fatal(err)
+	}
+	if got := doc["articleBody"]; got != artifact.Body {
+		t.Fatalf("articleBody = %q, want exact %q", got, artifact.Body)
+	}
+}
+
+func TestArtifactRejectsURLFragment(t *testing.T) {
+	artifact := validArtifact(t)
+	artifact.URL = "https://example.org/cmb/test#fragment"
+	if err := artifact.Validate(); err == nil {
+		t.Fatal("expected URL fragment rejection")
+	}
+}
+
+func TestNormalizeBaseURLRejectsUserinfo(t *testing.T) {
+	if _, err := NormalizeBaseURL("https://user:pass@example.org/project/"); err == nil {
+		t.Fatal("expected userinfo rejection")
+	}
+}
+
+func TestReadRegularFileRejectsSymlink(t *testing.T) {
+	tmp := t.TempDir()
+	target := filepath.Join(tmp, "target.txt")
+	link := filepath.Join(tmp, "link.txt")
+	if err := os.WriteFile(target, []byte("source"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.Symlink(target, link); err != nil {
+		t.Skipf("symlink unavailable: %v", err)
+	}
+	if _, err := ReadRegularFile(link, 1024); err == nil {
+		t.Fatal("expected symlink rejection")
+	}
+}
+
+func TestWriteBundleAtomicReplacesCompleteGeneration(t *testing.T) {
+	output := filepath.Join(t.TempDir(), "site")
+	first := map[string][]byte{
+		"index.html":   []byte("first"),
+		"obsolete.txt": []byte("old"),
+	}
+	if err := WriteBundleAtomic(output, "artifact", "0.4.0", first); err != nil {
+		t.Fatal(err)
+	}
+
+	second := map[string][]byte{
+		"index.html": []byte("second"),
+	}
+	if err := WriteBundleAtomic(output, "artifact", "0.4.0", second); err != nil {
+		t.Fatal(err)
+	}
+
+	data, err := os.ReadFile(filepath.Join(output, "index.html"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if string(data) != "second" {
+		t.Fatalf("index.html = %q", data)
+	}
+	if _, err := os.Stat(filepath.Join(output, "obsolete.txt")); !os.IsNotExist(err) {
+		t.Fatalf("obsolete output survived atomic replacement: %v", err)
+	}
+	if _, err := os.Stat(filepath.Join(output, "manifest.json")); err != nil {
+		t.Fatalf("manifest missing: %v", err)
 	}
 }
