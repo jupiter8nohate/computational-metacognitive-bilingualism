@@ -139,7 +139,7 @@ def test_incident_conformance_fixture() -> None:
 
 def test_decision_matches_public_schema() -> None:
     schema = json.loads(
-        Path("schemas/cmb.sovereign-epistemic.v1.schema.json").read_text(
+        Path("schemas/cmb.sovereign-epistemic.decision.v1.schema.json").read_text(
             encoding="utf-8"
         )
     )
@@ -158,3 +158,12 @@ def test_protocol_manifest_is_exactly_six_by_six_by_six() -> None:
     assert manifest["authorization_boundary"]["machine_self_attestation_allowed"] is False
     assert manifest["authorization_boundary"]["consciousness_detection_claimed"] is False
     assert manifest["authorization_boundary"]["physical_cutoff_claimed"] is False
+
+
+def test_protocol_manifest_matches_public_schema() -> None:
+    schema = json.loads(
+        Path("schemas/cmb.sovereign-epistemic.manifest.v1.schema.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    Draft202012Validator(schema).validate(protocol_manifest())
