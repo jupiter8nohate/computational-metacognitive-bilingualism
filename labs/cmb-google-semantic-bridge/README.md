@@ -16,9 +16,10 @@ GO SEMANTIC BRIDGE
     +--> sitemap.xml
     +--> robots.txt
     +--> SHA-256 output manifest
+    +--> complete static HTML publication
     |
     v
-MACHINE-READABLE WEB LAYER
+HUMAN + MACHINE READABLE WEB LAYER
 
 PATTERN != PROOF
 INDEX != IDENTITY
@@ -71,12 +72,27 @@ From this directory:
 go test ./...
 go run ./cmd/cmb-gsb validate -in examples/cmb-manifesto.json
 go run ./cmd/cmb-gsb render -in examples/cmb-manifesto.json -out build/
+go run ./cmd/cmb-gsb publish \
+  -in examples/sovereign-transmission.json \
+  -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md \
+  -out build/sovereign-transmission/
 ```
 
 Generated files:
 
 ```text
 build/
+  article.jsonld
+  cmb-semantic.json
+  head.html
+  sitemap.xml
+  robots.txt
+  manifest.json
+
+build/sovereign-transmission/
+  index.html
+  site.css
+  source.md
   article.jsonld
   cmb-semantic.json
   head.html
@@ -121,11 +137,32 @@ Validate:
 cmb-gsb validate -in artifact.json
 ```
 
-Render:
+Render metadata only:
 
 ```bash
 cmb-gsb render -in artifact.json -out public-meta/
 ```
+
+Publish a complete static page from an exact human-authored source file:
+
+```bash
+cmb-gsb publish \
+  -in artifact.json \
+  -source MANIFESTO.md \
+  -out public/
+```
+
+Override the canonical publication URL without modifying the human source:
+
+```bash
+cmb-gsb publish \
+  -in artifact.json \
+  -source MANIFESTO.md \
+  -out public/ \
+  -url https://example.org/cmb/manifesto/
+```
+
+The publisher computes SHA-256 from the exact source bytes. If the artifact already declares a hash and the supplied source does not match it, publication fails.
 
 Hash any source file:
 
@@ -193,3 +230,56 @@ Before extraction into its own repository:
 6. tag the first release only after an external review of the generated metadata model.
 
 The current incubator inherits the parent repository's engineering review process and licensing context.
+
+## Publisher v0.2
+
+The publisher adds a human-readable surface to the machine-readable bridge.
+
+```text
+EXACT HUMAN SOURCE BYTES
+          |
+          +--> SHA-256
+          |
+          v
+      BIND SOURCE
+          |
+          +--> reject declared-hash mismatch
+          +--> reject invalid UTF-8
+          |
+          v
+     STATIC PAGE
+          |
+     +----+----+
+     |         |
+   HUMAN     MACHINE
+   ARTICLE   JSON-LD
+     |         |
+     +----+----+
+          |
+          v
+    SAME CANONICAL URL
+```
+
+The generated page is deliberately zero-dependency:
+
+- no JavaScript application runtime;
+- no remote font or stylesheet dependency;
+- no analytics;
+- no crawler-specific hidden content;
+- human source is HTML-escaped before rendering;
+- JSON-LD is generated from the same bound artifact used to render the visible page.
+
+The canonical Sovereign Transmission source used by the repository test is:
+
+```text
+../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md
+```
+
+The example publication URL remains `example.org` until an actual public HTTPS deployment target is chosen. Do not treat the fixture URL as a live publication.
+
+```text
+VISIBLE_PAGE == HUMAN_SOURCE_PRESENTATION
+STRUCTURED_DATA == MACHINE_DESCRIPTION
+VISIBLE_PAGE != HIDDEN_CLOAK
+STRUCTURED_DATA != RANKING_COMMAND
+```
