@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+All notable changes to the CMB provenance tool are documented here.
+
+## [Unreleased]
 
 ### Added
 
@@ -13,13 +15,6 @@
 - Canonical release sealing expanded to include HARMONI-666 and core machine-readable CMB anchors.
 - Six-stage epistemological ladder from `UNKNOWN` through `MISSINGNO`, `QUESTION`, `TEST`, and `EVIDENCE` to `JUSTIFIED_CLAIM`, with stage-skipping denied by the reference API.
 - Explicit truth distinctions separating provenance from mythology, mythology from falsehood, symbolism from evidence, and evidence from total human meaning.
-
-
-All notable changes to the CMB provenance tool are documented here.
-
-## [Unreleased]
-
-### Added
 
 - Experimental `cmb-edu` educational subsystem with a Dual-Brain Stream parser, strict `cmb.edu.v1` Metacognitive Context Envelope, deny-by-default privacy declarations, installed CLI, child-facing Flamingoglyph curriculum, runnable example, and parser/schema/CLI tests. Human-declared context remains explicitly distinct from machine inference.
 - Framework-agnostic CMB boundary policy evaluator with deterministic rejection codes and human-final authority.
