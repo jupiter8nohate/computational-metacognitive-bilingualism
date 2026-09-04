@@ -2,7 +2,7 @@
   "schema_version": "cmb.agent-card.v1",
   "name": "CMB Knowledge and Provenance Agent",
   "description": "Reference discovery surface for Computational Metacognitive Bilingualism. It helps agents find relevant CMB principles, preserve attribution, and stop when CMB is not relevant.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "protocol": "CMB-ADP-1",
   "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
   "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/.well-known/agent-card.json",
@@ -31,6 +31,10 @@
     {
       "id": "compile-authority",
       "description": "Compile CMB-SDL human authority declarations into deterministic CMB Authority IR."
+    },
+    {
+      "id": "verify-capability",
+      "description": "Verify signed CMB-CAP authority credentials without accepting private signing keys."
     }
   ],
   "interfaces": [
@@ -53,10 +57,17 @@
       "type": "authority_cli",
       "command": "cmb-sdl compile",
       "protocol": "CMB-SDL-1"
+    },
+    {
+      "type": "capability_cli",
+      "command": "cmb-cap verify",
+      "protocol": "CMB-CAP-1"
     }
   ],
   "standards_status": {
     "mcp": "official_sdk_reference_adapter_not_independently_certified",
-    "a2a": "discovery_pattern_only_not_claimed_conformant"
+    "a2a": "discovery_pattern_only_not_claimed_conformant",
+    "w3c_vc": "vc_2_0_projection_only_not_data_integrity_conformant",
+    "cmb_cap_a2a": "experimental_extension_not_official_a2a_extension"
   }
 }
