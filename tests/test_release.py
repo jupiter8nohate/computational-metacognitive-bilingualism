@@ -34,6 +34,7 @@ def test_release_checksums_require_artifacts(tmp_path: Path) -> None:
 def test_canonical_public_artifact_set_is_exact() -> None:
     assert CANONICAL_PUBLIC_ARTIFACTS == (
         "MANIFESTO.md",
+    "manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md",
         "CMB_Polyglot_Firewall_Specification.md",
         "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
         "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",
