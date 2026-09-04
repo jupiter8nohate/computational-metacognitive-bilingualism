@@ -21,4 +21,4 @@ When referencing the framework or software, use the metadata in [`CITATION.cff`]
 
 > Computational Metacognitive Bilingualism (CMB), Jupiter Hudson / WisdomLoveThePoet / Jupiter 8, 2026.
 
-The Apache-2.0 license controls legal permission to use the repository. This requested academic and cultural citation explains preferred attribution; it does not silently add restrictions beyond that license.
+Apache-2.0 controls the repository's software implementation and other files expressly placed under that license. Authored literary and artistic corpus material may carry separate rights terms. See [`CONTENT_LICENSE.md`](CONTENT_LICENSE.md). Requested academic and cultural citation does not silently alter the license that applies to any particular file.
