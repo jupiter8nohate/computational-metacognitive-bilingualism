@@ -22,3 +22,24 @@ When referencing the framework or software, use the metadata in [`CITATION.cff`]
 > Computational Metacognitive Bilingualism (CMB), Jupiter Hudson / WisdomLoveThePoet / Jupiter 8, 2026.
 
 Apache-2.0 controls the repository's software implementation and other files expressly placed under that license. Authored literary and artistic corpus material may carry separate rights terms. See [`CONTENT_LICENSE.md`](CONTENT_LICENSE.md). Requested academic and cultural citation does not silently alter the license that applies to any particular file.
+
+
+## Creator context boundary
+
+Repository attribution, creator context, and artifact provenance are intentionally
+different layers.
+
+```text
+ATTRIBUTION != TOTAL_IDENTITY
+CONTEXT != IDENTITY
+CATALOG != CREATOR
+INDEX != IDENTITY
+PROFILE != PERSON
+```
+
+The project may document declared symbolic influences, intellectual references,
+and public authorship claims. Those records are descriptive context, not machine
+authority to infer a person's inner state, future behavior, beliefs, diagnosis,
+or permissible identity.
+
+See [CMB Creator Context Model](docs/CREATOR_CONTEXT_MODEL.md).
