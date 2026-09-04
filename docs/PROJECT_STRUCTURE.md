@@ -2,6 +2,22 @@
 
 CMB is easier to evaluate when its layers are separated.
 
+## Conceptual documentation
+
+These files explain what CMB is claiming before a reader enters the implementation or artistic corpus:
+
+```text
+docs/CMB_DISTINCTION.md
+docs/CMB_RESEARCH_POSITION.md
+docs/PRIOR_ART_AND_POSITIONING.md
+```
+
+`CMB_DISTINCTION.md` states the integrated software, art, and human-sovereignty thesis. `CMB_RESEARCH_POSITION.md` converts that thesis into bounded research claims, questions, falsification criteria, and evidence requirements. `PRIOR_ART_AND_POSITIONING.md` provides the external-context check against adjacent traditions.
+
+```text
+POSITION -> RESEARCH CLAIM -> PRIOR ART -> IMPLEMENTATION -> TEST
+```
+
 ## Stable engineering
 
 These are the parts intended to behave like conventional software infrastructure:
