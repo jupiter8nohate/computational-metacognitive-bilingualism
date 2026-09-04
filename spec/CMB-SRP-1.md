@@ -186,6 +186,20 @@ Repository branch rules or deployment environments SHOULD make that status check
 a required condition for merge or release. A workflow that merely prints a scan
 result is detection, not enforcement.
 
+The reference GitHub workflow also defines a narrow governance-recovery path for
+high-friction changes to the gate or release automation itself. When
+`cmbc gate-report` denies a pull request, the workflow may accept a change only
+when the authenticated GitHub actor is the repository owner and the latest
+commit message begins with `CMB-AUTHORIZED:`. This is an explicit
+platform-account authorization marker used to avoid a self-locking governance
+bootstrap. It is not an Ed25519 CMB authorization, not identity proof, and not a
+substitute for protected branches or independent review.
+
+~~~text
+PLATFORM_OWNER_MARKER != CMB_CRYPTOGRAPHIC_AUTHORIZATION
+ACCOUNT_AUTHENTICATION != IDENTITY_PROOF
+~~~
+
 Future CMB-SRP revisions may add signed evidence bundles, SLSA provenance inputs,
 Sigstore-backed authorization identities, and richer independent-verifier
 semantics.
