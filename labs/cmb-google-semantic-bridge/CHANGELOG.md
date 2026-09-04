@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.5.0] - 2026-09-04
+
+### Added
+
+- `cmb-gsb publish-canon` for deterministic whole-library compilation from the repository canon, catalog, and exact declared source files.
+- Strict `cmb.library.catalog.v1` Go loader with unknown-field rejection, interpretation-boundary checks, artifact-ID uniqueness, and repository-relative path validation.
+- `cmb-gsb.library-index.v1` binding every published artifact to its canonical URL, source digest, repository path, output path, status, provenance scope, concepts, and declared meaning.
+- Per-artifact Schema.org `CreativeWork` JSON-LD and `cmb-gsb.library-semantic.v1` sidecars without invented publication dates.
+- Root Schema.org `CollectionPage`, full sitemap, exact canon/catalog copies, and deterministic agent discovery outputs.
+- Nested staged output trees inside the existing atomic publication process.
+- Cross-contract verification that exact canon/catalog bytes match their recorded SHA-256 values and every catalog invariant exists in the canon.
+- Repository-root containment checks that reject traversal and symlinked catalog paths.
+- Formatting-gate diagnostics that print the exact `gofmt` diff on failure.
+
+### Changed
+
+- GitHub Pages now builds the whole catalog-declared CMB digital library instead of using one manifesto as the root publication.
+- Sovereign Transmission remains available as a normal indexed artifact rather than being removed.
+- Repository corpus changes now trigger the semantic-library CI path so publication drift is caught automatically.
+
+### Guardrails
+
+- Catalog status is preserved; `planned`, `open`, and `derived` entries are not silently promoted to `canonical`.
+- The compiler does not invent publication dates, authorship evidence, ownership claims, or ranking guarantees.
+- Exact source SHA-256 values remain integrity identifiers, not independent proof of authorship or copyright.
+
 ## [0.4.0] - 2026-09-04
 
 ### Added
