@@ -9,6 +9,8 @@
 - `cmb-machine harmoni-manifest` and `cmb-machine harmoni-evaluate` commands for machine-readable inspection and release gating.
 - JSON Schema and normative specification for HARMONI-666.
 - Machine index discovery metadata and unit tests for proof retention, fail-closed behavior, strict gate typing, and the 6/6/6 protocol contract.
+- Revelation 13:18 literary design key mapping wisdom to human judgment, understanding to HARMONI interpretation, calculation to machine verification, and the human vertex to `HUMAN_FINAL`.
+- Canonical release sealing expanded to include HARMONI-666 and core machine-readable CMB anchors.
 
 
 All notable changes to the CMB provenance tool are documented here.
