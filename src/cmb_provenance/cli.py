@@ -13,6 +13,14 @@ from .c2pa import (
     save_c2pa_assertion_payload,
     save_c2pa_manifest_definition,
 )
+from .canon import (
+    DEFAULT_CANON_PATH,
+    get_node,
+    load_canon,
+    related_nodes,
+    render_node,
+    render_summary,
+)
 from .constants import ANCHOR_TYPES, DEFAULT_LEDGER_NAME, TOOL_VERSION
 from .errors import CMBProvenanceError
 from .ledger import append_anchor, verify_ledger
@@ -98,6 +106,27 @@ def build_parser() -> argparse.ArgumentParser:
         "--test-example-namespace",
         action="store_true",
         help="Allow com.example/net.example/org.example for local integration tests only.",
+    )
+
+    canon_parser = subparsers.add_parser(
+        "canon", help="Navigate the machine-readable CMB canon graph."
+    )
+    canon_parser.add_argument(
+        "--graph",
+        type=Path,
+        default=DEFAULT_CANON_PATH,
+        help="Canon graph path; defaults to library/canon.json.",
+    )
+    canon_mode = canon_parser.add_mutually_exclusive_group()
+    canon_mode.add_argument("--node", help="Render one canon node by id.")
+    canon_mode.add_argument(
+        "--related", help="Render incoming and outgoing relationships for one node id."
+    )
+    canon_parser.add_argument(
+        "--json",
+        action="store_true",
+        dest="json_output",
+        help="Emit canonical graph or selected result as JSON.",
     )
 
     subparsers.add_parser("selftest", help="Run dependency-free Recovery checks.")
@@ -197,6 +226,35 @@ def _run(args: argparse.Namespace) -> int:
         )
         print(f"C2PA MANIFEST DEFINITION -> {destination}")
         print("status=unsigned_definition_requires_external_c2pa_signing_and_binding")
+        return 0
+
+    if args.command == "canon":
+        canon = load_canon(args.graph)
+        if args.node:
+            node = get_node(canon, args.node)
+            if args.json_output:
+                print(json.dumps(node, ensure_ascii=False, indent=2, sort_keys=True))
+            else:
+                print(render_node(node))
+            return 0
+
+        if args.related:
+            relations = related_nodes(canon, args.related)
+            if args.json_output:
+                print(json.dumps(relations, ensure_ascii=False, indent=2, sort_keys=True))
+            else:
+                get_node(canon, args.related)
+                if not relations:
+                    print(f"{args.related}: no relationships")
+                for item in relations:
+                    arrow = "->" if item["direction"] == "out" else "<-"
+                    print(f"{args.related} {arrow} {item['node']} [{item['relation']}]")
+            return 0
+
+        if args.json_output:
+            print(json.dumps(canon, ensure_ascii=False, indent=2, sort_keys=True))
+        else:
+            print(render_summary(canon))
         return 0
 
     if args.command == "selftest":
