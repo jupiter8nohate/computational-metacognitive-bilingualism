@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="1440" viewBox="0 0 3840 1440" role="img" aria-labelledby="title desc">
+  <title id="title">CMB Visual System 2.0 Hero</title>
+  <desc id="desc">Computational Metacognitive Bilingualism hero using semantic colors for machine, human agency, metacognition, and evidence.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090C10"/>
+      <stop offset=".52" stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#140D18"/>
+    </linearGradient>
+    <radialGradient id="humanGlow" cx="79%" cy="26%" r="43%">
+      <stop offset="0" stop-color="#FF4FA3" stop-opacity=".23"/>
+      <stop offset="1" stop-color="#FF4FA3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="machineGlow" cx="18%" cy="78%" r="42%">
+      <stop offset="0" stop-color="#35D0FF" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#35D0FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="jupiter" cx="35%" cy="28%" r="72%">
+      <stop offset="0" stop-color="#FFD8BD"/>
+      <stop offset=".2" stop-color="#D58B73"/>
+      <stop offset=".45" stop-color="#8B5360"/>
+      <stop offset=".68" stop-color="#4B2D42"/>
+      <stop offset="1" stop-color="#17121D"/>
+    </radialGradient>
+    <linearGradient id="titleGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35D0FF"/>
+      <stop offset=".47" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#FF4FA3"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="13" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#F0F6FC" stroke-opacity=".028" stroke-width="2"/>
+    </pattern>
+    <clipPath id="planetClip">
+      <circle cx="3020" cy="710" r="430"/>
+    </clipPath>
+  </defs>
+
+  <rect width="3840" height="1440" fill="url(#bg)"/>
+  <rect width="3840" height="1440" fill="url(#humanGlow)"/>
+  <rect width="3840" height="1440" fill="url(#machineGlow)"/>
+  <rect width="3840" height="1440" fill="url(#grid)"/>
+
+  <g fill="#F0F6FC" opacity=".7">
+    <circle cx="210" cy="180" r="4"/><circle cx="510" cy="340" r="3"/><circle cx="860" cy="150" r="5"/>
+    <circle cx="1210" cy="300" r="3"/><circle cx="1570" cy="120" r="4"/><circle cx="2010" cy="250" r="3"/>
+    <circle cx="2400" cy="120" r="5"/><circle cx="3380" cy="170" r="4"/><circle cx="3650" cy="420" r="3"/>
+    <circle cx="2650" cy="1250" r="3"/><circle cx="710" cy="1190" r="4"/><circle cx="180" cy="1090" r="3"/>
+  </g>
+
+  <!-- Jupiter: supporting iconography, not the headline -->
+  <circle cx="3020" cy="710" r="450" fill="#FF4FA3" opacity=".055"/>
+  <circle cx="3020" cy="710" r="430" fill="url(#jupiter)"/>
+  <g clip-path="url(#planetClip)" opacity=".48">
+    <path d="M2570 470C2810 400 3200 520 3470 440" fill="none" stroke="#F1B59D" stroke-width="62"/>
+    <path d="M2550 640C2800 560 3210 720 3500 625" fill="none" stroke="#6B324E" stroke-width="78"/>
+    <path d="M2550 820C2840 730 3230 920 3500 800" fill="none" stroke="#E58D75" stroke-width="70"/>
+    <path d="M2560 1010C2860 910 3230 1085 3490 985" fill="none" stroke="#4C2940" stroke-width="88"/>
+    <ellipse cx="3265" cy="858" rx="98" ry="45" fill="#C96A65" opacity=".78"/>
+  </g>
+  <circle cx="3020" cy="710" r="430" fill="none" stroke="#A78BFA" stroke-opacity=".52" stroke-width="5"/>
+
+  <!-- Minimal flamingo marks -->
+  <g fill="none" stroke="#FF4FA3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3440 1045c-52-80-35-165 35-210 55-36 93-86 62-140-29-50-98-32-109 18" stroke-width="18"/>
+    <path d="M3440 1045c85-59 185-47 241 34-79-15-132 14-178 67-34 39-83 42-126 9 39-7 58-43 63-110z" stroke-width="14" fill="#FF4FA3" fill-opacity=".2"/>
+    <path d="M3500 1145l-7 138M3536 1134l32 149" stroke-width="9"/>
+  </g>
+
+  <!-- Main hierarchy -->
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="300" y="330" font-size="360" font-weight="850" letter-spacing="-18" fill="url(#titleGradient)">CMB</text>
+    <text x="315" y="470" font-size="62" font-weight="800" letter-spacing="18" fill="#F0F6FC">COMPUTATIONAL METACOGNITIVE BILINGUALISM</text>
+    <text x="315" y="560" font-size="38" font-weight="700" letter-spacing="10" fill="#8B949E">HUMAN ↔ MACHINE LITERACY</text>
+  </g>
+
+  <!-- Semantic legend -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="34" font-weight="700" letter-spacing="3">
+    <rect x="315" y="650" width="1270" height="88" rx="18" fill="#161B22" stroke="#30363D" stroke-width="3"/>
+    <circle cx="365" cy="694" r="10" fill="#35D0FF"/>
+    <text x="398" y="707" fill="#35D0FF">MACHINE</text>
+    <text x="620" y="707" fill="#8B949E">observe • classify • predict • generate</text>
+
+    <rect x="315" y="760" width="1270" height="88" rx="18" fill="#161B22" stroke="#30363D" stroke-width="3"/>
+    <circle cx="365" cy="804" r="10" fill="#FF4FA3"/>
+    <text x="398" y="817" fill="#FF4FA3">HUMAN</text>
+    <text x="575" y="817" fill="#8B949E">meaning • consent • authorship • choice</text>
+
+    <rect x="315" y="870" width="1270" height="88" rx="18" fill="#161B22" stroke="#30363D" stroke-width="3"/>
+    <circle cx="365" cy="914" r="10" fill="#A78BFA"/>
+    <text x="398" y="927" fill="#A78BFA">META</text>
+    <text x="535" y="927" fill="#8B949E">context • uncertainty • reflection • verification</text>
+
+    <rect x="315" y="980" width="1270" height="88" rx="18" fill="#161B22" stroke="#30363D" stroke-width="3"/>
+    <circle cx="365" cy="1024" r="10" fill="#FFD166"/>
+    <text x="398" y="1037" fill="#FFD166">EVIDENCE</text>
+    <text x="615" y="1037" fill="#8B949E">provenance • integrity • independently checkable claims</text>
+  </g>
+
+  <!-- Axioms -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="42" font-weight="700">
+    <text x="1770" y="650" fill="#F0F6FC">PATTERN <tspan fill="#A78BFA">≠</tspan> PROOF</text>
+    <text x="1770" y="725" fill="#F0F6FC">PROFILE <tspan fill="#A78BFA">≠</tspan> PERSON</text>
+    <text x="1770" y="800" fill="#F0F6FC">MODEL <tspan fill="#A78BFA">≠</tspan> MIND</text>
+    <text x="1770" y="875" fill="#F0F6FC">PREDICTION <tspan fill="#A78BFA">≠</tspan> DESTINY</text>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+    <rect x="1750" y="955" width="1170" height="108" rx="22" fill="#130D15" stroke="#FF4FA3" stroke-width="4"/>
+    <text x="1800" y="1023" font-size="45" font-weight="800" fill="#FF4FA3">HUMAN_AGENCY</text>
+    <text x="2190" y="1023" font-size="45" font-weight="800" fill="#A78BFA"> &gt; </text>
+    <text x="2270" y="1023" font-size="45" font-weight="800" fill="#35D0FF">MACHINE_AUTHORITY</text>
+  </g>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+    <text x="315" y="1280" font-size="39" font-weight="800" letter-spacing="6" fill="#F0F6FC">♃ JUPITER HUDSON // WISDOMLOVETHEPOET // JUPITER 8</text>
+    <text x="315" y="1340" font-size="29" font-weight="650" letter-spacing="5" fill="#8B949E">CODE • POETRY • PROVENANCE • COGNITIVE SOVEREIGNTY</text>
+  </g>
+
+  <path d="M315 1380H3525" stroke="url(#titleGradient)" stroke-width="4" opacity=".75"/>
+</svg>
