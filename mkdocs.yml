@@ -22,3 +22,6 @@ nav:
   - Independent review: EXTERNAL_REVIEW.md
   - Repository settings: REPOSITORY_SETTINGS.md
   - Roadmap: ROADMAP.md
+
+extra_css:
+  - stylesheets/cmb.css
