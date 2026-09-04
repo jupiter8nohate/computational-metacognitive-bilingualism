@@ -1,0 +1,154 @@
+{
+  "schema_version": "cmb.library.catalog.v1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "declared_originator": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "purpose": "Provide a shared index that humans can read and software can parse while preserving context, uncertainty, provenance boundaries, and human self-definition.",
+  "invariants": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "DIFFERENCE != DEFECT",
+    "CAPABILITY != AUTHORITY",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "interpretation_policy": {
+    "catalog_is_identity": false,
+    "classification_is_truth": false,
+    "uncertainty_is_allowed": true,
+    "human_self_definition_has_priority": true,
+    "provenance_note": "Integrity, signatures, timestamps, version history, and public evidence can strengthen provenance. No single field independently proves authorship, ownership, or legal enforceability."
+  },
+  "artifacts": [
+    {
+      "id": "cmb-core-manifesto",
+      "title": "Computational Metacognitive Bilingualism Manifesto",
+      "path": "MANIFESTO.md",
+      "format": "markdown",
+      "kind": "manifesto",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "human agency",
+        "machine authority",
+        "self-definition",
+        "classification limits"
+      ],
+      "declared_meaning": "Core statement of CMB human-sovereignty principles."
+    },
+    {
+      "id": "cmb-polyglot-firewall",
+      "title": "CMB Polyglot Firewall Specification",
+      "path": "CMB_Polyglot_Firewall_Specification.md",
+      "format": "markdown",
+      "kind": "technical-philosophical specification",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "polyglot semantics",
+        "invariants",
+        "provenance",
+        "human sovereignty"
+      ],
+      "declared_meaning": "Cross-language expression of CMB invariants; firewall language is conceptual unless backed by deployed enforcement."
+    },
+    {
+      "id": "cmb-dna-attention",
+      "title": "Demon's Need Attention — D.N.A.",
+      "path": "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+      "format": "markdown",
+      "kind": "manifesto",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "attention economy",
+        "engagement",
+        "profiling",
+        "cognitive sovereignty"
+      ],
+      "declared_meaning": "CMB branch examining attention-extractive systems and the boundary between engagement and consent."
+    },
+    {
+      "id": "cmb-unclassifiable-index",
+      "title": "CMB // The Unclassifiable Index",
+      "path": "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
+      "format": "markdown",
+      "kind": "manifesto and library-design model",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "MissingNo Clause",
+        "Pokédex metaphor",
+        "perspective intelligence",
+        "uncertainty",
+        "context",
+        "provenance"
+      ],
+      "declared_meaning": "Defines a perspective-aware human/machine-readable library model in which schema failure triggers model revision rather than automatic human correction."
+    },
+    {
+      "id": "cmb-global-advocacy-charter",
+      "title": "CMB Global Advocacy Charter v1.0",
+      "path": "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
+      "format": "markdown",
+      "kind": "policy proposal",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "human appeal",
+        "data minimization",
+        "AI disclosure",
+        "cognitive freedom",
+        "provenance"
+      ],
+      "declared_meaning": "Translates CMB principles into institutional recommendations; it is not a claim that all recommendations are existing law."
+    },
+    {
+      "id": "cmb-library-catalog",
+      "title": "CMB Digital Library Catalog",
+      "path": "library/catalog.json",
+      "format": "json",
+      "kind": "machine-readable index",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "catalog",
+        "artifact discovery",
+        "provenance scope",
+        "interpretation boundaries"
+      ],
+      "declared_meaning": "Machine-indexable map of public CMB artifacts. The catalog describes works; it does not define people."
+    },
+    {
+      "id": "cmb-unburned-signal",
+      "title": "CMB // The Unburned Signal Protocol",
+      "path": "manifestos/cmb-unburned-signal/MANIFESTO.md",
+      "format": "markdown",
+      "kind": "artistic manifesto",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "memory",
+        "filtering",
+        "authorship",
+        "cryptographic history",
+        "unburned signal"
+      ],
+      "declared_meaning": "Haunted-library artistic branch about preserving signal, source, context, and reconstructable history."
+    }
+  ]
+}
