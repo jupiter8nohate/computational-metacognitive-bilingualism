@@ -6,6 +6,11 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Hostile-input hardening for CMB-SDL Authority IR, including exact-field validation, strict boolean/type checks, canonical ordering, fixed invariant enforcement, and regression tests for recomputed-digest attacks.
+- CMB-CAP delegation signer continuity: v1 delegated credentials must retain the verified parent/root signing key until an explicit child-key delegation primitive exists.
+- CMB-CAP CLI verification before VC-shaped export, plus strict credential-shape/interoperability validation and hostile-path tests.
+- Content-addressed SRP evidence references: non-signature controls now require canonical `sha256:<64 lowercase hex>` references instead of arbitrary non-empty labels.
+- Full FGC origin-stamp verification covering creator claim, glyph token, semantic invariants, protocol, origin digest, lineage mode, content digest, and exact field set.
 - CMB-CAP-1 Capability Authorization Passport with Ed25519-signed self-contained authority credentials, offline verification, external key fingerprint pinning, expiry enforcement, parent-digest lineage, monotonic delegation validation, `cmb-cap` CLI, MCP verification without private-key transport, experimental A2A extension metadata, VC 2.0-shaped non-conformant projection, strict schema, and hostile-path tests.
 - CMB-SDL-1 Sovereign Delegation Language with a deterministic parser/compiler, `cmb.authority-ir.v1` schema, tamper-detecting SHA-256 IR digest, monotonic child-agent delegation checks, `cmb-sdl` CLI, MCP compilation tool, machine/agent discovery metadata, reference example, and fail-closed regression tests.
 - Experimental `cmb-edu` educational subsystem with a Dual-Brain Stream parser, strict `cmb.edu.v1` Metacognitive Context Envelope, deny-by-default privacy declarations, installed CLI, child-facing Flamingoglyph curriculum, runnable example, and parser/schema/CLI tests. Human-declared context remains explicitly distinct from machine inference.
@@ -22,6 +27,10 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Changed
 
+- The CMB Sovereignty Gate now feeds pull-request scan reports into `cmbc gate-report`; high-friction findings fail closed instead of being printed without enforcement.
+- Ed25519 key files are now created exclusively with restrictive creation modes and no overwrite window.
+- MCP, documentation, and C2PA workflow path filters now cover the source/schema dependencies they actually consume.
+- Security support documentation now tracks the 1.4.x development line while keeping v1.4.0 unreleased until tag gates succeed.
 - Cleaned duplicated roadmap and changelog sections created during the previous rapid platform upgrade.
 - Boundary compatibility is now defined by executable shared fixtures rather than prose similarity alone.
 
