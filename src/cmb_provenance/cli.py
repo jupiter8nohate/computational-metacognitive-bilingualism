@@ -139,13 +139,13 @@ def _run(args: argparse.Namespace) -> int:
             )
         elif result.ok:
             print(
-                f"VERIFIED {len(result.checked_paths)} file(s) — {result.manifest_sha256}"
+                f"VERIFIED {len(result.checked_paths)} file(s) ✦ {result.manifest_sha256}"
             )
         else:
             print("VERIFICATION FAILED", file=sys.stderr)
             for failure in result.failures:
                 target = f"{failure.path}: " if failure.path else ""
-                print(f"  {target}{failure.code} — {failure.message}", file=sys.stderr)
+                print(f"  {target}{failure.code} ✦ {failure.message}", file=sys.stderr)
         return 0 if result.ok else 1
 
     if args.command == "anchor":
@@ -159,12 +159,12 @@ def _run(args: argparse.Namespace) -> int:
             external_time_basis=args.external_time_basis,
             lock_timeout=args.lock_timeout,
         )
-        print(f"APPENDED #{record.sequence} — {record.record_sha256}")
+        print(f"APPENDED #{record.sequence} ✦ {record.record_sha256}")
         return 0
 
     if args.command == "ledger-verify":
         count, tip = verify_ledger(args.ledger, lock_timeout=args.lock_timeout)
-        print(f"LEDGER OK — {count} record(s), tip={tip or 'none'}")
+        print(f"LEDGER OK ✦ {count} record(s), tip={tip or 'none'}")
         return 0
 
     if args.command == "export-c2pa-payload":
