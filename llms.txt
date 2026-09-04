@@ -21,6 +21,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - Agent discovery: docs/AGENT_DISCOVERY_PROTOCOL.md
 - MCP adapter: docs/MCP_INTEGRATION.md
 - Machine catalog: library/catalog.json
+- HARMONI epistemic triage: manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md
 - Machine-only discovery index: machine/index.json
 - Canonical CMB-66 IR: machine/cmb-core.ir.json
 - CMB-66 target registry: machine/targets.json

@@ -446,6 +446,29 @@
         "machine discovery"
       ],
       "declared_meaning": "Schema contract for the canonical CMB-ADP-1 registry, including explicit trust-preserving distribution boundaries."
+    },
+    {
+      "id": "cmb-harmoni-perfect-play",
+      "title": "HARMONI // Perfect-Play Epistemics",
+      "path": "manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md",
+      "format": "markdown",
+      "kind": "code-art manifesto and epistemic triage model",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "perfect-play epistemics",
+        "epistemic triage",
+        "MissingNo Recovery gate",
+        "uncertainty",
+        "evidence-bounded claims",
+        "human judgment",
+        "machine computation",
+        "first principles",
+        "human agency"
+      ],
+      "declared_meaning": "Code-art architecture for routing patterns through questions, tests, and evidence while treating unknown or value-sensitive states as a reason to disclose uncertainty and defer consequential meaning to authorized humans."
     }
   ]
 }

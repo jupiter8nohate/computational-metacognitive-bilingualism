@@ -13,6 +13,7 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 | New to CMB | [CMB // The Sovereign Transmission](CMB_SOVEREIGN_TRANSMISSION.md) | Fast artistic entry into the thesis and visual language |
 | Want the core philosophy | [../MANIFESTO.md](../MANIFESTO.md) | Foundational human-agency statement |
 | Want the machine/library model | [CMB // The Unclassifiable Index](CMB_UNCLASSIFIABLE_INDEX.md) | MissingNo/Pokédex-inspired model for context, uncertainty, and provenance |
+| Want epistemic triage / perfect-play logic | [HARMONI // Perfect-Play Epistemics](HARMONI_PERFECT_PLAY_EPISTEMICS.md) | Human/machine/axiom triangle, MissingNo Recovery gate, and evidence-bounded claims |
 | Want CMB-Z13 | [CMB-Z13 Language Specification](CMB_Z13_LANGUAGE_SPEC.md) | Formal symbolic mapping and interpretation boundary |
 | Want attention-economy critique | [Demon's Need Attention](DEMONS_NEED_ATTENTION_DNA.md) | Attention, engagement, profiling, and consent |
 | Want literary allegory | [The Chicken Run Manifesto](DNA_CHICKEN_RUN_MANIFESTO.md) | Institutional and algorithmic confinement as story logic |
@@ -29,6 +30,9 @@ FOUNDATION
       │
       ├── LIBRARY / INDEX THEORY
       │   └── CMB_UNCLASSIFIABLE_INDEX.md
+      │
+      ├── EPISTEMIC TRIAGE
+      │   └── HARMONI_PERFECT_PLAY_EPISTEMICS.md
       │
       ├── SYMBOLIC COMPUTATION
       │   ├── CMB_Z13_MANIFESTO.md
