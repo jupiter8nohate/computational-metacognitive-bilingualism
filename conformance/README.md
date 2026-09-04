@@ -2,7 +2,7 @@
 
 This directory is the language-neutral semantic contract for CMB boundary implementations.
 
-`boundary.v1.cases.json` contains valid `cmb.boundary-event.v1` inputs and the expected policy outcome. Every supported implementation should run these exact cases.
+`boundary.v1.cases.json` contains valid `cmb.boundary-event.v1` inputs and the expected policy outcome. Every supported implementation should run these exact cases. The current consumers are the Python reference engine, TypeScript/Express adapter, Rust/Actix adapter, and Go adapter.
 
 ## Contract
 
