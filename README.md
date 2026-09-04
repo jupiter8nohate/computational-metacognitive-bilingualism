@@ -4,6 +4,7 @@
 [![C2PA round-trip](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml)
 [![CodeQL](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml)
 [![Polyglot conformance](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/polyglot-conformance.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/polyglot-conformance.yml)
+[![MCP compatibility](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/mcp-compatibility.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/mcp-compatibility.yml)
 [![Software license](https://img.shields.io/badge/software-Apache--2.0-blue.svg)](LICENSE)
 [![Creative content](https://img.shields.io/badge/creative%20content-rights%20reserved-purple.svg)](CONTENT_LICENSE.md)
 
@@ -65,7 +66,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Formal semantics:** [Chapter 31 - Formal CMB Semantics](docs/dissertation/31_FORMAL_SEMANTICS.md)
 - **Executable policy contract:** [CMB Policy Specification v1.0](spec/CMB-SPEC.md)
 - **Kids / classroom entry point:** [CMB-EDU Kids - Flamingoglyph Learning Layer](docs/CMB_EDU_KIDS.md)
-- **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
+- **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix + Go](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)
@@ -108,9 +109,12 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 See [Project structure](docs/PROJECT_STRUCTURE.md) and [Threat model](docs/THREAT_MODEL.md).
 
 
-## v1.3.1 Recovery release
+## v1.4.0 Interoperability release
 
-Version 1.3.1 turns the original standalone experiment into an installable package with strict schemas, explicit artifact coverage, whole-operation ledger locking, normalized UTC timestamps, safe CLI errors, and automated tests.
+Version 1.4.0 keeps the Recovery-hardened provenance core and adds a fourth
+conformance-tested boundary implementation in Go, curated LLM discovery entry
+points, an optional MCP 2026-07-28 adapter, normative CMB core/versioning
+documents, and explicit falsifiability criteria.
 
 ## Canonical CMB artifacts
 
@@ -366,7 +370,7 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the CMB Global Advocacy Charter v1.1.
 - [`library/README.md`](library/README.md) - human-readable entry point to the CMB digital library.
 - [`library/catalog.json`](library/catalog.json) - machine-indexable artifact catalog, sealed as part of the canonical public set.
-- [`src/cmb_provenance`](src/cmb_provenance) - the supported v1.3.1 package, stable sealing API, and C2PA-facing adapter.
+- [`src/cmb_provenance`](src/cmb_provenance) - the supported v1.4.0 package, stable sealing API, and C2PA-facing adapter.
 - [`src/cmb_edu`](src/cmb_edu) - experimental privacy-first CMB-EDU parser and installed CLI.
 - [`docs/CMB_EDU_KIDS.md`](docs/CMB_EDU_KIDS.md) - Flamingoglyph child/classroom learning curriculum.
 - [`schemas/cmb.edu.v1.schema.json`](schemas/cmb.edu.v1.schema.json) - strict CMB-EDU Metacognitive Context Envelope contract.
@@ -403,7 +407,7 @@ python3 -m build
 (cd adapters/go && go test ./...)
 ```
 
-CI runs the tests on Python 3.10–3.13. The canonical-receipt CI job independently seals and verifies the current canonical artifact set inside a Git worktree. Tagging `v1.3.1` activates the signed-release workflow, which builds the wheel and source distribution, seals the canonical public CMB artifact set, generates `SHA256SUMS`, signs the release artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
+CI runs the tests on Python 3.10–3.13. The canonical-receipt CI job independently seals and verifies the current canonical artifact set inside a Git worktree. Tagging `v1.4.0` activates the signed-release workflow, which builds the wheel and source distribution, seals the canonical public CMB artifact set, generates `SHA256SUMS`, signs the release artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
 
 ## Evidence standard
 
@@ -437,7 +441,7 @@ See [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER
 
 ## Registry gate
 
-The public registry is intentionally deferred until v1.3.1 passes CI and the signed release is published. A future registry should store signed receipts and independently checkable timestamp evidence-not unpublished creative works or unnecessary personal information.
+The public registry is intentionally deferred until v1.4.0 passes all release gates and the signed release is published. A future registry should store signed receipts and independently checkable timestamp evidence-not unpublished creative works or unnecessary personal information.
 
 ## Authorship and purpose
 
