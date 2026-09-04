@@ -31,3 +31,24 @@ assert envelope["privacy"]["profiling_permission"] is False
 
 The privacy fields are protocol declarations. An integrating application still
 has to implement actual access control, retention, consent, and enforcement.
+
+
+## FGC emoji example
+
+The same privacy-first envelope can be built from child-facing Flamingoglyph Code:
+
+```bash
+cmb-edu parse-fgc '🧠 CURIOUS + 🪐 LEARNING + ⚡ ASK WHY + 🛡️ NO_PROFILE + ⏳ EPHEMERAL'
+```
+
+Python:
+
+```python
+from cmb_edu import FGCEmojiParser
+
+payload = FGCEmojiParser().parse_stream(
+    "🧠 CURIOUS + 🪐 LEARNING + ⚡ ASK WHY + 🛡️ NO_PROFILE + ⏳ EPHEMERAL"
+)
+```
+
+Both the text parser and FGC parser emit the `cmb.edu.v1` envelope. The glyph syntax is a teaching surface, not a separate identity classifier.
