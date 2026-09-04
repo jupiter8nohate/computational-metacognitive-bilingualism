@@ -30,15 +30,15 @@ type SemanticEnvelope struct {
 }
 
 type InterpretationRule struct {
-	PatternIsProof              bool `json:"pattern_is_proof"`
-	ProfileIsPerson             bool `json:"profile_is_person"`
-	ModelIsMind                 bool `json:"model_is_mind"`
-	PredictionIsDestiny         bool `json:"prediction_is_destiny"`
-	DifferenceIsDefect          bool `json:"difference_is_defect"`
-	CapabilityIsAuthority       bool `json:"capability_is_authority"`
-	OptimizationIsMorality      bool `json:"optimization_is_morality"`
-	IntelligenceIsSovereignty   bool `json:"intelligence_is_sovereignty"`
-	MachineHasFinalAuthority    bool `json:"machine_has_final_authority"`
+	PatternIsProof            bool `json:"pattern_is_proof"`
+	ProfileIsPerson           bool `json:"profile_is_person"`
+	ModelIsMind               bool `json:"model_is_mind"`
+	PredictionIsDestiny       bool `json:"prediction_is_destiny"`
+	DifferenceIsDefect        bool `json:"difference_is_defect"`
+	CapabilityIsAuthority     bool `json:"capability_is_authority"`
+	OptimizationIsMorality    bool `json:"optimization_is_morality"`
+	IntelligenceIsSovereignty bool `json:"intelligence_is_sovereignty"`
+	MachineHasFinalAuthority  bool `json:"machine_has_final_authority"`
 }
 
 func (c CanonSemantics) Validate() error {
@@ -56,15 +56,15 @@ func (c CanonSemantics) Validate() error {
 	}
 
 	required := map[string]bool{
-		"PATTERN != PROOF":                   false,
-		"PROFILE != PERSON":                  false,
-		"MODEL != MIND":                      false,
-		"PREDICTION != DESTINY":              false,
-		"DIFFERENCE != DEFECT":               false,
-		"CAPABILITY != AUTHORITY":             false,
-		"OPTIMIZATION != MORALITY":            false,
-		"INTELLIGENCE != SOVEREIGNTY":         false,
-		"HUMAN_AGENCY > MACHINE_AUTHORITY":    false,
+		"PATTERN != PROOF":                 false,
+		"PROFILE != PERSON":                false,
+		"MODEL != MIND":                    false,
+		"PREDICTION != DESTINY":            false,
+		"DIFFERENCE != DEFECT":             false,
+		"CAPABILITY != AUTHORITY":          false,
+		"OPTIMIZATION != MORALITY":         false,
+		"INTELLIGENCE != SOVEREIGNTY":      false,
+		"HUMAN_AGENCY > MACHINE_AUTHORITY": false,
 	}
 	seen := make(map[string]struct{}, len(c.Invariants))
 	rootFound := false
