@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMB Interactive Playground</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090b10;
+      --panel: #111620;
+      --text: #edf2f7;
+      --muted: #a9b4c2;
+      --line: #2b3442;
+      --accent: #f3b6ff;
+      --good: #9ef0c2;
+      --bad: #ffb2b2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: radial-gradient(circle at top, #1a1020 0, var(--bg) 38rem);
+      color: var(--text);
+    }
+    main { width: min(1180px, 94vw); margin: 0 auto; padding: 3rem 0 5rem; }
+    h1 { font-size: clamp(2rem, 6vw, 4.5rem); margin: 0; letter-spacing: .04em; }
+    h2 { margin-top: 0; }
+    p, li { line-height: 1.6; }
+    .muted { color: var(--muted); }
+    .axioms { white-space: pre-wrap; color: var(--accent); margin: 1.5rem 0 2rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .panel {
+      background: color-mix(in srgb, var(--panel) 94%, transparent);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.1rem;
+      box-shadow: 0 18px 60px rgba(0,0,0,.24);
+    }
+    textarea {
+      width: 100%;
+      min-height: 130px;
+      resize: vertical;
+      background: #080b10;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem;
+      font: inherit;
+    }
+    button {
+      margin-top: .8rem;
+      border: 1px solid var(--line);
+      background: #1b2330;
+      color: var(--text);
+      border-radius: 9px;
+      padding: .72rem 1rem;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover { border-color: var(--accent); }
+    pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      background: #07090d;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 1rem;
+      min-height: 4rem;
+    }
+    .lens { border-left: 3px solid var(--accent); margin: .65rem 0; padding: .55rem .8rem; background: #0b0f16; }
+    .lens strong { display: inline-block; min-width: 8.5rem; }
+    .checks label { display: block; padding: .35rem 0; }
+    .allowed { color: var(--good); }
+    .rejected { color: var(--bad); }
+    .small { font-size: .9rem; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+<main>
+  <p class="muted">♃ CMB // HUMAN ↔ MACHINE LITERACY // LOCAL BROWSER TOOL</p>
+  <h1>Interactive Playground</h1>
+  <div class="axioms">PATTERN ≠ PROOF
+PROFILE ≠ PERSON
+MODEL ≠ MIND
+PREDICTION ≠ DESTINY
+CAPABILITY ≠ AUTHORITY
+HUMAN_AGENCY &gt; MACHINE_AUTHORITY</div>
+
+  <div class="panel">
+    <h2>1. Human source</h2>
+    <p class="muted">Write a statement. Nothing on this page is sent to a server.</p>
+    <textarea id="source">I am more than my profile.</textarea>
+    <button id="run">Project statement</button>
+  </div>
+
+  <div class="grid" style="margin-top:1rem">
+    <section class="panel">
+      <h2>2. Integrity view</h2>
+      <p class="small muted">SHA-256 identifies these exact bytes. HASH ≠ AUTHORSHIP.</p>
+      <pre id="hash">Run the projection.</pre>
+    </section>
+
+    <section class="panel">
+      <h2>3. Machine declaration</h2>
+      <p class="small muted">A structured description of the artifact, not a definition of the author.</p>
+      <pre id="json">Run the projection.</pre>
+    </section>
+  </div>
+
+  <section class="panel" style="margin-top:1rem">
+    <h2>4. CMB-Z13 symbolic lenses</h2>
+    <p class="muted">These are symbolic reasoning projections, not source-code transpilation.</p>
+    <div id="lenses"></div>
+  </section>
+
+  <section class="panel" style="margin-top:1rem">
+    <h2>5. Explicit policy boundary</h2>
+    <p class="muted">The engine evaluates declared facts. It does not infer identity or intent from the sentence above.</p>
+    <div class="checks">
+      <label><input id="aiInvolved" type="checkbox"> AI is involved</label>
+      <label><input id="aiDisclosed" type="checkbox"> AI involvement is disclosed</label>
+      <label><input id="consequential" type="checkbox"> Decision is consequential</label>
+      <label><input id="humanReview" type="checkbox"> Human review is available</label>
+      <label><input id="profilePerson" type="checkbox"> Workflow treats a profile as the person</label>
+      <label><input id="predictionDestiny" type="checkbox"> Workflow treats a prediction as destiny</label>
+      <label><input id="consentRequired" type="checkbox"> Consent is required</label>
+      <label><input id="consentPresent" type="checkbox"> Required consent is present</label>
+    </div>
+    <button id="evaluate">Evaluate boundary</button>
+    <pre id="boundary">No evaluation yet.</pre>
+  </section>
+
+  <section class="panel small muted" style="margin-top:1rem">
+    <strong>Interpretation boundary:</strong> this playground demonstrates structured language, local hashing, and explicit policy checks.
+    It does not prove ownership, detect a person's inner state, provide legal advice, or make copying impossible.
+  </section>
+</main>
+
+<script>
+"use strict";
+
+const lenses = [
+  ["♑","Capricorn","C","FOUNDATION","BUILD"],
+  ["♒","Aquarius","Rust","FUTURE","INNOVATE"],
+  ["♓","Pisces","Haskell","MEANING","ABSTRACT"],
+  ["♈","Aries","C++","ACTION","INITIATE"],
+  ["♉","Taurus","Java","STABILITY","PRESERVE"],
+  ["♊","Gemini","TypeScript","BILINGUALISM","TRANSLATE"],
+  ["♋","Cancer","Python","CONTEXT","HUMANIZE"],
+  ["♌","Leo","Swift","EXPRESSION","AUTHOR"],
+  ["♍","Virgo","Go","PRECISION","VERIFY"],
+  ["♎","Libra","Kotlin","BALANCE","MEDIATE"],
+  ["♏","Scorpio","Prolog","INFERENCE","INVESTIGATE"],
+  ["⛎","Ophiuchus","Common Lisp","METACOGNITION","REWRITE"],
+  ["♐","Sagittarius","Julia","EXPLORATION","DISCOVER"]
+];
+
+function escapeText(value) {
+  return value.replace(/[&<>"']/g, char => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+  })[char]);
+}
+
+async function sha256Hex(text) {
+  const bytes = new TextEncoder().encode(text);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
+}
+
+async function project() {
+  const source = document.getElementById("source").value;
+  const hash = await sha256Hex(source);
+  document.getElementById("hash").textContent = hash;
+
+  const declaration = {
+    schema_version: "cmb.playground.artifact.v1",
+    human_source: source,
+    sha256: hash,
+    interpretation: {
+      profile_is_person: false,
+      model_is_mind: false,
+      prediction_is_destiny: false,
+      human_authority: "HUMAN_FINAL"
+    },
+    note: "Structured declaration describes this artifact; it does not define a person."
+  };
+  document.getElementById("json").textContent = JSON.stringify(declaration, null, 2);
+
+  document.getElementById("lenses").innerHTML = lenses.map(([glyph, sign, language, operator, fn]) => {
+    const transmission = `${glyph}::${language.toUpperCase().replace(/\s+/g, "_")} -> ${fn}[${source}] => ${operator};`;
+    return `<div class="lens"><strong>${glyph} ${escapeText(sign)}</strong> ${escapeText(language)} // ${escapeText(operator)}<br><span class="muted">${escapeText(transmission)}</span></div>`;
+  }).join("");
+}
+
+function evaluateBoundary() {
+  const violations = [];
+  const checked = id => document.getElementById(id).checked;
+
+  if (checked("aiInvolved") && !checked("aiDisclosed")) {
+    violations.push(["AI_DISCLOSURE_REQUIRED", "CAPABILITY != AUTHORITY"]);
+  }
+  if (checked("consequential") && !checked("humanReview")) {
+    violations.push(["HUMAN_REVIEW_REQUIRED", "HUMAN_AGENCY > MACHINE_AUTHORITY"]);
+  }
+  if (checked("profilePerson")) {
+    violations.push(["PROFILE_IS_NOT_PERSON", "PROFILE != PERSON"]);
+  }
+  if (checked("predictionDestiny")) {
+    violations.push(["PREDICTION_IS_NOT_DESTINY", "PREDICTION != DESTINY"]);
+  }
+  if (checked("consentRequired") && !checked("consentPresent")) {
+    violations.push(["CONSENT_REQUIRED", "ATTENTION != CONSENT"]);
+  }
+
+  const allowed = violations.length === 0;
+  const result = {
+    allowed,
+    authority: "HUMAN_FINAL",
+    violations: violations.map(([code, invariant]) => ({code, invariant}))
+  };
+  const target = document.getElementById("boundary");
+  target.className = allowed ? "allowed" : "rejected";
+  target.textContent = JSON.stringify(result, null, 2);
+}
+
+document.getElementById("run").addEventListener("click", () => {
+  project().catch(error => {
+    document.getElementById("hash").textContent = `Error: ${error.message}`;
+  });
+});
+document.getElementById("evaluate").addEventListener("click", evaluateBoundary);
+project();
+</script>
+</body>
+</html>
