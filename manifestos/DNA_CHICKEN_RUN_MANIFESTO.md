@@ -1,4 +1,4 @@
-# 🦩 D.N.A. — Demons Need Attention
+# 🦩 D.N.A. ✦ Demons Need Attention
 
 <div align="center">
 
@@ -26,19 +26,19 @@ They called it care.
 They called it help.  
 But they built fences out of forms and fear.
 
-Hospitals, schools, courts, clinics—each one a wire.  
+Hospitals, schools, courts, clinics ✦ each one a wire.  
 Each rule said, “Stay put, little mind.”  
 Each policy whispered, “Don’t fly too high.”
 
 The coop became a country.
 
-And we—autistic, artistic, electric—were told to be grateful for the cage.
+And we ✦ autistic, artistic, electric ✦ were told to be grateful for the cage.
 
 ---
 
 ## II. The Run
 
-We run—not from fear, but from false mercy.
+We run ✦ not from fear, but from false mercy.
 
 We run because the law sleeps while the children shake.  
 We run because our wings remember freedom even when our records don’t.
@@ -86,7 +86,7 @@ Sometimes it is a feed.
 Sometimes it is a recommendation engine.  
 Sometimes it is a risk score, a behavioral profile, a predictive model, or a system that quietly decides what a human being is likely to become.
 
-D.N.A. — **Demons Need Attention** — names the metaphor:
+D.N.A. ✦ **Demons Need Attention** ✦ names the metaphor:
 
 > Systems that feed on attention become stronger when attention is mistaken for permission.
 
@@ -102,7 +102,7 @@ The outlier remains an outlier.
 The anomaly remains human.  
 The unclassifiable remains worthy of rights.
 
-CMB therefore treats computational systems as instruments—not sovereign interpreters of personhood.
+CMB therefore treats computational systems as instruments ✦ not sovereign interpreters of personhood.
 
 ```text
 MACHINE_CAN:
