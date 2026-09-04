@@ -90,3 +90,13 @@ cmb_compile_core
 - Installed compiler: cmb-sdl
 - Core rule: DELEGATED_AUTHORITY <= RECEIVED_AUTHORITY
 - Interpretation boundary: declared authority is not identity proof, legal permission, or enforcement by itself.
+
+## Signed authority credentials
+- CMB-CAP-1: spec/CMB-CAP-1.md
+- Credential schema: schemas/cmb.capability-credential.v1.schema.json
+- Local signer / verifier: cmb-cap
+- MCP verification tool: cmb_verify_capability
+- A2A extension declaration: extensions/cmb-cap/agent-extension.json
+- Private signing keys are local-only and must not be transported through agent prompts or MCP tools.
+- Embedded public keys support signature verification; trusted issuer identity requires an external key pin or trust mechanism.
+- W3C VC export is a VC 2.0-shaped projection only, not a W3C Data Integrity proof.
