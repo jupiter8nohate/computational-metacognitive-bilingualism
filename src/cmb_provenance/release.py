@@ -24,6 +24,9 @@ CANONICAL_PUBLIC_ARTIFACTS: tuple[str, ...] = (
     "agents/agent-card.json",
     "docs/AGENT_DISCOVERY_PROTOCOL.md",
     "schemas/cmb.agent-registry.v1.schema.json",
+    "CANON.md",
+    "library/canon.json",
+    "schemas/cmb.canon.v1.schema.json",
 )
 
 
