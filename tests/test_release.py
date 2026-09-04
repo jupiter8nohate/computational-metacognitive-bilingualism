@@ -31,11 +31,12 @@ def test_release_checksums_require_artifacts(tmp_path: Path) -> None:
         build_checksums(tmp_path, tmp_path / "SHA256SUMS")
 
 
-def test_canonical_public_artifact_set_is_exact_and_includes_dna() -> None:
+def test_canonical_public_artifact_set_is_exact() -> None:
     assert CANONICAL_PUBLIC_ARTIFACTS == (
         "MANIFESTO.md",
         "CMB_Polyglot_Firewall_Specification.md",
         "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+        "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
     )
 
 
@@ -69,12 +70,16 @@ def test_ci_generates_and_verifies_canonical_receipt() -> None:
     assert "--print-json" in workflow
 
 
-def test_checked_in_bootstrap_receipt_covers_dna() -> None:
+def test_legacy_bootstrap_receipt_remains_valid_history() -> None:
     repository_root = Path(__file__).resolve().parents[1]
     receipt = load_receipt(
         repository_root / "receipts" / "canonical-5139aa72.cmb-receipt.json"
     )
 
-    assert receipt.coverage.paths == tuple(sorted(CANONICAL_PUBLIC_ARTIFACTS))
+    assert receipt.coverage.paths == (
+        "CMB_Polyglot_Firewall_Specification.md",
+        "MANIFESTO.md",
+        "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+    )
     assert receipt.coverage.excludes_unlisted is True
     assert "manifestos/DEMONS_NEED_ATTENTION_DNA.md" in receipt.coverage.paths
