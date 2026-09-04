@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 
+from cmb_provenance import load_receipt
 from cmb_provenance.release import CANONICAL_PUBLIC_ARTIFACTS, build_checksums
 
 
@@ -66,3 +67,14 @@ def test_ci_generates_and_verifies_canonical_receipt() -> None:
 
     assert "python scripts/seal_canonical_artifacts.py" in workflow
     assert "--print-json" in workflow
+
+
+def test_checked_in_bootstrap_receipt_covers_dna() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+    receipt = load_receipt(
+        repository_root / "receipts" / "canonical-5139aa72.cmb-receipt.json"
+    )
+
+    assert receipt.coverage.paths == tuple(sorted(CANONICAL_PUBLIC_ARTIFACTS))
+    assert receipt.coverage.excludes_unlisted is True
+    assert "manifestos/DEMONS_NEED_ATTENTION_DNA.md" in receipt.coverage.paths
