@@ -66,10 +66,10 @@ type librarySemanticEnvelope struct {
 }
 
 type librarySource struct {
-	RepositoryPath  string `json:"repository_path"`
-	SHA256           string `json:"sha256"`
-	Format           string `json:"format"`
-	ProvenanceScope  string `json:"provenance_scope"`
+	RepositoryPath string `json:"repository_path"`
+	SHA256          string `json:"sha256"`
+	Format          string `json:"format"`
+	ProvenanceScope string `json:"provenance_scope"`
 }
 
 type creativeWorkLD struct {
