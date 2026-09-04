@@ -53,3 +53,15 @@ ARTIFACT_STATUS != HUMAN_IDENTITY
 ```
 
 Moving a claim between maturity layers requires an explicit change, evidence, and versioning.
+
+
+## Platform layer additions
+
+- `src/cmb_provenance/boundary.py` - explicit policy-boundary evaluator with deterministic machine-readable rejection codes.
+- `schemas/cmb.boundary-event.v1.schema.json` - cross-language event contract for boundary adapters.
+- `schemas/cmb.library.catalog.v1.schema.json` - strict validation contract for the digital-library catalog.
+- `docs/playground/index.html` - zero-dependency interactive browser front door.
+- `manifestos/README.md` - human-readable map of the manifesto corpus.
+- `examples/06_fastapi_boundary` - reference integration using server-supplied policy facts.
+
+These components intentionally separate symbolic meaning from executable enforcement.
