@@ -135,6 +135,32 @@ func BuildCanonLibrary(input CanonLibraryInput) (map[string][]byte, LibraryIndex
 	if len(input.CanonBytes) == 0 || len(input.CatalogBytes) == 0 {
 		return nil, LibraryIndex{}, fmt.Errorf("exact canon and catalog bytes are required")
 	}
+	if got := SHA256Bytes(input.CanonBytes); got != input.Canon.SHA256 {
+		return nil, LibraryIndex{}, fmt.Errorf(
+			"canon byte digest mismatch: declared %s but exact bytes are %s",
+			input.Canon.SHA256,
+			got,
+		)
+	}
+	if got := SHA256Bytes(input.CatalogBytes); got != input.CatalogSHA256 {
+		return nil, LibraryIndex{}, fmt.Errorf(
+			"catalog byte digest mismatch: declared %s but exact bytes are %s",
+			input.CatalogSHA256,
+			got,
+		)
+	}
+	canonInvariants := make(map[string]struct{}, len(input.Canon.Invariants))
+	for _, invariant := range input.Canon.Invariants {
+		canonInvariants[invariant] = struct{}{}
+	}
+	for _, invariant := range input.Catalog.Invariants {
+		if _, exists := canonInvariants[invariant]; !exists {
+			return nil, LibraryIndex{}, fmt.Errorf(
+				"catalog invariant is absent from canon: %s",
+				invariant,
+			)
+		}
+	}
 	base, err := NormalizeBaseURL(input.BaseURL)
 	if err != nil {
 		return nil, LibraryIndex{}, err
