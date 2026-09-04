@@ -219,8 +219,12 @@ W3C Verifiable Credentials Data Model 2.0 is a W3C Recommendation. The W3C
 credential family also defines Data Integrity and EdDSA cryptosuites.
 
 The reference implementation exports a **VC 2.0-shaped projection** for
-interchange experiments. It intentionally omits a W3C Data Integrity proof and
-marks itself:
+interchange experiments. The `cmb-cap export-vc` CLI first verifies the CMB-CAP
+credential (and any required parent/key pin supplied by the caller) and refuses
+projection when verification fails. The lower-level projection helper remains a
+data transformation primitive, so direct library callers are responsible for
+verifying before projection. The projection intentionally omits a W3C Data
+Integrity proof and marks itself:
 
 ```text
 VC_2_0_projection_only_not_W3C_Data_Integrity_proof
