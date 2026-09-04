@@ -740,14 +740,14 @@ def main(argv: list[str] | None = None) -> int:
                 print("No external evidence references recorded.")
             for anchor in anchors:
                 print(
-                    f"#{anchor.sequence} [{anchor.anchor_type}] {anchor.location} — "
+                    f"#{anchor.sequence} [{anchor.anchor_type}] {anchor.location} ✦ "
                     f"{anchor.description} ({anchor.verification_status})"
                 )
 
         elif args.command == "verify-ledger":
             anchors = load_anchor_ledger(args.store)
             tip = anchors[-1].record_sha256 if anchors else "none"
-            print(f"LEDGER OK — {len(anchors)} record(s), tip={tip}")
+            print(f"LEDGER OK ✦ {len(anchors)} record(s), tip={tip}")
 
         elif args.command == "selftest":
             print("Self-test passed.")
