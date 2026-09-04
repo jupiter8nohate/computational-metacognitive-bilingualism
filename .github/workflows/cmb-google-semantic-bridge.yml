@@ -4,14 +4,30 @@ on:
   push:
     paths:
       - "labs/cmb-google-semantic-bridge/**"
-      - "library/canon.json"
-      - "schemas/cmb.canon.v1.schema.json"
+      - "MANIFESTO.md"
+      - "CMB_Polyglot_Firewall_Specification.md"
+      - "CANON.md"
+      - "manifestos/**"
+      - "policy/**"
+      - "docs/**"
+      - "schemas/**"
+      - "library/**"
+      - "agents/**"
+      - "src/cmb_agents/**"
       - ".github/workflows/cmb-google-semantic-bridge.yml"
   pull_request:
     paths:
       - "labs/cmb-google-semantic-bridge/**"
-      - "library/canon.json"
-      - "schemas/cmb.canon.v1.schema.json"
+      - "MANIFESTO.md"
+      - "CMB_Polyglot_Firewall_Specification.md"
+      - "CANON.md"
+      - "manifestos/**"
+      - "policy/**"
+      - "docs/**"
+      - "schemas/**"
+      - "library/**"
+      - "agents/**"
+      - "src/cmb_agents/**"
       - ".github/workflows/cmb-google-semantic-bridge.yml"
 
 permissions:
@@ -80,3 +96,29 @@ jobs:
           test -s /tmp/cmb-gsb-site/manifest.json
           cmp ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md /tmp/cmb-gsb-site/source.md
           grep -q "CMB // The Sovereign Transmission" /tmp/cmb-gsb-site/index.html
+      - name: Publish full canon library
+        run: |
+          go run ./cmd/cmb-gsb publish-canon \
+            -root ../.. \
+            -canon ../../library/canon.json \
+            -catalog ../../library/catalog.json \
+            -out /tmp/cmb-canon-library \
+            -base-url https://example.org/cmb/
+      - name: Check full canon library
+        run: |
+          test -s /tmp/cmb-canon-library/index.html
+          test -s /tmp/cmb-canon-library/library-index.json
+          test -s /tmp/cmb-canon-library/collection.jsonld
+          test -s /tmp/cmb-canon-library/cmb-canon.json
+          test -s /tmp/cmb-canon-library/catalog.json
+          test -s /tmp/cmb-canon-library/manifest.json
+          test -s /tmp/cmb-canon-library/.well-known/agent-card.json
+          test -s /tmp/cmb-canon-library/agents/registry.json
+          test -s /tmp/cmb-canon-library/artifacts/cmb-core-manifesto/index.html
+          test -s /tmp/cmb-canon-library/artifacts/cmb-sovereign-transmission/index.html
+          cmp ../../library/canon.json /tmp/cmb-canon-library/cmb-canon.json
+          cmp ../../library/catalog.json /tmp/cmb-canon-library/catalog.json
+          cmp ../../agents/agent-card.json /tmp/cmb-canon-library/.well-known/agent-card.json
+          cmp ../../agents/registry.json /tmp/cmb-canon-library/agents/registry.json
+          cmp ../../MANIFESTO.md /tmp/cmb-canon-library/artifacts/cmb-core-manifesto/source.md
+          python -c 'import json; d=json.load(open("/tmp/cmb-canon-library/library-index.json")); assert len(d["artifacts"]) >= 20'
