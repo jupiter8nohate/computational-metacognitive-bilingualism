@@ -17,7 +17,9 @@ Case studies are evidence logs, not mythology. Each one should separate:
 1. [Case Study 001 — Google Generative Narrative Misclassification](2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md)
    - observed 2026-09-04;
    - concerns generative search, Reddit attribution, authorial intent, and profile-to-person overreach;
-   - preserves a SHA-256 fingerprint of the source screenshot without republishing the image.
+   - preserves a SHA-256 fingerprint of the source screenshot without republishing the image;
+   - [Machine-readable evidence record](2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json);
+   - schema: [`cmb.case-study.v1`](../../schemas/cmb.case-study.v1.schema.json).
 
 ## Case-study invariant
 
