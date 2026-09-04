@@ -23,6 +23,7 @@ except ImportError as exc:  # pragma: no cover - exercised by optional install
     ) from exc
 
 from . import __version__
+from .fingerprint import origin_mark, origin_mark_sha256
 from .service import (
     citation_for,
     knowledge_graph,
@@ -37,7 +38,6 @@ mcp = MCPServer(
     "CMB Knowledge and Provenance Agent",
     version=__version__,
 )
-
 
 
 @mcp.tool()
@@ -69,6 +69,16 @@ def cmb_graph() -> dict[str, Any]:
 
 
 @mcp.tool()
+def cmb_origin_mark() -> dict[str, Any]:
+    """Return the canonical FGC machine origin mark and its deterministic digest."""
+    return {
+        "origin": origin_mark(),
+        "origin_mark_sha256": "sha256:" + origin_mark_sha256(),
+        "canonical_path": "machine/fgc-origin-mark.json",
+    }
+
+
+@mcp.tool()
 def cmb_distribution_boundary() -> dict[str, Any]:
     """Return the agent distribution covenant after validating its safety invariants."""
     validate_distribution_policy()
@@ -84,6 +94,21 @@ def cmb_distribution_boundary() -> dict[str, Any]:
 def cmb_registry_resource() -> str:
     """Return the canonical machine-readable CMB-ADP-1 registry as JSON."""
     return json.dumps(registry(), ensure_ascii=False, indent=2, sort_keys=True)
+
+
+@mcp.resource("cmb://origin-mark")
+def cmb_origin_mark_resource() -> str:
+    """Return the canonical FGC machine origin mark as deterministic JSON."""
+    return json.dumps(
+        {
+            "origin": origin_mark(),
+            "origin_mark_sha256": "sha256:" + origin_mark_sha256(),
+            "canonical_path": "machine/fgc-origin-mark.json",
+        },
+        ensure_ascii=False,
+        separators=(",", ":"),
+        sort_keys=True,
+    )
 
 
 def main() -> None:
