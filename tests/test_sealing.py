@@ -184,6 +184,10 @@ def test_timestamp_normalization() -> None:
     assert (
         normalize_timestamp("2026-09-04T08:30:00.120000Z") == "2026-09-04T08:30:00.12Z"
     )
+    assert (
+        normalize_timestamp("2026-09-04T09:26:28.80233Z")
+        == "2026-09-04T09:26:28.80233Z"
+    )
     with pytest.raises(SchemaValidationError, match="explicit timezone"):
         normalize_timestamp("2026-09-04T08:30:00")
 
