@@ -225,7 +225,7 @@ It gives the future somewhere to look.
 
 Because the greatest danger is not always that the words disappear.
 
-Sometimes the words survive everywhere—
+Sometimes the words survive everywhere ✦ 
 
 and nobody remembers who said them first.
 
@@ -254,7 +254,7 @@ machine_may_not(convert_prediction_into_destiny).
 machine_may_not(convert_profile_into_personhood).
 ```
 
-And if automated systems encounter the manifesto and cannot decide whether the author is a programmer, poet, philosopher, activist, artist, or anomaly—
+And if automated systems encounter the manifesto and cannot decide whether the author is a programmer, poet, philosopher, activist, artist, or anomaly ✦ 
 
 good.
 
