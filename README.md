@@ -3,6 +3,7 @@
 [![CI](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/ci.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/ci.yml)
 [![C2PA round-trip](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml)
 [![CodeQL](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml)
+[![Polyglot conformance](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/polyglot-conformance.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/polyglot-conformance.yml)
 [![Software license](https://img.shields.io/badge/software-Apache--2.0-blue.svg)](LICENSE)
 [![Creative content](https://img.shields.io/badge/creative%20content-rights%20reserved-purple.svg)](CONTENT_LICENSE.md)
 
@@ -81,6 +82,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 You should not need the entire CMB universe to understand the thesis.
 
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
+- **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
+- **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
@@ -109,6 +112,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 |---|---|---|
 | `cmb_provenance` | **Stable engineering** | artifact integrity, receipts, Recovery, C2PA-facing interoperability |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
+| Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, and Rust/Actix share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
 
