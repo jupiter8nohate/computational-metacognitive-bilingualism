@@ -204,7 +204,7 @@ pub fn require_boundary(
 }
 
 pub async fn boundary_handler(payload: web::Json<BoundaryEvent>) -> HttpResponse {
-    match evaluate_boundary(payload.as_ref()) {
+    match evaluate_boundary(&payload) {
         Ok(decision) if decision.allowed() => HttpResponse::Ok().json(decision),
         Ok(decision) => HttpResponse::UnprocessableEntity().json(decision),
         Err(error) => HttpResponse::BadRequest().json(serde_json::json!({
