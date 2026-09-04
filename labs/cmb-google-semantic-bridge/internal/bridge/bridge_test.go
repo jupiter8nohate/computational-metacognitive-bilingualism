@@ -386,7 +386,6 @@ func TestSiteCSSPreservesAccessibilityModes(t *testing.T) {
 	}
 }
 
-
 func TestCMBSemanticJSONBindsCanonDigest(t *testing.T) {
 	data, err := CMBSemanticJSON(validArtifact(t), validCanonSemantics())
 	if err != nil {
