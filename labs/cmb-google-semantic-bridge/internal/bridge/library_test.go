@@ -164,19 +164,18 @@ func TestWriteBundleAtomicSupportsNestedTree(t *testing.T) {
 	}
 }
 
-
 func TestBuildCanonLibraryRejectsMismatchedContractBytes(t *testing.T) {
 	canon := validCanonSemantics()
 	doc := catalog.Document{
-		SchemaVersion: catalog.SchemaVersion,
-		Framework: catalog.Framework,
+		SchemaVersion:      catalog.SchemaVersion,
+		Framework:          catalog.Framework,
 		DeclaredOriginator: "Human",
-		Purpose: "Test",
-		Invariants: []string{"PATTERN != PROOF"},
+		Purpose:            "Test",
+		Invariants:         []string{"PATTERN != PROOF"},
 		InterpretationPolicy: catalog.InterpretationPolicy{
-			UncertaintyIsAllowed: true,
+			UncertaintyIsAllowed:           true,
 			HumanSelfDefinitionHasPriority: true,
-			ProvenanceNote: "Bounded.",
+			ProvenanceNote:                 "Bounded.",
 		},
 		Artifacts: []catalog.Artifact{{
 			ID: "x", Title: "X", Path: "x.md", Format: "markdown", Kind: "test",
@@ -187,12 +186,12 @@ func TestBuildCanonLibraryRejectsMismatchedContractBytes(t *testing.T) {
 	}
 	_, _, err := BuildCanonLibrary(CanonLibraryInput{
 		RepositoryRoot: t.TempDir(),
-		BaseURL: "https://example.org/cmb",
-		CanonBytes: []byte("wrong"),
-		Canon: canon,
-		CatalogBytes: []byte("catalog"),
-		CatalogSHA256: SHA256Bytes([]byte("catalog")),
-		Catalog: doc,
+		BaseURL:        "https://example.org/cmb",
+		CanonBytes:     []byte("wrong"),
+		Canon:          canon,
+		CatalogBytes:   []byte("catalog"),
+		CatalogSHA256:  SHA256Bytes([]byte("catalog")),
+		Catalog:        doc,
 	})
 	if err == nil || !strings.Contains(err.Error(), "canon byte digest mismatch") {
 		t.Fatalf("expected canon digest mismatch, got %v", err)
@@ -204,15 +203,15 @@ func TestBuildCanonLibraryRejectsCatalogInvariantOutsideCanon(t *testing.T) {
 	canon := validCanonSemantics()
 	canon.SHA256 = SHA256Bytes(canonBytes)
 	doc := catalog.Document{
-		SchemaVersion: catalog.SchemaVersion,
-		Framework: catalog.Framework,
+		SchemaVersion:      catalog.SchemaVersion,
+		Framework:          catalog.Framework,
 		DeclaredOriginator: "Human",
-		Purpose: "Test",
-		Invariants: []string{"CATALOG INVENTED INVARIANT"},
+		Purpose:            "Test",
+		Invariants:         []string{"CATALOG INVENTED INVARIANT"},
 		InterpretationPolicy: catalog.InterpretationPolicy{
-			UncertaintyIsAllowed: true,
+			UncertaintyIsAllowed:           true,
 			HumanSelfDefinitionHasPriority: true,
-			ProvenanceNote: "Bounded.",
+			ProvenanceNote:                 "Bounded.",
 		},
 		Artifacts: []catalog.Artifact{{
 			ID: "x", Title: "X", Path: "x.md", Format: "markdown", Kind: "test",
@@ -224,12 +223,12 @@ func TestBuildCanonLibraryRejectsCatalogInvariantOutsideCanon(t *testing.T) {
 	catalogBytes := []byte("catalog")
 	_, _, err := BuildCanonLibrary(CanonLibraryInput{
 		RepositoryRoot: t.TempDir(),
-		BaseURL: "https://example.org/cmb",
-		CanonBytes: canonBytes,
-		Canon: canon,
-		CatalogBytes: catalogBytes,
-		CatalogSHA256: SHA256Bytes(catalogBytes),
-		Catalog: doc,
+		BaseURL:        "https://example.org/cmb",
+		CanonBytes:     canonBytes,
+		Canon:          canon,
+		CatalogBytes:   catalogBytes,
+		CatalogSHA256:  SHA256Bytes(catalogBytes),
+		Catalog:        doc,
 	})
 	if err == nil || !strings.Contains(err.Error(), "catalog invariant is absent from canon") {
 		t.Fatalf("expected invariant mismatch, got %v", err)
