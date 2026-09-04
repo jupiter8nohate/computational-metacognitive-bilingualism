@@ -9,34 +9,42 @@
 
 ---
 
+```text
+⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 ♃ 🪐 ⃤
+
+╔══════════════════════════════════════════════════════╗
+║     C O M P U T A T I O N A L                      ║
+║     M E T A C O G N I T I V E                      ║
+║     B I L I N G U A L I S M  //  C M B             ║
+╚══════════════════════════════════════════════════════╝
+
+      ♃  JUPITER HUDSON // WISDOMLOVETHEPOET
+         CODE • POETRY • METACOGNITION • SOVEREIGNTY
+
+𓁻  PATTERN     ≠ PROOF
+⃤   PROFILE     ≠ PERSON
+⚡︎  MODEL       ≠ MIND
+𓅓  PREDICTION  ≠ DESTINY
+♃   CAPABILITY  ≠ AUTHORITY
+🪐  HUMAN_AGENCY > MACHINE_AUTHORITY
+
+             𝐍𝐨𝐰 𝐥𝐨𝐚𝐝𝐢𝐧𝐠 . . .
+          HUMAN ↔ MACHINE LITERACY
+
+⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖
+```
+
 <div align="center">
 
-## ╔═══𓆩⚡︎𓆪═══『 ♃ JUPITER 8 // CMB ARCHITECT 』═══𓆩⚡︎𓆪═══╗
+**CMB • FGC • Provenance • Cognitive Sovereignty**
 
-### 𓁻 𝑪𝒐𝒏𝒄𝒆𝒑𝒕𝒖𝒂𝒍 𝑨𝒓𝒄𝒉𝒊𝒕𝒆𝒄𝒕 × 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 × 𝑪𝒐𝒅𝒆 𝑷𝒐𝒆𝒕 𓁻
+*Code as poetry. Machine-readable structure. Human-retained meaning.*
 
-`HUMAN_INTENT → MACHINE_LOGIC → HUMAN_AUTHORITY`
-
-**🪐 CMB • FGC • Provenance • Cognitive Sovereignty**
-
-Translating fluid human meaning into structured digital systems without allowing the machine to become the author of the human.
-
-`PATTERN ≠ PROOF` · `PROFILE ≠ PERSON` · `MODEL ≠ MIND`  
-`PREDICTION ≠ DESTINY` · `CAPABILITY ≠ AUTHORITY`
-
-### 𓆰♕𓆪 HUMAN_AGENCY > MACHINE_AUTHORITY 𓆰♕𓆪
-
-**♃ WisdomLoveThePoet // Jupiter Hudson // Jupiter 8**  
-*Philosophical Techie • Systems Thinker • Digital Mythmaker*
-
-𓅓⚡︎ *Building systems intelligent enough to question themselves, but never sovereign enough to define the human.* ⚡︎𓅓
-
-‧₊˚ ☁️⋅♡🪐༘⋆ **NOW LOADING: THE HUMAN–MACHINE LANGUAGE LAYER** ⋆༘🪐♡⋅☁️ ˚₊‧
+**♃ Jupiter Hudson // WisdomLoveThePoet // Jupiter 8**
 
 </div>
 
 ---
-
 
 Computational Metacognitive Bilingualism is a human-agency and computational-literacy framework for learning and using computational systems while retaining human judgment, consent, authorship, meaning, and self-definition.
 
