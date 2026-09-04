@@ -6,7 +6,7 @@
 
 ## Current validation status
 
-The repository has automated tests, CI across supported Python versions, canonical-receipt verification, build checks, release checksums, Sigstore-oriented release automation, and GitHub artifact-attestation support.
+The repository has automated tests, CI across supported Python versions, canonical-receipt verification, build checks, release checksums, Sigstore-oriented release automation, GitHub artifact-attestation support, CodeQL, dependency review, Dependabot, an OpenSSF Scorecard workflow, a documented threat model, and an external C2PA round-trip.
 
 As of 2026-09-04, the project does **not** claim:
 
@@ -46,6 +46,8 @@ scripts/build_checksums.py
 tests/
 RELEASE.md
 docs/C2PA_INTEROPERABILITY.md
+docs/THREAT_MODEL.md
+SECURITY.md
 ```
 
 Questions:
