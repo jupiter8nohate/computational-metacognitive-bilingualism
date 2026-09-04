@@ -100,6 +100,7 @@ CAP_SIGNATURE_INVALID
 CAP_EXPECTED_KEY_MISMATCH
 CAP_PARENT_REQUIRED
 CAP_PARENT_DIGEST_MISMATCH
+CAP_DELEGATION_SIGNER_MISMATCH
 CAP_DELEGATION_INVALID
 ```
 
@@ -119,6 +120,20 @@ parent.evidence  subset_of child.evidence
 ```
 
 The root human issuer MUST remain the same in v1.
+
+Because CMB-SDL-1 does not yet carry an independently delegated child signing
+key, a v1 child credential MUST also be signed by the same verified Ed25519 root
+key as its parent. Merely copying the parent's issuer label or digest is not
+sufficient cryptographic delegation.
+
+~~~text
+SAME_ISSUER_LABEL != SAME_SIGNING_AUTHORITY
+PARENT_DIGEST != CHILD_KEY_AUTHORIZATION
+~~~
+
+A future version may allow a parent to explicitly bind a child key fingerprint
+inside signed authority. Until that exists, signer continuity is the fail-closed
+v1 rule.
 
 CMB-CAP-1 does not yet define autonomous agent key delegation or a complete
 multi-hop trust-chain format. Multi-hop verification should be performed from
