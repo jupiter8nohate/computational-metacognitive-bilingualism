@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Canon integration layer: human-readable `CANON.md`, strict `cmb.canon.v1` machine graph, executable `cmb-provenance canon` navigation, CMB-ADP-1 agent-discovery integration, linked/unlinked relationship semantics, schema validation, and tests that prevent dangling edges or false artifact-presence claims.
 - Experimental `cmb-edu` educational subsystem with a Dual-Brain Stream parser, strict `cmb.edu.v1` Metacognitive Context Envelope, deny-by-default privacy declarations, installed CLI, child-facing Flamingoglyph curriculum, runnable example, and parser/schema/CLI tests. Human-declared context remains explicitly distinct from machine inference.
 - Framework-agnostic CMB boundary policy evaluator with deterministic rejection codes and human-final authority.
 - Versioned `cmb.boundary-event.v1` JSON Schema for cross-language policy-event interoperability.

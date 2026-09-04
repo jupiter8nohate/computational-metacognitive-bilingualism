@@ -4,19 +4,33 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "manifestos/CMB_SOVEREIGN_TRANSMISSION.md"
       - "labs/cmb-google-semantic-bridge/**"
-      - ".github/workflows/cmb-google-semantic-pages.yml"
+      - "MANIFESTO.md"
+      - "CMB_Polyglot_Firewall_Specification.md"
+      - "CANON.md"
+      - "manifestos/**"
+      - "policy/**"
+      - "docs/**"
+      - "schemas/**"
+      - "library/**"
       - "agents/**"
       - "src/cmb_agents/**"
+      - ".github/workflows/cmb-google-semantic-pages.yml"
   pull_request:
     branches: ["main"]
     paths:
-      - "manifestos/CMB_SOVEREIGN_TRANSMISSION.md"
       - "labs/cmb-google-semantic-bridge/**"
-      - ".github/workflows/cmb-google-semantic-pages.yml"
+      - "MANIFESTO.md"
+      - "CMB_Polyglot_Firewall_Specification.md"
+      - "CANON.md"
+      - "manifestos/**"
+      - "policy/**"
+      - "docs/**"
+      - "schemas/**"
+      - "library/**"
       - "agents/**"
       - "src/cmb_agents/**"
+      - ".github/workflows/cmb-google-semantic-pages.yml"
   workflow_dispatch:
 
 concurrency:
@@ -28,7 +42,7 @@ permissions:
 
 jobs:
   build:
-    name: Build semantic publication
+    name: Build canon library publication
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -48,40 +62,52 @@ jobs:
       - name: Test publisher
         run: go test -race ./...
 
-      - name: Build Sovereign Transmission site
+      - name: Build CMB canon library
         run: |
           rm -rf /tmp/cmb-gsb-pages
-          go run ./cmd/cmb-gsb publish \
-            -in examples/sovereign-transmission.json \
-            -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md \
+          go run ./cmd/cmb-gsb publish-canon \
+            -root ../.. \
+            -canon ../../library/canon.json \
+            -catalog ../../library/catalog.json \
             -out /tmp/cmb-gsb-pages \
-            -url https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/ \
-            -site-base https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+            -base-url https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
           touch /tmp/cmb-gsb-pages/.nojekyll
-          mkdir -p /tmp/cmb-gsb-pages/.well-known /tmp/cmb-gsb-pages/agents
-          cp ../../agents/agent-card.json /tmp/cmb-gsb-pages/.well-known/agent-card.json
-          cp ../../agents/registry.json /tmp/cmb-gsb-pages/agents/registry.json
 
       - name: Verify deployment contract
         run: |
           test -s /tmp/cmb-gsb-pages/index.html
-          test -s /tmp/cmb-gsb-pages/article.jsonld
-          test -s /tmp/cmb-gsb-pages/cmb-semantic.json
+          test -s /tmp/cmb-gsb-pages/site.css
+          test -s /tmp/cmb-gsb-pages/library-index.json
+          test -s /tmp/cmb-gsb-pages/collection.jsonld
+          test -s /tmp/cmb-gsb-pages/cmb-canon.json
+          test -s /tmp/cmb-gsb-pages/catalog.json
           test -s /tmp/cmb-gsb-pages/sitemap.xml
           test -s /tmp/cmb-gsb-pages/robots.txt
           test -s /tmp/cmb-gsb-pages/manifest.json
           test -f /tmp/cmb-gsb-pages/.nojekyll
           test -s /tmp/cmb-gsb-pages/.well-known/agent-card.json
           test -s /tmp/cmb-gsb-pages/agents/registry.json
-          cmp ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md /tmp/cmb-gsb-pages/source.md
+          test -s /tmp/cmb-gsb-pages/artifacts/cmb-core-manifesto/index.html
+          test -s /tmp/cmb-gsb-pages/artifacts/cmb-core-manifesto/source.md
+          test -s /tmp/cmb-gsb-pages/artifacts/cmb-sovereign-transmission/index.html
+          test -s /tmp/cmb-gsb-pages/artifacts/cmb-sovereign-transmission/source.md
+          test -s /tmp/cmb-gsb-pages/artifacts/cmb-canon-graph/cmb-semantic.json
+          cmp ../../library/canon.json /tmp/cmb-gsb-pages/cmb-canon.json
+          cmp ../../library/catalog.json /tmp/cmb-gsb-pages/catalog.json
+          cmp ../../agents/agent-card.json /tmp/cmb-gsb-pages/.well-known/agent-card.json
+          cmp ../../agents/registry.json /tmp/cmb-gsb-pages/agents/registry.json
+          cmp ../../MANIFESTO.md /tmp/cmb-gsb-pages/artifacts/cmb-core-manifesto/source.md
+          cmp ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md /tmp/cmb-gsb-pages/artifacts/cmb-sovereign-transmission/source.md
           grep -Fq '<link rel="canonical" href="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/">' /tmp/cmb-gsb-pages/index.html
           grep -Fq '<loc>https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/</loc>' /tmp/cmb-gsb-pages/sitemap.xml
+          grep -Fq '<loc>https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/artifacts/cmb-core-manifesto/</loc>' /tmp/cmb-gsb-pages/sitemap.xml
           grep -Fq 'Sitemap: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/sitemap.xml' /tmp/cmb-gsb-pages/robots.txt
-          grep -Fq 'Provenance Ledger' /tmp/cmb-gsb-pages/index.html
-          grep -Fq 'Human ↔ Machine Boundary' /tmp/cmb-gsb-pages/index.html
-          grep -Fq 'Publication Surfaces' /tmp/cmb-gsb-pages/index.html
-          if grep -n '—' /tmp/cmb-gsb-pages/index.html /tmp/cmb-gsb-pages/site.css /tmp/cmb-gsb-pages/source.md; then
-            echo "Em dash regression detected in the public publication surface"
+          grep -Fq 'CMB Digital Library' /tmp/cmb-gsb-pages/index.html
+          grep -Fq 'Canonical Artifact Index' /tmp/cmb-gsb-pages/index.html
+          grep -Fq 'Machine Surfaces' /tmp/cmb-gsb-pages/index.html
+          python -c 'import json; d=json.load(open("/tmp/cmb-gsb-pages/library-index.json")); assert len(d["artifacts"]) >= 20; assert d["canonical_url"] == "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"'
+          if grep -n '—' /tmp/cmb-gsb-pages/index.html /tmp/cmb-gsb-pages/site.css; then
+            echo "Em dash regression detected in generated library shell"
             exit 1
           fi
 

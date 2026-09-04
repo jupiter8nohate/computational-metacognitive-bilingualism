@@ -9,6 +9,18 @@ import (
 	"testing"
 )
 
+func repoRootPath() string {
+	return filepath.Join("..", "..", "..", "..")
+}
+
+func repoCanonPath() string {
+	return filepath.Join(repoRootPath(), "library", "canon.json")
+}
+
+func repoCatalogPath() string {
+	return filepath.Join(repoRootPath(), "library", "catalog.json")
+}
+
 func TestPublishCommandBuildsCompleteDeterministicSite(t *testing.T) {
 	tmp := t.TempDir()
 	input := filepath.Join(tmp, "artifact.json")
@@ -54,6 +66,7 @@ func TestPublishCommandBuildsCompleteDeterministicSite(t *testing.T) {
 			"-in", input,
 			"-source", source,
 			"-out", output,
+			"-canon", repoCanonPath(),
 			"-url", "https://example.org/published/",
 		}, &stdout, &stderr)
 		if err != nil {
@@ -70,6 +83,7 @@ func TestPublishCommandBuildsCompleteDeterministicSite(t *testing.T) {
 		"source.md",
 		"article.jsonld",
 		"cmb-semantic.json",
+		"cmb-canon.json",
 		"head.html",
 		"sitemap.xml",
 		"robots.txt",
@@ -102,6 +116,30 @@ func TestPublishCommandBuildsCompleteDeterministicSite(t *testing.T) {
 	}
 	if !strings.Contains(indexText, "&lt;script&gt;not executable source&lt;/script&gt;") {
 		t.Fatal("escaped source is missing from page")
+	}
+
+	canonCopy, err := os.ReadFile(filepath.Join(first, "cmb-canon.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	canonSource, err := os.ReadFile(repoCanonPath())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(canonCopy, canonSource) {
+		t.Fatal("published canon copy differs from canonical input")
+	}
+
+	semanticData, err := os.ReadFile(filepath.Join(first, "cmb-semantic.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var semantic map[string]any
+	if err := json.Unmarshal(semanticData, &semantic); err != nil {
+		t.Fatal(err)
+	}
+	if semantic["schema_version"] != "cmb-gsb.semantic.v2" {
+		t.Fatalf("semantic schema = %v", semantic["schema_version"])
 	}
 
 	copiedSource, err := os.ReadFile(filepath.Join(first, "source.md"))
@@ -152,5 +190,89 @@ func TestPublishRejectsInsecureCanonicalOverride(t *testing.T) {
 	}
 	if !strings.Contains(err.Error(), "absolute https URL") {
 		t.Fatalf("unexpected error: %v", err)
+	}
+}
+
+func TestPublishCanonCommandBuildsWholeRepositoryLibrary(t *testing.T) {
+	output := filepath.Join(t.TempDir(), "library")
+	var stdout bytes.Buffer
+	var stderr bytes.Buffer
+
+	err := run([]string{
+		"publish-canon",
+		"-root", repoRootPath(),
+		"-canon", repoCanonPath(),
+		"-catalog", repoCatalogPath(),
+		"-out", output,
+		"-base-url", "https://example.org/cmb/",
+	}, &stdout, &stderr)
+	if err != nil {
+		t.Fatalf("publish-canon failed: %v stderr=%s", err, stderr.String())
+	}
+	if !strings.Contains(stdout.String(), "published-canon artifacts=") {
+		t.Fatalf("unexpected stdout: %s", stdout.String())
+	}
+
+	for _, name := range []string{
+		"index.html",
+		"site.css",
+		"library-index.json",
+		"collection.jsonld",
+		"cmb-canon.json",
+		"catalog.json",
+		"sitemap.xml",
+		"robots.txt",
+		"manifest.json",
+		".well-known/agent-card.json",
+		"agents/registry.json",
+		"artifacts/cmb-core-manifesto/index.html",
+		"artifacts/cmb-core-manifesto/source.md",
+		"artifacts/cmb-core-manifesto/work.jsonld",
+		"artifacts/cmb-core-manifesto/cmb-semantic.json",
+		"artifacts/cmb-sovereign-transmission/index.html",
+	} {
+		if _, err := os.Stat(filepath.Join(output, filepath.FromSlash(name))); err != nil {
+			t.Fatalf("missing %s: %v", name, err)
+		}
+	}
+
+	canonPublished, err := os.ReadFile(filepath.Join(output, "cmb-canon.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	canonSource, err := os.ReadFile(repoCanonPath())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(canonPublished, canonSource) {
+		t.Fatal("published canon differs from repository canon")
+	}
+
+	catalogPublished, err := os.ReadFile(filepath.Join(output, "catalog.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	catalogSource, err := os.ReadFile(repoCatalogPath())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !bytes.Equal(catalogPublished, catalogSource) {
+		t.Fatal("published catalog differs from repository catalog")
+	}
+
+	var index map[string]any
+	indexData, err := os.ReadFile(filepath.Join(output, "library-index.json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := json.Unmarshal(indexData, &index); err != nil {
+		t.Fatal(err)
+	}
+	if index["schema_version"] != "cmb-gsb.library-index.v1" {
+		t.Fatalf("library schema = %v", index["schema_version"])
+	}
+	artifacts, ok := index["artifacts"].([]any)
+	if !ok || len(artifacts) < 20 {
+		t.Fatalf("unexpected artifact count: %v", index["artifacts"])
 	}
 }

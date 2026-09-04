@@ -81,6 +81,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 You should not need the entire CMB universe to understand the thesis.
 
+- **Canon map for humans:** [CMB Canon](CANON.md)
+- **Canon graph for machines and agents:** [library/canon.json](library/canon.json)
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
 - **Conceptual front door:** [CMB: Three Dimensions of Distinction](docs/CMB_DISTINCTION.md)
 - **Research position:** [CMB Research Position](docs/CMB_RESEARCH_POSITION.md)
@@ -91,6 +93,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
+- **Whole-canon publication:** [CMB Google Semantic Bridge](labs/cmb-google-semantic-bridge/README.md)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
@@ -146,6 +149,8 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB-Z13™ Language Specification`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) - the formal symbolic notation mapping zodiac archetypes to C, Rust, Haskell, C++, Java, TypeScript, Python, Swift, Go, Kotlin, Prolog, Common Lisp, and Julia while preserving `HUMAN_AGENCY > MACHINE_AUTHORITY`.
 - [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) - the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
 - [`CMB Digital Library Catalog`](library/catalog.json) - the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
+- [`CMB Canon`](CANON.md) - the human-readable relationship map across philosophy, code, symbolism, narrative, education, agent discovery, and provenance.
+- [`CMB Canon Graph`](library/canon.json) - the machine-readable relationship graph, validated by [`cmb.canon.v1`](schemas/cmb.canon.v1.schema.json).
 - [`CMB Global Advocacy Charter v1.1`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
 - [`CMB-EDU Kids`](docs/CMB_EDU_KIDS.md) - the canonical child-facing Flamingoglyph computational-literacy curriculum.
 - [`CMB Metacognitive Context Envelope v1`](schemas/cmb.edu.v1.schema.json) - the canonical strict schema for declared context, sovereignty boundaries, and deny-by-default privacy declarations.
@@ -183,6 +188,32 @@ The Global Advocacy Charter is a **public policy proposal**, not a claim that ev
 Humans can browse [`library/README.md`](library/README.md). Software can parse [`library/catalog.json`](library/catalog.json). The catalog is intentionally descriptive rather than authoritative about people: `CATALOG != CREATOR`, `INDEX != IDENTITY`, and uncertainty is preserved as a valid state.
 
 The catalog is included in the canonical provenance scope so future signed releases can prove which exact index bytes accompanied the published artifact set.
+
+## Whole-canon static publication
+
+The experimental Go semantic bridge can compile the complete catalog-declared CMB corpus into one deterministic human + machine-readable library.
+
+```bash
+cd labs/cmb-google-semantic-bridge
+
+go run ./cmd/cmb-gsb publish-canon \
+  -root ../.. \
+  -canon ../../library/canon.json \
+  -catalog ../../library/catalog.json \
+  -out /tmp/cmb-canon-library \
+  -base-url https://example.org/cmb/
+```
+
+The output includes the library home page, `library-index.json`, Schema.org collection metadata, exact canon/catalog copies, agent discovery, a site-wide SHA-256 manifest, and one source-bound page per publishable catalog artifact under `artifacts/<id>/`.
+
+The compiler verifies the exact canon and catalog digests, requires catalog invariants to exist in the canon, contains source reads inside the repository root, and preserves each catalog status instead of silently promoting it.
+
+```text
+CATALOG != IDENTITY
+SOURCE_HASH != AUTHORSHIP
+DISCOVERABILITY != OWNERSHIP
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
 
 ## Agent discovery
 
@@ -281,6 +312,9 @@ cmb-provenance seal \
   agents/agent-card.json \
   docs/AGENT_DISCOVERY_PROTOCOL.md \
   schemas/cmb.agent-registry.v1.schema.json \
+  CANON.md \
+  library/canon.json \
+  schemas/cmb.canon.v1.schema.json \
   --output cmb-source.cmb-receipt.json
 ```
 
@@ -304,6 +338,9 @@ cmb-provenance verify \
   agents/agent-card.json \
   docs/AGENT_DISCOVERY_PROTOCOL.md \
   schemas/cmb.agent-registry.v1.schema.json \
+  CANON.md \
+  library/canon.json \
+  schemas/cmb.canon.v1.schema.json \
   --receipt cmb-source.cmb-receipt.json \
   --check-git-commit
 ```
@@ -383,6 +420,9 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the CMB Global Advocacy Charter v1.1.
 - [`library/README.md`](library/README.md) - human-readable entry point to the CMB digital library.
 - [`library/catalog.json`](library/catalog.json) - machine-indexable artifact catalog, sealed as part of the canonical public set.
+- [`CANON.md`](CANON.md) - human-readable canonical relationship map built around "verify, don't just believe."
+- [`library/canon.json`](library/canon.json) - machine-readable canon graph with explicit linked and unlinked nodes.
+- [`schemas/cmb.canon.v1.schema.json`](schemas/cmb.canon.v1.schema.json) - strict canon graph schema.
 - [`src/cmb_provenance`](src/cmb_provenance) - the supported v1.3.1 package, stable sealing API, and C2PA-facing adapter.
 - [`src/cmb_edu`](src/cmb_edu) - experimental privacy-first CMB-EDU parser and installed CLI.
 - [`docs/CMB_EDU_KIDS.md`](docs/CMB_EDU_KIDS.md) - Flamingoglyph child/classroom learning curriculum.

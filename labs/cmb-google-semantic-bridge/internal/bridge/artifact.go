@@ -86,21 +86,37 @@ func (a Artifact) Validate() error {
 	if a.Provenance.SHA256 != "" && !validSHA256(a.Provenance.SHA256) {
 		return errors.New("provenance.sha256 must be 64 lowercase hexadecimal characters")
 	}
+	if a.Provenance.Repository != "" {
+		if err := validateHTTPSURL("provenance.repository", a.Provenance.Repository); err != nil {
+			return err
+		}
+	}
 	return nil
 }
 
-func validateHTTPSURL(field, raw string) error {
+func parseHTTPSURL(field, raw string) (*url.URL, error) {
+	if raw != strings.TrimSpace(raw) {
+		return nil, fmt.Errorf("%s must not contain surrounding whitespace", field)
+	}
 	parsed, err := url.Parse(raw)
 	if err != nil {
-		return fmt.Errorf("%s must be a valid URL: %w", field, err)
+		return nil, fmt.Errorf("%s must be a valid URL: %w", field, err)
 	}
-	if parsed.Scheme != "https" || parsed.Host == "" {
-		return fmt.Errorf("%s must be an absolute https URL", field)
+	if parsed.Scheme != "https" || parsed.Host == "" || parsed.Opaque != "" {
+		return nil, fmt.Errorf("%s must be an absolute https URL", field)
 	}
 	if parsed.User != nil {
-		return fmt.Errorf("%s must not contain userinfo", field)
+		return nil, fmt.Errorf("%s must not contain userinfo", field)
 	}
-	return nil
+	if parsed.Fragment != "" {
+		return nil, fmt.Errorf("%s must not contain a fragment", field)
+	}
+	return parsed, nil
+}
+
+func validateHTTPSURL(field, raw string) error {
+	_, err := parseHTTPSURL(field, raw)
+	return err
 }
 
 func validSHA256(value string) bool {

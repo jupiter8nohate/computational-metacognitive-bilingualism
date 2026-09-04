@@ -22,6 +22,13 @@ Version 1.3.1 uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `docs/CMB_EDU_KIDS.md`
    - `schemas/cmb.edu.v1.schema.json`
    - `library/catalog.json`
+   - `agents/registry.json`
+   - `agents/agent-card.json`
+   - `docs/AGENT_DISCOVERY_PROTOCOL.md`
+   - `schemas/cmb.agent-registry.v1.schema.json`
+   - `CANON.md`
+   - `library/canon.json`
+   - `schemas/cmb.canon.v1.schema.json`
 
 ## Publish
 
@@ -55,6 +62,13 @@ policy/CMB_GLOBAL_ADVOCACY_CHARTER.md
 docs/CMB_EDU_KIDS.md
 schemas/cmb.edu.v1.schema.json
 library/catalog.json
+agents/registry.json
+agents/agent-card.json
+docs/AGENT_DISCOVERY_PROTOCOL.md
+schemas/cmb.agent-registry.v1.schema.json
+CANON.md
+library/canon.json
+schemas/cmb.canon.v1.schema.json
 ```
 
 Because the receipt uses explicit-file-set coverage, adding a file to the repository does not silently add it to the provenance claim. New canonical artifacts must be deliberately added to `CANONICAL_PUBLIC_ARTIFACTS`, the tests, and this documentation.
@@ -94,3 +108,15 @@ The canonical receipt includes the CMB-EDU child-facing curriculum and its stric
 envelope schema. The receipt establishes integrity of those exact files; it does
 not turn declared privacy fields into external enforcement or a psychological
 assessment.
+
+## Agent and canon release checks
+
+The wheel also installs the CMB-ADP-1 agent-discovery CLI, and the repository carries the executable canon navigator. Before tagging:
+
+```bash
+cmb-agent --version
+cmb-agent selftest
+cmb-provenance canon --node agent-discovery
+```
+
+The agent layer is relevance-first. It does not authorize unsolicited mass distribution, impersonation, fake endorsements, or platform-rule bypass. The canon graph distinguishes linked repository artifacts from unlinked integration targets so discovery metadata cannot silently become an artifact-presence claim.

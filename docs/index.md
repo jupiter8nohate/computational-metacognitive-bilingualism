@@ -9,6 +9,12 @@ PREDICTION != DESTINY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
+## Verify, don't just believe
+
+Use the [CMB Canon](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CANON.md) for the human relationship map and [library/canon.json](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/library/canon.json) for the machine-readable graph.
+
+The catalog answers what artifacts exist. The canon graph answers how those artifacts relate.
+
 ## Choose a door
 
 ### I am a human / general reader
