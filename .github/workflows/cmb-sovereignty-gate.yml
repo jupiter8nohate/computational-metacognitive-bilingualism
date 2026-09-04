@@ -74,7 +74,7 @@ jobs:
 
           cat /tmp/cmb-gate-result.json
           if [ "${gate_status}" -ne 0 ]; then
-            latest_commit_message="$(git log -1 --pretty=%B)"
+            latest_commit_message="$(git log -1 --pretty=%B "${{ github.event.pull_request.head.sha }}")"
             if [ "${GITHUB_ACTOR}" = "${{ github.repository_owner }}" ] && \
                grep -q '^CMB-AUTHORIZED:' <<< "${latest_commit_message}"; then
               echo "CMB SRP-2 platform-owner governance override accepted."
