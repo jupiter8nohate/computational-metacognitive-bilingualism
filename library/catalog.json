@@ -575,6 +575,45 @@
         "falsifiability"
       ],
       "declared_meaning": "Documents a user-observed Google generative-search narrative, preserves the screenshot fingerprint, separates generated claims from verified evidence, and defines revision criteria without alleging malicious intent or system-wide behavior."
+    },
+    {
+      "id": "cmb-case-google-generative-misclassification-record-2026-09-04",
+      "title": "Case Study 001 - Structured Evidence Record",
+      "path": "research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json",
+      "format": "json",
+      "kind": "machine-readable research evidence record",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "AI misclassification",
+        "structured evidence",
+        "claim status",
+        "falsifiability",
+        "revision policy",
+        "SHA-256 evidence fingerprint"
+      ],
+      "declared_meaning": "Machine-readable companion to Case Study 001, validated against cmb.case-study.v1 and explicitly open to revision when stronger evidence appears."
+    },
+    {
+      "id": "cmb-case-study-schema",
+      "title": "CMB Research Case Study v1 Schema",
+      "path": "schemas/cmb.case-study.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable research schema",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "evidence boundaries",
+        "claim status",
+        "verification methods",
+        "revision criteria"
+      ],
+      "declared_meaning": "Validation contract for structured CMB case studies, separating observed evidence from inference and requiring explicit revision policy."
     }
   ]
 }
