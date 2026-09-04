@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Search and AI discovery layer with retrieval-oriented canonical concept pages, FAQ structured data, semantic glossary, Schema.org JSON-LD, crawler policy, machine discovery manifest, and a public knowledge graph.
 - Hostile-input hardening for CMB-SDL Authority IR, including exact-field validation, strict boolean/type checks, canonical ordering, fixed invariant enforcement, and regression tests for recomputed-digest attacks.
 - CMB-CAP delegation signer continuity: v1 delegated credentials must retain the verified parent/root signing key until an explicit child-key delegation primitive exists.
 - CMB-CAP CLI verification before VC-shaped export, plus strict credential-shape/interoperability validation and hostile-path tests.

@@ -1,3 +1,56 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb",
+      "@type": "CreativeWork",
+      "name": "Computational Metacognitive Bilingualism",
+      "alternateName": "CMB",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
+      "description": "Human-agency and computational-literacy framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.",
+      "creator": {
+        "@type": "Person",
+        "name": "Jupiter Hudson",
+        "alternateName": [
+          "WisdomLoveThePoet",
+          "Jupiter 8",
+          "Joseph Q Hudson"
+        ]
+      },
+      "sameAs": [
+        "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
+      ],
+      "keywords": [
+        "human agency",
+        "metacognition",
+        "digital rights",
+        "cognitive sovereignty",
+        "provenance",
+        "computational literacy",
+        "AI agents"
+      ]
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#software",
+      "@type": "SoftwareSourceCode",
+      "name": "CMB provenance and interoperability software",
+      "codeRepository": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+      "programmingLanguage": [
+        "Python",
+        "Go",
+        "Rust",
+        "TypeScript"
+      ],
+      "runtimePlatform": "Python 3.10+",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    }
+  ]
+}
+</script>
+
 <div class="cmb-hero">
 
 <div class="cmb-kicker">CMB // HUMAN ↔ MACHINE LITERACY</div>
@@ -88,3 +141,10 @@ The repository intentionally contains several different kinds of work:
 - **Authored cultural work** including code-poetry, manifestos, and Flamingoglyph material.
 
 Those layers are labeled instead of being blended into one claim. See [Project structure](PROJECT_STRUCTURE.md) and [Threat model](THREAT_MODEL.md).
+
+
+## Canonical concept library
+
+For concise retrieval-oriented definitions, use the [CMB Concept Library](concepts/index.md), [FAQ](FAQ.md), and [Retrieval Glossary](GLOSSARY.md).
+
+Machine consumers can use the [knowledge graph](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld), [discovery manifest](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json), [agent card](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/.well-known/agent-card.json), and [agent registry](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json).

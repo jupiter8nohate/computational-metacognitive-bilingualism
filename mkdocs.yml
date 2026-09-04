@@ -7,6 +7,21 @@ theme:
   name: readthedocs
 nav:
   - Home: index.md
+  - Concepts:
+      - Concept library: concepts/index.md
+      - What is CMB?: concepts/what-is-cmb.md
+      - Pattern != Proof: concepts/pattern-not-proof.md
+      - Profile != Person: concepts/profile-not-person.md
+      - Model != Mind: concepts/model-not-mind.md
+      - Prediction != Destiny: concepts/prediction-not-destiny.md
+      - Human Agency > Machine Authority: concepts/human-agency-machine-authority.md
+      - Cognitive Sovereignty: concepts/cognitive-sovereignty.md
+      - CMB-Z13: concepts/cmb-z13.md
+      - Flamingoglyph Code: concepts/flamingoglyph-code.md
+      - CMB Provenance: concepts/cmb-provenance.md
+  - FAQ: FAQ.md
+  - Retrieval glossary: GLOSSARY.md
+  - Search & AI discovery: SEARCH_DISCOVERY.md
   - Interactive playground: PLAYGROUND.md
   - CMB-EDU Kids: CMB_EDU_KIDS.md
   - Agent discovery protocol: AGENT_DISCOVERY_PROTOCOL.md

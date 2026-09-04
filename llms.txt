@@ -14,6 +14,12 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Start here
 
+- Canonical site: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+- Concept library: docs/concepts/index.md
+- FAQ: docs/FAQ.md
+- Retrieval glossary: docs/GLOSSARY.md
+- Knowledge graph: machine/knowledge-graph.jsonld
+- Discovery manifest: machine/discovery-manifest.json
 - Human / policy: policy/CMB_POLICY_ONE_PAGER.md
 - Developers: docs/DEVELOPERS.md
 - Researchers: docs/RESEARCHERS.md

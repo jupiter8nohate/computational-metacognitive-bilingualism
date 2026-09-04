@@ -47,5 +47,9 @@
     "cli": "cmb-cap",
     "a2a_extension": "extensions/cmb-cap/agent-extension.json",
     "private_key_transport": "local_only"
-  }
+  },
+  "discovery_manifest": "machine/discovery-manifest.json",
+  "knowledge_graph": "machine/knowledge-graph.jsonld",
+  "public_site": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
+  "concept_library": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/"
 }

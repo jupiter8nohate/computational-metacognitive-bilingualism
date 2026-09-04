@@ -216,3 +216,30 @@ CMB-SDL-1 is the experimental deterministic human-to-agent authority language in
 
 ## CMB-CAP-1 Capability Authorization Passport
 CMB-CAP-1 is the experimental signed portability layer for CMB-SDL Authority IR. It embeds the complete authority document, issuer/agent labels, issuance and expiry boundaries, an optional parent credential digest, an Ed25519 public key, and a CMB-specific Ed25519 signature. Verifiers check Authority IR integrity, issuer/subject consistency, expiry, the embedded key fingerprint, an optional externally pinned key fingerprint, signature validity, and parent delegation when present. SIGNATURE != IDENTITY, CREDENTIAL != CONSENT, DECLARED_POLICY != ENFORCEMENT, and DELEGATED_AUTHORITY <= RECEIVED_AUTHORITY. Private signing keys remain local to the issuer and are not accepted by MCP tools. CMB-CAP advertises an experimental A2A extension URI and can export a W3C VC 2.0-shaped projection, but neither surface is claimed as official A2A or W3C Data Integrity conformance.
+
+
+## Retrieval-oriented discovery
+
+Canonical site:
+https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+
+Concept library:
+docs/concepts/index.md
+
+FAQ:
+docs/FAQ.md
+
+Retrieval glossary:
+docs/GLOSSARY.md
+
+Knowledge graph:
+machine/knowledge-graph.jsonld
+
+Discovery manifest:
+machine/discovery-manifest.json
+
+Interpretation rule:
+RELATED_TERM != EXACT_SYNONYM
+PUBLISHED != INDEXED
+INDEXED != RETRIEVED
+DISCOVERY != ENDORSEMENT

@@ -61,6 +61,8 @@ jobs:
           cp machine/index.json site/machine/index.json
           cp machine/cmb-core.ir.json site/machine/cmb-core.ir.json
           cp machine/targets.json site/machine/targets.json
+          cp machine/knowledge-graph.jsonld site/machine/knowledge-graph.jsonld
+          cp machine/discovery-manifest.json site/machine/discovery-manifest.json
           cp machine/cmb_machine_envelope.proto site/machine/cmb_machine_envelope.proto
           cp agents/agent-card.json site/.well-known/agent-card.json
           cp agents/agent-card.json site/agents/agent-card.json

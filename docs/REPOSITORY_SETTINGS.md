@@ -1,8 +1,59 @@
 # Required GitHub repository settings
 
-Some security controls live in repository settings and cannot be established by committed code alone.
+Some controls live in GitHub or external service settings and cannot be established by committed code alone.
 
-## Enable now
+## GitHub Pages
+
+GitHub Pages is deployed automatically from `.github/workflows/pages.yml`.
+
+Canonical public site:
+
+https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+
+The deployment publishes documentation plus machine-facing discovery assets, schemas, specifications, agent metadata, `llms.txt`, the knowledge graph, and the discovery manifest.
+
+## Search and AI discovery settings
+
+Repository code now supplies the crawlable site, sitemap, robots file, canonical concept pages, JSON-LD, FAQ, retrieval glossary, agent card, knowledge graph, and machine discovery manifest.
+
+Account-level actions still required:
+
+- verify the Pages URL-prefix property in Google Search Console;
+- submit `https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/sitemap.xml`;
+- inspect/request indexing for the homepage and highest-value concept URLs;
+- verify the site in Bing Webmaster Tools and submit the same sitemap;
+- configure repository Topics;
+- upload the repository social-preview image;
+- connect GitHub to Zenodo and archive a signed release when available.
+
+See [Search and AI Discovery Operations](SEARCH_DISCOVERY.md).
+
+## Recommended GitHub Topics
+
+```text
+artificial-intelligence
+ai-ethics
+digital-rights
+human-agency
+metacognition
+cognitive-sovereignty
+provenance
+content-authenticity
+c2pa
+cryptography
+neurodiversity
+computational-literacy
+ai-agents
+mcp
+python
+rust
+golang
+digital-identity
+ai-safety
+human-computer-interaction
+```
+
+## Security controls
 
 In **Settings → Security / Code security and analysis**:
 
@@ -26,33 +77,13 @@ In **Settings → Branches / Rulesets**, prefer:
 - block branch deletion;
 - require linear history if it matches the project's squash-merge workflow.
 
-Recommended required checks once they have run successfully:
+## Release and DOI gate
 
-```text
-CI / Python 3.10
-CI / Python 3.11
-CI / Python 3.12
-CI / Python 3.13
-CI / Canonical CMB receipt
-CI / build
-CodeQL Python
-Documentation / build
-Dependency review   # after Dependency Graph is enabled
-```
-
-Do not require path-filtered workflows such as the C2PA round-trip for every PR unless the workflow is changed to always report a check.
-
-## GitHub Pages
-
-The repository includes a strict MkDocs build but does not automatically publish a website.
-
-After reviewing the information architecture, the repository owner may enable GitHub Pages and add a separate deployment workflow.
-
-## Release gate
-
-The repository still has no completed GitHub release. The first signed release remains a manual tag-trigger away after all required checks pass.
+The repository is prepared for a signed v1.4.0 release, but publishing the GitHub release and enabling Zenodo archival remain account-authorized actions.
 
 ```text
 COMMITTED_CONFIGURATION != ENABLED_PLATFORM_SETTING
-AUTOMATION_READY != RELEASE_PUBLISHED
+RELEASE_READY != RELEASE_PUBLISHED
+DOI_READY != DOI_MINTED
+PUBLISHED != INDEXED
 ```

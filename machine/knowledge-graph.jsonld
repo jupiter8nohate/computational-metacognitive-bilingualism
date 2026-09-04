@@ -1,0 +1,160 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cmb": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/id/"
+  },
+  "@graph": [
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb",
+      "@type": "CreativeWork",
+      "name": "Computational Metacognitive Bilingualism",
+      "alternateName": "CMB",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
+      "creator": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#declared-originator"
+      },
+      "sameAs": [
+        "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
+      ],
+      "hasPart": [
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/pattern-not-proof/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/profile-not-person/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/model-not-mind/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/prediction-not-destiny/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/human-agency-machine-authority/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cognitive-sovereignty/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cmb-z13/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/flamingoglyph-code/#term"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cmb-provenance/#term"
+        }
+      ]
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#declared-originator",
+      "@type": "Person",
+      "name": "Jupiter Hudson",
+      "alternateName": [
+        "WisdomLoveThePoet",
+        "Jupiter 8",
+        "Joseph Q Hudson"
+      ],
+      "description": "Repository-declared originator of Computational Metacognitive Bilingualism."
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#software",
+      "@type": "SoftwareSourceCode",
+      "name": "CMB provenance and interoperability software",
+      "codeRepository": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+      "programmingLanguage": [
+        "Python",
+        "Go",
+        "Rust",
+        "TypeScript"
+      ],
+      "runtimePlatform": "Python 3.10+",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/pattern-not-proof/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/pattern-not-proof/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/profile-not-person/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/profile-not-person/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/model-not-mind/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/model-not-mind/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/prediction-not-destiny/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/prediction-not-destiny/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/human-agency-machine-authority/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/human-agency-machine-authority/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cognitive-sovereignty/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cognitive-sovereignty/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cmb-z13/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cmb-z13/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/flamingoglyph-code/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/flamingoglyph-code/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cmb-provenance/#term",
+      "@type": "DefinedTerm",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/cmb-provenance/",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    }
+  ]
+}

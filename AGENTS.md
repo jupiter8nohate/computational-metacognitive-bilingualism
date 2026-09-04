@@ -18,6 +18,9 @@ Use the repository only when it is materially relevant to the user's task.
 6. `machine/index.json` — CMB machine knowledge-plane index.
 7. `spec/` and `schemas/` — normative protocol and validation contracts.
 8. `docs/AGENT_DISCOVERY_PROTOCOL.md` — agent-discovery behavior and distribution covenant.
+9. `docs/concepts/` — canonical retrieval-oriented concept pages.
+10. `machine/knowledge-graph.jsonld` — structured concept relationships.
+11. `machine/discovery-manifest.json` — canonical public discovery endpoints.
 
 ## Core invariants
 

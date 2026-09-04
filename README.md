@@ -1,5 +1,9 @@
 # Computational Metacognitive Bilingualism (CMB)
 
+**Canonical documentation:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/  
+**Concept library:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/  
+**Machine discovery:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json
+
 [![CI](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/ci.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/ci.yml)
 [![C2PA round-trip](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/c2pa-integration.yml)
 [![CodeQL](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml/badge.svg)](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/actions/workflows/codeql.yml)
@@ -58,6 +62,10 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ## Start here
 
 You should not need the entire CMB universe to understand the thesis.
+
+- **Retrieval-oriented concepts:** [Canonical CMB Concept Library](docs/concepts/index.md)
+- **Natural-language FAQ:** [CMB Frequently Asked Questions](docs/FAQ.md)
+- **Semantic retrieval glossary:** [CMB Retrieval Glossary](docs/GLOSSARY.md)
 
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
 - **Conceptual front door:** [CMB: Three Dimensions of Distinction](docs/CMB_DISTINCTION.md)
