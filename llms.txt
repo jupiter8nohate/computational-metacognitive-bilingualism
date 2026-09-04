@@ -10,6 +10,7 @@ PROFILE != PERSON
 MODEL != MIND
 PREDICTION != DESTINY
 CAPABILITY != AUTHORITY
+MACHINE_CAN_READ != MACHINE_CAN_DEFINE
 HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Start here
@@ -30,6 +31,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - Creator provenance: docs/CREATOR_PROVENANCE.md
 - Creator provenance registry: library/creator-provenance.json
 - Creator provenance schema: schemas/cmb.creator-provenance.v1.schema.json
+- Reclaiming the Pen - eight-language manifesto: manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
 - HARMONI epistemic triage: manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md
 - Machine-only discovery index: machine/index.json
 - Canonical CMB-66 IR: machine/cmb-core.ir.json
