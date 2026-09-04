@@ -139,7 +139,6 @@ func replaceDirectory(stage, destination string) error {
 	return nil
 }
 
-
 func safeBundlePath(name string) (string, error) {
 	if name == "" {
 		return "", fmt.Errorf("unsafe output name %q", name)
