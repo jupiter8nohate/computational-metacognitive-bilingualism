@@ -2,21 +2,18 @@
 
 The project has enough conceptual surface area. The next gains come from publishing, testing, outside review, and adoption.
 
-## P0 ✦ first signed release
+## P0 ✦ signed release — completed
 
-Publish the first GitHub release through the existing tag-triggered workflow.
+The signed-release gate is operational. Version `v1.4.1` was published through the tag-triggered GitHub Actions workflow with release artifacts, `SHA256SUMS`, a CMB source receipt, and Sigstore bundles.
 
-Release acceptance criteria:
+The remaining release rule is temporal rather than architectural:
 
-- Python 3.10–3.13 pass;
-- canonical receipt passes;
-- distributions build and reinstall;
-- SHA256SUMS is generated;
-- Sigstore bundles are produced;
-- GitHub attestations are produced;
-- release assets are published from the exact tag.
+```text
+PUBLISHED_RELEASE != CURRENT_MAIN
+POST_RELEASE_CHANGE != SEALED_BY_OLDER_TAG
+```
 
-Until that happens, release automation is evidence of readiness, not evidence of a completed release.
+Any canonical artifact changed after `v1.4.1` must wait for a later version-matching signed release before those new bytes are covered by that release receipt.
 
 ## P0 ✦ one independent reviewer
 
@@ -53,7 +50,7 @@ Implemented:
 - explicit policy-boundary evaluation;
 - no external JavaScript analytics or dependencies.
 
-Remaining deployment step: enable GitHub Pages or another reviewed static host.
+Deployment status: GitHub Pages is live at the canonical project URL. Future work should improve information architecture, retrieval quality, and measurement rather than re-solving deployment.
 
 ## P1 ✦ explicit boundary contract
 
@@ -101,6 +98,23 @@ Next research work:
 - convert strong empirical claims into preregisterable study questions;
 - seek independent replication or critique before using validation language.
 
+## P1 ✦ structured case-study evidence
+
+Implemented:
+
+- human-readable case-study reports in `research/case-studies/`;
+- `cmb.case-study.v1` JSON Schema;
+- machine-readable evidence records;
+- screenshot SHA-256 fingerprint preservation without republishing the source image;
+- CI validation that the structured record, human report, and evidence digest remain synchronized;
+- public Pages discovery for the case-study front door and structured JSON.
+
+Next research work:
+
+- add new cases only when they contribute independent evidence rather than repeating the same example;
+- preserve explicit revision triggers and negative findings;
+- seek independent reproduction or critique of high-value cases.
+
 ## P1 ✦ CMB-Z13 executable notation
 
 The experimental reference parser supports:
@@ -123,9 +137,15 @@ Before production entity-specific assertions:
 - complete external review;
 - decide whether formal C2PA conformance is appropriate.
 
-## P2 ✦ documentation publishing
+## P2 ✦ documentation publishing — live
 
-The repository includes a buildable MkDocs site and browser playground. Enable GitHub Pages only after the repository owner reviews the public information architecture and desired domain.
+The MkDocs site and browser playground are deployed on GitHub Pages. The next documentation gains come from keeping the public site synchronized with the repository, exposing structured research records, improving retrieval paths, and measuring actual search/index performance.
+
+```text
+PUBLISHED != INDEXED
+INDEXED != RETRIEVED
+RETRIEVED != ADOPTED
+```
 
 ## Rule for future expansion
 
