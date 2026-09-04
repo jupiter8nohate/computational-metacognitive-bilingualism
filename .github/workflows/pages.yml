@@ -8,6 +8,7 @@ on:
       - "machine/**"
       - "agents/**"
       - "schemas/**"
+      - "research/case-studies/**"
       - "spec/**"
       - "src/cmb_machine/**"
       - "mkdocs.yml"
@@ -58,7 +59,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p site/.well-known site/agents site/machine/generated site/schemas site/spec
+          mkdir -p site/.well-known site/agents site/machine/generated site/schemas site/spec site/research/case-studies
           cp llms.txt site/llms.txt
           cp llms-full.txt site/llms-full.txt
           cp docs/robots.txt site/robots.txt
@@ -77,6 +78,7 @@ jobs:
           cp agents/registry.json site/agents/registry.json
           cp -R schemas/. site/schemas/
           cp -R spec/. site/spec/
+          cp research/case-studies/*.json site/research/case-studies/
           cmb-machine compile-core --output-dir site/machine/generated
 
       - name: Upload Pages artifact
@@ -114,6 +116,8 @@ jobs:
               f"{site}/llms-full.txt",
               f"{site}/FAQ/",
               f"{site}/GLOSSARY/",
+              f"{site}/CASE_STUDIES/",
+              f"{site}/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json",
               f"{site}/concepts/",
               f"{site}/concepts/what-is-cmb/",
               f"{site}/concepts/pattern-not-proof/",
