@@ -1,0 +1,16 @@
+site_name: Computational Metacognitive Bilingualism
+site_description: Human agency, provenance, computational literacy, and CMB-Z13 research.
+repo_url: https://github.com/jupiter8nohate/computational-metacognitive-bilingualism
+repo_name: jupiter8nohate/computational-metacognitive-bilingualism
+theme:
+  name: readthedocs
+nav:
+  - Home: index.md
+  - For developers: DEVELOPERS.md
+  - For researchers & policy: RESEARCHERS.md
+  - Project structure: PROJECT_STRUCTURE.md
+  - Threat model: THREAT_MODEL.md
+  - Prior art & positioning: PRIOR_ART_AND_POSITIONING.md
+  - C2PA interoperability: C2PA_INTEROPERABILITY.md
+  - Independent review: EXTERNAL_REVIEW.md
+  - Roadmap: ROADMAP.md
