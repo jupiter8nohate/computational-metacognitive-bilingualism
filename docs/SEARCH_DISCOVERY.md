@@ -61,3 +61,20 @@ INDEXED != RANKED
 RANKED != RETRIEVED
 RETRIEVED != ENDORSED
 ```
+
+
+## Automated IndexNow
+
+Every successful GitHub Pages deployment performs one best-effort IndexNow bulk notification for the canonical homepage, concept pages, FAQ, LLM maps, agent endpoints, and machine discovery files.
+
+Verification key location:
+
+`https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176.txt`
+
+The key is intentionally placed inside the project subpath and supplied through `keyLocation`, so notifications are scoped to URLs under the CMB Pages project.
+
+```text
+INDEXNOW_SUBMISSION != INDEXING
+HTTP_200_OR_202 != SEARCH_RANK
+DISCOVERY_NOTIFICATION != ENDORSEMENT
+```

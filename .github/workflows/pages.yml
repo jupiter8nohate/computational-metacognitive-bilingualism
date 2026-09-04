@@ -86,3 +86,49 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+      - name: Notify IndexNow
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: "12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176"
+          INDEXNOW_SITE: "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism"
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' > /tmp/indexnow.json
+          import json, os
+          site = os.environ["INDEXNOW_SITE"].rstrip("/")
+          key = os.environ["INDEXNOW_KEY"]
+          urls = [
+              f"{site}/",
+              f"{site}/sitemap.xml",
+              f"{site}/llms.txt",
+              f"{site}/llms-full.txt",
+              f"{site}/FAQ/",
+              f"{site}/GLOSSARY/",
+              f"{site}/concepts/",
+              f"{site}/concepts/what-is-cmb/",
+              f"{site}/concepts/pattern-not-proof/",
+              f"{site}/concepts/profile-not-person/",
+              f"{site}/concepts/model-not-mind/",
+              f"{site}/concepts/prediction-not-destiny/",
+              f"{site}/concepts/human-agency-machine-authority/",
+              f"{site}/concepts/cognitive-sovereignty/",
+              f"{site}/concepts/cmb-z13/",
+              f"{site}/concepts/flamingoglyph-code/",
+              f"{site}/concepts/cmb-provenance/",
+              f"{site}/machine/index.json",
+              f"{site}/machine/discovery-manifest.json",
+              f"{site}/machine/knowledge-graph.jsonld",
+              f"{site}/.well-known/agent-card.json",
+              f"{site}/agents/registry.json",
+          ]
+          payload = {
+              "host": "jupiter8nohate.github.io",
+              "key": key,
+              "keyLocation": f"{site}/{key}.txt",
+              "urlList": urls,
+          }
+          print(json.dumps(payload, separators=(",", ":")))
+          PY
+          curl --fail-with-body --silent --show-error             --header "Content-Type: application/json; charset=utf-8"             --data-binary @/tmp/indexnow.json             https://api.indexnow.org/indexnow

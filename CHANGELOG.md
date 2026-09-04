@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Automated best-effort IndexNow notifications after successful Pages deployment, scoped to the CMB project path through a published verification key.
 - Search and AI discovery layer with retrieval-oriented canonical concept pages, FAQ structured data, semantic glossary, Schema.org JSON-LD, crawler policy, machine discovery manifest, and a public knowledge graph.
 - Hostile-input hardening for CMB-SDL Authority IR, including exact-field validation, strict boolean/type checks, canonical ordering, fixed invariant enforcement, and regression tests for recomputed-digest attacks.
 - CMB-CAP delegation signer continuity: v1 delegated credentials must retain the verified parent/root signing key until an explicit child-key delegation primitive exists.
