@@ -42,6 +42,8 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "manifestos/CMB_Z13_LANGUAGE_SPEC.md",
         "library/cmb-z13.registry.json",
         "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
+        "docs/CMB_EDU_KIDS.md",
+        "schemas/cmb.edu.v1.schema.json",
         "library/catalog.json",
     )
 
