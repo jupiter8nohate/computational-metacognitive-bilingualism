@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.1] - 2026-09-04
+
+### Changed
+
+- Rebuilt the public page shell as a cosmic sovereign manuscript with stronger visual hierarchy and deliberate whitespace.
+- Replaced mechanical punctuation in presentation copy with decorative separators such as `✦`, `·`, and `│`.
+- Added a provenance ledger, human ↔ machine boundary cards, publication-surface navigation, and symbolic framing.
+- Added mobile layout refinement, keyboard focus treatment, print mode, text selection styling, and reduced-motion support.
+- Preserved the canonical manifesto bytes as the authority source instead of visually rewriting provenance content.
+
+### Guardrails
+
+- The live publication frame is tested to contain no em dash characters.
+- The canonical source and generated publication are checked for em dash regressions during Pages deployment.
+- The site remains zero-dependency, static, deterministic, and free of external font, script, analytics, or stylesheet calls.
+
 ## [0.3.0] - 2026-09-04
 
 ### Added
