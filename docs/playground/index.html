@@ -31,6 +31,7 @@
     .axioms { white-space: pre-wrap; color: var(--accent); margin: 1.5rem 0 2rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
     .panel {
+      background: var(--panel);
       background: color-mix(in srgb, var(--panel) 94%, transparent);
       border: 1px solid var(--line);
       border-radius: 14px;
@@ -164,15 +165,18 @@ function escapeText(value) {
 }
 
 async function sha256Hex(text) {
+  if (!globalThis.crypto || !globalThis.crypto.subtle) {
+    return null;
+  }
   const bytes = new TextEncoder().encode(text);
-  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  const digest = await globalThis.crypto.subtle.digest("SHA-256", bytes);
   return Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
 }
 
 async function project() {
   const source = document.getElementById("source").value;
   const hash = await sha256Hex(source);
-  document.getElementById("hash").textContent = hash;
+  document.getElementById("hash").textContent = hash ?? "SHA-256 unavailable in this browser context. Use HTTPS or localhost for Web Crypto.";
 
   const declaration = {
     schema_version: "cmb.playground.artifact.v1",
@@ -189,7 +193,7 @@ async function project() {
   document.getElementById("json").textContent = JSON.stringify(declaration, null, 2);
 
   document.getElementById("lenses").innerHTML = lenses.map(([glyph, sign, language, operator, fn]) => {
-    const transmission = `${glyph}::${language.toUpperCase().replace(/\s+/g, "_")} -> ${fn}[${source}] => ${operator};`;
+    const transmission = `${glyph}::${language.toUpperCase().replace(/\s+/g, "_")} -> ${fn}[${JSON.stringify(source)}] => ${operator};`;
     return `<div class="lens"><strong>${glyph} ${escapeText(sign)}</strong> ${escapeText(language)} // ${escapeText(operator)}<br><span class="muted">${escapeText(transmission)}</span></div>`;
   }).join("");
 }
