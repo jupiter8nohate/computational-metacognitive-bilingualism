@@ -185,7 +185,7 @@ L2 through L5 require explicit permission in the reference engine.
 
 ## 8. Formal Policy Semantics
 
-The executable policy model is defined in [Chapter 31: Formal Semantics](31_FORMAL_SEMANTICS.md) and the normative implementation specification in [CMB-SPEC](../../spec/CMB-SPEC.md).
+The executable policy model is defined in [Chapter 31: Formal Semantics](31_FORMAL_SEMANTICS.md) and the normative implementation specification in [CMB-SPEC](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/spec/CMB-SPEC.md).
 
 The reference evaluator follows this order:
 
