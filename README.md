@@ -64,6 +64,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Research position:** [CMB Research Position](docs/CMB_RESEARCH_POSITION.md)
 - **Research backbone:** [CMB Cognitive Sovereignty Dissertation](docs/dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md)
 - **Formal semantics:** [Chapter 31 - Formal CMB Semantics](docs/dissertation/31_FORMAL_SEMANTICS.md)
+- **Bounded proof gate:** [HARMONI-666 and MissingNo.666](spec/CMB-HARMONI-666.md) - six epistemic states, six proof gates, six sovereignty failsafes.
 - **Executable policy contract:** [CMB Policy Specification v1.0](spec/CMB-SPEC.md)
 - **Kids / classroom entry point:** [CMB-EDU Kids - Flamingoglyph Learning Layer](docs/CMB_EDU_KIDS.md)
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix + Go](adapters/README.md)
@@ -104,6 +105,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, Rust/Actix, and Go share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
+| HARMONI-666 | **Experimental bounded-proof layer** | fails closed to `MISSINGNO_666` when a `PROOF` claim exceeds verified evidence strength |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
 
 See [Project structure](docs/PROJECT_STRUCTURE.md) and [Threat model](docs/THREAT_MODEL.md).
@@ -148,6 +150,42 @@ PROVENANCE
     ↓
 INSTITUTIONAL ADOPTION / CRITIQUE
 ```
+
+## HARMONI-666 proof gate
+
+HARMONI-666 is the CMB-66 epistemic gate for distinguishing a strong pattern from
+a bounded proof. The symbolic triangle keeps three jurisdictions explicit:
+axiomatic first principles, machine computation, and human meaning and final
+authority.
+
+```text
+PATTERN != PROOF
+CLAIM_STRENGTH <= VERIFIED_EVIDENCE_STRENGTH
+
+PROOF requires:
+  RULES_DEFINED
+  ASSUMPTIONS_DECLARED
+  DOMAIN_BOUNDED
+  DERIVATION_REPRODUCIBLE
+  COUNTEREXAMPLE_SEARCHED
+  VERIFIER_PASSED
+
+otherwise:
+  UNKNOWN
+  MISSINGNO_666
+  HUMAN_FINAL
+```
+
+The "axiomatic" vertex is the technical representation of the project's
+philosophical "language of God" motif. It is not an empirical or supernatural
+verification claim.
+
+```bash
+cmb-machine harmoni-manifest
+cmb-machine harmoni-evaluate --state PROOF --all-proof-gates
+```
+
+See [CMB HARMONI-666](spec/CMB-HARMONI-666.md).
 
 D.N.A. means **Demon's Need Attention**. In this work, “demons” is a metaphor for attention-extractive loops, incentives, feeds, and systems that become stronger when human attention is repeatedly captured. The central boundary remains:
 
