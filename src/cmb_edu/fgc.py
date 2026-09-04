@@ -11,12 +11,12 @@ _TOKEN_SPLIT = re.compile(r"\s*(?:\+|\n)\s*")
 
 FGC_LEGEND: dict[str, str] = {
     "🧠": "human_declared_context",
-    "❤️": "human_declared_feeling",
-    "👁️": "notice",
+    "❤": "human_declared_feeling",
+    "👁": "notice",
     "❓": "question",
     "⚡": "action",
     "🪐": "context_or_mode",
-    "🛡️": "boundary",
+    "🛡": "boundary",
     "🔒": "private",
     "⏳": "ephemeral",
     "🤖": "machine",
@@ -50,7 +50,8 @@ class FGCEmojiParser:
         privacy_tokens: list[str] = ["EPHEMERAL", "NO_PROFILE", "NO_TRAIN"]
         recognized = 0
 
-        for raw_token in _TOKEN_SPLIT.split(text.strip()):
+        normalized_text = text.replace(_VARIATION_SELECTOR, "")
+        for raw_token in _TOKEN_SPLIT.split(normalized_text.strip()):
             token = raw_token.strip()
             if not token:
                 continue
@@ -61,14 +62,14 @@ class FGCEmojiParser:
             recognized += 1
             value = _payload(token, glyph)
 
-            if glyph in {"🧠", "❤️"}:
+            if glyph in {"🧠", "❤"}:
                 if value:
                     states.append(value.lower())
             elif glyph == "🪐" and value:
                 mode = value.upper().replace(" ", "_")
             elif glyph in {"⚡", "🎨", "❓"} and value:
                 instruction = value
-            elif glyph == "🛡️" and value:
+            elif glyph == "🛡" and value:
                 boundary = value.upper().replace(" ", "_")
             elif glyph == "⏳":
                 privacy_tokens.append("EPHEMERAL")
