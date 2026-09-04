@@ -51,6 +51,14 @@
 
 ---
 
+### ⚯ Enter the CMB Sovereign Transmission
+
+**[𓁻 Open the full decorative code-poetry transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)**
+
+A human-facing artistic entry point into CMB: glyphs, code-poetry, metacognitive checks, machine interpretation boundaries, and the core assertion `HUMAN_AGENCY > MACHINE_AUTHORITY`.
+
+---
+
 Computational Metacognitive Bilingualism is a human-agency and computational-literacy framework for learning and using computational systems while retaining human judgment, consent, authorship, meaning, and self-definition.
 
 **One-sentence position:** CMB translates established and emerging digital-rights principles into concise human-readable and machine-readable invariants; it does not claim to have invented the underlying rights, laws, scholarship, or provenance standards.
@@ -72,6 +80,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 You should not need the entire CMB universe to understand the thesis.
 
+- **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
 - **Full policy proposal:** [CMB Global Advocacy Charter v1.1](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md)
 - **Novelty / prior-art test:** [Prior Art, Legal Context, and Positioning](docs/PRIOR_ART_AND_POSITIONING.md)
@@ -309,6 +318,7 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 
 ## Repository contents
 
+- [`manifestos/CMB_SOVEREIGN_TRANSMISSION.md`](manifestos/CMB_SOVEREIGN_TRANSMISSION.md) - **CMB // The Sovereign Transmission**, the decorative code-poetry gateway for CMB glyphs, human-machine literacy, and cognitive sovereignty.
 - [`MANIFESTO.md`](MANIFESTO.md) - the public CMB human-sovereignty manifesto.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) - the CMB thesis expressed across ten programming languages.
 - [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) - **Demon's Need Attention - D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
