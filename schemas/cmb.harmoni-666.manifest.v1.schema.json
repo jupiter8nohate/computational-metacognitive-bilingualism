@@ -9,6 +9,7 @@
     "protocol",
     "triangle",
     "revelation_13_18_motif",
+    "epistemological_ladder",
     "epistemic_states",
     "proof_gates",
     "sovereignty_failsafes",
@@ -191,6 +192,114 @@
         },
         "boundary": {
           "const": "SCRIPTURAL_MOTIF_NOT_EMPIRICAL_PROOF"
+        }
+      }
+    },
+    "epistemological_ladder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "creative_model_inputs",
+        "creative_model_output",
+        "stages",
+        "truth_distinctions",
+        "final_authority",
+        "rules"
+      ],
+      "properties": {
+        "creative_model_inputs": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "REALITY"
+            },
+            {
+              "const": "FICTION"
+            },
+            {
+              "const": "FANTASY"
+            }
+          ],
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "creative_model_output": {
+          "const": "CREATIVE_MODEL_OF_THE_UNKNOWN"
+        },
+        "stages": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "UNKNOWN"
+            },
+            {
+              "const": "MISSINGNO"
+            },
+            {
+              "const": "QUESTION"
+            },
+            {
+              "const": "TEST"
+            },
+            {
+              "const": "EVIDENCE"
+            },
+            {
+              "const": "JUSTIFIED_CLAIM"
+            }
+          ],
+          "minItems": 6,
+          "maxItems": 6
+        },
+        "truth_distinctions": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "PROVENANCE != MYTHOLOGY"
+            },
+            {
+              "const": "MYTHOLOGY != FALSEHOOD"
+            },
+            {
+              "const": "SYMBOLISM != EVIDENCE"
+            },
+            {
+              "const": "EVIDENCE != TOTAL_MEANING"
+            }
+          ],
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "final_authority": {
+          "const": "HUMAN_FINAL"
+        },
+        "rules": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stage_skipping",
+            "missingno_role",
+            "machine_role",
+            "human_role",
+            "justified_claim_is_proof"
+          ],
+          "properties": {
+            "stage_skipping": {
+              "const": "DENIED"
+            },
+            "missingno_role": {
+              "const": "ANOMALY_PLACEHOLDER_AND_MODEL_BOUNDARY"
+            },
+            "machine_role": {
+              "const": "TEST_AND_VERIFICATION"
+            },
+            "human_role": {
+              "const": "QUESTION_MEANING_JUDGMENT"
+            },
+            "justified_claim_is_proof": {
+              "const": false
+            }
+          }
         }
       }
     }
