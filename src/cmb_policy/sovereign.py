@@ -16,7 +16,8 @@ from enum import Enum
 from math import isfinite
 from typing import Final
 
-SEP_SCHEMA: Final[str] = "cmb.sovereign-epistemic.v1"
+SEP_DECISION_SCHEMA: Final[str] = "cmb.sovereign-epistemic.decision.v1"
+SEP_MANIFEST_SCHEMA: Final[str] = "cmb.sovereign-epistemic.manifest.v1"
 SEP_PROTOCOL: Final[str] = "CMB-SEP-1"
 HUMAN_FINAL: Final[str] = "HUMAN_FINAL"
 
@@ -168,7 +169,7 @@ class SovereignDecision:
 
     def to_dict(self) -> dict[str, object]:
         return {
-            "schema_version": SEP_SCHEMA,
+            "schema_version": SEP_DECISION_SCHEMA,
             "protocol": SEP_PROTOCOL,
             "state": self.state.value,
             "halted": self.halted,
@@ -296,7 +297,7 @@ def protocol_manifest() -> dict[str, object]:
     """Return the public machine-readable SEP-1 architecture."""
 
     return {
-        "schema_version": SEP_SCHEMA,
+        "schema_version": SEP_MANIFEST_SCHEMA,
         "protocol": SEP_PROTOCOL,
         "states": [state.value for state in SovereignState],
         "gates": [gate.value for gate in Gate],
