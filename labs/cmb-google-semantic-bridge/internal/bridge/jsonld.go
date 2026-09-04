@@ -75,7 +75,7 @@ func ArticleJSONLD(a Artifact) ([]byte, error) {
 			URL:  a.Author.URL,
 		},
 		Keywords:    cleanStrings(a.Keywords),
-		ArticleBody: strings.TrimSpace(a.Body),
+		ArticleBody: a.Body,
 		Identifier:  identifiers,
 	}
 
