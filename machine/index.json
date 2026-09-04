@@ -18,7 +18,9 @@
     "cmb_origin_mark",
     "cmb_machine_targets",
     "cmb_compile_core",
-    "cmb_compile_authority"
+    "cmb_compile_authority",
+    "cmb_verify_capability",
+    "cmb_capability_extension"
   ],
   "static_bundle_directory": "machine/",
   "targets": [
@@ -37,5 +39,13 @@
     "specification": "spec/CMB-SDL-1.md",
     "ir_schema": "schemas/cmb.authority-ir.v1.schema.json",
     "cli": "cmb-sdl"
+  },
+  "capability_credential": {
+    "protocol": "CMB-CAP-1",
+    "specification": "spec/CMB-CAP-1.md",
+    "schema": "schemas/cmb.capability-credential.v1.schema.json",
+    "cli": "cmb-cap",
+    "a2a_extension": "extensions/cmb-cap/agent-extension.json",
+    "private_key_transport": "local_only"
   }
 }

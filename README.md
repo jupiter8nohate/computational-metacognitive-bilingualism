@@ -74,6 +74,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Normative core:** [CMB-CORE-1](spec/CMB-CORE-1.md) and [protocol versioning](spec/PROTOCOL_VERSIONING.md)
 - **Sovereignty runtime:** [CMB-SRP-1](spec/CMB-SRP-1.md) + [CMB-SRP-2](spec/CMB-SRP-2.md) + [`cmb.toml`](cmb.toml) + installed `cmbc` gate
 - **Sovereign delegation language:** [CMB-SDL-1](spec/CMB-SDL-1.md) + [`cmb-sdl`](src/cmb_sdl) + [Authority IR schema](schemas/cmb.authority-ir.v1.schema.json)
+- **Signed capability credentials:** [CMB-CAP-1](spec/CMB-CAP-1.md) + [`cmb-cap`](src/cmb_cap) + [credential schema](schemas/cmb.capability-credential.v1.schema.json)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
@@ -107,6 +108,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | CMB-SRP-1/2 / `cmbc` | **Experimental executable sovereignty runtime** | risk-adaptive friction, scoped Ed25519 human authorization, path-sensitive + Python AST change classification, deterministic scan reports, and verification-state transitions |
 | CMB-SDL-1 / `cmb-sdl` | **Experimental human-to-agent authority language** | deterministic capability, scope, purpose, expiry, evidence, handler, and monotonic delegation semantics |
+| CMB-CAP-1 / `cmb-cap` | **Experimental signed authority credential layer** | Ed25519 credentials, offline verification, key pinning, expiry, parent lineage, MCP verification, and experimental A2A/VC bridges |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, Rust/Actix, and Go share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
@@ -193,6 +195,8 @@ cmb-mcp
 
 MCP also exposes `cmb_compile_authority`, which compiles CMB-SDL authority declarations into deterministic `cmb.authority-ir.v1` objects. CMB-SDL makes capability, scope, purpose, expiry, evidence requirements, and delegation limits explicit; a consuming runtime must still enforce the resulting boundary.
 
+CMB-CAP keeps private signing keys local. The MCP adapter exposes public credential verification and the experimental A2A extension declaration, but never accepts a CMB-CAP private key. The W3C VC export is explicitly a VC 2.0-shaped projection and does not claim W3C Data Integrity conformance.
+
 The Pages deployment publishes `/.well-known/agent-card.json` and `/agents/registry.json`. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
 
 ## Install
@@ -206,6 +210,9 @@ cmb-provenance selftest
 cmbc validate --policy cmb.toml
 cmbc selftest --policy cmb.toml
 cmb-sdl compile examples/cmb_sdl/research.cmb --output dist/research.authority.json
+cmb-cap keygen --private-key .cmb/cap.key --public-key .cmb/cap.pub
+cmb-cap issue-sdl examples/cmb_sdl/research.cmb --private-key .cmb/cap.key --output dist/research.cmb-cap.json
+cmb-cap verify dist/research.cmb-cap.json --public-key .cmb/cap.pub
 ```
 
 For the optional Ed25519 human-authorization commands:

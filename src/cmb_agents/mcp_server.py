@@ -16,6 +16,7 @@ import base64
 import json
 from typing import Any
 
+from cmb_cap import a2a_extension_declaration, verify_capability
 from cmb_machine import build_core_ir, render_target, supported_targets
 from cmb_sdl import compile_text as compile_authority_text
 
@@ -110,6 +111,25 @@ def cmb_compile_core(target: str = "json") -> dict[str, Any]:
 def cmb_compile_authority(source: str) -> dict[str, Any]:
     """Compile CMB-SDL source into deterministic CMB Authority IR."""
     return compile_authority_text(source)
+
+
+@mcp.tool()
+def cmb_verify_capability(
+    credential: dict[str, Any],
+    expected_key_fingerprint: str = "",
+) -> dict[str, Any]:
+    """Verify a public CMB-CAP credential. Private signing keys are never accepted."""
+    ok, failures = verify_capability(
+        credential,
+        expected_key_fingerprint=expected_key_fingerprint or None,
+    )
+    return {"valid": ok, "failures": list(failures)}
+
+
+@mcp.tool()
+def cmb_capability_extension() -> dict[str, Any]:
+    """Return the experimental CMB-CAP A2A extension declaration."""
+    return a2a_extension_declaration(required=False)
 
 
 @mcp.tool()
