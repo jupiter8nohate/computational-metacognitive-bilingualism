@@ -100,6 +100,7 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`MANIFESTO.md`](MANIFESTO.md) — the core CMB human-sovereignty manifesto.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
 - [`Demon's Need Attention — D.N.A.`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — the attention-economy branch of CMB: a code-manifesto about engagement, behavioral profiling, data mining, consumption, and cognitive sovereignty.
+- [`The Chicken Run Manifesto`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) — a D.N.A./FGC literary manifesto using the coop as an allegory for institutional and algorithmic confinement, with explicit human-agency boundaries.
 - [`CMB // The Unclassifiable Index`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — the MissingNo–Pokédex manifesto defining CMB as a human/machine-readable library of perspective, uncertainty, context, and provenance.
 - [`CMB-Z13™ Manifesto`](manifestos/CMB_Z13_MANIFESTO.md) — the public declaration of the thirteen-lens Zodiac Computational Metacognitive Language.
 - [`CMB-Z13™ Language Specification`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) — the formal symbolic notation mapping zodiac archetypes to C, Rust, Haskell, C++, Java, TypeScript, Python, Swift, Go, Kotlin, Prolog, Common Lisp, and Julia while preserving `HUMAN_AGENCY > MACHINE_AUTHORITY`.
@@ -295,6 +296,7 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`MANIFESTO.md`](MANIFESTO.md) — the public CMB human-sovereignty manifesto.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
 - [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — **Demon's Need Attention — D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
+- [`manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) — **The Chicken Run Manifesto**, the D.N.A./FGC literary-allegory branch.
 - [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — **The Unclassifiable Index**, CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
 - [`manifestos/CMB_Z13_MANIFESTO.md`](manifestos/CMB_Z13_MANIFESTO.md) — **CMB-Z13™ manifesto**, the human-readable declaration of the thirteen computational lenses and Guardian Modes.
 - [`manifestos/CMB_Z13_LANGUAGE_SPEC.md`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) — **CMB-Z13™**, the Zodiac Computational Metacognitive Language specification.
@@ -375,4 +377,4 @@ The public registry is intentionally deferred until v1.3.1 passes CI and the sig
 
 CMB supports computational literacy, neurodiversity, cognitive freedom, digital consent, provenance, responsible human–AI collaboration, and accountable governance of consequential automated systems.
 
-The repository is licensed under [Apache-2.0](LICENSE). See [ATTRIBUTION.md](ATTRIBUTION.md) for the distinction between Jupiter Hudson's declared framework authorship and AI-assisted software implementation.
+The software implementation is licensed under [Apache-2.0](LICENSE). Authored literary and artistic corpus material may use separate rights terms; see [CONTENT_LICENSE.md](CONTENT_LICENSE.md) and [ATTRIBUTION.md](ATTRIBUTION.md).
