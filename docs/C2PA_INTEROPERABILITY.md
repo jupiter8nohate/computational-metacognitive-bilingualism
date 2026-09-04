@@ -158,7 +158,7 @@ Full unpublished text, private drafts, sensitive identity data, and unnecessary 
 
 ## Implementation phases
 
-### Phase 0 — documentation
+### Phase 0 ✦ documentation
 
 - define the interoperability boundary;
 - document C2PA as the external standard target;
@@ -166,7 +166,7 @@ Full unpublished text, private drafts, sensitive identity data, and unnecessary 
 
 **Status: implemented by this document.**
 
-### Phase 1 — schema adapter
+### Phase 1 ✦ schema adapter
 
 **Status: implemented.**
 
@@ -181,7 +181,7 @@ Implemented controls:
 - no invented entity-specific C2PA namespace;
 - no claim that the payload is a C2PA manifest or Content Credential.
 
-### Phase 2 — SDK integration
+### Phase 2 ✦ SDK integration
 
 **Status: implemented as a CI integration test.**
 
@@ -207,11 +207,11 @@ The CI round trip is an interoperability test, not a production trust claim. It 
 - a trust-list/conformance decision appropriate to the deployment;
 - external review of the integration and terminology.
 
-### Phase 3 — independent validation
+### Phase 3 ✦ independent validation
 
 Ask an external reviewer with C2PA or content-authenticity experience to verify the integration and identify misuse of C2PA terminology.
 
-### Phase 4 — conformance decision
+### Phase 4 ✦ conformance decision
 
 Only after implementation and testing should the project decide whether formal C2PA conformance is appropriate for the relevant product role.
 
