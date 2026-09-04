@@ -73,6 +73,27 @@ Next boundary work:
 - add authenticated provenance for the upstream facts feeding a boundary event;
 - avoid behavioral inference as a substitute for explicit application state.
 
+## P1 ✦ essential use-case front door
+
+Implemented:
+
+- human-readable `docs/USE_CASES_2026_2126.md`;
+- machine-readable `machine/use-cases.json`;
+- strict `cmb.use-cases.v1` schema;
+- tests preventing speculative or integration-required scenarios from being represented as current capability;
+- README and machine-index discovery links.
+
+Next adoption work:
+
+- add one minimal runnable example for each `DEPLOYABLE_NOW` use case;
+- measure whether a new reader can identify CMB's purpose in under two minutes;
+- keep future scenarios visibly labeled as speculative.
+
+```text
+CURRENT_CAPABILITY_CLAIM
+    -> MUST BE DEPLOYABLE_NOW
+```
+
 ## P1 ✦ machine interoperability
 
 Implemented:
