@@ -8,6 +8,7 @@ from .models import ContextEnvelope
 from .policy import canonical_boundary, privacy_from_tokens, translate_boundary
 
 _TOKEN_SPLIT = re.compile(r"\s*(?:\+|\n)\s*")
+_VARIATION_SELECTOR = "\ufe0f"
 
 FGC_LEGEND: dict[str, str] = {
     "🧠": "human_declared_context",
