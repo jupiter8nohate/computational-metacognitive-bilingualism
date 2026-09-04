@@ -64,8 +64,10 @@ jobs:
           cmb-provenance --version
           cmb-provenance selftest
       - name: Seal canonical public CMB artifacts
-        run: |
-          python scripts/seal_canonical_artifacts.py             --base-dir .             --output dist/cmb-source.cmb-receipt.json
+        run: >-
+          python scripts/seal_canonical_artifacts.py
+          --base-dir .
+          --output dist/cmb-source.cmb-receipt.json
       - name: Create checksums
         run: python scripts/build_checksums.py dist
       - name: Sign release artifacts with Sigstore
