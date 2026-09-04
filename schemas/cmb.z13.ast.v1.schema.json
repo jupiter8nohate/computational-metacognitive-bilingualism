@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.z13.ast.v1.schema.json",
+  "title": "CMB-Z13 AST v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version","protocol","registry_version","glyph","sign","language",
+    "operator","function","guardian_mode","operation","target","result",
+    "human_authority_final"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.z13.ast.v1"},
+    "protocol": {"const": "CMB-Z13"},
+    "registry_version": {"const": "1.1.0"},
+    "glyph": {"enum": ["♑","♒","♓","♈","♉","♊","♋","♌","♍","♎","♏","⛎","♐"]},
+    "sign": {"type": "string", "minLength": 1},
+    "language": {"type": "string", "minLength": 1},
+    "operator": {"type": "string", "pattern": "^[A-Z_]+$"},
+    "function": {"type": "string", "pattern": "^[A-Z_]+$"},
+    "guardian_mode": {"type": "string", "minLength": 1},
+    "operation": {"type": "string", "pattern": "^[A-Z_][A-Z0-9_]*$"},
+    "target": {"type": "string", "minLength": 1},
+    "result": {"type": "string", "minLength": 1},
+    "human_authority_final": {"const": true}
+  }
+}
