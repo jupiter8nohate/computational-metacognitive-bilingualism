@@ -25,3 +25,7 @@ A specification states required behavior. A reference implementation is evidence
 that the behavior can be implemented. Conformance requires passing the declared
 tests for the relevant version. Certification or endorsement requires an
 independent process that this repository must not invent for itself.
+
+## CMB-SDL-1
+
+[CMB-SDL-1](CMB-SDL-1.md) defines the experimental deterministic human-to-agent authority language and compiles to `cmb.authority-ir.v1`. Its central delegation invariant is `DELEGATED_AUTHORITY <= RECEIVED_AUTHORITY`.

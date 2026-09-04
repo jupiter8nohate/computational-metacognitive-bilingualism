@@ -1,0 +1,17 @@
+cmb/1
+HUMAN "Jupiter Hudson"
+AGENT research_bot
+ALLOW web.search
+ALLOW document.read
+DENY person.profile
+DENY memory.persist
+SCOPE project cmb
+PURPOSE "public research"
+EXPIRES 2030-01-01T00:00:00Z
+REQUIRE citations
+REQUIRE provenance
+ON uncertainty => ASK_HUMAN
+ON scope_violation => HALT
+ON expiry => REVOKE
+DELEGABLE false
+RETURN receipt

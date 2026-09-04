@@ -210,3 +210,6 @@ MCP machine resources:
 
 MCP compilation tool:
 - cmb_compile_core
+
+## CMB-SDL-1 Sovereign Delegation Language
+CMB-SDL-1 is the experimental deterministic human-to-agent authority language in spec/CMB-SDL-1.md. It compiles explicit HUMAN, AGENT, ALLOW, DENY, SCOPE, PURPOSE, EXPIRES, REQUIRE, ON, DELEGABLE, and RETURN statements into cmb.authority-ir.v1. The reference implementation fails closed on unknown syntax and rejects child delegations that expand capability, weaken explicit denials or evidence requirements, broaden scope, change purpose, extend expiry, remove required handlers, or disable a required receipt. The embedded SHA-256 digest detects IR mutation but is not a signature, identity proof, authorship proof, legal permission, or universal enforcement mechanism.

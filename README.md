@@ -73,6 +73,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)
 - **Normative core:** [CMB-CORE-1](spec/CMB-CORE-1.md) and [protocol versioning](spec/PROTOCOL_VERSIONING.md)
 - **Sovereignty runtime:** [CMB-SRP-1](spec/CMB-SRP-1.md) + [CMB-SRP-2](spec/CMB-SRP-2.md) + [`cmb.toml`](cmb.toml) + installed `cmbc` gate
+- **Sovereign delegation language:** [CMB-SDL-1](spec/CMB-SDL-1.md) + [`cmb-sdl`](src/cmb_sdl) + [Authority IR schema](schemas/cmb.authority-ir.v1.schema.json)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
@@ -105,6 +106,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | `cmb_agents` / CMB-ADP-1 | **Executable agent discovery layer** | relevance-first recommendation, deterministic citation, compression levels, knowledge graph export, static discovery, and local HTTP reference serving |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | CMB-SRP-1/2 / `cmbc` | **Experimental executable sovereignty runtime** | risk-adaptive friction, scoped Ed25519 human authorization, path-sensitive + Python AST change classification, deterministic scan reports, and verification-state transitions |
+| CMB-SDL-1 / `cmb-sdl` | **Experimental human-to-agent authority language** | deterministic capability, scope, purpose, expiry, evidence, handler, and monotonic delegation semantics |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, Rust/Actix, and Go share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
@@ -189,6 +191,8 @@ python -m pip install -e ".[mcp]"
 cmb-mcp
 ```
 
+MCP also exposes `cmb_compile_authority`, which compiles CMB-SDL authority declarations into deterministic `cmb.authority-ir.v1` objects. CMB-SDL makes capability, scope, purpose, expiry, evidence requirements, and delegation limits explicit; a consuming runtime must still enforce the resulting boundary.
+
 The Pages deployment publishes `/.well-known/agent-card.json` and `/agents/registry.json`. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
 
 ## Install
@@ -201,6 +205,7 @@ cmb-provenance --version
 cmb-provenance selftest
 cmbc validate --policy cmb.toml
 cmbc selftest --policy cmb.toml
+cmb-sdl compile examples/cmb_sdl/research.cmb --output dist/research.authority.json
 ```
 
 For the optional Ed25519 human-authorization commands:
