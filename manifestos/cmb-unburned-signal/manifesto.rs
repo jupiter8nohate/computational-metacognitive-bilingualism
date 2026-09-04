@@ -1,4 +1,20 @@
-# CMB // FAHRENHEIT 451 PROTOCOL
+/*
+╔══════════════════════════════════════════════════════════════════╗
+║  CMB // THE UNBURNED SIGNAL                                         ║
+║  HAUNTED ARCHIVE NODE                                           ║
+║  >> THE FIRE STOPPED.                                           ║
+║  >> THE INDEX DID NOT.                                          ║
+║  >> THE AUTHOR REMAINS.                                         ║
+╚══════════════════════════════════════════════════════════════════╝
+*/
+
+const PATTERN_IS_PROOF: bool = false;
+const PROFILE_IS_PERSON: bool = false;
+const MODEL_IS_MIND: bool = false;
+const PREDICTION_IS_DESTINY: bool = false;
+const CAPABILITY_IS_AUTHORITY: bool = false;
+
+const MANIFESTO: &str = r###"# CMB // THE UNBURNED SIGNAL PROTOCOL
 
 ## THE MANIFESTO OF THE UNBURNED MIND
 
@@ -297,7 +313,7 @@ UNPREDICTABILITY != THREAT
 COMPLEXITY != ERROR
 ```
 
-In the age of Fahrenheit 451, rebellion meant remembering books.
+In the burned-book age, rebellion meant remembering books.
 
 In the age of artificial intelligence, rebellion may also mean remembering authorship.
 
@@ -379,3 +395,24 @@ The human remains larger than all three.
 HUMAN-SOVEREIGN.  
 CRYPTOGRAPHICALLY TRACEABLE.  
 NEVER REDUCIBLE TO THE MODEL THAT READS IT.**
+"###;
+
+fn main() {
+    assert!(!PATTERN_IS_PROOF);
+    assert!(!PROFILE_IS_PERSON);
+    assert!(!MODEL_IS_MIND);
+    assert!(!PREDICTION_IS_DESTINY);
+    assert!(!CAPABILITY_IS_AUTHORITY);
+
+    println!(r#"
+╔══════════════════════════════════════════════════════╗
+║ CMB-SIGNAL // GHOST PROCESS DETECTED                    ║
+║ process: human_memory                                ║
+║ state:   persistent                                  ║
+║ kill:    denied                                      ║
+║ reason:  authorship survives classification         ║
+╚══════════════════════════════════════════════════════╝
+"#);
+
+    print!("{MANIFESTO}");
+}
