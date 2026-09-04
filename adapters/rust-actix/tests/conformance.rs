@@ -3,8 +3,7 @@ use cmb_boundary_actix::{
 };
 use serde::Deserialize;
 
-const FIXTURE_JSON: &str =
-    include_str!("../../../conformance/boundary.v1.cases.json");
+const FIXTURE_JSON: &str = include_str!("../../../conformance/boundary.v1.cases.json");
 
 #[derive(Debug, Deserialize)]
 struct Fixture {
@@ -75,7 +74,8 @@ fn event_rejects_unknown_fields() {
       "machine_authority":true
     }"#;
 
-    let error = serde_json::from_str::<BoundaryEvent>(invalid).expect_err("unknown field must fail");
+    let error =
+        serde_json::from_str::<BoundaryEvent>(invalid).expect_err("unknown field must fail");
     assert!(error.to_string().contains("unknown field"));
 }
 
