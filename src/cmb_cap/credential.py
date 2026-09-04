@@ -81,6 +81,16 @@ def issue_capability(
     if current >= expires:
         raise CapabilityError("Cannot issue an already-expired authority.")
 
+    private_raw = _decode_key(private_key_b64, 32, "private key")
+    Ed25519PrivateKey, _, Encoding, PublicFormat = _crypto()
+    private_key = Ed25519PrivateKey.from_private_bytes(private_raw)
+    public_raw = private_key.public_key().public_bytes(
+        encoding=Encoding.Raw,
+        format=PublicFormat.Raw,
+    )
+    public_b64 = base64.b64encode(public_raw).decode("ascii")
+    fingerprint = "sha256:" + hashlib.sha256(public_raw).hexdigest()
+
     parent_digest: str | None = None
     if parent_credential is not None:
         if parent_credential.get("parent_credential_digest") is not None:
@@ -98,6 +108,12 @@ def issue_capability(
             != authority_ir["issuer"]["id"]
         ):
             raise CapabilityError("Child and parent must retain the same root human issuer.")
+        parent_method = parent_credential["proof"]["verification_method"]
+        if parent_method != "cmb:key:" + fingerprint:
+            raise CapabilityError(
+                "CMB-CAP-1 delegated credentials must be signed by the same "
+                "verified root key as the parent credential."
+            )
         try:
             validate_delegation(
                 parent_credential["authority"],
@@ -108,15 +124,6 @@ def issue_capability(
             raise CapabilityError(str(exc)) from exc
         parent_digest = credential_digest(parent_credential)
 
-    private_raw = _decode_key(private_key_b64, 32, "private key")
-    Ed25519PrivateKey, _, Encoding, PublicFormat = _crypto()
-    private_key = Ed25519PrivateKey.from_private_bytes(private_raw)
-    public_raw = private_key.public_key().public_bytes(
-        encoding=Encoding.Raw,
-        format=PublicFormat.Raw,
-    )
-    public_b64 = base64.b64encode(public_raw).decode("ascii")
-    fingerprint = "sha256:" + hashlib.sha256(public_raw).hexdigest()
     issued_at = _format_time(current)
     token_nonce = nonce or secrets.token_hex(16)
     if len(token_nonce) < 16:
@@ -203,6 +210,11 @@ def verify_capability(
                     result.append("CAP_PARENT_DIGEST_MISMATCH")
                 else:
                     try:
+                        if (
+                            parent_credential["proof"]["verification_method"]
+                            != credential["proof"]["verification_method"]
+                        ):
+                            result.append("CAP_DELEGATION_SIGNER_MISMATCH")
                         if (
                             parent_credential["authority"]["issuer"]["id"]
                             != credential["authority"]["issuer"]["id"]
