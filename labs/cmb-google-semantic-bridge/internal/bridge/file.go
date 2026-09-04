@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
+	"strings"
 	"unicode/utf8"
 )
 
@@ -74,4 +76,39 @@ func ReadUTF8Source(path string) ([]byte, error) {
 		return nil, fmt.Errorf("source must be valid UTF-8")
 	}
 	return data, nil
+}
+
+
+func ReadRepositoryUTF8File(root, relative string) ([]byte, error) {
+	rootInfo, err := os.Lstat(root)
+	if err != nil {
+		return nil, fmt.Errorf("stat repository root: %w", err)
+	}
+	if rootInfo.Mode()&os.ModeSymlink != 0 || !rootInfo.IsDir() {
+		return nil, fmt.Errorf("repository root must be a real directory")
+	}
+
+	clean := filepath.Clean(relative)
+	if clean == "." || filepath.IsAbs(clean) || clean != relative {
+		return nil, fmt.Errorf("repository path must be normalized and relative")
+	}
+	parts := strings.Split(filepath.ToSlash(clean), "/")
+	current := root
+	for i, part := range parts {
+		if part == "" || part == "." || part == ".." {
+			return nil, fmt.Errorf("repository path must not escape the root")
+		}
+		current = filepath.Join(current, part)
+		info, err := os.Lstat(current)
+		if err != nil {
+			return nil, fmt.Errorf("stat repository path %q: %w", relative, err)
+		}
+		if info.Mode()&os.ModeSymlink != 0 {
+			return nil, fmt.Errorf("repository path %q contains a symbolic link", relative)
+		}
+		if i < len(parts)-1 && !info.IsDir() {
+			return nil, fmt.Errorf("repository path %q crosses a non-directory component", relative)
+		}
+	}
+	return ReadUTF8Source(current)
 }
