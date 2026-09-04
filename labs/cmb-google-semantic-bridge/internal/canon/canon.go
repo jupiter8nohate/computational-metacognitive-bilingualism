@@ -31,6 +31,7 @@ type Document struct {
 type Loaded struct {
 	Document Document
 	SHA256   string
+	Bytes    []byte
 }
 
 func LoadFile(path string) (Loaded, error) {
@@ -71,6 +72,7 @@ func LoadFile(path string) (Loaded, error) {
 	return Loaded{
 		Document: document,
 		SHA256:   hex.EncodeToString(sum[:]),
+		Bytes:    append([]byte(nil), data...),
 	}, nil
 }
 
