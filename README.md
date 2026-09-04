@@ -113,6 +113,19 @@ ZODIAC_SYMBOL != SCIENTIFIC_PERSONALITY_MODEL
 
 GitHub is the project's source, audit trail, provenance backend, and implementation record. The one-page policy summary is the intended public front door.
 
+## Distribution ecosystem
+
+CMB now has dedicated distribution surfaces rather than treating the entire framework as one program:
+
+- **Python registry:** `cmb-provenance`, prepared for PyPI trusted publishing.
+- **TypeScript registry:** `@cmb-sovereignty/core`, a typed web/agent interoperability layer.
+- **CMB Cognitive Lens:** a click-to-scan, local-only browser extension prototype for observable attention-capture signals.
+- **CMB-Z13 Playground:** a zero-build interactive Human / Machine / Flamingoglyph translation surface.
+- **Publishing guide:** [Registry Publishing](docs/REGISTRY_PUBLISHING.md).
+- **Architecture:** [CMB Distribution Ecosystem](docs/ECOSYSTEM_DISTRIBUTION.md).
+
+The extension preserves a strict epistemic boundary: `ATTENTION_SIGNAL != PROOF_OF_PROFILING`. It reports observable interface behavior and does not claim access to hidden platform models or server-side profiling.
+
 ## Project maturity
 
 | Layer | Status | Purpose |
