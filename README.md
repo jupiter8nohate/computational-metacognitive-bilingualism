@@ -19,6 +19,24 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 Version 1.3.1 turns the original standalone experiment into an installable package with strict schemas, explicit artifact coverage, whole-operation ledger locking, normalized UTC timestamps, safe CLI errors, and automated tests.
 
+## Canonical CMB artifacts
+
+The repository now treats the following public works as first-class CMB artifacts:
+
+- [`MANIFESTO.md`](MANIFESTO.md) — the core CMB human-sovereignty manifesto.
+- [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
+- [`Demon's Need Attention — D.N.A.`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — the attention-economy branch of CMB: a code-manifesto about engagement, behavioral profiling, data mining, consumption, and cognitive sovereignty.
+
+D.N.A. means **Demon's Need Attention**. In this work, “demons” is a metaphor for attention-extractive loops, incentives, feeds, and systems that become stronger when human attention is repeatedly captured. The central boundary remains:
+
+```text
+ATTENTION != CONSENT
+ENGAGEMENT != LOVE
+PROFILE != PERSON
+PREDICTION != DESTINY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
 ## Install
 
 From a checked-out copy of this repository:
@@ -60,19 +78,23 @@ The receipt declares `coverage.type = "explicit_file_set"` and `excludes_unliste
 
 ## CLI
 
-Seal one or more public artifacts:
+Seal the canonical public CMB artifact set:
 
 ```bash
-cmb-provenance seal MANIFESTO.md \
+cmb-provenance seal \
+  MANIFESTO.md \
   CMB_Polyglot_Firewall_Specification.md \
+  manifestos/DEMONS_NEED_ATTENTION_DNA.md \
   --output cmb-source.cmb-receipt.json
 ```
 
 Verify the same explicit set:
 
 ```bash
-cmb-provenance verify MANIFESTO.md \
+cmb-provenance verify \
+  MANIFESTO.md \
   CMB_Polyglot_Firewall_Specification.md \
+  manifestos/DEMONS_NEED_ATTENTION_DNA.md \
   --receipt cmb-source.cmb-receipt.json \
   --check-git-commit
 ```
@@ -95,6 +117,7 @@ External locations and displayed timestamps remain explicitly unverified referen
 
 - [`MANIFESTO.md`](MANIFESTO.md) — the public CMB human-sovereignty manifesto.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
+- [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — **Demon's Need Attention — D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
 - [`src/cmb_provenance`](src/cmb_provenance) — the supported v1.3.1 package and stable API.
 - [`tests`](tests) — deterministic, corruption, concurrency, schema, and CLI tests.
 - [`cmb_provenance_v1_3.py`](cmb_provenance_v1_3.py) — the retained historical v1.3.0 standalone tool.
@@ -111,7 +134,7 @@ pytest
 python3 -m build
 ```
 
-CI runs the tests on Python 3.10–3.13. Tagging `v1.3.1` activates the signed-release workflow, which builds the wheel and source distribution, generates `SHA256SUMS`, signs the artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
+CI runs the tests on Python 3.10–3.13. Tagging `v1.3.1` activates the signed-release workflow, which builds the wheel and source distribution, seals the canonical public CMB artifact set, generates `SHA256SUMS`, signs the release artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
 
 ## Evidence standard
 
