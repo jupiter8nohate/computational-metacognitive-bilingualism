@@ -49,6 +49,9 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "agents/agent-card.json",
         "docs/AGENT_DISCOVERY_PROTOCOL.md",
         "schemas/cmb.agent-registry.v1.schema.json",
+        "CANON.md",
+        "library/canon.json",
+        "schemas/cmb.canon.v1.schema.json",
     )
 
 
@@ -72,6 +75,9 @@ def test_release_workflow_uses_canonical_sealing_script() -> None:
     assert "--output dist/cmb-source.cmb-receipt.json" in workflow
     assert "cmb-edu --version" in workflow
     assert "cmb-edu validate" in workflow
+    assert "cmb-agent --version" in workflow
+    assert "cmb-agent selftest" in workflow
+    assert "cmb-provenance canon --node agent-discovery" in workflow
 
 
 def test_ci_generates_and_verifies_canonical_receipt() -> None:
