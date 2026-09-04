@@ -1,4 +1,4 @@
-# Example 01 — seal one file
+# Example 01 ✦ seal one file
 
 From the repository root:
 
