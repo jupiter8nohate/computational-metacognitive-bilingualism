@@ -114,6 +114,25 @@ def cmb_compile_authority(source: str) -> dict[str, Any]:
 
 
 @mcp.tool()
+def cmb_verify_capability(
+    credential: dict[str, Any],
+    expected_key_fingerprint: str = "",
+) -> dict[str, Any]:
+    """Verify a public CMB-CAP credential. Private signing keys are never accepted."""
+    ok, failures = verify_capability(
+        credential,
+        expected_key_fingerprint=expected_key_fingerprint or None,
+    )
+    return {"valid": ok, "failures": list(failures)}
+
+
+@mcp.tool()
+def cmb_capability_extension() -> dict[str, Any]:
+    """Return the experimental CMB-CAP A2A extension declaration."""
+    return a2a_extension_declaration(required=False)
+
+
+@mcp.tool()
 def cmb_distribution_boundary() -> dict[str, Any]:
     """Return the agent distribution covenant after validating its safety invariants."""
     validate_distribution_policy()
