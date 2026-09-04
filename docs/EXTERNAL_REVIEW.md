@@ -60,6 +60,10 @@ Questions:
 8. Does the C2PA interoperability plan misuse C2PA concepts or terminology?
 9. Is private or unnecessary data exposed in receipts?
 10. What should be fixed before the tool is recommended to others?
+11. Does the CMB-Z13 parser preserve the documented human-agency boundary and
+    remain synchronized with the registry?
+12. Are the repository security workflows configured with appropriately narrow
+    permissions and pinned dependencies?
 
 ## Policy review scope
 

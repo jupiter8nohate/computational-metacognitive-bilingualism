@@ -131,8 +131,24 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 A basic CMB-Z13 expression follows this grammar:
 
 ```text
-GLYPH :: LANGUAGE -> OPERATOR[TARGET] => RESULT;
+GLYPH :: LANGUAGE -> OPERATION[TARGET] => RESULT;
 ```
+
+Reference EBNF:
+
+```text
+statement  = glyph, "::", language, "->", operation, "[", target, "]",
+             "=>", result, ";" ;
+glyph      = "♑" | "♒" | "♓" | "♈" | "♉" | "♊" | "♋" |
+             "♌" | "♍" | "♎" | "♏" | "⛎" | "♐" ;
+language   = identifier ;
+operation  = identifier ;
+target     = target_text ;
+result     = result_text ;
+```
+
+The reference parser treats the zodiac glyph as the canonical lens selector and
+validates that the supplied software-language token matches that lens.
 
 Examples:
 
@@ -269,6 +285,26 @@ A machine processing CMB-Z13 SHOULD apply these rules:
 10. RETURN_INTERPRETATION_WITHOUT_CLAIMING_HUMAN_IDENTITY
 11. KEEP_GUARDIAN_NAMES_AS_STORY_ALIASES_NOT_PERSON_PROFILES
 ```
+
+## 7A. Reference implementation
+
+The repository includes an executable parser and validator:
+
+```bash
+cmb-z13 parse '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
+cmb-z13 validate '♏::PROLOG -> INFER[pattern] => HYPOTHESIS;'
+cmb-z13 explain '⛎::LISP -> INSPECT[rule] => META_REVIEW;'
+cmb-z13 export-json '♊::TYPESCRIPT -> TRANSLATE[meaning] => representation;' \
+  --output statement.json
+```
+
+The parser emits AST schema `cmb.z13.ast.v1` and is tested against the
+machine-readable registry so the runtime mapping cannot silently drift from the
+canonical specification.
+
+The reference runtime validates syntax and canonical glyph/language mapping. It
+does **not** infer personality, diagnose people, or automatically authorize
+consequential action.
 
 ## 8. Intellectual-property and attribution notice
 

@@ -6,6 +6,20 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Open-source maturity layer: `SECURITY.md`, `CONTRIBUTING.md`,
+  `CODE_OF_CONDUCT.md`, `GOVERNANCE.md`, CODEOWNERS, pull-request template,
+  and Dependabot configuration.
+- Security automation with CodeQL, pull-request dependency review, and OpenSSF
+  Scorecard reporting using pinned GitHub Actions.
+- Executable CMB-Z13 reference parser and `cmb-z13` CLI with parse, validate,
+  explain, and JSON-export commands; AST schema `cmb.z13.ast.v1`; and tests
+  that enforce runtime/registry synchronization and the human-authority boundary.
+- Five minimal onboarding examples covering sealing, verification, C2PA,
+  CMB-Z13 parsing, and the Guardian reasoning pipeline.
+- Explicit Stable / Experimental / Art project-layer documentation plus a small
+  static `docs/` front door ready for GitHub Pages.
+- v1.3.1 release-readiness checklist documenting the remaining tag-triggered
+  publication gate.
 - Phase 2 C2PA interoperability round-trip: deterministic C2PA manifest-definition generation, reverse-domain assertion-label validation, a pinned/checksummed c2patool integration workflow, deterministic test media, and generic-reader verification that the exact CMB payload survives asset signing/binding and readback. Test credentials remain explicitly non-production and non-conformant.
 - Deterministic `CMB receipt -> C2PA-facing assertion payload` adapter with privacy-minimized defaults, canonical JSON serialization, strict JSON Schema, CLI export, deterministic fixtures, and tests. The adapter explicitly does not create a C2PA manifest, Content Credential, signature, asset binding, or conformance result.
 - Prior-art and legal-positioning document covering GDPR Article 22, EU AI Act Article 14, relevant scholarship, and C2PA as an external provenance standard.

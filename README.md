@@ -28,6 +28,20 @@ You should not need the entire CMB universe to understand the thesis.
 - **Independent validation status:** [Independent Review Requested](docs/EXTERNAL_REVIEW.md)
 - **Optional symbolic-language deep dive:** [CMB-Z13™](manifestos/CMB_Z13_LANGUAGE_SPEC.md), including the 13 Guardian Modes teaching layer
 
+## Project layers
+
+CMB is intentionally multidisciplinary, but the repository now separates its
+evaluation layers:
+
+- **Stable / operational:** provenance software, schemas, release tooling,
+  C2PA interoperability, and policy.
+- **Experimental:** CMB-Z13 parser/runtime, Guardian Modes, and symbolic
+  language research.
+- **Art / canon:** manifestos, code-poetry, and symbolic worldbuilding.
+
+See [Project Layers](docs/PROJECT_LAYERS.md). A metaphor in the art layer is
+not automatically a technical guarantee in the operational layer.
+
 ### What CMB does not claim
 
 ```text
@@ -248,6 +262,53 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`ATTRIBUTION.md`](ATTRIBUTION.md) and [`CITATION.cff`](CITATION.cff) — authorship boundaries and citation metadata.
 - [`RELEASE.md`](RELEASE.md) — the checksum, Sigstore, attestation, and canonical-sealing release procedure.
 
+## Five-minute examples
+
+Start with [`examples/README.md`](examples/README.md):
+
+1. seal one file;
+2. verify one receipt;
+3. inspect the C2PA round-trip boundary;
+4. parse one CMB-Z13 verification statement;
+5. read the Guardian human-decision pipeline.
+
+## CMB-Z13 reference runtime
+
+The symbolic language now has an executable reference parser:
+
+```bash
+cmb-z13 parse '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
+cmb-z13 validate '♏::PROLOG -> INFER[pattern] => HYPOTHESIS;'
+cmb-z13 explain '⛎::LISP -> INSPECT[rule] => META_REVIEW;'
+```
+
+The runtime emits schema `cmb.z13.ast.v1`, validates glyph/language pairing,
+and is regression-tested against `library/cmb-z13.registry.json`.
+
+```text
+PARSER != PERSONALITY_TEST
+SYMBOL != PERSON
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+## Open-source governance and security
+
+- [Security policy](SECURITY.md)
+- [Contributing](CONTRIBUTING.md)
+- [Community conduct](CODE_OF_CONDUCT.md)
+- [Governance](GOVERNANCE.md)
+- [Independent review scope](docs/EXTERNAL_REVIEW.md)
+- [Release readiness](docs/RELEASE_READINESS.md)
+
+Dependabot, CodeQL, dependency review, and OpenSSF Scorecard workflows are part
+of the repository's maintenance layer.
+
+## Documentation front door
+
+A small static front page now lives at [`docs/index.html`](docs/index.html).
+It is ready to be served from the repository's `/docs` directory with GitHub
+Pages; enabling Pages remains a repository setting, not a code claim.
+
 ## Development
 
 Python 3.10 or newer is required.
@@ -258,7 +319,7 @@ pytest
 python3 -m build
 ```
 
-CI runs the tests on Python 3.10–3.13. The canonical-receipt CI job independently seals and verifies the current canonical artifact set inside a Git worktree. Tagging `v1.3.1` activates the signed-release workflow, which builds the wheel and source distribution, seals the canonical public CMB artifact set, generates `SHA256SUMS`, signs the release artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
+CI runs the tests on Python 3.10–3.13. The CMB-Z13 parser tests also enforce runtime/registry synchronization. The canonical-receipt CI job independently seals and verifies the current canonical artifact set inside a Git worktree. Tagging `v1.3.1` activates the signed-release workflow, which builds the wheel and source distribution, seals the canonical public CMB artifact set, generates `SHA256SUMS`, signs the release artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
 
 ## Evidence standard
 
