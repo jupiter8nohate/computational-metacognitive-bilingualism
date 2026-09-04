@@ -7,3 +7,5 @@ These examples are intentionally small. A new contributor should be able to unde
 3. [Understand the C2PA round-trip](03_c2pa_roundtrip/README.md)
 4. [Parse a CMB-Z13 verification statement](04_z13_verify_claim/README.md)
 5. [Read the Guardian safety pipeline](05_guardian_pipeline/README.md)
+
+6. [Enforce explicit policy facts with a FastAPI boundary guard](06_fastapi_boundary/README.md)
