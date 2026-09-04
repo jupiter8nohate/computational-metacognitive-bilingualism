@@ -21,6 +21,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [`catalog.json`](catalog.json) — machine-indexable catalog of CMB public artifacts.
 - [`../MANIFESTO.md`](../MANIFESTO.md) — core human-sovereignty manifesto.
 - [`../manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](../manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — perspective-aware library model and MissingNo Clause.
+- [`../manifestos/CMB_Z13_MANIFESTO.md`](../manifestos/CMB_Z13_MANIFESTO.md) — CMB-Z13 public manifesto and thirteen-lens declaration.
+- [`../manifestos/CMB_Z13_LANGUAGE_SPEC.md`](../manifestos/CMB_Z13_LANGUAGE_SPEC.md) — CMB-Z13 symbolic language specification.
+- [`cmb-z13.registry.json`](cmb-z13.registry.json) — machine-readable CMB-Z13 mapping, vectors, processing cycle, and interpretation boundaries.
 - [`../policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](../policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — institutional policy proposal.
 
 ## Interpretation boundary

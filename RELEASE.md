@@ -13,7 +13,12 @@ Version 1.3.1 uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `MANIFESTO.md`
    - `CMB_Polyglot_Firewall_Specification.md`
    - `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
+   - `manifestos/CMB_UNCLASSIFIABLE_INDEX.md`
+   - `manifestos/CMB_Z13_MANIFESTO.md`
+   - `manifestos/CMB_Z13_LANGUAGE_SPEC.md`
+   - `library/cmb-z13.registry.json`
    - `policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`
+   - `library/catalog.json`
 
 ## Publish
 
@@ -38,12 +43,17 @@ The canonical seal receipt explicitly covers:
 MANIFESTO.md
 CMB_Polyglot_Firewall_Specification.md
 manifestos/DEMONS_NEED_ATTENTION_DNA.md
+manifestos/CMB_UNCLASSIFIABLE_INDEX.md
+manifestos/CMB_Z13_MANIFESTO.md
+manifestos/CMB_Z13_LANGUAGE_SPEC.md
+library/cmb-z13.registry.json
 policy/CMB_GLOBAL_ADVOCACY_CHARTER.md
+library/catalog.json
 ```
 
 Because the receipt uses explicit-file-set coverage, adding a file to the repository does not silently add it to the provenance claim. New canonical artifacts must be deliberately added to `CANONICAL_PUBLIC_ARTIFACTS`, the tests, and this documentation.
 
-The Global Advocacy Charter is treated as a canonical public policy proposal. Its inclusion in a cryptographic receipt proves integrity of the covered bytes under the receipt's stated conditions; it does not transform proposed principles into enacted law or independently establish legal rights.
+The CMB-Z13 manifesto, language specification, and machine registry are treated as one canonical symbolic-language bundle. The Global Advocacy Charter is treated as a canonical public policy proposal. Its inclusion in a cryptographic receipt proves integrity of the covered bytes under the receipt's stated conditions; it does not transform proposed principles into enacted law or independently establish legal rights.
 
 No long-lived signing key is stored in the repository. A signature establishes a verifiable relationship between release bytes and the workflow identity; it does not independently prove creative authorship or legal ownership.
 

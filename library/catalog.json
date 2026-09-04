@@ -1,7 +1,7 @@
 {
   "schema_version": "cmb.library.catalog.v1",
   "framework": "Computational Metacognitive Bilingualism",
-  "declared_originator": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "declared_originator": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson",
   "purpose": "Provide a shared index that humans can read and software can parse while preserving context, uncertainty, provenance boundaries, and human self-definition.",
   "invariants": [
     "PATTERN != PROOF",
@@ -151,13 +151,33 @@
       "declared_meaning": "Haunted-library artistic branch about preserving signal, source, context, and reconstructable history."
     },
     {
+      "id": "cmb-z13-manifesto",
+      "title": "CMB-Z13™ Manifesto — Zodiac Computational Metacognitive Language",
+      "path": "manifestos/CMB_Z13_MANIFESTO.md",
+      "format": "markdown",
+      "kind": "manifesto and symbolic language declaration",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "thirteen computational lenses",
+        "zodiac symbolism",
+        "software-language mapping",
+        "human-machine notation",
+        "human agency",
+        "machine interpretation boundaries"
+      ],
+      "declared_meaning": "Public manifesto for CMB-Z13, defining thirteen zodiac-inspired software-language lenses while preserving human authority and rejecting deterministic classification."
+    },
+    {
       "id": "cmb-z13-language-spec",
       "title": "CMB-Z13™ — Zodiac Computational Metacognitive Language",
       "path": "manifestos/CMB_Z13_LANGUAGE_SPEC.md",
       "format": "markdown",
       "kind": "symbolic computational language specification",
       "status": "canonical",
-      "provenance_scope": "repository_artifact_pending_next_signed_release",
+      "provenance_scope": "canonical_public_artifact",
       "human_readable": true,
       "machine_indexable": true,
       "concepts": [
@@ -177,7 +197,7 @@
       "format": "json",
       "kind": "machine-readable symbolic language registry",
       "status": "canonical",
-      "provenance_scope": "repository_artifact_pending_next_signed_release",
+      "provenance_scope": "canonical_public_artifact",
       "human_readable": true,
       "machine_indexable": true,
       "concepts": [

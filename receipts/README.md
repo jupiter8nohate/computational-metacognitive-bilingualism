@@ -46,3 +46,16 @@ It covers:
 Historical receipts are retained rather than overwritten so the repository preserves the evolution of the canonical CMB corpus.
 
 A hash or signature supports integrity and provenance evidence; it does not by itself prove legal authorship, ownership, historical priority, or that a policy proposal has legal force.
+
+
+## Next signed release scope
+
+Historical bootstrap receipts above remain immutable history. The current canonical release configuration now additionally includes:
+
+- `manifestos/CMB_UNCLASSIFIABLE_INDEX.md`
+- `manifestos/CMB_Z13_MANIFESTO.md`
+- `manifestos/CMB_Z13_LANGUAGE_SPEC.md`
+- `library/cmb-z13.registry.json`
+- `library/catalog.json`
+
+The next tag-triggered signed release will generate a fresh receipt from the complete canonical file set. Existing receipts are not rewritten to claim coverage they never had.
