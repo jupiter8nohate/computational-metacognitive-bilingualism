@@ -2,7 +2,7 @@
 
 The project has enough conceptual surface area. The next gains come from publishing, testing, outside review, and adoption.
 
-## P0 — first signed release
+## P0 ✦ first signed release
 
 Publish the first GitHub release through the existing tag-triggered workflow.
 
@@ -18,13 +18,13 @@ Release acceptance criteria:
 
 Until that happens, release automation is evidence of readiness, not evidence of a completed release.
 
-## P0 — one independent reviewer
+## P0 ✦ one independent reviewer
 
 Issue #5 is the primary outside-validation gate.
 
 The project wants one serious security/provenance review before seeking broad endorsement.
 
-## P1 — repository hardening
+## P1 ✦ repository hardening
 
 - SECURITY.md
 - CONTRIBUTING.md
@@ -36,7 +36,7 @@ The project wants one serious security/provenance review before seeking broad en
 - explicit threat model
 - enable platform-side Dependency Graph, private vulnerability reporting, and branch protections described in [Repository settings](REPOSITORY_SETTINGS.md)
 
-## P1 — CMB-Z13 executable notation
+## P1 ✦ CMB-Z13 executable notation
 
 The experimental reference parser now supports:
 
@@ -49,7 +49,7 @@ cmb-z13 export-json
 
 Next parser work should focus on versioned grammar, multi-statement documents, conformance fixtures, and falsifiable behavior rather than adding more symbolic categories.
 
-## P2 — production C2PA identity decision
+## P2 ✦ production C2PA identity decision
 
 Before production entity-specific assertions:
 
@@ -58,7 +58,7 @@ Before production entity-specific assertions:
 - complete external review;
 - decide whether formal C2PA conformance is appropriate.
 
-## P2 — documentation publishing
+## P2 ✦ documentation publishing
 
 The repository now includes a buildable MkDocs site. Enable GitHub Pages only after the repository owner reviews the public information architecture and desired domain.
 
