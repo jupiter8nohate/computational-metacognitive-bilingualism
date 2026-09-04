@@ -62,6 +62,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
 - **Conceptual front door:** [CMB: Three Dimensions of Distinction](docs/CMB_DISTINCTION.md)
 - **Research position:** [CMB Research Position](docs/CMB_RESEARCH_POSITION.md)
+- **Creator provenance:** [CMB Creator Provenance Protocol](docs/CREATOR_PROVENANCE.md)
 - **Research backbone:** [CMB Cognitive Sovereignty Dissertation](docs/dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md)
 - **Formal semantics:** [Chapter 31 - Formal CMB Semantics](docs/dissertation/31_FORMAL_SEMANTICS.md)
 - **Executable policy contract:** [CMB Policy Specification v1.0](spec/CMB-SPEC.md)
@@ -125,15 +126,19 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`Demon's Need Attention - D.N.A.`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) - the attention-economy branch of CMB: a code-manifesto about engagement, behavioral profiling, data mining, consumption, and cognitive sovereignty.
 - [`The Chicken Run Manifesto`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - a D.N.A./FGC literary manifesto using the coop as an allegory for institutional and algorithmic confinement, with explicit human-agency boundaries.
 - [`CMB // The Unclassifiable Index`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - the MissingNo–Pokédex manifesto defining CMB as a human/machine-readable library of perspective, uncertainty, context, and provenance.
+- [`HARMONI // Perfect-Play Epistemics`](manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) - the epistemic-triage code-art layer: evidence-bounded claims, MissingNo Recovery, and human authority at the unknown.
 - [`CMB-Z13™ Manifesto`](manifestos/CMB_Z13_MANIFESTO.md) - the public declaration of the thirteen-lens Zodiac Computational Metacognitive Language.
 - [`CMB-Z13™ Language Specification`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) - the formal symbolic notation mapping zodiac archetypes to C, Rust, Haskell, C++, Java, TypeScript, Python, Swift, Go, Kotlin, Prolog, Common Lisp, and Julia while preserving `HUMAN_AGENCY > MACHINE_AUTHORITY`.
 - [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) - the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
+- [`CMB Creator Provenance Protocol`](docs/CREATOR_PROVENANCE.md) - privacy-safe separation of creator genealogy context, intellectual lineage, symbolic lineage, and evidence categories.
+- [`CMB Creator Provenance Registry v1`](library/creator-provenance.json) - machine-readable creator-provenance and category-separation record.
+- [`CMB Creator Provenance v1 Schema`](schemas/cmb.creator-provenance.v1.schema.json) - strict validation contract that fails closed on privacy and epistemic boundaries.
 - [`CMB Digital Library Catalog`](library/catalog.json) - the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
 - [`CMB Global Advocacy Charter v1.1`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
 - [`CMB-EDU Kids`](docs/CMB_EDU_KIDS.md) - the canonical child-facing Flamingoglyph computational-literacy curriculum.
 - [`CMB Metacognitive Context Envelope v1`](schemas/cmb.edu.v1.schema.json) - the canonical strict schema for declared context, sovereignty boundaries, and deny-by-default privacy declarations.
 
-CMB-Z13 is now part of the canonical provenance sealing set. The next tag-triggered signed release will seal the manifesto, language specification, machine registry, and the rest of the canonical CMB corpus as one explicit file set.
+CMB-Z13, HARMONI, and the Creator Provenance bundle are part of the canonical provenance sealing set. The next tag-triggered signed release will seal their exact bytes together with the rest of the canonical CMB corpus as one explicit file set.
 
 The project now has a deliberate progression:
 
@@ -257,9 +262,13 @@ cmb-provenance seal \
   manifestos/DEMONS_NEED_ATTENTION_DNA.md \
   manifestos/DNA_CHICKEN_RUN_MANIFESTO.md \
   manifestos/CMB_UNCLASSIFIABLE_INDEX.md \
+  manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md \
   manifestos/CMB_Z13_MANIFESTO.md \
   manifestos/CMB_Z13_LANGUAGE_SPEC.md \
   library/cmb-z13.registry.json \
+  docs/CREATOR_PROVENANCE.md \
+  library/creator-provenance.json \
+  schemas/cmb.creator-provenance.v1.schema.json \
   policy/CMB_GLOBAL_ADVOCACY_CHARTER.md \
   docs/CMB_EDU_KIDS.md \
   schemas/cmb.edu.v1.schema.json \
@@ -280,9 +289,13 @@ cmb-provenance verify \
   manifestos/DEMONS_NEED_ATTENTION_DNA.md \
   manifestos/DNA_CHICKEN_RUN_MANIFESTO.md \
   manifestos/CMB_UNCLASSIFIABLE_INDEX.md \
+  manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md \
   manifestos/CMB_Z13_MANIFESTO.md \
   manifestos/CMB_Z13_LANGUAGE_SPEC.md \
   library/cmb-z13.registry.json \
+  docs/CREATOR_PROVENANCE.md \
+  library/creator-provenance.json \
+  schemas/cmb.creator-provenance.v1.schema.json \
   policy/CMB_GLOBAL_ADVOCACY_CHARTER.md \
   docs/CMB_EDU_KIDS.md \
   schemas/cmb.edu.v1.schema.json \
@@ -364,9 +377,13 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) - **Demon's Need Attention - D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
 - [`manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - **The Chicken Run Manifesto**, the D.N.A./FGC literary-allegory branch.
 - [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - **The Unclassifiable Index**, CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
+- [`manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md`](manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) - **HARMONI**, CMB's perfect-play epistemics and MissingNo Recovery code-art layer.
 - [`manifestos/CMB_Z13_MANIFESTO.md`](manifestos/CMB_Z13_MANIFESTO.md) - **CMB-Z13™ manifesto**, the human-readable declaration of the thirteen computational lenses and Guardian Modes.
 - [`manifestos/CMB_Z13_LANGUAGE_SPEC.md`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) - **CMB-Z13™**, the Zodiac Computational Metacognitive Language specification.
 - [`library/cmb-z13.registry.json`](library/cmb-z13.registry.json) - machine-readable CMB-Z13 operator, vector, Guardian Mode, reasoning-pipeline, and interpretation registry.
+- [`docs/CREATOR_PROVENANCE.md`](docs/CREATOR_PROVENANCE.md) - human-readable creator-provenance and epistemic-boundary protocol.
+- [`library/creator-provenance.json`](library/creator-provenance.json) - privacy-safe machine-readable creator-provenance registry.
+- [`schemas/cmb.creator-provenance.v1.schema.json`](schemas/cmb.creator-provenance.v1.schema.json) - strict creator-provenance validation schema.
 - [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the CMB Global Advocacy Charter v1.1.
 - [`library/README.md`](library/README.md) - human-readable entry point to the CMB digital library.
 - [`library/catalog.json`](library/catalog.json) - machine-indexable artifact catalog, sealed as part of the canonical public set.

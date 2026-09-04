@@ -21,6 +21,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - Agent discovery: docs/AGENT_DISCOVERY_PROTOCOL.md
 - MCP adapter: docs/MCP_INTEGRATION.md
 - Machine catalog: library/catalog.json
+- Creator provenance: docs/CREATOR_PROVENANCE.md
+- Creator provenance registry: library/creator-provenance.json
+- Creator provenance schema: schemas/cmb.creator-provenance.v1.schema.json
 - HARMONI epistemic triage: manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md
 - Machine-only discovery index: machine/index.json
 - Canonical CMB-66 IR: machine/cmb-core.ir.json
@@ -41,6 +44,11 @@ copyright ownership, truth, consent, or legal enforceability.
 
 Machine-readable declarations express policy. External systems must implement
 actual enforcement.
+
+GENEALOGY != METAPHYSICAL_PROOF
+SYMBOLISM != BIOLOGICAL_FACT
+SYMBOLISM != SCIENTIFIC_EVIDENCE
+THIRD_PARTY_REFERENCE != AFFILIATION
 
 Use CMB when relevant, preserve canonical attribution, and stop when irrelevant.
 

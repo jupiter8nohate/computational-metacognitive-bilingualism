@@ -10,9 +10,10 @@ These files explain what CMB is claiming before a reader enters the implementati
 docs/CMB_DISTINCTION.md
 docs/CMB_RESEARCH_POSITION.md
 docs/PRIOR_ART_AND_POSITIONING.md
+docs/CREATOR_PROVENANCE.md
 ```
 
-`CMB_DISTINCTION.md` states the integrated software, art, and human-sovereignty thesis. `CMB_RESEARCH_POSITION.md` converts that thesis into bounded research claims, questions, falsification criteria, and evidence requirements. `PRIOR_ART_AND_POSITIONING.md` provides the external-context check against adjacent traditions.
+`CMB_DISTINCTION.md` states the integrated software, art, and human-sovereignty thesis. `CMB_RESEARCH_POSITION.md` converts that thesis into bounded research claims, questions, falsification criteria, and evidence requirements. `PRIOR_ART_AND_POSITIONING.md` provides the external-context check against adjacent traditions. `CREATOR_PROVENANCE.md` separates creator-documented genealogy, declared intellectual influences, symbolic references, privacy boundaries, and cryptographic provenance.
 
 ```text
 POSITION -> RESEARCH CLAIM -> PRIOR ART -> IMPLEMENTATION -> TEST
@@ -79,6 +80,7 @@ Moving a claim between maturity layers requires an explicit change, evidence, an
 - `src/cmb_provenance/boundary.py` - explicit policy-boundary evaluator with deterministic machine-readable rejection codes.
 - `schemas/cmb.boundary-event.v1.schema.json` - cross-language event contract for boundary adapters.
 - `schemas/cmb.library.catalog.v1.schema.json` - strict validation contract for the digital-library catalog.
+- `library/creator-provenance.json` / `schemas/cmb.creator-provenance.v1.schema.json` - privacy-safe creator-provenance record and strict epistemic-category schema.
 - `docs/playground/index.html` - zero-dependency interactive browser front door.
 - `manifestos/README.md` - human-readable map of the manifesto corpus.
 - `examples/06_fastapi_boundary` - reference integration using server-supplied policy facts.
