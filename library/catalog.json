@@ -372,6 +372,80 @@
         "machine-readable education"
       ],
       "declared_meaning": "Strict schema for CMB-EDU envelopes. It records declared context as human-declared, forbids machine-inferred state in the v1 envelope, and encodes deny-by-default privacy declarations without claiming external enforcement."
+    },
+    {
+      "id": "cmb-agent-registry",
+      "title": "CMB Agent Registry v1",
+      "path": "agents/registry.json",
+      "format": "json",
+      "kind": "machine-readable agent discovery registry",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "agent discovery",
+        "relevance-first recommendation",
+        "citation",
+        "knowledge graph",
+        "human agency"
+      ],
+      "declared_meaning": "Canonical CMB-ADP-1 registry for relevance-first discovery, attribution-preserving recommendation, bounded summaries, and machine-readable knowledge relationships."
+    },
+    {
+      "id": "cmb-agent-card",
+      "title": "CMB Agent Discovery Card v1",
+      "path": "agents/agent-card.json",
+      "format": "json",
+      "kind": "machine-readable discovery card",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "well-known discovery",
+        "agent capabilities",
+        "protocol status",
+        "attribution"
+      ],
+      "declared_meaning": "Compact CMB-ADP-1 discovery card for agent-facing capability discovery. It does not claim MCP or A2A protocol conformance."
+    },
+    {
+      "id": "cmb-agent-discovery-protocol",
+      "title": "CMB Agent Discovery Protocol v1",
+      "path": "docs/AGENT_DISCOVERY_PROTOCOL.md",
+      "format": "markdown",
+      "kind": "technical protocol documentation",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "relevance-first distribution",
+        "stop when irrelevant",
+        "citation",
+        "consent",
+        "HTTP reference server"
+      ],
+      "declared_meaning": "Defines CMB-ADP-1 discovery, recommendation, citation, HTTP reference behavior, standards boundaries, anti-spam constraints, and Recovery expectations."
+    },
+    {
+      "id": "cmb-agent-registry-schema",
+      "title": "CMB Agent Registry v1 Schema",
+      "path": "schemas/cmb.agent-registry.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable protocol schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "conformance",
+        "distribution policy",
+        "machine discovery"
+      ],
+      "declared_meaning": "Schema contract for the canonical CMB-ADP-1 registry, including explicit trust-preserving distribution boundaries."
     }
   ]
 }
