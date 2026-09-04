@@ -1,4 +1,4 @@
-# Example 03 — C2PA interoperability
+# Example 03 ✦ C2PA interoperability
 
 The repository's `.github/workflows/c2pa-integration.yml` performs the real integration test.
 
