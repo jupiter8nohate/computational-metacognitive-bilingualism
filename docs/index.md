@@ -20,7 +20,7 @@ CMB is a human-agency and computational-literacy framework for working with comp
 
 <div class="cmb-grid">
 
-<a class="cmb-card cmb-card--human" href="../policy/CMB_POLICY_ONE_PAGER/">
+<a class="cmb-card cmb-card--human" href="https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_POLICY_ONE_PAGER.md">
 <strong>🦩 HUMAN // Understand CMB</strong>
 <span>Start with the public policy front door, human-agency principles, and the shortest path to the thesis.</span>
 </a>
@@ -54,7 +54,7 @@ CMB translates digital-rights and human-agency principles into concise human-rea
 
 Open the [Interactive CMB Playground](PLAYGROUND.md) for a zero-dependency browser demonstration of local hashing, CMB-Z13 symbolic lenses, machine-readable declarations, and explicit policy boundaries.
 
-For the artistic entry point, enter [CMB // The Sovereign Transmission](../manifestos/CMB_SOVEREIGN_TRANSMISSION.md).
+For the artistic entry point, enter [CMB // The Sovereign Transmission](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/CMB_SOVEREIGN_TRANSMISSION.md).
 
 ## 03 // Build
 
