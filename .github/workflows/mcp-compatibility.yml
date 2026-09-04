@@ -5,6 +5,8 @@ on:
     paths:
       - "src/cmb_agents/**"
       - "agents/**"
+      - "tests/test_mcp_adapter.py"
+      - "tests/test_mcp_adapter.py"
       - "pyproject.toml"
       - ".github/workflows/mcp-compatibility.yml"
   pull_request:
@@ -36,7 +38,7 @@ jobs:
           cache: pip
 
       - name: Install CMB with MCP adapter
-        run: python -m pip install --upgrade pip ".[mcp]"
+        run: python -m pip install --upgrade pip ".[test,mcp]"
 
       - name: Verify dependency graph
         run: python -m pip check
@@ -50,3 +52,6 @@ jobs:
 
       - name: Verify core agent self-test still passes
         run: cmb-agent selftest
+
+      - name: Run MCP protocol smoke test
+        run: pytest tests/test_mcp_adapter.py
