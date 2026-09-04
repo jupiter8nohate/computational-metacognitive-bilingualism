@@ -162,9 +162,24 @@ cmb-agent recommend "algorithmic profiling evidence"
 cd labs/cmb-google-semantic-bridge
 go test ./...
 go run ./cmd/cmb-gsb publish -in examples/sovereign-transmission.json -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md -out /tmp/cmb-site -canon ../../library/canon.json
+go run ./cmd/cmb-gsb publish-canon \
+  -root ../.. \
+  -canon ../../library/canon.json \
+  -catalog ../../library/catalog.json \
+  -out /tmp/cmb-canon-library \
+  -base-url https://example.org/cmb/
 ```
 
 The executable navigator reads the same machine graph that humans can inspect directly.
+
+The catalog answers **what artifacts exist**. The canon answers **how those artifacts relate**. The Go `publish-canon` compiler turns those two declared contracts plus the exact repository sources into one deterministic publication without treating either index as identity, truth, or machine authority.
+
+```text
+CATALOG != IDENTITY
+CANON != PERSON
+CATALOG_INVARIANT ⊆ CANON_INVARIANT
+PUBLICATION != ENDORSEMENT
+```
 
 ## Canon principle
 
