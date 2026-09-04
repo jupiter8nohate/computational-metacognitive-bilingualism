@@ -65,6 +65,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Research backbone:** [CMB Cognitive Sovereignty Dissertation](docs/dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md)
 - **Formal semantics:** [Chapter 31 - Formal CMB Semantics](docs/dissertation/31_FORMAL_SEMANTICS.md)
 - **Bounded proof gate:** [HARMONI-666 and MissingNo.666](spec/CMB-HARMONI-666.md) - six epistemic states, six proof gates, six sovereignty failsafes.
+- **Creator context boundary:** [Symbolic lineage, provenance, intellectual context, and anti-profile rules](docs/CREATOR_CONTEXT_MODEL.md).
 - **Executable policy contract:** [CMB Policy Specification v1.0](spec/CMB-SPEC.md)
 - **Kids / classroom entry point:** [CMB-EDU Kids - Flamingoglyph Learning Layer](docs/CMB_EDU_KIDS.md)
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix + Go](adapters/README.md)
@@ -107,6 +108,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
 | HARMONI-666 | **Experimental bounded-proof layer** | fails closed to `MISSINGNO_666` when a `PROOF` claim exceeds verified evidence strength |
 | CMB-SEP-1 | **Experimental sovereign epistemic state machine** | six states, six gates, six failsafes, claim truncation, parity recovery, and externally verified human authorization |
+| Creator Context Model | **Experimental descriptive context layer** | keeps symbolic, technical, and intellectual context separate from identity and prediction |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
 
 See [Project structure](docs/PROJECT_STRUCTURE.md) and [Threat model](docs/THREAT_MODEL.md).
