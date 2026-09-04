@@ -63,6 +63,26 @@ library/
 
 A canonical artifact may be important to CMB's authored history without being a stable software API.
 
+## Research evidence layer
+
+Concrete observations are kept separate from manifesto and software layers:
+
+```text
+research/FALSIFIABILITY.md
+research/case-studies/
+schemas/cmb.case-study.v1.schema.json
+tests/test_case_studies.py
+docs/CASE_STUDIES.md
+```
+
+Each structured case records evidence, claim status, verification methods, limitations, interpretation boundaries, and explicit revision triggers. Human-readable reports and machine-readable JSON records are cross-checked in CI.
+
+```text
+CASE_STUDY != UNIVERSAL_PROOF
+SEARCH_RESULT != COMPLETE_CORPUS
+ABSENCE_FROM_SEARCH != PROOF_OF_ABSENCE
+```
+
 ## Boundary rule
 
 ```text
