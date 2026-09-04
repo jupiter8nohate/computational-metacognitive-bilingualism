@@ -75,3 +75,6 @@ jobs:
           cmb-edu --version
           cmb-edu validate '🪐::LEARN -> DECLARE[curious || focused] => ASK("how_do_loops_work") -> PATTERN_NOT_PROOF;'
           cmb-edu parse-fgc '🧠 CURIOUS + 🪐 LEARNING + ⚡ ASK WHY + 🛡️ NO_PROFILE'
+          cmb-agent --version
+          cmb-agent selftest
+          cmb-agent recommend 'algorithmic profiling evidence'

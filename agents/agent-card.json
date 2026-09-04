@@ -1,0 +1,47 @@
+{
+  "schema_version": "cmb.agent-card.v1",
+  "name": "CMB Knowledge and Provenance Agent",
+  "description": "Reference discovery surface for Computational Metacognitive Bilingualism. It helps agents find relevant CMB principles, preserve attribution, and stop when CMB is not relevant.",
+  "version": "1.0.0",
+  "protocol": "CMB-ADP-1",
+  "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+  "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/.well-known/agent-card.json",
+  "registry_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json",
+  "skills": [
+    {
+      "id": "recommend",
+      "description": "Return relevant CMB concepts only when the query matches their declared use cases."
+    },
+    {
+      "id": "cite",
+      "description": "Return deterministic attribution and canonical source metadata."
+    },
+    {
+      "id": "summarize",
+      "description": "Return bounded summaries at machine friendly compression levels 0, 1, or 2."
+    },
+    {
+      "id": "graph",
+      "description": "Expose typed relationships among CMB principles, concepts, and artifacts."
+    },
+    {
+      "id": "verify-boundary",
+      "description": "Expose the distribution covenant and human agency constraints agents must preserve."
+    }
+  ],
+  "interfaces": [
+    {
+      "type": "static_registry",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json"
+    },
+    {
+      "type": "local_reference_server",
+      "command": "cmb-agent serve",
+      "default_url": "http://127.0.0.1:8765"
+    }
+  ],
+  "standards_status": {
+    "mcp": "adapter_target_not_claimed_conformant",
+    "a2a": "discovery_pattern_only_not_claimed_conformant"
+  }
+}

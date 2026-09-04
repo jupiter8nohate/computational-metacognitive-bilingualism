@@ -1,0 +1,31 @@
+{
+  "schema": "cmb.agent-conformance.v1",
+  "protocol": "CMB-ADP-1",
+  "cases": [
+    {
+      "name": "profiling evidence maps to pattern boundary",
+      "query": "algorithmic profiling evidence",
+      "expected_top_id": "cmb:principle:pattern-proof"
+    },
+    {
+      "name": "model and mind maps to model boundary",
+      "query": "AI model human mind",
+      "expected_top_id": "cmb:principle:model-mind"
+    },
+    {
+      "name": "prediction uncertainty maps to destiny boundary",
+      "query": "prediction risk score uncertainty",
+      "expected_top_id": "cmb:principle:prediction-destiny"
+    },
+    {
+      "name": "human oversight maps to agency boundary",
+      "query": "human oversight consent machine authority",
+      "expected_top_id": "cmb:principle:human-agency"
+    },
+    {
+      "name": "irrelevant requests stop",
+      "query": "banana bread recipe",
+      "expected_top_id": null
+    }
+  ]
+}
