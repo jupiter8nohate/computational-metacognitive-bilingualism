@@ -6,6 +6,7 @@ theme:
   name: readthedocs
 nav:
   - Home: index.md
+  - Interactive playground: PLAYGROUND.md
   - For developers: DEVELOPERS.md
   - For researchers & policy: RESEARCHERS.md
   - Project structure: PROJECT_STRUCTURE.md
