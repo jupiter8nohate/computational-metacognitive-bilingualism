@@ -82,6 +82,16 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 2048
+        },
+        "operation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
         }
       }
     },
@@ -100,7 +110,8 @@
             "PREDICTION_NOT_DESTINY",
             "ATTENTION_NOT_CONSENT",
             "DIFFERENCE_NOT_DEFECT",
-            "MODEL_NOT_MIND"
+            "MODEL_NOT_MIND",
+            "CAPABILITY_NOT_AUTHORITY"
           ]
         },
         "enforced_translation": {
@@ -133,6 +144,30 @@
           "const": false
         },
         "psychological_inference_permission": {
+          "const": false
+        }
+      }
+    },
+    "epistemic_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "declaration_is_diagnosis",
+        "self_report_is_permanent_profile",
+        "current_state_is_identity",
+        "machine_guess_is_human_truth"
+      ],
+      "properties": {
+        "declaration_is_diagnosis": {
+          "const": false
+        },
+        "self_report_is_permanent_profile": {
+          "const": false
+        },
+        "current_state_is_identity": {
+          "const": false
+        },
+        "machine_guess_is_human_truth": {
           "const": false
         }
       }
