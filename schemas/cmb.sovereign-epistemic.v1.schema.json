@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/raw/main/schemas/cmb.sovereign-epistemic.v1.schema.json",
+  "title": "CMB Sovereign Epistemic Protocol Decision v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "state",
+    "halted",
+    "gate_results",
+    "failed_gates",
+    "active_failsafes",
+    "effective_claim_strength",
+    "evidence_strength",
+    "quarantined",
+    "requires_human_review",
+    "authority",
+    "reason"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.sovereign-epistemic.v1"},
+    "protocol": {"const": "CMB-SEP-1"},
+    "state": {"enum": ["IDLE","INGESTION","PROCESSING","VERIFICATION","EXCEPTION","RESOLUTION"]},
+    "halted": {"type": "boolean"},
+    "gate_results": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["gate","passed","reason"],
+        "properties": {
+          "gate": {"enum": ["PROVENANCE","SYNTAX","VERIFICATION","CONSTRAINT","EXTERNAL_REVIEW","AUTHORIZATION"]},
+          "passed": {"type": "boolean"},
+          "reason": {"type": "string","minLength": 1}
+        }
+      }
+    },
+    "failed_gates": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["PROVENANCE","SYNTAX","VERIFICATION","CONSTRAINT","EXTERNAL_REVIEW","AUTHORIZATION"]}
+    },
+    "active_failsafes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["SEVERANCE","TRUNCATION","ISOLATION","PARITY_CHECK","DECELERATION","HUMAN_OVERRIDE"]}
+    },
+    "effective_claim_strength": {"type": "number","minimum": 0,"maximum": 1},
+    "evidence_strength": {"type": "number","minimum": 0,"maximum": 1},
+    "quarantined": {"type": "boolean"},
+    "requires_human_review": {"type": "boolean"},
+    "authority": {"const": "HUMAN_FINAL"},
+    "reason": {"type": "string","minLength": 1}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"state": {"const": "RESOLUTION"}},
+        "required": ["state"]
+      },
+      "then": {
+        "properties": {
+          "halted": {"const": false},
+          "failed_gates": {"maxItems": 0},
+          "requires_human_review": {"const": false}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"state": {"const": "EXCEPTION"}},
+        "required": ["state"]
+      },
+      "then": {
+        "properties": {
+          "halted": {"const": true},
+          "requires_human_review": {"const": true}
+        }
+      }
+    }
+  ]
+}
