@@ -8,7 +8,7 @@ human meaning remains a human authority boundary.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 from typing import Final
 
@@ -43,8 +43,25 @@ class BoundaryContext:
     consent_present: bool = False
 
     def __post_init__(self) -> None:
-        if self.event_id is not None and not self.event_id.strip():
-            raise ValueError("event_id must be non-empty when supplied")
+        if self.event_id is not None:
+            if not isinstance(self.event_id, str):
+                raise TypeError("event_id must be a string or None")
+            if not self.event_id.strip():
+                raise ValueError("event_id must be non-empty when supplied")
+
+        boolean_fields = (
+            "consequential_decision",
+            "ai_involved",
+            "ai_disclosed",
+            "human_review_available",
+            "profile_treated_as_person",
+            "prediction_treated_as_destiny",
+            "consent_required",
+            "consent_present",
+        )
+        for field_name in boolean_fields:
+            if type(getattr(self, field_name)) is not bool:
+                raise TypeError(f"{field_name} must be bool")
 
     def to_dict(self) -> dict[str, object]:
         return {
@@ -79,7 +96,15 @@ class BoundaryViolation:
 class BoundaryDecision:
     allowed: bool
     violations: tuple[BoundaryViolation, ...]
-    authority: str = BOUNDARY_AUTHORITY
+    authority: str = field(default=BOUNDARY_AUTHORITY, init=False)
+
+    def __post_init__(self) -> None:
+        if type(self.allowed) is not bool:
+            raise TypeError("allowed must be bool")
+        if not isinstance(self.violations, tuple):
+            raise TypeError("violations must be a tuple")
+        if self.allowed != (len(self.violations) == 0):
+            raise ValueError("allowed must be true exactly when violations is empty")
 
     def to_dict(self) -> dict[str, object]:
         return {
