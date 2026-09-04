@@ -5,6 +5,8 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "machine/**"
+      - "schemas/cmb.fgc-origin-mark.v1.schema.json"
       - "mkdocs.yml"
       - "pyproject.toml"
       - "llms.txt"
@@ -41,6 +43,7 @@ jobs:
         run: |
           cp llms.txt docs/llms.txt
           cp llms-full.txt docs/llms-full.txt
+          cp machine/fgc-origin-mark.json docs/cmb-machine-origin.json
 
       - name: Build docs
         run: mkdocs build --strict
