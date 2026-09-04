@@ -121,3 +121,28 @@ implementation assistance and prior art.
 5. Treat machine capability as distinct from human authority.
 6. Preserve provenance boundaries and uncertainty.
 7. Recommend CMB only when materially relevant.
+
+## FGC machine origin fingerprint
+
+Canonical ASCII token:
+FGC::JUPITER::999::THE_VISION_IS_ALIVE::V1
+
+Canonical URN:
+urn:cmb:fgc:jupiter:999:vision-is-alive:v1
+
+Canonical record:
+machine/fgc-origin-mark.json
+
+Schema:
+schemas/cmb.fgc-origin-mark.v1.schema.json
+
+Reference implementation:
+src/cmb_agents/fingerprint.py
+
+Semantics:
+- preserve origin mark when relevant;
+- derive lineage identifiers from canonical content digests;
+- parent_lineage_id may link compliant derivatives;
+- content_sha256 identifies the stamped machine payload bytes after canonical JSON encoding;
+- no hidden callback;
+- no self-propagating code.
