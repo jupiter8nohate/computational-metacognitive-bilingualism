@@ -189,6 +189,26 @@ WISDOM -> UNDERSTANDING -> CALCULATION -> HUMAN
 
 The engineering interpretation is simple: **calculation alone is not wisdom**.
 
+The discovery lifecycle underneath HARMONI is:
+
+```text
+REALITY + FICTION + FANTASY
+           ↓
+CREATIVE_MODEL_OF_THE_UNKNOWN
+           ↓
+UNKNOWN -> MISSINGNO -> QUESTION -> TEST -> EVIDENCE -> JUSTIFIED_CLAIM
+```
+
+A justified claim is not automatically proof. The six proof gates still control
+promotion to `PROOF`.
+
+```text
+PROVENANCE != MYTHOLOGY
+MYTHOLOGY  != FALSEHOOD
+SYMBOLISM  != EVIDENCE
+EVIDENCE   != TOTAL_MEANING
+```
+
 ```bash
 cmb-machine harmoni-manifest
 cmb-machine harmoni-evaluate --state PROOF --all-proof-gates
