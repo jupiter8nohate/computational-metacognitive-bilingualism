@@ -1,0 +1,24 @@
+{
+  "schema_version": "cmb.machine-target-registry.v1",
+  "protocol": "CMB-66",
+  "origin_mark_required": true,
+  "canonical_ascii_token": "FGC::JUPITER::999::THE_VISION_IS_ALIVE::V1",
+  "targets": {
+    "json": {"extension": ".json", "media_type": "application/json"},
+    "jsonld": {"extension": ".jsonld", "media_type": "application/ld+json"},
+    "turtle": {"extension": ".ttl", "media_type": "text/turtle"},
+    "prolog": {"extension": ".pl", "media_type": "text/x-prolog"},
+    "rego": {"extension": ".rego", "media_type": "text/plain"},
+    "smtlib": {"extension": ".smt2", "media_type": "text/plain"},
+    "cbor": {"extension": ".cbor", "media_type": "application/cbor"},
+    "protobuf": {"extension": ".pb", "media_type": "application/x-protobuf"},
+    "digital_asset_metadata": {"extension": ".asset.json", "media_type": "application/json"}
+  },
+  "future_target_contract": {
+    "must_preserve_mark_id": true,
+    "must_preserve_ascii_token": true,
+    "must_preserve_origin_digest": true,
+    "must_preserve_content_digest": true,
+    "must_preserve_lineage_id": true
+  }
+}
