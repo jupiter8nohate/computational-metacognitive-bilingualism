@@ -35,6 +35,15 @@
     "provenance": true
   },
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "typescript": "^7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jupiter8nohate/computational-metacognitive-bilingualism.git",
+    "directory": "packages/typescript"
+  },
+  "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+  "bugs": {
+    "url": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues"
   }
 }
