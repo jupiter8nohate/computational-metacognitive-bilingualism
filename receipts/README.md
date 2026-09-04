@@ -2,7 +2,7 @@
 
 This directory stores checked-in provenance receipts for canonical public CMB artifacts.
 
-## Current bootstrap receipt — Global Advocacy Charter generation
+## Current bootstrap receipt ✦ Global Advocacy Charter generation
 
 [`canonical-593fd2a6.cmb-receipt.json`](canonical-593fd2a6.cmb-receipt.json) covers the four-artifact canonical CMB generation as served from repository commit:
 
@@ -31,7 +31,7 @@ That status avoids claiming the package's stronger `VERIFIED_ARTIFACTS_MATCH_COM
 
 Normal CI and signed-release runs use `scripts/seal_canonical_artifacts.py` inside a checked-out Git worktree and therefore perform the stronger verification path.
 
-## Historical bootstrap receipt — D.N.A. generation
+## Historical bootstrap receipt ✦ D.N.A. generation
 
 [`canonical-5139aa72.cmb-receipt.json`](canonical-5139aa72.cmb-receipt.json) preserves the earlier three-artifact generation at commit:
 
