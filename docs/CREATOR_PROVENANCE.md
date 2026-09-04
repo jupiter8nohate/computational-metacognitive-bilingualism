@@ -149,8 +149,8 @@ Each remains in its proper evidentiary category.
 
 Software should read:
 
-- [../library/creator-provenance.json](../library/creator-provenance.json)
-- [../schemas/cmb.creator-provenance.v1.schema.json](../schemas/cmb.creator-provenance.v1.schema.json)
+- [library/creator-provenance.json](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/library/creator-provenance.json)
+- [schemas/cmb.creator-provenance.v1.schema.json](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.creator-provenance.v1.schema.json)
 
 The schema intentionally fails closed on the core distinctions. For example, the canonical record cannot label genealogy as independently verified, cannot claim symbolic references are scientific evidence, and cannot authorize publication of the raw family tree or invitation token.
 
