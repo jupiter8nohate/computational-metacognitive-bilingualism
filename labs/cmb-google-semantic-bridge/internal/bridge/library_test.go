@@ -43,13 +43,13 @@ func TestBuildCanonLibraryPublishesDeclaredCorpusDeterministically(t *testing.T)
 			{
 				ID: "one", Title: "One", Path: "docs/ONE.md", Format: "markdown", Kind: "manifesto",
 				Status: "canonical", ProvenanceScope: "canonical_public_artifact",
-				HumanReadable: true, MachineIndexable: true, Concepts: []string{"human agency"},
+				HumanReadable: true, Indexable: true, Concepts: []string{"human agency"},
 				DeclaredMeaning: "First work.",
 			},
 			{
 				ID: "cmb-agent-card", Title: "Agent Card", Path: "agents/agent-card.json", Format: "json", Kind: "discovery",
 				Status: "canonical", ProvenanceScope: "canonical_public_artifact",
-				HumanReadable: true, MachineIndexable: true, Concepts: []string{"discovery"},
+				HumanReadable: true, Indexable: true, Concepts: []string{"discovery"},
 				DeclaredMeaning: "Agent discovery metadata.",
 			},
 		},
@@ -126,7 +126,7 @@ func TestBuildCanonLibraryRejectsCatalogPathSymlink(t *testing.T) {
 		},
 		Artifacts: []catalog.Artifact{{
 			ID: "escape", Title: "Escape", Path: "escape.md", Format: "markdown", Kind: "test",
-			Status: "canonical", ProvenanceScope: "repository_artifact", HumanReadable: true, MachineIndexable: true,
+			Status: "canonical", ProvenanceScope: "repository_artifact", HumanReadable: true, Indexable: true,
 			Concepts: []string{"safety"}, DeclaredMeaning: "Must fail.",
 		}},
 	}
