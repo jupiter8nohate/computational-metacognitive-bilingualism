@@ -13,14 +13,18 @@ on:
       - "pyproject.toml"
       - "llms.txt"
       - "llms-full.txt"
-      - "llms.txt"
-      - "llms-full.txt"
   pull_request:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "machine/**"
+      - "schemas/cmb.fgc-origin-mark.v1.schema.json"
+      - "schemas/cmb.machine-ir.v1.schema.json"
+      - "src/cmb_machine/**"
       - "mkdocs.yml"
       - "pyproject.toml"
+      - "llms.txt"
+      - "llms-full.txt"
 
 permissions:
   contents: read
