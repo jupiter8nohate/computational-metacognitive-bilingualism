@@ -1,0 +1,9 @@
+{
+  "uri": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/extensions/cmb-cap/v1",
+  "description": "Carries CMB-CAP signed human-to-agent authority credentials. Experimental CMB extension; not an official A2A extension.",
+  "required": false,
+  "params": {
+    "protocol": "CMB-CAP-1",
+    "schema": "cmb.capability-credential.v1"
+  }
+}
