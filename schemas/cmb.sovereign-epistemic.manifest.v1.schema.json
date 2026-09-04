@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/raw/main/schemas/cmb.sovereign-epistemic.manifest.v1.schema.json",
+  "title": "CMB Sovereign Epistemic Protocol Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "states",
+    "gates",
+    "failsafes",
+    "axioms",
+    "authorization_boundary",
+    "failsafe_boundaries"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.sovereign-epistemic.manifest.v1"},
+    "protocol": {"const": "CMB-SEP-1"},
+    "states": {
+      "type": "array",
+      "prefixItems": [
+        {"const":"IDLE"},
+        {"const":"INGESTION"},
+        {"const":"PROCESSING"},
+        {"const":"VERIFICATION"},
+        {"const":"EXCEPTION"},
+        {"const":"RESOLUTION"}
+      ],
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "gates": {
+      "type": "array",
+      "prefixItems": [
+        {"const":"PROVENANCE"},
+        {"const":"SYNTAX"},
+        {"const":"VERIFICATION"},
+        {"const":"CONSTRAINT"},
+        {"const":"EXTERNAL_REVIEW"},
+        {"const":"AUTHORIZATION"}
+      ],
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "failsafes": {
+      "type": "array",
+      "prefixItems": [
+        {"const":"SEVERANCE"},
+        {"const":"TRUNCATION"},
+        {"const":"ISOLATION"},
+        {"const":"PARITY_CHECK"},
+        {"const":"DECELERATION"},
+        {"const":"HUMAN_OVERRIDE"}
+      ],
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "axioms": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {"type":"string","minLength":1}
+    },
+    "authorization_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requires_external_human_authentication",
+        "machine_self_attestation_allowed",
+        "consciousness_detection_claimed",
+        "physical_cutoff_claimed"
+      ],
+      "properties": {
+        "requires_external_human_authentication": {"const": true},
+        "machine_self_attestation_allowed": {"const": false},
+        "consciousness_detection_claimed": {"const": false},
+        "physical_cutoff_claimed": {"const": false}
+      }
+    },
+    "failsafe_boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "SEVERANCE",
+        "TRUNCATION",
+        "ISOLATION",
+        "PARITY_CHECK",
+        "DECELERATION",
+        "HUMAN_OVERRIDE"
+      ],
+      "properties": {
+        "SEVERANCE": {"type":"string","minLength":1},
+        "TRUNCATION": {"type":"string","minLength":1},
+        "ISOLATION": {"type":"string","minLength":1},
+        "PARITY_CHECK": {"type":"string","minLength":1},
+        "DECELERATION": {"type":"string","minLength":1},
+        "HUMAN_OVERRIDE": {"type":"string","minLength":1}
+      }
+    }
+  }
+}
