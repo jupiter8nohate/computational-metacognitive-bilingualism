@@ -15,7 +15,7 @@ AGENT research_bot
 ALLOW web.search
 SCOPE project cmb
 PURPOSE "public research"
-EXPIRES 2030-01-01T00:00:00Z
+EXPIRES 2099-01-01T00:00:00Z
 DELEGABLE false
 RETURN receipt
 """
@@ -26,7 +26,7 @@ def _credential(tmp_path: Path) -> Path:
     credential = issue_from_sdl(
         SOURCE,
         private_key_b64=private_key,
-        now=datetime(2028, 1, 1, tzinfo=timezone.utc),
+        now=datetime.now(timezone.utc),
     )
     path = tmp_path / "credential.json"
     path.write_text(json.dumps(credential), encoding="utf-8")
