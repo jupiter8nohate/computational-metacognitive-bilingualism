@@ -16,6 +16,7 @@ import base64
 import json
 from typing import Any
 
+from cmb_cap import a2a_extension_declaration, verify_capability
 from cmb_machine import build_core_ir, render_target, supported_targets
 from cmb_sdl import compile_text as compile_authority_text
 
