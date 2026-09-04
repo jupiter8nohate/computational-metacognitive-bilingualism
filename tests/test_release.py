@@ -42,6 +42,8 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "manifestos/CMB_Z13_LANGUAGE_SPEC.md",
         "library/cmb-z13.registry.json",
         "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
+        "docs/CMB_EDU_KIDS.md",
+        "schemas/cmb.edu.v1.schema.json",
         "library/catalog.json",
     )
 
@@ -74,6 +76,7 @@ def test_ci_generates_and_verifies_canonical_receipt() -> None:
 
     assert "python scripts/seal_canonical_artifacts.py" in workflow
     assert "--print-json" in workflow
+    assert "cmb-edu parse-fgc" in workflow
 
 
 def test_previous_bootstrap_receipt_remains_valid_history() -> None:
