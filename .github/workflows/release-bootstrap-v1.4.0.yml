@@ -1,0 +1,47 @@
+name: Bootstrap v1.4.0 release
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - ".github/workflows/release-bootstrap-v1.4.0.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: bootstrap-release-v1.4.0
+  cancel-in-progress: false
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create exact v1.4.0 tag and dispatch signed release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: v1.4.0
+        run: |
+          set -euo pipefail
+
+          existing_json="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_TAG" 2>/dev/null || true)"
+          if [ -n "$existing_json" ]; then
+            existing_type="$(printf '%s' "$existing_json" | python -c 'import json,sys; print(json.load(sys.stdin)["object"]["type"])')"
+            existing_sha="$(printf '%s' "$existing_json" | python -c 'import json,sys; print(json.load(sys.stdin)["object"]["sha"])')"
+
+            if [ "$existing_type" != "commit" ] || [ "$existing_sha" != "$GITHUB_SHA" ]; then
+              echo "Refusing to move existing tag $RELEASE_TAG: type=$existing_type sha=$existing_sha expected=$GITHUB_SHA"
+              exit 1
+            fi
+
+            echo "$RELEASE_TAG already points to the requested commit."
+          else
+            gh api --method POST "repos/$GITHUB_REPOSITORY/git/refs"               -f ref="refs/tags/$RELEASE_TAG"               -f sha="$GITHUB_SHA"
+            echo "Created $RELEASE_TAG at $GITHUB_SHA."
+          fi
+
+          gh api --method POST             "repos/$GITHUB_REPOSITORY/actions/workflows/release.yml/dispatches"             -f ref="$RELEASE_TAG"
+
+          echo "Dispatched signed release workflow at $RELEASE_TAG."
