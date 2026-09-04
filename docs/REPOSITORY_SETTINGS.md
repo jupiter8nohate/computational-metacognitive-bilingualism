@@ -24,7 +24,7 @@ Account-level actions still required:
 - verify the site in Bing Webmaster Tools and submit the same sitemap;
 - configure repository Topics;
 - upload the repository social-preview image;
-- connect GitHub to Zenodo and archive a signed release when available.
+- connect GitHub to Zenodo and archive the chosen signed release (v1.4.1 is already published) when DOI archival is desired.
 
 See [Search and AI Discovery Operations](SEARCH_DISCOVERY.md).
 
@@ -77,13 +77,22 @@ In **Settings → Branches / Rulesets**, prefer:
 - block branch deletion;
 - require linear history if it matches the project's squash-merge workflow.
 
+### Audit note — 2026-09-04
+
+The repository rulesets endpoint returned no configured rulesets during this audit. Classic branch-protection state could not be inspected with the connected GitHub integration, so this does **not** prove that `main` is unprotected. If classic protection is not already active, create a modern ruleset that at minimum blocks force pushes/deletion and requires the project's critical checks.
+
+```text
+NO_RULESET_FOUND != NO_PROTECTION_PROVEN
+PLATFORM_SETTING != REPOSITORY_FILE
+```
+
 ## Release and DOI gate
 
-The repository is prepared for a signed v1.4.0 release, but publishing the GitHub release and enabling Zenodo archival remain account-authorized actions.
+Signed releases are operational; v1.4.1 is published with release artifacts, checksums, a CMB source receipt, and Sigstore bundles. Zenodo archival and DOI minting remain external account-authorized actions.
 
 ```text
 COMMITTED_CONFIGURATION != ENABLED_PLATFORM_SETTING
-RELEASE_READY != RELEASE_PUBLISHED
-DOI_READY != DOI_MINTED
+PUBLISHED_RELEASE != CURRENT_MAIN
+SIGNED_RELEASE_PUBLISHED != DOI_MINTED
 PUBLISHED != INDEXED
 ```
