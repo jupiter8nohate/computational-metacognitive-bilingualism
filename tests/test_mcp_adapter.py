@@ -23,6 +23,8 @@ def test_mcp_server_lists_and_calls_cmb_tools() -> None:
                 "cmb_graph",
                 "cmb_distribution_boundary",
                 "cmb_compile_authority",
+                "cmb_verify_capability",
+                "cmb_capability_extension",
             } <= names
 
             result = await client.call_tool(
