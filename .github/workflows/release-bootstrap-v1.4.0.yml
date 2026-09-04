@@ -26,8 +26,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          existing_json="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_TAG" 2>/dev/null || true)"
-          if [ -n "$existing_json" ]; then
+          if existing_json="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_TAG" 2>/dev/null)"; then
             existing_type="$(printf '%s' "$existing_json" | python -c 'import json,sys; print(json.load(sys.stdin)["object"]["type"])')"
             existing_sha="$(printf '%s' "$existing_json" | python -c 'import json,sys; print(json.load(sys.stdin)["object"]["sha"])')"
 
