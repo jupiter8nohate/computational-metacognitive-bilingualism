@@ -202,12 +202,31 @@ cmb-provenance export-c2pa-payload \
 Python:
 
 ```python
-from cmb_provenance import to_c2pa_assertion_payload
+from cmb_provenance import (
+    build_c2pa_manifest_definition,
+    to_c2pa_assertion_payload,
+)
 
 payload = to_c2pa_assertion_payload(receipt)
+
+manifest = build_c2pa_manifest_definition(
+    receipt,
+    assertion_label="com.yourdomain.cmb_provenance",
+)
 ```
 
-The output is validated CMB-derived metadata intended for a future entity-specific C2PA assertion. It is **not** a C2PA manifest, Content Credential, signature, asset binding, or conformance result. The project intentionally does not invent a C2PA assertion label before an appropriate domain-controlled namespace is established. See [`docs/C2PA_INTEROPERABILITY.md`](docs/C2PA_INTEROPERABILITY.md).
+Build a manifest definition from the CLI:
+
+```bash
+cmb-provenance build-c2pa-manifest \
+  --receipt cmb-source.cmb-receipt.json \
+  --assertion-label com.yourdomain.cmb_provenance \
+  --output cmb-c2pa-manifest.json
+```
+
+The output is validated CMB-derived metadata intended for an entity-specific C2PA assertion. It is **not** by itself a C2PA manifest, Content Credential, signature, asset binding, or conformance result.
+
+Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: CMB builds a manifest definition, c2patool signs and binds it to a deterministic test PNG, generic c2patool reads the result back, and CI verifies the exact CMB payload survived. The integration uses `com.example.cmb_provenance` only as a reserved test namespace; production generation rejects example namespaces by default and requires a domain-controlled assertion label. See [`docs/C2PA_INTEROPERABILITY.md`](docs/C2PA_INTEROPERABILITY.md).
 
 ## Repository contents
 

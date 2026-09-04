@@ -10,10 +10,13 @@ from .constants import (
     TOOL_VERSION,
 )
 from .c2pa import (
+    build_c2pa_manifest_definition,
     c2pa_assertion_payload_bytes,
     c2pa_assertion_payload_json,
     save_c2pa_assertion_payload,
+    save_c2pa_manifest_definition,
     to_c2pa_assertion_payload,
+    validate_c2pa_assertion_label,
 )
 from .errors import (
     CMBProvenanceError,
@@ -54,15 +57,18 @@ __all__ = [
     "VerificationFailure",
     "VerificationResult",
     "append_anchor",
+    "build_c2pa_manifest_definition",
     "c2pa_assertion_payload_bytes",
     "c2pa_assertion_payload_json",
     "load_ledger",
     "load_receipt",
     "save_c2pa_assertion_payload",
+    "save_c2pa_manifest_definition",
     "save_receipt",
     "seal",
     "verify",
     "to_c2pa_assertion_payload",
+    "validate_c2pa_assertion_label",
     "verify_ledger",
 ]
 

@@ -1,6 +1,6 @@
 # CMB Provenance ↔ C2PA Interoperability Plan
 
-**Status:** Phase 1 adapter implemented; not a claim of C2PA conformance  
+**Status:** Phase 2 test round-trip implemented; not a claim of C2PA conformance  
 **Component:** `cmb_provenance`  
 **Last reviewed:** 2026-09-04
 
@@ -183,14 +183,29 @@ Implemented controls:
 
 ### Phase 2 — SDK integration
 
-Use an established C2PA implementation to embed the custom assertion into test assets.
+**Status: implemented as a CI integration test.**
 
-Acceptance criteria:
+The repository pins the external CAI/C2PA `c2patool` binary, verifies its published SHA-256 digest before installation, generates a deterministic PNG test asset, builds a manifest definition around the CMB payload, signs and binds that manifest with c2patool's development signer, reads the resulting asset back with generic c2patool, and verifies that the exact CMB payload survived the round trip.
 
-- assertion survives round-trip validation;
-- manifest remains valid after embedding;
-- standard C2PA validators can inspect the resulting credential;
-- CMB-specific fields do not break generic consumers.
+The integration uses the reserved documentation namespace `com.example.cmb_provenance` **only in tests**. Production manifest generation rejects example.com/.net/.org namespaces by default and requires the caller to provide an entity-specific reverse-domain label.
+
+Acceptance criteria now enforced in CI:
+
+- the external C2PA tool can build and bind the manifest;
+- the signed test asset can be read back by generic c2patool;
+- the assertion label is visible to the generic reader;
+- the exact deterministic CMB payload survives the round trip;
+- CMB-specific fields do not require a CMB reader to be exposed;
+- the development test credential is not represented as trusted production identity or formal C2PA conformance.
+
+### Phase 2 limitations
+
+The CI round trip is an interoperability test, not a production trust claim. It uses c2patool's development signer and a reserved example namespace. A production deployment still needs:
+
+- a domain-controlled assertion namespace;
+- an appropriate production signer and certificate strategy;
+- a trust-list/conformance decision appropriate to the deployment;
+- external review of the integration and terminology.
 
 ### Phase 3 — independent validation
 

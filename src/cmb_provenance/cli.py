@@ -8,7 +8,11 @@ import sys
 from pathlib import Path
 from typing import Sequence
 
-from .c2pa import c2pa_assertion_payload_json, save_c2pa_assertion_payload
+from .c2pa import (
+    c2pa_assertion_payload_json,
+    save_c2pa_assertion_payload,
+    save_c2pa_manifest_definition,
+)
 from .constants import ANCHOR_TYPES, DEFAULT_LEDGER_NAME, TOOL_VERSION
 from .errors import CMBProvenanceError
 from .ledger import append_anchor, verify_ledger
@@ -80,6 +84,20 @@ def build_parser() -> argparse.ArgumentParser:
         "--include-paths",
         action="store_true",
         help="Include covered artifact paths. Paths are omitted by default.",
+    )
+
+    manifest_parser = subparsers.add_parser(
+        "build-c2pa-manifest",
+        help="Build a C2PA SDK JSON manifest definition around a CMB receipt.",
+    )
+    manifest_parser.add_argument("--receipt", required=True, type=Path)
+    manifest_parser.add_argument("--assertion-label", required=True)
+    manifest_parser.add_argument("--output", required=True, type=Path)
+    manifest_parser.add_argument("--include-paths", action="store_true")
+    manifest_parser.add_argument(
+        "--test-example-namespace",
+        action="store_true",
+        help="Allow com.example/net.example/org.example for local integration tests only.",
     )
 
     subparsers.add_parser("selftest", help="Run dependency-free Recovery checks.")
@@ -167,6 +185,18 @@ def _run(args: argparse.Namespace) -> int:
                     pretty=False,
                 )
             )
+        return 0
+
+    if args.command == "build-c2pa-manifest":
+        destination = save_c2pa_manifest_definition(
+            load_receipt(args.receipt),
+            args.output,
+            assertion_label=args.assertion_label,
+            include_paths=args.include_paths,
+            allow_example_namespace=args.test_example_namespace,
+        )
+        print(f"C2PA MANIFEST DEFINITION -> {destination}")
+        print("status=unsigned_definition_requires_external_c2pa_signing_and_binding")
         return 0
 
     if args.command == "selftest":
