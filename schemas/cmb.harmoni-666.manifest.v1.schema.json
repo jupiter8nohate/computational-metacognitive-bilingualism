@@ -8,6 +8,7 @@
     "schema_version",
     "protocol",
     "triangle",
+    "revelation_13_18_motif",
     "epistemic_states",
     "proof_gates",
     "sovereignty_failsafes",
@@ -15,38 +16,67 @@
     "governing_rule"
   ],
   "properties": {
-    "schema_version": {"const": "cmb.harmoni-666.manifest.v1"},
-    "protocol": {"const": "HARMONI-666/1.0"},
+    "schema_version": {
+      "const": "cmb.harmoni-666.manifest.v1"
+    },
+    "protocol": {
+      "const": "HARMONI-666/1.0"
+    },
     "triangle": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["AXIOMATIC", "MACHINE", "HUMAN"],
+      "required": [
+        "AXIOMATIC",
+        "MACHINE",
+        "HUMAN"
+      ],
       "properties": {
         "AXIOMATIC": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["role", "boundary"],
+          "required": [
+            "role",
+            "boundary"
+          ],
           "properties": {
-            "role": {"const": "DECLARED_FIRST_PRINCIPLES"},
-            "boundary": {"const": "NOT_EMPIRICAL_PROOF_BY_ITSELF"}
+            "role": {
+              "const": "DECLARED_FIRST_PRINCIPLES"
+            },
+            "boundary": {
+              "const": "NOT_EMPIRICAL_PROOF_BY_ITSELF"
+            }
           }
         },
         "MACHINE": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["role", "boundary"],
+          "required": [
+            "role",
+            "boundary"
+          ],
           "properties": {
-            "role": {"const": "COMPUTATION_SEARCH_SERIALIZATION_VERIFICATION"},
-            "boundary": {"const": "NO_FINAL_HUMAN_AUTHORITY"}
+            "role": {
+              "const": "COMPUTATION_SEARCH_SERIALIZATION_VERIFICATION"
+            },
+            "boundary": {
+              "const": "NO_FINAL_HUMAN_AUTHORITY"
+            }
           }
         },
         "HUMAN": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["role", "authority"],
+          "required": [
+            "role",
+            "authority"
+          ],
           "properties": {
-            "role": {"const": "MEANING_CONSENT_AUTHORSHIP_JUDGMENT"},
-            "authority": {"const": "HUMAN_FINAL"}
+            "role": {
+              "const": "MEANING_CONSENT_AUTHORSHIP_JUDGMENT"
+            },
+            "authority": {
+              "const": "HUMAN_FINAL"
+            }
           }
         }
       }
@@ -57,7 +87,14 @@
       "maxItems": 6,
       "uniqueItems": true,
       "items": {
-        "enum": ["PATTERN", "HYPOTHESIS", "INFERENCE", "EVIDENCE", "PROOF", "UNKNOWN"]
+        "enum": [
+          "PATTERN",
+          "HYPOTHESIS",
+          "INFERENCE",
+          "EVIDENCE",
+          "PROOF",
+          "UNKNOWN"
+        ]
       }
     },
     "proof_gates": {
@@ -81,9 +118,81 @@
       "minItems": 6,
       "maxItems": 6,
       "uniqueItems": true,
-      "items": {"type": "string", "minLength": 1}
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
-    "unknown_sentinel": {"const": "MISSINGNO_666"},
-    "governing_rule": {"const": "CLAIM_STRENGTH <= VERIFIED_EVIDENCE_STRENGTH"}
+    "unknown_sentinel": {
+      "const": "MISSINGNO_666"
+    },
+    "governing_rule": {
+      "const": "CLAIM_STRENGTH <= VERIFIED_EVIDENCE_STRENGTH"
+    },
+    "revelation_13_18_motif": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "mode",
+        "sequence",
+        "mapping",
+        "boundary"
+      ],
+      "properties": {
+        "source": {
+          "const": "Revelation 13:18"
+        },
+        "mode": {
+          "const": "LITERARY_SYMBOLIC_DESIGN_KEY"
+        },
+        "sequence": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "WISDOM"
+            },
+            {
+              "const": "UNDERSTANDING"
+            },
+            {
+              "const": "CALCULATION"
+            },
+            {
+              "const": "HUMAN"
+            }
+          ],
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "mapping": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "WISDOM",
+            "UNDERSTANDING",
+            "CALCULATION",
+            "HUMAN"
+          ],
+          "properties": {
+            "WISDOM": {
+              "const": "HUMAN_JUDGMENT"
+            },
+            "UNDERSTANDING": {
+              "const": "HARMONI_INTERPRETATION"
+            },
+            "CALCULATION": {
+              "const": "MACHINE_VERIFICATION"
+            },
+            "HUMAN": {
+              "const": "HUMAN_FINAL"
+            }
+          }
+        },
+        "boundary": {
+          "const": "SCRIPTURAL_MOTIF_NOT_EMPIRICAL_PROOF"
+        }
+      }
+    }
   }
 }
