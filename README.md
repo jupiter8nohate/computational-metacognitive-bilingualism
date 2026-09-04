@@ -180,6 +180,15 @@ The "axiomatic" vertex is the technical representation of the project's
 philosophical "language of God" motif. It is not an empirical or supernatural
 verification claim.
 
+The HARMONI-666 design also uses Revelation 13:18 as a literary key:
+
+```text
+WISDOM -> UNDERSTANDING -> CALCULATION -> HUMAN
+          HARMONI          MACHINE        HUMAN_FINAL
+```
+
+The engineering interpretation is simple: **calculation alone is not wisdom**.
+
 ```bash
 cmb-machine harmoni-manifest
 cmb-machine harmoni-evaluate --state PROOF --all-proof-gates
