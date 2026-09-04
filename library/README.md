@@ -29,6 +29,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 - [`catalog.json`](catalog.json) — machine-indexable catalog of CMB public artifacts.
 - [`../MANIFESTO.md`](../MANIFESTO.md) — core human-sovereignty manifesto.
+- [`../manifestos/DEMONS_NEED_ATTENTION_DNA.md`](../manifestos/DEMONS_NEED_ATTENTION_DNA.md) — D.N.A. attention-economy manifesto.
+- [`../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) — D.N.A./FGC literary allegory about institutional and algorithmic confinement.
 - [`../manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](../manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — perspective-aware library model and MissingNo Clause.
 - [`../manifestos/CMB_Z13_MANIFESTO.md`](../manifestos/CMB_Z13_MANIFESTO.md) — CMB-Z13 public manifesto and thirteen-lens declaration.
 - [`../manifestos/CMB_Z13_LANGUAGE_SPEC.md`](../manifestos/CMB_Z13_LANGUAGE_SPEC.md) — CMB-Z13 symbolic language specification.
