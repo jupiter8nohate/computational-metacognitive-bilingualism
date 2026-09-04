@@ -2,7 +2,9 @@
 
 This directory is the bilingual index layer for Computational Metacognitive Bilingualism (CMB).
 
-Humans can begin with this README and follow the linked artifacts. Software can read `catalog.json` to discover the same public works, their roles, concepts, and provenance scope without treating the catalog as a definition of any person.
+Humans can begin with this README and follow the linked artifacts. Software can read `catalog.json` to discover public works and `canon.json` to traverse the relationships among them without treating either index as a definition of any person.
+
+The human relationship map is [`../CANON.md`](../CANON.md). The machine relationship graph is [`canon.json`](canon.json). The throughline is: **VERIFY, DON'T JUST BELIEVE.**
 
 ## Core rule
 
@@ -30,7 +32,10 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ### Corpus
 
 - [`catalog.json`](catalog.json) - machine-indexable catalog of CMB public artifacts.
+- [`canon.json`](canon.json) - machine-indexable relationship graph across CMB layers, including agent discovery and honest unlinked integration targets.
+- [`../CANON.md`](../CANON.md) - human-readable canon map.
 - [`../schemas/cmb.library.catalog.v1.schema.json`](../schemas/cmb.library.catalog.v1.schema.json) - strict JSON Schema for validating the catalog contract.
+- [`../schemas/cmb.canon.v1.schema.json`](../schemas/cmb.canon.v1.schema.json) - strict JSON Schema for validating the canon graph.
 - [`../schemas/cmb.edu.v1.schema.json`](../schemas/cmb.edu.v1.schema.json) - strict CMB-EDU Metacognitive Context Envelope schema.
 - [`../MANIFESTO.md`](../MANIFESTO.md) - core human-sovereignty manifesto.
 - [`../manifestos/DEMONS_NEED_ATTENTION_DNA.md`](../manifestos/DEMONS_NEED_ATTENTION_DNA.md) - D.N.A. attention-economy manifesto.
