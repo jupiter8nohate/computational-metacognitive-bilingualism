@@ -6,6 +6,8 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- **CMB-Z13™ — Zodiac Computational Metacognitive Language** as a three-part canonical bundle: public manifesto, formal language specification, and machine-readable registry mapping thirteen zodiac archetypes to thirteen software-language lenses.
+- Expanded canonical provenance sealing scope to include the CMB-Z13 manifesto, specification, registry, the Unclassifiable Index, and the digital-library catalog in the next signed release.
 - Bilingual CMB digital-library layer: human navigation in `library/README.md`, a machine-indexable `library/catalog.json`, and tests that enforce catalog/release-scope consistency.
 - **CMB // The Unclassifiable Index**, a canonical MissingNo–Pokédex manifesto defining a perspective-aware human/machine-readable library model and the CMB MissingNo Clause.
 - Installable `cmb-provenance` Python package and console entry point.
