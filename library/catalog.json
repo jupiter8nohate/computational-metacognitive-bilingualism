@@ -58,7 +58,7 @@
     },
     {
       "id": "cmb-dna-attention",
-      "title": "Demon's Need Attention — D.N.A.",
+      "title": "Demon's Need Attention - D.N.A.",
       "path": "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
       "format": "markdown",
       "kind": "manifesto",
@@ -76,7 +76,7 @@
     },
     {
       "id": "cmb-dna-chicken-run",
-      "title": "D.N.A. — The Chicken Run Manifesto",
+      "title": "D.N.A. - The Chicken Run Manifesto",
       "path": "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",
       "format": "markdown",
       "kind": "literary manifesto and computational allegory",
@@ -113,6 +113,27 @@
         "provenance"
       ],
       "declared_meaning": "Defines a perspective-aware human/machine-readable library model in which schema failure triggers model revision rather than automatic human correction."
+    },
+    {
+      "id": "cmb-sovereign-transmission",
+      "title": "CMB // The Sovereign Transmission",
+      "path": "manifestos/CMB_SOVEREIGN_TRANSMISSION.md",
+      "format": "markdown",
+      "kind": "decorative code-poetry manifesto",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "code as poetry",
+        "metacognitive literacy",
+        "human agency",
+        "cognitive sovereignty",
+        "Flamingoglyph Code",
+        "human-machine translation",
+        "interpretation boundaries"
+      ],
+      "declared_meaning": "Human-facing artistic gateway to CMB that uses symbolic glyphs, structured code-poetry, metacognitive checks, and explicit human authority boundaries."
     },
     {
       "id": "cmb-global-advocacy-charter",
@@ -174,7 +195,7 @@
     },
     {
       "id": "cmb-z13-manifesto",
-      "title": "CMB-Z13™ Manifesto — Zodiac Computational Metacognitive Language",
+      "title": "CMB-Z13™ Manifesto - Zodiac Computational Metacognitive Language",
       "path": "manifestos/CMB_Z13_MANIFESTO.md",
       "format": "markdown",
       "kind": "manifesto and symbolic language declaration",
@@ -196,7 +217,7 @@
     },
     {
       "id": "cmb-z13-language-spec",
-      "title": "CMB-Z13™ — Zodiac Computational Metacognitive Language",
+      "title": "CMB-Z13™ - Zodiac Computational Metacognitive Language",
       "path": "manifestos/CMB_Z13_LANGUAGE_SPEC.md",
       "format": "markdown",
       "kind": "symbolic computational language specification",
@@ -239,7 +260,7 @@
     },
     {
       "id": "cmb-policy-one-pager",
-      "title": "CMB — 12 Principles for Human Agency in Automated Systems",
+      "title": "CMB - 12 Principles for Human Agency in Automated Systems",
       "path": "policy/CMB_POLICY_ONE_PAGER.md",
       "format": "markdown",
       "kind": "public-facing policy summary",
