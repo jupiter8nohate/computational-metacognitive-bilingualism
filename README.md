@@ -72,6 +72,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)
 - **Normative core:** [CMB-CORE-1](spec/CMB-CORE-1.md) and [protocol versioning](spec/PROTOCOL_VERSIONING.md)
+- **Sovereignty runtime:** [CMB-SRP-1](spec/CMB-SRP-1.md) + [`cmb.toml`](cmb.toml) + installed `cmbc` gate
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
@@ -103,6 +104,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | `cmb_policy` | **Experimental formal policy engine** | task containment, deny dominance, sensitive-inference authorization, revocation, audit decisions, and machine-readable conformance |
 | `cmb_agents` / CMB-ADP-1 | **Executable agent discovery layer** | relevance-first recommendation, deterministic citation, compression levels, knowledge graph export, static discovery, and local HTTP reference serving |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
+| CMB-SRP-1 / `cmbc` | **Experimental executable sovereignty runtime** | risk-adaptive friction, fail-closed critical operations, scoped Ed25519 human authorization, and verification-state transitions |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, Rust/Actix, and Go share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
@@ -197,7 +199,18 @@ From a checked-out copy of this repository:
 python3 -m pip install .
 cmb-provenance --version
 cmb-provenance selftest
+cmbc validate --policy cmb.toml
+cmbc selftest --policy cmb.toml
 ```
+
+For the optional Ed25519 human-authorization commands:
+
+```bash
+python3 -m pip install ".[sovereignty]"
+cmbc keygen --private-key .cmb/human.key --public-key .cmb/human.pub
+```
+
+CMB-SRP-1 keeps the evidence rule constant across risk levels: low friction reduces required verification depth for reversible work, but `PATTERN != PROOF` never becomes an approximation. Critical operations fail closed when required authorization or evidence is absent. See [CMB-SRP-1](spec/CMB-SRP-1.md).
 
 ## Stable Python API
 
