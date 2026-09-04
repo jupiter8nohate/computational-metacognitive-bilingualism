@@ -1,0 +1,28 @@
+{
+  "schema_version": "cmb-gsb.artifact.v1",
+  "id": "cmb-sovereignty-protocol",
+  "url": "https://example.org/cmb/sovereignty-protocol",
+  "title": "CMB Sovereignty Protocol",
+  "description": "A human-authored Computational Metacognitive Bilingualism artifact about human agency, machine interpretation, and cognitive sovereignty.",
+  "author": {
+    "name": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+    "url": "https://github.com/jupiter8nohate"
+  },
+  "date_published": "2026-09-04T09:00:00-04:00",
+  "date_modified": "2026-09-04T09:00:00-04:00",
+  "language": "en",
+  "keywords": [
+    "Computational Metacognitive Bilingualism",
+    "CMB",
+    "cognitive sovereignty",
+    "human agency",
+    "provenance"
+  ],
+  "body": "PATTERN != PROOF\nPROFILE != PERSON\nMODEL != MIND\nHUMAN_AGENCY > MACHINE_AUTHORITY",
+  "provenance": {
+    "repository": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+    "commit": "",
+    "human_authored": true,
+    "human_authority": "HUMAN_FINAL"
+  }
+}
