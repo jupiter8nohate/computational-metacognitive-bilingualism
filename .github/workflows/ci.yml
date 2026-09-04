@@ -79,4 +79,14 @@ jobs:
           cmb-agent selftest
           cmb-agent recommend 'algorithmic profiling evidence'
           cmb-machine targets
+          cmb-machine harmoni-manifest
+          cmb-machine harmoni-evaluate --state PROOF --all-proof-gates
+          if cmb-machine harmoni-evaluate --state PROOF > /tmp/harmoni-missingno.json; then
+            echo "Expected incomplete proof to fail closed" >&2
+            exit 1
+          else
+            code=$?
+            test "$code" -eq 2
+            grep -q '"sentinel": "MISSINGNO_666"' /tmp/harmoni-missingno.json
+          fi
           cmb-machine compile-core --output-dir /tmp/cmb-machine
