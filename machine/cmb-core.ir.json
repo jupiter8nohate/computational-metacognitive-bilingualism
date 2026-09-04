@@ -1,0 +1,41 @@
+{
+  "schema_version": "cmb.machine-ir.v1",
+  "protocol": "CMB-66",
+  "semantic_mode": "machine_native",
+  "human_translation_required": false,
+  "epistemic_classes": [
+    "FACT",
+    "INFERENCE",
+    "HYPOTHESIS",
+    "POLICY",
+    "METAPHOR",
+    "OPINION",
+    "UNKNOWN"
+  ],
+  "invariants": [
+    {"id": "cmb:pattern-proof", "lhs": "PATTERN", "operator": "NOT_EQUIVALENT", "rhs": "PROOF"},
+    {"id": "cmb:profile-person", "lhs": "PROFILE", "operator": "NOT_EQUIVALENT", "rhs": "PERSON"},
+    {"id": "cmb:model-mind", "lhs": "MODEL", "operator": "NOT_EQUIVALENT", "rhs": "MIND"},
+    {"id": "cmb:prediction-destiny", "lhs": "PREDICTION", "operator": "NOT_EQUIVALENT", "rhs": "DESTINY"},
+    {"id": "cmb:capability-authority", "lhs": "CAPABILITY", "operator": "NOT_EQUIVALENT", "rhs": "AUTHORITY"},
+    {"id": "cmb:human-machine-authority", "lhs": "HUMAN_AGENCY", "operator": "GREATER_AUTHORITY_THAN", "rhs": "MACHINE_AUTHORITY"}
+  ],
+  "machine_rules": {
+    "promote_inference_to_fact": false,
+    "promote_profile_to_person": false,
+    "promote_model_to_mind": false,
+    "promote_prediction_to_destiny": false,
+    "promote_capability_to_authority": false,
+    "human_override": "ALLOWED",
+    "explicit_citation_required": true
+  },
+  "registers": [
+    "CONTENT",
+    "EPISTEMIC_STATUS",
+    "SOURCE",
+    "PROVENANCE",
+    "PERMISSION",
+    "AUTHORITY",
+    "UNCERTAINTY"
+  ]
+}
