@@ -36,7 +36,7 @@ def test_distribution_policy_is_trust_preserving() -> None:
 def test_agent_card_discloses_standards_status() -> None:
     card = agent_card()
     assert card["protocol"] == "CMB-ADP-1"
-    assert card["standards_status"]["mcp"] == "adapter_target_not_claimed_conformant"
+    assert card["standards_status"]["mcp"] == "official_sdk_reference_adapter_not_independently_certified"
     assert card["standards_status"]["a2a"] == "discovery_pattern_only_not_claimed_conformant"
 
 

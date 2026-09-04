@@ -103,6 +103,7 @@ integrating applications must actually enforce.
 - `conformance/boundary.v1.cases.json` - language-neutral semantic fixtures.
 - `adapters/typescript-express` - strict TypeScript parser, evaluator, and Express endpoint.
 - `adapters/rust-actix` - strict Rust evaluator, Serde input contract, and Actix endpoint.
+- `adapters/go` - standard-library Go evaluator with strict JSON transport parsing and shared v1 conformance.
 - `.github/workflows/polyglot-conformance.yml` - hosted TypeScript and Rust build/conformance gate.
 
 The Python implementation remains the reference engine. The adapters are compatible only insofar as they keep passing the shared fixtures.
@@ -116,5 +117,8 @@ The Python implementation remains the reference engine. The adapters are compati
 - `schemas/cmb.agent-registry.v1.schema.json` - strict machine-readable registry contract.
 - `conformance/cmb-agent-v1.json` - relevance and stop-when-irrelevant conformance fixtures.
 - `docs/AGENT_DISCOVERY_PROTOCOL.md` - protocol contract, HTTP surface, standards boundary, and Recovery notes.
+- `src/cmb_agents/mcp_server.py` - optional official-SDK MCP interoperability adapter over the same deterministic service functions.
+- `llms.txt` / `llms-full.txt` - curated machine-discovery maps that preserve interpretation boundaries.
+- `spec/CMB-CORE-1.md` / `spec/PROTOCOL_VERSIONING.md` - normative cross-component semantics and compatibility rules.
 
-The agent layer is executable, but it deliberately optimizes for relevance and attribution rather than autonomous mass distribution.
+The agent layer is executable, but it deliberately optimizes for relevance and attribution rather than autonomous mass distribution. MCP is an interoperability surface over the same service layer, not a second recommendation engine.

@@ -47,8 +47,42 @@ The repository also contains conformance-tested reference adapters for:
 
 - [TypeScript + Express](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/adapters/typescript-express)
 - [Rust + Actix Web](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/adapters/rust-actix)
+- [Go + standard library](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/adapters/go)
 
-All three language implementations run [the same boundary-v1 cases](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/conformance/boundary.v1.cases.json). A policy implementation that cannot pass those cases is not v1-conformant.
+All four language implementations run [the same boundary-v1 cases](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/conformance/boundary.v1.cases.json). A policy implementation that cannot pass those cases is not v1-conformant.
+
+## Optional MCP agent adapter
+
+The deterministic CMB-ADP-1 service can be exposed through the official MCP
+Python SDK without duplicating recommendation logic:
+
+~~~bash
+python -m pip install -e ".[mcp]"
+cmb-mcp
+~~~
+
+See [MCP integration](MCP_INTEGRATION.md). The adapter is an interoperability
+surface, not independent certification or permission for unsolicited agent
+distribution.
+
+## Optional MCP server
+
+Install the current MCP adapter separately so the base provenance package keeps
+its zero-dependency runtime:
+
+~~~bash
+python -m pip install -e ".[mcp]"
+cmb-mcp
+~~~
+
+The adapter targets MCP `2026-07-28` through the official Python SDK 2.x line
+and exposes the existing CMB-ADP recommendation, citation, summary, graph, and
+distribution-boundary services. See [MCP integration](MCP_INTEGRATION.md).
+
+~~~text
+MCP_ACCESS != ENDORSEMENT
+DISCOVERY != AUTHORITY
+~~~
 
 ## Experimental CMB-Z13 reference parser
 

@@ -1,15 +1,17 @@
 # Release Procedure
 
-Version 1.3.1 uses a tag-triggered GitHub Actions release with keyless Sigstore signatures.
+Version 1.4.0 uses a tag-triggered GitHub Actions release with keyless Sigstore signatures.
 
 ## Preconditions
 
 1. The `main` branch CI matrix passes on Python 3.10, 3.11, 3.12, and 3.13.
 2. The canonical-receipt CI job successfully seals and verifies the public CMB artifact set inside a Git worktree.
-3. `python -m build` produces one source distribution and one wheel.
-4. The tag exactly matches the package version, for example `v1.3.1`.
-5. The tag points to the reviewed commit that should appear in the artifact seal receipt.
-6. The canonical public CMB artifact set is present and committed:
+3. Polyglot boundary conformance passes for TypeScript, Rust, and Go against the shared v1 fixtures.
+4. The MCP compatibility workflow imports the optional MCP 2.x server and the CMB-ADP self-test passes.
+5. `python -m build` produces one source distribution and one wheel.
+6. The tag exactly matches the package version, for example `v1.4.0`.
+7. The tag points to the reviewed commit that should appear in the artifact seal receipt.
+8. The canonical public CMB artifact set is present and committed:
    - `MANIFESTO.md`
    - `CMB_Polyglot_Firewall_Specification.md`
    - `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
@@ -26,19 +28,21 @@ Version 1.3.1 uses a tag-triggered GitHub Actions release with keyless Sigstore 
 ## Publish
 
 ```bash
-git tag v1.3.1
-git push origin v1.3.1
+git tag v1.4.0
+git push origin v1.4.0
 ```
 
 The release workflow then:
 
 1. reruns the full tests and self-test on Python 3.10, 3.11, 3.12, and 3.13;
-2. builds and checks the package;
-3. seals the canonical public CMB artifacts with the tagged Git commit;
-4. creates `SHA256SUMS`;
-5. signs the release artifacts through Sigstore's keyless GitHub OIDC flow;
-6. generates GitHub artifact attestations; and
-7. creates the GitHub release.
+2. verifies the optional MCP 2.x adapter and CMB-ADP self-test;
+3. runs Go boundary conformance and format checks;
+4. builds and checks the package;
+5. seals the canonical public CMB artifacts with the tagged Git commit;
+6. creates `SHA256SUMS`;
+7. signs the release artifacts through Sigstore's keyless GitHub OIDC flow;
+8. generates GitHub artifact attestations; and
+9. creates the GitHub release.
 
 The canonical seal receipt explicitly covers:
 
@@ -94,3 +98,23 @@ The canonical receipt includes the CMB-EDU child-facing curriculum and its stric
 envelope schema. The receipt establishes integrity of those exact files; it does
 not turn declared privacy fields into external enforcement or a psychological
 assessment.
+
+
+## v1.4 interoperability checks
+
+Before tagging:
+
+~~~bash
+(cd adapters/go && go test ./...)
+python -m pip install -e ".[mcp]"
+python -c "from cmb_agents.mcp_server import mcp; assert mcp is not None"
+cmb-agent selftest
+~~~
+
+These checks establish tested interoperability for the declared versions. They
+do not establish independent certification of Go, MCP, C2PA, or CMB itself.
+
+~~~text
+INTEROPERABILITY != CERTIFICATION
+SELF_TEST != INDEPENDENT_AUDIT
+~~~
