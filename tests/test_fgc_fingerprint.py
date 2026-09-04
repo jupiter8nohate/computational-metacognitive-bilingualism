@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from copy import deepcopy
 import unicodedata
 
 from cmb_agents.fingerprint import (
@@ -47,4 +48,27 @@ def test_derivative_lineage_changes_when_parent_changes() -> None:
 def test_tampering_breaks_verification() -> None:
     stamped = stamp_mapping({"value": "original"})
     stamped["value"] = "changed"
+    assert not verify_stamp(stamped)
+
+
+def test_origin_metadata_tampering_breaks_verification() -> None:
+    original = stamp_mapping({"value": "original"})
+    mutations = (
+        ("creator_claim", "Different Creator"),
+        ("glyph_token", "tampered"),
+        ("semantic_invariants", ["CAPABILITY == AUTHORITY"]),
+        ("origin_mark_sha256", "sha256:" + ("0" * 64)),
+        ("protocol", "CMB-MKP-999"),
+        ("lineage_mode", "unverified_copy"),
+    )
+
+    for field, value in mutations:
+        tampered = deepcopy(original)
+        tampered["_cmb_origin"][field] = value
+        assert not verify_stamp(tampered), field
+
+
+def test_origin_stamp_rejects_unknown_fields() -> None:
+    stamped = stamp_mapping({"value": "original"})
+    stamped["_cmb_origin"]["unsigned_note"] = "ignore me"
     assert not verify_stamp(stamped)
