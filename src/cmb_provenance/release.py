@@ -1,4 +1,4 @@
-"""Release artifact checksum support shared by tests and automation."""
+"""Release artifact definitions and checksum support shared by tests and automation."""
 
 from __future__ import annotations
 
@@ -6,6 +6,12 @@ import hashlib
 import os
 import tempfile
 from pathlib import Path
+
+CANONICAL_PUBLIC_ARTIFACTS: tuple[str, ...] = (
+    "MANIFESTO.md",
+    "CMB_Polyglot_Firewall_Specification.md",
+    "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+)
 
 
 def digest(path: Path) -> str:
