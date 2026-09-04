@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security policy
+    url: https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/security/policy
+    about: Read the security-reporting instructions before publishing sensitive details.
