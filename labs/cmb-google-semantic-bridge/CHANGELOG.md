@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-09-04
+
+### Added
+
+- GitHub Pages deployment workflow for the canonical Sovereign Transmission.
+- Real project-site canonical target at `https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/`.
+- Explicit `-site-base` option for project-hosted sitemap discovery paths.
+- Exact-commit pinning for GitHub Pages deployment actions.
+- Deployment contract checks for canonical URL, sitemap location, source-byte equality, and static bundle completeness.
+
+### Corrected
+
+- Sitemap discovery generation now preserves project-site base paths instead of collapsing every deployment to the host root.
+- Documentation distinguishes a project-path `robots.txt` artifact from an origin-root robots policy.
+
 ## [0.2.0] - 2026-09-04
 
 ### Added
