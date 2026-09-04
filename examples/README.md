@@ -9,3 +9,5 @@ These examples are intentionally small. A new contributor should be able to unde
 5. [Read the Guardian safety pipeline](05_guardian_pipeline/README.md)
 
 6. [Enforce explicit policy facts with a FastAPI boundary guard](06_fastapi_boundary/README.md)
+
+6. [Enforce explicit policy facts with a FastAPI boundary guard](06_fastapi_boundary/README.md)
