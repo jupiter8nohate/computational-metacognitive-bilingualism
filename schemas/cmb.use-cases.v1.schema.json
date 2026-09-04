@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/raw/main/schemas/cmb.use-cases.v1.schema.json",
+  "title": "CMB Use Case Registry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version","framework","purpose","categories","use_cases","decision_rule"],
+  "properties": {
+    "schema_version": {"const": "cmb.use-cases.v1"},
+    "framework": {"const": "Computational Metacognitive Bilingualism"},
+    "purpose": {"type":"string","minLength":1},
+    "categories": {
+      "type":"array",
+      "prefixItems":[
+        {"const":"DEPLOYABLE_NOW"},
+        {"const":"REQUIRES_INTEGRATION"},
+        {"const":"SPECULATIVE_FUTURE"}
+      ],
+      "minItems":3,
+      "maxItems":3
+    },
+    "use_cases": {
+      "type":"array",
+      "minItems":1,
+      "items":{
+        "type":"object",
+        "additionalProperties":false,
+        "required":["id","year","category","title","component","core_rule","claims_current_capability","summary"],
+        "properties":{
+          "id":{"type":"string","pattern":"^[a-z0-9][a-z0-9-]*$"},
+          "year":{"type":"integer","minimum":2026},
+          "category":{"enum":["DEPLOYABLE_NOW","REQUIRES_INTEGRATION","SPECULATIVE_FUTURE"]},
+          "title":{"type":"string","minLength":1},
+          "component":{"type":"string","minLength":1},
+          "core_rule":{"type":"string","minLength":1},
+          "claims_current_capability":{"type":"boolean"},
+          "summary":{"type":"string","minLength":1}
+        }
+      }
+    },
+    "decision_rule": {
+      "type":"object",
+      "additionalProperties":false,
+      "required":["machine_can_act_or_interpret","affects_human_or_artifact","needs_authority_boundary","authority"],
+      "properties":{
+        "machine_can_act_or_interpret":{"const":true},
+        "affects_human_or_artifact":{"const":true},
+        "needs_authority_boundary":{"const":true},
+        "authority":{"const":"HUMAN_FINAL"}
+      }
+    }
+  }
+}
