@@ -22,6 +22,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 - [`../manifestos/CMB_SOVEREIGN_TRANSMISSION.md`](../manifestos/CMB_SOVEREIGN_TRANSMISSION.md) - decorative code-poetry gateway into CMB.
 - [`../policy/CMB_POLICY_ONE_PAGER.md`](../policy/CMB_POLICY_ONE_PAGER.md) - two-minute policy front door.
+- [`../docs/CMB_EDU_KIDS.md`](../docs/CMB_EDU_KIDS.md) - CMB-EDU Flamingoglyph learning layer for children and classrooms.
 - [`../docs/PRIOR_ART_AND_POSITIONING.md`](../docs/PRIOR_ART_AND_POSITIONING.md) - legal, scholarly, and standards positioning.
 - [`../docs/C2PA_INTEROPERABILITY.md`](../docs/C2PA_INTEROPERABILITY.md) - provenance interoperability roadmap.
 - [`../docs/EXTERNAL_REVIEW.md`](../docs/EXTERNAL_REVIEW.md) - current independent-validation gap and review scope.
@@ -30,7 +31,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 - [`catalog.json`](catalog.json) - machine-indexable catalog of CMB public artifacts.
 - [`../schemas/cmb.library.catalog.v1.schema.json`](../schemas/cmb.library.catalog.v1.schema.json) - strict JSON Schema for validating the catalog contract.
-- [`../schemas/cmb.library.catalog.v1.schema.json`](../schemas/cmb.library.catalog.v1.schema.json) - strict JSON Schema for validating the catalog contract.
+- [`../schemas/cmb.edu.v1.schema.json`](../schemas/cmb.edu.v1.schema.json) - strict CMB-EDU Metacognitive Context Envelope schema.
 - [`../MANIFESTO.md`](../MANIFESTO.md) - core human-sovereignty manifesto.
 - [`../manifestos/DEMONS_NEED_ATTENTION_DNA.md`](../manifestos/DEMONS_NEED_ATTENTION_DNA.md) - D.N.A. attention-economy manifesto.
 - [`../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - D.N.A./FGC literary allegory about institutional and algorithmic confinement.
