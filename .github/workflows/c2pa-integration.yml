@@ -7,8 +7,6 @@ on:
       - "src/cmb_provenance/cli.py"
       - "src/cmb_provenance/schemas.py"
       - "schemas/cmb.c2pa-assertion-payload.v1.schema.json"
-      - "src/cmb_provenance/schemas.py"
-      - "schemas/cmb.c2pa-assertion-payload.v1.schema.json"
       - "scripts/make_c2pa_test_png.py"
       - "scripts/verify_c2pa_roundtrip.py"
       - "tests/fixtures/c2pa_*"
@@ -17,6 +15,8 @@ on:
     paths:
       - "src/cmb_provenance/c2pa.py"
       - "src/cmb_provenance/cli.py"
+      - "src/cmb_provenance/schemas.py"
+      - "schemas/cmb.c2pa-assertion-payload.v1.schema.json"
       - "scripts/make_c2pa_test_png.py"
       - "scripts/verify_c2pa_roundtrip.py"
       - "tests/fixtures/c2pa_*"
