@@ -82,6 +82,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 You should not need the entire CMB universe to understand the thesis.
 
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
+- **Kids / classroom entry point:** [CMB-EDU Kids - Flamingoglyph Learning Layer](docs/CMB_EDU_KIDS.md)
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
@@ -111,6 +112,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | Layer | Status | Purpose |
 |---|---|---|
 | `cmb_provenance` | **Stable engineering** | artifact integrity, receipts, Recovery, C2PA-facing interoperability |
+| `cmb_edu` | **Experimental educational subsystem** | privacy-first declared-context parsing, child-facing computational literacy, Flamingoglyph teaching, and human/machine epistemic boundaries |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, and Rust/Actix share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
@@ -137,6 +139,8 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) - the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
 - [`CMB Digital Library Catalog`](library/catalog.json) - the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
 - [`CMB Global Advocacy Charter v1.1`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
+- [`CMB-EDU Kids`](docs/CMB_EDU_KIDS.md) - the canonical child-facing Flamingoglyph computational-literacy curriculum.
+- [`CMB Metacognitive Context Envelope v1`](schemas/cmb.edu.v1.schema.json) - the canonical strict schema for declared context, sovereignty boundaries, and deny-by-default privacy declarations.
 
 CMB-Z13 is now part of the canonical provenance sealing set. The next tag-triggered signed release will seal the manifesto, language specification, machine registry, and the rest of the canonical CMB corpus as one explicit file set.
 
@@ -225,6 +229,15 @@ cmb-z13 explain '⛎::LISP -> INSPECT[rule] => META(rule);'
 
 Its AST schema is [`schemas/cmb.z13.ast.v1.schema.json`](schemas/cmb.z13.ast.v1.schema.json). The parser validates the canonical mapping; it does not classify people.
 
+The experimental CMB-EDU CLI is also installed:
+
+```bash
+cmb-edu validate '🪐::LEARN -> DECLARE[curious || focused] => ASK("how_do_loops_work") -> PATTERN_NOT_PROOF;'
+cmb-edu parse '♌::CREATIVE -> STATE[confident || overstimulated] => GENERATE("dragon_story") -> PROFILE_NOT_PERSON;'
+```
+
+CMB-EDU emits a strict `cmb.edu.v1` Metacognitive Context Envelope. It records context as `human_declared`, sets `machine_inferred=false`, limits the declaration to the current interaction, and defaults training, profiling, secondary use, and psychological inference permissions to false. These fields are protocol declarations; an integrating system must still implement actual enforcement.
+
 ## CLI
 
 Seal the canonical public CMB artifact set:
@@ -240,6 +253,8 @@ cmb-provenance seal \
   manifestos/CMB_Z13_LANGUAGE_SPEC.md \
   library/cmb-z13.registry.json \
   policy/CMB_GLOBAL_ADVOCACY_CHARTER.md \
+  docs/CMB_EDU_KIDS.md \
+  schemas/cmb.edu.v1.schema.json \
   library/catalog.json \
   --output cmb-source.cmb-receipt.json
 ```
@@ -257,6 +272,8 @@ cmb-provenance verify \
   manifestos/CMB_Z13_LANGUAGE_SPEC.md \
   library/cmb-z13.registry.json \
   policy/CMB_GLOBAL_ADVOCACY_CHARTER.md \
+  docs/CMB_EDU_KIDS.md \
+  schemas/cmb.edu.v1.schema.json \
   library/catalog.json \
   --receipt cmb-source.cmb-receipt.json \
   --check-git-commit
@@ -338,6 +355,9 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`library/README.md`](library/README.md) - human-readable entry point to the CMB digital library.
 - [`library/catalog.json`](library/catalog.json) - machine-indexable artifact catalog, sealed as part of the canonical public set.
 - [`src/cmb_provenance`](src/cmb_provenance) - the supported v1.3.1 package, stable sealing API, and C2PA-facing adapter.
+- [`src/cmb_edu`](src/cmb_edu) - experimental privacy-first CMB-EDU parser and installed CLI.
+- [`docs/CMB_EDU_KIDS.md`](docs/CMB_EDU_KIDS.md) - Flamingoglyph child/classroom learning curriculum.
+- [`schemas/cmb.edu.v1.schema.json`](schemas/cmb.edu.v1.schema.json) - strict CMB-EDU Metacognitive Context Envelope contract.
 - [`schemas/cmb.c2pa-assertion-payload.v1.schema.json`](schemas/cmb.c2pa-assertion-payload.v1.schema.json) - strict schema for the internal C2PA-facing adapter payload.
 - [`schemas/cmb.z13.ast.v1.schema.json`](schemas/cmb.z13.ast.v1.schema.json) - deterministic AST schema for the experimental CMB-Z13 parser.
 - [`examples`](examples) - five small install/verify/C2PA/Z13 examples.
@@ -358,6 +378,7 @@ python3 -m pip install -e ".[test,build,docs]"
 pytest
 cmb-provenance selftest
 cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
+cmb-edu validate '🪐::LEARN -> DECLARE[curious || focused] => ASK("how_do_loops_work") -> PATTERN_NOT_PROOF;'
 mkdocs build --strict
 python3 -m build
 ```
