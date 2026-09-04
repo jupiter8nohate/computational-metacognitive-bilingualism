@@ -1,40 +1,90 @@
+<div class="cmb-hero">
+
+<div class="cmb-kicker">CMB // HUMAN ↔ MACHINE LITERACY</div>
+
 # Computational Metacognitive Bilingualism
 
-CMB is a human-agency and computational-literacy framework. This documentation site is the short path into a larger repository.
+CMB is a human-agency and computational-literacy framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.
 
-```text
-PATTERN != PROOF
-PROFILE != PERSON
-PREDICTION != DESTINY
-HUMAN_AGENCY > MACHINE_AUTHORITY
-```
+<div class="cmb-invariants">
+<span class="cmb-meta">PATTERN ≠ PROOF</span><br>
+<span class="cmb-human">PROFILE ≠ PERSON</span><br>
+<span class="cmb-machine">MODEL ≠ MIND</span><br>
+<span class="cmb-meta">PREDICTION ≠ DESTINY</span><br>
+<strong class="cmb-human">HUMAN_AGENCY</strong> &gt; <strong class="cmb-machine">MACHINE_AUTHORITY</strong>
+</div>
+
+</div>
 
 ## Choose a door
 
-### I am a human / general reader
+<div class="cmb-grid">
 
-Start with the public one-page policy summary:
+<a class="cmb-card cmb-card--human" href="../policy/CMB_POLICY_ONE_PAGER/">
+<strong>🦩 HUMAN // Understand CMB</strong>
+<span>Start with the public policy front door, human-agency principles, and the shortest path to the thesis.</span>
+</a>
 
-https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_POLICY_ONE_PAGER.md
+<a class="cmb-card cmb-card--machine" href="DEVELOPERS/">
+<strong>⌘ DEVELOP // Build with CMB</strong>
+<span>Install the package, seal artifacts, inspect schemas, run the CLIs, and integrate provenance or policy boundaries.</span>
+</a>
 
-### I want to experience CMB first
+<a class="cmb-card cmb-card--evidence" href="RESEARCHERS/">
+<strong>◈ RESEARCH // Verify the claims</strong>
+<span>Read the research position, prior-art analysis, dissertation, formal semantics, and evidence boundaries.</span>
+</a>
+
+<a class="cmb-card cmb-card--meta" href="PLAYGROUND/">
+<strong>♃ EXPLORE // Experience the system</strong>
+<span>Use the interactive playground, then move into CMB-Z13, CMB-EDU, the manifesto library, and symbolic layers.</span>
+</a>
+
+</div>
+
+## 01 // Understand
+
+CMB translates digital-rights and human-agency principles into concise human-readable and machine-readable boundaries. It does not claim that human experience can be reduced to code, and it does not treat machine inference as authority over identity, intent, meaning, or destiny.
+
+<div class="cmb-boundary">
+<strong>Boundary:</strong> <span class="cmb-machine">machine capability</span> is distinct from <span class="cmb-human">human authority</span>. CMB keeps declared policy, cryptographic integrity, technical enforcement, and legal enforceability separate.
+</div>
+
+## 02 // Experience
 
 Open the [Interactive CMB Playground](PLAYGROUND.md) for a zero-dependency browser demonstration of local hashing, CMB-Z13 symbolic lenses, machine-readable declarations, and explicit policy boundaries.
 
-### I want the research foundation
+For the artistic entry point, enter [CMB // The Sovereign Transmission](../manifestos/CMB_SOVEREIGN_TRANSMISSION.md).
 
-Start with [CMB: Three Dimensions of Distinction](CMB_DISTINCTION.md) for the conceptual thesis and [CMB Research Position](CMB_RESEARCH_POSITION.md) for the evidence boundary. Then read the [CMB Cognitive Sovereignty Dissertation](dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md) and [Chapter 31: Formal Semantics](dissertation/31_FORMAL_SEMANTICS.md) for the deeper research and machine-testable policy model.
+## 03 // Build
 
-### I am a developer
+Read [For developers](DEVELOPERS.md) for installation, stable provenance APIs, C2PA-facing interoperability, examples, agent discovery, and the experimental language layers.
 
-Read [For developers](DEVELOPERS.md) for installation, provenance APIs, C2PA integration, examples, and the experimental CMB-Z13 parser.
+<span class="cmb-status">STABLE // cmb_provenance</span>
+<span class="cmb-status">EXPERIMENTAL // cmb_policy</span>
+<span class="cmb-status">EXPERIMENTAL // cmb_edu</span>
+<span class="cmb-status">EXPERIMENTAL // CMB-Z13</span>
 
-### I am a researcher, journalist, or policy reader
+## 04 // Verify
 
-Read [For researchers & policy](RESEARCHERS.md), then [Prior Art & Positioning](PRIOR_ART_AND_POSITIONING.md).
+Start with [CMB: Three Dimensions of Distinction](CMB_DISTINCTION.md) and [CMB Research Position](CMB_RESEARCH_POSITION.md). Then move into the [CMB Cognitive Sovereignty Dissertation](dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md), [Formal Semantics](dissertation/31_FORMAL_SEMANTICS.md), and [Prior Art & Positioning](PRIOR_ART_AND_POSITIONING.md).
 
-## Maturity boundary
+The evidence rule is simple:
 
-The repository contains stable engineering, experimental language research, and authored art/policy. Those layers are intentionally labeled rather than blended.
+```text
+PATTERN -> HYPOTHESIS
+HYPOTHESIS -> TEST
+TEST -> EVIDENCE
+EVIDENCE -> PROVISIONAL CONCLUSION
+```
 
-See [Project structure](PROJECT_STRUCTURE.md).
+## 05 // Maturity boundary
+
+The repository intentionally contains several different kinds of work:
+
+- **Stable engineering** for provenance and integrity tooling.
+- **Experimental technical systems** for policy, education, agents, and symbolic language research.
+- **Research and policy material** with explicit evidence boundaries.
+- **Authored cultural work** including code-poetry, manifestos, and Flamingoglyph material.
+
+Those layers are labeled instead of being blended into one claim. See [Project structure](PROJECT_STRUCTURE.md) and [Threat model](THREAT_MODEL.md).
