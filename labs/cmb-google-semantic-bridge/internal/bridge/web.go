@@ -5,7 +5,6 @@ import (
 	"encoding/xml"
 	"fmt"
 	"html/template"
-	"net/url"
 	"strings"
 	"time"
 )
@@ -37,15 +36,9 @@ func RobotsTXT(siteBaseURL string) (string, error) {
 }
 
 func OriginURL(raw string) (string, error) {
-	parsed, err := url.Parse(strings.TrimSpace(raw))
+	parsed, err := parseHTTPSURL("URL", raw)
 	if err != nil {
-		return "", fmt.Errorf("parse URL: %w", err)
-	}
-	if parsed.Scheme != "https" || parsed.Host == "" {
-		return "", fmt.Errorf("URL must be an absolute https URL")
-	}
-	if parsed.User != nil {
-		return "", fmt.Errorf("URL must not contain userinfo")
+		return "", err
 	}
 	return parsed.Scheme + "://" + parsed.Host, nil
 }
@@ -105,15 +98,11 @@ func HeadBlock(a Artifact) ([]byte, error) {
 }
 
 func NormalizeBaseURL(raw string) (string, error) {
-	parsed, err := url.Parse(strings.TrimSpace(raw))
+	parsed, err := parseHTTPSURL("base URL", raw)
 	if err != nil {
-		return "", fmt.Errorf("parse base URL: %w", err)
-	}
-	if parsed.Scheme != "https" || parsed.Host == "" {
-		return "", fmt.Errorf("base URL must be an absolute https URL")
+		return "", err
 	}
 	parsed.RawQuery = ""
-	parsed.Fragment = ""
 	parsed.Path = strings.TrimRight(parsed.Path, "/")
 	return parsed.String(), nil
 }
