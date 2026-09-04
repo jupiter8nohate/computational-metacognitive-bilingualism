@@ -53,6 +53,7 @@ MODEL != MIND
 PREDICTION != DESTINY
 DIFFERENCE != DEFECT
 CAPABILITY != AUTHORITY
+MACHINE_CAN_READ != MACHINE_CAN_DEFINE
 OPTIMIZATION != MORALITY
 INTELLIGENCE != SOVEREIGNTY
 
@@ -70,6 +71,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
 - **Conceptual front door:** [CMB: Three Dimensions of Distinction](docs/CMB_DISTINCTION.md)
 - **Research position:** [CMB Research Position](docs/CMB_RESEARCH_POSITION.md)
+- **Research case studies:** [CMB Case Studies](docs/CASE_STUDIES.md)
 - **Creator provenance:** [CMB Creator Provenance Protocol](docs/CREATOR_PROVENANCE.md)
 - **Research backbone:** [CMB Cognitive Sovereignty Dissertation](docs/dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md)
 - **Formal semantics:** [Chapter 31 - Formal CMB Semantics](docs/dissertation/31_FORMAL_SEMANTICS.md)
@@ -119,17 +121,21 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | CMB-CAP-1 / `cmb-cap` | **Experimental signed authority credential layer** | Ed25519 credentials, offline verification, key pinning, expiry, parent lineage, MCP verification, and experimental A2A/VC bridges |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, Rust/Actix, and Go share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
+| Research case studies | **Evidence-backed research layer** | structured observations, evidence fingerprints, claim status, falsification, and revision |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
 
 See [Project structure](docs/PROJECT_STRUCTURE.md) and [Threat model](docs/THREAT_MODEL.md).
 
 
-## v1.4.0 Interoperability release
+## v1.4.x Interoperability releases
 
-Version 1.4.0 keeps the Recovery-hardened provenance core and adds a fourth
-conformance-tested boundary implementation in Go, curated LLM discovery entry
-points, an optional MCP 2026-07-28 adapter, normative CMB core/versioning
-documents, and explicit falsifiability criteria.
+Version 1.4.1 is the latest published signed release. The v1.4 line keeps the
+Recovery-hardened provenance core and adds a fourth conformance-tested boundary
+implementation in Go, curated LLM discovery entry points, an optional MCP
+2026-07-28 adapter, normative CMB core/versioning documents, and explicit
+falsifiability criteria. The current `main` branch may contain post-v1.4.1
+research and documentation changes that are not covered by the v1.4.1 release
+receipt until a later version-matching tag is published.
 
 ## Canonical CMB artifacts
 
@@ -153,7 +159,7 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB-EDU Kids`](docs/CMB_EDU_KIDS.md) - the canonical child-facing Flamingoglyph computational-literacy curriculum.
 - [`CMB Metacognitive Context Envelope v1`](schemas/cmb.edu.v1.schema.json) - the canonical strict schema for declared context, sovereignty boundaries, and deny-by-default privacy declarations.
 
-Reclaiming the Pen, CMB-Z13, HARMONI, and the Creator Provenance bundle are part of the canonical provenance sealing set. The next tag-triggered signed release will seal their exact bytes together with the rest of the canonical CMB corpus as one explicit file set.
+Reclaiming the Pen, CMB-Z13, HARMONI, and the Creator Provenance bundle are part of the canonical provenance sealing set. The latest signed release is v1.4.1. Any canonical artifact bytes changed after that tag are covered only after a later version-matching signed release seals them as part of the explicit file set.
 
 The project now has a deliberate progression:
 
@@ -475,7 +481,7 @@ python3 -m build
 (cd adapters/go && go test ./...)
 ```
 
-CI runs the tests on Python 3.10–3.13. The canonical-receipt CI job independently seals and verifies the current canonical artifact set inside a Git worktree. Tagging `v1.4.0` activates the signed-release workflow, which builds the wheel and source distribution, seals the canonical public CMB artifact set, generates `SHA256SUMS`, signs the release artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
+CI runs the tests on Python 3.10–3.13. The canonical-receipt CI job independently seals and verifies the current canonical artifact set inside a Git worktree. Pushing a version-matching tag (latest published: `v1.4.1`) activates the signed-release workflow, which builds the wheel and source distribution, seals the canonical public CMB artifact set, generates `SHA256SUMS`, signs the release artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
 
 ## Evidence standard
 
