@@ -13,6 +13,7 @@ Version 1.3.1 uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `MANIFESTO.md`
    - `CMB_Polyglot_Firewall_Specification.md`
    - `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
+   - `manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`
    - `manifestos/CMB_UNCLASSIFIABLE_INDEX.md`
    - `manifestos/CMB_Z13_MANIFESTO.md`
    - `manifestos/CMB_Z13_LANGUAGE_SPEC.md`
@@ -43,6 +44,7 @@ The canonical seal receipt explicitly covers:
 MANIFESTO.md
 CMB_Polyglot_Firewall_Specification.md
 manifestos/DEMONS_NEED_ATTENTION_DNA.md
+manifestos/DNA_CHICKEN_RUN_MANIFESTO.md
 manifestos/CMB_UNCLASSIFIABLE_INDEX.md
 manifestos/CMB_Z13_MANIFESTO.md
 manifestos/CMB_Z13_LANGUAGE_SPEC.md
