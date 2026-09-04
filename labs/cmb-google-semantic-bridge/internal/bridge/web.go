@@ -28,13 +28,26 @@ func CanonicalLink(rawURL string) (string, error) {
 	return `<link rel="canonical" href="` + template.HTMLEscapeString(rawURL) + `">`, nil
 }
 
-func RobotsTXT(baseURL string) (string, error) {
-	parsed, err := url.Parse(baseURL)
-	if err != nil || parsed.Scheme != "https" || parsed.Host == "" {
-		return "", fmt.Errorf("base URL must be an absolute https URL")
+func RobotsTXT(siteBaseURL string) (string, error) {
+	base, err := NormalizeBaseURL(siteBaseURL)
+	if err != nil {
+		return "", err
 	}
-	root := parsed.Scheme + "://" + parsed.Host
-	return "User-agent: *\nAllow: /\n\nSitemap: " + root + "/sitemap.xml\n", nil
+	return "User-agent: *\nAllow: /\n\nSitemap: " + base + "/sitemap.xml\n", nil
+}
+
+func OriginURL(raw string) (string, error) {
+	parsed, err := url.Parse(strings.TrimSpace(raw))
+	if err != nil {
+		return "", fmt.Errorf("parse URL: %w", err)
+	}
+	if parsed.Scheme != "https" || parsed.Host == "" {
+		return "", fmt.Errorf("URL must be an absolute https URL")
+	}
+	if parsed.User != nil {
+		return "", fmt.Errorf("URL must not contain userinfo")
+	}
+	return parsed.Scheme + "://" + parsed.Host, nil
 }
 
 func SitemapXML(artifacts []Artifact) ([]byte, error) {

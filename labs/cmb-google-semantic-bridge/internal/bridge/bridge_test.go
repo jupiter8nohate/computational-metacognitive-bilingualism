@@ -190,14 +190,24 @@ func TestSitemapRejectsDuplicateURL(t *testing.T) {
 	}
 }
 
-func TestRobotsTXT(t *testing.T) {
-	got, err := RobotsTXT("https://example.org/cmb/test")
+func TestRobotsTXTPreservesProjectBasePath(t *testing.T) {
+	got, err := RobotsTXT("https://example.org/project/")
 	if err != nil {
 		t.Fatal(err)
 	}
-	want := "User-agent: *\nAllow: /\n\nSitemap: https://example.org/sitemap.xml\n"
+	want := "User-agent: *\nAllow: /\n\nSitemap: https://example.org/project/sitemap.xml\n"
 	if got != want {
 		t.Fatalf("robots = %q, want %q", got, want)
+	}
+}
+
+func TestOriginURL(t *testing.T) {
+	got, err := OriginURL("https://example.org/project/page/")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got != "https://example.org" {
+		t.Fatalf("origin = %q", got)
 	}
 }
 

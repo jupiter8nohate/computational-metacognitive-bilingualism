@@ -14,7 +14,7 @@ import (
 	"github.com/jupiter8nohate/cmb-google-semantic-bridge/internal/bridge"
 )
 
-const version = "0.2.0"
+const version = "0.3.0"
 
 func main() {
 	if err := run(os.Args[1:], os.Stdout, os.Stderr); err != nil {
@@ -74,6 +74,7 @@ func renderCommand(args []string, stdout io.Writer) error {
 	fs.SetOutput(io.Discard)
 	input := fs.String("in", "", "artifact JSON file")
 	output := fs.String("out", "", "output directory")
+	siteBase := fs.String("site-base", "", "optional HTTPS site base for sitemap discovery")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
@@ -90,7 +91,7 @@ func renderCommand(args []string, stdout io.Writer) error {
 		artifact.Provenance.SHA256 = bridge.SHA256Bytes([]byte(artifact.Body))
 	}
 
-	outputs, err := metadataOutputs(artifact)
+	outputs, err := metadataOutputs(artifact, *siteBase)
 	if err != nil {
 		return err
 	}
@@ -109,6 +110,7 @@ func publishCommand(args []string, stdout io.Writer) error {
 	sourcePath := fs.String("source", "", "human-authored source file")
 	output := fs.String("out", "", "publication output directory")
 	urlOverride := fs.String("url", "", "optional HTTPS canonical URL override")
+	siteBase := fs.String("site-base", "", "optional HTTPS site base for sitemap discovery")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
@@ -133,7 +135,7 @@ func publishCommand(args []string, stdout io.Writer) error {
 		return fmt.Errorf("bind source: %w", err)
 	}
 
-	outputs, err := metadataOutputs(artifact)
+	outputs, err := metadataOutputs(artifact, *siteBase)
 	if err != nil {
 		return err
 	}
@@ -159,7 +161,7 @@ func publishCommand(args []string, stdout io.Writer) error {
 	return nil
 }
 
-func metadataOutputs(artifact bridge.Artifact) (map[string][]byte, error) {
+func metadataOutputs(artifact bridge.Artifact, siteBase string) (map[string][]byte, error) {
 	jsonLD, err := bridge.ArticleJSONLD(artifact)
 	if err != nil {
 		return nil, err
@@ -176,7 +178,13 @@ func metadataOutputs(artifact bridge.Artifact) (map[string][]byte, error) {
 	if err != nil {
 		return nil, err
 	}
-	robots, err := bridge.RobotsTXT(artifact.URL)
+	if strings.TrimSpace(siteBase) == "" {
+		siteBase, err = bridge.OriginURL(artifact.URL)
+		if err != nil {
+			return nil, err
+		}
+	}
+	robots, err := bridge.RobotsTXT(siteBase)
 	if err != nil {
 		return nil, err
 	}
@@ -272,7 +280,7 @@ func printUsage(w io.Writer) {
 	fmt.Fprintln(w, "Usage:")
 	fmt.Fprintln(w, "  cmb-gsb version")
 	fmt.Fprintln(w, "  cmb-gsb validate -in artifact.json")
-	fmt.Fprintln(w, "  cmb-gsb render -in artifact.json -out build/")
-	fmt.Fprintln(w, "  cmb-gsb publish -in artifact.json -source MANIFESTO.md -out site/ [-url https://example.org/work/]")
+	fmt.Fprintln(w, "  cmb-gsb render -in artifact.json -out build/ [-site-base https://example.org/project/]")
+	fmt.Fprintln(w, "  cmb-gsb publish -in artifact.json -source MANIFESTO.md -out site/ [-url https://example.org/work/] [-site-base https://example.org/project/]")
 	fmt.Fprintln(w, "  cmb-gsb hash -file MANIFESTO.md")
 }
