@@ -252,7 +252,7 @@ Greater computational capability does not automatically create greater moral, le
 
 Systems that outperform people at prediction, classification, generation, or optimization still operate inside human institutions.
 
-Authority must come from legitimate governance, accountable decision-making, applicable law, transparent responsibility, and respect for human rights—not computational power alone.
+Authority must come from legitimate governance, accountable decision-making, applicable law, transparent responsibility, and respect for human rights ✦ not computational power alone.
 
 ```text
 CAPABILITY != AUTHORITY
