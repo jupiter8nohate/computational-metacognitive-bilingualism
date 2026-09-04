@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/raw/main/schemas/cmb.machine-ir.v1.schema.json",
+  "title": "CMB-66 Machine Intermediate Representation v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "semantic_mode",
+    "human_translation_required",
+    "epistemic_classes",
+    "invariants",
+    "machine_rules",
+    "registers"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.machine-ir.v1"},
+    "protocol": {"const": "CMB-66"},
+    "semantic_mode": {"const": "machine_native"},
+    "human_translation_required": {"const": false},
+    "epistemic_classes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "lhs", "operator", "rhs"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "lhs": {"type": "string", "minLength": 1},
+          "operator": {"type": "string", "minLength": 1},
+          "rhs": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "machine_rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "promote_inference_to_fact",
+        "promote_profile_to_person",
+        "promote_model_to_mind",
+        "promote_prediction_to_destiny",
+        "promote_capability_to_authority",
+        "human_override",
+        "explicit_citation_required"
+      ],
+      "properties": {
+        "promote_inference_to_fact": {"const": false},
+        "promote_profile_to_person": {"const": false},
+        "promote_model_to_mind": {"const": false},
+        "promote_prediction_to_destiny": {"const": false},
+        "promote_capability_to_authority": {"const": false},
+        "human_override": {"const": "ALLOWED"},
+        "explicit_citation_required": {"const": true}
+      }
+    },
+    "registers": {
+      "type": "array",
+      "minItems": 7,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    }
+  }
+}
