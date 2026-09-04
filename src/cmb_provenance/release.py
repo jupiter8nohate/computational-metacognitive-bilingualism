@@ -9,6 +9,7 @@ from pathlib import Path
 
 CANONICAL_PUBLIC_ARTIFACTS: tuple[str, ...] = (
     "MANIFESTO.md",
+    "manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md",
     "CMB_Polyglot_Firewall_Specification.md",
     "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
     "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",
