@@ -39,9 +39,9 @@ A rejected boundary raises `BoundaryRejectedError` with a structured decision pa
 
 The engine enforces declared conditions only. It does not inspect prose and infer identity, intent, diagnosis, mental state, or morality.
 
-Cross-language implementations can use [`cmb.boundary-event.v1.schema.json`](../schemas/cmb.boundary-event.v1.schema.json) as the shared event contract.
+Cross-language implementations can use [`cmb.boundary-event.v1.schema.json`](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.boundary-event.v1.schema.json) as the shared event contract.
 
-The first framework example is [FastAPI boundary guard](../examples/06_fastapi_boundary/README.md). Additional adapters should share conformance fixtures rather than independently reinterpreting the rules.
+The first framework example is [FastAPI boundary guard](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/examples/06_fastapi_boundary/README.md). Additional adapters should share conformance fixtures rather than independently reinterpreting the rules.
 
 ## Experimental CMB-Z13 reference parser
 
