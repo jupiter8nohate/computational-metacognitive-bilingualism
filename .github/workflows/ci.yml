@@ -72,3 +72,4 @@ jobs:
           cmb-provenance selftest
           cmb-z13 --version
           cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
+          cmb-edu parse-fgc '🧠 CURIOUS + 🪐 LEARNING + ⚡ ASK WHY + 🛡️ NO_PROFILE'
