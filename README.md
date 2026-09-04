@@ -82,6 +82,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 You should not need the entire CMB universe to understand the thesis.
 
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
+- **Kids / CMB-EDU:** [FGC elementary learning layer](docs/CMB_EDU_KIDS.md)
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
@@ -111,6 +112,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | Layer | Status | Purpose |
 |---|---|---|
 | `cmb_provenance` | **Stable engineering** | artifact integrity, receipts, Recovery, C2PA-facing interoperability |
+| `cmb_edu` | **Experimental educational API** | child-friendly metacognitive literacy, FGC emoji syntax, privacy-first context envelopes |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, and Rust/Actix share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
@@ -137,6 +139,8 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) - the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
 - [`CMB Digital Library Catalog`](library/catalog.json) - the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
 - [`CMB Global Advocacy Charter v1.1`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
+- [`CMB-EDU Kids Learning Layer`](docs/CMB_EDU_KIDS.md) - the elementary-school-facing CMB/FGC curriculum for notice → question → verify → decide → create.
+- [`cmb.edu.v1` JSON Schema](schemas/cmb.edu.v1.schema.json) - the machine-readable contract for ephemeral, human-declared context and deny-by-default privacy semantics.
 
 CMB-Z13 is now part of the canonical provenance sealing set. The next tag-triggered signed release will seal the manifesto, language specification, machine registry, and the rest of the canonical CMB corpus as one explicit file set.
 
@@ -210,6 +214,26 @@ bytes match the corresponding committed Git blob and records
 that commit.
 
 The receipt declares `coverage.type = "explicit_file_set"` and `excludes_unlisted = true`. It therefore identifies exactly what it covers and makes no claim about unlisted files.
+
+## CMB-EDU quick start
+
+CMB-EDU is the experimental educational layer for teaching children to use machine logic without turning a child's self-description into a permanent machine profile.
+
+```bash
+cmb-edu parse '♌::CREATIVE -> STATE[confident || overstimulated] => GENERATE("dragon_story") -> PROFILE_NOT_PERSON;'
+
+cmb-edu parse-fgc '🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + 🛡️ NO_PROFILE + ⏳ EPHEMERAL'
+```
+
+```text
+DECLARED_CONTEXT ≠ DIAGNOSIS
+SELF_REPORT ≠ PERMANENT_PROFILE
+CURRENT_STATE ≠ IDENTITY
+CHILD_DATA_TRAINING_DEFAULT = DENY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+See [CMB-EDU Kids](docs/CMB_EDU_KIDS.md) and the [`cmb.edu.v1` schema](schemas/cmb.edu.v1.schema.json).
 
 ## Five-minute examples
 
