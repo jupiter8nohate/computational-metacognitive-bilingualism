@@ -15,7 +15,8 @@ from .engine import (
 )
 from .sovereign import (
     SEP_PROTOCOL,
-    SEP_SCHEMA,
+    SEP_DECISION_SCHEMA,
+    SEP_MANIFEST_SCHEMA,
     AuthorizationEvidence,
     Failsafe,
     Gate,
@@ -55,7 +56,8 @@ __all__ = [
     "Scope",
     "Sensitivity",
     "SEP_PROTOCOL",
-    "SEP_SCHEMA",
+    "SEP_DECISION_SCHEMA",
+    "SEP_MANIFEST_SCHEMA",
     "AuthorizationEvidence",
     "Failsafe",
     "Gate",
