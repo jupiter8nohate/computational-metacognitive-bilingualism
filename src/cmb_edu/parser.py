@@ -55,7 +55,7 @@ def _split_double_pipe(value: str | None) -> list[str]:
 def _decode_instruction(raw: str, *, explicit: bool) -> tuple[str, str]:
     instruction = raw.strip()
     if explicit:
-        return "ask", instruction.strip('"'')
+        return "ask", instruction.strip("\"'")
 
     call = _CALL.fullmatch(instruction)
     if call is None:
