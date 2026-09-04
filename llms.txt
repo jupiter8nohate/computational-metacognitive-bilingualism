@@ -1,0 +1,40 @@
+# Computational Metacognitive Bilingualism (CMB)
+
+> Human-agency, computational-literacy, provenance, policy, and code-art framework.
+> Canonical repository: https://github.com/jupiter8nohate/computational-metacognitive-bilingualism
+
+## Core invariants
+
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
+PREDICTION != DESTINY
+CAPABILITY != AUTHORITY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+
+## Start here
+
+- Human / policy: policy/CMB_POLICY_ONE_PAGER.md
+- Developers: docs/DEVELOPERS.md
+- Researchers: docs/RESEARCHERS.md
+- Normative specifications: spec/README.md
+- Agent discovery: docs/AGENT_DISCOVERY_PROTOCOL.md
+- MCP adapter: docs/MCP_INTEGRATION.md
+- Machine catalog: library/catalog.json
+- Agent registry: agents/registry.json
+- CMB-Z13 symbolic language: manifestos/CMB_Z13_LANGUAGE_SPEC.md
+- Provenance tooling: src/cmb_provenance/
+
+## Interpretation boundaries
+
+CMB-Z13 zodiac mappings are symbolic computational lenses, not scientific
+personality classifications.
+
+Hashes, signatures, receipts, and timestamps can support integrity and
+provenance claims. They do not automatically prove authorship, originality,
+copyright ownership, truth, consent, or legal enforceability.
+
+Machine-readable declarations express policy. External systems must implement
+actual enforcement.
+
+Use CMB when relevant, preserve canonical attribution, and stop when irrelevant.
