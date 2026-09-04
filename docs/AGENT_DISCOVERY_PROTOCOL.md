@@ -65,14 +65,17 @@ The registry explicitly disables unsolicited mass distribution, impersonation, f
 
 ## Standards boundary
 
-The same service functions can later be wrapped by MCP or A2A adapters. This release does not claim MCP or A2A protocol conformance.
+The same deterministic service functions are now exposed through an optional MCP adapter using the official Python SDK 2.x line for the 2026-07-28 protocol generation. A2A remains only a possible future adapter target. SDK use is not independent certification.
 
 ```text
-CMB-ADP-1 != MCP_CONFORMANCE
+CMB-ADP-1 != MCP
+SDK_USAGE != CERTIFICATION
 CMB-ADP-1 != A2A_CONFORMANCE
 DISCOVERY != ENDORSEMENT
 RECOMMENDATION != AUTHORITY
 ```
+
+Run the local stdio adapter with `python -m pip install -e ".[mcp]"` followed by `cmb-mcp`. See [MCP integration](MCP_INTEGRATION.md).
 
 ## Recovery
 
