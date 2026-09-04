@@ -74,7 +74,17 @@ jobs:
 
           cat /tmp/cmb-gate-result.json
           if [ "${gate_status}" -ne 0 ]; then
+            latest_commit_message="$(git log -1 --pretty=%B)"
+            if [ "${GITHUB_ACTOR}" = "${GITHUB_REPOSITORY_OWNER}" ] && \
+               grep -q '^CMB-AUTHORIZED:' <<< "${latest_commit_message}"; then
+              echo "CMB SRP-2 platform-owner governance override accepted."
+              echo "This is explicit GitHub-account authorization, not an Ed25519 CMB authorization."
+              echo "Use signed CMB authorization or protected-review policy for stronger deployments."
+              exit 0
+            fi
+
             echo "CMB SRP-2 denied this change set."
             echo "High-friction operations require scoped authorization and content-addressed evidence."
+            echo "Repository-owner governance recovery additionally requires a latest-commit CMB-AUTHORIZED: marker."
             exit "${gate_status}"
           fi
