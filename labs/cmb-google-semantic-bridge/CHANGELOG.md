@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.4.0] - 2026-09-04
+
+### Added
+
+- Strict canon loader that consumes `library/canon.json`, rejects unknown top-level fields, verifies invariant uniqueness, and binds semantic output to the canon SHA-256.
+- `cmb-gsb.semantic.v2` with a canon binding and the full canonical CMB invariant set.
+- Exact `cmb-canon.json` copy in every metadata and publication bundle.
+- Staged atomic publication replacement with complete-generation manifests.
+- Regular-file Recovery reader with symlink, size, UTF-8, and file-change checks.
+
+### Changed
+
+- `render` no longer synthesizes a provenance SHA-256 from an embedded JSON body.
+- JSON-LD preserves article body text exactly instead of trimming it.
+- URL validation now uses one HTTPS parser and rejects userinfo, fragments, and surrounding whitespace.
+- CI and Pages builds are canon-sensitive and verify the published canon bytes against the repository source.
+
+
 ## [0.3.1] - 2026-09-04
 
 ### Changed
