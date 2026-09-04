@@ -515,7 +515,7 @@ See [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER
 
 ## Registry gate
 
-The public registry is intentionally deferred until v1.4.0 passes all release gates and the signed release is published. A future registry should store signed receipts and independently checkable timestamp evidence-not unpublished creative works or unnecessary personal information.
+The signed-release gate has been completed through v1.4.1. A public receipt registry remains intentionally deferred until its threat model, privacy scope, and independent-review requirements are accepted. A future registry should store signed receipts and independently checkable timestamp evidence, not unpublished creative works or unnecessary personal information.
 
 ## Authorship and purpose
 
