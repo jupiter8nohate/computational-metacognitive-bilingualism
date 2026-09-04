@@ -184,7 +184,16 @@ def create_authorization(
     Ed25519PrivateKey, _, _, _, _, _ = _crypto()
     signature = Ed25519PrivateKey.from_private_bytes(private_raw).sign(unsigned.signed_bytes())
     return AuthorizationToken(
-        **unsigned.unsigned_payload(),
+        schema=unsigned.schema,
+        operation=unsigned.operation,
+        project=unsigned.project,
+        policy_digest=unsigned.policy_digest,
+        subject_digest=unsigned.subject_digest,
+        authorized_by=unsigned.authorized_by,
+        issued_at=unsigned.issued_at,
+        expires_at=unsigned.expires_at,
+        nonce=unsigned.nonce,
+        controls=unsigned.controls,
         signature=base64.b64encode(signature).decode("ascii"),
     )
 
