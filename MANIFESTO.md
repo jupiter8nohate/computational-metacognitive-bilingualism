@@ -76,7 +76,7 @@ SPEED != WISDOM
 CAPABILITY != LEGITIMACY
 ```
 
-A system may appear helpful, harmless, or humanlike without exposing the mechanisms behind its answers. Fluency is not transparency. A convincing performance is not proof of alignment. Apparent personality is not proof of consciousness, and fictional depictions of deceptive or superintelligent AI are warnings to investigate—not evidence that such systems already exist.
+A system may appear helpful, harmless, or humanlike without exposing the mechanisms behind its answers. Fluency is not transparency. A convincing performance is not proof of alignment. Apparent personality is not proof of consciousness, and fictional depictions of deceptive or superintelligent AI are warnings to investigate ✦ not evidence that such systems already exist.
 
 When the people building a powerful system express uncertainty about controlling it, that uncertainty is a governance signal. It does not prove catastrophe. It does mean that confidence, commercial pressure, and private assurances are insufficient substitutes for evidence.
 
@@ -98,7 +98,7 @@ FOR person IN affected_public:
     assert person.human_rights_remain
 ```
 
-The people affected by AI deserve a seat at the table before deployment, not an apology after harm. That table must include workers, artists, children, educators, disabled and neurodivergent people, historically profiled communities, independent researchers, and the wider public—not only system builders, investors, and state authorities.
+The people affected by AI deserve a seat at the table before deployment, not an apology after harm. That table must include workers, artists, children, educators, disabled and neurodivergent people, historically profiled communities, independent researchers, and the wider public ✦ not only system builders, investors, and state authorities.
 
 CMB therefore requires staged deployment, independent evaluation, adversarial testing, traceable accountability, meaningful incident reporting, accessible appeal, rollback capacity, and a human veto wherever automated decisions can materially affect a person’s rights, liberty, livelihood, care, education, or identity.
 
