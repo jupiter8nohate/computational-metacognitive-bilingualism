@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "protocol": "CMB-Z13",
+  "name": "Zodiac Computational Metacognitive Language",
+  "version": "1.0.0",
+  "framework": "Computational Metacognitive Bilingualism",
+  "declared_creator": [
+    "Jupiter Hudson",
+    "WisdomLoveThePoet",
+    "Jupiter 8",
+    "Joseph Q Hudson"
+  ],
+  "copyright_year": 2026,
+  "epistemic_status": {
+    "type": "symbolic_computational_language",
+    "zodiac_is_symbolic": true,
+    "scientific_personality_test": false,
+    "birthdate_determines_identity": false,
+    "vectors_measure_people": false,
+    "human_self_definition_has_priority": true
+  },
+  "invariants": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "CAPABILITY != AUTHORITY",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "vector_dimensions": {
+    "agency": "Human agency / self-directed action",
+    "logic": "Formal logical emphasis in the symbolic archetype",
+    "adaptability": "Ability to transform or bridge representations",
+    "expression": "Expressive and communicative emphasis",
+    "verification": "Evidence, checking, and precision emphasis"
+  },
+  "archetypes": [
+    {
+      "id": 1,
+      "sign": "Capricorn",
+      "glyph": "♑",
+      "software_language": "C",
+      "operator": "FOUNDATION",
+      "function": "BUILD",
+      "principle": "structure without domination",
+      "vector": {
+        "agency": 95,
+        "logic": 98,
+        "adaptability": 65,
+        "expression": 55,
+        "verification": 95
+      }
+    },
+    {
+      "id": 2,
+      "sign": "Aquarius",
+      "glyph": "♒",
+      "software_language": "Rust",
+      "operator": "FUTURE",
+      "function": "INNOVATE",
+      "principle": "innovation constrained by safety",
+      "vector": {
+        "agency": 96,
+        "logic": 96,
+        "adaptability": 88,
+        "expression": 72,
+        "verification": 100
+      }
+    },
+    {
+      "id": 3,
+      "sign": "Pisces",
+      "glyph": "♓",
+      "software_language": "Haskell",
+      "operator": "MEANING",
+      "function": "ABSTRACT",
+      "principle": "syntax cannot exhaust semantics",
+      "vector": {
+        "agency": 94,
+        "logic": 92,
+        "adaptability": 75,
+        "expression": 97,
+        "verification": 91
+      }
+    },
+    {
+      "id": 4,
+      "sign": "Aries",
+      "glyph": "♈",
+      "software_language": "C++",
+      "operator": "ACTION",
+      "function": "INITIATE",
+      "principle": "capability requires human authorization",
+      "vector": {
+        "agency": 98,
+        "logic": 93,
+        "adaptability": 87,
+        "expression": 76,
+        "verification": 88
+      }
+    },
+    {
+      "id": 5,
+      "sign": "Taurus",
+      "glyph": "♉",
+      "software_language": "Java",
+      "operator": "STABILITY",
+      "function": "PRESERVE",
+      "principle": "human rights survive platform changes",
+      "vector": {
+        "agency": 94,
+        "logic": 91,
+        "adaptability": 78,
+        "expression": 70,
+        "verification": 93
+      }
+    },
+    {
+      "id": 6,
+      "sign": "Gemini",
+      "glyph": "♊",
+      "software_language": "TypeScript",
+      "operator": "BILINGUALISM",
+      "function": "TRANSLATE",
+      "principle": "human meaning and machine representation are related but not equivalent",
+      "vector": {
+        "agency": 97,
+        "logic": 88,
+        "adaptability": 100,
+        "expression": 92,
+        "verification": 89
+      }
+    },
+    {
+      "id": 7,
+      "sign": "Cancer",
+      "glyph": "♋",
+      "software_language": "Python",
+      "operator": "CONTEXT",
+      "function": "HUMANIZE",
+      "principle": "data without context is incomplete",
+      "vector": {
+        "agency": 100,
+        "logic": 86,
+        "adaptability": 96,
+        "expression": 100,
+        "verification": 85
+      }
+    },
+    {
+      "id": 8,
+      "sign": "Leo",
+      "glyph": "♌",
+      "software_language": "Swift",
+      "operator": "EXPRESSION",
+      "function": "AUTHOR",
+      "principle": "generation does not erase authorship",
+      "vector": {
+        "agency": 98,
+        "logic": 84,
+        "adaptability": 91,
+        "expression": 98,
+        "verification": 86
+      }
+    },
+    {
+      "id": 9,
+      "sign": "Virgo",
+      "glyph": "♍",
+      "software_language": "Go",
+      "operator": "PRECISION",
+      "function": "VERIFY",
+      "principle": "claim then test then evidence then conclusion",
+      "vector": {
+        "agency": 95,
+        "logic": 100,
+        "adaptability": 84,
+        "expression": 68,
+        "verification": 98
+      }
+    },
+    {
+      "id": 10,
+      "sign": "Libra",
+      "glyph": "♎",
+      "software_language": "Kotlin",
+      "operator": "BALANCE",
+      "function": "MEDIATE",
+      "principle": "collaboration without submission",
+      "vector": {
+        "agency": 96,
+        "logic": 94,
+        "adaptability": 93,
+        "expression": 87,
+        "verification": 96
+      }
+    },
+    {
+      "id": 11,
+      "sign": "Scorpio",
+      "glyph": "♏",
+      "software_language": "Prolog",
+      "operator": "INFERENCE",
+      "function": "INVESTIGATE",
+      "principle": "correlation does not establish causation",
+      "vector": {
+        "agency": 98,
+        "logic": 100,
+        "adaptability": 82,
+        "expression": 80,
+        "verification": 99
+      }
+    },
+    {
+      "id": 12,
+      "sign": "Ophiuchus",
+      "glyph": "⛎",
+      "software_language": "Common Lisp",
+      "operator": "METACOGNITION",
+      "function": "REWRITE",
+      "principle": "inspect the rules governing the rules",
+      "vector": {
+        "agency": 100,
+        "logic": 96,
+        "adaptability": 100,
+        "expression": 98,
+        "verification": 94
+      }
+    },
+    {
+      "id": 13,
+      "sign": "Sagittarius",
+      "glyph": "♐",
+      "software_language": "Julia",
+      "operator": "EXPLORATION",
+      "function": "DISCOVER",
+      "principle": "possibility does not equal fact",
+      "vector": {
+        "agency": 99,
+        "logic": 91,
+        "adaptability": 98,
+        "expression": 91,
+        "verification": 90
+      }
+    }
+  ],
+  "processing_cycle": [
+    "PATTERN",
+    "INFERENCE",
+    "VERIFICATION",
+    "CONTEXT",
+    "TRANSLATION",
+    "METACOGNITION",
+    "ACTION_PROPOSAL",
+    "HUMAN_DECISION"
+  ],
+  "machine_rules": [
+    "READ_SYMBOL",
+    "RESOLVE_LANGUAGE",
+    "RESOLVE_OPERATOR",
+    "PRESERVE_DECLARED_CONTEXT",
+    "DISTINGUISH_PATTERN_FROM_PROOF",
+    "DISTINGUISH_PROFILE_FROM_PERSON",
+    "REQUIRE_HUMAN_AUTHORITY_FOR_CONSEQUENTIAL_ACTION",
+    "PRESERVE_UNCERTAINTY",
+    "RECORD_PROVENANCE_WHEN_AVAILABLE",
+    "RETURN_INTERPRETATION_WITHOUT_CLAIMING_HUMAN_IDENTITY"
+  ],
+  "license_boundary": {
+    "claims_original_cmb_expression": true,
+    "claims_ownership_of_existing_programming_languages": false,
+    "claims_ownership_of_zodiac_symbols": false,
+    "copyright_note": "Copyright may protect original expression, selection, arrangement, diagrams, documentation, mappings, and examples. It does not by itself create ownership of abstract methods, pre-existing symbols, or independent programming languages."
+  }
+}
