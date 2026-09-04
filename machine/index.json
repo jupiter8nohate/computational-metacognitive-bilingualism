@@ -54,5 +54,16 @@
     "schema": "schemas/cmb.creator-context.v1.schema.json",
     "model": "DESCRIPTIVE_CONTEXT_NOT_IDENTITY",
     "authority": "HUMAN_FINAL"
+  },
+  "use_cases": {
+    "document": "docs/USE_CASES_2026_2126.md",
+    "registry": "machine/use-cases.json",
+    "schema": "schemas/cmb.use-cases.v1.schema.json",
+    "status_categories": [
+      "DEPLOYABLE_NOW",
+      "REQUIRES_INTEGRATION",
+      "SPECULATIVE_FUTURE"
+    ],
+    "rule": "CURRENT_CAPABILITY_CLAIM_REQUIRES_DEPLOYABLE_NOW"
   }
 }
