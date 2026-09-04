@@ -344,5 +344,16 @@
       "to": "provenance-engine",
       "relation": "verifiable_by"
     }
+  ],
+  "invariants": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "DIFFERENCE != DEFECT",
+    "CAPABILITY != AUTHORITY",
+    "OPTIMIZATION != MORALITY",
+    "INTELLIGENCE != SOVEREIGNTY",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
   ]
 }
