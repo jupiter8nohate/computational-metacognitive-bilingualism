@@ -26,7 +26,9 @@ def test_proof_requires_all_six_gates() -> None:
     assert decision.missingno is True
     assert decision.authority == HUMAN_FINAL
     assert decision.failed_gates == (ProofGate.VERIFIER_PASSED,)
-    assert decision.to_dict()["sentinel"] == MISSINGNO_CODE
+    payload = decision.to_dict()
+    assert payload["schema_version"] == "cmb.harmoni-666.decision.v1"
+    assert payload["sentinel"] == MISSINGNO_CODE
 
 
 def test_complete_bounded_proof_is_retained() -> None:
@@ -68,6 +70,7 @@ def test_non_boolean_gate_is_rejected() -> None:
 def test_manifest_is_exactly_six_six_six() -> None:
     manifest = harmoni_manifest()
 
+    assert manifest["schema_version"] == "cmb.harmoni-666.manifest.v1"
     assert len(manifest["epistemic_states"]) == 6
     assert len(manifest["proof_gates"]) == 6
     assert len(manifest["sovereignty_failsafes"]) == 6
