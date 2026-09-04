@@ -91,6 +91,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
+- **Whole-canon publication:** [CMB Google Semantic Bridge](labs/cmb-google-semantic-bridge/README.md)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
@@ -185,6 +186,32 @@ The Global Advocacy Charter is a **public policy proposal**, not a claim that ev
 Humans can browse [`library/README.md`](library/README.md). Software can parse [`library/catalog.json`](library/catalog.json). The catalog is intentionally descriptive rather than authoritative about people: `CATALOG != CREATOR`, `INDEX != IDENTITY`, and uncertainty is preserved as a valid state.
 
 The catalog is included in the canonical provenance scope so future signed releases can prove which exact index bytes accompanied the published artifact set.
+
+## Whole-canon static publication
+
+The experimental Go semantic bridge can compile the complete catalog-declared CMB corpus into one deterministic human + machine-readable library.
+
+```bash
+cd labs/cmb-google-semantic-bridge
+
+go run ./cmd/cmb-gsb publish-canon \
+  -root ../.. \
+  -canon ../../library/canon.json \
+  -catalog ../../library/catalog.json \
+  -out /tmp/cmb-canon-library \
+  -base-url https://example.org/cmb/
+```
+
+The output includes the library home page, `library-index.json`, Schema.org collection metadata, exact canon/catalog copies, agent discovery, a site-wide SHA-256 manifest, and one source-bound page per publishable catalog artifact under `artifacts/<id>/`.
+
+The compiler verifies the exact canon and catalog digests, requires catalog invariants to exist in the canon, contains source reads inside the repository root, and preserves each catalog status instead of silently promoting it.
+
+```text
+CATALOG != IDENTITY
+SOURCE_HASH != AUTHORSHIP
+DISCOVERABILITY != OWNERSHIP
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
 
 ## Agent discovery
 
