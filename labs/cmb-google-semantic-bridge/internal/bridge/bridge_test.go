@@ -308,3 +308,59 @@ func TestSiteCSSHasNoExternalImports(t *testing.T) {
 		t.Fatal("site CSS must remain zero-dependency")
 	}
 }
+
+func TestDecorativePublicationFrame(t *testing.T) {
+	artifact := validArtifact(t)
+	page, err := PageHTML(artifact)
+	if err != nil {
+		t.Fatal(err)
+	}
+	text := string(page)
+
+	for _, required := range []string{
+		"Human Source Transmission",
+		"Provenance Ledger",
+		"Human ↔ Machine Boundary",
+		"Publication Surfaces",
+		"HUMAN_AGENCY &gt; MACHINE_AUTHORITY",
+		"class=\"skip-link\"",
+		`@media (prefers-reduced-motion: reduce)`,
+	} {
+		target := text
+		if strings.HasPrefix(required, "@media") {
+			target = string(SiteCSS())
+		}
+		if !strings.Contains(target, required) {
+			t.Fatalf("decorative publication missing %q", required)
+		}
+	}
+}
+
+func TestPublicationFrameAvoidsEmDash(t *testing.T) {
+	artifact := validArtifact(t)
+	page, err := PageHTML(artifact)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if strings.Contains(string(page), "—") {
+		t.Fatal("publication HTML contains an em dash")
+	}
+	if strings.Contains(string(SiteCSS()), "—") {
+		t.Fatal("publication CSS contains an em dash")
+	}
+}
+
+func TestSiteCSSPreservesAccessibilityModes(t *testing.T) {
+	css := string(SiteCSS())
+	for _, required := range []string{
+		":focus-visible",
+		"prefers-reduced-motion",
+		"@media print",
+		".skip-link",
+	} {
+		if !strings.Contains(css, required) {
+			t.Fatalf("site CSS missing accessibility rule %q", required)
+		}
+	}
+}
