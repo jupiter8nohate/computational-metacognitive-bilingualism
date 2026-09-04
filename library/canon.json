@@ -1,0 +1,154 @@
+{
+  "schema_version": "cmb.canon.v1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "thesis": "VERIFY, DON'T JUST BELIEVE.",
+  "root_invariant": "HUMAN_AGENCY > MACHINE_AUTHORITY",
+  "interpretation_policy": {
+    "declaration_is_proof": false,
+    "hash_is_authorship": false,
+    "signature_is_copyright": false,
+    "timestamp_is_truth": false,
+    "provenance_is_legal_judgment": false,
+    "human_self_definition_has_priority": true,
+    "unlinked_node_claims_artifact_presence": false
+  },
+  "views": {
+    "human": {
+      "entrypoint": "CANON.md",
+      "purpose": "Explain the canon, roles, boundaries, and relationship model to human readers."
+    },
+    "machine": {
+      "entrypoint": "library/canon.json",
+      "catalog": "library/catalog.json",
+      "schema": "schemas/cmb.canon.v1.schema.json",
+      "purpose": "Expose the same canon as a traversable relationship graph without converting the graph into authority over people."
+    }
+  },
+  "nodes": [
+    {
+      "id": "cmb-core",
+      "label": "CMB Core",
+      "role": "Human-sovereignty philosophy, policy, and computational specification.",
+      "status": "canonical",
+      "interfaces": ["human", "machine", "code", "policy"],
+      "artifact_ids": ["cmb-core-manifesto", "cmb-polyglot-firewall", "cmb-global-advocacy-charter", "cmb-policy-one-pager"],
+      "repository_paths": ["MANIFESTO.md", "CMB_Polyglot_Firewall_Specification.md", "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md", "policy/CMB_POLICY_ONE_PAGER.md"],
+      "notes": "Root conceptual layer. Existing law and scholarship remain prior art where applicable."
+    },
+    {
+      "id": "provenance-engine",
+      "label": "CMB Provenance Engine",
+      "role": "Artifact sealing, exact-file coverage, integrity verification, evidence references, Recovery, and C2PA-facing interoperability.",
+      "status": "canonical",
+      "interfaces": ["machine", "code", "provenance"],
+      "artifact_ids": [],
+      "repository_paths": ["src/cmb_provenance", "receipts", "docs/C2PA_INTEROPERABILITY.md"],
+      "notes": "Integrity and provenance evidence do not independently prove authorship, ownership, originality, or legal entitlement."
+    },
+    {
+      "id": "digital-library",
+      "label": "CMB Digital Library",
+      "role": "Human and machine discovery without treating indexes as identity.",
+      "status": "canonical",
+      "interfaces": ["human", "machine"],
+      "artifact_ids": ["cmb-library-catalog", "cmb-unclassifiable-index"],
+      "repository_paths": ["library/catalog.json", "library/README.md", "manifestos/CMB_UNCLASSIFIABLE_INDEX.md"],
+      "notes": "CATALOG != CREATOR and INDEX != IDENTITY."
+    },
+    {
+      "id": "fgc-symbolic-layer",
+      "label": "Flamingoglyph Code",
+      "role": "Symbolic and educational bridge between human expression, code-poetry, and machine-readable boundaries.",
+      "status": "derived",
+      "interfaces": ["human", "machine", "symbol", "education"],
+      "artifact_ids": ["cmb-sovereign-transmission", "cmb-dna-chicken-run", "cmb-edu-kids"],
+      "repository_paths": ["manifestos/CMB_SOVEREIGN_TRANSMISSION.md", "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md", "docs/CMB_EDU_KIDS.md"],
+      "notes": "The symbolic layer is present across repository artifacts. A separate FlamingoglyphCompiler artifact is not currently linked here."
+    },
+    {
+      "id": "cmb-z13",
+      "label": "CMB-Z13",
+      "role": "Thirteen symbolic computational lenses for translation, verification, metacognition, and education.",
+      "status": "canonical",
+      "interfaces": ["human", "machine", "symbol", "code", "education"],
+      "artifact_ids": ["cmb-z13-manifesto", "cmb-z13-language-spec", "cmb-z13-machine-registry"],
+      "repository_paths": ["manifestos/CMB_Z13_MANIFESTO.md", "manifestos/CMB_Z13_LANGUAGE_SPEC.md", "library/cmb-z13.registry.json", "src/cmb_provenance/z13.py"],
+      "notes": "Zodiac mappings are symbolic language design, not scientific personality classification."
+    },
+    {
+      "id": "dna",
+      "label": "D.N.A. - Demon's Need Attention",
+      "role": "Attention-economy and cognitive-sovereignty narrative branch.",
+      "status": "canonical",
+      "interfaces": ["human", "story", "symbol"],
+      "artifact_ids": ["cmb-dna-attention", "cmb-dna-chicken-run"],
+      "repository_paths": ["manifestos/DEMONS_NEED_ATTENTION_DNA.md", "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md"],
+      "notes": "Demons are used as a metaphor for attention-extractive loops and incentives."
+    },
+    {
+      "id": "cmb-edu",
+      "label": "CMB-EDU",
+      "role": "Privacy-first computational and metacognitive literacy layer.",
+      "status": "canonical",
+      "interfaces": ["human", "machine", "education", "code"],
+      "artifact_ids": ["cmb-edu-kids", "cmb-edu-schema"],
+      "repository_paths": ["docs/CMB_EDU_KIDS.md", "schemas/cmb.edu.v1.schema.json", "src/cmb_edu"],
+      "notes": "Human-declared context remains distinct from machine inference."
+    },
+    {
+      "id": "missingno-clause",
+      "label": "MissingNo / Unclassifiable Index",
+      "role": "Model for uncertainty, schema failure, and non-reductive classification.",
+      "status": "canonical",
+      "interfaces": ["human", "machine", "story"],
+      "artifact_ids": ["cmb-unclassifiable-index"],
+      "repository_paths": ["manifestos/CMB_UNCLASSIFIABLE_INDEX.md"],
+      "notes": "UNCLASSIFIED != NONEXISTENT and UNKNOWN != INVALID."
+    },
+    {
+      "id": "dna-bible",
+      "label": "D.N.A. Bible",
+      "role": "Broader literary canon bridge.",
+      "status": "unlinked",
+      "interfaces": ["human", "story"],
+      "artifact_ids": [],
+      "repository_paths": [],
+      "notes": "Declared integration target. No canonical repository artifact is linked by this graph yet."
+    },
+    {
+      "id": "flamingoglyph-compiler",
+      "label": "FlamingoglyphCompiler",
+      "role": "Executable grammar bridge for Flamingoglyph Code.",
+      "status": "unlinked",
+      "interfaces": ["machine", "code", "symbol"],
+      "artifact_ids": [],
+      "repository_paths": [],
+      "notes": "Declared integration target. No canonical compiler repository artifact is linked by this graph yet."
+    },
+    {
+      "id": "the-convergence",
+      "label": "The Convergence",
+      "role": "Narrative and cultural transmission bridge.",
+      "status": "unlinked",
+      "interfaces": ["human", "story"],
+      "artifact_ids": [],
+      "repository_paths": [],
+      "notes": "Declared integration target. No canonical repository artifact is linked by this graph yet."
+    }
+  ],
+  "edges": [
+    {"from": "cmb-core", "to": "provenance-engine", "relation": "verified_by"},
+    {"from": "cmb-core", "to": "digital-library", "relation": "indexed_by"},
+    {"from": "cmb-core", "to": "fgc-symbolic-layer", "relation": "expressed_by"},
+    {"from": "cmb-core", "to": "cmb-z13", "relation": "translated_by"},
+    {"from": "cmb-core", "to": "dna", "relation": "narrated_by"},
+    {"from": "cmb-core", "to": "cmb-edu", "relation": "taught_by"},
+    {"from": "digital-library", "to": "missingno-clause", "relation": "implements_boundary"},
+    {"from": "fgc-symbolic-layer", "to": "flamingoglyph-compiler", "relation": "planned_executable_bridge"},
+    {"from": "dna", "to": "dna-bible", "relation": "planned_canon_bridge"},
+    {"from": "cmb-core", "to": "the-convergence", "relation": "planned_narrative_bridge"},
+    {"from": "cmb-z13", "to": "provenance-engine", "relation": "verifiable_by"},
+    {"from": "dna", "to": "provenance-engine", "relation": "verifiable_by"},
+    {"from": "cmb-edu", "to": "provenance-engine", "relation": "verifiable_by"}
+  ]
+}
