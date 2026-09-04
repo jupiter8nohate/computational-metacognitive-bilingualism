@@ -107,6 +107,12 @@ def cmb_compile_core(target: str = "json") -> dict[str, Any]:
 
 
 @mcp.tool()
+def cmb_compile_authority(source: str) -> dict[str, Any]:
+    """Compile CMB-SDL source into deterministic CMB Authority IR."""
+    return compile_authority_text(source)
+
+
+@mcp.tool()
 def cmb_distribution_boundary() -> dict[str, Any]:
     """Return the agent distribution covenant after validating its safety invariants."""
     validate_distribution_policy()
