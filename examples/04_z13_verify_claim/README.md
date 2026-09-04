@@ -1,4 +1,4 @@
-# Example 04 — CMB-Z13 verification
+# Example 04 ✦ CMB-Z13 verification
 
 ```bash
 cmb-z13 validate --file examples/04_z13_verify_claim/statement.cmbz13
