@@ -13,6 +13,8 @@
 - Canonical release sealing expanded to include HARMONI-666 and core machine-readable CMB anchors.
 - Six-stage epistemological ladder from `UNKNOWN` through `MISSINGNO`, `QUESTION`, `TEST`, and `EVIDENCE` to `JUSTIFIED_CLAIM`, with stage-skipping denied by the reference API.
 - Explicit truth distinctions separating provenance from mythology, mythology from falsehood, symbolism from evidence, and evidence from total human meaning.
+- Experimental `CMB-SEP-1` Sovereign Epistemic Protocol with six operational states, six deterministic gates, six recovery failsafes, external-human-authorization boundary, machine self-attestation rejection, and incident conformance fixtures.
+- Canonical hallucination/self-authorization stress scenario demonstrating claim truncation, MissingNo-style isolation, deceleration for sensitive review, and fail-closed human override.
 
 
 All notable changes to the CMB provenance tool are documented here.
