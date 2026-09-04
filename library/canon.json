@@ -115,6 +115,23 @@
       "notes": "Distribution is relevance-first and trust-preserving: RELEVANCE > REACH, TRUST > IMPRESSIONS, CITATION > COPYING, CONSENT > VIRALITY."
     },
     {
+      "id": "go-semantic-bridge",
+      "label": "CMB Go Semantic Bridge",
+      "role": "Canon-aware deterministic publication compiler for human HTML, Schema.org JSON-LD, CMB semantics, discovery metadata, and integrity manifests.",
+      "status": "experimental",
+      "interfaces": [
+        "human",
+        "machine",
+        "code",
+        "provenance"
+      ],
+      "artifact_ids": [],
+      "repository_paths": [
+        "labs/cmb-google-semantic-bridge"
+      ],
+      "notes": "Consumes the canonical invariant contract and embeds the exact canon bytes used for each publication. Search metadata remains a discovery surface, not a ranking command or ownership claim."
+    },
+    {
       "id": "fgc-symbolic-layer",
       "label": "Flamingoglyph Code",
       "role": "Symbolic and educational bridge between human expression, code-poetry, and machine-readable boundaries.",
@@ -343,6 +360,21 @@
       "from": "cmb-edu",
       "to": "provenance-engine",
       "relation": "verifiable_by"
+    },
+    {
+      "from": "digital-library",
+      "to": "go-semantic-bridge",
+      "relation": "published_by"
+    },
+    {
+      "from": "go-semantic-bridge",
+      "to": "provenance-engine",
+      "relation": "verifiable_by"
+    },
+    {
+      "from": "agent-discovery",
+      "to": "go-semantic-bridge",
+      "relation": "served_through"
     }
   ],
   "invariants": [
