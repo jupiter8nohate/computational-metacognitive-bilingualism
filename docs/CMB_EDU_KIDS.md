@@ -117,6 +117,34 @@ The lesson is larger than Python syntax:
 THE HUMAN CAN CORRECT THE MODEL
 ```
 
+## Executable FGC stream
+
+The classroom glyphs are also executable protocol input:
+
+```text
+🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + 🛡️ NO_PROFILE + ⏳ EPHEMERAL
+```
+
+Python:
+
+```python
+from cmb_edu import FGCEmojiParser
+
+payload = FGCEmojiParser().parse_stream(
+    "🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + 🛡️ NO_PROFILE + ⏳ EPHEMERAL"
+)
+```
+
+CLI:
+
+```bash
+cmb-edu parse-fgc '🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + 🛡️ NO_PROFILE + ⏳ EPHEMERAL'
+```
+
+The parser normalizes emoji presentation selectors, so both `🛡` and `🛡️` express the same FGC boundary token.
+
+The output stays inside the same `cmb.edu.v1` contract as the text parser. The child-facing glyph layer therefore does not create a second incompatible data model.
+
 ## Dual-Brain Stream
 
 Example:

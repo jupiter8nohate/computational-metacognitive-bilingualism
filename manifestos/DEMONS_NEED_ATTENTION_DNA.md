@@ -320,6 +320,106 @@ Do not confuse engagement with consent.
 
 ---
 
+## VIII // TEACH THE CHILD THE CODE
+
+The next generation may meet intelligent machines before it learns how those machines classify, predict, recommend, and remember.
+
+D.N.A. therefore gains an educational layer:
+
+```text
+TEACH THE CHILD THE CODE.
+TEACH THE CHILD TO QUESTION THE CODE.
+TEACH THE CHILD TO CREATE WITH THE CODE.
+TEACH THE MACHINE TO RESPECT THE CHILD.
+```
+
+Computational Metacognitive Bilingualism teaches two languages together:
+
+```text
+MACHINE LANGUAGE:
+INPUT • OUTPUT • IF • THEN • DATA • PATTERN
+
+HUMAN LANGUAGE:
+MEANING • FEELING • QUESTION • CONSENT • CHOICE • CREATION
+```
+
+The Flamingoglyph Code becomes the visual classroom:
+
+```text
+🧠 = MY THOUGHT
+❤️ = MY FEELING
+👁️ = NOTICE
+❓ = QUESTION
+🔍 = VERIFY
+⚡ = ACTION
+🎨 = CREATE
+🪐 = CONTEXT
+🛡️ = BOUNDARY
+🔒 = PRIVATE
+⏳ = TEMPORARY
+✅ = YES
+🚫 = NO
+🔁 = TRY AGAIN
+🤖 = MACHINE
+🧑 = HUMAN
+```
+
+The child learns:
+
+```text
+👁️ NOTICE → ❓ QUESTION → 🔍 VERIFY → 🧠 DECIDE → 🎨 CREATE
+```
+
+The machine receives explicit scope and privacy declarations:
+
+```text
+SOURCE = HUMAN_DECLARED
+TEMPORAL_SCOPE = CURRENT_INTERACTION
+MACHINE_INFERRED = FALSE
+PERSISTENCE = EPHEMERAL
+TRAIN_ON_INPUT = FALSE
+PROFILE = FALSE
+PSYCHOLOGICAL_INFERENCE = FALSE
+```
+
+A feeling stated now is not a permanent identity.
+
+```text
+DECLARATION ≠ DIAGNOSIS
+SELF_REPORT ≠ PERMANENT_PROFILE
+FEELING_NOW ≠ IDENTITY_FOREVER
+MACHINE_INFERENCE ≠ HUMAN_SELF_DEFINITION
+```
+
+A prediction is not a sentence.
+
+```text
+PATTERN ≠ PROOF
+PROFILE ≠ PERSON
+PREDICTION ≠ DESTINY
+DIFFERENCE ≠ DEFECT
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+CMB-EDU does not teach children to fear technology. It teaches collaboration with machines while preserving human judgment, privacy, consent, authorship, and self-definition.
+
+The protocol can be expressed in plain classroom glyphs:
+
+```text
+🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON
++ 🛡️ NO_PROFILE + ⏳ EPHEMERAL
+```
+
+and compiled into the same machine-readable `cmb.edu.v1` envelope used by the text parser.
+
+```text
+CHILD + CURIOSITY + CODE + METACOGNITION
+=
+COGNITIVE_SOVEREIGNTY
+```
+
+---
+
 # D.N.A. // EIGHT-LANGUAGE TRANSMISSION
 
 ## 1 // Python

@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Sequence
 
 from . import __version__
+from .fgc import FGCEmojiParser
 from .parser import CMBDualBrainParser, CMBParseError
 
 
@@ -48,6 +49,12 @@ def build_parser() -> argparse.ArgumentParser:
     )
     _add_source_arguments(parse_cmd)
 
+    fgc_cmd = subparsers.add_parser(
+        "parse-fgc",
+        help="Parse one Flamingoglyph Code learning stream into a CMB-EDU envelope.",
+    )
+    _add_source_arguments(fgc_cmd)
+
     validate_cmd = subparsers.add_parser(
         "validate",
         help="Validate one stream against the CMB-EDU grammar and sovereignty policy.",
@@ -65,7 +72,11 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def _run(args: argparse.Namespace) -> int:
-    envelope = CMBDualBrainParser().parse_stream(_read_source(args))
+    source = _read_source(args)
+    if args.command == "parse-fgc":
+        envelope = FGCEmojiParser().parse_stream(source)
+    else:
+        envelope = CMBDualBrainParser().parse_stream(source)
 
     if args.command == "validate":
         boundary = envelope["sovereignty_gate"]["declared_invariant"]
@@ -73,7 +84,7 @@ def _run(args: argparse.Namespace) -> int:
         return 0
 
     encoded = json.dumps(envelope, ensure_ascii=False, indent=2, sort_keys=True)
-    if args.command == "parse":
+    if args.command in {"parse", "parse-fgc"}:
         print(encoded)
         return 0
 
