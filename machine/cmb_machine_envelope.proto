@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package cmb.machine.v1;
+
+// Wire schema emitted by the CMB-66 protobuf target.
+// Every message instance carries the FGC origin identity and lineage.
+message CMBMachineEnvelope {
+  string canonical_json = 1;
+  string fgc_mark_id = 2;
+  string fgc_ascii_token = 3;
+  string origin_mark_sha256 = 4;
+  string content_sha256 = 5;
+  string lineage_id = 6;
+}
