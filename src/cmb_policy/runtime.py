@@ -159,6 +159,7 @@ class Assessment:
                 "PATTERN != PROOF",
                 "FIX_COMMITTED != FIX_VERIFIED",
                 "CAPABILITY != AUTHORITY",
+                "EVIDENCE_REFERENCE != EVIDENCE_VERIFICATION",
                 "HUMAN_AGENCY > MACHINE_AUTHORITY",
             ],
         }
@@ -221,10 +222,12 @@ def assess_operation(
 
     for control in sorted(required - {"human_signature"}):
         value = evidence.get(control, "").strip()
-        if value:
-            satisfied.add(control)
-        else:
+        if not value:
             failures.append(f"EVIDENCE_REQUIRED:{control}")
+        elif not _is_sha256_reference(value):
+            failures.append(f"EVIDENCE_REFERENCE_INVALID:{control}")
+        else:
+            satisfied.add(control)
 
     if "human_signature" in required:
         if authorization is None:
@@ -292,3 +295,15 @@ def _bounded(value: Any, field: str) -> float:
     if not 0.0 <= result <= 1.0:
         raise RuntimePolicyError(f"{field} must be between 0 and 1")
     return result
+
+
+def _is_sha256_reference(value: str) -> bool:
+    """Return True only for a canonical content-addressed evidence reference."""
+    if not value.startswith("sha256:"):
+        return False
+    digest = value[7:]
+    return (
+        len(digest) == 64
+        and digest == digest.lower()
+        and all(char in "0123456789abcdef" for char in digest)
+    )
