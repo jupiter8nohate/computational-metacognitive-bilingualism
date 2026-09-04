@@ -33,7 +33,9 @@ jobs:
         run: |
           if cmbc assess deploy_production \
             --policy cmb.toml \
-            --evidence reproducible_build=ci; then
+            --evidence isolated_verification=sha256:1111111111111111111111111111111111111111111111111111111111111111 \
+            --evidence reproducible_build=sha256:2222222222222222222222222222222222222222222222222222222222222222 \
+            --evidence two_party_review=sha256:3333333333333333333333333333333333333333333333333333333333333333; then
             echo "CMB gate unexpectedly allowed unsigned production deployment."
             exit 1
           fi
