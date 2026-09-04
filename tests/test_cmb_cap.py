@@ -197,3 +197,34 @@ def test_a2a_extension_is_explicitly_optional() -> None:
     extension = a2a_extension_declaration()
     assert extension["required"] is False
     assert extension["params"]["protocol"] == "CMB-CAP-1"
+
+
+def test_credential_id_tampering_is_rejected() -> None:
+    private_key, _ = generate_ed25519_keypair()
+    credential = issue_from_sdl(PARENT, private_key_b64=private_key, now=NOW)
+    credential["credential_id"] = "urn:cmb:cap:" + ("0" * 64)
+
+    ok, failures = verify_capability(credential, now=NOW)
+
+    assert ok is False
+    assert "CAP_CREDENTIAL_ID_MISMATCH" in failures
+
+
+def test_v1_refuses_unverified_multi_hop_delegation() -> None:
+    private_key, _ = generate_ed25519_keypair()
+    parent = issue_from_sdl(PARENT, private_key_b64=private_key, now=NOW)
+    child_source = CHILD.replace("DELEGABLE false", "DELEGABLE true")
+    child = issue_from_sdl(
+        child_source,
+        private_key_b64=private_key,
+        now=NOW,
+        parent_credential=parent,
+    )
+
+    with pytest.raises(CapabilityError, match="one delegated hop"):
+        issue_from_sdl(
+            CHILD.replace("AGENT worker", "AGENT leaf"),
+            private_key_b64=private_key,
+            now=NOW,
+            parent_credential=child,
+        )
