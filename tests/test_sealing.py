@@ -21,7 +21,7 @@ from cmb_provenance.timeutil import normalize_timestamp
 
 FIXTURE_SHA256 = "8247e78df7923748cebc5f6df8a3725d60f018fbf09fc4d03ebce1778020849c"
 FIXTURE_MANIFEST_SHA256 = (
-    "bd7fbc68bb0d6ba5c578ae8cb44065f7d726d10b76c42dc1b50e23cb845692e1"
+    "0f2c9700107fd4b66be282b582069ace8972d2f7b03dc33908e8810e92a21d88"
 )
 ZERO_COMMIT = "0" * 40
 FIXED_TIME = "2000-01-01T00:00:00Z"
