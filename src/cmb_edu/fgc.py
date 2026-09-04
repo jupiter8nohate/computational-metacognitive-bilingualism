@@ -116,12 +116,14 @@ class FGCEmojiParser:
         first, _, remainder = instruction.partition(" ")
         operation = first.lower() if first else "reflect"
         subject = remainder.strip() or instruction
+        if len(mode) > 32:
+            raise CMBParseError("FGC cognitive mode must be at most 32 characters")
         if len(instruction) > 2048 or len(subject) > 2048:
             raise CMBParseError("FGC instruction exceeds the 2048-character limit")
 
         return ContextEnvelope(
             lens="FGC-KIDS",
-            mode=mode[:32],
+            mode=mode,
             states=tuple(states),
             raw_instruction=instruction,
             operation=operation,
