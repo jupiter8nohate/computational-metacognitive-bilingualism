@@ -1,0 +1,65 @@
+{
+  "schema_version": "cmb.creator-context.v1",
+  "model": "DESCRIPTIVE_CONTEXT_NOT_IDENTITY",
+  "subject": {
+    "declared_name": "Jupiter Hudson",
+    "aliases": [
+      "WisdomLoveThePoet",
+      "Jupiter 8",
+      "Joseph Q Hudson"
+    ],
+    "status": "DECLARED_BY_PROJECT"
+  },
+  "lanes": {
+    "symbolic": {
+      "source_class": "DECLARED_CREATIVE_INFLUENCE",
+      "references": [
+        "Yahweh",
+        "Thoth",
+        "Pokemon",
+        "Pokedex",
+        "MissingNo",
+        "mythology",
+        "fiction",
+        "fantasy",
+        "code-poetry",
+        "Flamingoglyph Code"
+      ],
+      "boundary": "SYMBOLISM_NOT_EMPIRICAL_EVIDENCE"
+    },
+    "technical": {
+      "source_class": "ARTIFACT_EVIDENCE",
+      "evidence_types": [
+        "SHA-256",
+        "explicit artifact coverage",
+        "Git commit verification",
+        "chronological repository history",
+        "signatures and attestations when present",
+        "conformance tests"
+      ],
+      "boundary": "PROVENANCE_NOT_TOTAL_IDENTITY"
+    },
+    "intellectual": {
+      "source_class": "DECLARED_AND_CITED_INTELLECTUAL_CONTEXT",
+      "references": [
+        "Cognitive Sovereignty Dissertation",
+        "CMB Global Advocacy Charter",
+        "CMB Prior Art and Positioning",
+        "digital rights",
+        "neurodiversity advocacy",
+        "cognitive freedom",
+        "human-machine authority boundaries"
+      ],
+      "boundary": "INFLUENCE_NOT_ENDORSEMENT_OR_OWNERSHIP"
+    }
+  },
+  "behavioral_boundary": {
+    "catalog_is_creator": false,
+    "index_is_identity": false,
+    "profile_is_person": false,
+    "context_is_identity": false,
+    "prediction_is_destiny": false,
+    "machine_may_define_person": false
+  },
+  "authority": "HUMAN_FINAL"
+}
