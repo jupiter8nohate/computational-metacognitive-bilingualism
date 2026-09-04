@@ -13,6 +13,7 @@ Version 1.4.x uses a tag-triggered GitHub Actions release with keyless Sigstore 
 7. The tag points to the reviewed commit that should appear in the artifact seal receipt.
 8. The canonical public CMB artifact set is present and committed:
    - `MANIFESTO.md`
+   - `manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md`
    - `CMB_Polyglot_Firewall_Specification.md`
    - `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
    - `manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`
@@ -56,6 +57,7 @@ The canonical seal receipt explicitly covers:
 
 ```text
 MANIFESTO.md
+manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
 CMB_Polyglot_Firewall_Specification.md
 manifestos/DEMONS_NEED_ATTENTION_DNA.md
 manifestos/DNA_CHICKEN_RUN_MANIFESTO.md
@@ -79,7 +81,7 @@ schemas/cmb.agent-registry.v1.schema.json
 
 Because the receipt uses explicit-file-set coverage, adding a file to the repository does not silently add it to the provenance claim. New canonical artifacts must be deliberately added to `CANONICAL_PUBLIC_ARTIFACTS`, the tests, and this documentation.
 
-The CMB-Z13 manifesto, language specification, and machine registry are treated as one canonical symbolic-language bundle. HARMONI is treated as canonical authored code-art and epistemic design material. The creator-provenance bundle is treated as a canonical evidence-category and privacy contract: it records that the supplied family-tree source is creator-documented and not independently verified, while keeping the raw image, invitation token, and living-relative details outside the public repository. The Global Advocacy Charter is treated as a canonical public policy proposal. Inclusion in a cryptographic receipt proves integrity of the covered bytes under the receipt's stated conditions; it does not convert genealogy into metaphysical proof, symbolism into scientific evidence, or proposed principles into enacted law.
+Reclaiming the Pen is treated as canonical authored code-poetry and mission material. The CMB-Z13 manifesto, language specification, and machine registry are treated as one canonical symbolic-language bundle. HARMONI is treated as canonical authored code-art and epistemic design material. The creator-provenance bundle is treated as a canonical evidence-category and privacy contract: it records that the supplied family-tree source is creator-documented and not independently verified, while keeping the raw image, invitation token, and living-relative details outside the public repository. The Global Advocacy Charter is treated as a canonical public policy proposal. Inclusion in a cryptographic receipt proves integrity of the covered bytes under the receipt's stated conditions; it does not convert genealogy into metaphysical proof, symbolism into scientific evidence, or proposed principles into enacted law.
 
 No long-lived signing key is stored in the repository. A signature establishes a verifiable relationship between release bytes and the workflow identity; it does not independently prove creative authorship or legal ownership.
 
