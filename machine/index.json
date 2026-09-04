@@ -1,0 +1,34 @@
+{
+  "schema_version": "cmb.machine-index.v1",
+  "protocol": "CMB-MKP-1",
+  "compiler_protocol": "CMB-66",
+  "canonical_ascii_token": "FGC::JUPITER::999::THE_VISION_IS_ALIVE::V1",
+  "origin_mark": "machine/fgc-origin-mark.json",
+  "canonical_ir": "machine/cmb-core.ir.json",
+  "ir_schema": "schemas/cmb.machine-ir.v1.schema.json",
+  "origin_schema": "schemas/cmb.fgc-origin-mark.v1.schema.json",
+  "target_registry": "machine/targets.json",
+  "protobuf_schema": "machine/cmb_machine_envelope.proto",
+  "mcp_resources": [
+    "cmb://origin-mark",
+    "cmb://machine/core",
+    "cmb://machine/targets"
+  ],
+  "mcp_tools": [
+    "cmb_origin_mark",
+    "cmb_machine_targets",
+    "cmb_compile_core"
+  ],
+  "static_bundle_directory": "machine/",
+  "targets": [
+    "json",
+    "jsonld",
+    "turtle",
+    "prolog",
+    "rego",
+    "smtlib",
+    "cbor",
+    "protobuf",
+    "digital_asset_metadata"
+  ]
+}
