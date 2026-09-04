@@ -17,6 +17,14 @@ Start with the public one-page policy summary:
 
 https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_POLICY_ONE_PAGER.md
 
+### I want to experience CMB first
+
+Open the [Interactive CMB Playground](PLAYGROUND.md) for a zero-dependency browser demonstration of local hashing, CMB-Z13 symbolic lenses, machine-readable declarations, and explicit policy boundaries.
+
+### I want to experience CMB first
+
+Open the [Interactive CMB Playground](PLAYGROUND.md) for a zero-dependency browser demonstration of local hashing, CMB-Z13 symbolic lenses, machine-readable declarations, and explicit policy boundaries.
+
 ### I am a developer
 
 Read [For developers](DEVELOPERS.md) for installation, provenance APIs, C2PA integration, examples, and the experimental CMB-Z13 parser.

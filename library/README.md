@@ -29,6 +29,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ### Corpus
 
 - [`catalog.json`](catalog.json) - machine-indexable catalog of CMB public artifacts.
+- [`../schemas/cmb.library.catalog.v1.schema.json`](../schemas/cmb.library.catalog.v1.schema.json) - strict JSON Schema for validating the catalog contract.
+- [`../schemas/cmb.library.catalog.v1.schema.json`](../schemas/cmb.library.catalog.v1.schema.json) - strict JSON Schema for validating the catalog contract.
 - [`../MANIFESTO.md`](../MANIFESTO.md) - core human-sovereignty manifesto.
 - [`../manifestos/DEMONS_NEED_ATTENTION_DNA.md`](../manifestos/DEMONS_NEED_ATTENTION_DNA.md) - D.N.A. attention-economy manifesto.
 - [`../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - D.N.A./FGC literary allegory about institutional and algorithmic confinement.

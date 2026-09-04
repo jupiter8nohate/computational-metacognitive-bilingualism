@@ -3,7 +3,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from jsonschema import Draft202012Validator
+
 from cmb_provenance.release import CANONICAL_PUBLIC_ARTIFACTS
+
+CATALOG_SCHEMA = Path(__file__).resolve().parents[1] / "schemas" / "cmb.library.catalog.v1.schema.json"
 
 
 def _load_catalog() -> tuple[Path, dict[str, object]]:
@@ -59,3 +63,11 @@ def test_library_catalog_preserves_interpretation_boundary() -> None:
     assert policy["classification_is_truth"] is False
     assert policy["uncertainty_is_allowed"] is True
     assert policy["human_self_definition_has_priority"] is True
+
+
+def test_library_catalog_matches_public_json_schema() -> None:
+    _, catalog = _load_catalog()
+    schema = json.loads(CATALOG_SCHEMA.read_text(encoding="utf-8"))
+
+    Draft202012Validator.check_schema(schema)
+    Draft202012Validator(schema).validate(catalog)

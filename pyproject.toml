@@ -38,7 +38,7 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-test = ["pytest>=8,<10"]
+test = ["pytest>=8,<10", "jsonschema>=4.23,<5"]
 build = ["build>=1.2,<2"]
 docs = ["mkdocs>=1.6,<2"]
 

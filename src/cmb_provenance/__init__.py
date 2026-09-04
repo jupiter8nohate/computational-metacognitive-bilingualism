@@ -18,6 +18,17 @@ from .c2pa import (
     to_c2pa_assertion_payload,
     validate_c2pa_assertion_label,
 )
+from .boundary import (
+    BOUNDARY_AUTHORITY,
+    BOUNDARY_SCHEMA_VERSION,
+    BoundaryCode,
+    BoundaryContext,
+    BoundaryDecision,
+    BoundaryRejectedError,
+    BoundaryViolation,
+    evaluate_boundary,
+    require_boundary,
+)
 from .errors import (
     CMBProvenanceError,
     LedgerError,
@@ -38,6 +49,8 @@ from .sealing import load_receipt, save_receipt, seal, verify
 
 __all__ = [
     "ANCHOR_SCHEMA_VERSION",
+    "BOUNDARY_AUTHORITY",
+    "BOUNDARY_SCHEMA_VERSION",
     "C2PA_ASSERTION_PAYLOAD_SCHEMA_VERSION",
     "GIT_COMMIT_CALLER_SUPPLIED",
     "GIT_COMMIT_VERIFIED",
@@ -45,6 +58,11 @@ __all__ = [
     "RECEIPT_SCHEMA_VERSION",
     "TOOL_VERSION",
     "AnchorRecord",
+    "BoundaryCode",
+    "BoundaryContext",
+    "BoundaryDecision",
+    "BoundaryRejectedError",
+    "BoundaryViolation",
     "ArtifactDigest",
     "ArtifactManifest",
     "CMBProvenanceError",
@@ -57,6 +75,7 @@ __all__ = [
     "VerificationFailure",
     "VerificationResult",
     "append_anchor",
+    "evaluate_boundary",
     "build_c2pa_manifest_definition",
     "c2pa_assertion_payload_bytes",
     "c2pa_assertion_payload_json",
@@ -65,6 +84,7 @@ __all__ = [
     "save_c2pa_assertion_payload",
     "save_c2pa_manifest_definition",
     "save_receipt",
+    "require_boundary",
     "seal",
     "verify",
     "to_c2pa_assertion_payload",

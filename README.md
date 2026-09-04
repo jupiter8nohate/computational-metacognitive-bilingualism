@@ -80,6 +80,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 You should not need the entire CMB universe to understand the thesis.
 
+- **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
+- **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
 - **Full policy proposal:** [CMB Global Advocacy Charter v1.1](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md)
@@ -106,6 +108,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | Layer | Status | Purpose |
 |---|---|---|
 | `cmb_provenance` | **Stable engineering** | artifact integrity, receipts, Recovery, C2PA-facing interoperability |
+| CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
 | Manifestos / policy / canon | **Authored cultural and policy material** | public argument, education, symbolism, and historical record |
 
