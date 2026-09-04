@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Computational Metacognitive Bilingualism social preview</title>
+  <desc id="desc">CMB principles: Pattern is not proof, Profile is not person, Model is not mind, Human agency is greater than machine authority.</desc>
+  <rect width="1280" height="640" fill="#0b0d12"/>
+  <text x="80" y="105" font-family="system-ui, sans-serif" font-size="34" fill="#b8c0cc" letter-spacing="5">COMPUTATIONAL METACOGNITIVE BILINGUALISM</text>
+  <text x="80" y="205" font-family="system-ui, sans-serif" font-size="92" font-weight="800" fill="#ffffff">CMB</text>
+  <line x1="80" y1="240" x2="1200" y2="240" stroke="#687386" stroke-width="2"/>
+  <text x="80" y="315" font-family="ui-monospace, monospace" font-size="36" fill="#ffffff">PATTERN ≠ PROOF</text>
+  <text x="80" y="370" font-family="ui-monospace, monospace" font-size="36" fill="#ffffff">PROFILE ≠ PERSON</text>
+  <text x="80" y="425" font-family="ui-monospace, monospace" font-size="36" fill="#ffffff">MODEL ≠ MIND</text>
+  <text x="80" y="515" font-family="system-ui, sans-serif" font-size="44" font-weight="700" fill="#ffffff">HUMAN_AGENCY &gt; MACHINE_AUTHORITY</text>
+  <text x="80" y="575" font-family="system-ui, sans-serif" font-size="25" fill="#a8b0bd">Jupiter Hudson · WisdomLoveThePoet · Jupiter 8</text>
+</svg>
