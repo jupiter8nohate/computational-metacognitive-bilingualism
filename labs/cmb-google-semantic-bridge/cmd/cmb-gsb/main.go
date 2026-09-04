@@ -1,20 +1,21 @@
 package main
 
 import (
-	"encoding/json"
 	"errors"
 	"flag"
 	"fmt"
 	"io"
 	"os"
-	"path/filepath"
-	"sort"
 	"strings"
 
 	"github.com/jupiter8nohate/cmb-google-semantic-bridge/internal/bridge"
+	"github.com/jupiter8nohate/cmb-google-semantic-bridge/internal/canon"
 )
 
-const version = "0.3.1"
+const (
+	version          = "0.4.0"
+	defaultCanonPath = "../../library/canon.json"
+)
 
 func main() {
 	if err := run(os.Args[1:], os.Stdout, os.Stderr); err != nil {
@@ -75,6 +76,7 @@ func renderCommand(args []string, stdout io.Writer) error {
 	input := fs.String("in", "", "artifact JSON file")
 	output := fs.String("out", "", "output directory")
 	siteBase := fs.String("site-base", "", "optional HTTPS site base for sitemap discovery")
+	canonPath := fs.String("canon", defaultCanonPath, "CMB canon JSON file")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
@@ -86,20 +88,28 @@ func renderCommand(args []string, stdout io.Writer) error {
 	if err != nil {
 		return err
 	}
-
-	if artifact.Provenance.SHA256 == "" && artifact.Body != "" {
-		artifact.Provenance.SHA256 = bridge.SHA256Bytes([]byte(artifact.Body))
-	}
-
-	outputs, err := metadataOutputs(artifact, *siteBase)
+	loadedCanon, semantics, err := loadCanonSemantics(*canonPath)
 	if err != nil {
 		return err
 	}
-	if err := writeBundle(*output, artifact.ID, outputs); err != nil {
+
+	outputs, err := metadataOutputs(artifact, *siteBase, semantics)
+	if err != nil {
+		return err
+	}
+	outputs["cmb-canon.json"] = append([]byte(nil), loadedCanon.Bytes...)
+
+	if err := bridge.WriteBundleAtomic(*output, artifact.ID, version, outputs); err != nil {
 		return err
 	}
 
-	fmt.Fprintf(stdout, "rendered %s to %s\n", artifact.ID, *output)
+	fmt.Fprintf(
+		stdout,
+		"rendered %s to %s canon=%s\n",
+		artifact.ID,
+		*output,
+		loadedCanon.SHA256,
+	)
 	return nil
 }
 
@@ -111,6 +121,7 @@ func publishCommand(args []string, stdout io.Writer) error {
 	output := fs.String("out", "", "publication output directory")
 	urlOverride := fs.String("url", "", "optional HTTPS canonical URL override")
 	siteBase := fs.String("site-base", "", "optional HTTPS site base for sitemap discovery")
+	canonPath := fs.String("canon", defaultCanonPath, "CMB canon JSON file")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
@@ -126,7 +137,7 @@ func publishCommand(args []string, stdout io.Writer) error {
 		artifact.URL = strings.TrimSpace(*urlOverride)
 	}
 
-	source, err := os.ReadFile(*sourcePath)
+	source, err := bridge.ReadUTF8Source(*sourcePath)
 	if err != nil {
 		return fmt.Errorf("read source: %w", err)
 	}
@@ -135,7 +146,11 @@ func publishCommand(args []string, stdout io.Writer) error {
 		return fmt.Errorf("bind source: %w", err)
 	}
 
-	outputs, err := metadataOutputs(artifact, *siteBase)
+	loadedCanon, semantics, err := loadCanonSemantics(*canonPath)
+	if err != nil {
+		return err
+	}
+	outputs, err := metadataOutputs(artifact, *siteBase, semantics)
 	if err != nil {
 		return err
 	}
@@ -146,27 +161,33 @@ func publishCommand(args []string, stdout io.Writer) error {
 	outputs["index.html"] = page
 	outputs["site.css"] = bridge.SiteCSS()
 	outputs["source.md"] = append([]byte(nil), source...)
+	outputs["cmb-canon.json"] = append([]byte(nil), loadedCanon.Bytes...)
 
-	if err := writeBundle(*output, artifact.ID, outputs); err != nil {
+	if err := bridge.WriteBundleAtomic(*output, artifact.ID, version, outputs); err != nil {
 		return err
 	}
 
 	fmt.Fprintf(
 		stdout,
-		"published %s to %s (%s)\n",
+		"published %s to %s source=%s canon=%s\n",
 		artifact.ID,
 		*output,
 		artifact.Provenance.SHA256,
+		loadedCanon.SHA256,
 	)
 	return nil
 }
 
-func metadataOutputs(artifact bridge.Artifact, siteBase string) (map[string][]byte, error) {
+func metadataOutputs(
+	artifact bridge.Artifact,
+	siteBase string,
+	semantics bridge.CanonSemantics,
+) (map[string][]byte, error) {
 	jsonLD, err := bridge.ArticleJSONLD(artifact)
 	if err != nil {
 		return nil, err
 	}
-	semantic, err := bridge.CMBSemanticJSON(artifact)
+	semantic, err := bridge.CMBSemanticJSON(artifact, semantics)
 	if err != nil {
 		return nil, err
 	}
@@ -198,48 +219,21 @@ func metadataOutputs(artifact bridge.Artifact, siteBase string) (map[string][]by
 	}, nil
 }
 
-func writeBundle(outputDir, artifactID string, outputs map[string][]byte) error {
-	if err := os.MkdirAll(outputDir, 0o755); err != nil {
-		return fmt.Errorf("create output directory: %w", err)
-	}
-
-	names := make([]string, 0, len(outputs))
-	for name := range outputs {
-		names = append(names, name)
-	}
-	sort.Strings(names)
-
-	for _, name := range names {
-		path := filepath.Join(outputDir, name)
-		if err := os.WriteFile(path, outputs[name], 0o644); err != nil {
-			return fmt.Errorf("write %s: %w", name, err)
-		}
-	}
-
-	manifest := struct {
-		SchemaVersion string            `json:"schema_version"`
-		ToolVersion   string            `json:"tool_version"`
-		ArtifactID    string            `json:"artifact_id"`
-		Files         map[string]string `json:"files_sha256"`
-	}{
-		SchemaVersion: "cmb-gsb.output-manifest.v1",
-		ToolVersion:   version,
-		ArtifactID:    artifactID,
-		Files:         make(map[string]string, len(outputs)),
-	}
-	for _, name := range names {
-		manifest.Files[name] = bridge.SHA256Bytes(outputs[name])
-	}
-
-	manifestJSON, err := json.MarshalIndent(manifest, "", "  ")
+func loadCanonSemantics(path string) (canon.Loaded, bridge.CanonSemantics, error) {
+	loaded, err := canon.LoadFile(path)
 	if err != nil {
-		return fmt.Errorf("encode output manifest: %w", err)
+		return canon.Loaded{}, bridge.CanonSemantics{}, fmt.Errorf("load canon: %w", err)
 	}
-	manifestJSON = append(manifestJSON, '\n')
-	if err := os.WriteFile(filepath.Join(outputDir, "manifest.json"), manifestJSON, 0o644); err != nil {
-		return fmt.Errorf("write manifest.json: %w", err)
+	semantics := bridge.CanonSemantics{
+		SchemaVersion: loaded.Document.SchemaVersion,
+		SHA256:        loaded.SHA256,
+		RootInvariant: loaded.Document.RootInvariant,
+		Invariants:    append([]string(nil), loaded.Document.Invariants...),
 	}
-	return nil
+	if err := semantics.Validate(); err != nil {
+		return canon.Loaded{}, bridge.CanonSemantics{}, fmt.Errorf("validate canon semantics: %w", err)
+	}
+	return loaded, semantics, nil
 }
 
 func loadArtifact(path string) (bridge.Artifact, error) {
@@ -266,7 +260,7 @@ func hashCommand(args []string, stdout io.Writer) error {
 	if *input == "" {
 		return errors.New("hash requires -file")
 	}
-	data, err := os.ReadFile(*input)
+	data, err := bridge.ReadRegularFile(*input, bridge.MaxHashBytes)
 	if err != nil {
 		return fmt.Errorf("read file: %w", err)
 	}
@@ -280,7 +274,7 @@ func printUsage(w io.Writer) {
 	fmt.Fprintln(w, "Usage:")
 	fmt.Fprintln(w, "  cmb-gsb version")
 	fmt.Fprintln(w, "  cmb-gsb validate -in artifact.json")
-	fmt.Fprintln(w, "  cmb-gsb render -in artifact.json -out build/ [-site-base https://example.org/project/]")
-	fmt.Fprintln(w, "  cmb-gsb publish -in artifact.json -source MANIFESTO.md -out site/ [-url https://example.org/work/] [-site-base https://example.org/project/]")
+	fmt.Fprintln(w, "  cmb-gsb render -in artifact.json -out build/ [-canon ../../library/canon.json] [-site-base https://example.org/project/]")
+	fmt.Fprintln(w, "  cmb-gsb publish -in artifact.json -source MANIFESTO.md -out public/ [-canon ../../library/canon.json] [-url https://example.org/cmb/] [-site-base https://example.org/project/]")
 	fmt.Fprintln(w, "  cmb-gsb hash -file MANIFESTO.md")
 }
