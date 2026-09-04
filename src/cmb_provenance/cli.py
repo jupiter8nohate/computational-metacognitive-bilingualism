@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 from typing import Sequence
 
+from .c2pa import c2pa_assertion_payload_json, save_c2pa_assertion_payload
 from .constants import ANCHOR_TYPES, DEFAULT_LEDGER_NAME, TOOL_VERSION
 from .errors import CMBProvenanceError
 from .ledger import append_anchor, verify_ledger
@@ -64,6 +65,22 @@ def build_parser() -> argparse.ArgumentParser:
     )
     ledger_parser.add_argument("--ledger", type=Path, default=Path(DEFAULT_LEDGER_NAME))
     ledger_parser.add_argument("--lock-timeout", type=float, default=10.0)
+
+    c2pa_parser = subparsers.add_parser(
+        "export-c2pa-payload",
+        help="Export a minimal C2PA-facing payload body from a CMB receipt.",
+    )
+    c2pa_parser.add_argument("--receipt", required=True, type=Path)
+    c2pa_parser.add_argument(
+        "--output",
+        type=Path,
+        help="Destination path; omit to write canonical JSON to stdout.",
+    )
+    c2pa_parser.add_argument(
+        "--include-paths",
+        action="store_true",
+        help="Include covered artifact paths. Paths are omitted by default.",
+    )
 
     subparsers.add_parser("selftest", help="Run dependency-free Recovery checks.")
     return parser
@@ -130,6 +147,26 @@ def _run(args: argparse.Namespace) -> int:
     if args.command == "ledger-verify":
         count, tip = verify_ledger(args.ledger, lock_timeout=args.lock_timeout)
         print(f"LEDGER OK — {count} record(s), tip={tip or 'none'}")
+        return 0
+
+    if args.command == "export-c2pa-payload":
+        receipt = load_receipt(args.receipt)
+        if args.output:
+            destination = save_c2pa_assertion_payload(
+                receipt,
+                args.output,
+                include_paths=args.include_paths,
+            )
+            print(f"C2PA-FACING PAYLOAD -> {destination}")
+            print("status=adapter_payload_only_not_c2pa_manifest_or_credential")
+        else:
+            print(
+                c2pa_assertion_payload_json(
+                    receipt,
+                    include_paths=args.include_paths,
+                    pretty=False,
+                )
+            )
         return 0
 
     if args.command == "selftest":

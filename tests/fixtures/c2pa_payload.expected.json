@@ -1,0 +1,31 @@
+{
+  "c2pa_status": {
+    "payload_is_c2pa_manifest": false,
+    "payload_is_content_credential": false,
+    "project_claims_c2pa_conformance": false,
+    "requires_external_c2pa_tooling": true
+  },
+  "coverage": {
+    "artifact_count": 1,
+    "excludes_unlisted": true,
+    "paths": [],
+    "paths_included": false,
+    "type": "explicit_file_set"
+  },
+  "evidence_boundary": {
+    "assertion_is_truth": false,
+    "integrity_is_authorship": false,
+    "provenance_is_legal_judgment": false,
+    "signature_is_originality": false
+  },
+  "framework": "Computational Metacognitive Bilingualism",
+  "git": {
+    "commit": "0000000000000000000000000000000000000000",
+    "status": "CALLER_SUPPLIED_UNVERIFIED"
+  },
+  "hash_algorithm": "SHA-256",
+  "schema_version": "cmb.c2pa-assertion-payload.v1",
+  "source_manifest_sha256": "d39ad5802fd8e5c59db509a63b069a6a64a1ead77a0b11504390a348b7c51ac9",
+  "source_receipt_schema": "cmb.seal-receipt.v1",
+  "source_tool_version": "1.3.1"
+}

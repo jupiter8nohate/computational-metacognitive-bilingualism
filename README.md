@@ -181,6 +181,34 @@ cmb-provenance ledger-verify
 
 External locations and displayed timestamps remain explicitly unverified references until their underlying evidence is independently checked.
 
+## C2PA-facing adapter
+
+Export a minimal deterministic payload body from an existing CMB receipt:
+
+```bash
+cmb-provenance export-c2pa-payload \
+  --receipt cmb-source.cmb-receipt.json \
+  --output cmb-c2pa-payload.json
+```
+
+Artifact paths are **omitted by default**. Include them only when the eventual credential should disclose them:
+
+```bash
+cmb-provenance export-c2pa-payload \
+  --receipt cmb-source.cmb-receipt.json \
+  --include-paths
+```
+
+Python:
+
+```python
+from cmb_provenance import to_c2pa_assertion_payload
+
+payload = to_c2pa_assertion_payload(receipt)
+```
+
+The output is validated CMB-derived metadata intended for a future entity-specific C2PA assertion. It is **not** a C2PA manifest, Content Credential, signature, asset binding, or conformance result. The project intentionally does not invent a C2PA assertion label before an appropriate domain-controlled namespace is established. See [`docs/C2PA_INTEROPERABILITY.md`](docs/C2PA_INTEROPERABILITY.md).
+
 ## Repository contents
 
 - [`MANIFESTO.md`](MANIFESTO.md) — the public CMB human-sovereignty manifesto.
@@ -193,7 +221,8 @@ External locations and displayed timestamps remain explicitly unverified referen
 - [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the CMB Global Advocacy Charter v1.1.
 - [`library/README.md`](library/README.md) — human-readable entry point to the CMB digital library.
 - [`library/catalog.json`](library/catalog.json) — machine-indexable artifact catalog, sealed as part of the canonical public set.
-- [`src/cmb_provenance`](src/cmb_provenance) — the supported v1.3.1 package and stable API.
+- [`src/cmb_provenance`](src/cmb_provenance) — the supported v1.3.1 package, stable sealing API, and C2PA-facing adapter.
+- [`schemas/cmb.c2pa-assertion-payload.v1.schema.json`](schemas/cmb.c2pa-assertion-payload.v1.schema.json) — strict schema for the internal C2PA-facing adapter payload.
 - [`tests`](tests) — deterministic, corruption, concurrency, schema, CLI, and canonical-artifact tests.
 - [`receipts`](receipts) — checked-in provenance receipts and their verification-status documentation.
 - [`cmb_provenance_v1_3.py`](cmb_provenance_v1_3.py) — the retained historical v1.3.0 standalone tool.

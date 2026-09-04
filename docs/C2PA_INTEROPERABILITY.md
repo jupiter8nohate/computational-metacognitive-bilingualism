@@ -1,6 +1,6 @@
 # CMB Provenance ↔ C2PA Interoperability Plan
 
-**Status:** Design target; not a claim of current C2PA conformance  
+**Status:** Phase 1 adapter implemented; not a claim of C2PA conformance  
 **Component:** `cmb_provenance`  
 **Last reviewed:** 2026-09-04
 
@@ -38,7 +38,7 @@ The CMB tool currently provides:
 - tamper-evident external-evidence references;
 - release checksums, Sigstore signing, and GitHub attestations through CI.
 
-These capabilities are useful, but they do **not** make the tool a C2PA implementation.
+These capabilities are useful, but they do **not** make the tool a C2PA implementation. The repository now also contains a deterministic Phase 1 adapter that exports a privacy-minimized payload body for eventual use inside an entity-specific C2PA assertion.
 
 ## What C2PA adds
 
@@ -51,7 +51,7 @@ C2PA provides standardized machinery for:
 - manifest storage and validation;
 - a conformance ecosystem.
 
-C2PA supports entity-specific/custom assertions. That creates a possible bridge for CMB-specific metadata without reimplementing the surrounding provenance standard.
+C2PA supports entity-specific/custom assertions. That creates a possible bridge for CMB-specific metadata without reimplementing the surrounding provenance standard. C2PA entity-specific assertion labels are namespaced by an Internet domain controlled by the asserting entity; this project therefore does **not** invent or reserve a C2PA assertion label before such a namespace is established.
 
 ## Non-goals
 
@@ -104,33 +104,44 @@ The CMB project should not:
              Content Credential
 ```
 
-## Proposed assertion payload
+## Implemented Phase 1 payload
 
-The following is an **illustrative internal payload**, not a claim that the label or envelope is already approved by C2PA:
+The repository now exposes:
 
-```json
-{
-  "cmb_schema": "cmb.c2pa-provenance-assertion.v1",
-  "framework": "Computational Metacognitive Bilingualism",
-  "receipt_schema": "cmb.seal-receipt.v1",
-  "manifest_sha256": "<receipt manifest digest>",
-  "coverage": {
-    "type": "explicit_file_set",
-    "excludes_unlisted": true
-  },
-  "git": {
-    "commit": "<full commit sha>",
-    "status": "VERIFIED_ARTIFACTS_MATCH_COMMIT"
-  },
-  "evidence_boundary": {
-    "integrity_is_authorship": false,
-    "signature_is_originality": false,
-    "provenance_is_legal_judgment": false
-  }
-}
+```python
+from cmb_provenance import to_c2pa_assertion_payload
+
+payload = to_c2pa_assertion_payload(receipt)
 ```
 
-The adapter should carry the **minimum necessary provenance facts**. Full unpublished text, private drafts, sensitive identity data, and unnecessary metadata should not be embedded by default.
+and:
+
+```bash
+cmb-provenance export-c2pa-payload \
+  --receipt cmb-source.cmb-receipt.json \
+  --output cmb-c2pa-payload.json
+```
+
+The payload uses schema `cmb.c2pa-assertion-payload.v1`. By default, artifact paths are omitted and only the artifact count, exact-coverage semantics, manifest digest, Git commit metadata, and evidence-boundary fields are exported. Paths require explicit `--include-paths` opt-in.
+
+The JSON Schema is:
+
+```text
+schemas/cmb.c2pa-assertion-payload.v1.schema.json
+```
+
+The adapter deliberately does **not** output a C2PA assertion label. C2PA entity-specific labels require a namespace based on a domain controlled by the asserting entity; inventing one would be false interoperability.
+
+The adapter also hard-codes the following boundary:
+
+```text
+payload_is_c2pa_manifest = false
+payload_is_content_credential = false
+project_claims_c2pa_conformance = false
+requires_external_c2pa_tooling = true
+```
+
+Full unpublished text, private drafts, sensitive identity data, and unnecessary metadata are not embedded by default.
 
 ## Data mapping
 
@@ -157,20 +168,18 @@ The adapter should carry the **minimum necessary provenance facts**. Full unpubl
 
 ### Phase 1 — schema adapter
 
-Add a deterministic function such as:
+**Status: implemented.**
 
-```python
-payload = to_c2pa_assertion_payload(receipt)
-```
+Implemented controls:
 
-Requirements:
-
-- deterministic output;
-- JSON Schema;
-- no private data by default;
+- deterministic canonical JSON output;
+- public JSON Schema;
+- artifact paths omitted by default;
 - explicit evidence-boundary fields;
-- unit tests;
-- no claim that the payload alone is a C2PA manifest.
+- deterministic fixtures and unit tests;
+- CLI export;
+- no invented entity-specific C2PA namespace;
+- no claim that the payload is a C2PA manifest or Content Credential.
 
 ### Phase 2 — SDK integration
 
