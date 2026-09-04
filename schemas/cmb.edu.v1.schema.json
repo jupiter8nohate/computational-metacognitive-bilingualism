@@ -1,58 +1,140 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://cmb.example/schemas/cmb.edu.v1.schema.json",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.edu.v1.schema.json",
   "title": "CMB Metacognitive Context Envelope v1",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "meta", "context", "execution", "sovereignty_gate", "privacy"],
+  "required": [
+    "schema",
+    "meta",
+    "context",
+    "execution",
+    "sovereignty_gate",
+    "privacy"
+  ],
   "properties": {
-    "schema": {"const": "cmb.edu.v1"},
+    "schema": {
+      "const": "cmb.edu.v1"
+    },
     "meta": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["framework", "human_lens", "cognitive_mode"],
+      "required": [
+        "framework",
+        "human_lens",
+        "cognitive_mode"
+      ],
       "properties": {
-        "framework": {"const": "CMB-EDU-v1.0"},
-        "human_lens": {"type": "string", "minLength": 1, "maxLength": 32},
-        "cognitive_mode": {"type": "string", "pattern": "^[A-Z_]+$", "maxLength": 32}
+        "framework": {
+          "const": "CMB-EDU-v1.0"
+        },
+        "human_lens": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32
+        },
+        "cognitive_mode": {
+          "type": "string",
+          "pattern": "^[A-Z_]+$",
+          "maxLength": 32
+        }
       }
     },
     "context": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["source", "states", "machine_inferred", "temporal_scope"],
+      "required": [
+        "source",
+        "states",
+        "machine_inferred",
+        "temporal_scope"
+      ],
       "properties": {
-        "source": {"const": "human_declared"},
-        "states": {"type": "array", "minItems": 1, "maxItems": 8, "items": {"type": "string", "minLength": 1, "maxLength": 64}},
-        "machine_inferred": {"const": false},
-        "temporal_scope": {"const": "current_interaction"}
+        "source": {
+          "const": "human_declared"
+        },
+        "states": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          }
+        },
+        "machine_inferred": {
+          "const": false
+        },
+        "temporal_scope": {
+          "const": "current_interaction"
+        }
       }
     },
     "execution": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["raw_instruction"],
-      "properties": {"raw_instruction": {"type": "string", "minLength": 1, "maxLength": 2048}}
+      "required": [
+        "raw_instruction"
+      ],
+      "properties": {
+        "raw_instruction": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        }
+      }
     },
     "sovereignty_gate": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["declared_invariant", "enforced_translation"],
+      "required": [
+        "declared_invariant",
+        "enforced_translation"
+      ],
       "properties": {
-        "declared_invariant": {"enum": ["PATTERN_NOT_PROOF", "PROFILE_NOT_PERSON", "PREDICTION_NOT_DESTINY", "ATTENTION_NOT_CONSENT", "DIFFERENCE_NOT_DEFECT", "MODEL_NOT_MIND"]},
-        "enforced_translation": {"type": "string", "minLength": 1}
+        "declared_invariant": {
+          "enum": [
+            "PATTERN_NOT_PROOF",
+            "PROFILE_NOT_PERSON",
+            "PREDICTION_NOT_DESTINY",
+            "ATTENTION_NOT_CONSENT",
+            "DIFFERENCE_NOT_DEFECT",
+            "MODEL_NOT_MIND"
+          ]
+        },
+        "enforced_translation": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "privacy": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["persistence", "training_permission", "profiling_permission", "secondary_use_permission", "psychological_inference_permission"],
+      "required": [
+        "persistence",
+        "training_permission",
+        "profiling_permission",
+        "secondary_use_permission",
+        "psychological_inference_permission"
+      ],
       "properties": {
-        "persistence": {"const": "ephemeral"},
-        "training_permission": {"const": false},
-        "profiling_permission": {"const": false},
-        "secondary_use_permission": {"const": false},
-        "psychological_inference_permission": {"const": false}
+        "persistence": {
+          "const": "ephemeral"
+        },
+        "training_permission": {
+          "const": false
+        },
+        "profiling_permission": {
+          "const": false
+        },
+        "secondary_use_permission": {
+          "const": false
+        },
+        "psychological_inference_permission": {
+          "const": false
+        }
       }
     }
   }
