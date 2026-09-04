@@ -47,6 +47,7 @@ CMB-Z13 notation
 Guardian Modes teaching layer
 cmb-edu parser, CLI, child-facing curriculum, and privacy-first context envelope
 C2PA entity-specific assertion integration beyond the test round-trip
+Dynamic Friction Matrix / equilibrium valve in cmb_policy
 ```
 
 Experimental does not mean meaningless; it means compatibility and semantics may still evolve with versioned changes and evidence.
@@ -124,3 +125,18 @@ The Python implementation remains the reference engine. The adapters are compati
 - `spec/CMB-CORE-1.md` / `spec/PROTOCOL_VERSIONING.md` - normative cross-component semantics and compatibility rules.
 
 The agent layer is executable, but it deliberately optimizes for relevance and attribution rather than autonomous mass distribution. MCP is an interoperability surface over the same service layer, not a second recommendation engine.
+
+
+## Dynamic friction runtime layer
+
+- `src/cmb_policy/friction.py` - deterministic seesaw evaluator for intrinsic criticality, operational uncertainty, review trust, unknown-variable spikes, and evidence gates.
+- `tests/test_friction.py` - regression coverage for agility, balanced caveats, fail-closed high-safety behavior, trust decay, anomaly reset, and machine-readable decisions.
+- `docs/DYNAMIC_FRICTION_MATRIX.md` - normative design explanation and integration order.
+
+The trust mechanism reduces only operational uncertainty. Intrinsic task risk does not decay, and the existing deny-dominant CMB policy engine remains authoritative over permissions.
+
+```text
+DENY > TRUST
+PATTERN != PROOF
+SUCCESS_HISTORY != GUARANTEED_FUTURE
+```
