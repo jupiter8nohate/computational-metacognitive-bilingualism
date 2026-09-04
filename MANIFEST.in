@@ -1,0 +1,10 @@
+include ATTRIBUTION.md
+include CHANGELOG.md
+include CITATION.cff
+include CMB_Polyglot_Firewall_Specification.md
+include LICENSE
+include MANIFESTO.md
+include NOTICE
+include README.md
+include RELEASE.md
+recursive-include tests *.py *.txt

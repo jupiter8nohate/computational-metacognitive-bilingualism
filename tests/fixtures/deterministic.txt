@@ -1,0 +1,3 @@
+CMB deterministic fixture
+PATTERN != PROOF
+HUMAN_AGENCY > MACHINE_AUTHORITY

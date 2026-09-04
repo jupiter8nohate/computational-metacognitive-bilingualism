@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or discuss the CMB framework, please cite it using this metadata."
+title: "Computational Metacognitive Bilingualism (CMB) Provenance Tool"
+type: software
+version: 1.3.1
+date-released: 2026-09-04
+authors:
+  - given-names: Jupiter
+    family-names: Hudson
+    alias: WisdomLoveThePoet / Jupiter 8
+repository-code: "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
+url: "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
+license: Apache-2.0
+abstract: >-
+  Artifact sealing and tamper-evident evidence-reference tooling for
+  Computational Metacognitive Bilingualism, a human-sovereignty framework
+  centered on the invariant HUMAN_AGENCY > MACHINE_AUTHORITY.
+keywords:
+  - authorship
+  - cognitive sovereignty
+  - computational metacognitive bilingualism
+  - digital rights
+  - provenance
