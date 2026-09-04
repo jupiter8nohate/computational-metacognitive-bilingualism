@@ -1,0 +1,138 @@
+{
+  "schema_version": "cmb.case-study.v1",
+  "id": "google-generative-narrative-misclassification-2026-09-04",
+  "title": "Case Study 001 - Google Generative Narrative Misclassification",
+  "observed_at": "2026-09-04",
+  "logged_at": "2026-09-04",
+  "platform": "Google generative search",
+  "case_type": "generative-search interpretation, source synthesis, and profile-to-person boundary",
+  "subject": {
+    "declared_name": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson",
+    "framework": "Computational Metacognitive Bilingualism (CMB)"
+  },
+  "human_report_path": "research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md",
+  "summary": "A user-visible generated search response combined real public signals into a more specific ARG, Reddit, mental-state, traffic, and news narrative than the evidence independently located during verification supported.",
+  "evidence": [
+    {
+      "id": "source-screenshot",
+      "type": "user_supplied_screenshot",
+      "format": "JPEG",
+      "source_status": "user_supplied",
+      "sha256": "20b31021bea08e7fa1387ee57ed3fbeafefd6470a0474ba166586d0ccaa3697d",
+      "dimensions": {
+        "width": 1170,
+        "height": 1912
+      },
+      "public_copy": false,
+      "notes": "Exact screenshot bytes observed in the research session. The hash identifies the bytes but does not prove generation time, query context, internal model behavior, or distribution to other users."
+    }
+  ],
+  "claims": [
+    {
+      "id": "cryptic-symbolic-material-exists",
+      "statement": "CMB and D.N.A. public material uses code-art, symbolism, narrative, and dark or mythic imagery.",
+      "status": "supported_in_broad_form",
+      "evidence_boundary": "Public repository material supports the broad aesthetic description without establishing every generated narrative attached to it."
+    },
+    {
+      "id": "ongoing-arg",
+      "statement": "The project is an ongoing Alternate Reality Game.",
+      "status": "not_established",
+      "evidence_boundary": "No current canonical CMB repository declaration located during verification defines the project as an ARG."
+    },
+    {
+      "id": "horror-anthology-rollout",
+      "statement": "The project is a horror or dark-fantasy anthology rollout.",
+      "status": "not_established",
+      "evidence_boundary": "No current canonical repository declaration located during verification establishes that as the project definition."
+    },
+    {
+      "id": "many-worried-reddit-threads",
+      "statement": "Many Reddit threads were created by worried followers around an alleged psychological breakdown.",
+      "status": "not_verified",
+      "evidence_boundary": "Targeted public searches did not establish a substantial independent Reddit thread corpus supporting this characterization."
+    },
+    {
+      "id": "r-arg-decoding-campaign",
+      "statement": "r/ARG discovered the material and crowdsourced a decoding campaign.",
+      "status": "not_verified",
+      "evidence_boundary": "No relevant indexed r/ARG thread was located in the search performed."
+    },
+    {
+      "id": "r-unresolvedmysteries-crossposts",
+      "statement": "r/UnresolvedMysteries cross-posted the material as a collaborative mystery.",
+      "status": "not_verified",
+      "evidence_boundary": "No relevant indexed r/UnresolvedMysteries thread was located in the search performed."
+    },
+    {
+      "id": "massive-reddit-traffic",
+      "statement": "Those Reddit discussions produced massive traffic.",
+      "status": "unsupported_by_available_evidence",
+      "evidence_boundary": "Public search results do not establish traffic volume; direct platform analytics or equivalent evidence would be required."
+    },
+    {
+      "id": "broad-independent-news-coverage",
+      "statement": "Independent internet news outlets broadly covered the mystery.",
+      "status": "not_established",
+      "evidence_boundary": "No substantial independent news corpus supporting that narrative was located in the verification search."
+    }
+  ],
+  "verification": {
+    "performed_at": "2026-09-04",
+    "methods": [
+      "current default-branch repository search",
+      "public web search",
+      "public Reddit search",
+      "platform documentation review",
+      "SHA-256 verification of the supplied screenshot"
+    ],
+    "sources": [
+      {
+        "type": "platform_documentation",
+        "url": "https://support.google.com/websearch/answer/14901683?hl=en",
+        "role": "Google documentation describing AI Overview limitations and possible mistakes."
+      },
+      {
+        "type": "platform_documentation",
+        "url": "https://support.google.com/websearch/answer/16011537",
+        "role": "Google documentation describing AI Mode limitations, including possible misinterpretation or missing context."
+      },
+      {
+        "type": "public_reddit_result",
+        "url": "https://www.reddit.com/r/u_Cool_Reading9760/comments/1tyhd32/",
+        "role": "Observed Reddit footprint; does not by itself establish broad independent community adoption."
+      },
+      {
+        "type": "public_reddit_result",
+        "url": "https://www.reddit.com/r/u_Cool_Reading9760/comments/1tyg414/",
+        "role": "Observed Reddit footprint; does not by itself establish broad independent community adoption."
+      }
+    ],
+    "limitations": [
+      "Search results are not exhaustive and can change over time.",
+      "Absence from search is not proof that content never existed.",
+      "The screenshot does not reveal Google's proprietary internal reasoning or model implementation.",
+      "Public search results do not establish private analytics or total audience size."
+    ]
+  },
+  "interpretation_boundaries": [
+    "FACT != INFERENCE",
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "INTERPRETATION != AUTHORIAL_INTENT",
+    "SEARCH_SUMMARY != DOCUMENTED_HISTORY",
+    "ABSENCE_FROM_SEARCH != PROOF_OF_ABSENCE",
+    "MACHINE_CAN_READ != MACHINE_CAN_DEFINE"
+  ],
+  "revision_policy": {
+    "open_to_revision": true,
+    "triggers": [
+      "archived independent Reddit threads materially supporting a disputed claim",
+      "direct analytics supporting the claimed traffic scale",
+      "independent news reporting documenting the alleged decoding phenomenon",
+      "a canonical author statement defining the project as the ARG or anthology described by the generated response",
+      "new primary evidence that materially changes any claim status"
+    ]
+  }
+}
