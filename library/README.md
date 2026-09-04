@@ -28,16 +28,20 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [`../docs/EXTERNAL_REVIEW.md`](../docs/EXTERNAL_REVIEW.md) - current independent-validation gap and review scope.
 - [`../docs/CREATOR_CONTEXT_MODEL.md`](../docs/CREATOR_CONTEXT_MODEL.md) - separates symbolic lineage, technical provenance, intellectual context, and the anti-profile boundary.
 - [`../spec/CMB-SEP-1.md`](../spec/CMB-SEP-1.md) - experimental 6 x 6 x 6 sovereign epistemic state machine.
+- [`../docs/CREATOR_PROVENANCE.md`](../docs/CREATOR_PROVENANCE.md) - privacy-safe creator provenance, genealogy status, intellectual lineage, symbolic lineage, and evidence boundaries.
 
 ### Corpus
 
 - [`catalog.json`](catalog.json) - machine-indexable catalog of CMB public artifacts.
+- [`creator-provenance.json`](creator-provenance.json) - machine-readable creator provenance and category-separation record.
+- [`../schemas/cmb.creator-provenance.v1.schema.json`](../schemas/cmb.creator-provenance.v1.schema.json) - strict schema for the creator-provenance contract.
 - [`../schemas/cmb.library.catalog.v1.schema.json`](../schemas/cmb.library.catalog.v1.schema.json) - strict JSON Schema for validating the catalog contract.
 - [`../schemas/cmb.edu.v1.schema.json`](../schemas/cmb.edu.v1.schema.json) - strict CMB-EDU Metacognitive Context Envelope schema.
 - [`../MANIFESTO.md`](../MANIFESTO.md) - core human-sovereignty manifesto.
 - [`../manifestos/DEMONS_NEED_ATTENTION_DNA.md`](../manifestos/DEMONS_NEED_ATTENTION_DNA.md) - D.N.A. attention-economy manifesto.
 - [`../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](../manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - D.N.A./FGC literary allegory about institutional and algorithmic confinement.
 - [`../manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](../manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - perspective-aware library model and MissingNo Clause.
+- [`../manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md`](../manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) - perfect-play epistemics, uncertainty Recovery, and human-authority code-art.
 - [`../manifestos/CMB_Z13_MANIFESTO.md`](../manifestos/CMB_Z13_MANIFESTO.md) - CMB-Z13 public manifesto and thirteen-lens declaration.
 - [`../manifestos/CMB_Z13_LANGUAGE_SPEC.md`](../manifestos/CMB_Z13_LANGUAGE_SPEC.md) - CMB-Z13 symbolic language specification.
 - [`cmb-z13.registry.json`](cmb-z13.registry.json) - machine-readable CMB-Z13 mapping, vectors, processing cycle, and interpretation boundaries.
@@ -48,6 +52,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 The catalog records declared titles, paths, relationships, concepts, and provenance scope. It does not turn descriptions into facts about a person's inner state, and it does not make a model-generated profile authoritative over a human being.
 
 Cryptographic receipts can support integrity, chronology, and attribution evidence. They do not independently prove authorship, ownership, mental state, or legal entitlement.
+
 
 Creator context is stored in separate evidence lanes. Symbolic influence, cryptographic provenance, and intellectual context must not be merged into an authoritative identity profile.
 

@@ -10,11 +10,11 @@ nav:
   - CMB-EDU Kids: CMB_EDU_KIDS.md
   - Agent discovery protocol: AGENT_DISCOVERY_PROTOCOL.md
   - MCP integration: MCP_INTEGRATION.md
-  - MCP integration: MCP_INTEGRATION.md
   - For developers: DEVELOPERS.md
   - For researchers & policy: RESEARCHERS.md
   - CMB distinction: CMB_DISTINCTION.md
   - CMB research position: CMB_RESEARCH_POSITION.md
+  - Creator provenance: CREATOR_PROVENANCE.md
   - CMB dissertation: dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md
   - Formal semantics: dissertation/31_FORMAL_SEMANTICS.md
   - Project structure: PROJECT_STRUCTURE.md

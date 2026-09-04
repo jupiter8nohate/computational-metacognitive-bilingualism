@@ -24,6 +24,22 @@ When referencing the framework or software, use the metadata in [`CITATION.cff`]
 Apache-2.0 controls the repository's software implementation and other files expressly placed under that license. Authored literary and artistic corpus material may carry separate rights terms. See [`CONTENT_LICENSE.md`](CONTENT_LICENSE.md). Requested academic and cultural citation does not silently alter the license that applies to any particular file.
 
 
+## Creator provenance boundary
+
+Creator genealogy, intellectual influences, symbolic references, and cryptographic provenance are intentionally separated.
+
+See [docs/CREATOR_PROVENANCE.md](docs/CREATOR_PROVENANCE.md) and the machine-readable [library/creator-provenance.json](library/creator-provenance.json).
+
+The project currently classifies the supplied genealogy source as creator-documented context, not independently verified genealogy. The raw family-tree image, living-relative details, and access invitation token are intentionally not committed to the public repository.
+
+```text
+GENEALOGY != METAPHYSICAL_PROOF
+SYMBOLISM != BIOLOGICAL_FACT
+SYMBOLISM != SCIENTIFIC_EVIDENCE
+PATTERN != PROOF
+```
+
+
 ## Creator context boundary
 
 Repository attribution, creator context, and artifact provenance are intentionally

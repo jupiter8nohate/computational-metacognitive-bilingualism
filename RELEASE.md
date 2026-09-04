@@ -17,13 +17,22 @@ Version 1.4.0 uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
    - `manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`
    - `manifestos/CMB_UNCLASSIFIABLE_INDEX.md`
+   - `manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md`
    - `manifestos/CMB_Z13_MANIFESTO.md`
    - `manifestos/CMB_Z13_LANGUAGE_SPEC.md`
    - `library/cmb-z13.registry.json`
+   - `docs/CREATOR_PROVENANCE.md`
+   - `library/creator-provenance.json`
+   - `schemas/cmb.creator-provenance.v1.schema.json`
    - `policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`
    - `docs/CMB_EDU_KIDS.md`
    - `schemas/cmb.edu.v1.schema.json`
    - `library/catalog.json`
+   - `agents/registry.json`
+   - `agents/agent-card.json`
+   - `docs/AGENT_DISCOVERY_PROTOCOL.md`
+   - `schemas/cmb.agent-registry.v1.schema.json`
+
    - `spec/CMB-HARMONI-666.md`
    - `schemas/cmb.harmoni-666.v1.schema.json`
    - `schemas/cmb.harmoni-666.manifest.v1.schema.json`
@@ -31,7 +40,6 @@ Version 1.4.0 uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `machine/fgc-origin-mark.json`
    - `machine/targets.json`
    - `machine/index.json`
-
 ## Publish
 
 ```bash
@@ -59,13 +67,21 @@ CMB_Polyglot_Firewall_Specification.md
 manifestos/DEMONS_NEED_ATTENTION_DNA.md
 manifestos/DNA_CHICKEN_RUN_MANIFESTO.md
 manifestos/CMB_UNCLASSIFIABLE_INDEX.md
+manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md
 manifestos/CMB_Z13_MANIFESTO.md
 manifestos/CMB_Z13_LANGUAGE_SPEC.md
 library/cmb-z13.registry.json
+docs/CREATOR_PROVENANCE.md
+library/creator-provenance.json
+schemas/cmb.creator-provenance.v1.schema.json
 policy/CMB_GLOBAL_ADVOCACY_CHARTER.md
 docs/CMB_EDU_KIDS.md
 schemas/cmb.edu.v1.schema.json
 library/catalog.json
+agents/registry.json
+agents/agent-card.json
+docs/AGENT_DISCOVERY_PROTOCOL.md
+schemas/cmb.agent-registry.v1.schema.json
 spec/CMB-HARMONI-666.md
 schemas/cmb.harmoni-666.v1.schema.json
 schemas/cmb.harmoni-666.manifest.v1.schema.json
@@ -77,7 +93,7 @@ machine/index.json
 
 Because the receipt uses explicit-file-set coverage, adding a file to the repository does not silently add it to the provenance claim. New canonical artifacts must be deliberately added to `CANONICAL_PUBLIC_ARTIFACTS`, the tests, and this documentation.
 
-The CMB-Z13 manifesto, language specification, and machine registry are treated as one canonical symbolic-language bundle. The Global Advocacy Charter is treated as a canonical public policy proposal. Its inclusion in a cryptographic receipt proves integrity of the covered bytes under the receipt's stated conditions; it does not transform proposed principles into enacted law or independently establish legal rights.
+The CMB-Z13 manifesto, language specification, and machine registry are treated as one canonical symbolic-language bundle. HARMONI is treated as canonical authored code-art and epistemic design material. The creator-provenance bundle is treated as a canonical evidence-category and privacy contract: it records that the supplied family-tree source is creator-documented and not independently verified, while keeping the raw image, invitation token, and living-relative details outside the public repository. The Global Advocacy Charter is treated as a canonical public policy proposal. Inclusion in a cryptographic receipt proves integrity of the covered bytes under the receipt's stated conditions; it does not convert genealogy into metaphysical proof, symbolism into scientific evidence, or proposed principles into enacted law.
 
 No long-lived signing key is stored in the repository. A signature establishes a verifiable relationship between release bytes and the workflow identity; it does not independently prove creative authorship or legal ownership.
 
@@ -129,14 +145,9 @@ and emit `MISSINGNO_666`.
 The canonical receipt covers the HARMONI specification, decision and manifest
 schemas, CMB machine IR, FGC origin mark, target registry, and machine index.
 Revelation 13:18 is preserved in HARMONI as a literary and architectural design
-key:
+key.
 
-```text
-WISDOM -> UNDERSTANDING -> CALCULATION -> HUMAN
-```
-
-This scriptural motif does not constitute empirical proof or cryptographic
-evidence. The machine-verifiable rule remains:
+This scriptural motif does not constitute empirical proof or cryptographic evidence.
 
 ```text
 CLAIM_STRENGTH <= VERIFIED_EVIDENCE_STRENGTH

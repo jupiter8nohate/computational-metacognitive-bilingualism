@@ -448,6 +448,89 @@
       "declared_meaning": "Schema contract for the canonical CMB-ADP-1 registry, including explicit trust-preserving distribution boundaries."
     },
     {
+      "id": "cmb-harmoni-perfect-play",
+      "title": "HARMONI // Perfect-Play Epistemics",
+      "path": "manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md",
+      "format": "markdown",
+      "kind": "code-art manifesto and epistemic triage model",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "perfect-play epistemics",
+        "epistemic triage",
+        "MissingNo Recovery gate",
+        "uncertainty",
+        "evidence-bounded claims",
+        "human judgment",
+        "machine computation",
+        "first principles",
+        "human agency"
+      ],
+      "declared_meaning": "Code-art architecture for routing patterns through questions, tests, and evidence while treating unknown or value-sensitive states as a reason to disclose uncertainty and defer consequential meaning to authorized humans."
+    },
+    {
+      "id": "cmb-creator-provenance-doc",
+      "title": "CMB Creator Provenance Protocol",
+      "path": "docs/CREATOR_PROVENANCE.md",
+      "format": "markdown",
+      "kind": "creator provenance and epistemic-boundary documentation",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "creator provenance",
+        "genealogical context",
+        "intellectual lineage",
+        "symbolic lineage",
+        "privacy",
+        "evidence boundaries"
+      ],
+      "declared_meaning": "Human-readable protocol separating creator-documented genealogy, declared intellectual influences, symbolic references, and cryptographic provenance without converting one category into proof of another."
+    },
+    {
+      "id": "cmb-creator-provenance-registry",
+      "title": "CMB Creator Provenance Registry v1",
+      "path": "library/creator-provenance.json",
+      "format": "json",
+      "kind": "machine-readable creator provenance registry",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "creator provenance",
+        "evidence classification",
+        "genealogy source status",
+        "symbolic references",
+        "privacy defaults",
+        "human agency"
+      ],
+      "declared_meaning": "Strict machine-readable separation of historical context, authorship declaration, intellectual influence, symbolic meaning, cryptographic provenance, and privacy boundaries."
+    },
+    {
+      "id": "cmb-creator-provenance-schema",
+      "title": "CMB Creator Provenance v1 Schema",
+      "path": "schemas/cmb.creator-provenance.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable provenance schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "creator provenance",
+        "epistemic boundaries",
+        "privacy",
+        "category separation",
+        "fail-closed validation"
+      ],
+      "declared_meaning": "Draft 2020-12 schema that constrains the canonical creator-provenance record so genealogy remains unverified historical context, symbolic references remain non-scientific, and private family-tree source material remains unpublished."
+    },
+    {
       "id": "cmb-harmoni-666-spec",
       "title": "CMB HARMONI-666 Bounded Proof Protocol",
       "path": "spec/CMB-HARMONI-666.md",

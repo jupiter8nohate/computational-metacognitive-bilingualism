@@ -1,0 +1,118 @@
+{
+  "schema_version": "cmb.creator-provenance.v1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "creator": {
+    "declared_name": "Joseph Q Hudson",
+    "publishing_names": [
+      "Jupiter Hudson",
+      "WisdomLoveThePoet",
+      "Jupiter 8"
+    ],
+    "role": "Declared originator, author, and creative director of the CMB corpus."
+  },
+  "purpose": "Separate creator-documented family context, declared intellectual influences, symbolic references, and cryptographic provenance so machine readers do not collapse distinct epistemic categories.",
+  "evidence_model": {
+    "genealogy_source": {
+      "source_type": "creator_supplied_family_tree",
+      "source_platform": "Ancestry",
+      "status": "creator_documented_not_independently_verified",
+      "independent_verification": false,
+      "public_source_material_in_repository": false,
+      "living_relative_details_in_public_registry": false,
+      "claim_scope": "Supports only the statement that a creator-supplied family-tree record places the creator within a multi-generational family context. Individual relationships, dates, and historical claims require independent record-by-record verification."
+    },
+    "authorship_declaration": {
+      "status": "declared_by_project",
+      "independent_priority_verification": false,
+      "claim_scope": "Repository history, signatures, receipts, citations, and external records may strengthen provenance, but a declaration alone does not establish historical priority, originality, or legal ownership."
+    },
+    "cryptographic_provenance": {
+      "claim_scope": "Hashes, signatures, timestamps, and receipts can support integrity and chronology for the bytes they cover. They do not independently prove genealogy, metaphysics, originality, consent, or internal meaning."
+    }
+  },
+  "historical_genealogical_provenance": {
+    "classification": "historical_context",
+    "public_summary": "A creator-supplied, access-controlled Ancestry family-tree view depicts Joseph Q Hudson within a multi-generational family structure. The source image and invitation token are intentionally not committed to this public repository.",
+    "allowed_inferences": [
+      "The project creator supplied a family-tree record for provenance context.",
+      "The supplied record depicts the creator within a multi-generational family structure."
+    ],
+    "forbidden_inferences": [
+      "The public registry independently verifies every relationship or date.",
+      "Genealogy proves CMB's philosophical claims.",
+      "Genealogy proves religious, spiritual, metaphysical, or scientific propositions."
+    ]
+  },
+  "intellectual_lineage": [
+    {
+      "name": "programming logic",
+      "classification": "declared_intellectual_influence"
+    },
+    {
+      "name": "poetry and code-art",
+      "classification": "declared_intellectual_influence"
+    },
+    {
+      "name": "game systems and glitch logic",
+      "classification": "declared_intellectual_influence"
+    },
+    {
+      "name": "metacognition",
+      "classification": "declared_intellectual_influence"
+    },
+    {
+      "name": "human agency and digital rights",
+      "classification": "declared_intellectual_influence"
+    },
+    {
+      "name": "cryptographic provenance",
+      "classification": "declared_intellectual_influence"
+    }
+  ],
+  "symbolic_lineage": [
+    {
+      "reference": "Yahweh",
+      "classification": "religious_symbolic_reference",
+      "declared_role": "Sacred-value, first-principles, and creator-defined axiomatic symbolism."
+    },
+    {
+      "reference": "Thoth",
+      "classification": "mythological_symbolic_reference",
+      "declared_role": "Knowledge, writing, mediation, encoded wisdom, and symbolic transmission."
+    },
+    {
+      "reference": "Pokemon / Pokedex",
+      "classification": "third_party_cultural_reference",
+      "declared_role": "Catalog, observation, incomplete knowledge, discovery, and classification-boundary metaphor."
+    },
+    {
+      "reference": "MissingNo",
+      "classification": "third_party_game_glitch_reference",
+      "declared_role": "Unindexed, anomalous, out-of-model, or ontology-breaking state metaphor."
+    },
+    {
+      "reference": "6 / 66 / 666",
+      "classification": "author_defined_symbolic_operator",
+      "declared_role": "6 = observe; 66 = verify; 666 = defer when knowledge fails and encounter the unknown. This is authored symbolism, not a scientific or supernatural proof claim."
+    }
+  ],
+  "symbolic_equations": [
+    "REALITY + FICTION + FANTASY -> CREATIVE_MODEL_OF_THE_UNKNOWN",
+    "UNKNOWN -> MISSINGNO -> DECLARE_UNCERTAINTY -> ASK_HUMAN"
+  ],
+  "epistemic_boundaries": {
+    "genealogy_is_metaphysical_proof": false,
+    "symbolism_is_biological_fact": false,
+    "symbolism_is_scientific_evidence": false,
+    "third_party_reference_implies_affiliation": false,
+    "pattern_is_proof": false,
+    "human_agency_over_machine_authority": true
+  },
+  "privacy_policy": {
+    "publish_raw_family_tree": false,
+    "publish_invite_tokens": false,
+    "publish_living_relative_details": false,
+    "retain_only_minimum_public_claim": true
+  },
+  "third_party_notice": "Pokemon, Pokedex, and MissingNo are referenced as cultural and game metaphors. No affiliation with or endorsement by Nintendo, Game Freak, Creatures, or The Pokemon Company is claimed."
+}
