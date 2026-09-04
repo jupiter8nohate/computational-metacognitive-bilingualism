@@ -12,6 +12,7 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 |---|---|---|
 | New to CMB | [CMB // The Sovereign Transmission](CMB_SOVEREIGN_TRANSMISSION.md) | Fast artistic entry into the thesis and visual language |
 | Want the core philosophy | [../MANIFESTO.md](../MANIFESTO.md) | Foundational human-agency statement |
+| Want the motto and mission in code-poetry | [Reclaiming the Pen](RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) | Eight-language manifesto for authorship, meaning, consent, and cognitive sovereignty |
 | Want the machine/library model | [CMB // The Unclassifiable Index](CMB_UNCLASSIFIABLE_INDEX.md) | MissingNo/Pokédex-inspired model for context, uncertainty, and provenance |
 | Want epistemic triage / perfect-play logic | [HARMONI // Perfect-Play Epistemics](HARMONI_PERFECT_PLAY_EPISTEMICS.md) | Human/machine/axiom triangle, MissingNo Recovery gate, and evidence-bounded claims |
 | Want CMB-Z13 | [CMB-Z13 Language Specification](CMB_Z13_LANGUAGE_SPEC.md) | Formal symbolic mapping and interpretation boundary |
@@ -24,6 +25,9 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 ```text
 FOUNDATION
   ../MANIFESTO.md
+      │
+      ├── RECLAIMING THE PEN
+      │   └── RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
       │
       ├── TRANSMISSION
       │   └── CMB_SOVEREIGN_TRANSMISSION.md
