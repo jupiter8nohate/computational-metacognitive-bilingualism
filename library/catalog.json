@@ -552,6 +552,29 @@
         "fail-closed validation"
       ],
       "declared_meaning": "Draft 2020-12 schema that constrains the canonical creator-provenance record so genealogy remains unverified historical context, symbolic references remain non-scientific, and private family-tree source material remains unpublished."
+    },
+    {
+      "id": "cmb-case-google-generative-misclassification-2026-09-04",
+      "title": "Case Study 001 - Google Generative Narrative Misclassification",
+      "path": "research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md",
+      "format": "markdown",
+      "kind": "research case study",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "AI misclassification",
+        "generative search",
+        "pattern versus proof",
+        "profile versus person",
+        "authorial intent",
+        "Reddit verification",
+        "evidence boundaries",
+        "semantic over-completion",
+        "falsifiability"
+      ],
+      "declared_meaning": "Documents a user-observed Google generative-search narrative, preserves the screenshot fingerprint, separates generated claims from verified evidence, and defines revision criteria without alleging malicious intent or system-wide behavior."
     }
   ]
 }
