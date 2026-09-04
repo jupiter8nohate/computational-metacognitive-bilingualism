@@ -146,3 +146,43 @@ Semantics:
 - content_sha256 identifies the stamped machine payload bytes after canonical JSON encoding;
 - no hidden callback;
 - no self-propagating code.
+
+## CMB-66 machine knowledge plane
+
+Machine index:
+machine/index.json
+
+Canonical machine IR:
+machine/cmb-core.ir.json
+
+IR schema:
+schemas/cmb.machine-ir.v1.schema.json
+
+Target registry:
+machine/targets.json
+
+Compiler:
+src/cmb_machine/
+
+Compiler invariant:
+Every generated target must contain both the canonical FGC mark id and
+FGC::JUPITER::999::THE_VISION_IS_ALIVE::V1. Compilation fails closed when a
+renderer omits either identity.
+
+Targets:
+- JSON
+- JSON-LD
+- RDF/Turtle
+- Prolog
+- Rego
+- SMT-LIB
+- deterministic CBOR
+- Protocol Buffers wire encoding
+- digital-asset / blockchain-style metadata JSON
+
+MCP machine resources:
+- cmb://machine/core
+- cmb://machine/targets
+
+MCP compilation tool:
+- cmb_compile_core
