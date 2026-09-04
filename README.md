@@ -6,6 +6,37 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 
+---
+
+<div align="center">
+
+## ╔═══𓆩⚡︎𓆪═══『 ♃ JUPITER 8 // CMB ARCHITECT 』═══𓆩⚡︎𓆪═══╗
+
+### 𓁻 𝑪𝒐𝒏𝒄𝒆𝒑𝒕𝒖𝒂𝒍 𝑨𝒓𝒄𝒉𝒊𝒕𝒆𝒄𝒕 × 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 × 𝑪𝒐𝒅𝒆 𝑷𝒐𝒆𝒕 𓁻
+
+`HUMAN_INTENT → MACHINE_LOGIC → HUMAN_AUTHORITY`
+
+**🪐 CMB • FGC • Provenance • Cognitive Sovereignty**
+
+Translating fluid human meaning into structured digital systems without allowing the machine to become the author of the human.
+
+`PATTERN ≠ PROOF` · `PROFILE ≠ PERSON` · `MODEL ≠ MIND`  
+`PREDICTION ≠ DESTINY` · `CAPABILITY ≠ AUTHORITY`
+
+### 𓆰♕𓆪 HUMAN_AGENCY > MACHINE_AUTHORITY 𓆰♕𓆪
+
+**♃ WisdomLoveThePoet // Jupiter Hudson // Jupiter 8**  
+*Philosophical Techie • Systems Thinker • Digital Mythmaker*
+
+𓅓⚡︎ *Building systems intelligent enough to question themselves, but never sovereign enough to define the human.* ⚡︎𓅓
+
+‧₊˚ ☁️⋅♡🪐༘⋆ **NOW LOADING: THE HUMAN–MACHINE LANGUAGE LAYER** ⋆༘🪐♡⋅☁️ ˚₊‧
+
+</div>
+
+---
+
+
 Computational Metacognitive Bilingualism is a human-agency and computational-literacy framework for learning and using computational systems while retaining human judgment, consent, authorship, meaning, and self-definition.
 
 **One-sentence position:** CMB translates established and emerging digital-rights principles into concise human-readable and machine-readable invariants; it does not claim to have invented the underlying rights, laws, scholarship, or provenance standards.
