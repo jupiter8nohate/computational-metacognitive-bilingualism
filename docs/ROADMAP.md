@@ -64,14 +64,42 @@ Implemented:
 - shared language-neutral conformance fixtures;
 - TypeScript/Express reference adapter;
 - Rust/Actix Web reference adapter;
+- Go standard-library reference adapter with strict JSON parsing;
 - hosted polyglot conformance workflow.
 
 Next boundary work:
 
-- define formal compatibility/versioning rules for v1 → v2 evolution;
-- add invalid-input conformance fixtures, not only valid semantic cases;
+- extend shared invalid-input fixtures across every language adapter;
 - add authenticated provenance for the upstream facts feeding a boundary event;
 - avoid behavioral inference as a substitute for explicit application state.
+
+## P1 ✦ machine interoperability
+
+Implemented:
+
+- root `llms.txt` and `llms-full.txt` discovery entry points;
+- CMB-ADP-1 static registry and local HTTP service;
+- optional MCP adapter using the official Python SDK 2.x line;
+- normative `CMB-CORE-1` and protocol-versioning rules.
+
+Next interoperability work:
+
+- add an authenticated Streamable HTTP deployment profile for MCP;
+- add official conformance/smoke tests for every published machine interface;
+- evaluate A2A only after a concrete interoperability use case exists;
+- keep one canonical semantic engine rather than duplicating ranking logic.
+
+## P1 ✦ research falsifiability
+
+Implemented:
+
+- explicit software, provenance, educational, accessibility, policy, and
+  historical-novelty falsification criteria in `research/FALSIFIABILITY.md`.
+
+Next research work:
+
+- convert strong empirical claims into preregisterable study questions;
+- seek independent replication or critique before using validation language.
 
 ## P1 ✦ CMB-Z13 executable notation
 
