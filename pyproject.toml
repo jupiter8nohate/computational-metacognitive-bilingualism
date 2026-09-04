@@ -35,13 +35,16 @@ classifiers = [
   "Topic :: Security :: Cryptography",
   "Typing :: Typed",
 ]
-dependencies = []
+dependencies = [
+  "tomli>=2,<3; python_version < '3.11'",
+]
 
 [project.optional-dependencies]
-test = ["pytest>=8,<10", "jsonschema>=4.23,<5"]
+test = ["pytest>=8,<10", "jsonschema>=4.23,<5", "cryptography>=43,<47"]
 build = ["build>=1.2,<2"]
 docs = ["mkdocs>=1.6,<2"]
 mcp = ["mcp>=2,<3"]
+sovereignty = ["cryptography>=43,<47"]
 
 [project.scripts]
 cmb-provenance = "cmb_provenance.cli:main"
@@ -50,6 +53,7 @@ cmb-edu = "cmb_edu.cli:main"
 cmb-agent = "cmb_agents.cli:main"
 cmb-mcp = "cmb_agents.mcp_server:main"
 cmb-machine = "cmb_machine.cli:main"
+cmbc = "cmb_policy.runtime_cli:main"
 
 [project.urls]
 Homepage = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
