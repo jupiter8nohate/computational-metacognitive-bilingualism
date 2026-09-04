@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import anyio
+import asyncio
 import pytest
 
 pytest.importorskip("mcp")
@@ -30,4 +30,4 @@ def test_mcp_server_lists_and_calls_cmb_tools() -> None:
             )
             assert result.content
 
-    anyio.run(exercise)
+    asyncio.run(exercise())
