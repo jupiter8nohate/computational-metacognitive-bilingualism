@@ -301,24 +301,20 @@ Its production target is:
 https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
 ```
 
-On every relevant push to `main`, the workflow rebuilds the site from the canonical repository source:
+The original v0.3 deployment published Sovereign Transmission as the root page. Version 0.5 supersedes that deployment model: relevant changes now rebuild the complete catalog-declared CMB library with `publish-canon`.
 
-```text
-manifestos/CMB_SOVEREIGN_TRANSMISSION.md
-```
-
-and publishes only the generated static bundle.
-
-The deployment command is equivalent to:
+The production command is equivalent to:
 
 ```bash
-cmb-gsb publish \
-  -in examples/sovereign-transmission.json \
-  -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md \
+cmb-gsb publish-canon \
+  -root ../.. \
+  -canon ../../library/canon.json \
+  -catalog ../../library/catalog.json \
   -out public/ \
-  -url https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/ \
-  -site-base https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+  -base-url https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
 ```
+
+Sovereign Transmission remains published inside the library at `/artifacts/cmb-sovereign-transmission/`.
 
 ### One-time GitHub setting
 
@@ -492,3 +488,88 @@ SOURCE HASH != COPYRIGHT
 DISCOVERABILITY != OWNERSHIP
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
+
+
+## Whole-canon publication v0.5
+
+Version 0.5 adds a deterministic compiler for the complete catalog-declared CMB library.
+
+```text
+library/canon.json
+       +
+library/catalog.json
+       +
+repository source files
+       │
+       ▼
+STRICT CANON + CATALOG LOADERS
+       │
+       ├── exact-byte SHA-256 binding
+       ├── invariant compatibility checks
+       ├── repository-root containment
+       └── symlink / traversal rejection
+       │
+       ▼
+cmb-gsb publish-canon
+       │
+       ├── index.html
+       ├── library-index.json
+       ├── collection.jsonld
+       ├── cmb-canon.json
+       ├── catalog.json
+       ├── sitemap.xml
+       ├── robots.txt
+       ├── manifest.json
+       ├── .well-known/agent-card.json
+       ├── agents/registry.json
+       └── artifacts/<id>/
+             ├── index.html
+             ├── source.md | source.json
+             ├── work.jsonld
+             └── cmb-semantic.json
+```
+
+Run it from this module:
+
+```bash
+go run ./cmd/cmb-gsb publish-canon \
+  -root ../.. \
+  -canon ../../library/canon.json \
+  -catalog ../../library/catalog.json \
+  -out build/canon-library/ \
+  -base-url https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+```
+
+The catalog decides which repository artifacts are declared for human and machine publication. The canon defines the shared invariant and relationship contract. The compiler does not infer additional works, crawl unrelated repository paths, invent publication dates, or upgrade a `planned`, `open`, or `derived` artifact to `canonical`.
+
+Each generated artifact page preserves the catalog status, kind, provenance scope, declared meaning, concepts, repository path, exact source bytes, and source SHA-256. Each page also receives a generic Schema.org `CreativeWork` representation rather than an `Article` with invented dates.
+
+The root machine index is `library-index.json`. It binds every published artifact to its canonical URL, repository path, output path, source SHA-256, catalog status, provenance scope, and the exact canon and catalog digests used for the build.
+
+The whole site is still activated as one atomic generation. Nested output paths are staged first, hashed into the root build manifest, and only then replace the prior publication.
+
+```text
+CATALOG != IDENTITY
+CATALOG_INVARIANT ⊆ CANON_INVARIANT
+CANON_SHA256 == SHA256(EXACT_CANON_BYTES)
+CATALOG_SHA256 == SHA256(EXACT_CATALOG_BYTES)
+SOURCE_HASH != AUTHORSHIP
+DISCOVERY != ENDORSEMENT
+DISCOVERABILITY != OWNERSHIP
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+The production GitHub Pages workflow now uses `publish-canon` as the public front door. The Sovereign Transmission remains available as its own indexed artifact at:
+
+```text
+/artifacts/cmb-sovereign-transmission/
+```
+
+Agent discovery is emitted by the same deterministic build from the exact catalog-declared source bytes:
+
+```text
+/.well-known/agent-card.json
+/agents/registry.json
+```
+
+CI verifies the generated canon, catalog, agent discovery files, selected artifact sources, sitemap coverage, and the complete publication contract before Pages deployment.
