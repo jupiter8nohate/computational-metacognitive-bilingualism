@@ -12,6 +12,37 @@ cmb-provenance selftest
 
 The stable engineering focus is `cmb_provenance`: explicit artifact sealing, verification, tamper-evident evidence references, and C2PA-facing interoperability.
 
+## CMB boundary policy engine
+
+The repository now includes a framework-agnostic reference evaluator for explicit application policy facts:
+
+```python
+from cmb_provenance import BoundaryContext, require_boundary
+
+decision = require_boundary(
+    BoundaryContext(
+        event_id="decision-42",
+        consequential_decision=True,
+        ai_involved=True,
+        ai_disclosed=True,
+        human_review_available=True,
+        consent_required=True,
+        consent_present=True,
+    )
+)
+
+assert decision.allowed
+assert decision.authority == "HUMAN_FINAL"
+```
+
+A rejected boundary raises `BoundaryRejectedError` with a structured decision payload.
+
+The engine enforces declared conditions only. It does not inspect prose and infer identity, intent, diagnosis, mental state, or morality.
+
+Cross-language implementations can use [`cmb.boundary-event.v1.schema.json`](../schemas/cmb.boundary-event.v1.schema.json) as the shared event contract.
+
+The first framework example is [FastAPI boundary guard](../examples/06_fastapi_boundary/README.md). Additional adapters should share conformance fixtures rather than independently reinterpreting the rules.
+
 ## Experimental CMB-Z13 reference parser
 
 The CMB-Z13 parser is an **experimental reference implementation**, not a personality engine and not a scientific astrology system.
@@ -29,6 +60,12 @@ ZODIAC_SYMBOL != PERSON
 CODE != IDENTITY
 GUARDIAN_MODE != PERSONALITY
 ```
+
+## Interactive front door
+
+The [Interactive CMB Playground](PLAYGROUND.md) demonstrates local SHA-256 hashing, machine-readable artifact declarations, CMB-Z13 symbolic projections, and the same explicit boundary rules in a zero-dependency browser page.
+
+It is a symbolic reasoning tool, not a 13-language source-code transpiler.
 
 ## C2PA
 
