@@ -17,7 +17,7 @@ pub enum BoundaryCode {
 }
 
 impl BoundaryCode {
-    pub const fn as_str(self) -> &'static str {
+    pub const fn as_str(&self) -> &'static str {
         match self {
             Self::AiDisclosureRequired => "AI_DISCLOSURE_REQUIRED",
             Self::HumanReviewRequired => "HUMAN_REVIEW_REQUIRED",
