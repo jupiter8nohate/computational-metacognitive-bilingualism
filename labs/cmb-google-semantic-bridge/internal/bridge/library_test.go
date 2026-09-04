@@ -141,11 +141,10 @@ func TestBuildCanonLibraryRejectsCatalogPathSymlink(t *testing.T) {
 
 func TestWriteBundleAtomicSupportsNestedTree(t *testing.T) {
 	output := filepath.Join(t.TempDir(), "site")
-	err := WriteBundleAtomic(output, "library", "0.5.0", map[string][]byte{
-		"index.html":                    []byte("root"),
-		"artifacts/one/index.html":      []byte("one"),
-		".well-known/agent-card.json":   []byte("{}"),
-	})
+	outputs := map[string][]byte{"index.html": []byte("root")}
+	outputs["artifacts/one/index.html"] = []byte("one")
+	outputs[".well-known/agent-card.json"] = []byte("{}")
+	err := WriteBundleAtomic(output, "library", "0.5.0", outputs)
 	if err != nil {
 		t.Fatal(err)
 	}
