@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/raw/main/schemas/cmb.harmoni-666.v1.schema.json",
+  "title": "CMB HARMONI-666 Epistemic Decision v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "requested_state",
+    "effective_state",
+    "missingno",
+    "sentinel",
+    "authority",
+    "failed_gates",
+    "reason"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.harmoni-666.decision.v1"},
+    "protocol": {"const": "HARMONI-666/1.0"},
+    "requested_state": {
+      "enum": ["PATTERN", "HYPOTHESIS", "INFERENCE", "EVIDENCE", "PROOF", "UNKNOWN"]
+    },
+    "effective_state": {
+      "enum": ["PATTERN", "HYPOTHESIS", "INFERENCE", "EVIDENCE", "PROOF", "UNKNOWN"]
+    },
+    "missingno": {"type": "boolean"},
+    "sentinel": {
+      "anyOf": [
+        {"const": "MISSINGNO_666"},
+        {"type": "null"}
+      ]
+    },
+    "authority": {"const": "HUMAN_FINAL"},
+    "failed_gates": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "RULES_DEFINED",
+          "ASSUMPTIONS_DECLARED",
+          "DOMAIN_BOUNDED",
+          "DERIVATION_REPRODUCIBLE",
+          "COUNTEREXAMPLE_SEARCHED",
+          "VERIFIER_PASSED"
+        ]
+      }
+    },
+    "reason": {"type": "string", "minLength": 1}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"missingno": {"const": true}},
+        "required": ["missingno"]
+      },
+      "then": {
+        "properties": {
+          "effective_state": {"const": "UNKNOWN"},
+          "sentinel": {"const": "MISSINGNO_666"}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"effective_state": {"const": "PROOF"}},
+        "required": ["effective_state"]
+      },
+      "then": {
+        "properties": {
+          "missingno": {"const": false},
+          "failed_gates": {"maxItems": 0}
+        }
+      }
+    }
+  ]
+}

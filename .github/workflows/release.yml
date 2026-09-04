@@ -98,6 +98,8 @@ jobs:
           cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
           cmb-edu --version
           cmb-edu validate '🪐::LEARN -> DECLARE[curious || focused] => ASK("how_do_loops_work") -> PATTERN_NOT_PROOF;'
+          cmb-machine harmoni-manifest
+          cmb-machine harmoni-evaluate --state PROOF --all-proof-gates
       - name: Seal canonical public CMB artifacts
         run: >-
           python scripts/seal_canonical_artifacts.py

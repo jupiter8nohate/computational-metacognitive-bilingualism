@@ -6,6 +6,16 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- HARMONI-666 bounded proof gate for CMB-66 with six epistemic states, six proof gates, and six sovereignty failsafes.
+- `MISSINGNO_666` fail-closed sentinel when a requested `PROOF` exceeds the verified domain or fails any proof gate.
+- `cmb-machine harmoni-manifest` and `cmb-machine harmoni-evaluate` commands for machine-readable inspection and release gating.
+- JSON Schema and normative specification for HARMONI-666.
+- Machine index discovery metadata and unit tests for proof retention, fail-closed behavior, strict gate typing, and the 6/6/6 protocol contract.
+- Revelation 13:18 literary design key mapping wisdom to human judgment, understanding to HARMONI interpretation, calculation to machine verification, and the human vertex to `HUMAN_FINAL`.
+- Canonical release sealing expanded to include HARMONI-666 and core machine-readable CMB anchors.
+- Six-stage epistemological ladder from `UNKNOWN` through `MISSINGNO`, `QUESTION`, `TEST`, and `EVIDENCE` to `JUSTIFIED_CLAIM`, with stage-skipping denied by the reference API.
+- Explicit truth distinctions separating provenance from mythology, mythology from falsehood, symbolism from evidence, and evidence from total human meaning.
+
 - Experimental `cmb-edu` educational subsystem with a Dual-Brain Stream parser, strict `cmb.edu.v1` Metacognitive Context Envelope, deny-by-default privacy declarations, installed CLI, child-facing Flamingoglyph curriculum, runnable example, and parser/schema/CLI tests. Human-declared context remains explicitly distinct from machine inference.
 - Framework-agnostic CMB boundary policy evaluator with deterministic rejection codes and human-final authority.
 - Versioned `cmb.boundary-event.v1` JSON Schema for cross-language policy-event interoperability.
