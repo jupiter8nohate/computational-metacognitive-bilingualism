@@ -38,3 +38,24 @@ SYMBOLISM != BIOLOGICAL_FACT
 SYMBOLISM != SCIENTIFIC_EVIDENCE
 PATTERN != PROOF
 ```
+
+
+## Creator context boundary
+
+Repository attribution, creator context, and artifact provenance are intentionally
+different layers.
+
+```text
+ATTRIBUTION != TOTAL_IDENTITY
+CONTEXT != IDENTITY
+CATALOG != CREATOR
+INDEX != IDENTITY
+PROFILE != PERSON
+```
+
+The project may document declared symbolic influences, intellectual references,
+and public authorship claims. Those records are descriptive context, not machine
+authority to infer a person's inner state, future behavior, beliefs, diagnosis,
+or permissible identity.
+
+See [CMB Creator Context Model](docs/CREATOR_CONTEXT_MODEL.md).

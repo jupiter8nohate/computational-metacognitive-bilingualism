@@ -661,9 +661,142 @@
         "CMB-66",
         "HARMONI-666",
         "schemas",
-        "compiler targets"
+        "compiler targets",
+        "experimental extension discovery",
+        "capability status"
       ],
-      "declared_meaning": "Machine-facing index linking the canonical CMB-66 IR, FGC origin identity, compiler targets, schemas, and HARMONI-666 proof layer."
+      "declared_meaning": "Canonical machine-facing index linking CMB-66, FGC, and HARMONI anchors while explicitly labeling SEP-1, Creator Context, and use-case registries as experimental repository artifacts."
+    },
+    {
+      "id": "cmb-creator-context-model",
+      "title": "CMB Creator Context Model",
+      "path": "docs/CREATOR_CONTEXT_MODEL.md",
+      "format": "markdown",
+      "kind": "descriptive creator-context boundary model",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "creator context",
+        "symbolic lineage",
+        "cryptographic provenance",
+        "intellectual lineage",
+        "anti-profile boundary"
+      ],
+      "declared_meaning": "Separates declared symbolic influence, technical provenance evidence, and intellectual context while forbidding their collapse into an authoritative identity profile."
+    },
+    {
+      "id": "cmb-creator-context-schema",
+      "title": "CMB Creator Context v1 Schema",
+      "path": "schemas/cmb.creator-context.v1.schema.json",
+      "format": "json schema",
+      "kind": "machine-readable context schema",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "context lanes",
+        "identity boundary",
+        "HUMAN_FINAL"
+      ],
+      "declared_meaning": "Schema contract for descriptive creator context. It explicitly encodes CONTEXT != IDENTITY and machine_may_define_person = false."
+    },
+    {
+      "id": "cmb-creator-context-record",
+      "title": "CMB Machine Creator Context Record",
+      "path": "machine/creator-context.json",
+      "format": "json",
+      "kind": "machine-readable descriptive context record",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "symbolic influence",
+        "artifact evidence",
+        "intellectual context",
+        "profile boundary"
+      ],
+      "declared_meaning": "Machine-readable creator-context record that keeps symbolic, technical, and intellectual evidence lanes distinct and subordinate to HUMAN_FINAL."
+    },
+    {
+      "id": "cmb-sep-1-spec",
+      "title": "CMB-SEP-1 Sovereign Epistemic Protocol",
+      "path": "spec/CMB-SEP-1.md",
+      "format": "markdown",
+      "kind": "experimental operational protocol specification",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "six states",
+        "six gates",
+        "six failsafes",
+        "human authorization",
+        "fail-closed"
+      ],
+      "declared_meaning": "Experimental operational state machine implementing HARMONI human-machine boundaries. It is not yet part of the canonical release scope."
+    },
+    {
+      "id": "cmb-use-cases-2026-2126",
+      "title": "CMB Use Cases: 2026 to 2126",
+      "path": "docs/USE_CASES_2026_2126.md",
+      "format": "markdown",
+      "kind": "capability and future-use-case guide",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "present capability",
+        "integration roadmap",
+        "speculative future",
+        "human authority",
+        "adoption"
+      ],
+      "declared_meaning": "Front-door guide separating what CMB can support now, what requires deployment integration, and what is explicitly speculative future system design."
+    },
+    {
+      "id": "cmb-use-case-registry",
+      "title": "CMB Machine Use Case Registry v1",
+      "path": "machine/use-cases.json",
+      "format": "json",
+      "kind": "machine-readable capability registry",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "capability status",
+        "use cases",
+        "current implementation",
+        "future design",
+        "HUMAN_FINAL"
+      ],
+      "declared_meaning": "Machine-readable registry that prevents agents from presenting integration targets or 2126 speculative concepts as current CMB capabilities."
+    },
+    {
+      "id": "cmb-use-case-schema",
+      "title": "CMB Use Case Registry v1 Schema",
+      "path": "schemas/cmb.use-cases.v1.schema.json",
+      "format": "json schema",
+      "kind": "machine-readable capability schema",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "capability claims",
+        "deployable now",
+        "requires integration",
+        "speculative future"
+      ],
+      "declared_meaning": "Schema contract requiring explicit capability categories and preserving HUMAN_FINAL authority."
     }
   ]
 }

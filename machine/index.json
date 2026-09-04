@@ -39,6 +39,39 @@
     "schemas": {
       "decision": "schemas/cmb.harmoni-666.v1.schema.json",
       "manifest": "schemas/cmb.harmoni-666.manifest.v1.schema.json"
-    }
+    },
+    "status": "EXPERIMENTAL_REFERENCE_IMPLEMENTATION",
+    "provenance_scope": "canonical_public_artifact"
+  },
+  "sovereign_epistemic_protocol": {
+    "spec": "spec/CMB-SEP-1.md",
+    "python_reference": "src/cmb_policy/sovereign.py",
+    "decision_schema": "schemas/cmb.sovereign-epistemic.decision.v1.schema.json",
+    "manifest_schema": "schemas/cmb.sovereign-epistemic.manifest.v1.schema.json",
+    "conformance": "conformance/sovereign-epistemic-v1.json",
+    "status": "EXPERIMENTAL",
+    "provenance_scope": "repository_artifact"
+  },
+  "creator_context": {
+    "document": "docs/CREATOR_CONTEXT_MODEL.md",
+    "machine_record": "machine/creator-context.json",
+    "schema": "schemas/cmb.creator-context.v1.schema.json",
+    "model": "DESCRIPTIVE_CONTEXT_NOT_IDENTITY",
+    "authority": "HUMAN_FINAL",
+    "status": "EXPERIMENTAL",
+    "provenance_scope": "repository_artifact"
+  },
+  "use_cases": {
+    "document": "docs/USE_CASES_2026_2126.md",
+    "registry": "machine/use-cases.json",
+    "schema": "schemas/cmb.use-cases.v1.schema.json",
+    "status_categories": [
+      "DEPLOYABLE_NOW",
+      "REQUIRES_INTEGRATION",
+      "SPECULATIVE_FUTURE"
+    ],
+    "rule": "CURRENT_CAPABILITY_CLAIM_REQUIRES_DEPLOYABLE_NOW",
+    "status": "EXPERIMENTAL",
+    "provenance_scope": "repository_artifact"
   }
 }

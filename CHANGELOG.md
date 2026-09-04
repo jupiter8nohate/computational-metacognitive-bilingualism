@@ -15,6 +15,10 @@ All notable changes to the CMB provenance tool are documented here.
 - Canonical release sealing expanded to include HARMONI-666 and core machine-readable CMB anchors.
 - Six-stage epistemological ladder from `UNKNOWN` through `MISSINGNO`, `QUESTION`, `TEST`, and `EVIDENCE` to `JUSTIFIED_CLAIM`, with stage-skipping denied by the reference API.
 - Explicit truth distinctions separating provenance from mythology, mythology from falsehood, symbolism from evidence, and evidence from total human meaning.
+- Experimental `CMB-SEP-1` Sovereign Epistemic Protocol with six operational states, six deterministic gates, six recovery failsafes, external-human-authorization boundary, machine self-attestation rejection, and incident conformance fixtures.
+- Canonical hallucination/self-authorization stress scenario demonstrating claim truncation, MissingNo-style isolation, deceleration for sensitive review, and fail-closed human override.
+- Experimental Creator Context Model separating symbolic lineage, artifact provenance, and intellectual context from authoritative identity, with `CONTEXT != IDENTITY`, `CATALOG != CREATOR`, `INDEX != IDENTITY`, and `PROFILE != PERSON` encoded in schema and tests.
+- Essential 2026-to-2126 use-case front door with explicit `DEPLOYABLE_NOW`, `REQUIRES_INTEGRATION`, and `SPECULATIVE_FUTURE` categories, plus a machine-readable registry and tests preventing capability overstatement.
 
 - Experimental `cmb-edu` educational subsystem with a Dual-Brain Stream parser, strict `cmb.edu.v1` Metacognitive Context Envelope, deny-by-default privacy declarations, installed CLI, child-facing Flamingoglyph curriculum, runnable example, and parser/schema/CLI tests. Human-declared context remains explicitly distinct from machine inference.
 - Framework-agnostic CMB boundary policy evaluator with deterministic rejection codes and human-final authority.

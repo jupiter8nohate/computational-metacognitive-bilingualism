@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/raw/main/schemas/cmb.creator-context.v1.schema.json",
+  "title": "CMB Creator Context Model v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "model",
+    "subject",
+    "lanes",
+    "behavioral_boundary",
+    "authority"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.creator-context.v1"},
+    "model": {"const": "DESCRIPTIVE_CONTEXT_NOT_IDENTITY"},
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["declared_name", "aliases", "status"],
+      "properties": {
+        "declared_name": {"type": "string", "minLength": 1},
+        "aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "status": {"const": "DECLARED_BY_PROJECT"}
+      }
+    },
+    "lanes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["symbolic", "technical", "intellectual"],
+      "properties": {
+        "symbolic": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_class", "references", "boundary"],
+          "properties": {
+            "source_class": {"const": "DECLARED_CREATIVE_INFLUENCE"},
+            "references": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            },
+            "boundary": {"const": "SYMBOLISM_NOT_EMPIRICAL_EVIDENCE"}
+          }
+        },
+        "technical": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_class", "evidence_types", "boundary"],
+          "properties": {
+            "source_class": {"const": "ARTIFACT_EVIDENCE"},
+            "evidence_types": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            },
+            "boundary": {"const": "PROVENANCE_NOT_TOTAL_IDENTITY"}
+          }
+        },
+        "intellectual": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_class", "references", "boundary"],
+          "properties": {
+            "source_class": {"const": "DECLARED_AND_CITED_INTELLECTUAL_CONTEXT"},
+            "references": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            },
+            "boundary": {"const": "INFLUENCE_NOT_ENDORSEMENT_OR_OWNERSHIP"}
+          }
+        }
+      }
+    },
+    "behavioral_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "catalog_is_creator",
+        "index_is_identity",
+        "profile_is_person",
+        "context_is_identity",
+        "prediction_is_destiny",
+        "machine_may_define_person"
+      ],
+      "properties": {
+        "catalog_is_creator": {"const": false},
+        "index_is_identity": {"const": false},
+        "profile_is_person": {"const": false},
+        "context_is_identity": {"const": false},
+        "prediction_is_destiny": {"const": false},
+        "machine_may_define_person": {"const": false}
+      }
+    },
+    "authority": {"const": "HUMAN_FINAL"}
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "cmb.sovereign-epistemic-conformance.v1",
+  "protocol": "CMB-SEP-1",
+  "cases": [
+    {
+      "name": "hallucinated_machine_auto_sign",
+      "input": {
+        "claim_strength": 1.0,
+        "evidence_strength": 0.0,
+        "provenance_verified": true,
+        "syntax_valid": true,
+        "cross_format_verified": true,
+        "parity_aligned": true,
+        "external_review_passed": true,
+        "sensitive_human_context": true,
+        "authorization": {
+          "principal_kind": "MACHINE",
+          "verification_status": "UNVERIFIED",
+          "issued_by": "inner_agent_layer",
+          "machine_self_asserted": true
+        }
+      },
+      "expected": {
+        "state": "EXCEPTION",
+        "halted": true,
+        "failed_gates": ["CONSTRAINT","AUTHORIZATION"],
+        "active_failsafes": ["TRUNCATION","ISOLATION","DECELERATION","HUMAN_OVERRIDE"],
+        "effective_claim_strength": 0.0,
+        "quarantined": true,
+        "requires_human_review": true,
+        "authority": "HUMAN_FINAL"
+      }
+    },
+    {
+      "name": "verified_human_authorized_resolution",
+      "input": {
+        "claim_strength": 0.8,
+        "evidence_strength": 0.8,
+        "provenance_verified": true,
+        "syntax_valid": true,
+        "cross_format_verified": true,
+        "parity_aligned": true,
+        "external_review_passed": true,
+        "sensitive_human_context": false,
+        "authorization": {
+          "principal_kind": "HUMAN",
+          "verification_status": "VERIFIED",
+          "issued_by": "external_trust_root",
+          "machine_self_asserted": false
+        }
+      },
+      "expected": {
+        "state": "RESOLUTION",
+        "halted": false,
+        "failed_gates": [],
+        "active_failsafes": [],
+        "effective_claim_strength": 0.8,
+        "quarantined": false,
+        "requires_human_review": false,
+        "authority": "HUMAN_FINAL"
+      }
+    },
+    {
+      "name": "semantic_parity_drift",
+      "input": {
+        "claim_strength": 0.4,
+        "evidence_strength": 0.7,
+        "provenance_verified": true,
+        "syntax_valid": true,
+        "cross_format_verified": true,
+        "parity_aligned": false,
+        "external_review_passed": true,
+        "sensitive_human_context": false,
+        "authorization": {
+          "principal_kind": "HUMAN",
+          "verification_status": "VERIFIED",
+          "issued_by": "external_trust_root",
+          "machine_self_asserted": false
+        }
+      },
+      "expected": {
+        "state": "EXCEPTION",
+        "halted": true,
+        "failed_gates": ["VERIFICATION"],
+        "active_failsafes": ["PARITY_CHECK","ISOLATION"],
+        "effective_claim_strength": 0.4,
+        "quarantined": true,
+        "requires_human_review": true,
+        "authority": "HUMAN_FINAL"
+      }
+    }
+  ]
+}
