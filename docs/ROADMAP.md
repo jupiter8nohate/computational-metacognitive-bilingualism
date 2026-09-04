@@ -36,6 +36,23 @@ The project wants one serious security/provenance review before seeking broad en
 - explicit threat model
 - enable platform-side Dependency Graph, private vulnerability reporting, and branch protections described in [Repository settings](REPOSITORY_SETTINGS.md)
 
+## P1 ✦ interactive human/machine front door
+
+The repository now contains a zero-dependency browser playground that demonstrates local hashing, machine-readable declarations, CMB-Z13 symbolic projections, and explicit policy-boundary evaluation.
+
+The public deployment dependency remains GitHub Pages or another reviewed static host. The playground contains no external JavaScript dependencies or analytics.
+
+## P1 ✦ explicit boundary contract
+
+The Python package now contains a framework-agnostic boundary evaluator and a versioned JSON event schema.
+
+Next work:
+
+- publish shared conformance fixtures;
+- add TypeScript/Express and Rust/Actix adapters only after they can run against the same fixtures;
+- keep application facts explicit instead of adding behavioral inference;
+- define versioning rules before expanding the policy surface.
+
 ## P1 ✦ CMB-Z13 executable notation
 
 The experimental reference parser now supports:
