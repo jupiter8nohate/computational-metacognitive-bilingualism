@@ -2,21 +2,26 @@
 
 This directory stores checked-in provenance receipts for canonical public CMB artifacts.
 
-## Bootstrap receipt
+## Current bootstrap receipt — Global Advocacy Charter generation
 
-[`canonical-5139aa72.cmb-receipt.json`](canonical-5139aa72.cmb-receipt.json) covers the canonical artifact set as served from repository commit:
+[`canonical-593fd2a6.cmb-receipt.json`](canonical-593fd2a6.cmb-receipt.json) covers the four-artifact canonical CMB generation as served from repository commit:
 
-`5139aa72d90f55adcbd47831238b5177d25bc7f8`
+`593fd2a6894e0061059ffb60eb43367e5765a053`
 
 Covered paths:
 
 - `MANIFESTO.md`
 - `CMB_Polyglot_Firewall_Specification.md`
 - `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
+- `policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`
 
 Manifest SHA-256:
 
-`b7454ef8c0b99397bea15e4117eec68ee22b3f9e979add1e0d3ce54c26fc8e20`
+`619308c7c322a65b2159679b742e28f61f8558c43cb48dd09229745814043abc`
+
+Global Advocacy Charter SHA-256:
+
+`b85e07d891e605854762970ae5fde651f1f559177de2c404225ee430c170b203`
 
 The artifact SHA-256 values were calculated from the exact file bytes returned by GitHub at that commit. The receipt deliberately records:
 
@@ -26,4 +31,18 @@ That status avoids claiming the package's stronger `VERIFIED_ARTIFACTS_MATCH_COM
 
 Normal CI and signed-release runs use `scripts/seal_canonical_artifacts.py` inside a checked-out Git worktree and therefore perform the stronger verification path.
 
-A hash or signature supports integrity and provenance evidence; it does not by itself prove legal authorship or ownership.
+## Historical bootstrap receipt — D.N.A. generation
+
+[`canonical-5139aa72.cmb-receipt.json`](canonical-5139aa72.cmb-receipt.json) preserves the earlier three-artifact generation at commit:
+
+`5139aa72d90f55adcbd47831238b5177d25bc7f8`
+
+It covers:
+
+- `MANIFESTO.md`
+- `CMB_Polyglot_Firewall_Specification.md`
+- `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
+
+Historical receipts are retained rather than overwritten so the repository preserves the evolution of the canonical CMB corpus.
+
+A hash or signature supports integrity and provenance evidence; it does not by itself prove legal authorship, ownership, historical priority, or that a policy proposal has legal force.
