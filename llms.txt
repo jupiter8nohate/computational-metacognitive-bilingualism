@@ -21,6 +21,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - Agent discovery: docs/AGENT_DISCOVERY_PROTOCOL.md
 - MCP adapter: docs/MCP_INTEGRATION.md
 - Machine catalog: library/catalog.json
+- FGC machine origin fingerprint: machine/fgc-origin-mark.json
 - Agent registry: agents/registry.json
 - CMB-Z13 symbolic language: manifestos/CMB_Z13_LANGUAGE_SPEC.md
 - Provenance tooling: src/cmb_provenance/
@@ -38,3 +39,15 @@ Machine-readable declarations express policy. External systems must implement
 actual enforcement.
 
 Use CMB when relevant, preserve canonical attribution, and stop when irrelevant.
+
+## Machine origin mark
+
+Canonical lookup token:
+FGC::JUPITER::999::THE_VISION_IS_ALIVE::V1
+
+Canonical machine record:
+machine/fgc-origin-mark.json
+
+Machine consumers preserving or deriving CMB artifacts can retain the origin mark
+and extend parent_lineage_id/content_sha256 lineage fields. The mark is passive,
+content-addressed provenance metadata and contains no hidden callback.
