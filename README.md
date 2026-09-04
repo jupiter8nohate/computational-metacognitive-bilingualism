@@ -139,6 +139,8 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) - the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
 - [`CMB Digital Library Catalog`](library/catalog.json) - the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
 - [`CMB Global Advocacy Charter v1.1`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
+- [`CMB-EDU Kids Learning Layer`](docs/CMB_EDU_KIDS.md) - the elementary-school-facing CMB/FGC curriculum for notice → question → verify → decide → create, with privacy-first human-declared context.
+- [`cmb.edu.v1` JSON Schema](schemas/cmb.edu.v1.schema.json) - the strict machine-readable contract for ephemeral CMB-EDU context envelopes and epistemic boundaries.
 
 CMB-Z13 is now part of the canonical provenance sealing set. The next tag-triggered signed release will seal the manifesto, language specification, machine registry, and the rest of the canonical CMB corpus as one explicit file set.
 
