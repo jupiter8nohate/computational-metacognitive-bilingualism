@@ -661,9 +661,11 @@
         "CMB-66",
         "HARMONI-666",
         "schemas",
-        "compiler targets"
+        "compiler targets",
+        "experimental extension discovery",
+        "capability status"
       ],
-      "declared_meaning": "Machine-facing index linking the canonical CMB-66 IR, FGC origin identity, compiler targets, schemas, and HARMONI-666 proof layer."
+      "declared_meaning": "Canonical machine-facing index linking CMB-66, FGC, and HARMONI anchors while explicitly labeling SEP-1, Creator Context, and use-case registries as experimental repository artifacts."
     },
     {
       "id": "cmb-creator-context-model",
