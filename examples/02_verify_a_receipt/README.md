@@ -1,4 +1,4 @@
-# Example 02 — verify a receipt
+# Example 02 ✦ verify a receipt
 
 First create the receipt from Example 01:
 
