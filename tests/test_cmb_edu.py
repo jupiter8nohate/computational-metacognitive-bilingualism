@@ -88,3 +88,12 @@ def test_context_commitment_is_deterministic_and_scope_limited() -> None:
     assert len(left["payload_sha256"]) == 64
     assert left["evidence_boundary"]["integrity_is_identity"] is False
     assert left["evidence_boundary"]["hash_is_consent"] is False
+
+
+@pytest.mark.parametrize("shield", ["🛡", "🛡️"])
+def test_fgc_accepts_emoji_variation_selector_forms(shield: str) -> None:
+    payload = FGCEmojiParser().parse_stream(
+        f"🧠 CURIOUS + 🪐 LEARNING + ⚡ ASK WHY + {shield} NO_PROFILE"
+    )
+
+    assert payload["sovereignty"]["boundary"] == "PROFILE_NOT_PERSON"
