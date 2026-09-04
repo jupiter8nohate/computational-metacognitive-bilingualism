@@ -11,7 +11,7 @@ requires-python = ">=3.10"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
 authors = [
-  { name = "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8" },
+  { name = "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson" },
 ]
 keywords = [
   "authorship",
@@ -19,6 +19,9 @@ keywords = [
   "digital-rights",
   "integrity",
   "provenance",
+  "c2pa",
+  "content-credentials",
+  "metacognition",
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -30,15 +33,18 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Topic :: Security :: Cryptography",
+  "Typing :: Typed",
 ]
 dependencies = []
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]
 build = ["build>=1.2,<2"]
+docs = ["mkdocs>=1.6,<2"]
 
 [project.scripts]
 cmb-provenance = "cmb_provenance.cli:main"
+cmb-z13 = "cmb_provenance.z13_cli:main"
 
 [project.urls]
 Homepage = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
@@ -47,6 +53,9 @@ Issues = "https://github.com/jupiter8nohate/computational-metacognitive-bilingua
 
 [tool.setuptools]
 package-dir = { "" = "src" }
+
+[tool.setuptools.package-data]
+cmb_provenance = ["py.typed"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
