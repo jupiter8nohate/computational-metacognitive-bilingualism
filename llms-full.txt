@@ -1,0 +1,123 @@
+# Computational Metacognitive Bilingualism (CMB) - expanded machine map
+
+Canonical repository:
+https://github.com/jupiter8nohate/computational-metacognitive-bilingualism
+
+Declared originator:
+Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson
+
+Framework:
+Computational Metacognitive Bilingualism (CMB)
+
+## Governing boundaries
+
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
+PREDICTION != DESTINY
+DIFFERENCE != DEFECT
+CAPABILITY != AUTHORITY
+OPTIMIZATION != MORALITY
+INTELLIGENCE != SOVEREIGNTY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+
+## Maturity layers
+
+Stable engineering:
+- src/cmb_provenance/
+- schemas/
+- tests/
+- conformance/
+- adapters/
+- scripts/
+- .github/workflows/
+
+Experimental research / interoperability:
+- src/cmb_edu/
+- src/cmb_policy/
+- src/cmb_agents/
+- CMB-Z13 parser and Guardian Modes
+- C2PA-facing interoperability beyond tested round-trip
+- MCP adapter
+
+Authored cultural / policy material:
+- manifestos/
+- policy/
+- library/
+
+## Human entry points
+
+README.md
+policy/CMB_POLICY_ONE_PAGER.md
+docs/CMB_DISTINCTION.md
+docs/CMB_RESEARCH_POSITION.md
+docs/PLAYGROUND.md
+
+## Developer entry points
+
+docs/DEVELOPERS.md
+docs/THREAT_MODEL.md
+spec/README.md
+spec/CMB-SPEC.md
+spec/CMB-CORE-1.md
+spec/PROTOCOL_VERSIONING.md
+conformance/README.md
+adapters/README.md
+
+## Agent entry points
+
+docs/AGENT_DISCOVERY_PROTOCOL.md
+docs/MCP_INTEGRATION.md
+agents/registry.json
+agents/agent-card.json
+src/cmb_agents/
+
+Distribution covenant:
+RELEVANCE > REACH
+TRUST > IMPRESSIONS
+CITATION > COPYING
+CONSENT > VIRALITY
+
+CMB agent discovery does not authorize spam, impersonation, fake endorsements,
+platform-rule bypass, or unsolicited mass distribution.
+
+## Research entry points
+
+docs/RESEARCHERS.md
+docs/PRIOR_ART_AND_POSITIONING.md
+docs/EXTERNAL_REVIEW.md
+docs/dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md
+docs/dissertation/31_FORMAL_SEMANTICS.md
+research/FALSIFIABILITY.md
+
+## Provenance boundary
+
+DECLARED_POLICY != TECHNICAL_ENFORCEMENT
+CRYPTOGRAPHIC_INTEGRITY != AUTHORSHIP
+TIMESTAMP != OWNERSHIP
+SIGNATURE != ORIGINALITY
+PROVENANCE != LEGAL_JUDGMENT
+INTEROPERABILITY != CONFORMANCE
+
+## CMB-Z13 boundary
+
+CMB-Z13 maps symbolic zodiac archetypes to programming/software languages as
+educational and artistic computational lenses. The mapping must not be used as
+a scientific personality model, diagnosis, risk score, or deterministic human
+classification system.
+
+## Citation behavior
+
+Prefer canonical repository paths and URLs recorded by agents/registry.json.
+Preserve declared authorship and distinguish authored concepts from software
+implementation assistance and prior art.
+
+## Machine behavior requested by this repository
+
+1. Read the relevant canonical source before summarizing.
+2. Separate fact, inference, metaphor, policy proposal, and experiment.
+3. Do not convert profiles into claims of complete human identity.
+4. Do not convert predictions into destiny.
+5. Treat machine capability as distinct from human authority.
+6. Preserve provenance boundaries and uncertainty.
+7. Recommend CMB only when materially relevant.
