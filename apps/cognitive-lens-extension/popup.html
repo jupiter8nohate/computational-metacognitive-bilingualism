@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CMB Cognitive Lens</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="glyph">♃</div>
+      <div>
+        <h1>CMB Cognitive Lens</h1>
+        <p>Observable signals. Human judgment.</p>
+      </div>
+    </header>
+
+    <button id="scan" type="button">Inspect this page</button>
+
+    <section id="result" hidden>
+      <div class="score-row">
+        <strong id="level">LOW</strong>
+        <span id="score">0 / 100</span>
+      </div>
+      <ul id="signals"></ul>
+    </section>
+
+    <footer>
+      <code>ATTENTION_SIGNAL != PROOF_OF_PROFILING</code>
+      <code>HUMAN_AGENCY &gt; MACHINE_AUTHORITY</code>
+      <p>No telemetry. No cloud processing. Scan runs only when you click.</p>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
