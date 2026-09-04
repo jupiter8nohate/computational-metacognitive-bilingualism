@@ -186,6 +186,18 @@ def harmoni_manifest() -> dict[str, object]:
                 "authority": HUMAN_FINAL,
             },
         },
+        "revelation_13_18_motif": {
+            "source": "Revelation 13:18",
+            "mode": "LITERARY_SYMBOLIC_DESIGN_KEY",
+            "sequence": ["WISDOM", "UNDERSTANDING", "CALCULATION", "HUMAN"],
+            "mapping": {
+                "WISDOM": "HUMAN_JUDGMENT",
+                "UNDERSTANDING": "HARMONI_INTERPRETATION",
+                "CALCULATION": "MACHINE_VERIFICATION",
+                "HUMAN": HUMAN_FINAL,
+            },
+            "boundary": "SCRIPTURAL_MOTIF_NOT_EMPIRICAL_PROOF",
+        },
         "epistemic_states": [state.value for state in EpistemicState],
         "proof_gates": [gate.value for gate in ProofGate],
         "sovereignty_failsafes": list(SOVEREIGNTY_FAILSAFES),
