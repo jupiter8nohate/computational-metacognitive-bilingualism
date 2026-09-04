@@ -1,4 +1,4 @@
-# Example 05 — Guardian safety pipeline
+# Example 05 ✦ Guardian safety pipeline
 
 The Guardian layer is a teaching alias over the canonical operators:
 
