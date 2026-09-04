@@ -8,7 +8,7 @@ Start with:
 2. [CMB Research Position](CMB_RESEARCH_POSITION.md)
 3. [Prior Art & Positioning](PRIOR_ART_AND_POSITIONING.md)
 4. [Falsifiability and evidence matrix](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/research/FALSIFIABILITY.md)
-5. [Case Study 001 — Google Generative Narrative Misclassification](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md)
+5. [CMB case studies](CASE_STUDIES.md)
 6. the public policy one-pager:
    https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_POLICY_ONE_PAGER.md
 7. the full Global Advocacy Charter:
@@ -32,6 +32,7 @@ FACT != INFERENCE
 PATTERN != PROOF
 PROVENANCE != LEGAL_JUDGMENT
 SELF_TEST != INDEPENDENT_AUDIT
+SEARCH_SUMMARY != DOCUMENTED_HISTORY
 ```
 
 The project is actively seeking one serious external reviewer. See [Independent review](EXTERNAL_REVIEW.md).
