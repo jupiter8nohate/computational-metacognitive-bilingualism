@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.boundary-event.v1.schema.json",
+  "title": "CMB Boundary Event v1",
+  "description": "Explicit policy facts supplied by application code. This schema does not authorize inference of identity, intent, diagnosis, mental state, or moral status.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "consequential_decision",
+    "ai_involved",
+    "ai_disclosed",
+    "human_review_available",
+    "profile_treated_as_person",
+    "prediction_treated_as_destiny",
+    "consent_required",
+    "consent_present"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cmb.boundary-event.v1"
+    },
+    "event_id": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "consequential_decision": {
+      "type": "boolean"
+    },
+    "ai_involved": {
+      "type": "boolean"
+    },
+    "ai_disclosed": {
+      "type": "boolean"
+    },
+    "human_review_available": {
+      "type": "boolean"
+    },
+    "profile_treated_as_person": {
+      "type": "boolean"
+    },
+    "prediction_treated_as_destiny": {
+      "type": "boolean"
+    },
+    "consent_required": {
+      "type": "boolean"
+    },
+    "consent_present": {
+      "type": "boolean"
+    }
+  }
+}
