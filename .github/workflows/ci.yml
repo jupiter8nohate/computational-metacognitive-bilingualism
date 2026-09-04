@@ -45,8 +45,11 @@ jobs:
       - name: Install package
         run: python -m pip install --upgrade pip .
       - name: Generate and verify canonical receipt
-        run: |
-          python scripts/seal_canonical_artifacts.py             --base-dir .             --output /tmp/cmb-canonical.cmb-receipt.json             --print-json
+        run: >-
+          python scripts/seal_canonical_artifacts.py
+          --base-dir .
+          --output /tmp/cmb-canonical.cmb-receipt.json
+          --print-json
 
   build:
     runs-on: ubuntu-latest
