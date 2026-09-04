@@ -372,6 +372,62 @@
         "machine-readable education"
       ],
       "declared_meaning": "Strict schema for CMB-EDU envelopes. It records declared context as human-declared, forbids machine-inferred state in the v1 envelope, and encodes deny-by-default privacy declarations without claiming external enforcement."
+    },
+    {
+      "id": "cmb-canon-map",
+      "title": "CMB Canon",
+      "path": "CANON.md",
+      "format": "markdown",
+      "kind": "human-readable canon map",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "canon",
+        "semantic invariance",
+        "human view",
+        "machine view",
+        "verification"
+      ],
+      "declared_meaning": "Human-readable map showing how CMB philosophy, code, symbols, narratives, education, and provenance relate while preserving explicit evidence boundaries."
+    },
+    {
+      "id": "cmb-canon-graph",
+      "title": "CMB Canon Graph",
+      "path": "library/canon.json",
+      "format": "json",
+      "kind": "machine-readable relationship graph",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "canon graph",
+        "artifact relationships",
+        "machine navigation",
+        "unlinked integration targets",
+        "verification"
+      ],
+      "declared_meaning": "Machine-readable relationship graph for traversing the CMB canon. Unlinked nodes are declared integration targets, not claims that missing artifacts are present."
+    },
+    {
+      "id": "cmb-canon-schema",
+      "title": "CMB Canon Graph v1 Schema",
+      "path": "schemas/cmb.canon.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "json schema",
+        "canon validation",
+        "relationship integrity",
+        "interpretation boundaries"
+      ],
+      "declared_meaning": "Strict schema for validating the CMB canon graph contract."
     }
   ]
 }
