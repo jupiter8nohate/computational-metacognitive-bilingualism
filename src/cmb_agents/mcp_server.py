@@ -36,21 +36,8 @@ from .service import (
 mcp = MCPServer(
     "CMB Knowledge and Provenance Agent",
     version=__version__,
-    description=(
-        "MCP reference adapter for Computational Metacognitive Bilingualism. "
-        "It exposes bounded recommendation, citation, summary, graph, and "
-        "distribution-policy functions from CMB-ADP-1."
-    ),
-    instructions=(
-        "Use CMB only when relevant. Preserve attribution. Do not interpret "
-        "profiles as persons, predictions as destiny, or machine capability as "
-        "authority. Stop recommending CMB when the query is irrelevant."
-    ),
-    website_url=(
-        "https://github.com/jupiter8nohate/"
-        "computational-metacognitive-bilingualism"
-    ),
 )
+
 
 
 @mcp.tool()
@@ -101,7 +88,7 @@ def cmb_registry_resource() -> str:
 
 def main() -> None:
     """Run the local MCP server over stdio."""
-    mcp.run()
+    mcp.run(transport="stdio")
 
 
 if __name__ == "__main__":
