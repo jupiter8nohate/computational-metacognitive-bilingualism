@@ -142,3 +142,28 @@ def test_cli_json_verification_output(tmp_path: Path, capsys) -> None:
     result = json.loads(capsys.readouterr().out)
     assert result["ok"] is True
     assert result["checked_paths"] == [artifact.name]
+
+
+def test_cli_canon_node_and_relationship_navigation(capsys) -> None:
+    root = Path(__file__).resolve().parents[1]
+    graph = root / "library" / "canon.json"
+
+    assert main(["canon", "--graph", str(graph), "--node", "cmb-core"]) == 0
+    node_output = capsys.readouterr().out
+    assert "CMB Core [canonical]" in node_output
+    assert "HUMAN" not in node_output or "role=" in node_output
+
+    assert main(["canon", "--graph", str(graph), "--related", "cmb-core"]) == 0
+    related_output = capsys.readouterr().out
+    assert "provenance-engine" in related_output
+    assert "the-convergence" in related_output
+
+
+def test_cli_canon_json_output_is_machine_parseable(capsys) -> None:
+    root = Path(__file__).resolve().parents[1]
+    graph = root / "library" / "canon.json"
+
+    assert main(["canon", "--graph", str(graph), "--json"]) == 0
+    result = json.loads(capsys.readouterr().out)
+    assert result["schema_version"] == "cmb.canon.v1"
+    assert result["root_invariant"] == "HUMAN_AGENCY > MACHINE_AUTHORITY"
