@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.z13.ast.v1.schema.json",
+  "title": "CMB-Z13 AST v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version","spec_version","glyph","sign","language","canonical_operator","guardian_name","guardian_team","operation","target","result","authority"],
+  "properties": {
+    "schema_version": {"const": "cmb.z13.ast.v1"},
+    "spec_version": {"const": "1.1.0"},
+    "glyph": {"enum": ["♑","♒","♓","♈","♉","♊","♋","♌","♍","♎","♏","⛎","♐"]},
+    "sign": {"enum": ["Capricorn","Aquarius","Pisces","Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Ophiuchus","Sagittarius"]},
+    "language": {"enum": ["C","Rust","Haskell","C++","Java","TypeScript","Python","Swift","Go","Kotlin","Prolog","Common Lisp","Julia"]},
+    "canonical_operator": {"enum": ["FOUNDATION","FUTURE","MEANING","ACTION","STABILITY","BILINGUALISM","CONTEXT","EXPRESSION","PRECISION","BALANCE","INFERENCE","METACOGNITION","EXPLORATION"]},
+    "guardian_name": {"type": "string", "minLength": 1},
+    "guardian_team": {"enum": ["FIRE","EARTH","AIR","WATER","OPHIUCHUS"]},
+    "operation": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+    "target": {"type": "string", "minLength": 1},
+    "result": {"type": "string", "minLength": 1},
+    "authority": {"const": "HUMAN_FINAL"}
+  }
+}
