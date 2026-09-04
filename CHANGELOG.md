@@ -4,6 +4,17 @@ All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
 
+_No unreleased changes._
+
+## [1.4.1] - 2026-09-04
+
+### Changed
+
+- Metadata/release-recovery patch published after enabling the repository's Zenodo GitHub integration so the new GitHub release event can be archived automatically and assigned a DOI.
+- No intended changes to CMB protocol semantics, schemas, policy boundaries, canonical artifact scope, or cryptographic claims relative to v1.4.0.
+
+## [1.4.0] - 2026-09-04
+
 ### Added
 
 - Automated best-effort IndexNow notifications after successful Pages deployment, scoped to the CMB project path through a published verification key.

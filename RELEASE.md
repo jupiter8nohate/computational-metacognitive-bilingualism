@@ -1,6 +1,6 @@
 # Release Procedure
 
-Version 1.4.0 uses a tag-triggered GitHub Actions release with keyless Sigstore signatures.
+Version 1.4.x uses a tag-triggered GitHub Actions release with keyless Sigstore signatures.
 
 ## Preconditions
 
@@ -9,7 +9,7 @@ Version 1.4.0 uses a tag-triggered GitHub Actions release with keyless Sigstore 
 3. Polyglot boundary conformance passes for TypeScript, Rust, and Go against the shared v1 fixtures.
 4. The MCP compatibility workflow imports the optional MCP 2.x server and the CMB-ADP self-test passes.
 5. `python -m build` produces one source distribution and one wheel.
-6. The tag exactly matches the package version, for example `v1.4.0`.
+6. The tag exactly matches the package version, for example `v1.4.1`.
 7. The tag points to the reviewed commit that should appear in the artifact seal receipt.
 8. The canonical public CMB artifact set is present and committed:
    - `MANIFESTO.md`
@@ -36,8 +36,8 @@ Version 1.4.0 uses a tag-triggered GitHub Actions release with keyless Sigstore 
 ## Publish
 
 ```bash
-git tag v1.4.0
-git push origin v1.4.0
+git tag v1.4.1
+git push origin v1.4.1
 ```
 
 The release workflow then:
