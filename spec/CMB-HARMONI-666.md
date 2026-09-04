@@ -153,6 +153,18 @@ This is the operational extension of:
 PATTERN != PROOF
 ```
 
+## Machine schemas
+
+The protocol separates its static manifest from individual evaluation results.
+
+```text
+MANIFEST  -> schemas/cmb.harmoni-666.manifest.v1.schema.json
+DECISION  -> schemas/cmb.harmoni-666.v1.schema.json
+```
+
+This prevents a machine from confusing the rules of the proof system with the
+result of one proof evaluation.
+
 ## Reference Python API
 
 ```python
