@@ -9,36 +9,8 @@
 
 
 <p align="center">
-  <img src="assets/cmb-hero-8k.svg" alt="CMB cosmic hero banner" width="100%">
+  <img src="assets/cmb-hero-v2.svg" alt="CMB Visual System 2.0: machine, human agency, metacognition, and evidence" width="100%">
 </p>
-
-
----
-
-```text
-⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 ♃ 🪐 ⃤
-
-╔══════════════════════════════════════════════════════╗
-║     C O M P U T A T I O N A L                      ║
-║     M E T A C O G N I T I V E                      ║
-║     B I L I N G U A L I S M  //  C M B             ║
-╚══════════════════════════════════════════════════════╝
-
-      ♃  JUPITER HUDSON // WISDOMLOVETHEPOET
-         CODE • POETRY • METACOGNITION • SOVEREIGNTY
-
-𓁻  PATTERN     ≠ PROOF
-⃤   PROFILE     ≠ PERSON
-⚡︎  MODEL       ≠ MIND
-𓅓  PREDICTION  ≠ DESTINY
-♃   CAPABILITY  ≠ AUTHORITY
-🪐  HUMAN_AGENCY > MACHINE_AUTHORITY
-
-             𝐍𝐨𝐰 𝐥𝐨𝐚𝐝𝐢𝐧𝐠 . . .
-          HUMAN ↔ MACHINE LITERACY
-
-⊹ ࣪ ﹏𓊝﹏𓂁﹏⊹ ࣪ ˖
-```
 
 <div align="center">
 
@@ -46,19 +18,24 @@
 
 *Code as poetry. Machine-readable structure. Human-retained meaning.*
 
+`PATTERN ≠ PROOF` · `PROFILE ≠ PERSON` · `MODEL ≠ MIND` · `PREDICTION ≠ DESTINY`
+
+**🦩 HUMAN_AGENCY > MACHINE_AUTHORITY**
+
 **♃ Jupiter Hudson // WisdomLoveThePoet // Jupiter 8**
 
 </div>
 
 ---
 
-### ⚯ Enter the CMB Sovereign Transmission
+## Choose your door
 
-**[𓁻 Open the full decorative code-poetry transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)**
+| | |
+|---|---|
+| **🦩 [HUMAN // Understand CMB](policy/CMB_POLICY_ONE_PAGER.md)**<br>Policy, human agency, consent, authorship, and the shortest path to the thesis. | **⌘ [DEVELOP // Build with CMB](docs/DEVELOPERS.md)**<br>APIs, schemas, provenance, C2PA-facing interoperability, CLIs, and conformance. |
+| **◈ [RESEARCH // Verify the claims](docs/RESEARCHERS.md)**<br>Evidence boundaries, prior art, dissertation, formal semantics, and external review. | **♃ [EXPLORE // Experience CMB](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)**<br>Code-poetry, CMB-Z13, Flamingoglyph layers, the digital library, and symbolic interfaces. |
 
-A human-facing artistic entry point into CMB: glyphs, code-poetry, metacognitive checks, machine interpretation boundaries, and the core assertion `HUMAN_AGENCY > MACHINE_AUTHORITY`.
-
----
+> **Visual language:** 🔷 **MACHINE** · 🦩 **HUMAN** · 🟣 **META** · 🟡 **EVIDENCE**. Color is a supporting cue only; labels remain explicit.
 
 Computational Metacognitive Bilingualism is a human-agency and computational-literacy framework for learning and using computational systems while retaining human judgment, consent, authorship, meaning, and self-definition.
 
