@@ -49,6 +49,13 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "agents/agent-card.json",
         "docs/AGENT_DISCOVERY_PROTOCOL.md",
         "schemas/cmb.agent-registry.v1.schema.json",
+        "spec/CMB-HARMONI-666.md",
+        "schemas/cmb.harmoni-666.v1.schema.json",
+        "schemas/cmb.harmoni-666.manifest.v1.schema.json",
+        "machine/cmb-core.ir.json",
+        "machine/fgc-origin-mark.json",
+        "machine/targets.json",
+        "machine/index.json",
     )
 
 
