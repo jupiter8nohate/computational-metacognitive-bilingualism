@@ -31,6 +31,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Changed
 
+- CMB-Z13 advanced to registry v1.1.0 with a synchronized Guardian Modes teaching layer: thirteen fixed guardian aliases mapped directly to the existing thirteen software languages/operators, a seven-lens safety pipeline ending in human decision, and explicit rules that guardian, zodiac, and code labels do not define a person.
 - Global Advocacy Charter advanced to v1.1 with explicit prior-art positioning, C2PA interoperability direction, and disclosure that the project has not yet received an independent security audit or outside certification.
 - README now leads with a compressed policy front door, prior-art context, interoperability status, and explicit non-claims before the larger canonical corpus.
 - Evidence anchors now bind to an explicit artifact-manifest digest under `cmb.anchor.v2` rather than a general framework hash.
