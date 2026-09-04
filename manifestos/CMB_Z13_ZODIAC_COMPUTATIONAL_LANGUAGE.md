@@ -1,4 +1,4 @@
-# CMB-Z13™ — Zodiac Computational Metacognitive Language
+# CMB-Z13™ ✦ Zodiac Computational Metacognitive Language
 
 **Framework:** Computational Metacognitive Bilingualism (CMB)  
 **Declared creator / author:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson  
