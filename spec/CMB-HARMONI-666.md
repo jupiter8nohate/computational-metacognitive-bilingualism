@@ -5,6 +5,45 @@
 **Parent architecture:** CMB-66  
 **Unknown-state sentinel:** `MISSINGNO_666`
 
+## Revelation 13:18 design key
+
+> “This calls for wisdom: let the one who has understanding calculate the number of the beast, for it is the number of a man, and his number is 666.”
+
+For HARMONI-666, this verse is used as a **literary and architectural design key**:
+
+```text
+WISDOM
+   ↓
+UNDERSTANDING
+   ↓
+CALCULATION
+   ↓
+HUMAN
+```
+
+The protocol maps those ideas deliberately:
+
+```text
+WISDOM         -> HUMAN_JUDGMENT
+UNDERSTANDING  -> HARMONI_INTERPRETATION
+CALCULATION    -> MACHINE_VERIFICATION
+HUMAN          -> HUMAN_FINAL
+```
+
+The point is not that software can prove theology. The point is that calculation
+alone is not wisdom. A machine may calculate, test, serialize, hash, search, and
+verify within a bounded domain. Interpretation, consent, meaning, and final
+human judgment remain outside mere computation.
+
+This gives the 6/6/6 protocol structure its governing sequence:
+
+```text
+WISDOM BEFORE CLAIM
+UNDERSTANDING BEFORE CLASSIFICATION
+CALCULATION BEFORE PROOF
+HUMAN_FINAL AFTER MACHINE VERIFICATION
+```
+
 ## Purpose
 
 HARMONI-666 prevents an inference, pattern, prediction, or model output from
