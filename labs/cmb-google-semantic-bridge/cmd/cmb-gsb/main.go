@@ -10,11 +10,14 @@ import (
 
 	"github.com/jupiter8nohate/cmb-google-semantic-bridge/internal/bridge"
 	"github.com/jupiter8nohate/cmb-google-semantic-bridge/internal/canon"
+	"github.com/jupiter8nohate/cmb-google-semantic-bridge/internal/catalog"
 )
 
 const (
-	version          = "0.4.0"
-	defaultCanonPath = "../../library/canon.json"
+	version            = "0.5.0"
+	defaultCanonPath   = "../../library/canon.json"
+	defaultCatalogPath = "../../library/catalog.json"
+	defaultRepoRoot    = "../.."
 )
 
 func main() {
@@ -40,6 +43,8 @@ func run(args []string, stdout, stderr io.Writer) error {
 		return renderCommand(args[1:], stdout)
 	case "publish":
 		return publishCommand(args[1:], stdout)
+	case "publish-canon":
+		return publishCanonCommand(args[1:], stdout)
 	case "hash":
 		return hashCommand(args[1:], stdout)
 	case "help", "-h", "--help":
@@ -178,6 +183,57 @@ func publishCommand(args []string, stdout io.Writer) error {
 	return nil
 }
 
+func publishCanonCommand(args []string, stdout io.Writer) error {
+	fs := flag.NewFlagSet("publish-canon", flag.ContinueOnError)
+	fs.SetOutput(io.Discard)
+	root := fs.String("root", defaultRepoRoot, "repository root containing catalog-declared source files")
+	canonPath := fs.String("canon", defaultCanonPath, "CMB canon JSON file")
+	catalogPath := fs.String("catalog", defaultCatalogPath, "CMB digital-library catalog JSON file")
+	output := fs.String("out", "", "publication output directory")
+	baseURL := fs.String("base-url", "", "absolute HTTPS base URL for the published library")
+	if err := fs.Parse(args); err != nil {
+		return err
+	}
+	if *output == "" || *baseURL == "" {
+		return errors.New("publish-canon requires -out and -base-url")
+	}
+
+	loadedCanon, semantics, err := loadCanonSemantics(*canonPath)
+	if err != nil {
+		return err
+	}
+	loadedCatalog, err := catalog.LoadFile(*catalogPath)
+	if err != nil {
+		return fmt.Errorf("load catalog: %w", err)
+	}
+
+	outputs, index, err := bridge.BuildCanonLibrary(bridge.CanonLibraryInput{
+		RepositoryRoot: *root,
+		BaseURL:        *baseURL,
+		CanonBytes:     loadedCanon.Bytes,
+		Canon:          semantics,
+		CatalogBytes:   loadedCatalog.Bytes,
+		CatalogSHA256:  loadedCatalog.SHA256,
+		Catalog:        loadedCatalog.Document,
+	})
+	if err != nil {
+		return err
+	}
+	if err := bridge.WriteBundleAtomic(*output, "cmb-canon-library", version, outputs); err != nil {
+		return err
+	}
+
+	fmt.Fprintf(
+		stdout,
+		"published-canon artifacts=%d out=%s canon=%s catalog=%s\n",
+		len(index.Artifacts),
+		*output,
+		loadedCanon.SHA256,
+		loadedCatalog.SHA256,
+	)
+	return nil
+}
+
 func metadataOutputs(
 	artifact bridge.Artifact,
 	siteBase string,
@@ -276,5 +332,6 @@ func printUsage(w io.Writer) {
 	fmt.Fprintln(w, "  cmb-gsb validate -in artifact.json")
 	fmt.Fprintln(w, "  cmb-gsb render -in artifact.json -out build/ [-canon ../../library/canon.json] [-site-base https://example.org/project/]")
 	fmt.Fprintln(w, "  cmb-gsb publish -in artifact.json -source MANIFESTO.md -out public/ [-canon ../../library/canon.json] [-url https://example.org/cmb/] [-site-base https://example.org/project/]")
+	fmt.Fprintln(w, "  cmb-gsb publish-canon -out public/ -base-url https://example.org/cmb/ [-root ../..] [-canon ../../library/canon.json] [-catalog ../../library/catalog.json]")
 	fmt.Fprintln(w, "  cmb-gsb hash -file MANIFESTO.md")
 }
