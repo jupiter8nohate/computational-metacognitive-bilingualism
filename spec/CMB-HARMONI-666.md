@@ -130,6 +130,94 @@ CAPABILITY != AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
+## Epistemological ladder: mythos to justified claim
+
+HARMONI treats reality, fiction, fantasy, mythology, symbolism, and anomalies as
+possible sources for **questions**, not automatic sources of factual proof.
+
+```text
+[ REALITY + FICTION + FANTASY ]
+                |
+                v
+[ CREATIVE MODEL OF THE UNKNOWN ]
+                |
+                v
+UNKNOWN -> MISSINGNO -> QUESTION -> TEST -> EVIDENCE -> JUSTIFIED_CLAIM
+```
+
+The transition order is normative. A conforming implementation MUST NOT jump
+directly from anomaly, symbolism, mythology, or creative interpretation to a
+justified claim.
+
+```text
+UNKNOWN
+   |
+   v
+MISSINGNO
+   |
+   v
+QUESTION
+   |
+   v
+TEST
+   |
+   v
+EVIDENCE
+   |
+   v
+JUSTIFIED_CLAIM
+```
+
+A `JUSTIFIED_CLAIM` is still not automatically `PROOF`. Promotion to
+`PROOF` remains governed by the separate six proof gates.
+
+### Distinctions of truth
+
+```text
+PROVENANCE != MYTHOLOGY
+MYTHOLOGY  != FALSEHOOD
+SYMBOLISM  != EVIDENCE
+EVIDENCE   != TOTAL_MEANING
+```
+
+**Provenance != mythology** means the verifiable history of an artifact is a
+different question from the cultural story or symbolic narrative surrounding
+it.
+
+**Mythology != falsehood** means mythology can carry metaphor, cultural memory,
+ethical framing, and models of human experience without being treated as an
+empirical measurement.
+
+**Symbolism != evidence** prevents glyphs, numbers, stories, religious motifs,
+fiction, or aesthetic correspondences from being promoted into factual proof
+without an independent evidentiary path.
+
+**Evidence != total meaning** preserves the human layer. Evidence can constrain
+what may reasonably be claimed about a bounded factual question; it does not by
+itself determine ethical value, purpose, consent, interpretation, or why a fact
+matters.
+
+### Lifecycle of the unknown
+
+`MISSINGNO` is therefore not the end of reasoning. It is a named boundary that
+hands the anomaly back to inquiry.
+
+```text
+MISSINGNO
+   -> HUMAN_ASKS_QUESTION
+   -> MACHINE_AND_HUMAN_DEFINE_TEST
+   -> TEST_PRODUCES_EVIDENCE
+   -> HUMAN_AND_MACHINE_EVALUATE_SUPPORT
+   -> JUSTIFIED_CLAIM
+```
+
+The governing separation is:
+
+```text
+MACHINE_VERIFIES_EVIDENCE
+HUMAN_RETAINS_MEANING_AND_FINAL_JUDGMENT
+```
+
 ## MissingNo.666
 
 MissingNo.666 is not an error to conceal. It is the explicit representation of a
