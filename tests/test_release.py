@@ -70,6 +70,23 @@ def test_ci_generates_and_verifies_canonical_receipt() -> None:
     assert "--print-json" in workflow
 
 
+def test_current_bootstrap_receipt_covers_global_advocacy_charter() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+    receipt = load_receipt(
+        repository_root / "receipts" / "canonical-593fd2a6.cmb-receipt.json"
+    )
+
+    assert receipt.coverage.paths == tuple(sorted(CANONICAL_PUBLIC_ARTIFACTS))
+    assert receipt.coverage.excludes_unlisted is True
+    assert receipt.manifest_sha256 == (
+        "619308c7c322a65b2159679b742e28f61f8558c43cb48dd09229745814043abc"
+    )
+    artifacts = {artifact.path: artifact for artifact in receipt.manifest.artifacts}
+    assert artifacts["policy/CMB_GLOBAL_ADVOCACY_CHARTER.md"].sha256 == (
+        "b85e07d891e605854762970ae5fde651f1f559177de2c404225ee430c170b203"
+    )
+
+
 def test_legacy_bootstrap_receipt_remains_valid_history() -> None:
     repository_root = Path(__file__).resolve().parents[1]
     receipt = load_receipt(
@@ -82,4 +99,3 @@ def test_legacy_bootstrap_receipt_remains_valid_history() -> None:
         "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
     )
     assert receipt.coverage.excludes_unlisted is True
-    assert "manifestos/DEMONS_NEED_ATTENTION_DNA.md" in receipt.coverage.paths
