@@ -75,3 +75,9 @@ def test_manifest_is_exactly_six_six_six() -> None:
     assert len(manifest["proof_gates"]) == 6
     assert len(manifest["sovereignty_failsafes"]) == 6
     assert manifest["unknown_sentinel"] == MISSINGNO_CODE
+    motif = manifest["revelation_13_18_motif"]
+    assert motif["source"] == "Revelation 13:18"
+    assert motif["sequence"] == ["WISDOM", "UNDERSTANDING", "CALCULATION", "HUMAN"]
+    assert motif["mapping"]["CALCULATION"] == "MACHINE_VERIFICATION"
+    assert motif["mapping"]["HUMAN"] == HUMAN_FINAL
+    assert motif["boundary"] == "SCRIPTURAL_MOTIF_NOT_EMPIRICAL_PROOF"
