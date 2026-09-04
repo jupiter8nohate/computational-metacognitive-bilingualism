@@ -1,4 +1,4 @@
-# Demon's Need Attention — D.N.A.
+# Demon's Need Attention ✦ D.N.A.
 
 ## Computational Metacognitive Bilingualism (CMB)
 ### Attention Is the Currency. Consumption Is the Ritual.
@@ -574,6 +574,6 @@ D.N.A.://BOUNDARY_PRESERVED
 
 ---
 
-**D.N.A. — Demon's Need Attention**  
+**D.N.A. ✦ Demon's Need Attention**  
 **Computational Metacognitive Bilingualism (CMB)**  
 **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
