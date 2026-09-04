@@ -193,7 +193,6 @@ func TestPublishRejectsInsecureCanonicalOverride(t *testing.T) {
 	}
 }
 
-
 func TestPublishCanonCommandBuildsWholeRepositoryLibrary(t *testing.T) {
 	output := filepath.Join(t.TempDir(), "library")
 	var stdout bytes.Buffer
