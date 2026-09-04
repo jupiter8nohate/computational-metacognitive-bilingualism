@@ -33,10 +33,10 @@ type Artifact struct {
 	Kind            string   `json:"kind"`
 	Status          string   `json:"status"`
 	ProvenanceScope string   `json:"provenance_scope"`
-	HumanReadable   bool     `json:"human_readable"`
-	MachineIndexable bool    `json:"machine_indexable"`
-	Concepts        []string `json:"concepts"`
-	DeclaredMeaning string   `json:"declared_meaning"`
+	HumanReadable    bool     `json:"human_readable"`
+	MachineIndexable bool     `json:"machine_indexable"`
+	Concepts         []string `json:"concepts"`
+	DeclaredMeaning  string   `json:"declared_meaning"`
 }
 
 type Document struct {
