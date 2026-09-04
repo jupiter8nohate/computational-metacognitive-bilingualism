@@ -24,6 +24,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - Human / policy: policy/CMB_POLICY_ONE_PAGER.md
 - Developers: docs/DEVELOPERS.md
 - Researchers: docs/RESEARCHERS.md
+- Google generative misclassification case study: research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md
 - Normative specifications: spec/README.md
 - Agent discovery: docs/AGENT_DISCOVERY_PROTOCOL.md
 - MCP adapter: docs/MCP_INTEGRATION.md
