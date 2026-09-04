@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://cmb.example/schemas/cmb.edu.v1.schema.json",
+  "$id": "https://raw.githubusercontent.com/jupiter8nohate/computational-metacognitive-bilingualism/main/schemas/cmb.edu.v1.schema.json",
   "title": "CMB-EDU Metacognitive Context Envelope v1",
   "type": "object",
   "additionalProperties": false,
