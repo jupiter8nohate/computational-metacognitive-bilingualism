@@ -21,9 +21,9 @@ https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/
 
 Open the [Interactive CMB Playground](PLAYGROUND.md) for a zero-dependency browser demonstration of local hashing, CMB-Z13 symbolic lenses, machine-readable declarations, and explicit policy boundaries.
 
-### I want to experience CMB first
+### I want the research foundation
 
-Open the [Interactive CMB Playground](PLAYGROUND.md) for a zero-dependency browser demonstration of local hashing, CMB-Z13 symbolic lenses, machine-readable declarations, and explicit policy boundaries.
+Read the [CMB Cognitive Sovereignty Dissertation](dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md), then [Chapter 31: Formal Semantics](dissertation/31_FORMAL_SEMANTICS.md) for the machine-testable policy model.
 
 ### I am a developer
 

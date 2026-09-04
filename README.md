@@ -82,6 +82,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 You should not need the entire CMB universe to understand the thesis.
 
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
+- **Research backbone:** [CMB Cognitive Sovereignty Dissertation](docs/dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md)
+- **Formal semantics:** [Chapter 31 - Formal CMB Semantics](docs/dissertation/31_FORMAL_SEMANTICS.md)
+- **Executable policy contract:** [CMB Policy Specification v1.0](spec/CMB-SPEC.md)
 - **Kids / classroom entry point:** [CMB-EDU Kids - Flamingoglyph Learning Layer](docs/CMB_EDU_KIDS.md)
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
@@ -113,6 +116,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 |---|---|---|
 | `cmb_provenance` | **Stable engineering** | artifact integrity, receipts, Recovery, C2PA-facing interoperability |
 | `cmb_edu` | **Experimental educational subsystem** | privacy-first declared-context parsing, child-facing computational literacy, Flamingoglyph teaching, and human/machine epistemic boundaries |
+| `cmb_policy` | **Experimental formal policy engine** | task containment, deny dominance, sensitive-inference authorization, revocation, audit decisions, and machine-readable conformance |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, and Rust/Actix share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
