@@ -97,11 +97,11 @@ func TestParseBoundaryEventJSONRejectsUnsafeShapes(t *testing.T) {
 	}`
 
 	tests := map[string]string{
-		"unknown field": strings.Replace(valid, `"consent_present":false`, `"consent_present":false,"surprise":true`, 1),
+		"unknown field":   strings.Replace(valid, `"consent_present":false`, `"consent_present":false,"surprise":true`, 1),
 		"duplicate field": strings.Replace(valid, `"ai_involved":false`, `"ai_involved":false,"ai_involved":true`, 1),
-		"wrong schema": strings.Replace(valid, "cmb.boundary-event.v1", "cmb.boundary-event.v999", 1),
-		"blank event id": strings.Replace(valid, `"go-001"`, `"   "`, 1),
-		"trailing value": valid + ` {"extra":true}`,
+		"wrong schema":    strings.Replace(valid, "cmb.boundary-event.v1", "cmb.boundary-event.v999", 1),
+		"blank event id":  strings.Replace(valid, `"go-001"`, `"   "`, 1),
+		"trailing value":  valid + ` {"extra":true}`,
 	}
 
 	for name, input := range tests {
@@ -115,11 +115,11 @@ func TestParseBoundaryEventJSONRejectsUnsafeShapes(t *testing.T) {
 
 func TestRequireBoundaryReturnsStructuredRejection(t *testing.T) {
 	event := BoundaryEvent{
-		SchemaVersion:          SchemaVersion,
-		AIInvolved:             true,
-		AIDisclosed:            false,
-		ConsequentialDecision:  false,
-		HumanReviewAvailable:   false,
+		SchemaVersion:         SchemaVersion,
+		AIInvolved:            true,
+		AIDisclosed:           false,
+		ConsequentialDecision: false,
+		HumanReviewAvailable:  false,
 	}
 
 	decision, err := RequireBoundary(event)
