@@ -13,7 +13,8 @@ from enum import Enum
 from typing import Final, Mapping
 
 
-HARMONI_SCHEMA: Final[str] = "cmb.harmoni-666.v1"
+HARMONI_DECISION_SCHEMA: Final[str] = "cmb.harmoni-666.decision.v1"
+HARMONI_MANIFEST_SCHEMA: Final[str] = "cmb.harmoni-666.manifest.v1"
 HARMONI_PROTOCOL: Final[str] = "HARMONI-666/1.0"
 MISSINGNO_CODE: Final[str] = "MISSINGNO_666"
 HUMAN_FINAL: Final[str] = "HUMAN_FINAL"
@@ -72,7 +73,7 @@ class HarmoniDecision:
 
     def to_dict(self) -> dict[str, object]:
         return {
-            "schema_version": HARMONI_SCHEMA,
+            "schema_version": HARMONI_DECISION_SCHEMA,
             "protocol": HARMONI_PROTOCOL,
             "requested_state": self.requested_state.value,
             "effective_state": self.effective_state.value,
@@ -169,7 +170,7 @@ def harmoni_manifest() -> dict[str, object]:
     """Return the canonical machine-readable HARMONI-666 triangle."""
 
     return {
-        "schema_version": HARMONI_SCHEMA,
+        "schema_version": HARMONI_MANIFEST_SCHEMA,
         "protocol": HARMONI_PROTOCOL,
         "triangle": {
             "AXIOMATIC": {
