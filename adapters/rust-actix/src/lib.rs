@@ -16,6 +16,24 @@ pub enum BoundaryCode {
     ConsentRequired,
 }
 
+impl BoundaryCode {
+    pub const fn as_str(self) -> &'static str {
+        match self {
+            Self::AiDisclosureRequired => "AI_DISCLOSURE_REQUIRED",
+            Self::HumanReviewRequired => "HUMAN_REVIEW_REQUIRED",
+            Self::ProfileIsNotPerson => "PROFILE_IS_NOT_PERSON",
+            Self::PredictionIsNotDestiny => "PREDICTION_IS_NOT_DESTINY",
+            Self::ConsentRequired => "CONSENT_REQUIRED",
+        }
+    }
+}
+
+impl Display for BoundaryCode {
+    fn fmt(&self, formatter: &mut Formatter<'_>) -> std::fmt::Result {
+        formatter.write_str(self.as_str())
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Eq, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct BoundaryEvent {
@@ -58,9 +76,9 @@ pub struct BoundaryViolation {
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize)]
 pub struct BoundaryDecision {
-    pub allowed: bool,
-    pub authority: &'static str,
-    pub violations: Vec<BoundaryViolation>,
+    allowed: bool,
+    authority: &'static str,
+    violations: Vec<BoundaryViolation>,
 }
 
 impl BoundaryDecision {
@@ -70,6 +88,18 @@ impl BoundaryDecision {
             authority: BOUNDARY_AUTHORITY,
             violations,
         }
+    }
+
+    pub const fn allowed(&self) -> bool {
+        self.allowed
+    }
+
+    pub const fn authority(&self) -> &'static str {
+        self.authority
+    }
+
+    pub fn violations(&self) -> &[BoundaryViolation] {
+        &self.violations
     }
 }
 
@@ -103,7 +133,7 @@ impl Display for BoundaryRejectedError {
             .decision
             .violations
             .iter()
-            .map(|item| format!("{:?}", item.code))
+            .map(|item| item.code.to_string())
             .collect::<Vec<_>>()
             .join(", ");
         write!(formatter, "CMB boundary rejected event: {codes}")
@@ -163,7 +193,7 @@ pub fn require_boundary(
     event: &BoundaryEvent,
 ) -> Result<BoundaryDecision, Box<dyn Error + Send + Sync>> {
     let decision = evaluate_boundary(event)?;
-    if decision.allowed {
+    if decision.allowed() {
         Ok(decision)
     } else {
         Err(Box::new(BoundaryRejectedError { decision }))
@@ -172,7 +202,7 @@ pub fn require_boundary(
 
 pub async fn boundary_handler(payload: web::Json<BoundaryEvent>) -> HttpResponse {
     match evaluate_boundary(payload.as_ref()) {
-        Ok(decision) if decision.allowed => HttpResponse::Ok().json(decision),
+        Ok(decision) if decision.allowed() => HttpResponse::Ok().json(decision),
         Ok(decision) => HttpResponse::UnprocessableEntity().json(decision),
         Err(error) => HttpResponse::BadRequest().json(serde_json::json!({
             "error": "INVALID_BOUNDARY_EVENT",
