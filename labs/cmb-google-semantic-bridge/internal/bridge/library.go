@@ -66,7 +66,7 @@ type librarySemanticEnvelope struct {
 }
 
 type librarySource struct {
-	RepositoryPath string `json:"repository_path"`
+	RepositoryPath  string `json:"repository_path"`
 	SHA256          string `json:"sha256"`
 	Format          string `json:"format"`
 	ProvenanceScope string `json:"provenance_scope"`
@@ -116,7 +116,7 @@ type libraryIndexModel struct {
 	Title       string
 	Description string
 	Author      string
-	Canonical  string
+	Canonical   string
 	Count       int
 	Artifacts   []PublishedArtifact
 	JSONLD      template.JS
@@ -272,7 +272,7 @@ func librarySemanticJSON(entry catalog.Artifact, canonicalURL, sourceSHA string,
 		},
 		Invariants: append([]string(nil), input.Canon.Invariants...),
 		Source: librarySource{
-			RepositoryPath: entry.Path,
+			RepositoryPath:  entry.Path,
 			SHA256:          sourceSHA,
 			Format:          entry.Format,
 			ProvenanceScope: entry.ProvenanceScope,
