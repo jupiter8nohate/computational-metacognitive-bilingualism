@@ -117,6 +117,32 @@ The lesson is larger than Python syntax:
 THE HUMAN CAN CORRECT THE MODEL
 ```
 
+## Executable FGC stream
+
+The same classroom glyphs can be compiled into the CMB-EDU envelope:
+
+```text
+🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + 🛡️ NO_PROFILE + ⏳ EPHEMERAL
+```
+
+Python:
+
+```python
+from cmb_edu import FGCEmojiParser
+
+payload = FGCEmojiParser().parse_stream(
+    "🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + 🛡️ NO_PROFILE + ⏳ EPHEMERAL"
+)
+```
+
+CLI:
+
+```bash
+cmb-edu parse-fgc '🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + 🛡️ NO_PROFILE + ⏳ EPHEMERAL'
+```
+
+Both `🛡` and `🛡️` are accepted so keyboard presentation differences do not change the meaning of the lesson.
+
 ## Dual-Brain Stream
 
 Example:
