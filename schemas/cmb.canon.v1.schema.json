@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.canon.v1.schema.json",
+  "title": "CMB Canon Graph v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "framework", "thesis", "root_invariant", "interpretation_policy", "views", "nodes", "edges"],
+  "properties": {
+    "schema_version": {"const": "cmb.canon.v1"},
+    "framework": {"const": "Computational Metacognitive Bilingualism"},
+    "thesis": {"const": "VERIFY, DON'T JUST BELIEVE."},
+    "root_invariant": {"const": "HUMAN_AGENCY > MACHINE_AUTHORITY"},
+    "interpretation_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "declaration_is_proof",
+        "hash_is_authorship",
+        "signature_is_copyright",
+        "timestamp_is_truth",
+        "provenance_is_legal_judgment",
+        "human_self_definition_has_priority",
+        "unlinked_node_claims_artifact_presence"
+      ],
+      "properties": {
+        "declaration_is_proof": {"const": false},
+        "hash_is_authorship": {"const": false},
+        "signature_is_copyright": {"const": false},
+        "timestamp_is_truth": {"const": false},
+        "provenance_is_legal_judgment": {"const": false},
+        "human_self_definition_has_priority": {"const": true},
+        "unlinked_node_claims_artifact_presence": {"const": false}
+      }
+    },
+    "views": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["human", "machine"],
+      "properties": {
+        "human": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["entrypoint", "purpose"],
+          "properties": {
+            "entrypoint": {"type": "string", "minLength": 1},
+            "purpose": {"type": "string", "minLength": 1}
+          }
+        },
+        "machine": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["entrypoint", "catalog", "schema", "purpose"],
+          "properties": {
+            "entrypoint": {"type": "string", "minLength": 1},
+            "catalog": {"type": "string", "minLength": 1},
+            "schema": {"type": "string", "minLength": 1},
+            "purpose": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "role", "status", "interfaces", "artifact_ids", "repository_paths", "notes"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "label": {"type": "string", "minLength": 1},
+          "role": {"type": "string", "minLength": 1},
+          "status": {"enum": ["canonical", "derived", "experimental", "unlinked"]},
+          "interfaces": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"enum": ["human", "machine", "code", "policy", "provenance", "symbol", "story", "education"]}
+          },
+          "artifact_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"}
+          },
+          "repository_paths": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "notes": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["from", "to", "relation"],
+        "properties": {
+          "from": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "to": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "relation": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}
+        }
+      }
+    }
+  }
+}
