@@ -228,3 +228,54 @@ def test_v1_refuses_unverified_multi_hop_delegation() -> None:
             now=NOW,
             parent_credential=child,
         )
+
+
+def test_delegated_credential_cannot_switch_signing_keys() -> None:
+    parent_private, _ = generate_ed25519_keypair()
+    attacker_private, _ = generate_ed25519_keypair()
+    parent = issue_from_sdl(
+        PARENT,
+        private_key_b64=parent_private,
+        now=NOW,
+    )
+
+    with pytest.raises(CapabilityError, match="same verified root key"):
+        issue_from_sdl(
+            CHILD,
+            private_key_b64=attacker_private,
+            now=NOW,
+            parent_credential=parent,
+        )
+
+
+def test_credential_rejects_unknown_top_level_fields() -> None:
+    private_key, _ = generate_ed25519_keypair()
+    credential = issue_from_sdl(PARENT, private_key_b64=private_key, now=NOW)
+    credential["unsigned_note"] = "extra"
+
+    ok, failures = verify_capability(credential, now=NOW)
+
+    assert ok is False
+    assert "CAP_SCHEMA_INVALID" in failures
+
+
+def test_credential_rejects_invalid_nonce_shape() -> None:
+    private_key, _ = generate_ed25519_keypair()
+    credential = issue_from_sdl(PARENT, private_key_b64=private_key, now=NOW)
+    credential["nonce"] = "short"
+
+    ok, failures = verify_capability(credential, now=NOW)
+
+    assert ok is False
+    assert "CAP_NONCE_INVALID" in failures
+
+
+def test_credential_rejects_interoperability_metadata_drift() -> None:
+    private_key, _ = generate_ed25519_keypair()
+    credential = issue_from_sdl(PARENT, private_key_b64=private_key, now=NOW)
+    credential["interoperability"]["mcp_extension"] = "io.example.invalid"
+
+    ok, failures = verify_capability(credential, now=NOW)
+
+    assert ok is False
+    assert "CAP_INTEROPERABILITY_INVALID" in failures

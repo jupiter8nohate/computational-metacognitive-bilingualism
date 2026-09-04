@@ -97,13 +97,29 @@ def stamp_mapping(
 
 
 def verify_stamp(payload: Mapping[str, Any]) -> bool:
-    """Verify the embedded content digest and lineage identifier."""
+    """Verify the complete immutable origin mark, content digest, and lineage."""
     stamp = payload.get("_cmb_origin")
     if not isinstance(stamp, Mapping):
         return False
-    if stamp.get("mark_id") != MARK_ID:
+
+    expected_origin = origin_mark()
+    expected_keys = set(expected_origin) | {
+        "origin_mark_sha256",
+        "content_sha256",
+        "parent_lineage_id",
+        "lineage_id",
+        "lineage_mode",
+    }
+    if set(stamp) != expected_keys:
         return False
-    if stamp.get("canonical_ascii_token") != ASCII_TOKEN:
+
+    for key, expected_value in expected_origin.items():
+        if stamp.get(key) != expected_value:
+            return False
+
+    if stamp.get("origin_mark_sha256") != "sha256:" + origin_mark_sha256():
+        return False
+    if stamp.get("lineage_mode") != "copy_with_attribution_chain":
         return False
 
     body = dict(payload)

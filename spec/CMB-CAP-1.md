@@ -100,6 +100,7 @@ CAP_SIGNATURE_INVALID
 CAP_EXPECTED_KEY_MISMATCH
 CAP_PARENT_REQUIRED
 CAP_PARENT_DIGEST_MISMATCH
+CAP_DELEGATION_SIGNER_MISMATCH
 CAP_DELEGATION_INVALID
 ```
 
@@ -119,6 +120,20 @@ parent.evidence  subset_of child.evidence
 ```
 
 The root human issuer MUST remain the same in v1.
+
+Because CMB-SDL-1 does not yet carry an independently delegated child signing
+key, a v1 child credential MUST also be signed by the same verified Ed25519 root
+key as its parent. Merely copying the parent's issuer label or digest is not
+sufficient cryptographic delegation.
+
+~~~text
+SAME_ISSUER_LABEL != SAME_SIGNING_AUTHORITY
+PARENT_DIGEST != CHILD_KEY_AUTHORIZATION
+~~~
+
+A future version may allow a parent to explicitly bind a child key fingerprint
+inside signed authority. Until that exists, signer continuity is the fail-closed
+v1 rule.
 
 CMB-CAP-1 does not yet define autonomous agent key delegation or a complete
 multi-hop trust-chain format. Multi-hop verification should be performed from
@@ -204,8 +219,12 @@ W3C Verifiable Credentials Data Model 2.0 is a W3C Recommendation. The W3C
 credential family also defines Data Integrity and EdDSA cryptosuites.
 
 The reference implementation exports a **VC 2.0-shaped projection** for
-interchange experiments. It intentionally omits a W3C Data Integrity proof and
-marks itself:
+interchange experiments. The `cmb-cap export-vc` CLI first verifies the CMB-CAP
+credential (and any required parent/key pin supplied by the caller) and refuses
+projection when verification fails. The lower-level projection helper remains a
+data transformation primitive, so direct library callers are responsible for
+verifying before projection. The projection intentionally omits a W3C Data
+Integrity proof and marks itself:
 
 ```text
 VC_2_0_projection_only_not_W3C_Data_Integrity_proof

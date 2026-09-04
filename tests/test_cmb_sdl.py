@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import hashlib
 from datetime import datetime, timezone
 
 import pytest
 
-from cmb_sdl import SDLValidationError, compile_text, validate_delegation
+from cmb_sdl import SDLValidationError, compile_text, validate_authority_ir, validate_delegation
+from cmb_sdl.compiler import canonical_json
 
 
 PARENT = """cmb/1
@@ -106,3 +108,48 @@ def test_delegation_preserves_parent_handlers() -> None:
             compile_text(child),
             now=datetime(2028, 1, 1, tzinfo=timezone.utc),
         )
+
+
+def _rehash(ir: dict[str, object]) -> None:
+    core = {key: value for key, value in ir.items() if key != "digest"}
+    ir["digest"] = "sha256:" + hashlib.sha256(canonical_json(core)).hexdigest()
+
+
+def test_string_false_cannot_enable_delegation() -> None:
+    parent = compile_text(PARENT)
+    parent["delegable"] = "false"
+    _rehash(parent)
+
+    with pytest.raises(SDLValidationError, match="delegable must be a boolean"):
+        validate_delegation(
+            parent,
+            compile_text(CHILD),
+            now=datetime(2028, 1, 1, tzinfo=timezone.utc),
+        )
+
+
+def test_authority_ir_rejects_non_human_issuer_even_with_valid_digest() -> None:
+    ir = compile_text(PARENT)
+    ir["issuer"]["type"] = "machine"
+    _rehash(ir)
+
+    with pytest.raises(SDLValidationError, match="issuer.type must be 'human'"):
+        validate_authority_ir(ir)
+
+
+def test_authority_ir_rejects_unknown_fields_even_with_valid_digest() -> None:
+    ir = compile_text(PARENT)
+    ir["machine_override"] = True
+    _rehash(ir)
+
+    with pytest.raises(SDLValidationError, match="unknown fields"):
+        validate_authority_ir(ir)
+
+
+def test_authority_ir_rejects_mutated_invariant_set() -> None:
+    ir = compile_text(PARENT)
+    ir["invariants"] = ["CAPABILITY == AUTHORITY"]
+    _rehash(ir)
+
+    with pytest.raises(SDLValidationError, match="canonical CMB-SDL-1 set"):
+        validate_authority_ir(ir)

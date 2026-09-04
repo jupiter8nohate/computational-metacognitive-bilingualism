@@ -48,6 +48,18 @@ two-party review evidence.
 Operation-specific controls MAY add stricter requirements such as explicit
 consent or reproducible-build evidence.
 
+In the reference implementation, every non-signature evidence value MUST be a
+content-addressed SHA-256 reference in the form `sha256:<64 lowercase hex>`.
+This prevents arbitrary labels such as `approved` or `done` from satisfying an
+evidence requirement. A digest reference identifies evidence bytes; it does not
+by itself prove that those bytes are sufficient, truthful, independently
+reviewed, or correctly interpreted.
+
+~~~text
+EVIDENCE_LABEL != EVIDENCE
+EVIDENCE_REFERENCE != EVIDENCE_VERIFICATION
+~~~
+
 Unknown operations MUST fail closed.
 
 ## 3. Scoped human authorization
@@ -165,14 +177,18 @@ cmbc assess deploy_production \
 ## 7. CI/CD role
 
 The GitHub Actions reference gate validates the runtime policy, runs deterministic
-self-tests, and proves that a production deployment fails closed when scoped
-authorization is absent.
+self-tests, scans pull-request changes through CMB-SRP-2, and feeds the resulting
+scan report into `cmbc gate-report`. High-friction findings therefore fail closed
+when the required authorization or content-addressed evidence references are
+absent.
 
-Repository branch rules or deployment environments can make that status check a
-required condition for merge or release.
+Repository branch rules or deployment environments SHOULD make that status check
+a required condition for merge or release. A workflow that merely prints a scan
+result is detection, not enforcement.
 
-Future CMB-SRP revisions may add path-sensitive change classification, in-toto
-links, SLSA provenance inputs, and Sigstore-backed authorization identities.
+Future CMB-SRP revisions may add signed evidence bundles, SLSA provenance inputs,
+Sigstore-backed authorization identities, and richer independent-verifier
+semantics.
 
 ## 8. Layer separation
 
@@ -202,6 +218,7 @@ AUTHORIZATION_REQUIRED
 AUTH_EXPIRED
 AUTH_POLICY_DIGEST_MISMATCH
 EVIDENCE_REQUIRED:isolated_verification
+EVIDENCE_REFERENCE_INVALID:two_party_review
 UNKNOWN_OPERATION_FAIL_CLOSED
 ~~~
 

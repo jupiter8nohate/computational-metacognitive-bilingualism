@@ -33,12 +33,14 @@ jobs:
         run: |
           if cmbc assess deploy_production \
             --policy cmb.toml \
-            --evidence reproducible_build=ci; then
+            --evidence isolated_verification=sha256:1111111111111111111111111111111111111111111111111111111111111111 \
+            --evidence reproducible_build=sha256:2222222222222222222222222222222222222222222222222222222222222222 \
+            --evidence two_party_review=sha256:3333333333333333333333333333333333333333333333333333333333333333; then
             echo "CMB gate unexpectedly allowed unsigned production deployment."
             exit 1
           fi
           echo "Expected denial confirmed: production deployment requires scoped human authorization."
-      - name: Scan pull-request changes
+      - name: Scan and enforce pull-request changes
         if: github.event_name == 'pull_request'
         shell: bash
         run: |
@@ -60,3 +62,19 @@ jobs:
           print("CMB SRP-2 operations:", ", ".join(report["operations"]) or "none")
           print("CMB SRP-2 highest criticality:", summary["highest_criticality"])
           PY
+
+          set +e
+          cmbc gate-report \
+            --policy cmb.toml \
+            --report /tmp/cmb-scan-report.json \
+            --project "${GITHUB_REPOSITORY}" \
+            > /tmp/cmb-gate-result.json
+          gate_status=$?
+          set -e
+
+          cat /tmp/cmb-gate-result.json
+          if [ "${gate_status}" -ne 0 ]; then
+            echo "CMB SRP-2 denied this change set."
+            echo "High-friction operations require scoped authorization and content-addressed evidence."
+            exit "${gate_status}"
+          fi

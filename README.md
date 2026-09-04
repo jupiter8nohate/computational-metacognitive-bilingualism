@@ -195,7 +195,7 @@ cmb-mcp
 
 MCP also exposes `cmb_compile_authority`, which compiles CMB-SDL authority declarations into deterministic `cmb.authority-ir.v1` objects. CMB-SDL makes capability, scope, purpose, expiry, evidence requirements, and delegation limits explicit; a consuming runtime must still enforce the resulting boundary.
 
-CMB-CAP keeps private signing keys local. The MCP adapter exposes public credential verification and the experimental A2A extension declaration, but never accepts a CMB-CAP private key. The W3C VC export is explicitly a VC 2.0-shaped projection and does not claim W3C Data Integrity conformance.
+CMB-CAP keeps private signing keys local. The MCP adapter exposes public credential verification and the experimental A2A extension declaration, but never accepts a CMB-CAP private key. CMB-CAP-1 delegated credentials retain the verified parent/root signing key because v1 does not yet define an independently delegated child key. The CLI refuses VC-shaped export until the CMB-CAP credential verifies. The W3C VC export remains explicitly a VC 2.0-shaped projection and does not claim W3C Data Integrity conformance.
 
 The Pages deployment publishes `/.well-known/agent-card.json` and `/agents/registry.json`. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
 
@@ -222,7 +222,7 @@ python3 -m pip install ".[sovereignty]"
 cmbc keygen --private-key .cmb/human.key --public-key .cmb/human.pub
 ```
 
-CMB-SRP-1 keeps the evidence rule constant across risk levels: low friction reduces required verification depth for reversible work, but `PATTERN != PROOF` never becomes an approximation. CMB-SRP-2 adds deterministic path-sensitive and Python AST classification before the runtime gate, while preserving `RISK_CLASSIFICATION != INTENT`. See [CMB-SRP-1](spec/CMB-SRP-1.md) and [CMB-SRP-2](spec/CMB-SRP-2.md).
+CMB-SRP-1 keeps the evidence rule constant across risk levels: low friction reduces required verification depth for reversible work, but `PATTERN != PROOF` never becomes an approximation. Non-signature controls now require canonical `sha256:<64 lowercase hex>` evidence references; an evidence reference identifies bytes but does not itself prove their adequacy or truth. CMB-SRP-2 adds deterministic path-sensitive and Python AST classification before the runtime gate, while preserving `RISK_CLASSIFICATION != INTENT`. Pull-request scan reports are fed into `cmbc gate-report`, so detected high-friction operations fail closed when required authorization or evidence is absent. See [CMB-SRP-1](spec/CMB-SRP-1.md) and [CMB-SRP-2](spec/CMB-SRP-2.md).
 
 Scan a file or a Git change set:
 

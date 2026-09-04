@@ -59,6 +59,8 @@ def _parser() -> argparse.ArgumentParser:
         help="Export a W3C VC 2.0-shaped projection without claiming DI conformance.",
     )
     export_vc.add_argument("credential", type=Path)
+    export_vc.add_argument("--public-key", type=Path)
+    export_vc.add_argument("--parent", type=Path)
     export_vc.add_argument("--output", type=Path)
     return parser
 
@@ -123,6 +125,22 @@ def main(argv: Sequence[str] | None = None) -> int:
             return 0 if ok else 3
 
         credential = load_credential(args.credential)
+        parent = load_credential(args.parent) if args.parent else None
+        expected = (
+            public_key_fingerprint(_read_key(args.public_key))
+            if args.public_key
+            else None
+        )
+        ok, failures = verify_capability(
+            credential,
+            expected_key_fingerprint=expected,
+            parent_credential=parent,
+        )
+        if not ok:
+            raise CapabilityError(
+                "Refusing VC projection of unverified credential: "
+                + ", ".join(failures)
+            )
         _write_json(vc_projection(credential), args.output)
         return 0
     except (OSError, json.JSONDecodeError, CapabilityError, ValueError) as exc:
