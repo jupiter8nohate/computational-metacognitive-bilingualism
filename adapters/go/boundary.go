@@ -29,16 +29,16 @@ const (
 )
 
 type BoundaryEvent struct {
-	SchemaVersion               string  `json:"schema_version"`
-	EventID                     *string `json:"event_id"`
-	ConsequentialDecision       bool    `json:"consequential_decision"`
-	AIInvolved                  bool    `json:"ai_involved"`
-	AIDisclosed                 bool    `json:"ai_disclosed"`
-	HumanReviewAvailable        bool    `json:"human_review_available"`
-	ProfileTreatedAsPerson      bool    `json:"profile_treated_as_person"`
-	PredictionTreatedAsDestiny  bool    `json:"prediction_treated_as_destiny"`
-	ConsentRequired             bool    `json:"consent_required"`
-	ConsentPresent              bool    `json:"consent_present"`
+	SchemaVersion              string  `json:"schema_version"`
+	EventID                    *string `json:"event_id"`
+	ConsequentialDecision      bool    `json:"consequential_decision"`
+	AIInvolved                 bool    `json:"ai_involved"`
+	AIDisclosed                bool    `json:"ai_disclosed"`
+	HumanReviewAvailable       bool    `json:"human_review_available"`
+	ProfileTreatedAsPerson     bool    `json:"profile_treated_as_person"`
+	PredictionTreatedAsDestiny bool    `json:"prediction_treated_as_destiny"`
+	ConsentRequired            bool    `json:"consent_required"`
+	ConsentPresent             bool    `json:"consent_present"`
 }
 
 func (event BoundaryEvent) Validate() error {
