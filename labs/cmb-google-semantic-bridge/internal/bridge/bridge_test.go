@@ -221,3 +221,80 @@ func TestSHA256Bytes(t *testing.T) {
 		t.Fatalf("sha256 = %s, want %s", got, want)
 	}
 }
+
+func TestBindSourcePopulatesBodyAndHash(t *testing.T) {
+	artifact := validArtifact(t)
+	artifact.Body = ""
+	artifact.Provenance.SHA256 = ""
+	source := []byte("# Human source\n\nPATTERN != PROOF\n")
+
+	bound, err := BindSource(artifact, source)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if bound.Body != string(source) {
+		t.Fatalf("body = %q", bound.Body)
+	}
+	if bound.Provenance.SHA256 != SHA256Bytes(source) {
+		t.Fatalf("sha256 = %s", bound.Provenance.SHA256)
+	}
+}
+
+func TestBindSourceRejectsDeclaredHashMismatch(t *testing.T) {
+	artifact := validArtifact(t)
+	artifact.Body = ""
+	artifact.Provenance.SHA256 = SHA256Bytes([]byte("different source"))
+
+	_, err := BindSource(artifact, []byte("actual source"))
+	if err == nil {
+		t.Fatal("expected source hash mismatch")
+	}
+	if !strings.Contains(err.Error(), "source SHA-256 mismatch") {
+		t.Fatalf("unexpected error: %v", err)
+	}
+}
+
+func TestBindSourceRejectsInvalidUTF8(t *testing.T) {
+	artifact := validArtifact(t)
+	artifact.Body = ""
+	artifact.Provenance.SHA256 = ""
+
+	if _, err := BindSource(artifact, []byte{0xff, 0xfe}); err == nil {
+		t.Fatal("expected invalid UTF-8 rejection")
+	}
+}
+
+func TestPageHTMLEscapesSourceButEmbedsArticleJSONLD(t *testing.T) {
+	artifact := validArtifact(t)
+	artifact.Body = "<script>alert('x')</script>\nPATTERN != PROOF"
+	artifact.Provenance.SHA256 = SHA256Bytes([]byte(artifact.Body))
+
+	page, err := PageHTML(artifact)
+	if err != nil {
+		t.Fatal(err)
+	}
+	text := string(page)
+
+	if strings.Contains(text, "<pre class=\"source\"><script>") {
+		t.Fatal("human source was inserted as raw HTML")
+	}
+	if !strings.Contains(text, "&lt;script&gt;alert") {
+		t.Fatal("escaped human source not found")
+	}
+	if !strings.Contains(text, `<script type="application/ld+json">`) {
+		t.Fatal("embedded Article JSON-LD missing")
+	}
+	if !strings.Contains(text, `rel="canonical" href="https://example.org/cmb/test"`) {
+		t.Fatal("canonical URL missing")
+	}
+	if !strings.Contains(text, HumanAuthority) && strings.Contains(text, "machine_has_final_authority") {
+		t.Fatal("CMB sidecar semantics leaked into page JSON-LD")
+	}
+}
+
+func TestSiteCSSHasNoExternalImports(t *testing.T) {
+	css := string(SiteCSS())
+	if strings.Contains(css, "@import") || strings.Contains(css, "url(http") {
+		t.Fatal("site CSS must remain zero-dependency")
+	}
+}
