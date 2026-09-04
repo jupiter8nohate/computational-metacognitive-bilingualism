@@ -9,12 +9,6 @@ It intentionally does not inspect prose and guess whether a person was "profiled
 ```bash
 python -m pip install -e .
 python -m pip install "fastapi>=0.115,<1" "uvicorn>=0.30,<1"
-uvicorn examples.06_fastapi_boundary.app:app --reload
-```
-
-Because Python package names cannot begin with a digit, the simplest way to run this exact repository example is:
-
-```bash
 python examples/06_fastapi_boundary/app.py
 ```
 
