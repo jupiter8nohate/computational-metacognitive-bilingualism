@@ -70,3 +70,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 Canonical artifacts are sealed by the repository's provenance tooling as an explicit file set. A receipt can provide integrity and chronology evidence for the bytes it covers. It does not independently prove originality, ownership, legal enforceability, or a person's internal meaning.
 
 For the technical model, see [../README.md](../README.md) and [../receipts/README.md](../receipts/README.md).
+
+
+## Sovereign Epistemic Protocol
+
+- [The Sovereign Epistemic Protocol](THE_SOVEREIGN_EPISTEMIC_PROTOCOL.md) translates the HARMONI-666 human-machine boundary into a 6 x 6 x 6 operational manifesto. The normative implementation is [CMB-SEP-1](../spec/CMB-SEP-1.md).
