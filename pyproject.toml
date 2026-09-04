@@ -38,7 +38,8 @@ test = ["pytest>=8,<10"]
 build = ["build>=1.2,<2"]
 
 [project.scripts]
-cmb-provenance = "cmb_provenance.cli:main"\ncmb-z13 = "cmb_provenance.z13_cli:main"
+cmb-provenance = "cmb_provenance.cli:main"
+cmb-z13 = "cmb_provenance.z13_cli:main"
 
 [project.urls]
 Homepage = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
