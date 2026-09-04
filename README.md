@@ -82,6 +82,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 You should not need the entire CMB universe to understand the thesis.
 
 - **Interactive entry point:** [CMB Playground](docs/PLAYGROUND.md)
+- **Kids / CMB-EDU:** [FGC elementary learning layer](docs/CMB_EDU_KIDS.md)
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
@@ -111,6 +112,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | Layer | Status | Purpose |
 |---|---|---|
 | `cmb_provenance` | **Stable engineering** | artifact integrity, receipts, Recovery, C2PA-facing interoperability |
+| `cmb_edu` | **Experimental educational API** | child-friendly metacognitive literacy, FGC emoji syntax, privacy-first context envelopes |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | Polyglot boundary adapters | **Conformance-tested reference implementations** | Python, TypeScript/Express, and Rust/Actix share the same v1 semantic cases |
 | CMB-Z13 parser / Guardian Modes | **Experimental reference implementation** | executable symbolic notation and computational-literacy research |
@@ -210,6 +212,42 @@ bytes match the corresponding committed Git blob and records
 that commit.
 
 The receipt declares `coverage.type = "explicit_file_set"` and `excludes_unlisted = true`. It therefore identifies exactly what it covers and makes no claim about unlisted files.
+
+## CMB-EDU quick start
+
+CMB-EDU is the experimental educational layer for teaching human/machine literacy without converting a child's self-description into a permanent machine profile.
+
+```bash
+cmb-edu parse '♌::CREATIVE -> STATE[confident || overstimulated] => GENERATE("dragon_story") -> PROFILE_NOT_PERSON;'
+
+cmb-edu parse-fgc '🧠 HAPPY + 🪐 CREATIVE + ⚡ DRAW DRAGON + 🛡️ NO_PROFILE + ⏳ EPHEMERAL'
+```
+
+Python:
+
+```python
+from cmb_edu import CMBDualBrainParser, FGCEmojiParser
+
+dual = CMBDualBrainParser().parse_stream(
+    '♌::CREATIVE -> STATE[curious] => GENERATE("story") -> PROFILE_NOT_PERSON;'
+)
+
+fgc = FGCEmojiParser().parse_stream(
+    '🧠 CURIOUS + 🪐 LEARNING + ⚡ ASK WHY + 🛡️ PROFILE_NOT_PERSON'
+)
+```
+
+The v1 educational contract is deliberately deny-by-default:
+
+```text
+DECLARED_CONTEXT ≠ DIAGNOSIS
+SELF_REPORT ≠ PERMANENT_PROFILE
+CURRENT_STATE ≠ IDENTITY
+CHILD_DATA_TRAINING_DEFAULT = DENY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
+See [CMB-EDU Kids Learning Layer](docs/CMB_EDU_KIDS.md) and [`cmb.edu.v1` schema](schemas/cmb.edu.v1.schema.json).
 
 ## Five-minute examples
 
