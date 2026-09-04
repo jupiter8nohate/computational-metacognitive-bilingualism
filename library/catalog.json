@@ -96,7 +96,7 @@
     },
     {
       "id": "cmb-global-advocacy-charter",
-      "title": "CMB Global Advocacy Charter v1.0",
+      "title": "CMB Global Advocacy Charter v1.1",
       "path": "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
       "format": "markdown",
       "kind": "policy proposal",
@@ -109,9 +109,11 @@
         "data minimization",
         "AI disclosure",
         "cognitive freedom",
-        "provenance"
+        "provenance",
+        "prior art",
+        "human oversight"
       ],
-      "declared_meaning": "Translates CMB principles into institutional recommendations; it is not a claim that all recommendations are existing law."
+      "declared_meaning": "Translates CMB principles into institutional recommendations while explicitly positioning them against existing law, scholarship, and standards; it is not a claim that all recommendations are existing law."
     },
     {
       "id": "cmb-library-catalog",
@@ -208,6 +210,80 @@
         "interpretation policy"
       ],
       "declared_meaning": "Machine-readable representation of the CMB-Z13 mapping, vectors, processing cycle, invariants, and epistemic boundaries."
+    },
+    {
+      "id": "cmb-policy-one-pager",
+      "title": "CMB — 12 Principles for Human Agency in Automated Systems",
+      "path": "policy/CMB_POLICY_ONE_PAGER.md",
+      "format": "markdown",
+      "kind": "public-facing policy summary",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "policy front door",
+        "human agency",
+        "automated decisions",
+        "digital rights"
+      ],
+      "declared_meaning": "Compressed public entry point to the Global Advocacy Charter; it acknowledges existing legal and scholarly foundations and states CMB's translation-layer contribution."
+    },
+    {
+      "id": "cmb-prior-art-positioning",
+      "title": "CMB Prior Art, Legal Context, and Positioning",
+      "path": "docs/PRIOR_ART_AND_POSITIONING.md",
+      "format": "markdown",
+      "kind": "research and positioning document",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "GDPR Article 22",
+        "EU AI Act Article 14",
+        "algorithmic accountability",
+        "prior art",
+        "C2PA"
+      ],
+      "declared_meaning": "States what CMB does not claim to have invented, identifies relevant law and scholarship, and defines the narrower contribution CMB claims."
+    },
+    {
+      "id": "cmb-c2pa-interoperability",
+      "title": "CMB Provenance ↔ C2PA Interoperability Plan",
+      "path": "docs/C2PA_INTEROPERABILITY.md",
+      "format": "markdown",
+      "kind": "technical interoperability design",
+      "status": "planned",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "C2PA",
+        "Content Credentials",
+        "provenance",
+        "custom assertions",
+        "interoperability"
+      ],
+      "declared_meaning": "Defines C2PA as the external provenance interoperability target and explicitly states that current cmb_provenance is not C2PA-conformant."
+    },
+    {
+      "id": "cmb-external-review",
+      "title": "Independent Review Requested",
+      "path": "docs/EXTERNAL_REVIEW.md",
+      "format": "markdown",
+      "kind": "external validation request",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "independent audit",
+        "security review",
+        "policy review",
+        "external validation"
+      ],
+      "declared_meaning": "Publicly documents the current lack of independent certification and defines a narrow, reproducible external review scope."
     }
   ]
 }

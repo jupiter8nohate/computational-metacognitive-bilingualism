@@ -1,6 +1,8 @@
 # Computational Metacognitive Bilingualism (CMB)
 
-Computational Metacognitive Bilingualism is a human-sovereignty framework for learning and using computational language while retaining human judgment, consent, authorship, meaning, and self-definition.
+Computational Metacognitive Bilingualism is a human-agency and computational-literacy framework for learning and using computational systems while retaining human judgment, consent, authorship, meaning, and self-definition.
+
+**One-sentence position:** CMB translates established and emerging digital-rights principles into concise human-readable and machine-readable invariants; it does not claim to have invented the underlying rights, laws, scholarship, or provenance standards.
 
 ```text
 PATTERN != PROOF
@@ -14,6 +16,30 @@ INTELLIGENCE != SOVEREIGNTY
 
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
+
+## Start here
+
+You should not need the entire CMB universe to understand the thesis.
+
+- **2-minute policy front door:** [CMB — 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
+- **Full policy proposal:** [CMB Global Advocacy Charter v1.1](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md)
+- **Novelty / prior-art test:** [Prior Art, Legal Context, and Positioning](docs/PRIOR_ART_AND_POSITIONING.md)
+- **Provenance / standards bridge:** [CMB Provenance ↔ C2PA Interoperability Plan](docs/C2PA_INTEROPERABILITY.md)
+- **Independent validation status:** [Independent Review Requested](docs/EXTERNAL_REVIEW.md)
+- **Optional symbolic-language deep dive:** [CMB-Z13™](manifestos/CMB_Z13_LANGUAGE_SPEC.md)
+
+### What CMB does not claim
+
+```text
+CMB != INVENTION_OF_AUTOMATED_DECISION_RIGHTS
+HASH != AUTHORSHIP
+TIMESTAMP != OWNERSHIP
+SIGNATURE != ORIGINALITY
+CMB_PROVENANCE != C2PA_CONFORMANCE
+ZODIAC_SYMBOL != SCIENTIFIC_PERSONALITY_MODEL
+```
+
+GitHub is the project's source, audit trail, provenance backend, and implementation record. The one-page policy summary is the intended public front door.
 
 ## v1.3.1 Recovery release
 
@@ -31,7 +57,7 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB-Z13™ Language Specification`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) — the formal symbolic notation mapping zodiac archetypes to C, Rust, Haskell, C++, Java, TypeScript, Python, Swift, Go, Kotlin, Prolog, Common Lisp, and Julia while preserving `HUMAN_AGENCY > MACHINE_AUTHORITY`.
 - [`CMB-Z13 Machine Registry`](library/cmb-z13.registry.json) — the machine-readable operator map, symbolic vectors, processing cycle, and interpretation boundaries for CMB-Z13.
 - [`CMB Digital Library Catalog`](library/catalog.json) — the machine-indexable catalog that maps canonical CMB artifacts, concepts, interpretation boundaries, and provenance scope.
-- [`CMB Global Advocacy Charter v1.0`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
+- [`CMB Global Advocacy Charter v1.1`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
 
 CMB-Z13 is now part of the canonical provenance sealing set. The next tag-triggered signed release will seal the manifesto, language specification, machine registry, and the rest of the canonical CMB corpus as one explicit file set.
 
@@ -164,7 +190,7 @@ External locations and displayed timestamps remain explicitly unverified referen
 - [`manifestos/CMB_Z13_MANIFESTO.md`](manifestos/CMB_Z13_MANIFESTO.md) — **CMB-Z13™ manifesto**, the human-readable declaration of the thirteen computational lenses.
 - [`manifestos/CMB_Z13_LANGUAGE_SPEC.md`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) — **CMB-Z13™**, the Zodiac Computational Metacognitive Language specification.
 - [`library/cmb-z13.registry.json`](library/cmb-z13.registry.json) — machine-readable CMB-Z13 operator, vector, and interpretation registry.
-- [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the CMB Global Advocacy Charter v1.0.
+- [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the CMB Global Advocacy Charter v1.1.
 - [`library/README.md`](library/README.md) — human-readable entry point to the CMB digital library.
 - [`library/catalog.json`](library/catalog.json) — machine-indexable artifact catalog, sealed as part of the canonical public set.
 - [`src/cmb_provenance`](src/cmb_provenance) — the supported v1.3.1 package and stable API.
