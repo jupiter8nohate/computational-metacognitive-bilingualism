@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html/template"
 	"strings"
+	"unicode/utf8"
 )
 
 const siteCSS = `:root {
@@ -121,6 +122,9 @@ const pageTemplate = `<!doctype html>
 func BindSource(a Artifact, source []byte) (Artifact, error) {
 	if len(source) == 0 {
 		return Artifact{}, fmt.Errorf("source must not be empty")
+	}
+	if !utf8.Valid(source) {
+		return Artifact{}, fmt.Errorf("source must be valid UTF-8")
 	}
 
 	digest := SHA256Bytes(source)
