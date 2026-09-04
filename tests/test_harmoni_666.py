@@ -3,12 +3,15 @@ from __future__ import annotations
 import pytest
 
 from cmb_machine.harmoni import (
+    DiscoveryStage,
     EpistemicState,
     HUMAN_FINAL,
     MISSINGNO_CODE,
     ProofGate,
     evaluate_claim,
     harmoni_manifest,
+    next_discovery_stage,
+    validate_discovery_transition,
 )
 
 
@@ -81,3 +84,40 @@ def test_manifest_is_exactly_six_six_six() -> None:
     assert motif["mapping"]["CALCULATION"] == "MACHINE_VERIFICATION"
     assert motif["mapping"]["HUMAN"] == HUMAN_FINAL
     assert motif["boundary"] == "SCRIPTURAL_MOTIF_NOT_EMPIRICAL_PROOF"
+
+
+def test_epistemological_ladder_is_ordered_and_fail_closed() -> None:
+    assert next_discovery_stage(DiscoveryStage.UNKNOWN) is DiscoveryStage.MISSINGNO
+    assert next_discovery_stage("MISSINGNO") is DiscoveryStage.QUESTION
+    assert next_discovery_stage("QUESTION") is DiscoveryStage.TEST
+    assert next_discovery_stage("TEST") is DiscoveryStage.EVIDENCE
+    assert next_discovery_stage("EVIDENCE") is DiscoveryStage.JUSTIFIED_CLAIM
+    assert next_discovery_stage("JUSTIFIED_CLAIM") is None
+
+    assert validate_discovery_transition("MISSINGNO", "QUESTION") is True
+    assert validate_discovery_transition("MISSINGNO", "EVIDENCE") is False
+    assert validate_discovery_transition("UNKNOWN", "JUSTIFIED_CLAIM") is False
+
+
+def test_manifest_distinguishes_myth_symbol_evidence_and_meaning() -> None:
+    ladder = harmoni_manifest()["epistemological_ladder"]
+
+    assert ladder["creative_model_inputs"] == ["REALITY", "FICTION", "FANTASY"]
+    assert ladder["creative_model_output"] == "CREATIVE_MODEL_OF_THE_UNKNOWN"
+    assert ladder["stages"] == [
+        "UNKNOWN",
+        "MISSINGNO",
+        "QUESTION",
+        "TEST",
+        "EVIDENCE",
+        "JUSTIFIED_CLAIM",
+    ]
+    assert ladder["truth_distinctions"] == [
+        "PROVENANCE != MYTHOLOGY",
+        "MYTHOLOGY != FALSEHOOD",
+        "SYMBOLISM != EVIDENCE",
+        "EVIDENCE != TOTAL_MEANING",
+    ]
+    assert ladder["rules"]["stage_skipping"] == "DENIED"
+    assert ladder["rules"]["justified_claim_is_proof"] is False
+    assert ladder["final_authority"] == HUMAN_FINAL
