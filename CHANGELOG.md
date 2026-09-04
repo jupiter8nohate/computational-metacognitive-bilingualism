@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- CMB-CAP-1 Capability Authorization Passport with Ed25519-signed self-contained authority credentials, offline verification, external key fingerprint pinning, expiry enforcement, parent-digest lineage, monotonic delegation validation, `cmb-cap` CLI, MCP verification without private-key transport, experimental A2A extension metadata, VC 2.0-shaped non-conformant projection, strict schema, and hostile-path tests.
 - CMB-SDL-1 Sovereign Delegation Language with a deterministic parser/compiler, `cmb.authority-ir.v1` schema, tamper-detecting SHA-256 IR digest, monotonic child-agent delegation checks, `cmb-sdl` CLI, MCP compilation tool, machine/agent discovery metadata, reference example, and fail-closed regression tests.
 - Experimental `cmb-edu` educational subsystem with a Dual-Brain Stream parser, strict `cmb.edu.v1` Metacognitive Context Envelope, deny-by-default privacy declarations, installed CLI, child-facing Flamingoglyph curriculum, runnable example, and parser/schema/CLI tests. Human-declared context remains explicitly distinct from machine inference.
 - Framework-agnostic CMB boundary policy evaluator with deterministic rejection codes and human-final authority.
