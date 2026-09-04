@@ -36,6 +36,7 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "MANIFESTO.md",
         "CMB_Polyglot_Firewall_Specification.md",
         "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+        "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
         "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
     )
 
@@ -70,13 +71,18 @@ def test_ci_generates_and_verifies_canonical_receipt() -> None:
     assert "--print-json" in workflow
 
 
-def test_current_bootstrap_receipt_covers_global_advocacy_charter() -> None:
+def test_previous_bootstrap_receipt_remains_valid_history() -> None:
     repository_root = Path(__file__).resolve().parents[1]
     receipt = load_receipt(
         repository_root / "receipts" / "canonical-593fd2a6.cmb-receipt.json"
     )
 
-    assert receipt.coverage.paths == tuple(sorted(CANONICAL_PUBLIC_ARTIFACTS))
+    assert receipt.coverage.paths == (
+        "CMB_Polyglot_Firewall_Specification.md",
+        "MANIFESTO.md",
+        "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+        "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
+    )
     assert receipt.coverage.excludes_unlisted is True
     assert receipt.manifest_sha256 == (
         "619308c7c322a65b2159679b742e28f61f8558c43cb48dd09229745814043abc"

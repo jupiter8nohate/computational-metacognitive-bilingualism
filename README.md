@@ -26,6 +26,7 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`MANIFESTO.md`](MANIFESTO.md) — the core CMB human-sovereignty manifesto.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
 - [`Demon's Need Attention — D.N.A.`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — the attention-economy branch of CMB: a code-manifesto about engagement, behavioral profiling, data mining, consumption, and cognitive sovereignty.
+- [`CMB // The Unclassifiable Index`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — the MissingNo–Pokédex manifesto defining CMB as a human/machine-readable library of perspective, uncertainty, context, and provenance.
 - [`CMB Global Advocacy Charter v1.0`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the policy bridge translating CMB principles into concrete recommendations for governments, technology companies, schools, employers, healthcare, researchers, and civil society.
 
 The project now has a deliberate progression:
@@ -102,6 +103,7 @@ cmb-provenance seal \
   MANIFESTO.md \
   CMB_Polyglot_Firewall_Specification.md \
   manifestos/DEMONS_NEED_ATTENTION_DNA.md \
+  manifestos/CMB_UNCLASSIFIABLE_INDEX.md \
   policy/CMB_GLOBAL_ADVOCACY_CHARTER.md \
   --output cmb-source.cmb-receipt.json
 ```
@@ -113,6 +115,7 @@ cmb-provenance verify \
   MANIFESTO.md \
   CMB_Polyglot_Firewall_Specification.md \
   manifestos/DEMONS_NEED_ATTENTION_DNA.md \
+  manifestos/CMB_UNCLASSIFIABLE_INDEX.md \
   policy/CMB_GLOBAL_ADVOCACY_CHARTER.md \
   --receipt cmb-source.cmb-receipt.json \
   --check-git-commit
@@ -137,6 +140,7 @@ External locations and displayed timestamps remain explicitly unverified referen
 - [`MANIFESTO.md`](MANIFESTO.md) — the public CMB human-sovereignty manifesto.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) — the CMB thesis expressed across ten programming languages.
 - [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) — **Demon's Need Attention — D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
+- [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) — **The Unclassifiable Index**, CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
 - [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) — the CMB Global Advocacy Charter v1.0.
 - [`src/cmb_provenance`](src/cmb_provenance) — the supported v1.3.1 package and stable API.
 - [`tests`](tests) — deterministic, corruption, concurrency, schema, CLI, and canonical-artifact tests.

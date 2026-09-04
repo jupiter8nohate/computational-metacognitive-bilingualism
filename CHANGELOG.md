@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- **CMB // The Unclassifiable Index**, a canonical MissingNo–Pokédex manifesto defining a perspective-aware human/machine-readable library model and the CMB MissingNo Clause.
 - Installable `cmb-provenance` Python package and console entry point.
 - Stable `seal()` and `verify()` APIs for explicit artifact sets.
 - Canonical artifact manifests containing normalized paths, byte-level SHA-256 digests, sizes, schema version, tool version, and full Git commit.
