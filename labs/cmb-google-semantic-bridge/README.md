@@ -283,3 +283,85 @@ STRUCTURED_DATA == MACHINE_DESCRIPTION
 VISIBLE_PAGE != HIDDEN_CLOAK
 STRUCTURED_DATA != RANKING_COMMAND
 ```
+
+
+## GitHub Pages deployment v0.3
+
+The repository now contains an official deployment workflow:
+
+```text
+.github/workflows/cmb-google-semantic-pages.yml
+```
+
+Its production target is:
+
+```text
+https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+```
+
+On every relevant push to `main`, the workflow rebuilds the site from the canonical repository source:
+
+```text
+manifestos/CMB_SOVEREIGN_TRANSMISSION.md
+```
+
+and publishes only the generated static bundle.
+
+The deployment command is equivalent to:
+
+```bash
+cmb-gsb publish \
+  -in examples/sovereign-transmission.json \
+  -source ../../manifestos/CMB_SOVEREIGN_TRANSMISSION.md \
+  -out public/ \
+  -url https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/ \
+  -site-base https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+```
+
+### One-time GitHub setting
+
+GitHub requires Pages to be enabled for the repository before the official deployment action can publish. In repository settings:
+
+```text
+Settings
+  -> Pages
+  -> Build and deployment
+  -> Source
+  -> GitHub Actions
+```
+
+After that one-time setting, the workflow can deploy subsequent updates automatically.
+
+### GitHub Pages project-path boundary
+
+The project is hosted below the shared GitHub Pages origin:
+
+```text
+https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+```
+
+Therefore the generated project-local file:
+
+```text
+/computational-metacognitive-bilingualism/robots.txt
+```
+
+is useful as a portable publication artifact but is **not** the origin-level robots policy at:
+
+```text
+https://jupiter8nohate.github.io/robots.txt
+```
+
+The project sitemap remains a valid URL:
+
+```text
+https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/sitemap.xml
+```
+
+and can be submitted directly through search-engine webmaster tooling.
+
+```text
+PROJECT_ROBOTS != ORIGIN_ROBOTS
+SITEMAP_URL == SUBMITTABLE_DISCOVERY_ARTIFACT
+DEPLOYMENT != INDEXING_GUARANTEE
+```
