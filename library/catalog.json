@@ -75,6 +75,26 @@
       "declared_meaning": "CMB branch examining attention-extractive systems and the boundary between engagement and consent."
     },
     {
+      "id": "cmb-dna-chicken-run",
+      "title": "D.N.A. — The Chicken Run Manifesto",
+      "path": "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",
+      "format": "markdown",
+      "kind": "literary manifesto and computational allegory",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "institutional confinement",
+        "algorithmic confinement",
+        "attention economy",
+        "human agency",
+        "cognitive sovereignty",
+        "Flamingoglyph Code"
+      ],
+      "declared_meaning": "D.N.A./FGC literary allegory using the coop and escape motif to distinguish human self-definition from institutional and algorithmic classification."
+    },
+    {
       "id": "cmb-unclassifiable-index",
       "title": "CMB // The Unclassifiable Index",
       "path": "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
