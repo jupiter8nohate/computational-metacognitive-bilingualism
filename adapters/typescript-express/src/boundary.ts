@@ -60,7 +60,8 @@ const BOOLEAN_KEYS = [
   "consent_present",
 ] as const;
 
-type EventRecord = Record<(typeof EVENT_KEYS)[number], unknown>;
+type EventKey = (typeof EVENT_KEYS)[number];
+type EventRecord = Record<string, unknown> & Record<EventKey, unknown>;
 
 function assertRecord(value: unknown): asserts value is Record<string, unknown> {
   if (typeof value !== "object" || value === null || Array.isArray(value)) {
