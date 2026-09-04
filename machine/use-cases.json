@@ -1,0 +1,98 @@
+{
+  "schema_version": "cmb.use-cases.v1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "purpose": "Separate present capability, integration targets, and speculative future design while preserving human authority.",
+  "categories": [
+    "DEPLOYABLE_NOW",
+    "REQUIRES_INTEGRATION",
+    "SPECULATIVE_FUTURE"
+  ],
+  "use_cases": [
+    {
+      "id": "artifact-provenance",
+      "year": 2026,
+      "category": "DEPLOYABLE_NOW",
+      "title": "Artifact sealing and verification",
+      "component": "cmb_provenance",
+      "core_rule": "PROVENANCE != TRUTH",
+      "claims_current_capability": true,
+      "summary": "Generate explicit-coverage SHA-256 receipts and verify later byte identity, with C2PA-facing interoperability available as a tested bridge."
+    },
+    {
+      "id": "privacy-first-edu",
+      "year": 2026,
+      "category": "DEPLOYABLE_NOW",
+      "title": "Privacy-first declared educational context",
+      "component": "cmb_edu",
+      "core_rule": "PROFILE != PERSON",
+      "claims_current_capability": true,
+      "summary": "Represent temporary human-declared context with machine_inferred=false and deny-by-default profiling, training, secondary-use, and psychological-inference permissions."
+    },
+    {
+      "id": "agent-discovery",
+      "year": 2026,
+      "category": "DEPLOYABLE_NOW",
+      "title": "Agent discovery and bounded interpretation",
+      "component": "cmb_agents / CMB-ADP-1 / optional MCP",
+      "core_rule": "DISCOVERY != AUTHORITY",
+      "claims_current_capability": true,
+      "summary": "Expose deterministic recommendation, citation, summaries, knowledge graphs, origin metadata, machine targets, and distribution boundaries."
+    },
+    {
+      "id": "agent-authorization-gateway",
+      "year": 2026,
+      "category": "REQUIRES_INTEGRATION",
+      "title": "Human authorization gateway for autonomous agents",
+      "component": "CMB-SEP-1 + application gateway",
+      "core_rule": "MACHINE_SELF_ATTESTATION != HUMAN_AUTHORIZATION",
+      "claims_current_capability": false,
+      "summary": "Use SEP-1 as the policy state machine inside a real deployment that supplies an external human-authentication trust root before sensitive tool execution."
+    },
+    {
+      "id": "cross-format-verifier",
+      "year": 2026,
+      "category": "REQUIRES_INTEGRATION",
+      "title": "Cross-format semantic verifier",
+      "component": "CMB-66",
+      "core_rule": "REPRESENTATION != SEMANTIC_EQUIVALENCE",
+      "claims_current_capability": false,
+      "summary": "Verify that all generated machine formats preserve one canonical semantic core rather than assuming equivalent exports are equivalent meanings."
+    },
+    {
+      "id": "planetary-delegated-governance",
+      "year": 2126,
+      "category": "SPECULATIVE_FUTURE",
+      "title": "Planetary infrastructure with delegated human authority",
+      "component": "future CMB governance profile",
+      "core_rule": "AUTONOMY != SOVEREIGNTY",
+      "claims_current_capability": false,
+      "summary": "Use signed human-defined mission envelopes to allow reversible autonomous operation while escalating unknown or irreversible decisions."
+    },
+    {
+      "id": "predictive-rights",
+      "year": 2126,
+      "category": "SPECULATIVE_FUTURE",
+      "title": "Predictive civil-rights safeguard",
+      "component": "future policy / constitutional layer",
+      "core_rule": "PREDICTION != DESTINY",
+      "claims_current_capability": false,
+      "summary": "Treat predictive models as evidence inputs rather than legal identity, destiny, or automatic sentence."
+    },
+    {
+      "id": "deep-space-missingno",
+      "year": 2126,
+      "category": "SPECULATIVE_FUTURE",
+      "title": "Deep-space anomaly processing",
+      "component": "future HARMONI mission profile",
+      "core_rule": "UNKNOWN != PERMISSION_TO_GUESS",
+      "claims_current_capability": false,
+      "summary": "Preserve raw evidence, continue only reversible observation, and halt irreversible intervention when an unknown falls outside the mission ontology."
+    }
+  ],
+  "decision_rule": {
+    "machine_can_act_or_interpret": true,
+    "affects_human_or_artifact": true,
+    "needs_authority_boundary": true,
+    "authority": "HUMAN_FINAL"
+  }
+}
