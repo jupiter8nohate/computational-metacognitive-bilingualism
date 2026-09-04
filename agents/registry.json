@@ -71,10 +71,16 @@
         "type": "local_reference_server",
         "command": "cmb-agent serve",
         "default_url": "http://127.0.0.1:8765"
+      },
+      {
+        "type": "mcp_stdio",
+        "command": "cmb-mcp",
+        "protocol_generation": "2026-07-28",
+        "sdk": "mcp-python-2.x"
       }
     ],
     "standards_status": {
-      "mcp": "adapter_target_not_claimed_conformant",
+      "mcp": "official_sdk_reference_adapter_not_independently_certified",
       "a2a": "discovery_pattern_only_not_claimed_conformant"
     }
   },
