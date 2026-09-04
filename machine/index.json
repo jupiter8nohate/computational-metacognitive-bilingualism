@@ -40,5 +40,19 @@
       "decision": "schemas/cmb.harmoni-666.v1.schema.json",
       "manifest": "schemas/cmb.harmoni-666.manifest.v1.schema.json"
     }
+  },
+  "sovereign_epistemic_protocol": {
+    "spec": "spec/CMB-SEP-1.md",
+    "python_reference": "src/cmb_policy/sovereign.py",
+    "decision_schema": "schemas/cmb.sovereign-epistemic.decision.v1.schema.json",
+    "manifest_schema": "schemas/cmb.sovereign-epistemic.manifest.v1.schema.json",
+    "conformance": "conformance/sovereign-epistemic-v1.json"
+  },
+  "creator_context": {
+    "document": "docs/CREATOR_CONTEXT_MODEL.md",
+    "machine_record": "machine/creator-context.json",
+    "schema": "schemas/cmb.creator-context.v1.schema.json",
+    "model": "DESCRIPTIVE_CONTEXT_NOT_IDENTITY",
+    "authority": "HUMAN_FINAL"
   }
 }
