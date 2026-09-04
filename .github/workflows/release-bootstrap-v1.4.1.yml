@@ -40,6 +40,6 @@ jobs:
             echo "Created $RELEASE_TAG at $TARGET_SHA."
           fi
 
-          gh workflow run release.yml             --ref main             -f release_ref="$RELEASE_TAG"
+          gh workflow run release.yml             --repo "$GITHUB_REPOSITORY"             --ref main             -f release_ref="$RELEASE_TAG"
 
           echo "Dispatched signed release workflow for $RELEASE_TAG from the default branch."
