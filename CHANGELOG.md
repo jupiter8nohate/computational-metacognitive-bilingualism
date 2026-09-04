@@ -15,6 +15,7 @@
 - Explicit truth distinctions separating provenance from mythology, mythology from falsehood, symbolism from evidence, and evidence from total human meaning.
 - Experimental `CMB-SEP-1` Sovereign Epistemic Protocol with six operational states, six deterministic gates, six recovery failsafes, external-human-authorization boundary, machine self-attestation rejection, and incident conformance fixtures.
 - Canonical hallucination/self-authorization stress scenario demonstrating claim truncation, MissingNo-style isolation, deceleration for sensitive review, and fail-closed human override.
+- Experimental Creator Context Model separating symbolic lineage, artifact provenance, and intellectual context from authoritative identity, with `CONTEXT != IDENTITY`, `CATALOG != CREATOR`, `INDEX != IDENTITY`, and `PROFILE != PERSON` encoded in schema and tests.
 
 
 All notable changes to the CMB provenance tool are documented here.
