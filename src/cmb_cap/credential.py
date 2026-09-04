@@ -22,6 +22,29 @@ A2A_EXTENSION_URI = (
     "computational-metacognitive-bilingualism/extensions/cmb-cap/v1"
 )
 
+_CREDENTIAL_FIELDS = frozenset(
+    {
+        "schema",
+        "protocol",
+        "credential_id",
+        "issuer",
+        "subject",
+        "authority",
+        "issued_at",
+        "expires_at",
+        "nonce",
+        "parent_credential_digest",
+        "interoperability",
+        "proof",
+    }
+)
+_PROOF_FIELDS = frozenset(
+    {"type", "created", "verification_method", "public_key_b64", "signature"}
+)
+_INTEROPERABILITY_FIELDS = frozenset(
+    {"mcp_extension", "a2a_extension_uri", "w3c_vc_2_0"}
+)
+
 
 class CapabilityError(ValueError):
     """Raised when a CMB-CAP credential cannot be issued or parsed."""
@@ -240,6 +263,8 @@ def _verify_single(
 ) -> tuple[bool, tuple[str, ...]]:
     failures: list[str] = []
     try:
+        if set(credential) != _CREDENTIAL_FIELDS:
+            failures.append("CAP_SCHEMA_INVALID")
         if credential.get("schema") != CAP_SCHEMA:
             failures.append("CAP_SCHEMA_INVALID")
         if credential.get("protocol") != CAP_PROTOCOL:
@@ -247,6 +272,28 @@ def _verify_single(
 
         authority = credential["authority"]
         validate_authority_ir(authority)
+
+        nonce = credential["nonce"]
+        if not isinstance(nonce, str) or len(nonce) < 16:
+            failures.append("CAP_NONCE_INVALID")
+        parent_digest = credential["parent_credential_digest"]
+        if parent_digest is not None and not _is_sha256_reference(parent_digest):
+            failures.append("CAP_PARENT_DIGEST_INVALID")
+
+        interoperability = credential["interoperability"]
+        if not isinstance(interoperability, Mapping):
+            failures.append("CAP_INTEROPERABILITY_INVALID")
+        else:
+            if set(interoperability) != _INTEROPERABILITY_FIELDS:
+                failures.append("CAP_INTEROPERABILITY_INVALID")
+            if interoperability.get("mcp_extension") != MCP_EXTENSION_ID:
+                failures.append("CAP_INTEROPERABILITY_INVALID")
+            if interoperability.get("a2a_extension_uri") != A2A_EXTENSION_URI:
+                failures.append("CAP_INTEROPERABILITY_INVALID")
+            if interoperability.get("w3c_vc_2_0") != (
+                "projection_available_not_data_integrity_conformant"
+            ):
+                failures.append("CAP_INTEROPERABILITY_INVALID")
 
         if credential["issuer"] != authority["issuer"]:
             failures.append("CAP_ISSUER_AUTHORITY_MISMATCH")
@@ -263,6 +310,10 @@ def _verify_single(
             failures.append("CAP_EXPIRED")
 
         proof = credential["proof"]
+        if not isinstance(proof, Mapping):
+            raise CapabilityError("proof must be an object")
+        if set(proof) != _PROOF_FIELDS:
+            failures.append("CAP_PROOF_SHAPE_INVALID")
         if proof.get("type") != PROOF_TYPE:
             failures.append("CAP_PROOF_TYPE_INVALID")
         if proof.get("created") != credential["issued_at"]:
@@ -410,6 +461,17 @@ def _credential_id(
 
 def _text_hash(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
+def _is_sha256_reference(value: Any) -> bool:
+    if not isinstance(value, str) or not value.startswith("sha256:"):
+        return False
+    digest = value[7:]
+    return (
+        len(digest) == 64
+        and digest == digest.lower()
+        and all(char in "0123456789abcdef" for char in digest)
+    )
 
 
 def _decode_key(value: str, expected_bytes: int, label: str) -> bytes:
