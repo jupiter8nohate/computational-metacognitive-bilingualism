@@ -5,13 +5,15 @@ Version 1.3.1 uses a tag-triggered GitHub Actions release with keyless Sigstore 
 ## Preconditions
 
 1. The `main` branch CI matrix passes on Python 3.10, 3.11, 3.12, and 3.13.
-2. `python -m build` produces one source distribution and one wheel.
-3. The tag exactly matches the package version, for example `v1.3.1`.
-4. The tag points to the reviewed commit that should appear in the artifact seal receipt.
-5. The canonical public CMB artifact set is present and committed:
+2. The canonical-receipt CI job successfully seals and verifies the public CMB artifact set inside a Git worktree.
+3. `python -m build` produces one source distribution and one wheel.
+4. The tag exactly matches the package version, for example `v1.3.1`.
+5. The tag points to the reviewed commit that should appear in the artifact seal receipt.
+6. The canonical public CMB artifact set is present and committed:
    - `MANIFESTO.md`
    - `CMB_Polyglot_Firewall_Specification.md`
    - `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
+   - `policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`
 
 ## Publish
 
@@ -36,9 +38,12 @@ The canonical seal receipt explicitly covers:
 MANIFESTO.md
 CMB_Polyglot_Firewall_Specification.md
 manifestos/DEMONS_NEED_ATTENTION_DNA.md
+policy/CMB_GLOBAL_ADVOCACY_CHARTER.md
 ```
 
-Because the receipt uses explicit-file-set coverage, adding a file to the repository does not silently add it to the provenance claim. New canonical artifacts must be deliberately added to both the release sealing command and this documentation.
+Because the receipt uses explicit-file-set coverage, adding a file to the repository does not silently add it to the provenance claim. New canonical artifacts must be deliberately added to `CANONICAL_PUBLIC_ARTIFACTS`, the tests, and this documentation.
+
+The Global Advocacy Charter is treated as a canonical public policy proposal. Its inclusion in a cryptographic receipt proves integrity of the covered bytes under the receipt's stated conditions; it does not transform proposed principles into enacted law or independently establish legal rights.
 
 No long-lived signing key is stored in the repository. A signature establishes a verifiable relationship between release bytes and the workflow identity; it does not independently prove creative authorship or legal ownership.
 
