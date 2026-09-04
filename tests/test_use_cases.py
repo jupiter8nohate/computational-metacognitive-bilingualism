@@ -46,3 +46,12 @@ def test_use_case_registry_preserves_human_final_authority() -> None:
         "REQUIRES_INTEGRATION",
         "SPECULATIVE_FUTURE",
     ]
+
+
+def test_machine_index_labels_experimental_extensions() -> None:
+    index = json.loads(Path("machine/index.json").read_text(encoding="utf-8"))
+
+    assert index["harmoni_666"]["provenance_scope"] == "canonical_public_artifact"
+    for key in ("sovereign_epistemic_protocol", "creator_context", "use_cases"):
+        assert index[key]["status"] == "EXPERIMENTAL"
+        assert index[key]["provenance_scope"] == "repository_artifact"
