@@ -446,6 +446,141 @@
         "machine discovery"
       ],
       "declared_meaning": "Schema contract for the canonical CMB-ADP-1 registry, including explicit trust-preserving distribution boundaries."
+    },
+    {
+      "id": "cmb-harmoni-666-spec",
+      "title": "CMB HARMONI-666 Bounded Proof Protocol",
+      "path": "spec/CMB-HARMONI-666.md",
+      "format": "markdown",
+      "kind": "epistemic proof protocol specification",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "bounded proof",
+        "MissingNo",
+        "epistemological ladder",
+        "human authority",
+        "Revelation 13:18 literary design key"
+      ],
+      "declared_meaning": "Defines HARMONI-666 as a bounded epistemic framework that separates symbolism, inquiry, evidence, justified claims, and proof while preserving HUMAN_FINAL authority."
+    },
+    {
+      "id": "cmb-harmoni-666-decision-schema",
+      "title": "HARMONI-666 Decision Schema",
+      "path": "schemas/cmb.harmoni-666.v1.schema.json",
+      "format": "json schema",
+      "kind": "machine-readable decision schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "proof decision",
+        "MissingNo",
+        "failed proof gates",
+        "human authority"
+      ],
+      "declared_meaning": "Schema contract for individual HARMONI-666 epistemic decisions; it is distinct from the protocol manifest."
+    },
+    {
+      "id": "cmb-harmoni-666-manifest-schema",
+      "title": "HARMONI-666 Protocol Manifest Schema",
+      "path": "schemas/cmb.harmoni-666.manifest.v1.schema.json",
+      "format": "json schema",
+      "kind": "machine-readable protocol schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "6/6/6 protocol",
+        "epistemological ladder",
+        "truth distinctions",
+        "human authority"
+      ],
+      "declared_meaning": "Schema contract for the static HARMONI-666 protocol manifest, including its 6/6/6 structure, discovery ladder, and interpretation boundaries."
+    },
+    {
+      "id": "cmb-machine-core-ir",
+      "title": "CMB-66 Canonical Machine IR",
+      "path": "machine/cmb-core.ir.json",
+      "format": "json",
+      "kind": "machine-readable intermediate representation",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "CMB-66",
+        "machine IR",
+        "epistemic classes",
+        "invariants",
+        "human authority"
+      ],
+      "declared_meaning": "Canonical language-neutral CMB-66 intermediate representation used as the source for deterministic machine-target compilation."
+    },
+    {
+      "id": "cmb-fgc-origin-mark",
+      "title": "FGC Canonical Origin Mark",
+      "path": "machine/fgc-origin-mark.json",
+      "format": "json",
+      "kind": "machine-readable provenance identity anchor",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "FGC origin mark",
+        "provenance",
+        "lineage",
+        "canonical token",
+        "NFC"
+      ],
+      "declared_meaning": "Canonical FGC origin declaration used to anchor machine-readable artifact identity and lineage claims without independently proving authorship or ownership."
+    },
+    {
+      "id": "cmb-machine-target-registry",
+      "title": "CMB-66 Machine Target Registry",
+      "path": "machine/targets.json",
+      "format": "json",
+      "kind": "machine-readable compiler target registry",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON-LD",
+        "Turtle",
+        "Prolog",
+        "Rego",
+        "SMT-LIB",
+        "CBOR",
+        "Protobuf"
+      ],
+      "declared_meaning": "Registry of deterministic CMB-66 output formats and the origin and lineage fields every target must preserve."
+    },
+    {
+      "id": "cmb-machine-index",
+      "title": "CMB Machine Discovery Index",
+      "path": "machine/index.json",
+      "format": "json",
+      "kind": "machine-readable discovery index",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "machine discovery",
+        "CMB-66",
+        "HARMONI-666",
+        "schemas",
+        "compiler targets"
+      ],
+      "declared_meaning": "Machine-facing index linking the canonical CMB-66 IR, FGC origin identity, compiler targets, schemas, and HARMONI-666 proof layer."
     }
   ]
 }
