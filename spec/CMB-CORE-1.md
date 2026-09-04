@@ -101,6 +101,8 @@ Breaking semantic changes MUST create a new contract version according to
 
 Existing version identifiers MUST NOT be silently redefined.
 
+CMB-SRP-1 is an experimental implementation profile that applies these core boundaries to risk-adaptive AI-assisted software execution. See [CMB-SRP-1](CMB-SRP-1.md).
+
 ## 9. Conformance
 
 A component claiming conformance to a versioned CMB contract MUST:
