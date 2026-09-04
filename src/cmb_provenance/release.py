@@ -11,6 +11,7 @@ CANONICAL_PUBLIC_ARTIFACTS: tuple[str, ...] = (
     "MANIFESTO.md",
     "CMB_Polyglot_Firewall_Specification.md",
     "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+    "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
 )
 
 
