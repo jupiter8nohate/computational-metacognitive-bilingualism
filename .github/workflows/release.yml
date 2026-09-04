@@ -65,6 +65,8 @@ jobs:
           cmb-provenance selftest
           cmb-z13 --version
           cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
+          cmb-edu --version
+          cmb-edu validate '🪐::LEARN -> DECLARE[curious || focused] => ASK("how_do_loops_work") -> PATTERN_NOT_PROOF;'
       - name: Seal canonical public CMB artifacts
         run: >-
           python scripts/seal_canonical_artifacts.py
