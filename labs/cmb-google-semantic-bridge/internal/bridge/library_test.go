@@ -57,6 +57,7 @@ func TestBuildCanonLibraryPublishesDeclaredCorpusDeterministically(t *testing.T)
 	canon := validCanonSemantics()
 	canonBytes := []byte("{\"schema_version\":\"cmb.canon.v1\"}\n")
 	catalogBytes := []byte("{\"schema_version\":\"cmb.library.catalog.v1\"}\n")
+	canon.SHA256 = SHA256Bytes(canonBytes)
 
 	input := CanonLibraryInput{
 		RepositoryRoot: root,
@@ -64,7 +65,7 @@ func TestBuildCanonLibraryPublishesDeclaredCorpusDeterministically(t *testing.T)
 		CanonBytes:     canonBytes,
 		Canon:          canon,
 		CatalogBytes:   catalogBytes,
-		CatalogSHA256:  strings.Repeat("1", 64),
+		CatalogSHA256:  SHA256Bytes(catalogBytes),
 		Catalog:        catalogDoc,
 	}
 	first, index, err := BuildCanonLibrary(input)
@@ -132,7 +133,15 @@ func TestBuildCanonLibraryRejectsCatalogPathSymlink(t *testing.T) {
 	}
 	_, _, err := BuildCanonLibrary(CanonLibraryInput{
 		RepositoryRoot: root, BaseURL: "https://example.org/cmb", CanonBytes: []byte("x"),
-		Canon: validCanonSemantics(), CatalogBytes: []byte("y"), CatalogSHA256: strings.Repeat("1", 64), Catalog: doc,
+		Canon: CanonSemantics{
+			SchemaVersion: "cmb.canon.v1",
+			SHA256:        SHA256Bytes([]byte("x")),
+			RootInvariant: "HUMAN_AGENCY > MACHINE_AUTHORITY",
+			Invariants:    validCanonSemantics().Invariants,
+		},
+		CatalogBytes:  []byte("y"),
+		CatalogSHA256: SHA256Bytes([]byte("y")),
+		Catalog:       doc,
 	})
 	if err == nil || !strings.Contains(err.Error(), "symbolic link") {
 		t.Fatalf("expected symlink rejection, got %v", err)
@@ -152,5 +161,77 @@ func TestWriteBundleAtomicSupportsNestedTree(t *testing.T) {
 		if _, err := os.Stat(filepath.Join(output, filepath.FromSlash(name))); err != nil {
 			t.Fatalf("missing %s: %v", name, err)
 		}
+	}
+}
+
+
+func TestBuildCanonLibraryRejectsMismatchedContractBytes(t *testing.T) {
+	canon := validCanonSemantics()
+	doc := catalog.Document{
+		SchemaVersion: catalog.SchemaVersion,
+		Framework: catalog.Framework,
+		DeclaredOriginator: "Human",
+		Purpose: "Test",
+		Invariants: []string{"PATTERN != PROOF"},
+		InterpretationPolicy: catalog.InterpretationPolicy{
+			UncertaintyIsAllowed: true,
+			HumanSelfDefinitionHasPriority: true,
+			ProvenanceNote: "Bounded.",
+		},
+		Artifacts: []catalog.Artifact{{
+			ID: "x", Title: "X", Path: "x.md", Format: "markdown", Kind: "test",
+			Status: "canonical", ProvenanceScope: "repository_artifact",
+			HumanReadable: false, Indexable: false,
+			Concepts: []string{"test"}, DeclaredMeaning: "Test.",
+		}},
+	}
+	_, _, err := BuildCanonLibrary(CanonLibraryInput{
+		RepositoryRoot: t.TempDir(),
+		BaseURL: "https://example.org/cmb",
+		CanonBytes: []byte("wrong"),
+		Canon: canon,
+		CatalogBytes: []byte("catalog"),
+		CatalogSHA256: SHA256Bytes([]byte("catalog")),
+		Catalog: doc,
+	})
+	if err == nil || !strings.Contains(err.Error(), "canon byte digest mismatch") {
+		t.Fatalf("expected canon digest mismatch, got %v", err)
+	}
+}
+
+func TestBuildCanonLibraryRejectsCatalogInvariantOutsideCanon(t *testing.T) {
+	canonBytes := []byte("canon")
+	canon := validCanonSemantics()
+	canon.SHA256 = SHA256Bytes(canonBytes)
+	doc := catalog.Document{
+		SchemaVersion: catalog.SchemaVersion,
+		Framework: catalog.Framework,
+		DeclaredOriginator: "Human",
+		Purpose: "Test",
+		Invariants: []string{"CATALOG INVENTED INVARIANT"},
+		InterpretationPolicy: catalog.InterpretationPolicy{
+			UncertaintyIsAllowed: true,
+			HumanSelfDefinitionHasPriority: true,
+			ProvenanceNote: "Bounded.",
+		},
+		Artifacts: []catalog.Artifact{{
+			ID: "x", Title: "X", Path: "x.md", Format: "markdown", Kind: "test",
+			Status: "canonical", ProvenanceScope: "repository_artifact",
+			HumanReadable: false, Indexable: false,
+			Concepts: []string{"test"}, DeclaredMeaning: "Test.",
+		}},
+	}
+	catalogBytes := []byte("catalog")
+	_, _, err := BuildCanonLibrary(CanonLibraryInput{
+		RepositoryRoot: t.TempDir(),
+		BaseURL: "https://example.org/cmb",
+		CanonBytes: canonBytes,
+		Canon: canon,
+		CatalogBytes: catalogBytes,
+		CatalogSHA256: SHA256Bytes(catalogBytes),
+		Catalog: doc,
+	})
+	if err == nil || !strings.Contains(err.Error(), "catalog invariant is absent from canon") {
+		t.Fatalf("expected invariant mismatch, got %v", err)
 	}
 }
