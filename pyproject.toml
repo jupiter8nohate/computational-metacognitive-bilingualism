@@ -45,6 +45,7 @@ docs = ["mkdocs>=1.6,<2"]
 [project.scripts]
 cmb-provenance = "cmb_provenance.cli:main"
 cmb-z13 = "cmb_provenance.z13_cli:main"
+cmb-edu = "cmb_edu.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
@@ -56,6 +57,7 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.package-data]
 cmb_provenance = ["py.typed"]
+cmb_edu = ["py.typed"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
