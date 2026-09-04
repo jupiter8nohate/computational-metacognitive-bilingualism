@@ -66,6 +66,8 @@ def test_release_workflow_uses_canonical_sealing_script() -> None:
 
     assert "python scripts/seal_canonical_artifacts.py" in workflow
     assert "--output dist/cmb-source.cmb-receipt.json" in workflow
+    assert "cmb-edu --version" in workflow
+    assert "cmb-edu validate" in workflow
 
 
 def test_ci_generates_and_verifies_canonical_receipt() -> None:
