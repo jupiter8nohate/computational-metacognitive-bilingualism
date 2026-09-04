@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.policy-envelope.v1.schema.json",
+  "title": "CMB Policy Envelope v1",
+  "description": "A deny-dominant, scope-limited machine-readable policy envelope. Declaration alone is not technical enforcement.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "policy_id", "version", "scope", "task_actions", "allow", "deny", "revoked"],
+  "properties": {
+    "schema": {"const": "cmb.policy-envelope.v1"},
+    "policy_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "version": {"const": "1.0"},
+    "scope": {"enum": ["THIS_REQUEST", "THIS_SESSION", "THIS_ARTIFACT", "THIS_PROJECT", "UNTIL_REVOKED"]},
+    "task_actions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/action"}},
+    "allow": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/action"}},
+    "deny": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/action"}},
+    "revoked": {"type": "boolean"}
+  },
+  "$defs": {
+    "action": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}$"}
+  }
+}

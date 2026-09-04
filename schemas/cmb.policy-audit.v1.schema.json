@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/schemas/cmb.policy-audit.v1.schema.json",
+  "title": "CMB Policy Audit Event v1",
+  "description": "An inspectable record of one CMB policy decision. It records the evaluator's decision, not proof that every surrounding system complied.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "event_id", "request_id", "action", "decision", "reason", "policy_id", "policy_version", "scope", "occurred_at"],
+  "properties": {
+    "schema": {"const": "cmb.policy-audit.v1"},
+    "event_id": {"type": "string", "minLength": 1},
+    "request_id": {"type": "string", "minLength": 1},
+    "action": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}$"},
+    "decision": {"enum": ["ALLOW", "DENY"]},
+    "reason": {"enum": ["explicit_prohibition", "policy_revoked", "unknown_action", "not_task_necessary", "explicit_permission_required", "explicit_permission", "task_necessary"]},
+    "policy_id": {"type": "string", "minLength": 1},
+    "policy_version": {"const": "1.0"},
+    "scope": {"enum": ["THIS_REQUEST", "THIS_SESSION", "THIS_ARTIFACT", "THIS_PROJECT", "UNTIL_REVOKED"]},
+    "occurred_at": {"type": "string", "format": "date-time"}
+  }
+}

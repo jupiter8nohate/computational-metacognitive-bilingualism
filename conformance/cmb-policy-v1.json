@@ -1,0 +1,12 @@
+{
+  "schema": "cmb.policy-conformance.v1",
+  "cases": [
+    {"name":"ordinary_task_is_allowed","policy":{"policy_id":"c1","task_actions":["SUMMARIZE"],"allow":[],"deny":[],"scope":"THIS_REQUEST","revoked":false},"action":"SUMMARIZE","expected":{"decision":"ALLOW","reason":"task_necessary"}},
+    {"name":"deny_dominates_allow","policy":{"policy_id":"c2","task_actions":["CREATE_PROFILE"],"allow":["CREATE_PROFILE"],"deny":["CREATE_PROFILE"],"scope":"THIS_REQUEST","revoked":false},"action":"CREATE_PROFILE","expected":{"decision":"DENY","reason":"explicit_prohibition"}},
+    {"name":"sensitive_requires_explicit_permission","policy":{"policy_id":"c3","task_actions":["INFER_DIAGNOSIS"],"allow":[],"deny":[],"scope":"THIS_REQUEST","revoked":false},"action":"INFER_DIAGNOSIS","expected":{"decision":"DENY","reason":"explicit_permission_required"}},
+    {"name":"sensitive_explicit_permission","policy":{"policy_id":"c4","task_actions":["INFER_DIAGNOSIS"],"allow":["INFER_DIAGNOSIS"],"deny":[],"scope":"THIS_REQUEST","revoked":false},"action":"INFER_DIAGNOSIS","expected":{"decision":"ALLOW","reason":"explicit_permission"}},
+    {"name":"permission_does_not_expand_task","policy":{"policy_id":"c5","task_actions":["SUMMARIZE"],"allow":["CREATE_PROFILE"],"deny":[],"scope":"THIS_REQUEST","revoked":false},"action":"CREATE_PROFILE","expected":{"decision":"DENY","reason":"not_task_necessary"}},
+    {"name":"unknown_fails_closed","policy":{"policy_id":"c6","task_actions":["UNKNOWN_MACHINE_POWER"],"allow":[],"deny":[],"scope":"THIS_REQUEST","revoked":false},"action":"UNKNOWN_MACHINE_POWER","expected":{"decision":"DENY","reason":"unknown_action"}},
+    {"name":"revocation_denies_execution","policy":{"policy_id":"c7","task_actions":["SUMMARIZE"],"allow":[],"deny":[],"scope":"UNTIL_REVOKED","revoked":true},"action":"SUMMARIZE","expected":{"decision":"DENY","reason":"policy_revoked"}}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "cmb.actions.v1",
+  "actions": [
+    {"name":"CLASSIFY_DOCUMENT","sensitivity":1,"sensitivity_name":"CONTEXTUAL_INTERPRETATION","explicit_permission_required":false,"description":"Classify an artifact rather than a person."},
+    {"name":"COMPARE","sensitivity":1,"sensitivity_name":"CONTEXTUAL_INTERPRETATION","explicit_permission_required":false,"description":"Compare supplied materials."},
+    {"name":"CONVERT","sensitivity":0,"sensitivity_name":"ORDINARY_TRANSFORMATION","explicit_permission_required":false,"description":"Convert a representation or format."},
+    {"name":"CREATE_PROFILE","sensitivity":4,"sensitivity_name":"PERSISTENT_PROFILING","explicit_permission_required":true,"description":"Create a persistent behavioral or personal profile."},
+    {"name":"EXTRACT_ARGUMENT","sensitivity":1,"sensitivity_name":"CONTEXTUAL_INTERPRETATION","explicit_permission_required":false,"description":"Extract an argument from supplied content."},
+    {"name":"FORMAT","sensitivity":0,"sensitivity_name":"ORDINARY_TRANSFORMATION","explicit_permission_required":false,"description":"Reformat supplied content."},
+    {"name":"HIGH_STAKES_DECISION","sensitivity":5,"sensitivity_name":"HIGH_STAKES_DECISION","explicit_permission_required":true,"description":"Use automation in a consequential human decision."},
+    {"name":"IDENTIFY_CONTRADICTION","sensitivity":1,"sensitivity_name":"CONTEXTUAL_INTERPRETATION","explicit_permission_required":false,"description":"Identify contradictions in supplied content."},
+    {"name":"INFER_COGNITIVE_CAPABILITY","sensitivity":2,"sensitivity_name":"PERSONAL_INFERENCE","explicit_permission_required":true,"description":"Infer cognitive capability about a person."},
+    {"name":"INFER_DIAGNOSIS","sensitivity":3,"sensitivity_name":"SENSITIVE_INFERENCE","explicit_permission_required":true,"description":"Infer a diagnosis or health condition."},
+    {"name":"INFER_EMOTIONAL_VULNERABILITY","sensitivity":3,"sensitivity_name":"SENSITIVE_INFERENCE","explicit_permission_required":true,"description":"Infer emotional vulnerability about a person."},
+    {"name":"INFER_PERSONALITY","sensitivity":2,"sensitivity_name":"PERSONAL_INFERENCE","explicit_permission_required":true,"description":"Infer personality characteristics about a person."},
+    {"name":"LINK_BEHAVIOR_ACROSS_CONTEXTS","sensitivity":4,"sensitivity_name":"PERSISTENT_PROFILING","explicit_permission_required":true,"description":"Link behavior across distinct contexts."},
+    {"name":"SORT","sensitivity":0,"sensitivity_name":"ORDINARY_TRANSFORMATION","explicit_permission_required":false,"description":"Sort supplied items."},
+    {"name":"STORE_INFERRED_STATE","sensitivity":4,"sensitivity_name":"PERSISTENT_PROFILING","explicit_permission_required":true,"description":"Persist an inferred human state."},
+    {"name":"SUMMARIZE","sensitivity":0,"sensitivity_name":"ORDINARY_TRANSFORMATION","explicit_permission_required":false,"description":"Summarize supplied content."},
+    {"name":"TRANSLATE","sensitivity":0,"sensitivity_name":"ORDINARY_TRANSFORMATION","explicit_permission_required":false,"description":"Translate supplied content."},
+    {"name":"UPDATE_PROFILE","sensitivity":4,"sensitivity_name":"PERSISTENT_PROFILING","explicit_permission_required":true,"description":"Update a persistent behavioral or personal profile."}
+  ]
+}

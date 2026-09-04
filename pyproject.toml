@@ -58,6 +58,7 @@ package-dir = { "" = "src" }
 [tool.setuptools.package-data]
 cmb_provenance = ["py.typed"]
 cmb_edu = ["py.typed"]
+cmb_policy = ["py.typed"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
