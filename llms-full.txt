@@ -258,3 +258,30 @@ RELATED_TERM != EXACT_SYNONYM
 PUBLISHED != INDEXED
 INDEXED != RETRIEVED
 DISCOVERY != ENDORSEMENT
+
+## Conversation Atlas and mass translation
+
+docs/CMB_CONVERSATION_ATLAS.md
+library/cmb-conversation-atlas.v1.json
+schemas/cmb.conversation-atlas.v1.schema.json
+docs/CMB_POLYGLOT_TRANSLATIONS.md
+
+Canonical public language name:
+Err ⃝or⃟⃤ GLITCHOLOGY
+
+Naming boundary:
+- GLITCHOLOGY is the short name.
+- GLITCH-8 / CMB-G8 is the registry and implementation layer.
+- Err ⃝or⃟⃤ GLITCHOLOGY is the canonical public language name.
+
+Mass-translation contract:
+SYNTAX_MAY_CHANGE
+SEMANTICS_MUST_NOT_DRIFT
+
+Conversation Atlas boundaries:
+PROVENANCE != CONSCIOUSNESS
+CREATIVE_SIGNATURE != COMPLETE_PERSON
+CRYPTOGRAPHIC_INTEGRITY != AUTHORSHIP_BY_ITSELF
+DECLARED_POLICY != TECHNICAL_ENFORCEMENT
+
+GLITCH://404_SOVEREIGN_RETRY_LOOP is recorded in the machine Atlas as an authored Err ⃝or⃟⃤ GLITCHOLOGY semantic sequence. Historical characters retain their independent meanings outside this framework.
