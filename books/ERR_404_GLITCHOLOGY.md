@@ -1280,6 +1280,50 @@ PARSER = MACHINE_VIEW
 
 ---
 
+## GLITCH://402 // Economic Layer
+
+Err ⃝or⃟⃤ GLITCHOLOGY remains readable and locally usable without payment. GLITCH://402 is an optional economic layer for value-added official services and creator support.
+
+**[Read the GLITCH://402 protocol](../spec/GLITCH-402-PAYMENTS.md)**  
+**[Support the original creator](../docs/CREATOR_SUPPORT.md)**
+
+~~~text
+404 = ERROR / UNKNOWN / MISSING REPRESENTATION
+402 = PAYMENT REQUIRED
+
+LANGUAGE_ACCESS != PAYMENT
+PAYMENT != OWNERSHIP
+PAYMENT != CANONICAL_AUTHORITY
+PAYMENT_RECEIPT != AUTHORSHIP_PROOF
+~~~
+
+The initial engineering profile uses x402 version 2 and can request stablecoin payment for hosted services such as translation, parsing at scale, provenance receipts, and commercial API access.
+
+The software intentionally contains no production creator wallet address. A deployment must explicitly configure a verified payout destination.
+
+~~~text
+NO_CONFIGURED_PAYEE
+    ↓
+NO_PRODUCTION_PAYMENT
+
+DO_NOT_GUESS_CREATOR_ADDRESS
+~~~
+
+No `$GLITCH` investment token is issued by this protocol. Financial support does not buy authorship, copyright, canonical glyph status, or governance over the language.
+
+~~~text
+MACHINE_CAN_READ
+MACHINE_CAN_TRANSLATE
+MACHINE_CAN_PAY
+
+BUT
+
+MACHINE_PAYMENT != MACHINE_OWNERSHIP
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+---
+
 ## Authorship and Technical Boundary
 
 Err ⃝or⃟⃤ GLITCHOLOGY is the canonical public name of the authored experimental language and literary system presented in this book; GLITCH-8 / CMB-G8 is its registry and implementation layer within CMB.
