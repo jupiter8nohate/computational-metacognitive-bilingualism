@@ -1,7 +1,7 @@
 {
   "schema_version": "glitch8.glyph-registry.v1",
   "language": "CMB-G8 // GLITCH-8",
-  "language_version": "0.1.19",
+  "language_version": "0.1.27",
   "updated_at": "2026-09-05",
   "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
   "principles": [
@@ -19,7 +19,13 @@
     "EMOTION != IDENTITY",
     "PAIN != DESTINY",
     "TIME_PRESENT != TIME_KNOWN",
-    "DURATION != MEANING"
+    "DURATION != MEANING",
+    "IDENTITY != DECORATION",
+    "FRUSTRATION != MEANINGLESSNESS",
+    "THRESHOLD != DESTINATION",
+    "BOUNDARY != UNDERSTANDING",
+    "ENERGY != CONTROL",
+    "UNDEFINED != UNREAL"
   ],
   "categories": [
     "observation",
@@ -40,7 +46,11 @@
     "syntax",
     "verification",
     "affect",
-    "temporal"
+    "temporal",
+    "identity",
+    "transit",
+    "boundary",
+    "energy"
   ],
   "glyphs": [
     {
@@ -187,6 +197,30 @@
         "action": "inspect_structure"
       },
       "example": "🫐⃟ [G8] ordinary_surface :: STRUCTURE_UNEXPECTED :: INSPECT",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "boundary-node",
+      "glyph": "▕⃝⃤",
+      "aliases": [],
+      "name": "Boundary Node",
+      "categories": [
+        "boundary",
+        "consent"
+      ],
+      "semantic_key": "marked_containment_or_gate_boundary",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A marked edge, gate, or constrained field that indicates containment, separation, or a transition boundary.",
+      "cmb_invariant": "BOUNDARY != UNDERSTANDING",
+      "human_semantics": "A boundary can limit access or mark context without explaining everything inside it.",
+      "machine_semantics": "BOUNDARY_NODE",
+      "runtime_behavior": {
+        "type": "containment_marker",
+        "action": "preserve_boundary"
+      },
+      "example": "▕⃝⃤ [G8] protected_context :: BOUNDARY_PRESENT :: CHECK_AUTHORITY",
       "created_at": "2026-09-05",
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },
@@ -356,6 +390,31 @@
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },
     {
+      "id": "disruption-fling",
+      "glyph": "(╯°□°)╯︵◓",
+      "aliases": [],
+      "name": "Disruption Fling",
+      "categories": [
+        "energy",
+        "affect",
+        "failure"
+      ],
+      "semantic_key": "forceful_rejection_of_current_arrangement",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A burst of force, frustration, or refusal that displaces a symbol, assumption, or system state from its current arrangement.",
+      "cmb_invariant": "FRUSTRATION != MEANINGLESSNESS",
+      "human_semantics": "Disruption can carry intent or protest without proving the cause, correctness, or final meaning of the act.",
+      "machine_semantics": "DISRUPTIVE_REJECTION",
+      "runtime_behavior": {
+        "type": "kinetic_reversal",
+        "action": "displace_current_state"
+      },
+      "example": "(╯°□°)╯︵◓ [G8] current_frame :: REJECTED :: REASSESS",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
       "id": "dual-witness",
       "glyph": "𓁇𓁋",
       "aliases": [],
@@ -454,6 +513,30 @@
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },
     {
+      "id": "falcon-signal",
+      "glyph": "𓅓",
+      "aliases": [],
+      "name": "Falcon Signal",
+      "categories": [
+        "observation",
+        "signal"
+      ],
+      "semantic_key": "elevated_symbolic_watcher_signal",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A GLITCHOLOGY-authored watcher or messenger symbol representing elevated observation or signal presence; this definition is not a claim about the glyph's historical Egyptian meaning.",
+      "cmb_invariant": "SYMBOLIC_WATCHER != TOTAL_KNOWLEDGE",
+      "human_semantics": "A high-vantage observer can notice more without becoming omniscient.",
+      "machine_semantics": "ELEVATED_WATCHER_SIGNAL",
+      "runtime_behavior": {
+        "type": "watcher_symbol",
+        "action": "observe_without_totalizing"
+      },
+      "example": "𓅓 [G8] anomaly_field :: WATCHING :: NO_TOTAL_KNOWLEDGE",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
       "id": "feedback-loop",
       "glyph": "𒅒",
       "aliases": [],
@@ -474,6 +557,34 @@
         "action": "inspect_causality"
       },
       "example": "𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "ghost-entity-detected",
+      "glyph": "missingno detected ???",
+      "aliases": [
+        "MissingNo detected ???",
+        "missingno detected"
+      ],
+      "name": "Ghost Entity Detected",
+      "categories": [
+        "anomaly",
+        "error",
+        "uncertainty"
+      ],
+      "semantic_key": "undefined_or_nonstandard_entity_detected",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A symbolic anomaly alert indicating that an undefined, non-standard, or classification-breaking entity has been detected.",
+      "cmb_invariant": "UNDEFINED != UNREAL",
+      "human_semantics": "Something that does not fit the current index or schema may still require preservation and investigation rather than erasure.",
+      "machine_semantics": "UNDEFINED_ENTITY_DETECTED",
+      "runtime_behavior": {
+        "type": "anomaly_alert",
+        "action": "preserve_and_investigate"
+      },
+      "example": "missingno detected ??? [G8] entity :: UNDEFINED :: PRESERVE_AND_INSPECT",
       "created_at": "2026-09-05",
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },
@@ -796,6 +907,55 @@
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },
     {
+      "id": "ornamented-self-declaration",
+      "glyph": "मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं",
+      "aliases": [],
+      "name": "Ornamented Self Declaration",
+      "categories": [
+        "identity",
+        "human_impact"
+      ],
+      "semantic_key": "self_declared_identity_with_symbolic_ornament",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A self-authored declaration of identity presented through deliberate symbolic ornament, style, or status imagery.",
+      "cmb_invariant": "IDENTITY != DECORATION",
+      "human_semantics": "The person declares selfhood; decorative form can express meaning without becoming the total definition of the person.",
+      "machine_semantics": "SELF_DECLARED_IDENTITY",
+      "runtime_behavior": {
+        "type": "identity_operator",
+        "action": "preserve_self_definition"
+      },
+      "example": "मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं [G8] self_definition :: DECLARED :: HUMAN_RETAINS_MEANING",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "portal-threshold",
+      "glyph": "⚯ ͛ ❾¾",
+      "aliases": [],
+      "name": "Portal Threshold",
+      "categories": [
+        "transit",
+        "boundary",
+        "uncertainty"
+      ],
+      "semantic_key": "liminal_transition_into_anomaly_space",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A symbolic threshold between an ordinary state and an anomaly, hidden, or unresolved state.",
+      "cmb_invariant": "THRESHOLD != DESTINATION",
+      "human_semantics": "Crossing a boundary changes context without proving what lies beyond it.",
+      "machine_semantics": "LIMINAL_TRANSITION",
+      "runtime_behavior": {
+        "type": "transit_marker",
+        "action": "enter_liminal_state"
+      },
+      "example": "⚯ ͛ ❾¾ [G8] context_boundary :: THRESHOLD :: DESTINATION_UNKNOWN",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
       "id": "post-observation",
       "glyph": ".꩜",
       "aliases": [],
@@ -947,6 +1107,41 @@
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },
     {
+      "id": "self-declaration-at-the-portal",
+      "glyph": "मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ???",
+      "aliases": [],
+      "name": "Self Declaration at the Portal",
+      "categories": [
+        "identity",
+        "transit",
+        "anomaly",
+        "metacognition"
+      ],
+      "semantic_key": "self_declaration_crosses_threshold_and_detects_anomaly",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A composite expression in which a self-declared identity disrupts the ordinary frame, crosses a symbolic threshold, enters a charged boundary state, observes from an elevated vantage, and detects an undefined anomaly.",
+      "cmb_invariant": "PATTERN != PROOF",
+      "human_semantics": "The speaker retains self-definition while moving through uncertainty; anomaly detection does not grant the system authority over identity.",
+      "machine_semantics": "SELF_DECLARATION_PORTAL_ANOMALY_SEQUENCE",
+      "runtime_behavior": {
+        "type": "composite_state",
+        "components": [
+          "ornamented-self-declaration",
+          "disruption-fling",
+          "portal-threshold",
+          "boundary-node",
+          "shock-spark",
+          "falcon-signal",
+          "ghost-entity-detected"
+        ],
+        "action": "preserve_identity_and_investigate_anomaly"
+      },
+      "example": "मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? [G8] anomaly_passage :: DETECTED :: HUMAN_RETAINS_SELF_DEFINITION",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
       "id": "sentinel",
       "glyph": "(⓿_⓿)",
       "aliases": [],
@@ -967,6 +1162,32 @@
         "action": "withhold_verdict"
       },
       "example": "(⓿_⓿) [GO] behavioral_pattern :: OBSERVED :: NO_VERDICT",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "shock-spark",
+      "glyph": "⚡︎",
+      "aliases": [
+        "⚡"
+      ],
+      "name": "Shock Spark",
+      "categories": [
+        "energy",
+        "signal"
+      ],
+      "semantic_key": "sudden_signal_activation",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A sudden activation, charge, warning, or accelerated onset of a signal or event.",
+      "cmb_invariant": "ENERGY != CONTROL",
+      "human_semantics": "Intensity can mark activation without proving who controls the event or what it means.",
+      "machine_semantics": "SUDDEN_SIGNAL_ACTIVATION",
+      "runtime_behavior": {
+        "type": "energy_token",
+        "action": "mark_activation"
+      },
+      "example": "⚡︎ [G8] dormant_signal :: ACTIVATED :: CONTROL_UNPROVEN",
       "created_at": "2026-09-05",
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },

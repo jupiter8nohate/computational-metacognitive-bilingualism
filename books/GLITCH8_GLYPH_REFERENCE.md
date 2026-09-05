@@ -1,7 +1,7 @@
 # GLITCH-8 Glyph Reference
 
 **Language:** CMB-G8 // GLITCH-8
-**Registry version:** 0.1.19
+**Registry version:** 0.1.27
 **Updated:** 2026-09-05
 
 > Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.
@@ -24,6 +24,12 @@ EMOTION != IDENTITY
 PAIN != DESTINY
 TIME_PRESENT != TIME_KNOWN
 DURATION != MEANING
+IDENTITY != DECORATION
+FRUSTRATION != MEANINGLESSNESS
+THRESHOLD != DESTINATION
+BOUNDARY != UNDERSTANDING
+ENERGY != CONTROL
+UNDEFINED != UNREAL
 ~~~
 
 ## ☻⃤⃞⃟⃤ // Anomalous Observer
@@ -144,6 +150,26 @@ Something harmless-looking contains unexpected structure or significance.
 
 ~~~text
 🫐⃟ [G8] ordinary_surface :: STRUCTURE_UNEXPECTED :: INSPECT
+~~~
+
+## ▕⃝⃤ // Boundary Node
+
+- **ID:** boundary-node
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, consent
+- **Aliases:** none
+- **Semantic key:** marked_containment_or_gate_boundary
+- **CMB invariant:** BOUNDARY != UNDERSTANDING
+
+A marked edge, gate, or constrained field that indicates containment, separation, or a transition boundary.
+
+**Human semantics:** A boundary can limit access or mark context without explaining everything inside it.
+
+**Machine semantics:** BOUNDARY_NODE
+
+~~~text
+▕⃝⃤ [G8] protected_context :: BOUNDARY_PRESENT :: CHECK_AUTHORITY
 ~~~
 
 ## ꉂ🗯 // Burst Speech
@@ -286,6 +312,26 @@ An unresolved question that requires review before consequential action.
 ‽ [G8] machine_overrode_human_appeal :: CRITICAL :: HALT
 ~~~
 
+## (╯°□°)╯︵◓ // Disruption Fling
+
+- **ID:** disruption-fling
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** energy, affect, failure
+- **Aliases:** none
+- **Semantic key:** forceful_rejection_of_current_arrangement
+- **CMB invariant:** FRUSTRATION != MEANINGLESSNESS
+
+A burst of force, frustration, or refusal that displaces a symbol, assumption, or system state from its current arrangement.
+
+**Human semantics:** Disruption can carry intent or protest without proving the cause, correctness, or final meaning of the act.
+
+**Machine semantics:** DISRUPTIVE_REJECTION
+
+~~~text
+(╯°□°)╯︵◓ [G8] current_frame :: REJECTED :: REASSESS
+~~~
+
 ## 𓁇𓁋 // Dual Witness
 
 - **ID:** dual-witness
@@ -366,6 +412,26 @@ A signal whose original form has been substantially damaged, lost, or rendered u
 ���� [G8] damaged_payload :: CORRUPTED :: REQUEST_SOURCE
 ~~~
 
+## 𓅓 // Falcon Signal
+
+- **ID:** falcon-signal
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** observation, signal
+- **Aliases:** none
+- **Semantic key:** elevated_symbolic_watcher_signal
+- **CMB invariant:** SYMBOLIC_WATCHER != TOTAL_KNOWLEDGE
+
+A GLITCHOLOGY-authored watcher or messenger symbol representing elevated observation or signal presence; this definition is not a claim about the glyph's historical Egyptian meaning.
+
+**Human semantics:** A high-vantage observer can notice more without becoming omniscient.
+
+**Machine semantics:** ELEVATED_WATCHER_SIGNAL
+
+~~~text
+𓅓 [G8] anomaly_field :: WATCHING :: NO_TOTAL_KNOWLEDGE
+~~~
+
 ## 𒅒 // Feedback Loop
 
 - **ID:** feedback-loop
@@ -384,6 +450,26 @@ A model output changes the environment and later appears as if it were independe
 
 ~~~text
 𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY
+~~~
+
+## missingno detected ??? // Ghost Entity Detected
+
+- **ID:** ghost-entity-detected
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** anomaly, error, uncertainty
+- **Aliases:** MissingNo detected ???, missingno detected
+- **Semantic key:** undefined_or_nonstandard_entity_detected
+- **CMB invariant:** UNDEFINED != UNREAL
+
+A symbolic anomaly alert indicating that an undefined, non-standard, or classification-breaking entity has been detected.
+
+**Human semantics:** Something that does not fit the current index or schema may still require preservation and investigation rather than erasure.
+
+**Machine semantics:** UNDEFINED_ENTITY_DETECTED
+
+~~~text
+missingno detected ??? [G8] entity :: UNDEFINED :: PRESERVE_AND_INSPECT
 ~~~
 
 ## (╥﹏╥) ⩇⩇: ⩇⩇ // Grief Outside the Clock
@@ -646,6 +732,46 @@ An ironic expression mask used when failure is present but presented with compos
 ×͜× [G8] failure_state :: MASKED_WITH_HUMOR :: DO_NOT_INFER_STABILITY
 ~~~
 
+## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं // Ornamented Self Declaration
+
+- **ID:** ornamented-self-declaration
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** identity, human_impact
+- **Aliases:** none
+- **Semantic key:** self_declared_identity_with_symbolic_ornament
+- **CMB invariant:** IDENTITY != DECORATION
+
+A self-authored declaration of identity presented through deliberate symbolic ornament, style, or status imagery.
+
+**Human semantics:** The person declares selfhood; decorative form can express meaning without becoming the total definition of the person.
+
+**Machine semantics:** SELF_DECLARED_IDENTITY
+
+~~~text
+मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं [G8] self_definition :: DECLARED :: HUMAN_RETAINS_MEANING
+~~~
+
+## ⚯ ͛ ❾¾ // Portal Threshold
+
+- **ID:** portal-threshold
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** transit, boundary, uncertainty
+- **Aliases:** none
+- **Semantic key:** liminal_transition_into_anomaly_space
+- **CMB invariant:** THRESHOLD != DESTINATION
+
+A symbolic threshold between an ordinary state and an anomaly, hidden, or unresolved state.
+
+**Human semantics:** Crossing a boundary changes context without proving what lies beyond it.
+
+**Machine semantics:** LIMINAL_TRANSITION
+
+~~~text
+⚯ ͛ ❾¾ [G8] context_boundary :: THRESHOLD :: DESTINATION_UNKNOWN
+~~~
+
 ## .꩜ // Post Observation
 
 - **ID:** post-observation
@@ -766,6 +892,26 @@ The first meaningful deviation from an expected model or pattern.
 𐦂 [PY] expected=A observed=B :: ANOMALY :: INVESTIGATE
 ~~~
 
+## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? // Self Declaration at the Portal
+
+- **ID:** self-declaration-at-the-portal
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** identity, transit, anomaly, metacognition
+- **Aliases:** none
+- **Semantic key:** self_declaration_crosses_threshold_and_detects_anomaly
+- **CMB invariant:** PATTERN != PROOF
+
+A composite expression in which a self-declared identity disrupts the ordinary frame, crosses a symbolic threshold, enters a charged boundary state, observes from an elevated vantage, and detects an undefined anomaly.
+
+**Human semantics:** The speaker retains self-definition while moving through uncertainty; anomaly detection does not grant the system authority over identity.
+
+**Machine semantics:** SELF_DECLARATION_PORTAL_ANOMALY_SEQUENCE
+
+~~~text
+मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? [G8] anomaly_passage :: DETECTED :: HUMAN_RETAINS_SELF_DEFINITION
+~~~
+
 ## (⓿_⓿) // Sentinel
 
 - **ID:** sentinel
@@ -784,6 +930,26 @@ Observe a pattern without converting observation into a final conclusion.
 
 ~~~text
 (⓿_⓿) [GO] behavioral_pattern :: OBSERVED :: NO_VERDICT
+~~~
+
+## ⚡︎ // Shock Spark
+
+- **ID:** shock-spark
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** energy, signal
+- **Aliases:** ⚡
+- **Semantic key:** sudden_signal_activation
+- **CMB invariant:** ENERGY != CONTROL
+
+A sudden activation, charge, warning, or accelerated onset of a signal or event.
+
+**Human semantics:** Intensity can mark activation without proving who controls the event or what it means.
+
+**Machine semantics:** SUDDEN_SIGNAL_ACTIVATION
+
+~~~text
+⚡︎ [G8] dormant_signal :: ACTIVATED :: CONTROL_UNPROVEN
 ~~~
 
 ## ˖ ࣪ // Signal Dust
