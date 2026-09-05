@@ -4,6 +4,13 @@ All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
 
+### Added
+
+- Established the canonical public name **Err ⃝or⃟⃤ GLITCHOLOGY**, while retaining GLITCHOLOGY as a short name and GLITCH-8 / CMB-G8 as the registry and implementation layer.
+- Added a canonical origin biography, a Creative Cognitive Signature protocol, and a Living Book / Versioned Autobiography protocol.
+- Added structured GitHub issue forms for new glyph proposals and sourced historical/factual corrections.
+- Extended the living GLITCHOLOGY book with a Creative Cognitive Signature chapter and explicit provenance/biometric boundaries.
+
 ### Fixed
 
 - Removed the competing semantic-only GitHub Pages deployment path. `.github/workflows/cmb-google-semantic-pages.yml` now validates the semantic publication bundle without deploying it, leaving `pages.yml` as the single canonical Pages deployment authority and eliminating overwrite/race risk.
