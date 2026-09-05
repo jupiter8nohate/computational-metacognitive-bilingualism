@@ -144,3 +144,23 @@ The Python implementation remains the reference engine. The adapters are compati
 - `spec/CMB-CORE-1.md` / `spec/PROTOCOL_VERSIONING.md` - normative cross-component semantics and compatibility rules.
 
 The agent layer is executable, but it deliberately optimizes for relevance and attribution rather than autonomous mass distribution. MCP is an interoperability surface over the same service layer, not a second recommendation engine.
+
+
+## GLITCH://402 payment and creator-support layer
+
+- `spec/GLITCH-402-PAYMENTS.md` - experimental x402 v2 interoperability profile for paid GLITCH-8 services and creator support.
+- `src/cmb_glitch8/payments.py` - zero-custody payment-requirement builder and tamper-evident receipt primitives.
+- `schemas/glitch402.payment-receipt.v1.schema.json` - strict machine-readable settlement receipt contract.
+- `tests/test_glitch402.py` - deterministic receipt, tamper detection, schema, and fail-closed payee tests.
+- `docs/CREATOR_SUPPORT.md` - human-readable support, authorship, and governance boundaries.
+- `.github/FUNDING.yml` - GitHub-native creator-support metadata.
+
+The repository ships no production wallet address and does not issue a GLITCH token.
+
+~~~text
+NO_CONFIGURED_PAYEE -> NO_PRODUCTION_PAYMENT
+PAYMENT != OWNERSHIP
+VALID_RECEIPT_DIGEST != BLOCKCHAIN_VERIFICATION
+~~~
+
+A production integration must verify settlement externally before issuing a settled GLITCH://402 receipt.
