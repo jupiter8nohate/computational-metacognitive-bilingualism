@@ -121,11 +121,6 @@ invariants:
 
 # 4. Python
 
-```python
-from dataclasses import dataclass
-from tuple import *  # illustrative only
-```
-
 Canonical Python-style translation:
 
 ```python
