@@ -10,6 +10,7 @@ All notable changes to the CMB provenance tool are documented here.
 - Added a canonical origin biography, a Creative Cognitive Signature protocol, and a Living Book / Versioned Autobiography protocol.
 - Added structured GitHub issue forms for new glyph proposals and sourced historical/factual corrections.
 - Extended the living GLITCHOLOGY book with a Creative Cognitive Signature chapter and explicit provenance/biometric boundaries.
+- Added a conversation-derived CMB semantic Atlas, machine-readable Atlas JSON, strict JSON Schema, and polyglot translation layer spanning JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native Err ⃝or⃟⃤ GLITCHOLOGY syntax.
 
 ### Fixed
 
