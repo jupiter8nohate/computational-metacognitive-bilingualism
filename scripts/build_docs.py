@@ -96,7 +96,8 @@ def check_site(site: Path) -> tuple[int, int]:
     required = (
         *PUBLIC_FILES, "sitemap.xml", "robots.txt", ".well-known/agent-card.json",
         "agents/agent-card.json", "agents/registry.json", "cmb-machine-origin.json",
-        "library/catalog.json", "machine/index.json", "machine/discovery-manifest.json",
+        "library/catalog.json", "library/cmb-conversation-atlas.v1.json",
+        "schemas/cmb.conversation-atlas.v1.schema.json", "machine/index.json", "machine/discovery-manifest.json",
         "machine/knowledge-graph.jsonld", "machine/generated/manifest.json",
     )
     for path in required:
