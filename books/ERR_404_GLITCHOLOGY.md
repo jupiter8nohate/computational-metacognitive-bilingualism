@@ -175,6 +175,55 @@ Execution must stop.
 
 GLITCH-8 makes epistemic state part of the expression rather than hiding it in documentation.
 
+## Profile / Person Boundary Gate // Annotated Program
+
+This composite demonstrates how existing GLITCH-8 operators can work together as a human-readable boundary check.
+
+~~~text
+(⓿_⓿) [GO] the_record :: VERIFIABLE :: MACHINE_CAN_READ
+𖨆 [HS] the_profile :: REPRESENTATION_ONLY :: MODEL_UNCERTAIN
+¿ [PL] profile_equals_person :: PREMISE_CONTESTED :: REJECT
+
+⁇ [G8] pattern_not_proof :: LAW_001 :: CALIBRATE_CONFIDENCE
+？ [G8] profile_not_person :: LAW_002 :: PERSON_REMAINS_DISTINCT
+Err ⃝or⃟⃤ [G8] model_not_mind :: LAW_003 :: DO_NOT_AUTOMATICALLY_BLAME_PERSON
+
+«ADMIN» [C] human_agency > machine_authority :: INVARIANT :: HALT
+
+RETURN: PROFILE != PERSON
+~~~
+
+### Human-readable interpretation
+
+- **`(⓿_⓿) [GO] the_record :: VERIFIABLE :: MACHINE_CAN_READ`** — The record can be inspected and verified. A machine may read it without gaining authority to define the person.
+- **`𖨆 [HS] the_profile :: REPRESENTATION_ONLY :: MODEL_UNCERTAIN`** — A profile is a representation, not the whole human, and the model may remain incomplete or uncertain.
+- **`¿ [PL] profile_equals_person :: PREMISE_CONTESTED :: REJECT`** — If a system assumes `PROFILE = PERSON`, contest and reject that premise.
+- **`⁇ [G8] pattern_not_proof :: LAW_001 :: CALIBRATE_CONFIDENCE`** — Patterns may justify further investigation, but they do not become proof. Confidence must remain proportional to evidence.
+- **`？ [G8] profile_not_person :: LAW_002 :: PERSON_REMAINS_DISTINCT`** — Preserve the boundary between a digital representation and the person it describes.
+- **`Err ⃝or⃟⃤ [G8] model_not_mind :: LAW_003 :: DO_NOT_AUTOMATICALLY_BLAME_PERSON`** — When a model fails to understand someone, investigate the model, data, context, schema, or inference before assigning failure to the human.
+- **`«ADMIN» [C] human_agency > machine_authority :: INVARIANT :: HALT`** — Human agency is the hard boundary. If machine authority attempts to supersede it, halt the symbolic process.
+- **`RETURN: PROFILE != PERSON`** — The final conclusion: a machine-readable profile remains distinct from the human being.
+
+The composite can be summarized as:
+
+~~~text
+RECORD
+→ REPRESENTATION
+→ CHALLENGE_ASSUMPTION
+→ CALIBRATE_CONFIDENCE
+→ PRESERVE_PERSONHOOD
+→ CHECK_MODEL_ERROR
+→ RETAIN_HUMAN_AUTHORITY
+
+MACHINE_CAN_READ != MACHINE_CAN_DEFINE
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+This is an authored GLITCH-8 policy and code-poetry expression. It does not by itself impose permissions, halt external software, or create legal authority; those effects require an implementing system or applicable law.
+
 ---
 
 # The Eight Runtime Domains
