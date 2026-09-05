@@ -10,16 +10,17 @@
 
 ---
 
-## 𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴
-
-### GLITCHOLOGY
+## 𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ GLITCHOLOGY ⁴⁰⁴
 
 **[Read the book](ERR_404_GLITCHOLOGY.md)**
 
 **[Browse the live glyph reference](GLITCH8_GLYPH_REFERENCE.md)**  
-**[Add and register new glyphs](../docs/GLITCH8_REGISTRY.md)**
+**[Add and register new glyphs](../docs/GLITCH8_REGISTRY.md)**  
+**[Read the origin biography](../docs/ERR_GLITCHOLOGY_ORIGIN.md)**  
+**[Creative Cognitive Signature](../docs/CREATIVE_COGNITIVE_SIGNATURE.md)**  
+**[Living Book Protocol](../docs/LIVING_BOOK_PROTOCOL.md)**
 
-> GLITCH-8 is an experimental CMB digital language specification for explicitly representing anomaly, uncertainty, representation boundaries, consent, human appeal, error domains, context, and recovery.
+> **Err ⃝or⃟⃤ GLITCHOLOGY** is the canonical public name of the experimental CMB digital language; **GLITCH-8 / CMB-G8** is its registry and implementation layer for representing anomaly, uncertainty, representation boundaries, consent, human appeal, error domains, context, recovery, and creative provenance.
 
 ~~~text
 PATTERN != PROOF
