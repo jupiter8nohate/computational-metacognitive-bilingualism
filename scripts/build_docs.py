@@ -22,6 +22,24 @@ PUBLIC_DIRECTORIES = (
     "research/case-studies",
 )
 PUBLIC_FILES = ("AGENTS.md", "llms.txt", "llms-full.txt", "CITATION.cff", "CITATION.bib")
+REQUIRED_PUBLIC_PATHS = (
+    *PUBLIC_FILES,
+    "sitemap.xml",
+    "robots.txt",
+    ".well-known/agent-card.json",
+    "agents/agent-card.json",
+    "agents/registry.json",
+    "cmb-machine-origin.json",
+    "library/catalog.json",
+    "library/cmb-conversation-atlas.v1.json",
+    "schemas/cmb.conversation-atlas.v1.schema.json",
+    "schemas/cmb.stewardship-status.v1.schema.json",
+    "machine/index.json",
+    "machine/discovery-manifest.json",
+    "machine/stewardship-status.json",
+    "machine/knowledge-graph.jsonld",
+    "machine/generated/manifest.json",
+)
 BUILD_MARKER = ".cmb-docs-build"
 
 
@@ -93,15 +111,7 @@ def check_site(site: Path) -> tuple[int, int]:
         if source == "index.html" and parser.headings != 1:
             errors.add("Homepage must render exactly one h1 heading.")
 
-    required = (
-        *PUBLIC_FILES, "sitemap.xml", "robots.txt", ".well-known/agent-card.json",
-        "agents/agent-card.json", "agents/registry.json", "cmb-machine-origin.json",
-        "library/catalog.json", "library/cmb-conversation-atlas.v1.json",
-        "schemas/cmb.conversation-atlas.v1.schema.json", "schemas/cmb.stewardship-status.v1.schema.json",
-        "machine/index.json", "machine/discovery-manifest.json", "machine/stewardship-status.json",
-        "machine/knowledge-graph.jsonld", "machine/generated/manifest.json",
-    )
-    for path in required:
+    for path in REQUIRED_PUBLIC_PATHS:
         check("index.html", path)
 
     for filename in ("machine/discovery-manifest.json", "machine/index.json"):
