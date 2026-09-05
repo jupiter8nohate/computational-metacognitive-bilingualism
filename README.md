@@ -35,20 +35,31 @@
 
 ## ⚠ SEARCH FOR TRUTH // MASTER GATEWAY
 
-> **Aesthetic boundary:** the apocalypse / omen / blood-red language is deliberate visual storytelling. It is not a substitute for evidence. `OMEN != PREDICTION` · `PATTERN != PROOF` · `SYMBOL != SCIENTIFIC_CLAIM`.
-
 <p align="center">
-  <img src="docs/media/search-for-truth-reference.jpg" alt="CMB dark federal archive concept-art reference" width="62%">
+  <img src="docs/media/cmb-cognitive-offloading-adaptive-symbiosis.jpg" alt="CMB poster: How We Were Raised, from Cognitive Offloading to Adaptive Symbiosis" width="720">
 </p>
 
-| ARCHIVE CHAMBER | ENTER |
-|---|---|
-| **⚠ MASTER ARCHIVE** — the dark-federal visual and epistemic gateway | **[SEARCH FOR TRUTH](docs/SEARCH_FOR_TRUTH.md)** |
-| **◈ EVIDENCE VAULT** — claims, prior art, falsifiability, case studies | **[RESEARCH](docs/RESEARCHERS.md)** |
-| **⌘ MACHINE CHAMBER** — code, schemas, conformance, provenance, Recovery | **[DEVELOP](docs/DEVELOPERS.md)** |
-| **📜 OMEN LIBRARY** — code-poetry, D.N.A., FGC, HARMONI, MissingNo | **[MANIFESTOS](manifestos/README.md)** |
-| **⚖ CIVIC CHAMBER** — human agency, consent, accountability | **[POLICY](policy/CMB_POLICY_ONE_PAGER.md)** |
-| **? ANOMALY FILE** — the featured Question Mark prophecy | **[SCROLL 666 // 2030](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md)** |
+> **Aesthetic boundary:** the dark archive, omen, anomaly, blood-red, and apocalyptic language is deliberate visual storytelling. It is not evidence. `OMEN != PREDICTION` · `PATTERN != PROOF` · `SYMBOL != SCIENTIFIC_CLAIM`.
+
+### ENTER THE ARCHIVE
+
+**⚠ [MASTER ARCHIVE // SEARCH FOR TRUTH](docs/SEARCH_FOR_TRUTH.md)**  
+The dark-federal visual and epistemic gateway.
+
+**◈ [EVIDENCE VAULT // RESEARCH](docs/RESEARCHERS.md)**  
+Claims, prior art, falsifiability, case studies, and independent review.
+
+**⌘ [MACHINE CHAMBER // DEVELOP](docs/DEVELOPERS.md)**  
+Code, schemas, conformance, provenance, and Recovery.
+
+**📜 [OMEN LIBRARY // MANIFESTOS](manifestos/README.md)**  
+Code-poetry, D.N.A., FGC, HARMONI, MissingNo, and symbolic work.
+
+**⚖ [CIVIC CHAMBER // POLICY](policy/CMB_POLICY_ONE_PAGER.md)**  
+Human agency, consent, accountability, and institutional boundaries.
+
+**? [ANOMALY FILE // SCROLL 666 // 2030](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md)**  
+The featured speculative Question Mark prophecy.
 
 **Archive rule:** scary enough to stop the scroll; structured enough to keep the reader; rigorous enough to survive verification.
 
