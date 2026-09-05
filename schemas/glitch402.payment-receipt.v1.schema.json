@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/glitch402.payment-receipt.v1.schema.json",
+  "title": "GLITCH://402 Payment Receipt v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol",
+    "receipt_id",
+    "operation",
+    "created_at",
+    "resource_uri",
+    "artifact_sha256",
+    "creator",
+    "settlement",
+    "verification",
+    "boundaries",
+    "integrity"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "glitch402.payment-receipt.v1"
+    },
+    "protocol": {
+      "const": "GLITCH://402/1"
+    },
+    "receipt_id": {
+      "type": "string",
+      "pattern": "^g402_[0-9a-f]{64}$"
+    },
+    "operation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "resource_uri": {
+      "type": "string",
+      "format": "uri"
+    },
+    "artifact_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "creator": {
+      "type": "object",
+      "required": ["name", "project", "attribution_uri"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "project": {"const": "CMB-G8 / GLITCH-8"},
+        "attribution_uri": {"type": "string", "format": "uri"}
+      },
+      "additionalProperties": false
+    },
+    "settlement": {
+      "type": "object",
+      "required": [
+        "status",
+        "provider",
+        "scheme",
+        "x402_version",
+        "network",
+        "asset",
+        "amount_atomic",
+        "decimals",
+        "payer",
+        "payee",
+        "transaction_hash"
+      ],
+      "properties": {
+        "status": {"const": "settled"},
+        "provider": {"type": "string", "minLength": 1},
+        "scheme": {"const": "x402-exact"},
+        "x402_version": {"const": 2},
+        "network": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+:[A-Za-z0-9_-]+$"
+        },
+        "asset": {"type": "string", "minLength": 1},
+        "amount_atomic": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "decimals": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 36
+        },
+        "payer": {"type": "string", "minLength": 1},
+        "payee": {"type": "string", "minLength": 1},
+        "transaction_hash": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "object",
+      "required": ["source", "verified_at", "evidence", "scope"],
+      "properties": {
+        "source": {
+          "enum": ["facilitator", "chain"]
+        },
+        "verified_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "const": "settlement_observed_external_to_cmb"
+        }
+      },
+      "additionalProperties": false
+    },
+    "boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "integrity": {
+      "type": "object",
+      "required": ["canonicalization", "sha256", "scope"],
+      "properties": {
+        "canonicalization": {"const": "cmb-json-v1"},
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "scope": {
+          "const": "all receipt fields except receipt_id and integrity"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
