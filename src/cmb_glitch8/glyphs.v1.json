@@ -512,7 +512,15 @@
     {
       "id": "signal-spectrum",
       "glyph": "▂▃▄▅▆▇▉",
-      "aliases": [],
+      "aliases": [
+        "▂",
+        "▃",
+        "▄",
+        "▅",
+        "▆",
+        "▇",
+        "▉"
+      ],
       "name": "Signal Spectrum",
       "categories": [
         "signal"
