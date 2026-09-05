@@ -9,3 +9,4 @@ These examples are intentionally small. A new contributor should be able to unde
 5. [Read the Guardian safety pipeline](05_guardian_pipeline/README.md)
 6. [Enforce explicit policy facts with a FastAPI boundary guard](06_fastapi_boundary/README.md)
 7. [Parse a privacy-first CMB-EDU learning stream](07_cmb_edu/README.md)
+8. [Run the GLITCHOLOGY Go execution seal](08_glitchology_go_execution_seal/README.md)
