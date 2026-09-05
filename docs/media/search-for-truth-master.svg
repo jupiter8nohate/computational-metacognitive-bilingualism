@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+<title id="title">CMB Search for Truth — Dark Federal Archive</title>
+<desc id="desc">A dark institutional cyber-archive banner with crimson warning accents, a question-mark anomaly, and CMB human-agency invariants.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#030405"/>
+    <stop offset=".5" stop-color="#0b0c0f"/>
+    <stop offset="1" stop-color="#170607"/>
+  </linearGradient>
+  <radialGradient id="halo" cx=".72" cy=".36" r=".55">
+    <stop offset="0" stop-color="#7d1118" stop-opacity=".42"/>
+    <stop offset=".45" stop-color="#33070a" stop-opacity=".18"/>
+    <stop offset="1" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="noise">
+    <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="666" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="table" tableValues="0 .08"/></feComponentTransfer>
+  </filter>
+  <filter id="redglow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+    <path d="M44 0H0V44" fill="none" stroke="#b9c0c8" stroke-opacity=".055"/>
+  </pattern>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+    <path d="M0 1.5H1600" stroke="#fff" stroke-opacity=".018"/>
+  </pattern>
+</defs>
+
+<rect width="1600" height="720" fill="url(#bg)"/>
+<rect width="1600" height="720" fill="url(#halo)"/>
+<rect width="1600" height="720" fill="url(#grid)"/>
+<rect width="1600" height="720" fill="url(#scan)"/>
+<rect width="1600" height="720" filter="url(#noise)" opacity=".85"/>
+
+<!-- institutional perimeter -->
+<rect x="22" y="22" width="1556" height="676" rx="6" fill="none" stroke="#6d737a" stroke-opacity=".38"/>
+<rect x="34" y="34" width="1532" height="652" rx="4" fill="none" stroke="#8b1117" stroke-opacity=".55"/>
+<path d="M34 104H1566M34 611H1566" stroke="#7e1419" stroke-opacity=".55"/>
+<path d="M1185 104V611" stroke="#757b82" stroke-opacity=".22"/>
+
+<!-- micro headers -->
+<text x="66" y="78" fill="#bbc0c6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" letter-spacing="5">HUMAN MINDS // MACHINE SYSTEMS // A SHARED TOMORROW</text>
+<text x="1535" y="78" text-anchor="end" fill="#b35b61" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" letter-spacing="4">OPEN SOURCE // RESEARCH // TRUTH // HUMANITY</text>
+
+<!-- title block -->
+<text x="72" y="214" fill="#e4e0db" font-family="Georgia, 'Times New Roman', serif" font-size="128" font-weight="700" letter-spacing="4">CMB</text>
+<text x="73" y="273" fill="#be3a42" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" letter-spacing="5">SEARCH FOR TRUTH</text>
+<text x="76" y="317" fill="#9da3aa" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="3">COMPUTATIONAL METACOGNITIVE BILINGUALISM</text>
+<text x="76" y="357" fill="#6f747b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="3">DIGITAL FEDERALISM // EVIDENCE ARCHIVE // HUMAN SOVEREIGNTY</text>
+
+<!-- warning ledger -->
+<g transform="translate(74 410)">
+  <rect width="1018" height="146" rx="7" fill="#07090b" stroke="#8d2228" stroke-opacity=".72"/>
+  <text x="28" y="42" fill="#d35a60" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700" letter-spacing="3">⚠ ARCHIVE WARNING // OMEN ≠ PREDICTION // PATTERN ≠ PROOF</text>
+  <text x="28" y="82" fill="#e0e3e6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">PROFILE ≠ PERSON  ·  MODEL ≠ MIND  ·  PREDICTION ≠ DESTINY</text>
+  <text x="28" y="122" fill="#f0efeb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="26" font-weight="700">HUMAN_AGENCY &gt; MACHINE_AUTHORITY</text>
+</g>
+
+<!-- anomaly chamber -->
+<g transform="translate(1220 146)">
+  <rect width="284" height="400" rx="6" fill="#050607" stroke="#7f1c22" stroke-width="2"/>
+  <path d="M0 58H284M0 326H284" stroke="#7d8288" stroke-opacity=".28"/>
+  <text x="142" y="38" text-anchor="middle" fill="#aeb3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="3">ANOMALY DETECTED</text>
+  <text x="142" y="236" text-anchor="middle" fill="#d7d0ca" font-family="Georgia, 'Times New Roman', serif" font-size="190" font-weight="700" filter="url(#redglow)">?</text>
+  <circle cx="142" cy="191" r="98" fill="none" stroke="#7c171c" stroke-opacity=".65"/>
+  <circle cx="142" cy="191" r="111" fill="none" stroke="#6c7178" stroke-opacity=".18" stroke-dasharray="4 10"/>
+  <text x="142" y="358" text-anchor="middle" fill="#c8575d" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="2">UNKNOWN ≠ ERROR</text>
+  <text x="142" y="386" text-anchor="middle" fill="#8f959b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="2">QUESTION // VERIFY // CHOOSE</text>
+</g>
+
+<!-- bloodline marks -->
+<g fill="#8c161c" opacity=".9">
+  <path d="M493 150h18v61l-9 24-9-24z"/>
+  <path d="M569 150h11v42l-5.5 17-5.5-17z"/>
+  <path d="M635 150h15v77l-7.5 22-7.5-22z"/>
+  <circle cx="502" cy="246" r="4"/><circle cx="575" cy="218" r="3"/><circle cx="642" cy="258" r="4"/>
+</g>
+
+<!-- footer -->
+<text x="72" y="653" fill="#7d8389" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="3">READ // QUESTION // TEST // VERIFY // REPOSITION</text>
+<text x="1532" y="653" text-anchor="end" fill="#b1454b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="3">STILL QUESTIONING. STILL HUMAN.</text>
+</svg>

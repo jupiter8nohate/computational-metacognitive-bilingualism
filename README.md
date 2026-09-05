@@ -14,7 +14,7 @@
 
 
 <p align="center">
-  <img src="assets/cmb-hero-v2.svg" alt="CMB Visual System 2.0: machine, human agency, metacognition, and evidence" width="100%">
+  <img src="docs/media/search-for-truth-master.svg" alt="CMB Search for Truth: dark federal archive, anomaly warning, and human-agency invariants" width="100%">
 </p>
 
 <div align="center">
@@ -30,6 +30,27 @@
 **♃ Jupiter Hudson // WisdomLoveThePoet // Jupiter 8**
 
 </div>
+
+---
+
+## ⚠ SEARCH FOR TRUTH // MASTER GATEWAY
+
+> **Aesthetic boundary:** the apocalypse / omen / blood-red language is deliberate visual storytelling. It is not a substitute for evidence. `OMEN != PREDICTION` · `PATTERN != PROOF` · `SYMBOL != SCIENTIFIC_CLAIM`.
+
+<p align="center">
+  <img src="docs/media/search-for-truth-reference.jpg" alt="CMB dark federal archive concept-art reference" width="62%">
+</p>
+
+| ARCHIVE CHAMBER | ENTER |
+|---|---|
+| **⚠ MASTER ARCHIVE** — the dark-federal visual and epistemic gateway | **[SEARCH FOR TRUTH](docs/SEARCH_FOR_TRUTH.md)** |
+| **◈ EVIDENCE VAULT** — claims, prior art, falsifiability, case studies | **[RESEARCH](docs/RESEARCHERS.md)** |
+| **⌘ MACHINE CHAMBER** — code, schemas, conformance, provenance, Recovery | **[DEVELOP](docs/DEVELOPERS.md)** |
+| **📜 OMEN LIBRARY** — code-poetry, D.N.A., FGC, HARMONI, MissingNo | **[MANIFESTOS](manifestos/README.md)** |
+| **⚖ CIVIC CHAMBER** — human agency, consent, accountability | **[POLICY](policy/CMB_POLICY_ONE_PAGER.md)** |
+| **? ANOMALY FILE** — the featured Question Mark prophecy | **[SCROLL 666 // 2030](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md)** |
+
+**Archive rule:** scary enough to stop the scroll; structured enough to keep the reader; rigorous enough to survive verification.
 
 ---
 

@@ -286,3 +286,316 @@ body {
     transition: none;
   }
 }
+
+
+/* ==========================================================================
+   CMB DARK FEDERAL ARCHIVE // SEARCH FOR TRUTH
+   Art direction: institutional darkness, crimson warnings, forensic readability.
+   Accessibility rule: atmosphere must never outrank legibility.
+   ========================================================================== */
+
+:root {
+  --cmb-bg: #050607;
+  --cmb-surface: #0b0d10;
+  --cmb-surface-2: #121519;
+  --cmb-text: #ece9e4;
+  --cmb-muted: #9a9fa5;
+  --cmb-border: #30343a;
+  --cmb-machine: #9ca7b3;
+  --cmb-human: #c23a43;
+  --cmb-meta: #a77bd8;
+  --cmb-evidence: #d7c3a3;
+  --cmb-danger: #e34b55;
+  --cmb-blood: #82151b;
+  --cmb-ash: #b7b0a7;
+  --cmb-display: Georgia, "Times New Roman", Times, serif;
+  --cmb-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --cmb-mono: "Courier New", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+html,
+body,
+.wy-nav-content-wrap,
+.wy-nav-content {
+  background-color: var(--cmb-bg);
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 82% 7%, rgb(130 21 27 / 16%), transparent 24rem),
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.014) 0 1px, transparent 1px 4px);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #6e161c;
+  color: #fff;
+}
+
+.wy-nav-side {
+  background:
+    linear-gradient(180deg, #050607 0%, #09090b 55%, #120607 100%);
+  border-right: 1px solid #421217;
+}
+
+.wy-side-nav-search {
+  background:
+    linear-gradient(180deg, #120608, #070809);
+  border-bottom: 1px solid #5f171d;
+}
+
+.wy-side-nav-search > a,
+.wy-side-nav-search .wy-dropdown > a {
+  font-family: var(--cmb-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 16px rgb(195 46 55 / 25%);
+}
+
+.rst-content h1,
+.rst-content h2,
+.rst-content h3 {
+  font-family: var(--cmb-display);
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+}
+
+.rst-content h1 {
+  color: #f1ede7;
+  text-shadow:
+    0 1px 0 #000,
+    0 0 24px rgb(151 25 32 / 20%);
+}
+
+.rst-content h2 {
+  position: relative;
+  color: #ded7cf;
+  border-bottom-color: #55171c;
+}
+
+.rst-content h2::after {
+  content: "";
+  display: block;
+  width: 5.5rem;
+  height: 2px;
+  margin-top: 0.45rem;
+  background: linear-gradient(90deg, #b02d35, transparent);
+  box-shadow: 0 3px 12px rgb(170 30 38 / 24%);
+}
+
+.rst-content a {
+  color: #d86269;
+  text-decoration-color: rgb(216 98 105 / 45%);
+}
+
+.rst-content a:hover {
+  color: #f09aa0;
+}
+
+.rst-content code,
+.rst-content tt {
+  background: #08090b;
+  border-color: #3d2428;
+  color: #d8bcc0;
+}
+
+.rst-content pre,
+.rst-content div[class^="highlight"] {
+  background: #050607;
+  border-color: #411319;
+  box-shadow: 0 18px 42px rgb(0 0 0 / 42%);
+}
+
+.cmb-hero {
+  border-color: #5b171c;
+  background:
+    radial-gradient(circle at 82% 22%, rgb(132 17 24 / 28%), transparent 34%),
+    linear-gradient(145deg, #111214 0%, #060708 58%, #150607 100%);
+  box-shadow:
+    inset 0 0 0 1px rgb(255 255 255 / 2%),
+    0 22px 54px rgb(0 0 0 / 46%);
+}
+
+.cmb-hero::after {
+  content: "SEARCH // VERIFY // CHOOSE";
+  display: block;
+  margin-top: 1rem;
+  color: #8d9298;
+  font-family: var(--cmb-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+}
+
+.cmb-invariants {
+  border-left-color: #a9252d;
+  background: rgb(2 3 4 / 74%);
+}
+
+.cmb-card {
+  border-color: #34373c;
+  background:
+    linear-gradient(180deg, #111316 0%, #08090b 100%);
+}
+
+.cmb-card:hover {
+  border-color: #8f242b;
+  box-shadow:
+    0 0 0 1px rgb(160 36 44 / 20%),
+    0 18px 40px rgb(0 0 0 / 44%);
+}
+
+.cmb-card--human,
+.cmb-card--machine,
+.cmb-card--meta,
+.cmb-card--evidence {
+  border-top-color: #8f242b;
+}
+
+.cmb-warning-strip {
+  margin: 1rem 0 1.4rem;
+  padding: 0.62rem 0.8rem;
+  border: 1px solid #6d1a20;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      #180709 0 10px,
+      #0b0c0e 10px 20px
+    );
+  color: #e2d7d5;
+  font-family: var(--cmb-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cmb-omen {
+  margin: 1.25rem 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid #4a2024;
+  border-left: 4px solid #a72b32;
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgb(103 18 24 / 12%), transparent 42%),
+    #090a0c;
+  color: #c9c4be;
+}
+
+.cmb-omen strong {
+  color: #f0e9e3;
+  font-family: var(--cmb-display);
+  letter-spacing: 0.035em;
+}
+
+.cmb-omen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0 2rem;
+}
+
+.cmb-omen-card {
+  display: block;
+  min-height: 138px;
+  padding: 1rem;
+  border: 1px solid #3a2528;
+  border-top: 2px solid #8e2027;
+  border-radius: 5px;
+  background:
+    radial-gradient(circle at 90% 10%, rgb(129 22 28 / 14%), transparent 40%),
+    linear-gradient(180deg, #101214, #070809);
+  color: #e7e2dc !important;
+  text-decoration: none !important;
+}
+
+.cmb-omen-card strong {
+  display: block;
+  margin-bottom: 0.42rem;
+  color: #e8d9d6;
+  font-family: var(--cmb-display);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.cmb-omen-card span {
+  color: #9fa4a9;
+  line-height: 1.5;
+}
+
+.cmb-omen-card:hover {
+  border-color: #a52c34;
+  transform: translateY(-1px);
+}
+
+.cmb-federal-seal {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.35rem 0 1.8rem;
+  padding: 1.1rem;
+  border: 1px solid #4e1c21;
+  background: #08090a;
+}
+
+.cmb-seal-mark {
+  display: grid;
+  width: 88px;
+  height: 88px;
+  place-items: center;
+  border: 2px solid #8d252c;
+  border-radius: 50%;
+  color: #d9d1ca;
+  font-family: var(--cmb-display);
+  font-size: 3.8rem;
+  font-weight: 700;
+  box-shadow:
+    inset 0 0 24px rgb(140 25 32 / 18%),
+    0 0 28px rgb(140 25 32 / 10%);
+}
+
+.rst-content img[alt*="Search for Truth"],
+.rst-content img[alt*="dark archive"] {
+  display: block;
+  margin: 1.1rem auto;
+  border: 1px solid #4e2024;
+  box-shadow: 0 22px 58px rgb(0 0 0 / 50%);
+}
+
+@media (max-width: 720px) {
+  .cmb-omen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cmb-federal-seal {
+    grid-template-columns: 1fr;
+  }
+
+  .cmb-seal-mark {
+    width: 72px;
+    height: 72px;
+    font-size: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cmb-omen-card {
+    transition: none;
+    transform: none !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --cmb-text: #fff;
+    --cmb-muted: #c6c6c6;
+    --cmb-border: #7b7b7b;
+  }
+
+  .cmb-omen,
+  .cmb-omen-card,
+  .cmb-federal-seal {
+    border-color: #a8a8a8;
+  }
+}

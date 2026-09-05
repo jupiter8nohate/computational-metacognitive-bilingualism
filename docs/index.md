@@ -69,6 +69,18 @@ CMB is a human-agency and computational-literacy framework for working with comp
 
 </div>
 
+## ⚠ Search for Truth // Master Archive
+
+<div class="cmb-warning-strip">DARK FEDERAL ARCHIVE // OMEN ≠ PREDICTION // PATTERN ≠ PROOF</div>
+
+<a href="SEARCH_FOR_TRUTH/" title="Enter the CMB Search for Truth master archive">
+  <img src="media/search-for-truth-master.svg" alt="CMB Search for Truth master archive banner">
+</a>
+
+<div class="cmb-omen">
+The repository's visual front door now uses institutional darkness, crimson warning marks, anomaly imagery, and apocalyptic tension to invite investigation without collapsing art into evidence. <strong>Enter the <a href="SEARCH_FOR_TRUTH/">Search for Truth master archive</a>.</strong>
+</div>
+
 ## Choose a door
 
 <div class="cmb-grid">
