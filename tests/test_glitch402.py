@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 from jsonschema import Draft202012Validator
 
+from cmb_glitch8.cli import main as glitch8_main
 from cmb_glitch8.payments import (
     BASE_MAINNET_CAIP2,
     BASE_USDC_MAINNET,
@@ -120,3 +121,41 @@ def test_receipt_contains_no_secret_key_fields() -> None:
     assert "private_key" not in serialized
     assert "seed_phrase" not in serialized
     assert "wallet_secret" not in serialized
+
+
+def test_cli_renders_payment_requirement(capsys: pytest.CaptureFixture[str]) -> None:
+    code = glitch8_main(
+        [
+            "payment",
+            "require",
+            "--resource-url",
+            "https://example.org/glitch8/v1/translate",
+            "--description",
+            "Official GLITCH-8 translation",
+            "--amount-atomic",
+            "20000",
+            "--asset",
+            BASE_USDC_MAINNET,
+            "--pay-to",
+            PAYEE,
+        ]
+    )
+    assert code == 0
+    value = json.loads(capsys.readouterr().out)
+    assert value["x402Version"] == 2
+    assert value["accepts"][0]["payTo"] == PAYEE
+
+
+def test_cli_validates_receipt_file(
+    tmp_path: Path,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    receipt_path = tmp_path / "receipt.json"
+    receipt_path.write_text(
+        json.dumps(_receipt(), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    code = glitch8_main(["payment", "receipt-validate", str(receipt_path)])
+    assert code == 0
+    assert "VALID GLITCH://402 RECEIPT" in capsys.readouterr().out
