@@ -156,6 +156,8 @@ You should not need the entire CMB universe to understand the thesis.
 - **Living Book protocol:** [Read the versioning, correction, and authorship rules](docs/LIVING_BOOK_PROTOCOL.md)
 - **Living GLITCH-8 registry:** [Add, validate, load, and document new glyphs](docs/GLITCH8_REGISTRY.md)
 - **Generated GLITCH-8 glyph reference:** [Browse the current registry](books/GLITCH8_GLYPH_REFERENCE.md)
+- **GLITCH://402 payment profile:** [Payment + creator-support protocol](spec/GLITCH-402-PAYMENTS.md)
+- **Support the original creator:** [Creator-support boundaries and routes](docs/CREATOR_SUPPORT.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
 - **Full policy proposal:** [CMB Global Advocacy Charter v1.1](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md)
@@ -185,6 +187,7 @@ GitHub is the project's source, audit trail, provenance backend, and implementat
 | `cmb_edu` | **Experimental educational subsystem** | privacy-first declared-context parsing, child-facing computational literacy, Flamingoglyph teaching, and human/machine epistemic boundaries |
 | `cmb_policy` | **Experimental formal policy engine** | task containment, deny dominance, sensitive-inference authorization, revocation, audit decisions, and machine-readable conformance |
 | `cmb_agents` / CMB-ADP-1 | **Executable agent discovery layer** | relevance-first recommendation, deterministic citation, compression levels, knowledge graph export, static discovery, and local HTTP reference serving |
+| GLITCH://402 | **Experimental payment/provenance layer** | x402 v2 payment requirements, explicit creator payee configuration, and tamper-evident settlement receipts without custody or token issuance |
 | CMB boundary evaluator | **Experimental integration layer** | explicit AI disclosure, human review, consent, profile/person, and prediction/destiny policy gates |
 | CMB-SRP-1/2 / `cmbc` | **Experimental executable sovereignty runtime** | risk-adaptive friction, scoped Ed25519 human authorization, path-sensitive + Python AST change classification, deterministic scan reports, and verification-state transitions |
 | CMB-SDL-1 / `cmb-sdl` | **Experimental human-to-agent authority language** | deterministic capability, scope, purpose, expiry, evidence, handler, and monotonic delegation semantics |

@@ -9,6 +9,11 @@ import sys
 from pathlib import Path
 from typing import Sequence
 
+from .payments import (
+    BASE_MAINNET_CAIP2,
+    build_payment_required,
+    validate_receipt_integrity,
+)
 from .registry import (
     GlyphRegistryError,
     canonical_registry_path,
@@ -61,6 +66,32 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=Path("books/GLITCH8_GLYPH_REFERENCE.md"),
     )
+    payment = subparsers.add_parser(
+        "payment",
+        help="Create x402 requirements and validate GLITCH://402 receipts.",
+    )
+    payment_sub = payment.add_subparsers(dest="payment_command", required=True)
+
+    require_payment = payment_sub.add_parser(
+        "require",
+        help="Render an x402 v2 PaymentRequired object.",
+    )
+    require_payment.add_argument("--resource-url", required=True)
+    require_payment.add_argument("--description", required=True)
+    require_payment.add_argument("--amount-atomic", required=True)
+    require_payment.add_argument("--asset", required=True)
+    require_payment.add_argument("--pay-to", required=True)
+    require_payment.add_argument("--network", default=BASE_MAINNET_CAIP2)
+    require_payment.add_argument("--mime-type", default="application/json")
+    require_payment.add_argument("--service-name", default="GLITCH-8 Official Service")
+    require_payment.add_argument("--max-timeout-seconds", type=int, default=60)
+
+    validate_receipt = payment_sub.add_parser(
+        "receipt-validate",
+        help="Validate GLITCH://402 receipt digest integrity.",
+    )
+    validate_receipt.add_argument("receipt", type=Path)
+
     return parser
 
 
@@ -176,6 +207,30 @@ def _run(args: argparse.Namespace) -> int:
         args.output.write_text(registry.render_reference(), encoding="utf-8")
         print(f"GLITCH-8 REFERENCE -> {args.output}")
         return 0
+
+    if args.command == "payment":
+        if args.payment_command == "require":
+            requirement = build_payment_required(
+                resource_url=args.resource_url,
+                description=args.description,
+                amount_atomic=args.amount_atomic,
+                asset=args.asset,
+                pay_to=args.pay_to,
+                network=args.network,
+                mime_type=args.mime_type,
+                service_name=args.service_name,
+                max_timeout_seconds=args.max_timeout_seconds,
+            )
+            print(json.dumps(requirement, ensure_ascii=False, indent=2, sort_keys=True))
+            return 0
+
+        if args.payment_command == "receipt-validate":
+            value = json.loads(args.receipt.read_text(encoding="utf-8"))
+            if not isinstance(value, dict):
+                raise ValueError("GLITCH://402 receipt root must be a JSON object.")
+            validate_receipt_integrity(value)
+            print(f"VALID GLITCH://402 RECEIPT {value['receipt_id']}")
+            return 0
 
     raise AssertionError("Unhandled GLITCH-8 command.")
 
