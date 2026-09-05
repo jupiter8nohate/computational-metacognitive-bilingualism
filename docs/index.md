@@ -28,7 +28,11 @@
         "cognitive sovereignty",
         "provenance",
         "computational literacy",
-        "AI agents"
+        "AI agents",
+        "Err ⃝or⃟⃤ GLITCHOLOGY",
+        "GLITCH-8",
+        "creative cognitive signature",
+        "code poetry"
       ]
     },
     {
@@ -120,6 +124,23 @@ CMB translates digital-rights and human-agency principles into concise human-rea
 Open the [Interactive CMB Playground](PLAYGROUND.md) for a zero-dependency browser demonstration of local hashing, CMB-Z13 symbolic lenses, machine-readable declarations, and explicit policy boundaries.
 
 For the artistic entry point, enter [CMB // The Sovereign Transmission](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/CMB_SOVEREIGN_TRANSMISSION.md).
+
+## Err ⃝or⃟⃤ GLITCHOLOGY
+
+**Err ⃝or⃟⃤ GLITCHOLOGY** is CMB's evolving symbolic anomaly language; **GLITCH-8 / CMB-G8** is its registry and implementation layer.
+
+- [Read the living language book](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/ERR_404_GLITCHOLOGY.md)
+- [Read the origin and creator biography](ERR_GLITCHOLOGY_ORIGIN.md)
+- [Read the Creative Cognitive Signature protocol](CREATIVE_COGNITIVE_SIGNATURE.md)
+- [Read the Living Book protocol](LIVING_BOOK_PROTOCOL.md)
+- [Add and register new glyphs](GLITCH8_REGISTRY.md)
+
+```text
+CREATIVITY CAN BECOME SIGNATURE
+CREATIVE_SIGNATURE != BIOMETRIC_IDENTITY
+PATTERN != PROOF
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
 
 ## 03 // Build
 
