@@ -55,8 +55,8 @@ Code, schemas, conformance, provenance, and Recovery.
 **📜 [OMEN LIBRARY // MANIFESTOS](manifestos/README.md)**  
 Code-poetry, D.N.A., FGC, HARMONI, MissingNo, and symbolic work.
 
-**📖 [BOOK SHELF // GLITCHOLOGY](books/README.md)**  
-Long-form CMB books and experimental language volumes, beginning with [𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY](books/ERR_404_GLITCHOLOGY.md).
+**📖 [BOOK SHELF // Err ⃝or⃟⃤ GLITCHOLOGY](books/README.md)**  
+Long-form CMB books and experimental language volumes, beginning with [𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md).
 
 **⚖ [CIVIC CHAMBER // POLICY](policy/CMB_POLICY_ONE_PAGER.md)**  
 Human agency, consent, accountability, and institutional boundaries.
@@ -146,7 +146,10 @@ You should not need the entire CMB universe to understand the thesis.
 - **Sovereign delegation language:** [CMB-SDL-1](spec/CMB-SDL-1.md) + [`cmb-sdl`](src/cmb_sdl) + [Authority IR schema](schemas/cmb.authority-ir.v1.schema.json)
 - **Signed capability credentials:** [CMB-CAP-1](spec/CMB-CAP-1.md) + [`cmb-cap`](src/cmb_cap) + [credential schema](schemas/cmb.capability-credential.v1.schema.json)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
-- **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY](books/ERR_404_GLITCHOLOGY.md)
+- **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md)
+- **Err ⃝or⃟⃤ GLITCHOLOGY origin:** [Read the canonical creator biography and language origin](docs/ERR_GLITCHOLOGY_ORIGIN.md)
+- **Creative Cognitive Signature:** [Read the self-authored provenance protocol](docs/CREATIVE_COGNITIVE_SIGNATURE.md)
+- **Living Book protocol:** [Read the versioning, correction, and authorship rules](docs/LIVING_BOOK_PROTOCOL.md)
 - **Living GLITCH-8 registry:** [Add, validate, load, and document new glyphs](docs/GLITCH8_REGISTRY.md)
 - **Generated GLITCH-8 glyph reference:** [Browse the current registry](books/GLITCH8_GLYPH_REFERENCE.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
