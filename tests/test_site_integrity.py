@@ -13,6 +13,7 @@ BUILD_DOCS = runpy.run_path(str(Path(__file__).resolve().parents[1] / "scripts/b
 check_site = BUILD_DOCS["check_site"]
 local_target = BUILD_DOCS["local_target"]
 SITE_URL = BUILD_DOCS["SITE_URL"]
+REQUIRED_PUBLIC_PATHS = BUILD_DOCS["REQUIRED_PUBLIC_PATHS"]
 
 
 @pytest.fixture
@@ -41,6 +42,8 @@ def published_site(tmp_path: Path) -> Path:
         }),
     }
     files.update({name: "CMB\n" for name in BUILD_DOCS["PUBLIC_FILES"]})
+    for name in REQUIRED_PUBLIC_PATHS:
+        files.setdefault(name, "{}")
     for name, content in files.items():
         path = tmp_path / name
         path.parent.mkdir(parents=True, exist_ok=True)

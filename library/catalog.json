@@ -432,6 +432,26 @@
       "declared_meaning": "Publicly documents the current lack of independent certification and defines a narrow, reproducible external review scope."
     },
     {
+      "id": "cmb-future-foundation-blueprint",
+      "title": "CMB Future Foundation Blueprint",
+      "path": "docs/FUTURE_FOUNDATION_BLUEPRINT.md",
+      "format": "markdown",
+      "kind": "future governance design summary",
+      "status": "planned",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "future foundation",
+        "draft governance",
+        "charitable stewardship",
+        "board design",
+        "succession",
+        "IP stewardship"
+      ],
+      "declared_meaning": "Public summary of the future-foundation design laboratory. It is explicitly a planning artifact and does not create a legal entity, charitable trust, board, tax exemption, donation deduction, fiduciary relationship, or IP transfer."
+    },
+    {
       "id": "cmb-glitch8-glyph-reference",
       "title": "GLITCH-8 Glyph Reference",
       "path": "books/GLITCH8_GLYPH_REFERENCE.md",
@@ -637,6 +657,25 @@
       "declared_meaning": "States what CMB does not claim to have invented, identifies relevant law and scholarship, and defines the narrower contribution CMB claims."
     },
     {
+      "id": "cmb-public-stewardship-incubation",
+      "title": "CMB Public Stewardship Incubation",
+      "path": "docs/PUBLIC_STEWARDSHIP_INCUBATION.md",
+      "format": "markdown",
+      "kind": "current operating-status and governance boundary",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "public stewardship",
+        "incubation",
+        "governance",
+        "no active fundraising",
+        "future nonprofit planning"
+      ],
+      "declared_meaning": "Authoritative human-readable statement that CMB / Err ⃝or⃟⃤ GLITCHOLOGY is currently an informal public-interest project with no claimed nonprofit or tax-exempt status, no active fundraising, no paid access, no production settlement, and no project treasury."
+    },
+    {
       "id": "cmb-reclaiming-the-pen",
       "title": "Reclaiming the Pen - Eight-Language CMB Poetic Manifesto",
       "path": "manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md",
@@ -678,6 +717,25 @@
         "interpretation boundaries"
       ],
       "declared_meaning": "Human-facing artistic gateway to CMB that uses symbolic glyphs, structured code-poetry, metacognitive checks, and explicit human authority boundaries."
+    },
+    {
+      "id": "cmb-stewardship-status-machine",
+      "title": "CMB Stewardship Status v1",
+      "path": "machine/stewardship-status.json",
+      "format": "json",
+      "kind": "machine-readable operating-status record",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "public stewardship",
+        "machine-readable status",
+        "incubation",
+        "fundraising boundary",
+        "GLITCH://402 deployment status"
+      ],
+      "declared_meaning": "Strict machine-readable mirror of the current zero-money incubation state so agents and crawlers do not infer nonprofit status, active fundraising, paid access, production settlement, a treasury, or a token."
     },
     {
       "id": "cmb-unburned-signal",

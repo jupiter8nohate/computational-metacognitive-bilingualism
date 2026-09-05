@@ -62,5 +62,11 @@
     "human_reports": [
       "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md"
     ]
+  },
+  "stewardship_status": {
+    "status_record": "machine/stewardship-status.json",
+    "schema": "schemas/cmb.stewardship-status.v1.schema.json",
+    "human_document": "docs/PUBLIC_STEWARDSHIP_INCUBATION.md",
+    "project_status": "public-stewardship-incubation"
   }
 }

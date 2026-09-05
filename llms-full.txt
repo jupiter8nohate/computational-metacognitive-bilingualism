@@ -26,6 +26,39 @@ OPTIMIZATION != MORALITY
 INTELLIGENCE != SOVEREIGNTY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 
+## Public Stewardship Incubation
+
+Current authoritative human record:
+docs/PUBLIC_STEWARDSHIP_INCUBATION.md
+
+Public future-governance summary:
+docs/FUTURE_FOUNDATION_BLUEPRINT.md
+
+Machine-readable record:
+machine/stewardship-status.json
+
+Schema:
+schemas/cmb.stewardship-status.v1.schema.json
+
+Current state:
+- legal entity formed: false
+- tax-exempt status claimed: false
+- active fundraising: false
+- donations accepted: false
+- paid access: false
+- production settlement: false
+- production payee configured: false
+- investment token issued: false
+- treasury exists: false
+
+GLITCH://402 remains research-only with deployment status:
+incubation-no-production-settlement
+
+INCUBATION != NONPROFIT
+PUBLIC_STEWARDSHIP != TAX_EXEMPT_STATUS
+PAYMENT_CODE != FUNDRAISING
+CONTRIBUTION != CONTROL
+
 ## Maturity layers
 
 Stable engineering:

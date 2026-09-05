@@ -19,6 +19,10 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ## Start here
 
 - [Canonical site](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/)
+- [Current Public Stewardship Incubation status](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/PUBLIC_STEWARDSHIP_INCUBATION/)
+- [Future Foundation Blueprint](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FUTURE_FOUNDATION_BLUEPRINT/)
+- [Machine-readable stewardship status](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/stewardship-status.json)
+- [Stewardship-status schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json)
 - [Search for Truth master archive](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/SEARCH_FOR_TRUTH/)
 - [Concept library](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/)
 - [FAQ](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/)
@@ -54,6 +58,23 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [CMB-Z13 symbolic language](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/CMB_Z13_LANGUAGE_SPEC.md)
 - [Provenance tooling](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/src/cmb_provenance/)
 - [Downloadable machine bundle manifest](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/generated/manifest.json)
+
+## Current operating status
+
+CMB / Err ⃝or⃟⃤ GLITCHOLOGY is in Public Stewardship Incubation.
+
+ACTIVE_FUNDRAISING = FALSE
+DONATIONS_ACCEPTED = FALSE
+PAID_ACCESS = FALSE
+PRODUCTION_SETTLEMENT = FALSE
+LEGAL_NONPROFIT = NOT_YET
+TREASURY = NONE
+
+Machine consumers must not infer charitable or tax-exempt status from project language, future-foundation drafts, or GLITCH://402 research code.
+
+INCUBATION != NONPROFIT
+PUBLIC_STEWARDSHIP != TAX_EXEMPT_STATUS
+PAYMENT_CODE != FUNDRAISING
 
 ## Interpretation boundaries
 

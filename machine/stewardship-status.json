@@ -1,0 +1,29 @@
+{
+  "schema_version": "cmb.stewardship-status.v1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "project_status": "public-stewardship-incubation",
+  "legal_entity_formed": false,
+  "tax_exempt_status_claimed": false,
+  "active_fundraising": false,
+  "donations_accepted": false,
+  "paid_access": false,
+  "production_settlement": false,
+  "production_payee_configured": false,
+  "investment_token_issued": false,
+  "treasury_exists": false,
+  "human_status_document": "docs/PUBLIC_STEWARDSHIP_INCUBATION.md",
+  "future_foundation_blueprint": "future-foundation/README.md",
+  "glitch402": {
+    "protocol": "GLITCH://402/1",
+    "deployment_status": "incubation-no-production-settlement",
+    "research_only": true
+  },
+  "boundaries": [
+    "INCUBATION != NONPROFIT",
+    "PUBLIC_STEWARDSHIP != TAX_EXEMPT_STATUS",
+    "PAYMENT_CODE != FUNDRAISING",
+    "DONATION != PURCHASE",
+    "CONTRIBUTION != CONTROL",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}

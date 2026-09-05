@@ -73,6 +73,25 @@
 
 </div>
 
+## Current stewardship status
+
+<div class="cmb-boundary">
+<strong>Public Stewardship Incubation:</strong> CMB / Err ⃝or⃟⃤ GLITCHOLOGY is currently an informal public-interest project, not a formed nonprofit or tax-exempt charity. Active fundraising, paid access, production settlement, and a project treasury are disabled while governance is learned from actual operating history.
+</div>
+
+- [Read the authoritative human status](PUBLIC_STEWARDSHIP_INCUBATION.md)
+- [Read the future-foundation design laboratory](FUTURE_FOUNDATION_BLUEPRINT.md)
+- [Machine-readable stewardship status](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/stewardship-status.json)
+- [Strict stewardship-status schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json)
+
+```text
+ACTIVE_FUNDRAISING = FALSE
+DONATIONS_ACCEPTED = FALSE
+PAID_ACCESS = FALSE
+PRODUCTION_SETTLEMENT = FALSE
+LEGAL_NONPROFIT = NOT_YET
+```
+
 ## ⚠ Search for Truth // Master Archive
 
 <div class="cmb-warning-strip">DARK FEDERAL ARCHIVE // OMEN ≠ PREDICTION // PATTERN ≠ PROOF</div>

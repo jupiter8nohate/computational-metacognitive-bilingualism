@@ -149,6 +149,8 @@ The agent layer is executable, but it deliberately optimizes for relevance and a
 ## Public stewardship incubation layer
 
 - `docs/PUBLIC_STEWARDSHIP_INCUBATION.md` - authoritative current operating status: informal public-interest incubation, no active fundraising, no production settlement.
+- `machine/stewardship-status.json` / `schemas/cmb.stewardship-status.v1.schema.json` - strict machine mirror of the current operating and financial boundaries.
+- `tests/test_stewardship_status.py` - prevents silent drift into fundraising, paid access, production settlement, token issuance, treasury claims, or tax-exempt claims during incubation.
 - `future-foundation/` - future-governance design laboratory; drafts only, not a legal entity.
 - `docs/CREATOR_SUPPORT.md` - current no-donation / no-tax-exemption status and nonfinancial contribution paths.
 - `spec/GLITCH-402-PAYMENTS.md` - dormant x402 v2 payment/provenance research profile.

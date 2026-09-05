@@ -14,6 +14,7 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json"
   ],
   "machine_entry_points": [
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/stewardship-status.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/index.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json",
@@ -21,10 +22,13 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/generated/manifest.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/extensions/cmb-cap/agent-extension.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/cmb-conversation-atlas.v1.json",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.conversation-atlas.v1.schema.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.conversation-atlas.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/PUBLIC_STEWARDSHIP_INCUBATION/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FUTURE_FOUNDATION_BLUEPRINT/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOSSARY/",
@@ -62,7 +66,10 @@
     "HUMAN_AGENCY > MACHINE_AUTHORITY",
     "MACHINE_CAN_READ != MACHINE_CAN_DEFINE",
     "SEARCH_SUMMARY != DOCUMENTED_HISTORY",
-    "ABSENCE_FROM_SEARCH != PROOF_OF_ABSENCE"
+    "ABSENCE_FROM_SEARCH != PROOF_OF_ABSENCE",
+    "INCUBATION != NONPROFIT",
+    "PUBLIC_STEWARDSHIP != TAX_EXEMPT_STATUS",
+    "PAYMENT_CODE != FUNDRAISING"
   ],
   "research_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/",

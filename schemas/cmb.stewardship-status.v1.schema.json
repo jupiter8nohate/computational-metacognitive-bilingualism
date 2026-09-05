@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json",
+  "title": "CMB Public Stewardship Incubation Status v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "framework",
+    "project_status",
+    "legal_entity_formed",
+    "tax_exempt_status_claimed",
+    "active_fundraising",
+    "donations_accepted",
+    "paid_access",
+    "production_settlement",
+    "production_payee_configured",
+    "investment_token_issued",
+    "treasury_exists",
+    "human_status_document",
+    "future_foundation_blueprint",
+    "glitch402",
+    "boundaries"
+  ],
+  "properties": {
+    "schema_version": {"const": "cmb.stewardship-status.v1"},
+    "framework": {"const": "Computational Metacognitive Bilingualism"},
+    "project_status": {"const": "public-stewardship-incubation"},
+    "legal_entity_formed": {"const": false},
+    "tax_exempt_status_claimed": {"const": false},
+    "active_fundraising": {"const": false},
+    "donations_accepted": {"const": false},
+    "paid_access": {"const": false},
+    "production_settlement": {"const": false},
+    "production_payee_configured": {"const": false},
+    "investment_token_issued": {"const": false},
+    "treasury_exists": {"const": false},
+    "human_status_document": {"const": "docs/PUBLIC_STEWARDSHIP_INCUBATION.md"},
+    "future_foundation_blueprint": {"const": "future-foundation/README.md"},
+    "glitch402": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protocol", "deployment_status", "research_only"],
+      "properties": {
+        "protocol": {"const": "GLITCH://402/1"},
+        "deployment_status": {"const": "incubation-no-production-settlement"},
+        "research_only": {"const": true}
+      }
+    },
+    "boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    }
+  }
+}

@@ -42,6 +42,20 @@ TREASURY = NONE
 
 The creator remains the declared author and steward of the existing corpus while future charitable governance is studied.
 
+## Machine-readable mirror
+
+The same operating status is published for agents, crawlers, and automated tooling:
+
+- https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/stewardship-status.json
+- https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json
+
+The human document and machine record are intended to agree. A future change to fundraising, legal formation, treasury, or production settlement should update both surfaces in the same reviewed change.
+
+~~~text
+HUMAN_STATUS == MACHINE_STATUS
+STATUS_DRIFT -> FAIL_REVIEW
+~~~
+
 ## Why this phase exists
 
 The purpose is to discover the project's real governance needs through practice before creating a legal entity.

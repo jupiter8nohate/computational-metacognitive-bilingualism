@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Added a strict machine-readable Public Stewardship Incubation status record and JSON Schema, promoted the status into the public docs and LLM discovery maps, and added regression tests that keep active fundraising, paid access, production settlement, project treasury, and tax-exempt claims disabled during incubation.
 - Established the canonical public name **Err ⃝or⃟⃤ GLITCHOLOGY**, while retaining GLITCHOLOGY as a short name and GLITCH-8 / CMB-G8 as the registry and implementation layer.
 - Added a canonical origin biography, a Creative Cognitive Signature protocol, and a Living Book / Versioned Autobiography protocol.
 - Added structured GitHub issue forms for new glyph proposals and sourced historical/factual corrections.
