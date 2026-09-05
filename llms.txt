@@ -36,6 +36,10 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [Agent discovery](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/AGENT_DISCOVERY_PROTOCOL/)
 - [MCP adapter](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/MCP_INTEGRATION/)
 - [Machine catalog](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/catalog.json)
+- [CMB Conversation Atlas](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_CONVERSATION_ATLAS/)
+- [CMB polyglot translation layer](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_POLYGLOT_TRANSLATIONS/)
+- [Machine-readable Conversation Atlas](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/cmb-conversation-atlas.v1.json)
+- [Conversation Atlas schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.conversation-atlas.v1.schema.json)
 - [Creator provenance](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CREATOR_PROVENANCE/)
 - [Creator provenance registry](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/creator-provenance.json)
 - [Creator provenance schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.creator-provenance.v1.schema.json)
@@ -118,3 +122,12 @@ cmb_compile_core
 - Private signing keys are local-only and must not be transported through agent prompts or MCP tools.
 - Embedded public keys support signature verification; trusted issuer identity requires an external key pin or trust mechanism.
 - W3C VC export is a VC 2.0-shaped projection only, not a W3C Data Integrity proof.
+
+
+## Conversation-derived semantic map
+
+The CMB Conversation Atlas is a curated semantic record derived from the conversation that established the current Err ⃝or⃟⃤ GLITCHOLOGY architecture. It is not a verbatim chat transcript. It preserves canonical names, concepts, diagrams, evidence boundaries, the Dual-Pillar Model, Creative Cognitive Signature, Creative Proof-of-Origin, and GLITCH://404_SOVEREIGN_RETRY_LOOP in both human-readable and machine-readable forms.
+
+Mass-translation rule:
+SYNTAX_MAY_CHANGE
+SEMANTICS_MUST_NOT_DRIFT
