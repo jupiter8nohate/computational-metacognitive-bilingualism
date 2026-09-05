@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 import pytest
+from jsonschema import Draft202012Validator
 
 from cmb_glitch8.registry import GlyphRegistryError, load_registry, parse_statement
 
@@ -93,3 +94,25 @@ def test_individual_signal_level_parses() -> None:
     )
     assert statement.glyph_id == "signal-spectrum"
     assert statement.glyph == "▂▃▄▅▆▇▉"
+
+
+def test_registry_matches_json_schema() -> None:
+    root = Path(__file__).resolve().parents[1]
+    schema = json.loads(
+        (root / "schemas" / "glitch8.glyph-registry.v1.schema.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    data = json.loads(
+        (root / "src" / "cmb_glitch8" / "glyphs.v1.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    Draft202012Validator(schema).validate(data)
+
+
+def test_public_registry_mirror_matches_canonical_bytes() -> None:
+    root = Path(__file__).resolve().parents[1]
+    canonical = root / "src" / "cmb_glitch8" / "glyphs.v1.json"
+    public = root / "library" / "glitch8.glyphs.v1.json"
+    assert public.read_bytes() == canonical.read_bytes()
