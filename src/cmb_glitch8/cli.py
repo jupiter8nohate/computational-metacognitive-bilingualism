@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import sys
 from pathlib import Path
 from typing import Sequence
@@ -87,6 +88,25 @@ def _explain(entry: dict) -> str:
     ])
 
 
+
+def _sync_repository_views(registry, destination: Path) -> list[Path]:
+    if (
+        destination.name != "glyphs.v1.json"
+        or destination.parent.name != "cmb_glitch8"
+        or destination.parent.parent.name != "src"
+    ):
+        return []
+
+    root = destination.parents[2]
+    reference = root / "books" / "GLITCH8_GLYPH_REFERENCE.md"
+    public_mirror = root / "library" / "glitch8.glyphs.v1.json"
+
+    reference.parent.mkdir(parents=True, exist_ok=True)
+    public_mirror.parent.mkdir(parents=True, exist_ok=True)
+    reference.write_text(registry.render_reference(), encoding="utf-8")
+    shutil.copyfile(destination, public_mirror)
+    return [reference, public_mirror]
+
 def _run(args: argparse.Namespace) -> int:
     if args.command == "glyph":
         if args.glyph_command == "list":
@@ -123,7 +143,10 @@ def _run(args: argparse.Namespace) -> int:
                 f"UPDATED {destination} version={registry.language_version} "
                 f"glyphs={len(registry.data['glyphs'])}"
             )
-            if args.reference_output:
+            synced = _sync_repository_views(registry, destination)
+            for output in synced:
+                print(f"SYNCED -> {output}")
+            if args.reference_output and args.reference_output not in synced:
                 args.reference_output.parent.mkdir(parents=True, exist_ok=True)
                 args.reference_output.write_text(
                     registry.render_reference(),
