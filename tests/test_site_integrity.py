@@ -116,3 +116,13 @@ def test_build_refuses_to_replace_unrelated_files(tmp_path: Path) -> None:
     with pytest.raises(ValueError, match="choose a new directory"):
         BUILD_DOCS["build_site"](tmp_path)
     assert sentinel.read_text() == "Keep this file."
+
+def test_only_canonical_workflow_can_deploy_github_pages() -> None:
+    root = Path(__file__).resolve().parents[1]
+    deployers = []
+    for workflow in sorted((root / ".github" / "workflows").glob("*.yml")):
+        text = workflow.read_text(encoding="utf-8")
+        if "actions/deploy-pages@" in text or "actions/upload-pages-artifact@" in text:
+            deployers.append(workflow.name)
+    assert deployers == ["pages.yml"]
+
