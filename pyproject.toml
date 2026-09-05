@@ -56,6 +56,7 @@ cmb-machine = "cmb_machine.cli:main"
 cmb-sdl = "cmb_sdl.cli:main"
 cmb-cap = "cmb_cap.cli:main"
 cmbc = "cmb_policy.runtime_cli:main"
+glitch8 = "cmb_glitch8.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
@@ -72,6 +73,7 @@ cmb_policy = ["py.typed"]
 cmb_agents = ["py.typed"]
 cmb_sdl = ["py.typed"]
 cmb_cap = ["py.typed"]
+cmb_glitch8 = ["py.typed", "glyphs.v1.json"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
