@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 from jsonschema import Draft202012Validator
 
+from cmb_glitch8.cli import main as glitch8_main
 from cmb_glitch8.registry import GlyphRegistryError, load_registry, parse_statement
 
 
@@ -131,3 +132,52 @@ def test_generated_reference_matches_registry() -> None:
         encoding="utf-8"
     )
     assert generated == load_registry().render_reference()
+
+
+def test_cli_add_auto_syncs_repository_views(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    root = tmp_path / "repo"
+    source_dir = root / "src" / "cmb_glitch8"
+    source_dir.mkdir(parents=True)
+    canonical = source_dir / "glyphs.v1.json"
+    canonical.write_text(
+        json.dumps(load_registry().data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    definition = root / "new-glyph.json"
+    definition.write_text(
+        json.dumps(
+            {
+                "id": "sync-test-glyph",
+                "glyph": "⌁",
+                "aliases": [],
+                "name": "Sync Test Glyph",
+                "categories": ["observation"],
+                "semantic_key": "sync_test_semantics",
+                "version": "0.1.0",
+                "status": "experimental",
+                "definition": "Verifies one-command synchronization.",
+                "cmb_invariant": "SYNC != AUTHORITY",
+                "human_semantics": "Test-only synchronization glyph.",
+                "machine_semantics": "SYNC_TEST_GLYPH",
+                "runtime_behavior": {"type": "marker"},
+                "example": "⌁ [G8] sync :: EXPERIMENTAL :: NO_AUTHORITY",
+                "created_at": "2026-09-05",
+                "author": "Test",
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
+
+    monkeypatch.chdir(root)
+    assert glitch8_main(["glyph", "add", str(definition)]) == 0
+
+    public = root / "library" / "glitch8.glyphs.v1.json"
+    reference = root / "books" / "GLITCH8_GLYPH_REFERENCE.md"
+    assert public.read_bytes() == canonical.read_bytes()
+    assert "⌁ // Sync Test Glyph" in reference.read_text(encoding="utf-8")
