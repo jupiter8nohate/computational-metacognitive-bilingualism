@@ -29,6 +29,8 @@ def published_site(tmp_path: Path) -> Path:
         "agents/registry.json": "{}",
         "cmb-machine-origin.json": "{}",
         "library/catalog.json": "{}",
+        "library/cmb-conversation-atlas.v1.json": "{}",
+        "schemas/cmb.conversation-atlas.v1.schema.json": "{}",
         "machine/index.json": "{}",
         "machine/knowledge-graph.jsonld": "{}",
         "machine/discovery-manifest.json": json.dumps({"human_entry_points": [SITE_URL + "RESEARCHERS/"]}),
