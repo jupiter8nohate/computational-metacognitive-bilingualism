@@ -14,6 +14,9 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Fixed
 
+- Hardened the Conversation Atlas from a partially open JSON shape into a strict semantic contract with regression tests for canonical naming, provenance boundaries, unexpected fields, and semantic drift.
+- Corrected the stale GLITCHOLOGY title in the digital library catalog and added the Conversation Atlas, machine record, schema, and polyglot translation layer as first-class discoverable artifacts.
+- Required the Atlas JSON and schema in the verified Pages bundle, added them to machine discovery and IndexNow publication, and documented them in the expanded LLM map.
 - Removed the competing semantic-only GitHub Pages deployment path. `.github/workflows/cmb-google-semantic-pages.yml` now validates the semantic publication bundle without deploying it, leaving `pages.yml` as the single canonical Pages deployment authority and eliminating overwrite/race risk.
 - Repaired the Search for Truth archive's three sibling-page links, staged the visual-system banner, and rendered the homepage title as an actual heading.
 - Unified documentation CI and Pages deployment through `scripts/build_docs.py`, with checks for rendered local links, images, discovery URLs, LLM-map links, and generated artifact checksums.
