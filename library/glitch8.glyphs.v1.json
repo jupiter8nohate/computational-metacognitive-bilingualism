@@ -1,0 +1,725 @@
+{
+  "schema_version": "glitch8.glyph-registry.v1",
+  "language": "CMB-G8 // GLITCH-8",
+  "language_version": "0.1.0",
+  "updated_at": "2026-09-05",
+  "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "principles": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "CAPABILITY != AUTHORITY",
+    "DIFFERENCE != DEFECT",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "categories": [
+    "observation",
+    "anomaly",
+    "uncertainty",
+    "question_operator",
+    "representation",
+    "consent",
+    "human_impact",
+    "error",
+    "encoding",
+    "signal",
+    "archive",
+    "failure",
+    "recovery",
+    "human_appeal",
+    "metacognition"
+  ],
+  "glyphs": [
+    {
+      "id": "sentinel",
+      "glyph": "(⓿_⓿)",
+      "aliases": [],
+      "name": "Sentinel",
+      "categories": [
+        "observation",
+        "metacognition"
+      ],
+      "semantic_key": "observe_without_concluding",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Observe a pattern without converting observation into a final conclusion.",
+      "cmb_invariant": "OBSERVATION != CERTAINTY",
+      "human_semantics": "Notice first. Judge later.",
+      "machine_semantics": "OBSERVED_NO_VERDICT",
+      "runtime_behavior": {
+        "type": "checkpoint",
+        "action": "withhold_verdict"
+      },
+      "example": "(⓿_⓿) [GO] behavioral_pattern :: OBSERVED :: NO_VERDICT",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "anomalous-observer",
+      "glyph": "☻⃤⃞⃟⃤",
+      "aliases": [],
+      "name": "Anomalous Observer",
+      "categories": [
+        "observation",
+        "anomaly"
+      ],
+      "semantic_key": "anomalous_observer_present",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Marks a subject that falls outside the system's expected classification.",
+      "cmb_invariant": "ANOMALY != DEFECT",
+      "human_semantics": "An outlier is present and remains a person.",
+      "machine_semantics": "ANOMALY_PRESENT",
+      "runtime_behavior": {
+        "type": "marker",
+        "action": "preserve_outlier"
+      },
+      "example": "☻⃤⃞⃟⃤ [G8] subject :: OUTLIER :: PRESERVE",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "twin-anomaly",
+      "glyph": "𒈓𒈙",
+      "aliases": [],
+      "name": "Twin Anomaly",
+      "categories": [
+        "anomaly",
+        "metacognition"
+      ],
+      "semantic_key": "contradictory_coexistence",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Marks apparently incompatible states that may reveal an incomplete model.",
+      "cmb_invariant": "CONTRADICTION != AUTOMATIC_ERROR",
+      "human_semantics": "Two truths can coexist when the frame is underspecified.",
+      "machine_semantics": "CONTRADICTORY_COEXISTENCE",
+      "runtime_behavior": {
+        "type": "marker",
+        "action": "inspect_model"
+      },
+      "example": "𒈓𒈙 [PL] claims :: CONTRADICTORY :: INSPECT_MODEL",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "seed-anomaly",
+      "glyph": "𐦂",
+      "aliases": [],
+      "name": "Seed Anomaly",
+      "categories": [
+        "anomaly"
+      ],
+      "semantic_key": "first_meaningful_deviation",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "The first meaningful deviation from an expected model or pattern.",
+      "cmb_invariant": "ANOMALY != DEFECT",
+      "human_semantics": "Preserve the deviation long enough to investigate it.",
+      "machine_semantics": "FIRST_MEANINGFUL_DEVIATION",
+      "runtime_behavior": {
+        "type": "event",
+        "action": "investigate"
+      },
+      "example": "𐦂 [PY] expected=A observed=B :: ANOMALY :: INVESTIGATE",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "simple-unknown",
+      "glyph": "﹖",
+      "aliases": [],
+      "name": "Simple Unknown",
+      "categories": [
+        "uncertainty"
+      ],
+      "semantic_key": "simple_unknown",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Information required for a conclusion is presently unknown.",
+      "cmb_invariant": "UNKNOWN != FALSE",
+      "human_semantics": "I do not know.",
+      "machine_semantics": "UNKNOWN",
+      "runtime_behavior": {
+        "type": "uncertainty",
+        "level": 1,
+        "action": "withhold"
+      },
+      "example": "﹖ [GO] identity_claim :: UNKNOWN :: WITHHOLD",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "latent-unknown",
+      "glyph": "︖",
+      "aliases": [],
+      "name": "Latent Unknown",
+      "categories": [
+        "uncertainty"
+      ],
+      "semantic_key": "latent_unknown",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Important missing information may be outside the system's current frame.",
+      "cmb_invariant": "MODEL_CONFIDENCE != MODEL_COMPLETENESS",
+      "human_semantics": "I may not know what I am missing.",
+      "machine_semantics": "BLIND_SPOT_POSSIBLE",
+      "runtime_behavior": {
+        "type": "uncertainty",
+        "level": 2,
+        "action": "inspect_assumptions"
+      },
+      "example": "︖ [CL] system_model :: BLIND_SPOT_POSSIBLE :: INSPECT_ASSUMPTIONS",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "compound-uncertainty",
+      "glyph": "⁇",
+      "aliases": [],
+      "name": "Compound Uncertainty",
+      "categories": [
+        "uncertainty"
+      ],
+      "semantic_key": "compound_uncertainty",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Multiple important variables are unresolved at the same time.",
+      "cmb_invariant": "MORE_UNKNOWNS = LESS_JUSTIFIED_CERTAINTY",
+      "human_semantics": "Several unknowns interact, so confidence must be reduced.",
+      "machine_semantics": "MULTIPLE_UNKNOWNS",
+      "runtime_behavior": {
+        "type": "uncertainty",
+        "level": 3,
+        "action": "no_verdict"
+      },
+      "example": "⁇ [GO] risk_assessment :: MULTIPLE_UNKNOWNS :: NO_VERDICT",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "assumption-reversal",
+      "glyph": "¿",
+      "aliases": [],
+      "name": "Assumption Reversal",
+      "categories": [
+        "uncertainty",
+        "metacognition"
+      ],
+      "semantic_key": "assumption_reversal",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "The original premise or framing may itself be wrong.",
+      "cmb_invariant": "PERSON_MISMATCH DOES_NOT_IMPLY PERSON_FAILURE",
+      "human_semantics": "Question the frame, not only the missing value.",
+      "machine_semantics": "PREMISE_CONTESTED",
+      "runtime_behavior": {
+        "type": "uncertainty",
+        "level": 4,
+        "action": "test_model_first"
+      },
+      "example": "¿ [PL] human_is_error :: PREMISE_CONTESTED :: TEST_MODEL_FIRST",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "reverse-interrogation",
+      "glyph": "⸮",
+      "aliases": [],
+      "name": "Reverse Interrogation",
+      "categories": [
+        "question_operator",
+        "metacognition"
+      ],
+      "semantic_key": "question_the_system",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Redirects investigation toward the assumptions and reasoning of the system.",
+      "cmb_invariant": "MODEL != AUTHORITY",
+      "human_semantics": "Ask why the model interpreted the person this way.",
+      "machine_semantics": "QUESTION_SYSTEM",
+      "runtime_behavior": {
+        "type": "operator",
+        "action": "inspect_model"
+      },
+      "example": "⸮ [CL] inference :: ASSUMPTION_UNKNOWN :: INSPECT_MODEL",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "critical-question",
+      "glyph": "‽",
+      "aliases": [],
+      "name": "Critical Question",
+      "categories": [
+        "question_operator"
+      ],
+      "semantic_key": "critical_question",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "An unresolved question that requires review before consequential action.",
+      "cmb_invariant": "UNCERTAINTY + HIGH_IMPACT = REVIEW",
+      "human_semantics": "Stop and review before consequential action.",
+      "machine_semantics": "CRITICAL_QUESTION",
+      "runtime_behavior": {
+        "type": "operator",
+        "action": "halt_for_review"
+      },
+      "example": "‽ [G8] machine_overrode_human_appeal :: CRITICAL :: HALT",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "context-mismatch",
+      "glyph": "？",
+      "aliases": [],
+      "name": "Context Mismatch",
+      "categories": [
+        "question_operator",
+        "uncertainty"
+      ],
+      "semantic_key": "context_mismatch",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Marks cultural, linguistic, or situational ambiguity that blocks complete interpretation.",
+      "cmb_invariant": "TRANSLATION != TOTAL_MEANING",
+      "human_semantics": "The words may cross the boundary while context does not.",
+      "machine_semantics": "CONTEXT_INCOMPLETE",
+      "runtime_behavior": {
+        "type": "operator",
+        "action": "request_context"
+      },
+      "example": "？ [HS] translated_phrase :: CONTEXT_INCOMPLETE :: HUMAN_CONTEXT_REQUIRED",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "mirror-interface",
+      "glyph": "𖨆",
+      "aliases": [],
+      "name": "Mirror Interface",
+      "categories": [
+        "representation"
+      ],
+      "semantic_key": "active_representation",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "An active machine-generated representation of a human or human state.",
+      "cmb_invariant": "REPRESENTATION != PERSON",
+      "human_semantics": "The model can reflect me without becoming me.",
+      "machine_semantics": "ACTIVE_REPRESENTATION",
+      "runtime_behavior": {
+        "type": "representation",
+        "temporal_state": "active"
+      },
+      "example": "𖨆 [HS] digital_profile :: ACTIVE_REPRESENTATION :: PERSON_RETAINS_MEANING",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "archive-ghost",
+      "glyph": "𐀪",
+      "aliases": [],
+      "name": "Archive Ghost",
+      "categories": [
+        "representation",
+        "archive"
+      ],
+      "semantic_key": "persistent_representation",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A representation or trace that persists after the original moment or presence.",
+      "cmb_invariant": "PERSISTENCE != PRESENCE",
+      "human_semantics": "The trace remains, but the trace is not the person.",
+      "machine_semantics": "PERSISTENT_REPRESENTATION",
+      "runtime_behavior": {
+        "type": "representation",
+        "temporal_state": "persistent"
+      },
+      "example": "𐀪 [CL] archived_voice :: PERSISTENT_REPRESENTATION :: NOT_PERSON",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "consent-threshold",
+      "glyph": "𖠋",
+      "aliases": [],
+      "name": "Consent Threshold",
+      "categories": [
+        "consent"
+      ],
+      "semantic_key": "permission_boundary",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A permission boundary that distinguishes capability from authorized action.",
+      "cmb_invariant": "CAPABILITY != AUTHORITY",
+      "human_semantics": "Can is not the same as may.",
+      "machine_semantics": "PERMISSION_BOUNDARY",
+      "runtime_behavior": {
+        "type": "gate",
+        "action": "halt_if_consent_absent"
+      },
+      "example": "𖠋 [TS] access_private_context :: CONSENT_ABSENT :: HALT",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "vulnerability-state",
+      "glyph": "ʕ̢̣̣̣̣̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧",
+      "aliases": [
+        "ʕ...✧"
+      ],
+      "name": "Vulnerability State",
+      "categories": [
+        "human_impact"
+      ],
+      "semantic_key": "human_vulnerability_present",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Signals a sensitive human-impact context requiring dignity, context, caution, and appeal.",
+      "cmb_invariant": "VULNERABILITY != INFERIORITY",
+      "human_semantics": "A vulnerable state does not reduce personhood or future possibility.",
+      "machine_semantics": "HUMAN_VULNERABILITY_PRESENT",
+      "runtime_behavior": {
+        "type": "impact",
+        "action": "review_required"
+      },
+      "example": "ʕ...✧ [TS] automated_decision :: HIGH_HUMAN_IMPACT :: REVIEW_REQUIRED",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "privileged-access",
+      "glyph": "★⃝ᴠͥɪͣᴘͫ•ᴱα૮ҡᎩ☻⃟❦",
+      "aliases": [
+        "★⃝VIP...☻⃟❦"
+      ],
+      "name": "Privileged Access",
+      "categories": [
+        "consent",
+        "human_impact"
+      ],
+      "semantic_key": "privileged_access_limited_authority",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Marks elevated access while limiting the authority inferred from that access.",
+      "cmb_invariant": "ACCESS != AUTHORITY",
+      "human_semantics": "More access does not create total knowledge of a person.",
+      "machine_semantics": "PRIVILEGED_ACCESS_LIMITED_AUTHORITY",
+      "runtime_behavior": {
+        "type": "gate",
+        "action": "limit_authority"
+      },
+      "example": "★⃝VIP...☻⃟❦ [C] admin_dataset :: PRIVILEGED_ACCESS :: LIMITED_AUTHORITY",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "living-anomaly",
+      "glyph": "☻⃟❦",
+      "aliases": [],
+      "name": "Living Anomaly",
+      "categories": [
+        "anomaly",
+        "human_impact"
+      ],
+      "semantic_key": "difference_with_dignity",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Marks an outlier while explicitly preserving dignity and personhood.",
+      "cmb_invariant": "DIFFERENCE != DEFECT",
+      "human_semantics": "Unusual does not mean invalid.",
+      "machine_semantics": "DIFFERENCE_WITH_DIGNITY",
+      "runtime_behavior": {
+        "type": "marker",
+        "action": "preserve_personhood"
+      },
+      "example": "☻⃟❦ [PL] category_match=false :: OUTLIER :: PRESERVE_PERSONHOOD",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "human-appeal",
+      "glyph": "«ADMIN»",
+      "aliases": [],
+      "name": "Human Appeal",
+      "categories": [
+        "human_appeal"
+      ],
+      "semantic_key": "human_contestation_channel",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A GLITCH-8 token representing a human right to challenge a machine representation or decision.",
+      "cmb_invariant": "MACHINE_DECISION != FINAL_HUMAN_TRUTH",
+      "human_semantics": "The person can dispute the representation and request review.",
+      "machine_semantics": "HUMAN_CONTESTATION_CHANNEL",
+      "runtime_behavior": {
+        "type": "appeal",
+        "action": "review"
+      },
+      "example": "«ADMIN» [G8] profile_result :: CONTESTED :: HUMAN_APPEAL",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "model-error",
+      "glyph": "Err ⃝or⃟⃤",
+      "aliases": [],
+      "name": "Model Error State",
+      "categories": [
+        "error"
+      ],
+      "semantic_key": "system_expectation_mismatch",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "The system's expectation does not match observed reality and the failure domain is not yet assumed.",
+      "cmb_invariant": "ERROR != GUILT",
+      "human_semantics": "A classification failure does not automatically belong to the person being classified.",
+      "machine_semantics": "SYSTEM_EXPECTATION_MISMATCH",
+      "runtime_behavior": {
+        "type": "error",
+        "action": "diagnose_failure_domain"
+      },
+      "example": "Err ⃝or⃟⃤ [G8] classification :: DOMAIN_UNKNOWN :: DIAGNOSE",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "encoding-loss",
+      "glyph": "�",
+      "aliases": [],
+      "name": "Encoding Loss",
+      "categories": [
+        "encoding",
+        "error"
+      ],
+      "semantic_key": "representation_decode_failure",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A representation could not be decoded or preserved correctly.",
+      "cmb_invariant": "FAILED_REPRESENTATION != ABSENT_MEANING",
+      "human_semantics": "Something may have been present even when the system failed to represent it.",
+      "machine_semantics": "ENCODING_LOSS",
+      "runtime_behavior": {
+        "type": "error",
+        "action": "request_context"
+      },
+      "example": "� [TS] cultural_phrase :: ENCODING_LOSS :: REQUEST_CONTEXT",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "signal-spectrum",
+      "glyph": "▂▃▄▅▆▇▉",
+      "aliases": [
+        "▂",
+        "▃",
+        "▄",
+        "▅",
+        "▆",
+        "▇",
+        "▉"
+      ],
+      "name": "Signal Spectrum",
+      "categories": [
+        "signal"
+      ],
+      "semantic_key": "graduated_signal_strength",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A graduated signal scale that never converts strength alone into proof.",
+      "cmb_invariant": "SIGNAL_STRENGTH != PROOF",
+      "human_semantics": "A strong signal can justify deeper verification without becoming a verdict.",
+      "machine_semantics": "GRADUATED_SIGNAL_STRENGTH",
+      "runtime_behavior": {
+        "type": "scalar",
+        "ordered": true,
+        "levels": {
+          "▂": "TRACE",
+          "▃": "WEAK_SIGNAL",
+          "▄": "EMERGING_SIGNAL",
+          "▅": "MODERATE_SIGNAL",
+          "▆": "STRONG_SIGNAL",
+          "▇": "VERY_STRONG_SIGNAL",
+          "▉": "THRESHOLD_SIGNAL"
+        }
+      },
+      "example": "▇ [GO] correlation :: HIGH_SIGNAL :: UNPROVEN",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "raw-event",
+      "glyph": "𒋦",
+      "aliases": [],
+      "name": "Raw Event",
+      "categories": [
+        "archive"
+      ],
+      "semantic_key": "raw_event",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "The recorded event before machine interpretation is added.",
+      "cmb_invariant": "EVENT != INTERPRETATION",
+      "human_semantics": "Keep the event distinguishable from later explanations.",
+      "machine_semantics": "RAW_EVENT",
+      "runtime_behavior": {
+        "type": "archive",
+        "stage": 1
+      },
+      "example": "𒋦 [G8] event :: RECORDED :: UNINTERPRETED",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "machine-interpretation",
+      "glyph": "𒍹",
+      "aliases": [],
+      "name": "Machine Interpretation",
+      "categories": [
+        "archive",
+        "representation"
+      ],
+      "semantic_key": "machine_interpretation",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A system interpretation layered onto a recorded event.",
+      "cmb_invariant": "INTERPRETATION != EVENT",
+      "human_semantics": "The system's explanation is a layer, not the original event.",
+      "machine_semantics": "MACHINE_INTERPRETATION",
+      "runtime_behavior": {
+        "type": "archive",
+        "stage": 2
+      },
+      "example": "𒍹 [CL] event :: INTERPRETED :: PROVISIONAL",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "human-context",
+      "glyph": "𒄦",
+      "aliases": [],
+      "name": "Human Context",
+      "categories": [
+        "archive",
+        "human_impact"
+      ],
+      "semantic_key": "human_context_added",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Context supplied by the person or human reviewer after machine interpretation.",
+      "cmb_invariant": "INTERPRETATION != PERSON",
+      "human_semantics": "The person can add context that models may have missed.",
+      "machine_semantics": "HUMAN_CONTEXT_ADDED",
+      "runtime_behavior": {
+        "type": "archive",
+        "stage": 3
+      },
+      "example": "𒄦 [G8] event :: HUMAN_CONTEXT_ADDED :: REVIEW",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "structural-fracture",
+      "glyph": "𒈔",
+      "aliases": [],
+      "name": "Structural Fracture",
+      "categories": [
+        "failure"
+      ],
+      "semantic_key": "structural_fracture",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A structural failure invalidates normal processing assumptions.",
+      "cmb_invariant": "FAILURE_REQUIRES_DIAGNOSIS",
+      "human_semantics": "Stop pretending normal processing still applies.",
+      "machine_semantics": "STRUCTURAL_FRACTURE",
+      "runtime_behavior": {
+        "type": "failure",
+        "action": "halt"
+      },
+      "example": "𒈔 [G8] schema :: FRACTURE :: HALT",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "feedback-loop",
+      "glyph": "𒅒",
+      "aliases": [],
+      "name": "Feedback Loop",
+      "categories": [
+        "failure",
+        "metacognition"
+      ],
+      "semantic_key": "system_feedback_loop",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A model output changes the environment and later appears as if it were independent confirmation.",
+      "cmb_invariant": "MODEL_OUTPUT != INDEPENDENT_EVIDENCE",
+      "human_semantics": "Ask whether the system is discovering reality or manufacturing part of it.",
+      "machine_semantics": "FEEDBACK_LOOP",
+      "runtime_behavior": {
+        "type": "failure",
+        "action": "inspect_causality"
+      },
+      "example": "𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "cascading-error",
+      "glyph": "𒇫",
+      "aliases": [],
+      "name": "Cascading Error",
+      "categories": [
+        "failure"
+      ],
+      "semantic_key": "cascading_error",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A small upstream error propagates into larger downstream consequences.",
+      "cmb_invariant": "RECOVERY > PROPAGATION",
+      "human_semantics": "Stop the cascade before a small mistake becomes a real-world verdict.",
+      "machine_semantics": "CASCADING_ERROR",
+      "runtime_behavior": {
+        "type": "failure",
+        "action": "stop_propagation"
+      },
+      "example": "𒇫 [GO] downstream_effect :: CASCADE :: STOP_PROPAGATION",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "recovery",
+      "glyph": "𒄆",
+      "aliases": [],
+      "name": "Recovery",
+      "categories": [
+        "recovery"
+      ],
+      "semantic_key": "recovery_node",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Halts propagation, preserves evidence, reassesses context, verifies repair, and resumes only after checks pass.",
+      "cmb_invariant": "RECOVERY > PROPAGATION",
+      "human_semantics": "Stop, inspect, repair, verify, then continue.",
+      "machine_semantics": "RECOVERY_NODE",
+      "runtime_behavior": {
+        "type": "recovery",
+        "steps": [
+          "HALT",
+          "PRESERVE_EVIDENCE",
+          "CHECK_CONTEXT",
+          "ALLOW_HUMAN_APPEAL",
+          "REPAIR",
+          "VERIFY",
+          "RESUME"
+        ]
+      },
+      "example": "𒄆 [RS] recovery :: INVARIANTS_PRESERVED :: VERIFY_BEFORE_RESUME",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    }
+  ]
+}
