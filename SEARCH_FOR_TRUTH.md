@@ -1,7 +1,7 @@
 # ☣ SEARCH FOR TRUTH // MASTER GATEWAY
 
 <p align="center">
-  <img src="assets/cmb-search-for-truth-master.jpg" alt="CMB cognitive offloading and adaptive symbiosis master poster" width="760">
+  <img src="docs/media/cmb-cognitive-offloading-adaptive-symbiosis.jpg" alt="CMB cognitive offloading and adaptive symbiosis master poster" width="760">
 </p>
 
 <p align="center">
