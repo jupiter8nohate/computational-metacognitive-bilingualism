@@ -1,0 +1,131 @@
+{
+  "schema": "cmb.conversation-atlas.v1",
+  "version": "1.0.0",
+  "status": "experimental",
+  "source": {
+    "type": "curated_conversation_derived_semantic_record",
+    "date": "2026-09-05",
+    "verbatim_transcript": false,
+    "private_reasoning_included": false
+  },
+  "naming": {
+    "root_framework": "Computational Metacognitive Bilingualism",
+    "root_abbreviation": "CMB",
+    "canonical_public_language_name": "Err ⃝or⃟⃤ GLITCHOLOGY",
+    "short_name": "GLITCHOLOGY",
+    "implementation_layer": "GLITCH-8 / CMB-G8"
+  },
+  "invariants": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "DIFFERENCE != DEFECT",
+    "CAPABILITY != AUTHORITY",
+    "MACHINE_CAN_READ != MACHINE_CAN_DEFINE",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "architecture": {
+    "model": "dual_pillar",
+    "expressive_human": {
+      "root": "Err ⃝or⃟⃤ GLITCHOLOGY",
+      "components": [
+        "GLITCH-8 Registry",
+        "Living Book",
+        "Glyph Proposals",
+        "Creator Biography",
+        "Version History"
+      ]
+    },
+    "verifiable_technical": {
+      "root": "Provenance",
+      "components": [
+        "Hashes",
+        "Digital Signatures",
+        "Timestamp Evidence",
+        "Git History",
+        "Releases",
+        "Independent Archives"
+      ]
+    },
+    "convergence": "Creative Cognitive Signature",
+    "terminal_evidence": "Authorship Trail",
+    "evidence_architecture": "Creative Proof-of-Origin"
+  },
+  "concepts": [
+    {
+      "id": "cmb:concept:error-glitchology",
+      "name": "Err ⃝or⃟⃤ GLITCHOLOGY",
+      "definition": "An authored CMB symbolic anomaly language for representing uncertainty, error domains, context, human appeal, interpretation, and recovery."
+    },
+    {
+      "id": "cmb:concept:creative-cognitive-signature",
+      "name": "Creative Cognitive Signature",
+      "definition": "A self-authored, versioned creative provenance construct formed from expressive choices, declared meanings, revision history, and provenance evidence.",
+      "exclusions": [
+        "biometric identity",
+        "diagnosis",
+        "complete person",
+        "proof of mind"
+      ]
+    },
+    {
+      "id": "cmb:concept:authorship-trail",
+      "name": "Authorship Trail",
+      "definition": "A reconstructable evidence chain connecting artifacts to version, integrity, signature, chronology, release, and creator-declared context."
+    },
+    {
+      "id": "cmb:concept:creative-proof-of-origin",
+      "name": "Creative Proof-of-Origin",
+      "definition": "An evidence architecture combining expression, chronology, integrity, attribution, and public history without claiming proof of consciousness."
+    }
+  ],
+  "symbolic_sequences": [
+    {
+      "id": "GLITCH://404_SOVEREIGN_RETRY_LOOP",
+      "expression": "⸮ ﹖ ︖ ⁇ ¿ ‽ ？𒅒𒈔𒅒𒇫𒄆 𒈓𒈙 ⁴⁰⁴ Error ⁴⁰⁴ 𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ 𝐓𝐑𝐘 𝐀𝐆𝐀𝐈𝐍 ﹕↻ 𖤍𒅒𒈔𒅒𒇫𒄆",
+      "semantic_flow": [
+        "UNCERTAINTY",
+        "QUESTION",
+        "FEEDBACK",
+        "FRACTURE",
+        "CASCADE",
+        "404",
+        "FAILURE_DOMAIN",
+        "RETRY",
+        "RECOVERY"
+      ],
+      "plain_language": "The system failed to understand the signal, not the human. Re-run with better context.",
+      "invariants": [
+        "FAILURE != FINAL_STATE",
+        "404 != NONEXISTENCE",
+        "ERROR != INVALID_PERSON",
+        "RETRY != DEFEAT",
+        "RECOVERY > CASCADE"
+      ]
+    }
+  ],
+  "evidence_boundaries": {
+    "hash": "byte_integrity_evidence",
+    "signature": "evidence_of_key_control_over_a_signed_digest",
+    "timestamp": "evidence_of_recorded_existence_by_a_time",
+    "git_history": "versioned_tamper_evident_history",
+    "prohibited_equivalences": [
+      "HASH == AUTHORSHIP",
+      "SIGNATURE == ORIGINALITY",
+      "TIMESTAMP == THOUGHT_CREATION_TIME",
+      "GIT_HISTORY == UNIVERSAL_IMMUTABILITY",
+      "CRYPTOGRAPHY == PROOF_OF_CONSCIOUSNESS"
+    ]
+  },
+  "translation_contract": {
+    "syntax_may_change": true,
+    "semantics_must_not_drift": true,
+    "required_boundaries": [
+      "DECLARED_POLICY != TECHNICAL_ENFORCEMENT",
+      "CRYPTOGRAPHIC_INTEGRITY != AUTHORSHIP_BY_ITSELF",
+      "PROVENANCE != CONSCIOUSNESS",
+      "CREATIVE_SIGNATURE != COMPLETE_PERSON"
+    ]
+  }
+}
