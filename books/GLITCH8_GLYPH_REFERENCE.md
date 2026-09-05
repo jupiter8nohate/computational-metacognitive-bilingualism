@@ -484,7 +484,7 @@ Observe a pattern without converting observation into a final conclusion.
 - **Status:** canonical
 - **Version:** 1.0.0
 - **Categories:** signal
-- **Aliases:** none
+- **Aliases:** ▂, ▃, ▄, ▅, ▆, ▇, ▉
 - **Semantic key:** graduated_signal_strength
 - **CMB invariant:** SIGNAL_STRENGTH != PROOF
 
