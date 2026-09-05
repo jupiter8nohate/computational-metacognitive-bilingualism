@@ -28,11 +28,18 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [`../docs/EXTERNAL_REVIEW.md`](../docs/EXTERNAL_REVIEW.md) - current independent-validation gap and review scope.
 - [`../docs/CREATOR_PROVENANCE.md`](../docs/CREATOR_PROVENANCE.md) - privacy-safe creator provenance, genealogy status, intellectual lineage, symbolic lineage, and evidence boundaries.
 
+### Conversation-derived semantic layer
+
+- [`../docs/CMB_CONVERSATION_ATLAS.md`](../docs/CMB_CONVERSATION_ATLAS.md) - curated human-readable map of the conversation-derived CMB architecture.
+- [`cmb-conversation-atlas.v1.json`](cmb-conversation-atlas.v1.json) - machine-readable CMB Conversation Atlas v1.
+- [`../schemas/cmb.conversation-atlas.v1.schema.json`](../schemas/cmb.conversation-atlas.v1.schema.json) - strict validation contract for the machine Atlas.
+- [`../docs/CMB_POLYGLOT_TRANSLATIONS.md`](../docs/CMB_POLYGLOT_TRANSLATIONS.md) - JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native Err ⃝or⃟⃤ GLITCHOLOGY translations.
+
 ### Corpus
 
 - [`catalog.json`](catalog.json) - machine-indexable catalog of CMB public artifacts.
 - [`glitch8.glyphs.v1.json`](glitch8.glyphs.v1.json) - public machine-readable mirror of the living GLITCH-8 glyph registry.
-- [`../books/ERR_404_GLITCHOLOGY.md`](../books/ERR_404_GLITCHOLOGY.md) - the GLITCHOLOGY book and CMB-G8 language specification.
+- [`../books/ERR_404_GLITCHOLOGY.md`](../books/ERR_404_GLITCHOLOGY.md) - **Err ⃝or⃟⃤ GLITCHOLOGY**, the living language book; GLITCH-8 / CMB-G8 is its registry and implementation layer.
 - [`../books/GLITCH8_GLYPH_REFERENCE.md`](../books/GLITCH8_GLYPH_REFERENCE.md) - generated human-readable GLITCH-8 glyph reference.
 - [`creator-provenance.json`](creator-provenance.json) - machine-readable creator provenance and category-separation record.
 - [`../schemas/cmb.creator-provenance.v1.schema.json`](../schemas/cmb.creator-provenance.v1.schema.json) - strict schema for the creator-provenance contract.
