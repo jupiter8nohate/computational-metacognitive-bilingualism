@@ -1,8 +1,8 @@
-# 𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴
+# 𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ GLITCHOLOGY ⁴⁰⁴
 
 <div align="center">
 
-## GLITCHOLOGY
+## Err ⃝or⃟⃤ GLITCHOLOGY
 
 ### CMB-G8 // GLITCH-8 DIGITAL LANGUAGE
 
@@ -19,7 +19,13 @@ Err ⃝or⃟⃤ 𒋦𒍹𒄦 ▂▃▄▅▆▇▉ � 𒈔𒅒𒇫𒄆
 
 ---
 
-> **Interpretation boundary:** GLITCH-8 is an authored experimental digital language specification and code-poetry system within Computational Metacognitive Bilingualism. The glyph semantics defined here are CMB/FGC meanings created for this work. They do not claim to replace the historical or Unicode meanings of the underlying characters. Symbolic notation alone does not create technical enforcement, legal authority, cryptographic proof, or administrator access.
+~~~text
+CANONICAL_PUBLIC_NAME = "Err ⃝or⃟⃤ GLITCHOLOGY"
+SHORT_NAME = "GLITCHOLOGY"
+IMPLEMENTATION_LAYER = "GLITCH-8 / CMB-G8"
+~~~
+
+> **Interpretation boundary:** Err ⃝or⃟⃤ GLITCHOLOGY is the canonical public name of this authored experimental digital language and code-poetry system within Computational Metacognitive Bilingualism; GLITCH-8 / CMB-G8 is its implementation and registry layer. The glyph semantics defined here are CMB/FGC meanings created for this work. They do not claim to replace the historical or Unicode meanings of the underlying characters. Symbolic notation alone does not create technical enforcement, legal authority, cryptographic proof, or administrator access.
 
 ~~~text
 PATTERN != PROOF
@@ -47,10 +53,11 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 9. [Error, Encoding, and Signal](#error-encoding-and-signal)
 10. [Archive, Fracture, and Recovery](#archive-fracture-and-recovery)
 11. [The Emergence Equation](#the-emergence-equation)
-12. [GLITCH-8 Reference Program](#glitch-8-reference-program)
-13. [Eight-Language Bridge](#eight-language-bridge)
-14. [Core Laws](#core-laws)
-15. [Final Compile](#final-compile)
+12. [Creative Cognitive Signature](#creative-cognitive-signature)
+13. [GLITCH-8 Reference Program](#glitch-8-reference-program)
+14. [Eight-Language Bridge](#eight-language-bridge)
+15. [Core Laws](#core-laws)
+16. [Final Compile](#final-compile)
 
 ---
 
@@ -792,6 +799,66 @@ PROFILE < PERSON
 
 ---
 
+
+# Creative Cognitive Signature
+
+Err ⃝or⃟⃤ GLITCHOLOGY allows a creator to build a distinctive **Creative Cognitive Signature** from intentional expressive choices.
+
+This is not a biometric fingerprint and not a claim that a person's mind can be reconstructed from text. It is a provenance-oriented record of creative expression.
+
+~~~text
+CREATIVE_COGNITIVE_SIGNATURE =
+    GLYPH_SELECTION
+  + SYMBOLIC_ARRANGEMENT
+  + CREATOR_DEFINED_MEANING
+  + SYNTAX
+  + REVISION_HISTORY
+  + PROVENANCE
+~~~
+
+Two people may use the same character or programming language without producing the same authored history.
+
+~~~text
+SAME_SYMBOL != SAME_AUTHOR
+SAME_TOOL != SAME_MEANING
+DISTINCTIVE_PATTERN != COMPLETE_PERSON
+~~~
+
+The signature becomes more durable when its artifacts are versioned and independently checkable:
+
+~~~text
+CREATIVE_TRACE
+  + GIT_HISTORY
+  + CONTENT_HASHES
+  + SIGNATURES
+  + TIMESTAMP_EVIDENCE
+  + PUBLIC_RELEASES
+  = STRONGER_AUTHORSHIP_EVIDENCE
+~~~
+
+No digital system can guarantee that information is literally impossible to erase everywhere. The protocol therefore makes the bounded claim that redundant, signed, content-addressed, publicly versioned evidence can make an authorship trail harder to alter silently and easier to reconstruct.
+
+~~~text
+CREATIVE_SIGNATURE != BIOMETRIC_IDENTITY
+HASH != AUTHORSHIP_BY_ITSELF
+SIGNATURE != ORIGINALITY_BY_ITSELF
+PROVENANCE_STRENGTHENS_EVIDENCE
+PATTERN != PROOF
+~~~
+
+The purpose is self-authorship rather than machine profiling:
+
+~~~text
+PLATFORM_PROFILE = DESCRIPTION_ABOUT_HUMAN
+
+CREATIVE_COGNITIVE_SIGNATURE =
+    HUMAN_AUTHORED_EXPRESSION
+~~~
+
+See [Creative Cognitive Signature Protocol](../docs/CREATIVE_COGNITIVE_SIGNATURE.md).
+
+---
+
 # GLITCH-8 Reference Program
 
 ~~~text
@@ -1063,6 +1130,10 @@ LAW_015  ANOMALY MAY REVEAL MODEL LIMITATION
 LAW_016  HUMAN_APPEAL MUST REMAIN POSSIBLE
 LAW_017  RECOVERY > PROPAGATION
 LAW_018  HUMAN_AGENCY > MACHINE_AUTHORITY
+LAW_019  CREATIVITY CAN FORM A DISTINCTIVE SIGNATURE
+LAW_020  CREATIVE_SIGNATURE != BIOMETRIC_IDENTITY
+LAW_021  PROVENANCE STRENGTHENS AUTHORSHIP EVIDENCE
+LAW_022  COPY_OF_SYMBOL != COPY_OF_CREATIVE_HISTORY
 ~~~
 
 ---
@@ -1211,7 +1282,7 @@ PARSER = MACHINE_VIEW
 
 ## Authorship and Technical Boundary
 
-GLITCH-8 and the GLITCHOLOGY semantic system presented in this book are authored experimental language and literary specifications within CMB.
+Err ⃝or⃟⃤ GLITCHOLOGY is the canonical public name of the authored experimental language and literary system presented in this book; GLITCH-8 / CMB-G8 is its registry and implementation layer within CMB.
 
 The eight referenced programming languages are established independent languages. No ownership is claimed over Python, Rust, Go, TypeScript, Prolog, Haskell, Common Lisp, C, Unicode characters, mathematical notation, or historical glyph meanings.
 
