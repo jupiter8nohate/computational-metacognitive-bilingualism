@@ -91,6 +91,26 @@ requirement = build_payment_required(
 
 The helper does not sign or settle a payment. Those actions belong to a reviewed x402 client/facilitator integration.
 
+
+The same requirement can be generated through the installed GLITCH-8 CLI:
+
+~~~bash
+glitch8 payment require \
+  --resource-url https://example.org/glitch8/v1/translate \
+  --description "Official GLITCH-8 hosted translation" \
+  --amount-atomic 20000 \
+  --asset 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 \
+  --pay-to "$VERIFIED_CREATOR_PAYEE"
+~~~
+
+A stored receipt can be integrity-checked with:
+
+~~~bash
+glitch8 payment receipt-validate receipt.json
+~~~
+
+That command validates the CMB receipt digest and receipt-level invariants only. It does not replace facilitator or chain verification.
+
 ## Receipt profile
 
 After an external facilitator or chain verifier confirms settlement, GLITCH://402 can create a CMB receipt that binds:
