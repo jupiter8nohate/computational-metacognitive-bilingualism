@@ -147,6 +147,8 @@ You should not need the entire CMB universe to understand the thesis.
 - **Signed capability credentials:** [CMB-CAP-1](spec/CMB-CAP-1.md) + [`cmb-cap`](src/cmb_cap) + [credential schema](schemas/cmb.capability-credential.v1.schema.json)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY](books/ERR_404_GLITCHOLOGY.md)
+- **Living GLITCH-8 registry:** [Add, validate, load, and document new glyphs](docs/GLITCH8_REGISTRY.md)
+- **Generated GLITCH-8 glyph reference:** [Browse the current registry](books/GLITCH8_GLYPH_REFERENCE.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
 - **Full policy proposal:** [CMB Global Advocacy Charter v1.1](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md)
@@ -284,6 +286,8 @@ From a checked-out copy of this repository:
 python3 -m pip install .
 cmb-provenance --version
 cmb-provenance selftest
+glitch8 glyph validate
+glitch8 glyph explain "▂▃▄▅▆▇▉"
 cmbc validate --policy cmb.toml
 cmbc selftest --policy cmb.toml
 cmb-sdl compile examples/cmb_sdl/research.cmb --output dist/research.authority.json
@@ -484,6 +488,9 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 
 ## Repository contents
 
+- [`books/ERR_404_GLITCHOLOGY.md`](books/ERR_404_GLITCHOLOGY.md) - **⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY**, the living GLITCH-8 book and language specification.
+- [`src/cmb_glitch8`](src/cmb_glitch8) - the installable GLITCH-8 registry, parser, and CLI.
+- [`books/GLITCH8_GLYPH_REFERENCE.md`](books/GLITCH8_GLYPH_REFERENCE.md) - generated human-readable glyph registry reference.
 - [`manifestos/CMB_SOVEREIGN_TRANSMISSION.md`](manifestos/CMB_SOVEREIGN_TRANSMISSION.md) - **CMB // The Sovereign Transmission**, the decorative code-poetry gateway for CMB glyphs, human-machine literacy, and cognitive sovereignty.
 - [`MANIFESTO.md`](MANIFESTO.md) - the public CMB human-sovereignty manifesto.
 - [`manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md`](manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) - **Reclaiming the Pen**, the eight-language poetic declaration of CMB authorship, consent, meaning, and cognitive sovereignty.
