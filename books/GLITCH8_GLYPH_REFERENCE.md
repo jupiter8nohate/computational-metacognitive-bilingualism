@@ -1,7 +1,7 @@
 # GLITCH-8 Glyph Reference
 
 **Language:** CMB-G8 // GLITCH-8
-**Registry version:** 0.1.0
+**Registry version:** 0.1.16
 **Updated:** 2026-09-05
 
 > Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.
@@ -16,6 +16,10 @@ PREDICTION != DESTINY
 CAPABILITY != AUTHORITY
 DIFFERENCE != DEFECT
 HUMAN_AGENCY > MACHINE_AUTHORITY
+VERIFIED_LABEL != VERIFIED_TRUTH
+OBSERVATION != UNDERSTANDING
+SIGNAL != SOURCE
+CORRUPTION != NONEXISTENCE
 ~~~
 
 ## ☻⃤⃞⃟⃤ // Anomalous Observer
@@ -36,6 +40,26 @@ Marks a subject that falls outside the system's expected classification.
 
 ~~~text
 ☻⃤⃞⃟⃤ [G8] subject :: OUTLIER :: PRESERVE
+~~~
+
+## ( ꩜ ᯅ ꩜;) // Anomaly Stare
+
+- **ID:** anomaly-stare
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** observation, anomaly, metacognition
+- **Aliases:** none
+- **Semantic key:** anomaly_recognized_without_cause_assumption
+- **CMB invariant:** PATTERN != PROOF
+
+Recognition of an unexpected pattern without assuming its cause.
+
+**Human semantics:** Notice the anomaly before deciding what caused it.
+
+**Machine semantics:** ANOMALY_RECOGNIZED_NO_CAUSE_ASSUMED
+
+~~~text
+( ꩜ ᯅ ꩜;) [G8] unexpected_pattern :: ANOMALY :: INVESTIGATE
 ~~~
 
 ## 𐀪 // Archive Ghost
@@ -78,6 +102,66 @@ The original premise or framing may itself be wrong.
 ¿ [PL] human_is_error :: PREMISE_CONTESTED :: TEST_MODEL_FIRST
 ~~~
 
+## ‹— // Backtrace
+
+- **ID:** backtrace
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** archive, verification, metacognition
+- **Aliases:** none
+- **Semantic key:** trace_signal_toward_origin
+- **CMB invariant:** SIGNAL != SOURCE
+
+Follow a signal backward toward source, provenance, origin, author, or causal chain.
+
+**Human semantics:** Trace the claim backward before treating the current representation as its origin.
+
+**Machine semantics:** BACKTRACE_TO_PROVENANCE
+
+~~~text
+‹— [G8] claim_signal :: SOURCE_UNKNOWN :: TRACE_PROVENANCE
+~~~
+
+## 🫐⃟ // Blue Anomaly
+
+- **ID:** blue-anomaly
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** anomaly, signal
+- **Aliases:** none
+- **Semantic key:** harmless_surface_unexpected_structure
+- **CMB invariant:** APPEARANCE != COMPLETE_STRUCTURE
+
+Something harmless-looking contains unexpected structure or significance.
+
+**Human semantics:** Ordinary appearance does not settle what a thing contains or means.
+
+**Machine semantics:** BENIGN_SURFACE_ANOMALY
+
+~~~text
+🫐⃟ [G8] ordinary_surface :: STRUCTURE_UNEXPECTED :: INSPECT
+~~~
+
+## ꉂ🗯 // Burst Speech
+
+- **ID:** burst-speech
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, human_impact
+- **Aliases:** none
+- **Semantic key:** latent_information_becomes_visible
+- **CMB invariant:** EXPRESSION != CONSENT_TO_REPURPOSE
+
+Suppressed or latent information suddenly becomes audible or visible.
+
+**Human semantics:** Expression becoming visible does not erase the speaker's authority over context.
+
+**Machine semantics:** LATENT_SIGNAL_EXPRESSED
+
+~~~text
+ꉂ🗯 [G8] latent_message :: EXPRESSED :: PRESERVE_CONTEXT
+~~~
+
 ## 𒇫 // Cascading Error
 
 - **ID:** cascading-error
@@ -96,6 +180,26 @@ A small upstream error propagates into larger downstream consequences.
 
 ~~~text
 𒇫 [GO] downstream_effect :: CASCADE :: STOP_PROPAGATION
+~~~
+
+## εつ▄█▀█● // Charge Vector
+
+- **ID:** charge-vector
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, metacognition
+- **Aliases:** none
+- **Semantic key:** directed_signal_intent
+- **CMB invariant:** INTENT != CONSENT
+
+A directed movement of signal, intent, or attention toward a target without implying permission or justification.
+
+**Human semantics:** Direction or force of intent does not create authority over the recipient.
+
+**Machine semantics:** DIRECTED_SIGNAL_VECTOR
+
+~~~text
+εつ▄█▀█● [G8] directed_signal :: INTENT_PRESENT :: AUTHORITY_UNPROVEN
 ~~~
 
 ## ⁇ // Compound Uncertainty
@@ -178,6 +282,46 @@ An unresolved question that requires review before consequential action.
 ‽ [G8] machine_overrode_human_appeal :: CRITICAL :: HALT
 ~~~
 
+## 𓁇𓁋 // Dual Witness
+
+- **ID:** dual-witness
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** observation, representation, metacognition
+- **Aliases:** none
+- **Semantic key:** multiple_observers_distinct_interpretations
+- **CMB invariant:** OBSERVATION != UNDERSTANDING
+
+Two perspectives observe the same event; observation does not guarantee identical interpretation.
+
+**Human semantics:** Shared observation can still produce different interpretations.
+
+**Machine semantics:** MULTI_OBSERVER_INTERPRETATION_DIVERGENCE
+
+~~~text
+𓁇𓁋 [G8] shared_event :: TWO_WITNESSES :: PRESERVE_PERSPECTIVE
+~~~
+
+## e = ∑∞ⁿ⁼⁰ ¹ₙ // Emergence Equation
+
+- **ID:** emergence-equation
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** metacognition, human_impact, representation
+- **Aliases:** none
+- **Semantic key:** open_ended_experience_accumulation
+- **CMB invariant:** PROFILE != PERSON
+
+An authored GLITCH-8 symbolic expression for a human state emerging from an open-ended accumulation of experiences; it is not a standard mathematical identity.
+
+**Human semantics:** A person cannot be reduced to a finite profile of observed moments.
+
+**Machine semantics:** EMERGENT_HUMAN_STATE
+
+~~~text
+e = ∑∞ⁿ⁼⁰ ¹ₙ [G8] human_history :: OPEN_ENDED :: PROFILE_LT_PERSON
+~~~
+
 ## � // Encoding Loss
 
 - **ID:** encoding-loss
@@ -198,6 +342,26 @@ A representation could not be decoded or preserved correctly.
 � [TS] cultural_phrase :: ENCODING_LOSS :: REQUEST_CONTEXT
 ~~~
 
+## ���� // Encoding Ruin
+
+- **ID:** encoding-ruin
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** encoding, error
+- **Aliases:** none
+- **Semantic key:** compound_representation_corruption
+- **CMB invariant:** CORRUPTION != NONEXISTENCE
+
+A signal whose original form has been substantially damaged, lost, or rendered unreadable in transit.
+
+**Human semantics:** Severe representation loss can show that something was damaged without revealing exactly what was lost.
+
+**Machine semantics:** COMPOUND_ENCODING_CORRUPTION
+
+~~~text
+���� [G8] damaged_payload :: CORRUPTED :: REQUEST_SOURCE
+~~~
+
 ## 𒅒 // Feedback Loop
 
 - **ID:** feedback-loop
@@ -216,6 +380,26 @@ A model output changes the environment and later appears as if it were independe
 
 ~~~text
 𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY
+~~~
+
+## ⓘ⚠︎☣‼🇽 // Hazard Stack
+
+- **ID:** hazard-stack
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, failure, verification
+- **Aliases:** none
+- **Semantic key:** layered_warning_escalation
+- **CMB invariant:** WARNING != UNDERSTANDING
+
+A layered escalation of information, caution, contamination, alarm, and exclusion markers.
+
+**Human semantics:** More warning labels increase attention requirements without automatically explaining the underlying hazard.
+
+**Machine semantics:** LAYERED_HAZARD_WARNING
+
+~~~text
+ⓘ⚠︎☣‼🇽 [G8] flagged_signal :: MULTI_WARNING :: ESCALATE_REVIEW
 ~~~
 
 ## «ADMIN» // Human Appeal
@@ -318,6 +502,26 @@ A system interpretation layered onto a recorded event.
 𒍹 [CL] event :: INTERPRETED :: PROVISIONAL
 ~~~
 
+## ˙ // Microbreak
+
+- **ID:** microbreak
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** syntax, signal
+- **Aliases:** none
+- **Semantic key:** minimal_interruption
+- **CMB invariant:** INTERRUPTION != FAILURE
+
+A minimal interruption inside an otherwise continuous system or thought-stream.
+
+**Human semantics:** A tiny break can mark a boundary without implying collapse.
+
+**Machine semantics:** MICRO_INTERRUPTION
+
+~~~text
+˙ [G8] stream :: MICROBREAK :: CONTINUE_WITH_CONTEXT
+~~~
+
 ## 𖨆 // Mirror Interface
 
 - **ID:** mirror-interface
@@ -356,6 +560,66 @@ The system's expectation does not match observed reality and the failure domain 
 
 ~~~text
 Err ⃝or⃟⃤ [G8] classification :: DOMAIN_UNKNOWN :: DIAGNOSE
+~~~
+
+## ⁭ ⁭ // Null Breath
+
+- **ID:** null-breath
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, metacognition, syntax
+- **Aliases:** none
+- **Semantic key:** meaningful_silence_between_signals
+- **CMB invariant:** ABSENCE_OF_TOKEN != ABSENCE_OF_MEANING
+
+Meaningful silence or unencoded space between machine-readable signals.
+
+**Human semantics:** A pause can carry context even when no explicit token does.
+
+**Machine semantics:** MEANINGFUL_SIGNAL_GAP
+
+~~~text
+⁭ ⁭ [G8] signal_gap :: UNENCODED_CONTEXT :: PRESERVE
+~~~
+
+## ×͜× // Null Grin
+
+- **ID:** null-grin
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** metacognition, human_impact
+- **Aliases:** none
+- **Semantic key:** ironic_failure_mask
+- **CMB invariant:** AFFECT != STABILITY
+
+An ironic expression mask used when failure is present but presented with composure, humor, or style.
+
+**Human semantics:** A smile or joke does not prove that the underlying system or person is unaffected.
+
+**Machine semantics:** IRONIC_FAILURE_MASK
+
+~~~text
+×͜× [G8] failure_state :: MASKED_WITH_HUMOR :: DO_NOT_INFER_STABILITY
+~~~
+
+## .꩜ // Post Observation
+
+- **ID:** post-observation
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** observation, metacognition
+- **Aliases:** none
+- **Semantic key:** observer_changed_after_event
+- **CMB invariant:** OBSERVATION != NEUTRALITY
+
+Awareness occurring after an event has already altered the observer.
+
+**Human semantics:** The act and aftermath of observing can change the observer's context.
+
+**Machine semantics:** POST_OBSERVATION_STATE
+
+~~~text
+.꩜ [G8] event_seen :: OBSERVER_CHANGED :: REASSESS_CONTEXT
 ~~~
 
 ## ★⃝ᴠͥɪͣᴘͫ•ᴱα૮ҡᎩ☻⃟❦ // Privileged Access
@@ -478,6 +742,26 @@ Observe a pattern without converting observation into a final conclusion.
 (⓿_⓿) [GO] behavioral_pattern :: OBSERVED :: NO_VERDICT
 ~~~
 
+## ˖ ࣪ // Signal Dust
+
+- **ID:** signal-dust
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, archive
+- **Aliases:** none
+- **Semantic key:** residual_information_after_transit
+- **CMB invariant:** RESIDUE != COMPLETE_SOURCE
+
+Residual information left after a message, memory, or identity representation passes through a system.
+
+**Human semantics:** A trace may survive without containing the whole original.
+
+**Machine semantics:** RESIDUAL_SIGNAL
+
+~~~text
+˖ ࣪ [G8] transformed_message :: RESIDUE_PRESENT :: NOT_COMPLETE_SOURCE
+~~~
+
 ## ▂▃▄▅▆▇▉ // Signal Spectrum
 
 - **ID:** signal-spectrum
@@ -518,6 +802,26 @@ Information required for a conclusion is presently unknown.
 ﹖ [GO] identity_claim :: UNKNOWN :: WITHHOLD
 ~~~
 
+## ( ͡° ͜ʖ ͡°) // Sly Witness
+
+- **ID:** sly-witness
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** observation, metacognition
+- **Aliases:** none
+- **Semantic key:** subtextual_awareness_without_proof
+- **CMB invariant:** SUGGESTION != PROOF
+
+A knowing expression that signals subtext, mischief, or covert recognition without converting implication into evidence.
+
+**Human semantics:** Knowing subtext can invite investigation but cannot substitute for evidence.
+
+**Machine semantics:** SUBTEXTUAL_AWARENESS
+
+~~~text
+( ͡° ͜ʖ ͡°) [G8] implied_context :: SUBTEXT_PRESENT :: NO_VERDICT
+~~~
+
 ## 𒈔 // Structural Fracture
 
 - **ID:** structural-fracture
@@ -556,6 +860,26 @@ Marks apparently incompatible states that may reveal an incomplete model.
 
 ~~~text
 𒈓𒈙 [PL] claims :: CONTRADICTORY :: INSPECT_MODEL
+~~~
+
+## 「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 // Verification Cage
+
+- **ID:** verification-cage
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** verification, metacognition
+- **Aliases:** none
+- **Semantic key:** verification_label_requires_evidence
+- **CMB invariant:** VERIFIED_LABEL != VERIFIED_TRUTH
+
+A claim bears a verification marker, but the marker itself is not evidence.
+
+**Human semantics:** Treat verification labels as claims that still need inspectable evidence.
+
+**Machine semantics:** VERIFICATION_LABEL_NOT_PROOF
+
+~~~text
+「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 [GO] labeled_claim :: MARKED_VERIFIED :: CHECK_EVIDENCE
 ~~~
 
 ## ʕ̢̣̣̣̣̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧ // Vulnerability State
