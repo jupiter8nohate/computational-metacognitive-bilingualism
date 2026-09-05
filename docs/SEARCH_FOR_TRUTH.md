@@ -103,7 +103,7 @@ The D.N.A. prophecy branch uses the question mark as a literary warning against 
 
 The supplied visual direction is preserved here as a compressed concept-art reference for the archive aesthetic.
 
-![CMB dark archive concept-art reference](media/search-for-truth-reference.jpg)
+![CMB poster: How We Were Raised, from Cognitive Offloading to Adaptive Symbiosis](media/cmb-cognitive-offloading-adaptive-symbiosis.jpg)
 
 ## Search protocol
 
