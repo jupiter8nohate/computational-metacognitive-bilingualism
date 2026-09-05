@@ -22,420 +22,6 @@
   },
   "artifacts": [
     {
-      "id": "cmb-core-manifesto",
-      "title": "Computational Metacognitive Bilingualism Manifesto",
-      "path": "MANIFESTO.md",
-      "format": "markdown",
-      "kind": "manifesto",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "human agency",
-        "machine authority",
-        "self-definition",
-        "classification limits"
-      ],
-      "declared_meaning": "Core statement of CMB human-sovereignty principles."
-    },
-    {
-      "id": "cmb-reclaiming-the-pen",
-      "title": "Reclaiming the Pen - Eight-Language CMB Poetic Manifesto",
-      "path": "manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md",
-      "format": "markdown",
-      "kind": "polyglot code-poetry manifesto",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "reclaiming the pen",
-        "code as poetry",
-        "human authorship",
-        "consent",
-        "meaning",
-        "cognitive sovereignty",
-        "machine interpretation boundaries",
-        "polyglot expression"
-      ],
-      "declared_meaning": "Expresses the CMB motto and mission across Python, Rust, Go, TypeScript, Prolog, Haskell, Common Lisp, and C while preserving the boundary between machine interpretation and human authority."
-    },
-    {
-      "id": "cmb-polyglot-firewall",
-      "title": "CMB Polyglot Firewall Specification",
-      "path": "CMB_Polyglot_Firewall_Specification.md",
-      "format": "markdown",
-      "kind": "technical-philosophical specification",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "polyglot semantics",
-        "invariants",
-        "provenance",
-        "human sovereignty"
-      ],
-      "declared_meaning": "Cross-language expression of CMB invariants; firewall language is conceptual unless backed by deployed enforcement."
-    },
-    {
-      "id": "cmb-dna-attention",
-      "title": "Demon's Need Attention - D.N.A.",
-      "path": "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
-      "format": "markdown",
-      "kind": "manifesto",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "attention economy",
-        "engagement",
-        "profiling",
-        "cognitive sovereignty"
-      ],
-      "declared_meaning": "CMB branch examining attention-extractive systems and the boundary between engagement and consent."
-    },
-    {
-      "id": "cmb-dna-question-mark-2030",
-      "title": "The Prophecy of the Question Mark // Scroll 666 // Event of 2030",
-      "path": "manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md",
-      "format": "markdown",
-      "kind": "speculative literary prophecy and code-poetry",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "D.N.A. Bible",
-        "human agency",
-        "machine authority",
-        "uncertainty",
-        "attention economy",
-        "symbolic prophecy"
-      ],
-      "declared_meaning": "Authored D.N.A. Bible worldbuilding using 2030 and Scroll 666 to question machine authority, profiling, and surrender of human judgment. This is speculative code-poetry, not a verified prediction or empirical finding."
-    },
-    {
-      "id": "cmb-dna-chicken-run",
-      "title": "D.N.A. - The Chicken Run Manifesto",
-      "path": "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",
-      "format": "markdown",
-      "kind": "literary manifesto and computational allegory",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "institutional confinement",
-        "algorithmic confinement",
-        "attention economy",
-        "human agency",
-        "cognitive sovereignty",
-        "Flamingoglyph Code"
-      ],
-      "declared_meaning": "D.N.A./FGC literary allegory using the coop and escape motif to distinguish human self-definition from institutional and algorithmic classification."
-    },
-    {
-      "id": "cmb-unclassifiable-index",
-      "title": "CMB // The Unclassifiable Index",
-      "path": "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
-      "format": "markdown",
-      "kind": "manifesto and library-design model",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "MissingNo Clause",
-        "Pokédex metaphor",
-        "perspective intelligence",
-        "uncertainty",
-        "context",
-        "provenance"
-      ],
-      "declared_meaning": "Defines a perspective-aware human/machine-readable library model in which schema failure triggers model revision rather than automatic human correction."
-    },
-    {
-      "id": "cmb-sovereign-transmission",
-      "title": "CMB // The Sovereign Transmission",
-      "path": "manifestos/CMB_SOVEREIGN_TRANSMISSION.md",
-      "format": "markdown",
-      "kind": "decorative code-poetry manifesto",
-      "status": "derived",
-      "provenance_scope": "repository_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "code as poetry",
-        "metacognitive literacy",
-        "human agency",
-        "cognitive sovereignty",
-        "Flamingoglyph Code",
-        "human-machine translation",
-        "interpretation boundaries"
-      ],
-      "declared_meaning": "Human-facing artistic gateway to CMB that uses symbolic glyphs, structured code-poetry, metacognitive checks, and explicit human authority boundaries."
-    },
-    {
-      "id": "cmb-global-advocacy-charter",
-      "title": "CMB Global Advocacy Charter v1.1",
-      "path": "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
-      "format": "markdown",
-      "kind": "policy proposal",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "human appeal",
-        "data minimization",
-        "AI disclosure",
-        "cognitive freedom",
-        "provenance",
-        "prior art",
-        "human oversight"
-      ],
-      "declared_meaning": "Translates CMB principles into institutional recommendations while explicitly positioning them against existing law, scholarship, and standards; it is not a claim that all recommendations are existing law."
-    },
-    {
-      "id": "cmb-library-catalog",
-      "title": "CMB Digital Library Catalog",
-      "path": "library/catalog.json",
-      "format": "json",
-      "kind": "machine-readable index",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "catalog",
-        "artifact discovery",
-        "provenance scope",
-        "interpretation boundaries"
-      ],
-      "declared_meaning": "Machine-indexable map of public CMB artifacts. The catalog describes works; it does not define people."
-    },
-    {
-      "id": "cmb-unburned-signal",
-      "title": "CMB // The Unburned Signal Protocol",
-      "path": "manifestos/cmb-unburned-signal/MANIFESTO.md",
-      "format": "markdown",
-      "kind": "artistic manifesto",
-      "status": "derived",
-      "provenance_scope": "repository_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "memory",
-        "filtering",
-        "authorship",
-        "cryptographic history",
-        "unburned signal"
-      ],
-      "declared_meaning": "Haunted-library artistic branch about preserving signal, source, context, and reconstructable history."
-    },
-    {
-      "id": "cmb-z13-manifesto",
-      "title": "CMB-Z13™ Manifesto - Zodiac Computational Metacognitive Language",
-      "path": "manifestos/CMB_Z13_MANIFESTO.md",
-      "format": "markdown",
-      "kind": "manifesto and symbolic language declaration",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "thirteen computational lenses",
-        "zodiac symbolism",
-        "software-language mapping",
-        "human-machine notation",
-        "human agency",
-        "machine interpretation boundaries",
-        "guardian modes",
-        "accessible computational literacy"
-      ],
-      "declared_meaning": "Public manifesto for CMB-Z13, defining thirteen zodiac-inspired software-language lenses plus the Guardian Modes teaching layer while preserving human authority and rejecting deterministic classification."
-    },
-    {
-      "id": "cmb-z13-language-spec",
-      "title": "CMB-Z13™ - Zodiac Computational Metacognitive Language",
-      "path": "manifestos/CMB_Z13_LANGUAGE_SPEC.md",
-      "format": "markdown",
-      "kind": "symbolic computational language specification",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "thirteen computational lenses",
-        "zodiac symbolism",
-        "software-language mapping",
-        "metacognition",
-        "human agency",
-        "machine interpretation boundaries",
-        "guardian modes",
-        "accessible computational literacy"
-      ],
-      "declared_meaning": "Defines thirteen zodiac-inspired software-language operators as symbolic CMB reasoning lenses and formally maps the Guardian Modes story layer onto those operators. The mappings are creative notation, not scientific personality claims or deterministic human classification."
-    },
-    {
-      "id": "cmb-z13-machine-registry",
-      "title": "CMB-Z13 Machine Registry",
-      "path": "library/cmb-z13.registry.json",
-      "format": "json",
-      "kind": "machine-readable symbolic language registry",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "machine-readable semantics",
-        "operator registry",
-        "symbolic vectors",
-        "human self-definition",
-        "interpretation policy",
-        "guardian modes",
-        "accessible computational literacy"
-      ],
-      "declared_meaning": "Machine-readable representation of the CMB-Z13 mapping, symbolic vectors, Guardian Modes aliases, reasoning pipeline, invariants, and epistemic boundaries."
-    },
-    {
-      "id": "cmb-policy-one-pager",
-      "title": "CMB - 12 Principles for Human Agency in Automated Systems",
-      "path": "policy/CMB_POLICY_ONE_PAGER.md",
-      "format": "markdown",
-      "kind": "public-facing policy summary",
-      "status": "derived",
-      "provenance_scope": "repository_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "policy front door",
-        "human agency",
-        "automated decisions",
-        "digital rights"
-      ],
-      "declared_meaning": "Compressed public entry point to the Global Advocacy Charter; it acknowledges existing legal and scholarly foundations and states CMB's translation-layer contribution."
-    },
-    {
-      "id": "cmb-prior-art-positioning",
-      "title": "CMB Prior Art, Legal Context, and Positioning",
-      "path": "docs/PRIOR_ART_AND_POSITIONING.md",
-      "format": "markdown",
-      "kind": "research and positioning document",
-      "status": "derived",
-      "provenance_scope": "repository_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "GDPR Article 22",
-        "EU AI Act Article 14",
-        "algorithmic accountability",
-        "prior art",
-        "C2PA"
-      ],
-      "declared_meaning": "States what CMB does not claim to have invented, identifies relevant law and scholarship, and defines the narrower contribution CMB claims."
-    },
-    {
-      "id": "cmb-c2pa-interoperability",
-      "title": "CMB Provenance ↔ C2PA Interoperability Plan",
-      "path": "docs/C2PA_INTEROPERABILITY.md",
-      "format": "markdown",
-      "kind": "technical interoperability design",
-      "status": "planned",
-      "provenance_scope": "repository_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "C2PA",
-        "Content Credentials",
-        "provenance",
-        "custom assertions",
-        "interoperability"
-      ],
-      "declared_meaning": "Defines C2PA as the external provenance interoperability target and explicitly states that current cmb_provenance is not C2PA-conformant."
-    },
-    {
-      "id": "cmb-external-review",
-      "title": "Independent Review Requested",
-      "path": "docs/EXTERNAL_REVIEW.md",
-      "format": "markdown",
-      "kind": "external validation request",
-      "status": "open",
-      "provenance_scope": "repository_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "independent audit",
-        "security review",
-        "policy review",
-        "external validation"
-      ],
-      "declared_meaning": "Publicly documents the current lack of independent certification and defines a narrow, reproducible external review scope."
-    },
-    {
-      "id": "cmb-edu-kids",
-      "title": "CMB-EDU Kids - Flamingoglyph Learning Layer",
-      "path": "docs/CMB_EDU_KIDS.md",
-      "format": "markdown",
-      "kind": "child-facing computational and metacognitive literacy curriculum",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "computational literacy",
-        "metacognition",
-        "Flamingoglyph Code",
-        "privacy",
-        "consent",
-        "verification",
-        "human-machine collaboration"
-      ],
-      "declared_meaning": "Elementary-school-facing CMB learning layer that teaches children to notice, question, verify, decide, create, protect privacy, and distinguish human self-description from machine inference."
-    },
-    {
-      "id": "cmb-edu-schema",
-      "title": "CMB Metacognitive Context Envelope v1 Schema",
-      "path": "schemas/cmb.edu.v1.schema.json",
-      "format": "json",
-      "kind": "machine-readable educational context schema",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "human-declared context",
-        "epistemic source",
-        "privacy defaults",
-        "sovereignty boundaries",
-        "temporary context",
-        "machine-readable education"
-      ],
-      "declared_meaning": "Strict schema for CMB-EDU envelopes. It records declared context as human-declared, forbids machine-inferred state in the v1 envelope, and encodes deny-by-default privacy declarations without claiming external enforcement."
-    },
-    {
-      "id": "cmb-agent-registry",
-      "title": "CMB Agent Registry v1",
-      "path": "agents/registry.json",
-      "format": "json",
-      "kind": "machine-readable agent discovery registry",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "agent discovery",
-        "relevance-first recommendation",
-        "citation",
-        "knowledge graph",
-        "human agency"
-      ],
-      "declared_meaning": "Canonical CMB-ADP-1 registry for relevance-first discovery, attribution-preserving recommendation, bounded summaries, and machine-readable knowledge relationships."
-    },
-    {
       "id": "cmb-agent-card",
       "title": "CMB Agent Discovery Card v1",
       "path": "agents/agent-card.json",
@@ -473,6 +59,25 @@
       "declared_meaning": "Defines CMB-ADP-1 discovery, recommendation, citation, HTTP reference behavior, standards boundaries, anti-spam constraints, and Recovery expectations."
     },
     {
+      "id": "cmb-agent-registry",
+      "title": "CMB Agent Registry v1",
+      "path": "agents/registry.json",
+      "format": "json",
+      "kind": "machine-readable agent discovery registry",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "agent discovery",
+        "relevance-first recommendation",
+        "citation",
+        "knowledge graph",
+        "human agency"
+      ],
+      "declared_meaning": "Canonical CMB-ADP-1 registry for relevance-first discovery, attribution-preserving recommendation, bounded summaries, and machine-readable knowledge relationships."
+    },
+    {
       "id": "cmb-agent-registry-schema",
       "title": "CMB Agent Registry v1 Schema",
       "path": "schemas/cmb.agent-registry.v1.schema.json",
@@ -491,87 +96,23 @@
       "declared_meaning": "Schema contract for the canonical CMB-ADP-1 registry, including explicit trust-preserving distribution boundaries."
     },
     {
-      "id": "cmb-harmoni-perfect-play",
-      "title": "HARMONI // Perfect-Play Epistemics",
-      "path": "manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md",
+      "id": "cmb-c2pa-interoperability",
+      "title": "CMB Provenance ↔ C2PA Interoperability Plan",
+      "path": "docs/C2PA_INTEROPERABILITY.md",
       "format": "markdown",
-      "kind": "code-art manifesto and epistemic triage model",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
+      "kind": "technical interoperability design",
+      "status": "planned",
+      "provenance_scope": "repository_artifact",
       "human_readable": true,
       "machine_indexable": true,
       "concepts": [
-        "perfect-play epistemics",
-        "epistemic triage",
-        "MissingNo Recovery gate",
-        "uncertainty",
-        "evidence-bounded claims",
-        "human judgment",
-        "machine computation",
-        "first principles",
-        "human agency"
+        "C2PA",
+        "Content Credentials",
+        "provenance",
+        "custom assertions",
+        "interoperability"
       ],
-      "declared_meaning": "Code-art architecture for routing patterns through questions, tests, and evidence while treating unknown or value-sensitive states as a reason to disclose uncertainty and defer consequential meaning to authorized humans."
-    },
-    {
-      "id": "cmb-creator-provenance-doc",
-      "title": "CMB Creator Provenance Protocol",
-      "path": "docs/CREATOR_PROVENANCE.md",
-      "format": "markdown",
-      "kind": "creator provenance and epistemic-boundary documentation",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "creator provenance",
-        "genealogical context",
-        "intellectual lineage",
-        "symbolic lineage",
-        "privacy",
-        "evidence boundaries"
-      ],
-      "declared_meaning": "Human-readable protocol separating creator-documented genealogy, declared intellectual influences, symbolic references, and cryptographic provenance without converting one category into proof of another."
-    },
-    {
-      "id": "cmb-creator-provenance-registry",
-      "title": "CMB Creator Provenance Registry v1",
-      "path": "library/creator-provenance.json",
-      "format": "json",
-      "kind": "machine-readable creator provenance registry",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "creator provenance",
-        "evidence classification",
-        "genealogy source status",
-        "symbolic references",
-        "privacy defaults",
-        "human agency"
-      ],
-      "declared_meaning": "Strict machine-readable separation of historical context, authorship declaration, intellectual influence, symbolic meaning, cryptographic provenance, and privacy boundaries."
-    },
-    {
-      "id": "cmb-creator-provenance-schema",
-      "title": "CMB Creator Provenance v1 Schema",
-      "path": "schemas/cmb.creator-provenance.v1.schema.json",
-      "format": "json",
-      "kind": "machine-readable provenance schema",
-      "status": "canonical",
-      "provenance_scope": "canonical_public_artifact",
-      "human_readable": true,
-      "machine_indexable": true,
-      "concepts": [
-        "JSON Schema",
-        "creator provenance",
-        "epistemic boundaries",
-        "privacy",
-        "category separation",
-        "fail-closed validation"
-      ],
-      "declared_meaning": "Draft 2020-12 schema that constrains the canonical creator-provenance record so genealogy remains unverified historical context, symbolic references remain non-scientific, and private family-tree source material remains unpublished."
+      "declared_meaning": "Defines C2PA as the external provenance interoperability target and explicitly states that current cmb_provenance is not C2PA-conformant."
     },
     {
       "id": "cmb-case-google-generative-misclassification-2026-09-04",
@@ -634,6 +175,526 @@
         "revision criteria"
       ],
       "declared_meaning": "Validation contract for structured CMB case studies, separating observed evidence from inference and requiring explicit revision policy."
+    },
+    {
+      "id": "cmb-core-manifesto",
+      "title": "Computational Metacognitive Bilingualism Manifesto",
+      "path": "MANIFESTO.md",
+      "format": "markdown",
+      "kind": "manifesto",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "human agency",
+        "machine authority",
+        "self-definition",
+        "classification limits"
+      ],
+      "declared_meaning": "Core statement of CMB human-sovereignty principles."
+    },
+    {
+      "id": "cmb-creator-provenance-doc",
+      "title": "CMB Creator Provenance Protocol",
+      "path": "docs/CREATOR_PROVENANCE.md",
+      "format": "markdown",
+      "kind": "creator provenance and epistemic-boundary documentation",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "creator provenance",
+        "genealogical context",
+        "intellectual lineage",
+        "symbolic lineage",
+        "privacy",
+        "evidence boundaries"
+      ],
+      "declared_meaning": "Human-readable protocol separating creator-documented genealogy, declared intellectual influences, symbolic references, and cryptographic provenance without converting one category into proof of another."
+    },
+    {
+      "id": "cmb-creator-provenance-registry",
+      "title": "CMB Creator Provenance Registry v1",
+      "path": "library/creator-provenance.json",
+      "format": "json",
+      "kind": "machine-readable creator provenance registry",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "creator provenance",
+        "evidence classification",
+        "genealogy source status",
+        "symbolic references",
+        "privacy defaults",
+        "human agency"
+      ],
+      "declared_meaning": "Strict machine-readable separation of historical context, authorship declaration, intellectual influence, symbolic meaning, cryptographic provenance, and privacy boundaries."
+    },
+    {
+      "id": "cmb-creator-provenance-schema",
+      "title": "CMB Creator Provenance v1 Schema",
+      "path": "schemas/cmb.creator-provenance.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable provenance schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "creator provenance",
+        "epistemic boundaries",
+        "privacy",
+        "category separation",
+        "fail-closed validation"
+      ],
+      "declared_meaning": "Draft 2020-12 schema that constrains the canonical creator-provenance record so genealogy remains unverified historical context, symbolic references remain non-scientific, and private family-tree source material remains unpublished."
+    },
+    {
+      "id": "cmb-dna-attention",
+      "title": "Demon's Need Attention - D.N.A.",
+      "path": "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+      "format": "markdown",
+      "kind": "manifesto",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "attention economy",
+        "engagement",
+        "profiling",
+        "cognitive sovereignty"
+      ],
+      "declared_meaning": "CMB branch examining attention-extractive systems and the boundary between engagement and consent."
+    },
+    {
+      "id": "cmb-dna-chicken-run",
+      "title": "D.N.A. - The Chicken Run Manifesto",
+      "path": "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",
+      "format": "markdown",
+      "kind": "literary manifesto and computational allegory",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "institutional confinement",
+        "algorithmic confinement",
+        "attention economy",
+        "human agency",
+        "cognitive sovereignty",
+        "Flamingoglyph Code"
+      ],
+      "declared_meaning": "D.N.A./FGC literary allegory using the coop and escape motif to distinguish human self-definition from institutional and algorithmic classification."
+    },
+    {
+      "id": "cmb-dna-question-mark-2030",
+      "title": "The Prophecy of the Question Mark // Scroll 666 // Event of 2030",
+      "path": "manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md",
+      "format": "markdown",
+      "kind": "speculative literary prophecy and code-poetry",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "D.N.A. Bible",
+        "human agency",
+        "machine authority",
+        "uncertainty",
+        "attention economy",
+        "symbolic prophecy"
+      ],
+      "declared_meaning": "Authored D.N.A. Bible worldbuilding using 2030 and Scroll 666 to question machine authority, profiling, and surrender of human judgment. This is speculative code-poetry, not a verified prediction or empirical finding."
+    },
+    {
+      "id": "cmb-edu-kids",
+      "title": "CMB-EDU Kids - Flamingoglyph Learning Layer",
+      "path": "docs/CMB_EDU_KIDS.md",
+      "format": "markdown",
+      "kind": "child-facing computational and metacognitive literacy curriculum",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "computational literacy",
+        "metacognition",
+        "Flamingoglyph Code",
+        "privacy",
+        "consent",
+        "verification",
+        "human-machine collaboration"
+      ],
+      "declared_meaning": "Elementary-school-facing CMB learning layer that teaches children to notice, question, verify, decide, create, protect privacy, and distinguish human self-description from machine inference."
+    },
+    {
+      "id": "cmb-edu-schema",
+      "title": "CMB Metacognitive Context Envelope v1 Schema",
+      "path": "schemas/cmb.edu.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable educational context schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "human-declared context",
+        "epistemic source",
+        "privacy defaults",
+        "sovereignty boundaries",
+        "temporary context",
+        "machine-readable education"
+      ],
+      "declared_meaning": "Strict schema for CMB-EDU envelopes. It records declared context as human-declared, forbids machine-inferred state in the v1 envelope, and encodes deny-by-default privacy declarations without claiming external enforcement."
+    },
+    {
+      "id": "cmb-external-review",
+      "title": "Independent Review Requested",
+      "path": "docs/EXTERNAL_REVIEW.md",
+      "format": "markdown",
+      "kind": "external validation request",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "independent audit",
+        "security review",
+        "policy review",
+        "external validation"
+      ],
+      "declared_meaning": "Publicly documents the current lack of independent certification and defines a narrow, reproducible external review scope."
+    },
+    {
+      "id": "cmb-glitch8-glyph-reference",
+      "title": "GLITCH-8 Glyph Reference",
+      "path": "books/GLITCH8_GLYPH_REFERENCE.md",
+      "format": "markdown",
+      "kind": "generated language reference",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "GLITCH-8",
+        "glyph reference",
+        "generated documentation",
+        "CMB invariants",
+        "semantic registry"
+      ],
+      "declared_meaning": "Generated human-readable reference rendered from the canonical GLITCH-8 registry."
+    },
+    {
+      "id": "cmb-glitch8-glyph-registry",
+      "title": "GLITCH-8 Glyph Registry v1",
+      "path": "library/glitch8.glyphs.v1.json",
+      "format": "json",
+      "kind": "machine-readable evolving language registry",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "GLITCH-8",
+        "glyph registry",
+        "machine-readable semantics",
+        "semantic versioning",
+        "human semantics",
+        "machine semantics",
+        "CMB invariants"
+      ],
+      "declared_meaning": "Public distribution mirror of the canonical GLITCH-8 glyph registry. The canonical source remains src/cmb_glitch8/glyphs.v1.json."
+    },
+    {
+      "id": "cmb-glitchology-book",
+      "title": "𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY",
+      "path": "books/ERR_404_GLITCHOLOGY.md",
+      "format": "markdown",
+      "kind": "living book and experimental digital language specification",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "GLITCH-8",
+        "Glitchology",
+        "uncertainty spectrum",
+        "representation boundary",
+        "human appeal",
+        "recovery",
+        "Computational Metacognitive Bilingualism"
+      ],
+      "declared_meaning": "Living GLITCH-8 book defining CMB-G8 glyph semantics, uncertainty states, representation boundaries, consent, error handling, Recovery, and human appeal."
+    },
+    {
+      "id": "cmb-global-advocacy-charter",
+      "title": "CMB Global Advocacy Charter v1.1",
+      "path": "policy/CMB_GLOBAL_ADVOCACY_CHARTER.md",
+      "format": "markdown",
+      "kind": "policy proposal",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "human appeal",
+        "data minimization",
+        "AI disclosure",
+        "cognitive freedom",
+        "provenance",
+        "prior art",
+        "human oversight"
+      ],
+      "declared_meaning": "Translates CMB principles into institutional recommendations while explicitly positioning them against existing law, scholarship, and standards; it is not a claim that all recommendations are existing law."
+    },
+    {
+      "id": "cmb-harmoni-perfect-play",
+      "title": "HARMONI // Perfect-Play Epistemics",
+      "path": "manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md",
+      "format": "markdown",
+      "kind": "code-art manifesto and epistemic triage model",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "perfect-play epistemics",
+        "epistemic triage",
+        "MissingNo Recovery gate",
+        "uncertainty",
+        "evidence-bounded claims",
+        "human judgment",
+        "machine computation",
+        "first principles",
+        "human agency"
+      ],
+      "declared_meaning": "Code-art architecture for routing patterns through questions, tests, and evidence while treating unknown or value-sensitive states as a reason to disclose uncertainty and defer consequential meaning to authorized humans."
+    },
+    {
+      "id": "cmb-library-catalog",
+      "title": "CMB Digital Library Catalog",
+      "path": "library/catalog.json",
+      "format": "json",
+      "kind": "machine-readable index",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "catalog",
+        "artifact discovery",
+        "provenance scope",
+        "interpretation boundaries"
+      ],
+      "declared_meaning": "Machine-indexable map of public CMB artifacts. The catalog describes works; it does not define people."
+    },
+    {
+      "id": "cmb-policy-one-pager",
+      "title": "CMB - 12 Principles for Human Agency in Automated Systems",
+      "path": "policy/CMB_POLICY_ONE_PAGER.md",
+      "format": "markdown",
+      "kind": "public-facing policy summary",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "policy front door",
+        "human agency",
+        "automated decisions",
+        "digital rights"
+      ],
+      "declared_meaning": "Compressed public entry point to the Global Advocacy Charter; it acknowledges existing legal and scholarly foundations and states CMB's translation-layer contribution."
+    },
+    {
+      "id": "cmb-polyglot-firewall",
+      "title": "CMB Polyglot Firewall Specification",
+      "path": "CMB_Polyglot_Firewall_Specification.md",
+      "format": "markdown",
+      "kind": "technical-philosophical specification",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "polyglot semantics",
+        "invariants",
+        "provenance",
+        "human sovereignty"
+      ],
+      "declared_meaning": "Cross-language expression of CMB invariants; firewall language is conceptual unless backed by deployed enforcement."
+    },
+    {
+      "id": "cmb-prior-art-positioning",
+      "title": "CMB Prior Art, Legal Context, and Positioning",
+      "path": "docs/PRIOR_ART_AND_POSITIONING.md",
+      "format": "markdown",
+      "kind": "research and positioning document",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "GDPR Article 22",
+        "EU AI Act Article 14",
+        "algorithmic accountability",
+        "prior art",
+        "C2PA"
+      ],
+      "declared_meaning": "States what CMB does not claim to have invented, identifies relevant law and scholarship, and defines the narrower contribution CMB claims."
+    },
+    {
+      "id": "cmb-reclaiming-the-pen",
+      "title": "Reclaiming the Pen - Eight-Language CMB Poetic Manifesto",
+      "path": "manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md",
+      "format": "markdown",
+      "kind": "polyglot code-poetry manifesto",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "reclaiming the pen",
+        "code as poetry",
+        "human authorship",
+        "consent",
+        "meaning",
+        "cognitive sovereignty",
+        "machine interpretation boundaries",
+        "polyglot expression"
+      ],
+      "declared_meaning": "Expresses the CMB motto and mission across Python, Rust, Go, TypeScript, Prolog, Haskell, Common Lisp, and C while preserving the boundary between machine interpretation and human authority."
+    },
+    {
+      "id": "cmb-sovereign-transmission",
+      "title": "CMB // The Sovereign Transmission",
+      "path": "manifestos/CMB_SOVEREIGN_TRANSMISSION.md",
+      "format": "markdown",
+      "kind": "decorative code-poetry manifesto",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "code as poetry",
+        "metacognitive literacy",
+        "human agency",
+        "cognitive sovereignty",
+        "Flamingoglyph Code",
+        "human-machine translation",
+        "interpretation boundaries"
+      ],
+      "declared_meaning": "Human-facing artistic gateway to CMB that uses symbolic glyphs, structured code-poetry, metacognitive checks, and explicit human authority boundaries."
+    },
+    {
+      "id": "cmb-unburned-signal",
+      "title": "CMB // The Unburned Signal Protocol",
+      "path": "manifestos/cmb-unburned-signal/MANIFESTO.md",
+      "format": "markdown",
+      "kind": "artistic manifesto",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "memory",
+        "filtering",
+        "authorship",
+        "cryptographic history",
+        "unburned signal"
+      ],
+      "declared_meaning": "Haunted-library artistic branch about preserving signal, source, context, and reconstructable history."
+    },
+    {
+      "id": "cmb-unclassifiable-index",
+      "title": "CMB // The Unclassifiable Index",
+      "path": "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
+      "format": "markdown",
+      "kind": "manifesto and library-design model",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "MissingNo Clause",
+        "Pokédex metaphor",
+        "perspective intelligence",
+        "uncertainty",
+        "context",
+        "provenance"
+      ],
+      "declared_meaning": "Defines a perspective-aware human/machine-readable library model in which schema failure triggers model revision rather than automatic human correction."
+    },
+    {
+      "id": "cmb-z13-language-spec",
+      "title": "CMB-Z13™ - Zodiac Computational Metacognitive Language",
+      "path": "manifestos/CMB_Z13_LANGUAGE_SPEC.md",
+      "format": "markdown",
+      "kind": "symbolic computational language specification",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "thirteen computational lenses",
+        "zodiac symbolism",
+        "software-language mapping",
+        "metacognition",
+        "human agency",
+        "machine interpretation boundaries",
+        "guardian modes",
+        "accessible computational literacy"
+      ],
+      "declared_meaning": "Defines thirteen zodiac-inspired software-language operators as symbolic CMB reasoning lenses and formally maps the Guardian Modes story layer onto those operators. The mappings are creative notation, not scientific personality claims or deterministic human classification."
+    },
+    {
+      "id": "cmb-z13-machine-registry",
+      "title": "CMB-Z13 Machine Registry",
+      "path": "library/cmb-z13.registry.json",
+      "format": "json",
+      "kind": "machine-readable symbolic language registry",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "machine-readable semantics",
+        "operator registry",
+        "symbolic vectors",
+        "human self-definition",
+        "interpretation policy",
+        "guardian modes",
+        "accessible computational literacy"
+      ],
+      "declared_meaning": "Machine-readable representation of the CMB-Z13 mapping, symbolic vectors, Guardian Modes aliases, reasoning pipeline, invariants, and epistemic boundaries."
+    },
+    {
+      "id": "cmb-z13-manifesto",
+      "title": "CMB-Z13™ Manifesto - Zodiac Computational Metacognitive Language",
+      "path": "manifestos/CMB_Z13_MANIFESTO.md",
+      "format": "markdown",
+      "kind": "manifesto and symbolic language declaration",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "thirteen computational lenses",
+        "zodiac symbolism",
+        "software-language mapping",
+        "human-machine notation",
+        "human agency",
+        "machine interpretation boundaries",
+        "guardian modes",
+        "accessible computational literacy"
+      ],
+      "declared_meaning": "Public manifesto for CMB-Z13, defining thirteen zodiac-inspired software-language lenses plus the Guardian Modes teaching layer while preserving human authority and rejecting deterministic classification."
     }
   ]
 }
