@@ -6,6 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Fixed
 
+- Removed the competing semantic-only GitHub Pages deployment path. `.github/workflows/cmb-google-semantic-pages.yml` now validates the semantic publication bundle without deploying it, leaving `pages.yml` as the single canonical Pages deployment authority and eliminating overwrite/race risk.
 - Repaired the Search for Truth archive's three sibling-page links, staged the visual-system banner, and rendered the homepage title as an actual heading.
 - Unified documentation CI and Pages deployment through `scripts/build_docs.py`, with checks for rendered local links, images, discovery URLs, LLM-map links, and generated artifact checksums.
 - Published the library catalog, capability-extension declaration, visual assets, and agent/discovery files through the same tested bundle. Build triggers now include those inputs and their shared build script.
