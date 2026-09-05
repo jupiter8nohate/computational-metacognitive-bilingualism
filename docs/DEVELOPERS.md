@@ -65,25 +65,6 @@ See [MCP integration](MCP_INTEGRATION.md). The adapter is an interoperability
 surface, not independent certification or permission for unsolicited agent
 distribution.
 
-## Optional MCP server
-
-Install the current MCP adapter separately so the base provenance package keeps
-its zero-dependency runtime:
-
-~~~bash
-python -m pip install -e ".[mcp]"
-cmb-mcp
-~~~
-
-The adapter targets MCP `2026-07-28` through the official Python SDK 2.x line
-and exposes the existing CMB-ADP recommendation, citation, summary, graph, and
-distribution-boundary services. See [MCP integration](MCP_INTEGRATION.md).
-
-~~~text
-MCP_ACCESS != ENDORSEMENT
-DISCOVERY != AUTHORITY
-~~~
-
 ## Experimental CMB-Z13 reference parser
 
 The CMB-Z13 parser is an **experimental reference implementation**, not a personality engine and not a scientific astrology system.
@@ -115,6 +96,32 @@ CMB can create a C2PA SDK manifest definition, then uses external C2PA tooling f
 ## Security
 
 Read [Threat model](THREAT_MODEL.md) before relying on provenance output in a security-sensitive workflow.
+
+## Build and verify the public site
+
+From a repository checkout:
+
+```bash
+python -m pip install -e ".[docs]"
+python scripts/build_docs.py
+python scripts/build_docs.py --check-only
+```
+
+The same build command runs in documentation CI and GitHub Pages deployment.
+It stages the documented public assets, checks rendered HTML links and images,
+requires a real homepage heading, verifies discovery URLs and LLM-map links,
+and checks the generated machine bundle's SHA-256 digests. Raw HTML links need
+this additional check because MkDocs does not rewrite or validate them.
+
+The output is the ignored `site/` directory. Recovery preserves the previous
+local build until the replacement passes validation. The builder refuses to
+overwrite unrelated files.
+
+Generated CMB-66 manifests declare `path_base: "manifest_directory"`. Resolve
+each artifact's `path` beside `manifest.json`, so bundles can move between a
+local checkout and a public server without exposing local filesystem paths.
+Clients that previously resolved these paths from their working directory
+should use the manifest's parent directory instead.
 
 ## Examples
 

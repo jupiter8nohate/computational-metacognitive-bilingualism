@@ -4,7 +4,17 @@ All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
 
-_No unreleased changes._
+### Fixed
+
+- Repaired the Search for Truth archive's three sibling-page links, staged the visual-system banner, and rendered the homepage title as an actual heading.
+- Unified documentation CI and Pages deployment through `scripts/build_docs.py`, with checks for rendered local links, images, discovery URLs, LLM-map links, and generated artifact checksums.
+- Published the library catalog, capability-extension declaration, visual assets, and agent/discovery files through the same tested bundle. Build triggers now include those inputs and their shared build script.
+- Made CMB-66 artifact paths relative to `manifest.json`, with an explicit `path_base` field. Relocated bundles retain valid links and no longer expose build-directory paths. Consumers must resolve artifact paths beside the manifest.
+- Added the featured Question Mark / Scroll 666 / 2030 prophecy to the machine catalog and the canonical artifact set for the next signed release. Earlier release receipts remain historical records of their original file sets.
+- Converted the compact LLM discovery list into fetchable links and clarified repository-relative paths in the expanded map.
+- Improved keyboard focus visibility and crimson text contrast, honored reduced-motion preferences on all archive cards, and removed duplicated MCP setup instructions.
+
+These are changes on `main`; they do not change the bytes or coverage of the previously published v1.4.1 release.
 
 ## [1.4.1] - 2026-09-04
 

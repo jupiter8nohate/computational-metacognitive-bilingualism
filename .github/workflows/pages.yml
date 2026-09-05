@@ -5,20 +5,28 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "assets/**"
       - "machine/**"
       - "agents/**"
+      - "extensions/**"
+      - "library/**"
       - "schemas/**"
       - "research/case-studies/**"
       - "spec/**"
       - "src/cmb_machine/**"
+      - "src/cmb_agents/**"
+      - "scripts/build_docs.py"
+      - "tests/test_site_integrity.py"
       - "mkdocs.yml"
       - "pyproject.toml"
+      - "AGENTS.md"
       - "llms.txt"
       - "llms-full.txt"
       - "12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176.txt"
       - "CITATION.bib"
       - "CITATION.cff"
       - "robots.txt"
+      - ".github/workflows/docs.yml"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -52,34 +60,8 @@ jobs:
       - name: Install documentation dependencies
         run: python -m pip install --upgrade pip ".[docs]"
 
-      - name: Build documentation
-        run: mkdocs build --strict --site-dir site
-
-      - name: Stage machine and agent discovery assets
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p site/.well-known site/agents site/machine/generated site/schemas site/spec site/research/case-studies
-          cp llms.txt site/llms.txt
-          cp llms-full.txt site/llms-full.txt
-          cp docs/robots.txt site/robots.txt
-          cp CITATION.cff site/CITATION.cff
-          cp CITATION.bib site/CITATION.bib
-          cp 12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176.txt site/12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176.txt
-          cp machine/fgc-origin-mark.json site/cmb-machine-origin.json
-          cp machine/index.json site/machine/index.json
-          cp machine/cmb-core.ir.json site/machine/cmb-core.ir.json
-          cp machine/targets.json site/machine/targets.json
-          cp machine/knowledge-graph.jsonld site/machine/knowledge-graph.jsonld
-          cp machine/discovery-manifest.json site/machine/discovery-manifest.json
-          cp machine/cmb_machine_envelope.proto site/machine/cmb_machine_envelope.proto
-          cp agents/agent-card.json site/.well-known/agent-card.json
-          cp agents/agent-card.json site/agents/agent-card.json
-          cp agents/registry.json site/agents/registry.json
-          cp -R schemas/. site/schemas/
-          cp -R spec/. site/spec/
-          cp research/case-studies/*.json site/research/case-studies/
-          cmb-machine compile-core --output-dir site/machine/generated
+      - name: Build and verify public documentation bundle
+        run: python scripts/build_docs.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
@@ -112,6 +94,12 @@ jobs:
           urls = [
               f"{site}/",
               f"{site}/sitemap.xml",
+              f"{site}/SEARCH_FOR_TRUTH/",
+              f"{site}/DARK_FEDERALISM_VISUAL_SYSTEM/",
+              f"{site}/DEVELOPERS/",
+              f"{site}/RESEARCHERS/",
+              f"{site}/library/catalog.json",
+              f"{site}/machine/generated/manifest.json",
               f"{site}/llms.txt",
               f"{site}/llms-full.txt",
               f"{site}/FAQ/",

@@ -48,6 +48,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     manifest = {
         "protocol": "CMB-66",
+        "path_base": "manifest_directory",
         "artifacts": [],
     }
 
@@ -57,7 +58,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         manifest["artifacts"].append(
             {
                 "target": artifact.target,
-                "path": path.as_posix(),
+                "path": path.name,
                 "media_type": artifact.media_type,
                 "sha256": artifact.sha256,
             }

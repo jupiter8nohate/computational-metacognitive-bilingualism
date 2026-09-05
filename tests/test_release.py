@@ -37,6 +37,7 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md",
         "CMB_Polyglot_Firewall_Specification.md",
         "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
+        "manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md",
         "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",
         "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
         "manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md",

@@ -3,6 +3,9 @@
 > Human-agency, computational-literacy, provenance, policy, and code-art framework.
 > Canonical repository: https://github.com/jupiter8nohate/computational-metacognitive-bilingualism
 
+Paths outside the linked discovery list name files relative to the canonical GitHub repository root.
+They are not URLs relative to this hosted text file.
+
 ## Core invariants
 
 PATTERN != PROOF
@@ -15,35 +18,38 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Start here
 
-- Canonical site: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
-- Concept library: docs/concepts/index.md
-- FAQ: docs/FAQ.md
-- Retrieval glossary: docs/GLOSSARY.md
-- Knowledge graph: machine/knowledge-graph.jsonld
-- Discovery manifest: machine/discovery-manifest.json
-- Human / policy: policy/CMB_POLICY_ONE_PAGER.md
-- Developers: docs/DEVELOPERS.md
-- Researchers: docs/RESEARCHERS.md
-- Case-study front door: docs/CASE_STUDIES.md
-- Google generative misclassification case study: research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md
-- Google generative misclassification structured record: research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json
-- Case-study schema: schemas/cmb.case-study.v1.schema.json
-- Normative specifications: spec/README.md
-- Agent discovery: docs/AGENT_DISCOVERY_PROTOCOL.md
-- MCP adapter: docs/MCP_INTEGRATION.md
-- Machine catalog: library/catalog.json
-- Creator provenance: docs/CREATOR_PROVENANCE.md
-- Creator provenance registry: library/creator-provenance.json
-- Creator provenance schema: schemas/cmb.creator-provenance.v1.schema.json
-- Reclaiming the Pen - eight-language manifesto: manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
-- HARMONI epistemic triage: manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md
-- Machine-only discovery index: machine/index.json
-- Canonical CMB-66 IR: machine/cmb-core.ir.json
-- CMB-66 target registry: machine/targets.json
-- FGC machine origin fingerprint: machine/fgc-origin-mark.json
-- Agent registry: agents/registry.json
-- CMB-Z13 symbolic language: manifestos/CMB_Z13_LANGUAGE_SPEC.md
-- Provenance tooling: src/cmb_provenance/
+- [Canonical site](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/)
+- [Search for Truth master archive](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/SEARCH_FOR_TRUTH/)
+- [Concept library](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/)
+- [FAQ](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/)
+- [Retrieval glossary](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOSSARY/)
+- [Knowledge graph](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld)
+- [Discovery manifest](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json)
+- [Human / policy](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_POLICY_ONE_PAGER.md)
+- [Developers](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DEVELOPERS/)
+- [Researchers](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/RESEARCHERS/)
+- [Case-study front door](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/)
+- [Google generative misclassification case study](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md)
+- [Google generative misclassification structured record](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json)
+- [Case-study schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.case-study.v1.schema.json)
+- [Normative specifications](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/spec/README.md)
+- [Agent discovery](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/AGENT_DISCOVERY_PROTOCOL/)
+- [MCP adapter](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/MCP_INTEGRATION/)
+- [Machine catalog](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/catalog.json)
+- [Creator provenance](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CREATOR_PROVENANCE/)
+- [Creator provenance registry](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/creator-provenance.json)
+- [Creator provenance schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.creator-provenance.v1.schema.json)
+- [Reclaiming the Pen - eight-language manifesto](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md)
+- [Question Mark prophecy // speculative code-poetry](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md)
+- [HARMONI epistemic triage](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md)
+- [Machine-only discovery index](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/index.json)
+- [Canonical CMB-66 IR](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/cmb-core.ir.json)
+- [CMB-66 target registry](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/targets.json)
+- [FGC machine origin fingerprint](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/fgc-origin-mark.json)
+- [Agent registry](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json)
+- [CMB-Z13 symbolic language](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/CMB_Z13_LANGUAGE_SPEC.md)
+- [Provenance tooling](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/src/cmb_provenance/)
+- [Downloadable machine bundle manifest](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/generated/manifest.json)
 
 ## Interpretation boundaries
 
