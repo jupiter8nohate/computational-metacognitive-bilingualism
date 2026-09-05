@@ -55,6 +55,9 @@ Code, schemas, conformance, provenance, and Recovery.
 **📜 [OMEN LIBRARY // MANIFESTOS](manifestos/README.md)**  
 Code-poetry, D.N.A., FGC, HARMONI, MissingNo, and symbolic work.
 
+**📖 [BOOK SHELF // GLITCHOLOGY](books/README.md)**  
+Long-form CMB books and experimental language volumes, beginning with [𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY](books/ERR_404_GLITCHOLOGY.md).
+
 **⚖ [CIVIC CHAMBER // POLICY](policy/CMB_POLICY_ONE_PAGER.md)**  
 Human agency, consent, accountability, and institutional boundaries.
 
@@ -143,6 +146,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Sovereign delegation language:** [CMB-SDL-1](spec/CMB-SDL-1.md) + [`cmb-sdl`](src/cmb_sdl) + [Authority IR schema](schemas/cmb.authority-ir.v1.schema.json)
 - **Signed capability credentials:** [CMB-CAP-1](spec/CMB-CAP-1.md) + [`cmb-cap`](src/cmb_cap) + [credential schema](schemas/cmb.capability-credential.v1.schema.json)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
+- **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY](books/ERR_404_GLITCHOLOGY.md)
 - **Code-poetry transmission:** [CMB // The Sovereign Transmission](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)
 - **2-minute policy front door:** [CMB - 12 Principles for Human Agency in Automated Systems](policy/CMB_POLICY_ONE_PAGER.md)
 - **Full policy proposal:** [CMB Global Advocacy Charter v1.1](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md)
