@@ -177,6 +177,66 @@
       "declared_meaning": "Validation contract for structured CMB case studies, separating observed evidence from inference and requiring explicit revision policy."
     },
     {
+      "id": "cmb-conversation-atlas",
+      "title": "CMB Conversation Atlas",
+      "path": "docs/CMB_CONVERSATION_ATLAS.md",
+      "format": "markdown",
+      "kind": "curated conversation-derived semantic reference",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "conversation atlas",
+        "Err ⃝or⃟⃤ GLITCHOLOGY",
+        "Dual-Pillar Model",
+        "Creative Cognitive Signature",
+        "Authorship Trail",
+        "Creative Proof-of-Origin",
+        "semantic translation"
+      ],
+      "declared_meaning": "Curated, non-verbatim semantic record of the conversation-derived decisions that established the current CMB and Err ⃝or⃟⃤ GLITCHOLOGY architecture. It excludes private assistant reasoning and preserves technical evidence boundaries."
+    },
+    {
+      "id": "cmb-conversation-atlas-machine",
+      "title": "CMB Conversation Atlas v1 Machine Record",
+      "path": "library/cmb-conversation-atlas.v1.json",
+      "format": "json",
+      "kind": "machine-readable semantic atlas",
+      "status": "canonical",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "machine-readable semantics",
+        "Dual-Pillar Model",
+        "Err ⃝or⃟⃤ GLITCHOLOGY",
+        "Creative Cognitive Signature",
+        "Creative Proof-of-Origin",
+        "GLITCH://404_SOVEREIGN_RETRY_LOOP"
+      ],
+      "declared_meaning": "Structured v1 representation of the conversation-derived CMB architecture with canonical naming, invariants, evidence boundaries, symbolic sequences, and a mass-translation contract."
+    },
+    {
+      "id": "cmb-conversation-atlas-schema",
+      "title": "CMB Conversation Atlas v1 Schema",
+      "path": "schemas/cmb.conversation-atlas.v1.schema.json",
+      "format": "json schema",
+      "kind": "strict semantic validation contract",
+      "status": "canonical",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "semantic drift prevention",
+        "canonical naming",
+        "evidence boundaries",
+        "translation contract"
+      ],
+      "declared_meaning": "Strict Draft 2020-12 JSON Schema that rejects canonical-name drift, weakened provenance boundaries, unexpected fields, and translation-contract changes in the CMB Conversation Atlas v1 record."
+    },
+    {
       "id": "cmb-core-manifesto",
       "title": "Computational Metacognitive Bilingualism Manifesto",
       "path": "MANIFESTO.md",
@@ -413,7 +473,7 @@
     },
     {
       "id": "cmb-glitchology-book",
-      "title": "𒄆𓁹✞𒀱✞𓁹𒄆 ⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY",
+      "title": "Err ⃝or⃟⃤ GLITCHOLOGY",
       "path": "books/ERR_404_GLITCHOLOGY.md",
       "format": "markdown",
       "kind": "living book and experimental digital language specification",
@@ -422,15 +482,17 @@
       "human_readable": true,
       "machine_indexable": true,
       "concepts": [
+        "Err ⃝or⃟⃤ GLITCHOLOGY",
         "GLITCH-8",
-        "Glitchology",
+        "glyph language",
         "uncertainty spectrum",
         "representation boundary",
         "human appeal",
         "recovery",
+        "Creative Cognitive Signature",
         "Computational Metacognitive Bilingualism"
       ],
-      "declared_meaning": "Living GLITCH-8 book defining CMB-G8 glyph semantics, uncertainty states, representation boundaries, consent, error handling, Recovery, and human appeal."
+      "declared_meaning": "Living Err ⃝or⃟⃤ GLITCHOLOGY book defining the GLITCH-8 / CMB-G8 registry and language semantics, uncertainty states, representation boundaries, consent, error handling, Recovery, Creative Cognitive Signature, and human appeal."
     },
     {
       "id": "cmb-global-advocacy-charter",
@@ -529,6 +591,31 @@
         "human sovereignty"
       ],
       "declared_meaning": "Cross-language expression of CMB invariants; firewall language is conceptual unless backed by deployed enforcement."
+    },
+    {
+      "id": "cmb-polyglot-translations",
+      "title": "CMB Polyglot Translation Layer",
+      "path": "docs/CMB_POLYGLOT_TRANSLATIONS.md",
+      "format": "markdown",
+      "kind": "cross-syntax semantic translation reference",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON",
+        "YAML",
+        "Python",
+        "TypeScript",
+        "Rust",
+        "Prolog",
+        "SQL",
+        "RDF",
+        "Turtle",
+        "Err ⃝or⃟⃤ GLITCHOLOGY",
+        "semantic equivalence"
+      ],
+      "declared_meaning": "Cross-syntax representations of the same CMB conversation-derived architecture. Syntax may change between encodings, but the documented semantic and epistemic boundaries must not drift."
     },
     {
       "id": "cmb-prior-art-positioning",
