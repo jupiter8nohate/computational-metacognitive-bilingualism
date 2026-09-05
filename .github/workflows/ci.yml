@@ -34,7 +34,7 @@ jobs:
           glitch8 glyph validate
           glitch8 glyph explain '▂▃▄▅▆▇▉'
           glitch8 statement parse '⁇ [GO] profile_prediction :: UNVERIFIED :: HUMAN_REVIEW'
-          glitch8 payment require --resource-url 'https://example.org/glitch8/v1/translate' --description 'CI GLITCH-8 service' --amount-atomic '1' --asset '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913' --pay-to '0x1111111111111111111111111111111111111111'
+          glitch8 payment require --resource-url 'https://example.org/glitch8/v1/translate' --description 'CI GLITCH-8 research fixture' --amount-atomic '1' --asset '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913' --pay-to '0x1111111111111111111111111111111111111111'
 
   canonical-receipt:
     name: Canonical CMB receipt
@@ -90,6 +90,6 @@ jobs:
           glitch8 glyph validate
           glitch8 glyph explain '▇'
           glitch8 statement parse '⁇ [GO] profile_prediction :: UNVERIFIED :: HUMAN_REVIEW'
-          glitch8 payment require --resource-url 'https://example.org/glitch8/v1/translate' --description 'CI GLITCH-8 service' --amount-atomic '1' --asset '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913' --pay-to '0x1111111111111111111111111111111111111111'
+          glitch8 payment require --resource-url 'https://example.org/glitch8/v1/translate' --description 'CI GLITCH-8 research fixture' --amount-atomic '1' --asset '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913' --pay-to '0x1111111111111111111111111111111111111111'
           cmbc validate --policy cmb.toml
           cmbc selftest --policy cmb.toml
