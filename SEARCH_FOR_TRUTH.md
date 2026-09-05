@@ -1,43 +1,76 @@
-# ☣ SEARCH FOR TRUTH // CMB MASTER GATEWAY
+# ☣ SEARCH FOR TRUTH // MASTER GATEWAY
 
 <p align="center">
-  <img src="assets/cmb-dark-federalism-master.svg" alt="CMB Search for Truth — dark federalism master visual" width="100%">
+  <img src="assets/cmb-search-for-truth-master.jpg" alt="CMB cognitive offloading and adaptive symbiosis master poster" width="760">
 </p>
 
-> **HUMAN MINDS. MACHINE SYSTEMS. A SHARED TOMORROW.**
+<p align="center">
+  <strong>HUMAN MINDS · MACHINE SYSTEMS · A SHARED TOMORROW</strong><br>
+  <sub>CMB // Computational Metacognitive Bilingualism</sub>
+</p>
 
-## THE HUMAN REMAINDER
+---
 
-Computational Metacognitive Bilingualism asks a deliberately uncomfortable question: **when a machine becomes increasingly capable of describing a human being, where does description end and authority begin?**
+## THE QUESTION
 
-`PATTERN ≠ PROOF` · `PROFILE ≠ PERSON` · `MODEL ≠ MIND` · `PREDICTION ≠ DESTINY`
+When a machine becomes increasingly capable of describing a human being, **where does description end and authority begin?**
 
-`UNKNOWN ≠ ERROR` · `CAPABILITY ≠ AUTHORITY` · `MACHINE_CAN_READ ≠ MACHINE_CAN_DEFINE`
+`PATTERN ≠ PROOF` · `PROFILE ≠ PERSON` · `MODEL ≠ MIND`  
+`PREDICTION ≠ DESTINY` · `CAPABILITY ≠ AUTHORITY`  
+`HUMAN_AGENCY > MACHINE_AUTHORITY`
 
-## 🩸 WARNING // THE ARCHIVE IS SYMBOLIC
+> **AESTHETIC BOUNDARY**  
+> The archive uses prophecy, glitches, omens, MissingNo, question marks, 666 motifs, blood-red typography, and apocalyptic visual language as authored art and philosophical framing.  
+> **Atmosphere ≠ evidence. Symbol ≠ scientific claim. Prophecy ≠ verified prediction.**
 
-The repository uses dark federal archives, prophecy, omens, glitches, MissingNo, question marks, 666 motifs, and apocalyptic imagery as authored artistic and philosophical devices. **Atmosphere is not evidence. Prophecy is not verified prediction. Pattern is not proof.**
+---
 
-That boundary is part of the art: CMB invites the reader to search harder without surrendering judgment.
+## ⌘ GITHUB // MASTER INDEX
 
-## ENTER THE ARCHIVE
+GitHub is the source archive, implementation record, provenance trail, and public research surface for CMB.
 
-| Door | Destination | Question |
-|---|---|---|
-| 🔎 **TRUTH** | [Research position](docs/CMB_RESEARCH_POSITION.md) | What can actually be supported? |
-| ☣ **PROPHECY** | [Question Mark // Scroll 666 // 2030](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md) | What happens when uncertainty becomes a warning? |
-| 👾 **ANOMALY** | [Unclassifiable Index](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) | What does the model do with what it cannot classify? |
-| △ **HARMONI** | [Perfect-Play Epistemics](manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) | How should claims survive verification? |
-| ⚙ **CODE** | [Developers](docs/DEVELOPERS.md) | Which ideas are executable? |
-| ⚖ **POLICY** | [Global Advocacy Charter](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) | Which boundaries should institutions respect? |
-| 🦩 **HUMAN** | [One-page policy](policy/CMB_POLICY_ONE_PAGER.md) | Who retains judgment, consent, and self-definition? |
-| 🗃 **VISUAL SYSTEM** | [Dark Federalism specification](docs/DARK_FEDERALISM_VISUAL_SYSTEM.md) | How does the archive communicate urgency without faking certainty? |
+### 🔎 SEARCH
+**[Research Position](docs/CMB_RESEARCH_POSITION.md)**  
+What can actually be supported by evidence?
+
+### ☣ PROPHECY
+**[The Question Mark // Scroll 666 // 2030](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md)**  
+A speculative warning about uncertainty, authority, recursive attention, and human sovereignty.
+
+### 👾 ANOMALY
+**[The Unclassifiable Index](manifestos/CMB_UNCLASSIFIABLE_INDEX.md)**  
+What should a model do with what it cannot fully classify?
+
+### △ HARMONI
+**[Perfect-Play Epistemics](manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md)**  
+A verification layer for separating patterns, claims, evidence, and unknowns.
+
+### ⚙ CODE
+**[Developer Entry Point](docs/DEVELOPERS.md)**  
+Schemas, tools, runtimes, provenance, adapters, and executable boundaries.
+
+### ⚖ POLICY
+**[Global Advocacy Charter](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md)**  
+Human agency, consent, authorship, transparency, and institutional responsibility.
+
+### 🦩 HUMAN
+**[CMB One-Page Policy](policy/CMB_POLICY_ONE_PAGER.md)**  
+The shortest route to the human-sovereignty thesis.
+
+### 🗃 VISUAL SYSTEM
+**[Dark Federalism Specification](docs/DARK_FEDERALISM_VISUAL_SYSTEM.md)**  
+The design rules behind the archive's darkness, warnings, typography, and evidence boundary.
+
+---
 
 ## THE MASTER INVARIANT
 
 ```text
-MACHINE_CAN = observe | classify | predict | generate | simulate
-HUMAN_RETAINS = meaning | consent | authorship | judgment | self_definition
+MACHINE_CAN =
+    observe | classify | predict | generate | simulate
+
+HUMAN_RETAINS =
+    meaning | consent | authorship | judgment | self_definition
 
 PATTERN != PROOF
 PROFILE != PERSON
@@ -48,8 +81,12 @@ CAPABILITY != AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
-> **OMEN // NOT ORACLE**  
-> **WARNING // NOT CERTAINTY**  
-> **SYMBOL // NOT PROOF**
+<p align="center">
+  <strong>OMEN // NOT ORACLE</strong><br>
+  <strong>WARNING // NOT CERTAINTY</strong><br>
+  <strong>SYMBOL // NOT PROOF</strong>
+</p>
 
-The search remains open.
+---
+
+**The search remains open.**
