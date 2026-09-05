@@ -1,0 +1,57 @@
+name: Historical or factual correction
+description: Propose a sourced correction to a timeline, biography, chapter, manifesto, or documentation claim.
+title: "[CORRECTION] "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: File / chapter / section
+      placeholder: docs/ERR_GLITCHOLOGY_ORIGIN.md — The 404 principle
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current statement
+      description: Quote only the minimum text needed to identify the claim.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction
+      description: State the replacement or precise correction.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Provide primary sources or independently checkable references when possible.
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence_type
+    attributes:
+      label: Evidence type
+      options:
+        - Primary source
+        - Independent secondary source
+        - Creator declaration
+        - Repository history / provenance record
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Why the correction matters
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Authorship boundary
+      options:
+        - label: I understand that proposing a factual correction does not grant authority over the creator's voice, intended meaning, identity, or canonical acceptance.
+          required: true
