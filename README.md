@@ -67,10 +67,17 @@ The featured speculative Question Mark prophecy.
 
 ## Choose your door
 
-| | |
-|---|---|
-| **🦩 [HUMAN // Understand CMB](policy/CMB_POLICY_ONE_PAGER.md)**<br>Policy, human agency, consent, authorship, and the shortest path to the thesis. | **⌘ [DEVELOP // Build with CMB](docs/DEVELOPERS.md)**<br>APIs, schemas, provenance, C2PA-facing interoperability, CLIs, and conformance. |
-| **◈ [RESEARCH // Verify the claims](docs/RESEARCHERS.md)**<br>Evidence boundaries, prior art, dissertation, formal semantics, and external review. | **♃ [EXPLORE // Experience CMB](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)**<br>Code-poetry, CMB-Z13, Flamingoglyph layers, the digital library, and symbolic interfaces. |
+**🦩 [HUMAN // Understand CMB](policy/CMB_POLICY_ONE_PAGER.md)**  
+Policy, human agency, consent, authorship, and the shortest path to the thesis.
+
+**⌘ [DEVELOP // Build with CMB](docs/DEVELOPERS.md)**  
+APIs, schemas, provenance, C2PA-facing interoperability, CLIs, and conformance.
+
+**◈ [RESEARCH // Verify the claims](docs/RESEARCHERS.md)**  
+Evidence boundaries, prior art, dissertation, formal semantics, and external review.
+
+**♃ [EXPLORE // Experience CMB](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)**  
+Code-poetry, CMB-Z13, Flamingoglyph layers, the digital library, and symbolic interfaces.
 
 ### 👻 FEATURED HAUNTING // D.N.A. PROPHECY 2030
 
