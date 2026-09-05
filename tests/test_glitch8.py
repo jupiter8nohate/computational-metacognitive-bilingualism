@@ -116,3 +116,18 @@ def test_public_registry_mirror_matches_canonical_bytes() -> None:
     canonical = root / "src" / "cmb_glitch8" / "glyphs.v1.json"
     public = root / "library" / "glitch8.glyphs.v1.json"
     assert public.read_bytes() == canonical.read_bytes()
+
+
+def test_every_registered_example_is_parseable() -> None:
+    registry = load_registry()
+    for entry in registry.data["glyphs"]:
+        statement = parse_statement(entry["example"], registry)
+        assert statement.glyph_id == entry["id"]
+
+
+def test_generated_reference_matches_registry() -> None:
+    root = Path(__file__).resolve().parents[1]
+    generated = (root / "books" / "GLITCH8_GLYPH_REFERENCE.md").read_text(
+        encoding="utf-8"
+    )
+    assert generated == load_registry().render_reference()
