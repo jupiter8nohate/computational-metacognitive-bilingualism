@@ -48,6 +48,7 @@ LEGAL_NONPROFIT = NOT_YET
 The project is deliberately learning its mission, governance, IP boundaries, succession model, and future charitable structure before accepting money.
 
 - **Current status:** [Public Stewardship Incubation](docs/PUBLIC_STEWARDSHIP_INCUBATION.md)
+- **Machine status:** [`machine/stewardship-status.json`](machine/stewardship-status.json) with a strict [`cmb.stewardship-status.v1` schema](schemas/cmb.stewardship-status.v1.schema.json)
 - **Future organization blueprint:** [Future Foundation design laboratory](future-foundation/README.md)
 - **GLITCH://402:** retained as dormant payment/provenance research, not a live fundraising rail.
 
