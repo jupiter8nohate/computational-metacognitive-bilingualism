@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CMB-Z13 interactive computational-metacognitive playground.">
+  <title>CMB-Z13 Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">♃ CMB // COMPUTATIONAL METACOGNITIVE BILINGUALISM</p>
+      <h1>CMB-Z13 Playground</h1>
+      <p class="lede">
+        Enter a statement and inspect it through thirteen symbolic computational lenses.
+        The mappings are educational and artistic, not scientific personality claims.
+      </p>
+    </header>
+
+    <section class="composer" aria-labelledby="composer-title">
+      <h2 id="composer-title">Human input</h2>
+      <textarea id="input" rows="5">An algorithm predicts that I am angry.</textarea>
+      <div class="actions">
+        <button id="translate" type="button">Translate through Z13</button>
+        <button id="clear" type="button" class="secondary">Clear</button>
+      </div>
+    </section>
+
+    <section class="boundary">
+      <code>PATTERN != PROOF</code>
+      <code>PROFILE != PERSON</code>
+      <code>MODEL != MIND</code>
+      <code>PREDICTION != DESTINY</code>
+      <code>HUMAN_AGENCY &gt; MACHINE_AUTHORITY</code>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">13 GUARDIAN MODES</p>
+          <h2>Machine-readable lenses, human-retained meaning</h2>
+        </div>
+        <div class="view-switcher" role="group" aria-label="Output view">
+          <button class="view active" data-view="human" type="button">Human</button>
+          <button class="view" data-view="machine" type="button">Machine</button>
+          <button class="view" data-view="flamingoglyph" type="button">Flamingoglyph</button>
+        </div>
+      </div>
+      <div id="output" class="grid" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <p>CMB-Z13 is symbolic language design. It does not classify people or infer mental states.</p>
+      <p>♃ Jupiter Hudson // WisdomLoveThePoet // Jupiter 8</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "CMB Cognitive Lens",
+  "version": "0.1.0",
+  "description": "Locally inspects observable attention-capture interface signals while preserving human judgment.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "CMB Cognitive Lens",
+    "default_popup": "popup.html"
+  }
+}
