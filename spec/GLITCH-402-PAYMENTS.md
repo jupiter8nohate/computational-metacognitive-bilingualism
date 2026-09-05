@@ -1,15 +1,23 @@
-# GLITCH://402 Payment and Creator-Support Protocol v1
+# GLITCH://402 Dormant Payment Research Protocol v1
 
-**Status:** Experimental interoperability profile  
+**Status:** Incubation research only — no production settlement  
 **Protocol identifier:** `GLITCH://402/1`  
 **Language:** Err ⃝or⃟⃤ GLITCHOLOGY  
-**Implementation layer:** GLITCH-8 / CMB-G8
+**Implementation layer:** GLITCH-8 / CMB-G8  
+**Deployment status:** `INCUBATION_NO_PRODUCTION_SETTLEMENT`
 
 ## Position
 
-GLITCH://402 connects paid services around Err ⃝or⃟⃤ GLITCHOLOGY to an internet-native payment rail without turning the language itself into a speculative asset.
+GLITCH://402 is retained as a technical research artifact while CMB / GLITCHOLOGY remains in Public Stewardship Incubation.
+
+It can model x402 v2 payment requirements and tamper-evident settlement receipts, but the project is not currently using it to collect money.
 
 ~~~text
+ACTIVE_FUNDRAISING = FALSE
+DONATIONS_ACCEPTED = FALSE
+PRODUCTION_SETTLEMENT = FALSE
+PRODUCTION_PAYEE = NONE
+
 LANGUAGE_ACCESS != PAYMENT
 PAYMENT != OWNERSHIP
 PAYMENT_RECEIPT != AUTHORSHIP_PROOF
@@ -17,58 +25,73 @@ TOKEN != LANGUAGE
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
 
-The initial design profiles x402 version 2. x402 defines payment requirements, payloads, facilitator verification, and settlement independently from the protected resource. GLITCH://402 adds CMB/GLITCHOLOGY attribution and provenance semantics around that flow.
+## Why retain the protocol
 
-## Non-goals
+Keeping GLITCH://402 dormant allows the project to study:
 
-Version 1 deliberately does **not**:
+- machine-readable economic boundaries;
+- payment-message interoperability;
+- receipt canonicalization;
+- provenance;
+- Recovery behavior;
+- future donation infrastructure;
+- future organizational treasury controls.
 
+Research now avoids rebuilding from zero later.
+
+## Non-goals during incubation
+
+Version 1 does **not** authorize the project to:
+
+- solicit donations;
+- claim tax-deductible status;
+- charge for access to GLITCHOLOGY;
 - issue a `$GLITCH` token;
 - promise profit, yield, appreciation, governance rights, or ownership;
 - custody payer funds;
 - store private keys;
 - invent a creator wallet address;
-- treat a blockchain transaction as proof of copyright or authorship;
-- make the GLITCHOLOGY book or local parser paywalled.
-
-## What may be paid
-
-The language remains readable and locally usable. Paid surfaces may include value-added official services such as:
-
-- hosted glyph explanation and translation;
-- hosted GLITCH-8 parsing at scale;
-- signed provenance receipts;
-- commercial API capacity;
-- official archival or certification workflows;
-- enterprise integration and support.
-
-Community contribution to the registry remains governed by the repository's contribution and authorship rules rather than payment size.
+- create a charitable organization by software declaration.
 
 ~~~text
-PAYMENT != ACCEPTANCE
-PAYMENT != CANONICAL_STATUS
-CONTRIBUTION != CONTROL
+CODE != LEGAL_ENTITY
+PAYMENT_CODE != FUNDRAISING
+PROTOCOL != TAX_STATUS
 ~~~
 
-## Settlement profile
+## Access rule
 
-The recommended first deployment is USDC on Base, using x402 version 2 and the `exact` scheme.
+During incubation:
 
-- Base mainnet CAIP-2 network identifier: `eip155:8453`
-- Native USDC on Base mainnet: `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`
-- USDC uses 6 decimal places.
+~~~text
+DONATE(0) -> ACCESS
+PAY(0) -> ACCESS
+LOCAL_PARSER -> ACCESS
+BOOK -> ACCESS
+REGISTRY -> ACCESS
+~~~
 
-The repository intentionally contains **no production payee address**. A deployer must explicitly configure the creator's verified payout destination.
+No canonical resource requires a financial contribution.
+
+## Research settlement profile
+
+The reference implementation currently models USDC on Base with x402 v2 and the `exact` scheme.
+
+This is a technical interoperability profile, not a live payment instruction.
+
+- Base mainnet CAIP-2 identifier: `eip155:8453`
+- Native USDC contract used by the research fixture: `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913`
+- Atomic amounts are represented as integer strings.
+
+The repository intentionally contains no project production payee.
 
 ~~~text
 NO_CONFIGURED_PAYEE -> NO_PRODUCTION_PAYMENT
 ~~~
 
-This fail-closed rule prevents accidental routing to a guessed, stale, or attacker-controlled address.
+## Research API
 
-## x402 request
-
-The Python reference helper constructs an x402 v2 `PaymentRequired` object:
+The Python helper can construct an x402 v2 `PaymentRequired` object for tests and interoperability work:
 
 ~~~python
 from cmb_glitch8.payments import (
@@ -78,42 +101,33 @@ from cmb_glitch8.payments import (
 )
 
 requirement = build_payment_required(
-    resource_url="https://example.org/glitch8/v1/translate",
-    description="Official GLITCH-8 hosted translation",
+    resource_url="https://example.org/glitch8/v1/research",
+    description="GLITCH-8 research fixture",
     amount_atomic="20000",
     asset=BASE_USDC_MAINNET,
-    pay_to=VERIFIED_CREATOR_PAYEE,
+    pay_to=TEST_FIXTURE_PAYEE,
     network=BASE_MAINNET_CAIP2,
 )
 ~~~
 
-`20000` atomic USDC units represents 0.02 USDC.
+The helper does not sign, transmit, verify, or settle a transaction.
 
-The helper does not sign or settle a payment. Those actions belong to a reviewed x402 client/facilitator integration.
-
-
-The same requirement can be generated through the installed GLITCH-8 CLI:
+The installed CLI may generate the same structure for development fixtures:
 
 ~~~bash
 glitch8 payment require \
-  --resource-url https://example.org/glitch8/v1/translate \
-  --description "Official GLITCH-8 hosted translation" \
+  --resource-url https://example.org/glitch8/v1/research \
+  --description "GLITCH-8 research fixture" \
   --amount-atomic 20000 \
   --asset 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 \
-  --pay-to "$VERIFIED_CREATOR_PAYEE"
+  --pay-to 0x1111111111111111111111111111111111111111
 ~~~
 
-A stored receipt can be integrity-checked with:
+During incubation, addresses in examples and tests are fixtures only.
 
-~~~bash
-glitch8 payment receipt-validate receipt.json
-~~~
+## Receipt research
 
-That command validates the CMB receipt digest and receipt-level invariants only. It does not replace facilitator or chain verification.
-
-## Receipt profile
-
-After an external facilitator or chain verifier confirms settlement, GLITCH://402 can create a CMB receipt that binds:
+The receipt implementation can bind:
 
 ~~~text
 OPERATION
@@ -131,81 +145,73 @@ OPERATION
 + RECEIPT DIGEST
 ~~~
 
-The machine-readable contract is:
+The schema remains:
 
 `schemas/glitch402.payment-receipt.v1.schema.json`
 
-The Python implementation is:
+The implementation remains:
 
 `src/cmb_glitch8/payments.py`
 
-The CMB digest is calculated over deterministic UTF-8 JSON with sorted keys and compact separators, excluding `receipt_id` and `integrity`. It is intentionally named `cmb-json-v1`; it is not claimed to be RFC 8785 JCS.
+A receipt can be integrity-checked with:
+
+~~~bash
+glitch8 payment receipt-validate receipt.json
+~~~
 
 ## Evidence boundary
-
-A valid receipt digest demonstrates only that the receipt body matches its embedded digest.
 
 ~~~text
 VALID_RECEIPT_DIGEST != BLOCKCHAIN_VERIFICATION
 BLOCKCHAIN_TX != AUTHORSHIP
 HASH != OWNERSHIP
 TIMESTAMP != ORIGINALITY
+PAYMENT != CHARITABLE_STATUS
 ~~~
 
-Production systems must independently verify settlement using the x402 facilitator or the relevant chain before issuing a `settled` receipt.
+The receipt layer is documentary infrastructure, not a substitute for external settlement verification, accounting, legal status, or charitable acknowledgment.
 
-## Creator support
+## Future charitable repositioning
 
-The creator attribution record is independent from the settlement rail. A deployment should maintain an explicit mapping from the public creator identity to a verified payment destination outside source code secrets.
+If a qualified public-benefit organization is eventually formed, GLITCH://402 may be reconsidered as donation infrastructure only after:
 
-Recommended deployment pattern:
+1. legal formation;
+2. governance adoption;
+3. organizational banking/treasury setup;
+4. donation and digital-asset policies;
+5. conflict controls;
+6. accounting/compliance review;
+7. an explicit decision ending incubation mode.
+
+Until then:
 
 ~~~text
-CREATOR IDENTITY
-    ↓
-VERIFIED PAYOUT CONFIG
-    ↓
-x402 PAYMENT REQUIREMENT
-    ↓
-EXTERNAL VERIFICATION / SETTLEMENT
-    ↓
-SERVICE EXECUTION
-    ↓
-GLITCH://402 PROVENANCE RECEIPT
+GLITCH402_DEPLOYMENT_STATUS
+= INCUBATION_NO_PRODUCTION_SETTLEMENT
 ~~~
-
-No revenue split is hard-coded in v1. If future creator/community/infrastructure splits are introduced, they should be versioned, publicly documented, separately reviewed, and implemented only after the payout identities and legal/accounting treatment are known.
 
 ## Security
 
-1. Never commit seed phrases, wallet private keys, CDP secrets, or facilitator credentials.
+1. Never commit seed phrases, wallet private keys, API secrets, or facilitator credentials.
 2. Never infer a payee from a social profile, commit author, or README.
-3. Use x402 replay protection and facilitator verification as specified by the selected implementation.
+3. Treat example addresses as fixtures.
 4. Treat on-chain addresses as configuration, not identity proof.
-5. Keep production and testnet network/asset pairs explicit.
-6. Fail closed when payee, network, asset, or verification evidence is absent.
-7. Log only public settlement identifiers and intentionally public provenance metadata.
+5. Do not describe an experimental receipt as a charitable receipt.
+6. Preserve explicit network and asset identifiers.
+7. Fail closed when evidence is incomplete.
 
-## Licensing boundary
+## Licensing and authorship boundary
 
-The payment helpers, schemas, and implementation documentation are software infrastructure under the repository's software license unless a file states otherwise.
+The payment helpers, schemas, and implementation documentation remain software infrastructure under the repository's applicable software license unless a file states otherwise.
 
-Err ⃝or⃟⃤ GLITCHOLOGY's authored literary and artistic material retains the separate content-license boundary described in `CONTENT_LICENSE.md`.
+The authored literary and artistic corpus retains its separate content-license boundary.
 
 ~~~text
 OPEN_SOURCE_IMPLEMENTATION != TRANSFER_OF_CREATIVE_AUTHORSHIP
 PAYMENT_ACCESS != LICENSE_EXPANSION
 ~~~
 
-## Regulatory boundary
-
-GLITCH://402 v1 is designed as a payment-for-service and voluntary creator-support layer, not an investment product. It does not guarantee that a particular deployment is exempt from payment, tax, money-transmission, consumer-protection, sanctions, securities, or other applicable rules.
-
-A production operator is responsible for the legal and accounting treatment of the payment service it actually deploys.
-
 ## Recovery rule
-
-If settlement evidence is uncertain:
 
 ~~~text
 UNKNOWN_SETTLEMENT
@@ -216,6 +222,7 @@ VERIFY_EXTERNAL_SOURCE
     ↓
 RETRY
 
+INCUBATION -> NO_PRODUCTION_COLLECTION
 PAYMENT != PROOF
 RECOVERY > PROPAGATION
 ~~~
