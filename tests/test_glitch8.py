@@ -85,3 +85,11 @@ def test_reference_is_generated_from_registry() -> None:
     assert "# GLITCH-8 Glyph Reference" in reference
     assert "▂▃▄▅▆▇▉ // Signal Spectrum" in reference
     assert "Edit the registry, not this file" in reference
+
+
+def test_individual_signal_level_parses() -> None:
+    statement = parse_statement(
+        "▇ [GO] correlation :: HIGH_SIGNAL :: UNPROVEN"
+    )
+    assert statement.glyph_id == "signal-spectrum"
+    assert statement.glyph == "▂▃▄▅▆▇▉"
