@@ -86,5 +86,8 @@ jobs:
           cmb-machine targets
           cmb-machine compile-core --output-dir /tmp/cmb-machine
           cmb-sdl compile examples/cmb_sdl/research.cmb --output /tmp/research.authority.json
+          glitch8 glyph validate
+          glitch8 glyph explain '▇'
+          glitch8 statement parse '⁇ [GO] profile_prediction :: UNVERIFIED :: HUMAN_REVIEW'
           cmbc validate --policy cmb.toml
           cmbc selftest --policy cmb.toml
