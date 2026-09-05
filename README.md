@@ -278,6 +278,29 @@ CMB-CAP keeps private signing keys local. The MCP adapter exposes public credent
 
 The Pages deployment publishes `/.well-known/agent-card.json` and `/agents/registry.json`. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
 
+## Err ⃝or⃟⃤ GLITCHOLOGY
+
+**Err ⃝or⃟⃤ GLITCHOLOGY** is CMB's evolving symbolic anomaly language. **GLITCH-8 / CMB-G8** is the machine-readable registry and implementation layer.
+
+- [Living book / language specification](books/ERR_404_GLITCHOLOGY.md)
+- [Origin and creator biography](docs/ERR_GLITCHOLOGY_ORIGIN.md)
+- [Creative Cognitive Signature protocol](docs/CREATIVE_COGNITIVE_SIGNATURE.md)
+- [Living Book and Versioned Autobiography protocol](docs/LIVING_BOOK_PROTOCOL.md)
+- [GLITCH-8 living registry guide](docs/GLITCH8_REGISTRY.md)
+
+~~~text
+CANONICAL_PUBLIC_NAME = "Err ⃝or⃟⃤ GLITCHOLOGY"
+SHORT_NAME = "GLITCHOLOGY"
+IMPLEMENTATION_LAYER = "GLITCH-8 / CMB-G8"
+
+CREATIVITY CAN BECOME SIGNATURE
+CREATIVE_SIGNATURE != BIOMETRIC_IDENTITY
+PATTERN != PROOF
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+The Creative Cognitive Signature is a self-authored provenance concept, not a biometric identifier or psychological profile. Git history, hashes, signatures, releases, and independent archives may strengthen provenance evidence; none makes data universally impossible to erase or makes a hash alone prove authorship.
+
 ## Install
 
 From a checked-out copy of this repository:
@@ -488,7 +511,10 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 
 ## Repository contents
 
-- [`books/ERR_404_GLITCHOLOGY.md`](books/ERR_404_GLITCHOLOGY.md) - **⁴⁰⁴ Error ⁴⁰⁴ // GLITCHOLOGY**, the living GLITCH-8 book and language specification.
+- [`books/ERR_404_GLITCHOLOGY.md`](books/ERR_404_GLITCHOLOGY.md) - **Err ⃝or⃟⃤ GLITCHOLOGY**, the living GLITCH-8 / CMB-G8 book and language specification.
+- [`docs/ERR_GLITCHOLOGY_ORIGIN.md`](docs/ERR_GLITCHOLOGY_ORIGIN.md) - canonical origin biography and naming boundary.
+- [`docs/CREATIVE_COGNITIVE_SIGNATURE.md`](docs/CREATIVE_COGNITIVE_SIGNATURE.md) - self-authored creative-signature and provenance protocol.
+- [`docs/LIVING_BOOK_PROTOCOL.md`](docs/LIVING_BOOK_PROTOCOL.md) - semantic-versioning, correction, issue, PR, and authorship rules for living books.
 - [`src/cmb_glitch8`](src/cmb_glitch8) - the installable GLITCH-8 registry, parser, and CLI.
 - [`books/GLITCH8_GLYPH_REFERENCE.md`](books/GLITCH8_GLYPH_REFERENCE.md) - generated human-readable glyph registry reference.
 - [`manifestos/CMB_SOVEREIGN_TRANSMISSION.md`](manifestos/CMB_SOVEREIGN_TRANSMISSION.md) - **CMB // The Sovereign Transmission**, the decorative code-poetry gateway for CMB glyphs, human-machine literacy, and cognitive sovereignty.
