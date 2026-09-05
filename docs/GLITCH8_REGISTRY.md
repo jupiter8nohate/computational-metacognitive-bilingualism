@@ -47,11 +47,10 @@ glitch8 glyph validate
 4. Add the definition:
 
 ~~~bash
-glitch8 glyph add my-new-glyph.json \
-  --reference-output books/GLITCH8_GLYPH_REFERENCE.md
+glitch8 glyph add my-new-glyph.json
 ~~~
 
-When a glyph is added successfully, the registry language version receives a patch bump.
+When a glyph is added successfully inside the repository, the registry language version receives a patch bump and automatically refreshes both `books/GLITCH8_GLYPH_REFERENCE.md` and `library/glitch8.glyphs.v1.json`.
 
 ## Explain a glyph
 
