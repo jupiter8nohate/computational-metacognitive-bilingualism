@@ -1195,8 +1195,7 @@ glitch8 statement parse "⁇ [GO] profile_prediction :: UNVERIFIED :: HUMAN_REVI
 A new glyph can be added from a JSON definition:
 
 ~~~bash
-glitch8 glyph add my-new-glyph.json \
-  --reference-output books/GLITCH8_GLYPH_REFERENCE.md
+glitch8 glyph add my-new-glyph.json
 ~~~
 
 The registry rejects duplicate glyph IDs, duplicate glyph or alias tokens, and duplicate semantic keys.
