@@ -498,7 +498,7 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`policy/CMB_GLOBAL_ADVOCACY_CHARTER.md`](policy/CMB_GLOBAL_ADVOCACY_CHARTER.md) - the CMB Global Advocacy Charter v1.1.
 - [`library/README.md`](library/README.md) - human-readable entry point to the CMB digital library.
 - [`library/catalog.json`](library/catalog.json) - machine-indexable artifact catalog, sealed as part of the canonical public set.
-- [`src/cmb_provenance`](src/cmb_provenance) - the supported v1.4.0 package, stable sealing API, and C2PA-facing adapter.
+- [`src/cmb_provenance`](src/cmb_provenance) - the supported v1.4.1 package, stable sealing API, and C2PA-facing adapter.
 - [`src/cmb_edu`](src/cmb_edu) - experimental privacy-first CMB-EDU parser and installed CLI.
 - [`docs/CMB_EDU_KIDS.md`](docs/CMB_EDU_KIDS.md) - Flamingoglyph child/classroom learning curriculum.
 - [`schemas/cmb.edu.v1.schema.json`](schemas/cmb.edu.v1.schema.json) - strict CMB-EDU Metacognitive Context Envelope contract.
