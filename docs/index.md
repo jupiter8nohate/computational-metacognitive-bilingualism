@@ -81,8 +81,8 @@
 
 - [Read the authoritative human status](PUBLIC_STEWARDSHIP_INCUBATION.md)
 - [Read the future-foundation design laboratory](FUTURE_FOUNDATION_BLUEPRINT.md)
-- [Machine-readable stewardship status](machine/stewardship-status.json)
-- [Strict stewardship-status schema](schemas/cmb.stewardship-status.v1.schema.json)
+- [Machine-readable stewardship status](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/stewardship-status.json)
+- [Strict stewardship-status schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json)
 
 ```text
 ACTIVE_FUNDRAISING = FALSE
