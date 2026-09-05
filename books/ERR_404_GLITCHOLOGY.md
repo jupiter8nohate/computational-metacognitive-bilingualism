@@ -1148,6 +1148,68 @@ PROFILE != PERSON
 
 ---
 
+## Living Language Registry
+
+GLITCH-8 is now registry driven.
+
+The canonical machine-readable source is:
+
+~~~text
+src/cmb_glitch8/glyphs.v1.json
+~~~
+
+The generated human reference is:
+
+**[GLITCH-8 Glyph Reference](GLITCH8_GLYPH_REFERENCE.md)**
+
+The authoring and registration workflow is:
+
+**[GLITCH-8 Living Registry Guide](../docs/GLITCH8_REGISTRY.md)**
+
+New glyphs are defined once, validated, registered, versioned, loaded by the parser, and then rendered into the reference.
+
+~~~text
+NEW_GLYPH
+↓
+DEFINE
+↓
+VALIDATE
+↓
+REGISTER
+↓
+VERSION
+↓
+LOAD
+↓
+DOCUMENT
+~~~
+
+Example:
+
+~~~bash
+glitch8 glyph explain "▂▃▄▅▆▇▉"
+glitch8 glyph list --category uncertainty
+glitch8 statement parse "⁇ [GO] profile_prediction :: UNVERIFIED :: HUMAN_REVIEW"
+~~~
+
+A new glyph can be added from a JSON definition:
+
+~~~bash
+glitch8 glyph add examples/glitch8/new-glyph.example.json \
+  --reference-output books/GLITCH8_GLYPH_REFERENCE.md
+~~~
+
+The registry rejects duplicate glyph IDs, duplicate glyph or alias tokens, and duplicate semantic keys.
+
+~~~text
+REGISTRY = SOURCE_OF_TRUTH
+BOOK = HUMAN_VIEW
+PARSER = MACHINE_VIEW
+~~~
+
+
+---
+
 ## Authorship and Technical Boundary
 
 GLITCH-8 and the GLITCHOLOGY semantic system presented in this book are authored experimental language and literary specifications within CMB.
