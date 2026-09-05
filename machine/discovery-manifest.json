@@ -16,14 +16,21 @@
   "machine_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/index.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/catalog.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/generated/manifest.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/extensions/cmb-cap/agent-extension.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOSSARY/",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/SEARCH_FOR_TRUTH/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DARK_FEDERALISM_VISUAL_SYSTEM/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DEVELOPERS/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/RESEARCHERS/"
   ],
   "concept_pages": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/",

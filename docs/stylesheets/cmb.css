@@ -302,7 +302,7 @@ body {
   --cmb-muted: #9a9fa5;
   --cmb-border: #30343a;
   --cmb-machine: #9ca7b3;
-  --cmb-human: #c23a43;
+  --cmb-human: #e86b73;
   --cmb-meta: #a77bd8;
   --cmb-evidence: #d7c3a3;
   --cmb-danger: #e34b55;
@@ -528,6 +528,17 @@ body {
   transform: translateY(-1px);
 }
 
+.rst-content a:focus-visible,
+.wy-menu-vertical a:focus-visible {
+  outline: 3px solid var(--cmb-evidence);
+  outline-offset: 4px;
+}
+
+.cmb-card:focus-visible,
+.cmb-omen-card:focus-visible {
+  border-color: var(--cmb-evidence);
+}
+
 .cmb-federal-seal {
   display: grid;
   grid-template-columns: 108px 1fr;
@@ -580,6 +591,7 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .cmb-card,
   .cmb-omen-card {
     transition: none;
     transform: none !important;

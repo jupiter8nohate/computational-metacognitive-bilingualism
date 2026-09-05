@@ -8,6 +8,7 @@ theme:
 nav:
   - Home: index.md
   - Search for Truth: SEARCH_FOR_TRUTH.md
+  - Visual system: DARK_FEDERALISM_VISUAL_SYSTEM.md
   - Concepts:
       - Concept library: concepts/index.md
       - What is CMB?: concepts/what-is-cmb.md

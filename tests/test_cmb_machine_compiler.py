@@ -1,11 +1,15 @@
 from __future__ import annotations
 
 import json
+import hashlib
+import shutil
+from pathlib import Path
 
 import pytest
 
 from cmb_agents.fingerprint import ASCII_TOKEN, MARK_ID, verify_stamp
 from cmb_machine import build_core_ir, compile_bundle, render_target, supported_targets
+from cmb_machine.cli import main
 
 
 def test_every_target_contains_mandatory_origin_identity() -> None:
@@ -56,3 +60,23 @@ def test_parent_lineage_changes_output() -> None:
 def test_unknown_target_fails_closed() -> None:
     with pytest.raises(ValueError, match="Unsupported CMB-66 target"):
         render_target(build_core_ir(), "unknown")
+
+
+def test_cli_bundle_survives_relocation(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    original = tmp_path / "private-checkout" / "generated"
+    assert main(["compile-core", "--output-dir", str(original)]) == 0
+    first_manifest = (original / "manifest.json").read_bytes()
+    assert str(tmp_path).encode() not in first_manifest
+    assert str(tmp_path) not in capsys.readouterr().out
+
+    published = tmp_path / "public-site" / "machine"
+    shutil.move(str(original), published)
+    manifest = json.loads(first_manifest)
+    assert manifest["path_base"] == "manifest_directory"
+    assert {item["target"] for item in manifest["artifacts"]} == set(supported_targets())
+    for item in manifest["artifacts"]:
+        payload = (published / item["path"]).read_bytes()
+        assert hashlib.sha256(payload).hexdigest() == item["sha256"]
+
+    assert main(["compile-core", "--output-dir", str(tmp_path / "second-build")]) == 0
+    assert first_manifest == (tmp_path / "second-build" / "manifest.json").read_bytes()

@@ -20,7 +20,7 @@ python -m pip install -e ".[test,build,docs]"
 pytest
 cmb-provenance selftest
 cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
-mkdocs build --strict
+python scripts/build_docs.py
 ```
 
 ## Pull requests

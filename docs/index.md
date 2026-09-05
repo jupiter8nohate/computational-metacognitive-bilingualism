@@ -55,9 +55,9 @@
 
 <div class="cmb-kicker">CMB // HUMAN ↔ MACHINE LITERACY</div>
 
-# Computational Metacognitive Bilingualism
+<h1 id="computational-metacognitive-bilingualism">Computational Metacognitive Bilingualism</h1>
 
-CMB is a human-agency and computational-literacy framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.
+<p>CMB is a human-agency and computational-literacy framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.</p>
 
 <div class="cmb-invariants">
 <span class="cmb-meta">PATTERN ≠ PROOF</span><br>

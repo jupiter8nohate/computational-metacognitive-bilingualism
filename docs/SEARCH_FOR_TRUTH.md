@@ -36,12 +36,12 @@ The repository is now staged like a dark civic archive: an institutional record 
 <span>The public threshold. Thesis, invariants, maturity boundaries, and the shortest routes into the project.</span>
 </a>
 
-<a class="cmb-omen-card" href="RESEARCHERS/">
+<a class="cmb-omen-card" href="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/RESEARCHERS/">
 <strong>EVIDENCE VAULT // RESEARCH</strong>
 <span>Prior art, falsifiability, research position, case studies, dissertation, and independent review.</span>
 </a>
 
-<a class="cmb-omen-card" href="DEVELOPERS/">
+<a class="cmb-omen-card" href="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DEVELOPERS/">
 <strong>MACHINE CHAMBER // CODE</strong>
 <span>Executable specifications, CLIs, schemas, adapters, provenance, conformance, and Recovery.</span>
 </a>
@@ -56,7 +56,7 @@ The repository is now staged like a dark civic archive: an institutional record 
 <span>Code-poetry, D.N.A., FGC, MissingNo, HARMONI, prophecies, allegories, and symbolic transmissions.</span>
 </a>
 
-<a class="cmb-omen-card" href="C2PA_INTEROPERABILITY/">
+<a class="cmb-omen-card" href="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/C2PA_INTEROPERABILITY/">
 <strong>CHAIN OF CUSTODY // PROVENANCE</strong>
 <span>Cryptographic integrity and provenance evidence, kept separate from authorship, ownership, and legal conclusions.</span>
 </a>

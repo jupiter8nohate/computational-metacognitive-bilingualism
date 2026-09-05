@@ -12,6 +12,7 @@ venv/
 
 build/
 dist/
+site/
 *.egg-info/
 
 cmb_anchors.jsonl

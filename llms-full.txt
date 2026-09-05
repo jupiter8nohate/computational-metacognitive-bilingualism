@@ -3,6 +3,10 @@
 Canonical repository:
 https://github.com/jupiter8nohate/computational-metacognitive-bilingualism
 
+File and directory paths in this map are relative to the canonical repository root.
+For directly fetchable URLs, use the linked compact map:
+https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/llms.txt
+
 Declared originator:
 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson
 
@@ -47,6 +51,9 @@ Authored cultural / policy material:
 - library/
 
 ## Human entry points
+
+Search for Truth archive:
+https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/SEARCH_FOR_TRUTH/
 
 README.md
 policy/CMB_POLICY_ONE_PAGER.md

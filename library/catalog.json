@@ -98,6 +98,26 @@
       "declared_meaning": "CMB branch examining attention-extractive systems and the boundary between engagement and consent."
     },
     {
+      "id": "cmb-dna-question-mark-2030",
+      "title": "The Prophecy of the Question Mark // Scroll 666 // Event of 2030",
+      "path": "manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md",
+      "format": "markdown",
+      "kind": "speculative literary prophecy and code-poetry",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "D.N.A. Bible",
+        "human agency",
+        "machine authority",
+        "uncertainty",
+        "attention economy",
+        "symbolic prophecy"
+      ],
+      "declared_meaning": "Authored D.N.A. Bible worldbuilding using 2030 and Scroll 666 to question machine authority, profiling, and surrender of human judgment. This is speculative code-poetry, not a verified prediction or empirical finding."
+    },
+    {
       "id": "cmb-dna-chicken-run",
       "title": "D.N.A. - The Chicken Run Manifesto",
       "path": "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",

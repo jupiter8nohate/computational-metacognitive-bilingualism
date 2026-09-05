@@ -5,26 +5,56 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "assets/**"
       - "machine/**"
-      - "research/case-studies/**"
+      - "agents/**"
+      - "extensions/**"
+      - "library/**"
       - "schemas/**"
+      - "research/case-studies/**"
+      - "spec/**"
       - "src/cmb_machine/**"
+      - "src/cmb_agents/**"
+      - "scripts/build_docs.py"
+      - "tests/test_site_integrity.py"
       - "mkdocs.yml"
       - "pyproject.toml"
+      - "AGENTS.md"
       - "llms.txt"
       - "llms-full.txt"
+      - "12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176.txt"
+      - "CITATION.bib"
+      - "CITATION.cff"
+      - "robots.txt"
+      - ".github/workflows/docs.yml"
+      - ".github/workflows/pages.yml"
   pull_request:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "assets/**"
       - "machine/**"
-      - "research/case-studies/**"
+      - "agents/**"
+      - "extensions/**"
+      - "library/**"
       - "schemas/**"
+      - "research/case-studies/**"
+      - "spec/**"
       - "src/cmb_machine/**"
+      - "src/cmb_agents/**"
+      - "scripts/build_docs.py"
+      - "tests/test_site_integrity.py"
       - "mkdocs.yml"
       - "pyproject.toml"
+      - "AGENTS.md"
       - "llms.txt"
       - "llms-full.txt"
+      - "12d2a43be91ea62d037b07cba4432de24a5713f7fc4d3f50a8c5d468c3a43176.txt"
+      - "CITATION.bib"
+      - "CITATION.cff"
+      - "robots.txt"
+      - ".github/workflows/docs.yml"
+      - ".github/workflows/pages.yml"
 
 permissions:
   contents: read
@@ -45,17 +75,5 @@ jobs:
       - name: Install docs dependencies
         run: python -m pip install --upgrade pip ".[docs]"
 
-      - name: Stage machine discovery assets
-        run: |
-          cp llms.txt docs/llms.txt
-          cp llms-full.txt docs/llms-full.txt
-          cp machine/fgc-origin-mark.json docs/cmb-machine-origin.json
-          mkdir -p docs/machine
-          cp machine/index.json docs/machine/index.json
-          cp machine/cmb-core.ir.json docs/machine/cmb-core.ir.json
-          cp machine/targets.json docs/machine/targets.json
-          cp machine/cmb_machine_envelope.proto docs/machine/cmb_machine_envelope.proto
-          cmb-machine compile-core --output-dir docs/machine/generated
-
-      - name: Build docs
-        run: mkdocs build --strict
+      - name: Build and verify public documentation bundle
+        run: python scripts/build_docs.py

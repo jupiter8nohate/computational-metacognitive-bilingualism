@@ -217,7 +217,7 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`CMB-EDU Kids`](docs/CMB_EDU_KIDS.md) - the canonical child-facing Flamingoglyph computational-literacy curriculum.
 - [`CMB Metacognitive Context Envelope v1`](schemas/cmb.edu.v1.schema.json) - the canonical strict schema for declared context, sovereignty boundaries, and deny-by-default privacy declarations.
 
-Reclaiming the Pen, CMB-Z13, HARMONI, and the Creator Provenance bundle are part of the canonical provenance sealing set. The latest signed release is v1.4.1. Any canonical artifact bytes changed after that tag are covered only after a later version-matching signed release seals them as part of the explicit file set.
+Reclaiming the Pen, CMB-Z13, HARMONI, the Question Mark prophecy, and the Creator Provenance bundle are part of the canonical provenance sealing set. The latest signed release is v1.4.1. Any canonical artifact bytes changed after that tag are covered only after a later version-matching signed release seals them as part of the explicit file set.
 
 The project now has a deliberate progression:
 
@@ -533,7 +533,7 @@ cmbc validate --policy cmb.toml
 cmbc selftest --policy cmb.toml
 cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
 cmb-edu validate '🪐::LEARN -> DECLARE[curious || focused] => ASK("how_do_loops_work") -> PATTERN_NOT_PROOF;'
-mkdocs build --strict
+python scripts/build_docs.py
 python3 -m build
 
 # cross-language boundary conformance

@@ -81,3 +81,15 @@ INDEXNOW_SUBMISSION != INDEXING
 HTTP_200_OR_202 != SEARCH_RANK
 DISCOVERY_NOTIFICATION != ENDORSEMENT
 ```
+
+## Publication integrity
+
+Documentation CI and Pages deployment both run `python scripts/build_docs.py`.
+The command checks the complete staged bundle, including links inside raw HTML,
+local images, the discovery manifest, the linked LLM map, and generated artifact
+checksums. A passing Markdown build alone is insufficient for publication.
+
+The public bundle includes `library/catalog.json`,
+`extensions/cmb-cap/agent-extension.json`, and `machine/generated/manifest.json`.
+Generated artifact paths resolve relative to that manifest's directory.
+This verifies publication consistency; it does not measure indexing or adoption.
