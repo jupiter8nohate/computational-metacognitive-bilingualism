@@ -29,6 +29,11 @@ jobs:
         run: pytest
       - name: Run installed self-test
         run: cmb-provenance selftest
+      - name: GLITCH-8 registry smoke test
+        run: |
+          glitch8 glyph validate
+          glitch8 glyph explain '▂▃▄▅▆▇▉'
+          glitch8 statement parse '⁇ [GO] profile_prediction :: UNVERIFIED :: HUMAN_REVIEW'
 
   canonical-receipt:
     name: Canonical CMB receipt
