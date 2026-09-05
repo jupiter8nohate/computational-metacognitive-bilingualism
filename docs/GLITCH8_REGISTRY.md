@@ -47,7 +47,7 @@ glitch8 glyph validate
 4. Add the definition:
 
 ~~~bash
-glitch8 glyph add examples/glitch8/new-glyph.example.json \
+glitch8 glyph add my-new-glyph.json \
   --reference-output books/GLITCH8_GLYPH_REFERENCE.md
 ~~~
 
@@ -168,3 +168,25 @@ A new glyph does not need to become canonical immediately.
 The registry gives glyphs formal GLITCH-8 semantics and makes them loadable by the reference implementation.
 
 A registry entry does not, by itself, create legal authority, operating-system privileges, cryptographic proof, or enforcement outside software that explicitly implements GLITCH-8.
+
+
+## Public machine-readable mirror
+
+The canonical source remains:
+
+~~~text
+src/cmb_glitch8/glyphs.v1.json
+~~~
+
+A byte-for-byte public mirror is published at:
+
+~~~text
+library/glitch8.glyphs.v1.json
+~~~
+
+The mirror exists for public discovery and Pages staging.
+
+~~~text
+CANONICAL_REGISTRY = SOURCE_OF_TRUTH
+PUBLIC_MIRROR = DISTRIBUTION_VIEW
+~~~
