@@ -12,6 +12,7 @@ from cmb_glitch8.payments import (
     BASE_MAINNET_CAIP2,
     BASE_USDC_MAINNET,
     GLITCH402_PROTOCOL,
+    GLITCH402_DEPLOYMENT_STATUS,
     Glitch402Error,
     build_payment_required,
     create_verified_settlement_receipt,
@@ -159,3 +160,16 @@ def test_cli_validates_receipt_file(
     code = glitch8_main(["payment", "receipt-validate", str(receipt_path)])
     assert code == 0
     assert "VALID GLITCH://402 RECEIPT" in capsys.readouterr().out
+
+
+def test_payment_required_declares_incubation_status() -> None:
+    value = build_payment_required(
+        resource_url="https://example.org/glitch8/v1/research",
+        description="GLITCH-8 research fixture",
+        amount_atomic="1",
+        asset=BASE_USDC_MAINNET,
+        pay_to=PAYEE,
+    )
+    info = value["extensions"]["glitch402"]["info"]
+    assert GLITCH402_DEPLOYMENT_STATUS == "incubation-no-production-settlement"
+    assert info["deployment_status"] == GLITCH402_DEPLOYMENT_STATUS

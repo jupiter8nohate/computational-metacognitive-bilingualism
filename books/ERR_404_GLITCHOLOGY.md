@@ -1329,46 +1329,47 @@ PARSER = MACHINE_VIEW
 
 ---
 
-## GLITCH://402 // Economic Layer
+## GLITCH://402 // Dormant Stewardship Research Layer
 
-Err ⃝or⃟⃤ GLITCHOLOGY remains readable and locally usable without payment. GLITCH://402 is an optional economic layer for value-added official services and creator support.
+Err ⃝or⃟⃤ GLITCHOLOGY remains readable and locally usable without payment.
 
-**[Read the GLITCH://402 protocol](../spec/GLITCH-402-PAYMENTS.md)**  
-**[Support the original creator](../docs/CREATOR_SUPPORT.md)**
+The project is in **Public Stewardship Incubation**. GLITCH://402 is retained only as experimental infrastructure for studying payment messages, receipts, provenance, and possible future charitable donation systems.
+
+**[Read the incubation protocol](../spec/GLITCH-402-PAYMENTS.md)**  
+**[Read the public stewardship status](../docs/PUBLIC_STEWARDSHIP_INCUBATION.md)**
 
 ~~~text
 404 = ERROR / UNKNOWN / MISSING REPRESENTATION
-402 = PAYMENT REQUIRED
+402 = RESEARCHED BUT NOT DEPLOYED
+
+ACTIVE_FUNDRAISING = FALSE
+DONATIONS_ACCEPTED = FALSE
+PAID_ACCESS = FALSE
+PRODUCTION_SETTLEMENT = FALSE
 
 LANGUAGE_ACCESS != PAYMENT
 PAYMENT != OWNERSHIP
-PAYMENT != CANONICAL_AUTHORITY
 PAYMENT_RECEIPT != AUTHORSHIP_PROOF
 ~~~
 
-The initial engineering profile uses x402 version 2 and can request stablecoin payment for hosted services such as translation, parsing at scale, provenance receipts, and commercial API access.
-
-The software intentionally contains no production creator wallet address. A deployment must explicitly configure a verified payout destination.
+There is no production creator payee, no project donation wallet, and no `$GLITCH` investment token.
 
 ~~~text
 NO_CONFIGURED_PAYEE
     ↓
 NO_PRODUCTION_PAYMENT
 
-DO_NOT_GUESS_CREATOR_ADDRESS
+BUILD_FIRST
+LEARN_FIRST
+GOVERNANCE_FIRST
+MONEY_LATER_IF_EVER
 ~~~
 
-No `$GLITCH` investment token is issued by this protocol. Financial support does not buy authorship, copyright, canonical glyph status, or governance over the language.
+The future charitable design is being developed as a public blueprint rather than prematurely creating a legal organization.
 
 ~~~text
-MACHINE_CAN_READ
-MACHINE_CAN_TRANSLATE
-MACHINE_CAN_PAY
-
-BUT
-
-MACHINE_PAYMENT != MACHINE_OWNERSHIP
 HUMAN_AGENCY > MACHINE_AUTHORITY
+PUBLIC_BENEFIT > PRIVATE_GAIN
 ~~~
 
 ---

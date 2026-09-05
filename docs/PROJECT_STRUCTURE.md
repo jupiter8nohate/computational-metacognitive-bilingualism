@@ -146,21 +146,24 @@ The Python implementation remains the reference engine. The adapters are compati
 The agent layer is executable, but it deliberately optimizes for relevance and attribution rather than autonomous mass distribution. MCP is an interoperability surface over the same service layer, not a second recommendation engine.
 
 
-## GLITCH://402 payment and creator-support layer
+## Public stewardship incubation layer
 
-- `spec/GLITCH-402-PAYMENTS.md` - experimental x402 v2 interoperability profile for paid GLITCH-8 services and creator support.
-- `src/cmb_glitch8/payments.py` - zero-custody payment-requirement builder and tamper-evident receipt primitives.
-- `schemas/glitch402.payment-receipt.v1.schema.json` - strict machine-readable settlement receipt contract.
-- `tests/test_glitch402.py` - deterministic receipt, tamper detection, schema, and fail-closed payee tests.
-- `docs/CREATOR_SUPPORT.md` - human-readable support, authorship, and governance boundaries.
-- `.github/FUNDING.yml` - GitHub-native creator-support metadata.
+- `docs/PUBLIC_STEWARDSHIP_INCUBATION.md` - authoritative current operating status: informal public-interest incubation, no active fundraising, no production settlement.
+- `future-foundation/` - future-governance design laboratory; drafts only, not a legal entity.
+- `docs/CREATOR_SUPPORT.md` - current no-donation / no-tax-exemption status and nonfinancial contribution paths.
+- `spec/GLITCH-402-PAYMENTS.md` - dormant x402 v2 payment/provenance research profile.
+- `src/cmb_glitch8/payments.py` - research primitives with machine-readable incubation status.
+- `tests/test_glitch402.py` - deterministic receipt, tamper detection, schema, CLI, and incubation-status tests.
 
-The repository ships no production wallet address and does not issue a GLITCH token.
+The repository intentionally has no `.github/FUNDING.yml`, no project production wallet, and no proprietary GLITCH token during incubation.
 
 ~~~text
-NO_CONFIGURED_PAYEE -> NO_PRODUCTION_PAYMENT
-PAYMENT != OWNERSHIP
-VALID_RECEIPT_DIGEST != BLOCKCHAIN_VERIFICATION
+ACTIVE_FUNDRAISING = FALSE
+DONATIONS_ACCEPTED = FALSE
+PRODUCTION_SETTLEMENT = FALSE
+LEGAL_NONPROFIT = NOT_YET
+
+BUILD -> DOCUMENT -> TEST -> LEARN -> GOVERN
 ~~~
 
-A production integration must verify settlement externally before issuing a settled GLITCH://402 receipt.
+The future-foundation files are planning artifacts, not adopted bylaws, a trust instrument, tax-exempt status, or a transfer of IP.

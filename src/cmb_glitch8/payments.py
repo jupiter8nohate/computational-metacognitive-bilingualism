@@ -19,6 +19,7 @@ GLITCH402_PROTOCOL: Final[str] = "GLITCH://402/1"
 GLITCH402_RECEIPT_SCHEMA: Final[str] = "glitch402.payment-receipt.v1"
 GLITCH402_LANGUAGE: Final[str] = "Err ⃝or⃟⃤ GLITCHOLOGY"
 GLITCH402_PROJECT: Final[str] = "CMB-G8 / GLITCH-8"
+GLITCH402_DEPLOYMENT_STATUS: Final[str] = "incubation-no-production-settlement"
 
 X402_VERSION: Final[int] = 2
 BASE_MAINNET_CAIP2: Final[str] = "eip155:8453"
@@ -180,10 +181,11 @@ def build_payment_required(
                     "language": GLITCH402_LANGUAGE,
                     "project": GLITCH402_PROJECT,
                     "boundary": "PAYMENT != OWNERSHIP",
+                    "deployment_status": GLITCH402_DEPLOYMENT_STATUS,
                 },
                 "schema": {
                     "type": "object",
-                    "required": ["protocol", "language", "project", "boundary"],
+                    "required": ["protocol", "language", "project", "boundary", "deployment_status"],
                     "additionalProperties": True,
                 },
             }
@@ -271,6 +273,7 @@ def create_verified_settlement_receipt(
             "PAYMENT != OWNERSHIP",
             "PAYMENT_RECEIPT != AUTHORSHIP_PROOF",
             "HASH != COPYRIGHT",
+            "INCUBATION != FUNDRAISING",
             "HUMAN_AGENCY > MACHINE_AUTHORITY",
         ],
     }
