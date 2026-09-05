@@ -1,7 +1,7 @@
 # GLITCH-8 Glyph Reference
 
 **Language:** CMB-G8 // GLITCH-8
-**Registry version:** 0.1.16
+**Registry version:** 0.1.19
 **Updated:** 2026-09-05
 
 > Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.
@@ -20,6 +20,10 @@ VERIFIED_LABEL != VERIFIED_TRUTH
 OBSERVATION != UNDERSTANDING
 SIGNAL != SOURCE
 CORRUPTION != NONEXISTENCE
+EMOTION != IDENTITY
+PAIN != DESTINY
+TIME_PRESENT != TIME_KNOWN
+DURATION != MEANING
 ~~~
 
 ## ☻⃤⃞⃟⃤ // Anomalous Observer
@@ -380,6 +384,46 @@ A model output changes the environment and later appears as if it were independe
 
 ~~~text
 𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY
+~~~
+
+## (╥﹏╥) ⩇⩇: ⩇⩇ // Grief Outside the Clock
+
+- **ID:** grief-outside-the-clock
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** affect, temporal, human_impact
+- **Aliases:** (╥﹏╥) ⩇⩇:⩇⩇
+- **Semantic key:** grief_experience_outside_precise_time
+- **CMB invariant:** HUMAN_EXPERIENCE > MACHINE_TIMESTAMP
+
+A composite state in which human pain is real while its duration, endpoint, or temporal meaning remains unresolved.
+
+**Human semantics:** The feeling is real even when a system cannot assign it a clean timestamp, duration, or endpoint.
+
+**Machine semantics:** GRIEF_WITH_UNRESOLVED_TEMPORAL_STATE
+
+~~~text
+(╥﹏╥) ⩇⩇: ⩇⩇ [G8] grief_duration :: UNRESOLVED :: HUMAN_CONTEXT_REQUIRED
+~~~
+
+## (╥﹏╥) // Grief State
+
+- **ID:** grief-state
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** affect, human_impact
+- **Aliases:** none
+- **Semantic key:** visible_grief_without_identity_reduction
+- **CMB invariant:** EMOTION != IDENTITY
+
+Visible emotional pain that should be acknowledged without reducing the person to a diagnosis, identity, or prediction.
+
+**Human semantics:** A painful state can be real and important without defining the whole person or their future.
+
+**Machine semantics:** GRIEF_STATE_PRESENT
+
+~~~text
+(╥﹏╥) [G8] emotional_state :: GRIEF_PRESENT :: PRESERVE_PERSONHOOD
 ~~~
 
 ## ⓘ⚠︎☣‼🇽 // Hazard Stack
@@ -860,6 +904,26 @@ Marks apparently incompatible states that may reveal an incomplete model.
 
 ~~~text
 𒈓𒈙 [PL] claims :: CONTRADICTORY :: INSPECT_MODEL
+~~~
+
+## ⩇⩇: ⩇⩇ // Unresolved Clock
+
+- **ID:** unresolved-clock
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** temporal, uncertainty
+- **Aliases:** ⩇⩇:⩇⩇
+- **Semantic key:** time_present_exact_moment_unresolved
+- **CMB invariant:** TIME_PRESENT != TIME_KNOWN
+
+Time is present, but the exact moment, duration, or endpoint is unreadable, suspended, or unresolved.
+
+**Human semantics:** A person may experience time without being able to reduce that experience to a precise or meaningful timestamp.
+
+**Machine semantics:** TEMPORAL_STATE_UNRESOLVED
+
+~~~text
+⩇⩇: ⩇⩇ [G8] elapsed_time :: UNRESOLVED :: DO_NOT_FORCE_ENDPOINT
 ~~~
 
 ## 「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 // Verification Cage

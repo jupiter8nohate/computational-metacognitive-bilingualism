@@ -1,7 +1,7 @@
 {
   "schema_version": "glitch8.glyph-registry.v1",
   "language": "CMB-G8 // GLITCH-8",
-  "language_version": "0.1.16",
+  "language_version": "0.1.19",
   "updated_at": "2026-09-05",
   "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
   "principles": [
@@ -15,7 +15,11 @@
     "VERIFIED_LABEL != VERIFIED_TRUTH",
     "OBSERVATION != UNDERSTANDING",
     "SIGNAL != SOURCE",
-    "CORRUPTION != NONEXISTENCE"
+    "CORRUPTION != NONEXISTENCE",
+    "EMOTION != IDENTITY",
+    "PAIN != DESTINY",
+    "TIME_PRESENT != TIME_KNOWN",
+    "DURATION != MEANING"
   ],
   "categories": [
     "observation",
@@ -34,7 +38,9 @@
     "human_appeal",
     "metacognition",
     "syntax",
-    "verification"
+    "verification",
+    "affect",
+    "temporal"
   ],
   "glyphs": [
     {
@@ -468,6 +474,61 @@
         "action": "inspect_causality"
       },
       "example": "𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "grief-outside-the-clock",
+      "glyph": "(╥﹏╥) ⩇⩇: ⩇⩇",
+      "aliases": [
+        "(╥﹏╥) ⩇⩇:⩇⩇"
+      ],
+      "name": "Grief Outside the Clock",
+      "categories": [
+        "affect",
+        "temporal",
+        "human_impact"
+      ],
+      "semantic_key": "grief_experience_outside_precise_time",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "A composite state in which human pain is real while its duration, endpoint, or temporal meaning remains unresolved.",
+      "cmb_invariant": "HUMAN_EXPERIENCE > MACHINE_TIMESTAMP",
+      "human_semantics": "The feeling is real even when a system cannot assign it a clean timestamp, duration, or endpoint.",
+      "machine_semantics": "GRIEF_WITH_UNRESOLVED_TEMPORAL_STATE",
+      "runtime_behavior": {
+        "type": "composite_state",
+        "components": [
+          "grief-state",
+          "unresolved-clock"
+        ],
+        "action": "preserve_affect_and_temporal_uncertainty"
+      },
+      "example": "(╥﹏╥) ⩇⩇: ⩇⩇ [G8] grief_duration :: UNRESOLVED :: HUMAN_CONTEXT_REQUIRED",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "grief-state",
+      "glyph": "(╥﹏╥)",
+      "aliases": [],
+      "name": "Grief State",
+      "categories": [
+        "affect",
+        "human_impact"
+      ],
+      "semantic_key": "visible_grief_without_identity_reduction",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Visible emotional pain that should be acknowledged without reducing the person to a diagnosis, identity, or prediction.",
+      "cmb_invariant": "EMOTION != IDENTITY",
+      "human_semantics": "A painful state can be real and important without defining the whole person or their future.",
+      "machine_semantics": "GRIEF_STATE_PRESENT",
+      "runtime_behavior": {
+        "type": "affective_state",
+        "action": "acknowledge_without_reduction"
+      },
+      "example": "(╥﹏╥) [G8] emotional_state :: GRIEF_PRESENT :: PRESERVE_PERSONHOOD",
       "created_at": "2026-09-05",
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },
@@ -1065,6 +1126,32 @@
         "action": "inspect_model"
       },
       "example": "𒈓𒈙 [PL] claims :: CONTRADICTORY :: INSPECT_MODEL",
+      "created_at": "2026-09-05",
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+    },
+    {
+      "id": "unresolved-clock",
+      "glyph": "⩇⩇: ⩇⩇",
+      "aliases": [
+        "⩇⩇:⩇⩇"
+      ],
+      "name": "Unresolved Clock",
+      "categories": [
+        "temporal",
+        "uncertainty"
+      ],
+      "semantic_key": "time_present_exact_moment_unresolved",
+      "version": "1.0.0",
+      "status": "canonical",
+      "definition": "Time is present, but the exact moment, duration, or endpoint is unreadable, suspended, or unresolved.",
+      "cmb_invariant": "TIME_PRESENT != TIME_KNOWN",
+      "human_semantics": "A person may experience time without being able to reduce that experience to a precise or meaningful timestamp.",
+      "machine_semantics": "TEMPORAL_STATE_UNRESOLVED",
+      "runtime_behavior": {
+        "type": "temporal_state",
+        "action": "preserve_temporal_uncertainty"
+      },
+      "example": "⩇⩇: ⩇⩇ [G8] elapsed_time :: UNRESOLVED :: DO_NOT_FORCE_ENDPOINT",
       "created_at": "2026-09-05",
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
     },
