@@ -1195,7 +1195,7 @@ glitch8 statement parse "⁇ [GO] profile_prediction :: UNVERIFIED :: HUMAN_REVI
 A new glyph can be added from a JSON definition:
 
 ~~~bash
-glitch8 glyph add examples/glitch8/new-glyph.example.json \
+glitch8 glyph add my-new-glyph.json \
   --reference-output books/GLITCH8_GLYPH_REFERENCE.md
 ~~~
 
