@@ -1,0 +1,24 @@
+{
+  "id": "shadow-confidence",
+  "glyph": "𖤐⃝",
+  "aliases": [],
+  "name": "Shadow Confidence",
+  "categories": [
+    "uncertainty",
+    "metacognition"
+  ],
+  "semantic_key": "shadow_confidence",
+  "version": "0.1.0",
+  "status": "experimental",
+  "definition": "A system appears certain because competing hypotheses were removed too early.",
+  "cmb_invariant": "CONFIDENCE != EXHAUSTIVE_REASONING",
+  "human_semantics": "High confidence can hide a narrowed search space.",
+  "machine_semantics": "ALTERNATIVES_PRUNED_EARLY",
+  "runtime_behavior": {
+    "type": "uncertainty",
+    "action": "reopen_alternatives"
+  },
+  "example": "𖤐⃝ [CL] conclusion :: HIGH_CONFIDENCE :: REOPEN_ALTERNATIVES",
+  "created_at": "2026-09-05",
+  "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8"
+}
