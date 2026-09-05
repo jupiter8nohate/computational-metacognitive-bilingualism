@@ -87,11 +87,54 @@
     },
     "invariants": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 8,
+      "uniqueItems": true,
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       },
-      "uniqueItems": true
+      "allOf": [
+        {
+          "contains": {
+            "const": "PATTERN != PROOF"
+          }
+        },
+        {
+          "contains": {
+            "const": "PROFILE != PERSON"
+          }
+        },
+        {
+          "contains": {
+            "const": "MODEL != MIND"
+          }
+        },
+        {
+          "contains": {
+            "const": "PREDICTION != DESTINY"
+          }
+        },
+        {
+          "contains": {
+            "const": "DIFFERENCE != DEFECT"
+          }
+        },
+        {
+          "contains": {
+            "const": "CAPABILITY != AUTHORITY"
+          }
+        },
+        {
+          "contains": {
+            "const": "MACHINE_CAN_READ != MACHINE_CAN_DEFINE"
+          }
+        },
+        {
+          "contains": {
+            "const": "HUMAN_AGENCY > MACHINE_AUTHORITY"
+          }
+        }
+      ]
     },
     "architecture": {
       "type": "object",
@@ -109,10 +152,32 @@
           "const": "dual_pillar"
         },
         "expressive_human": {
-          "$ref": "#/$defs/pillar"
+          "allOf": [
+            {
+              "$ref": "#/$defs/pillar"
+            },
+            {
+              "properties": {
+                "root": {
+                  "const": "Err ⃝or⃟⃤ GLITCHOLOGY"
+                }
+              }
+            }
+          ]
         },
         "verifiable_technical": {
-          "$ref": "#/$defs/pillar"
+          "allOf": [
+            {
+              "$ref": "#/$defs/pillar"
+            },
+            {
+              "properties": {
+                "root": {
+                  "const": "Provenance"
+                }
+              }
+            }
+          ]
         },
         "convergence": {
           "const": "Creative Cognitive Signature"
@@ -127,21 +192,126 @@
     },
     "concepts": {
       "type": "array",
+      "minItems": 4,
       "items": {
         "$ref": "#/$defs/concept"
       }
     },
     "symbolic_sequences": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "$ref": "#/$defs/symbolicSequence"
       }
     },
     "evidence_boundaries": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hash",
+        "signature",
+        "timestamp",
+        "git_history",
+        "prohibited_equivalences"
+      ],
+      "properties": {
+        "hash": {
+          "const": "byte_integrity_evidence"
+        },
+        "signature": {
+          "const": "evidence_of_key_control_over_a_signed_digest"
+        },
+        "timestamp": {
+          "const": "evidence_of_recorded_existence_by_a_time"
+        },
+        "git_history": {
+          "const": "versioned_tamper_evident_history"
+        },
+        "prohibited_equivalences": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "allOf": [
+            {
+              "contains": {
+                "const": "HASH == AUTHORSHIP"
+              }
+            },
+            {
+              "contains": {
+                "const": "SIGNATURE == ORIGINALITY"
+              }
+            },
+            {
+              "contains": {
+                "const": "TIMESTAMP == THOUGHT_CREATION_TIME"
+              }
+            },
+            {
+              "contains": {
+                "const": "GIT_HISTORY == UNIVERSAL_IMMUTABILITY"
+              }
+            },
+            {
+              "contains": {
+                "const": "CRYPTOGRAPHY == PROOF_OF_CONSCIOUSNESS"
+              }
+            }
+          ]
+        }
+      }
     },
     "translation_contract": {
-      "type": "object"
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "syntax_may_change",
+        "semantics_must_not_drift",
+        "required_boundaries"
+      ],
+      "properties": {
+        "syntax_may_change": {
+          "const": true
+        },
+        "semantics_must_not_drift": {
+          "const": true
+        },
+        "required_boundaries": {
+          "type": "array",
+          "minItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "allOf": [
+            {
+              "contains": {
+                "const": "DECLARED_POLICY != TECHNICAL_ENFORCEMENT"
+              }
+            },
+            {
+              "contains": {
+                "const": "CRYPTOGRAPHIC_INTEGRITY != AUTHORSHIP_BY_ITSELF"
+              }
+            },
+            {
+              "contains": {
+                "const": "PROVENANCE != CONSCIOUSNESS"
+              }
+            },
+            {
+              "contains": {
+                "const": "CREATIVE_SIGNATURE != COMPLETE_PERSON"
+              }
+            }
+          ]
+        }
+      }
     }
   },
   "$defs": {
@@ -154,19 +324,23 @@
       ],
       "properties": {
         "root": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "components": {
           "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
           "items": {
-            "type": "string"
-          },
-          "minItems": 1
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     },
     "concept": {
       "type": "object",
+      "additionalProperties": false,
       "required": [
         "id",
         "name",
@@ -174,18 +348,23 @@
       ],
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^cmb:concept:[a-z0-9-]+$"
         },
         "name": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "definition": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "exclusions": {
           "type": "array",
+          "uniqueItems": true,
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           }
         }
       }
@@ -202,27 +381,34 @@
       ],
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "expression": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "semantic_flow": {
           "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
           "items": {
-            "type": "string"
-          },
-          "minItems": 1
+            "type": "string",
+            "minLength": 1
+          }
         },
         "plain_language": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "invariants": {
           "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
           "items": {
-            "type": "string"
-          },
-          "minItems": 1
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     }
