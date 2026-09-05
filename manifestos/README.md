@@ -6,6 +6,8 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 
 > **Reading boundary:** metaphor is not mechanism, symbolism is not scientific classification, and a manifesto is not automatically a deployed technical control.
 
+> **Featured prophecy boundary:** *The Prophecy of the Question Mark* is deliberate 2030 speculative worldbuilding, not a claim that its events are guaranteed to occur.
+
 ## Start with one path
 
 | Reader | Recommended first artifact | Why |
@@ -17,6 +19,7 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 | Want epistemic triage / perfect-play logic | [HARMONI // Perfect-Play Epistemics](HARMONI_PERFECT_PLAY_EPISTEMICS.md) | Human/machine/axiom triangle, MissingNo Recovery gate, and evidence-bounded claims |
 | Want CMB-Z13 | [CMB-Z13 Language Specification](CMB_Z13_LANGUAGE_SPEC.md) | Formal symbolic mapping and interpretation boundary |
 | Want attention-economy critique | [Demon's Need Attention](DEMONS_NEED_ATTENTION_DNA.md) | Attention, engagement, profiling, and consent |
+| Want the featured haunting prophecy | [The Prophecy of the Question Mark // 2030](DNA_PROPHECY_QUESTION_MARK_2030.md) | Scroll 666: speculative AI authority, uncertainty, recursive attention, accountability, and human sovereignty |
 | Want literary allegory | [The Chicken Run Manifesto](DNA_CHICKEN_RUN_MANIFESTO.md) | Institutional and algorithmic confinement as story logic |
 | Want the haunted archive branch | [The Unburned Signal Protocol](cmb-unburned-signal/MANIFESTO.md) | Memory, filtering, source, and reconstructable history |
 
@@ -43,8 +46,9 @@ FOUNDATION
       │   ├── CMB_Z13_LANGUAGE_SPEC.md
       │   └── CMB_Z13_ZODIAC_COMPUTATIONAL_LANGUAGE.md
       │
-      ├── D.N.A. ALLEGORIES
+      ├── D.N.A. ALLEGORIES / PROPHECY
       │   ├── DEMONS_NEED_ATTENTION_DNA.md
+      │   ├── DNA_PROPHECY_QUESTION_MARK_2030.md  ← FEATURED HAUNTING
       │   └── DNA_CHICKEN_RUN_MANIFESTO.md
       │
       └── ARCHIVE / SIGNAL
