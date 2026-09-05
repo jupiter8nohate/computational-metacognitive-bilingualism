@@ -1,0 +1,53 @@
+name: Err ⃝or⃟⃤ GLITCHOLOGY glyph proposal
+description: Propose a new glyph, sequence, alias, or creator-defined semantic entry for the living GLITCH-8 registry.
+title: "[GLYPH] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose one concrete addition to the Err ⃝or⃟⃤ GLITCHOLOGY living registry.
+        Existing Unicode or historical characters retain their independent histories; this form proposes a CMB/GLITCH-8 meaning inside this project.
+  - type: input
+    id: glyph
+    attributes:
+      label: Glyph or sequence
+      placeholder: "▂▃▄▅▆▇▉"
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Proposed canonical name
+      placeholder: ASCENDING_GLITCH
+    validations:
+      required: true
+  - type: textarea
+    id: meaning
+    attributes:
+      label: Proposed meaning
+      description: Define the intended CMB / Err ⃝or⃟⃤ GLITCHOLOGY semantics.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and examples
+      description: Show how the glyph should be used and what it must not imply.
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Provenance / origin notes
+      description: State whether the symbol is original arrangement, existing Unicode, historical notation, or adapted from another source.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Interpretation boundary
+      options:
+        - label: I understand that a symbolic definition does not create technical enforcement, legal authority, cryptographic proof, or ownership of pre-existing Unicode/historical symbols.
+          required: true
+        - label: I understand that acceptance into the registry is a maintainer decision and does not transfer authorship of the wider CMB or Err ⃝or⃟⃤ GLITCHOLOGY framework.
+          required: true
