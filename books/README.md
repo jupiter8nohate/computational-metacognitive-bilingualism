@@ -16,6 +16,9 @@
 
 **[Read the book](ERR_404_GLITCHOLOGY.md)**
 
+**[Browse the live glyph reference](GLITCH8_GLYPH_REFERENCE.md)**  
+**[Add and register new glyphs](../docs/GLITCH8_REGISTRY.md)**
+
 > GLITCH-8 is an experimental CMB digital language specification for explicitly representing anomaly, uncertainty, representation boundaries, consent, human appeal, error domains, context, and recovery.
 
 ~~~text
