@@ -19,7 +19,7 @@ The repository includes `.github/FUNDING.yml` pointing to the repository owner's
 
 ### GLITCH://402
 
-The experimental [GLITCH://402 protocol](../spec/GLITCH-402-PAYMENTS.md) defines how official hosted GLITCH-8 services can request programmatic payment while preserving creator attribution and a provenance receipt.
+The experimental [GLITCH://402 protocol](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/spec/GLITCH-402-PAYMENTS.md) defines how official hosted GLITCH-8 services can request programmatic payment while preserving creator attribution and a provenance receipt.
 
 The repository deliberately ships without a production wallet address.
 
