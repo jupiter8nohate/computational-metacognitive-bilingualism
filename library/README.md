@@ -31,6 +31,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ### Corpus
 
 - [`catalog.json`](catalog.json) - machine-indexable catalog of CMB public artifacts.
+- [`glitch8.glyphs.v1.json`](glitch8.glyphs.v1.json) - public machine-readable mirror of the living GLITCH-8 glyph registry.
+- [`../books/ERR_404_GLITCHOLOGY.md`](../books/ERR_404_GLITCHOLOGY.md) - the GLITCHOLOGY book and CMB-G8 language specification.
+- [`../books/GLITCH8_GLYPH_REFERENCE.md`](../books/GLITCH8_GLYPH_REFERENCE.md) - generated human-readable GLITCH-8 glyph reference.
 - [`creator-provenance.json`](creator-provenance.json) - machine-readable creator provenance and category-separation record.
 - [`../schemas/cmb.creator-provenance.v1.schema.json`](../schemas/cmb.creator-provenance.v1.schema.json) - strict schema for the creator-provenance contract.
 - [`../schemas/cmb.library.catalog.v1.schema.json`](../schemas/cmb.library.catalog.v1.schema.json) - strict JSON Schema for validating the catalog contract.
