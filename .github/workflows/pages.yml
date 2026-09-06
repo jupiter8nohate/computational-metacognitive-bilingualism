@@ -12,6 +12,7 @@ on:
       - "library/**"
       - "schemas/**"
       - "research/case-studies/**"
+      - "examples/polyglot/jupiter_glitchology_runtime/**"
       - "spec/**"
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
@@ -106,6 +107,10 @@ jobs:
               f"{site}/GLOSSARY/",
               f"{site}/CMB_CONVERSATION_ATLAS/",
               f"{site}/CMB_POLYGLOT_TRANSLATIONS/",
+              f"{site}/JUPITER_POLYGLOT_RUNTIME/",
+              f"{site}/examples/polyglot/jupiter_glitchology_runtime/README.md",
+              f"{site}/examples/polyglot/jupiter_glitchology_runtime/main.go",
+              f"{site}/examples/polyglot/jupiter_glitchology_runtime/mirror.py",
               f"{site}/library/cmb-conversation-atlas.v1.json",
               f"{site}/schemas/cmb.conversation-atlas.v1.schema.json",
               f"{site}/CASE_STUDIES/",
