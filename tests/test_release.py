@@ -55,6 +55,13 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "agents/agent-card.json",
         "docs/AGENT_DISCOVERY_PROTOCOL.md",
         "schemas/cmb.agent-registry.v1.schema.json",
+        "docs/RECOVERY_AND_PRESERVATION.md",
+        "machine/recovery-map.json",
+        "schemas/cmb.recovery-map.v1.schema.json",
+        "datasets/cmb-canonical-corpus/manifest.json",
+        "datasets/cmb-canonical-corpus/corpus.jsonl",
+        "schemas/cmb.canonical-corpus-manifest.v1.schema.json",
+        "schemas/cmb.canonical-corpus-record.v1.schema.json",
     )
 
 
