@@ -22,6 +22,12 @@ All notable changes to the CMB provenance tool are documented here.
 - Added structured GitHub issue forms for new glyph proposals and sourced historical/factual corrections.
 - Extended the living GLITCHOLOGY book with a Creative Cognitive Signature chapter and explicit provenance/biometric boundaries.
 - Added a conversation-derived CMB semantic Atlas, machine-readable Atlas JSON, strict JSON Schema, and polyglot translation layer spanning JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native Err ⃝or⃟⃤ GLITCHOLOGY syntax.
+- Added the canonical Go → Python → GLITCHOLOGY runtime and machine/discovery publication paths for the executable polyglot reference artifact.
+- Registered GLT-0037–GLT-0046 as canonical composite GLITCHOLOGY protocols with a tested Go/Python reference runtime.
+- Added GLITCH-IR v1 / GLT-8101 canonical synchrony with an eight-language semantic conformance harness.
+- Added GLITCH-3D-1 spatial semantics, parser/AST, schema, machine discovery metadata, provenance/authority validation, and canonical example.
+- Added bounded CMB Steward agents for scheduled Recovery, GLT-8101 conformance, registry synchronization, documentation verification, and draft-PR-only repair proposals.
+- Added reproducible TypeScript and Rust adapter dependency locks; TypeScript automation uses `npm ci` and Rust conformance/release gates enforce `--locked`.
 
 ### Fixed
 
