@@ -110,7 +110,7 @@ jobs:
           fi
 
           git commit -m "chore(agent): bounded steward maintenance"
-          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"             "HEAD:refs/heads/$branch"
+          gh auth setup-git\n          git push origin "HEAD:refs/heads/$branch"
 
           body_file="/tmp/cmb-steward-pr.md"
           cat > "$body_file" <<'EOF'
