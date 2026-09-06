@@ -58,6 +58,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [Question Mark prophecy // speculative code-poetry](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md)
 - [HARMONI epistemic triage](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md)
 - [Machine-only discovery index](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/index.json)
+- [GLITCH-3D spatial runtime](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLITCH3D_RUNTIME/)
+- [GLITCH-3D machine identity](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/glitch-3d.json)
+- [GLITCH-3D schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/glitch-3d.v1.schema.json)
 - [Canonical CMB-66 IR](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/cmb-core.ir.json)
 - [CMB-66 target registry](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/targets.json)
 - [FGC machine origin fingerprint](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/fgc-origin-mark.json)
@@ -208,3 +211,37 @@ LANGUAGE != SEMANTICS
 MEMORY_LAYOUT != MEANING
 TRANSLATION != SEMANTIC_MUTATION
 SAME_RESULT_DIGEST != PROOF_OF_REAL_WORLD_TRUTH
+
+
+## GLITCH-3D spatial runtime
+
+Normative source-language contract:
+spec/GLITCH-3D-1.md
+
+Machine identity record:
+machine/glitch-3d.json
+
+Strict AST schema:
+schemas/glitch-3d.v1.schema.json
+
+Reference program:
+examples/polyglot/glitchology_registry_3d_runtime/GLITCH_3D_SOURCE_FRACTURE.g3d
+
+Axes:
+X = RELATION_LANE
+Y = EXECUTION_ORDER
+Z = SEMANTIC_DEPTH
+
+Depth layers:
+Z=0 EVENT
+Z=1 MACHINE
+Z=2 SEMANTIC
+Z=3 PROVENANCE
+Z=4 HUMAN
+
+POSITION == INFORMATION
+DEPTH == SEMANTIC_LAYER
+GRAPH == MACHINE_SEMANTICS
+3D_APPEARANCE != AUTOMATIC_EXECUTION
+GRAPH_DIGEST != REAL_WORLD_TRUTH
+HUMAN_AGENCY > MACHINE_AUTHORITY

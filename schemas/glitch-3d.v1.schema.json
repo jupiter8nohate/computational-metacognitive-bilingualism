@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cmbprotocol.org/schemas/glitch-3d.v1.schema.json",
+  "title": "GLITCH-3D v1 spatial program AST",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "protocol_version",
+    "program_id",
+    "axes",
+    "layers",
+    "nodes",
+    "edges",
+    "boundaries",
+    "invariants"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "glitch3d.program.v1"
+    },
+    "protocol": {
+      "const": "GLITCH-3D"
+    },
+    "protocol_version": {
+      "const": "1.0.0"
+    },
+    "program_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"
+    },
+    "axes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "const": "RELATION_LANE"
+        },
+        "y": {
+          "const": "EXECUTION_ORDER"
+        },
+        "z": {
+          "const": "SEMANTIC_DEPTH"
+        }
+      }
+    },
+    "layers": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "z",
+            "kind"
+          ],
+          "properties": {
+            "z": {
+              "const": 0
+            },
+            "kind": {
+              "const": "EVENT"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "z",
+            "kind"
+          ],
+          "properties": {
+            "z": {
+              "const": 1
+            },
+            "kind": {
+              "const": "MACHINE"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "z",
+            "kind"
+          ],
+          "properties": {
+            "z": {
+              "const": 2
+            },
+            "kind": {
+              "const": "SEMANTIC"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "z",
+            "kind"
+          ],
+          "properties": {
+            "z": {
+              "const": 3
+            },
+            "kind": {
+              "const": "PROVENANCE"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "z",
+            "kind"
+          ],
+          "properties": {
+            "z": {
+              "const": 4
+            },
+            "kind": {
+              "const": "HUMAN"
+            }
+          }
+        }
+      ],
+      "items": false
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "x",
+          "y",
+          "z",
+          "kind",
+          "state",
+          "distortion"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+          },
+          "x": {
+            "type": "integer",
+            "minimum": -999,
+            "maximum": 999
+          },
+          "y": {
+            "type": "integer",
+            "minimum": -999,
+            "maximum": 999
+          },
+          "z": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4
+          },
+          "kind": {
+            "enum": [
+              "EVENT",
+              "MACHINE",
+              "SEMANTIC",
+              "PROVENANCE",
+              "HUMAN"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]{0,63}$"
+          },
+          "distortion": {
+            "enum": [
+              "NONE",
+              "UNCERTAIN",
+              "ABSENT",
+              "REDACTED",
+              "INVALID",
+              "OBSERVED"
+            ]
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source",
+          "target",
+          "operator"
+        ],
+        "properties": {
+          "source": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+          },
+          "target": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+          },
+          "operator": {
+            "enum": [
+              "DOWN",
+              "UP",
+              "BACKTRACE",
+              "PROPAGATE",
+              "REJECT",
+              "RETRY",
+              "ESCALATE",
+              "APPEAL"
+            ]
+          }
+        }
+      }
+    },
+    "boundaries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "z",
+          "mode"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]{0,47}$"
+          },
+          "z": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4
+          },
+          "mode": {
+            "enum": [
+              "HUMAN_AUTHORITY_REQUIRED",
+              "PROVENANCE_REQUIRED",
+              "READ_ONLY"
+            ]
+          }
+        }
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

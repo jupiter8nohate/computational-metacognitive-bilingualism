@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 from typing import Sequence
 
+from .glitch3d import Glitch3DError, load_glitch3d, render_spatial_summary
 from .payments import (
     BASE_MAINNET_CAIP2,
     build_payment_required,
@@ -66,6 +67,30 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=Path("books/GLITCH8_GLYPH_REFERENCE.md"),
     )
+    spatial = subparsers.add_parser(
+        "3d",
+        help="Parse, validate, and render GLITCH-3D spatial programs.",
+    )
+    spatial_sub = spatial.add_subparsers(dest="spatial_command", required=True)
+
+    spatial_parse = spatial_sub.add_parser(
+        "parse",
+        help="Parse GLITCH-3D source and emit the canonical spatial AST.",
+    )
+    spatial_parse.add_argument("source", type=Path)
+
+    spatial_validate = spatial_sub.add_parser(
+        "validate",
+        help="Validate GLITCH-3D source and print its deterministic graph digest.",
+    )
+    spatial_validate.add_argument("source", type=Path)
+
+    spatial_render = spatial_sub.add_parser(
+        "render",
+        help="Render a deterministic human-readable spatial summary.",
+    )
+    spatial_render.add_argument("source", type=Path)
+
     payment = subparsers.add_parser(
         "payment",
         help="Create x402 requirements and validate GLITCH://402 receipts.",
@@ -201,6 +226,22 @@ def _run(args: argparse.Namespace) -> int:
         )
         return 0
 
+    if args.command == "3d":
+        program = load_glitch3d(args.source)
+        if args.spatial_command == "parse":
+            print(json.dumps(program.to_dict(), ensure_ascii=False, indent=2, sort_keys=True))
+            return 0
+        if args.spatial_command == "validate":
+            print(
+                f"VALID GLITCH-3D/{program.to_dict()['protocol_version']} "
+                f"program={program.program_id} nodes={len(program.nodes)} "
+                f"edges={len(program.edges)} sha256={program.sha256()}"
+            )
+            return 0
+        if args.spatial_command == "render":
+            print(render_spatial_summary(program), end="")
+            return 0
+
     if args.command == "reference" and args.reference_command == "build":
         registry = _registry_for_read(args.registry)
         args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -238,7 +279,7 @@ def _run(args: argparse.Namespace) -> int:
 def main(argv: Sequence[str] | None = None) -> int:
     try:
         return _run(build_parser().parse_args(argv))
-    except (GlyphRegistryError, OSError, UnicodeError, ValueError) as exc:
+    except (GlyphRegistryError, Glitch3DError, OSError, UnicodeError, ValueError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
 

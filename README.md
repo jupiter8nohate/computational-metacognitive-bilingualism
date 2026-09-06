@@ -160,7 +160,8 @@ You should not need the entire CMB universe to understand the thesis.
 - **Kids / classroom entry point:** [CMB-EDU Kids - Flamingoglyph Learning Layer](docs/CMB_EDU_KIDS.md)
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix + Go](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
-- **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)\n- **Autonomous maintenance:** [Bounded CMB Steward Agents](docs/AUTONOMOUS_STEWARD_AGENTS.md) — scheduled Recovery, GLT-8101 conformance, registry sync, docs verification, optional AI repair, and draft-PR-only authority
+- **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
+- **Autonomous maintenance:** [Bounded CMB Steward Agents](docs/AUTONOMOUS_STEWARD_AGENTS.md) — scheduled Recovery, GLT-8101 conformance, registry sync, docs verification, optional AI repair, and draft-PR-only authority
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)
 - **Normative core:** [CMB-CORE-1](spec/CMB-CORE-1.md) and [protocol versioning](spec/PROTOCOL_VERSIONING.md)
 - **Sovereignty runtime:** [CMB-SRP-1](spec/CMB-SRP-1.md) + [CMB-SRP-2](spec/CMB-SRP-2.md) + [`cmb.toml`](cmb.toml) + installed `cmbc` gate
@@ -172,6 +173,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Polyglot translation layer:** [Read the same architecture in JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native GLITCHOLOGY](docs/CMB_POLYGLOT_TRANSLATIONS.md)
 - **Executable GLITCHOLOGY polyglot runtime:** [Run the Go → Python → GLITCHOLOGY reference artifact](examples/polyglot/jupiter_glitchology_runtime/)
 - **Official GLITCH-8 composite runtime:** [Run GLT-0037…GLT-0046 with preserved FIGlet 3D Diagonal + Go + Python](examples/polyglot/glitchology_registry_3d_runtime/)
+- **GLITCH-3D spatial runtime:** [Parse depth, position, distortion, provenance, and human-authority boundaries](docs/GLITCH3D_RUNTIME.md)
 - **Machine Conversation Atlas:** [`library/cmb-conversation-atlas.v1.json`](library/cmb-conversation-atlas.v1.json)
 - **Conversation Atlas schema:** [`schemas/cmb.conversation-atlas.v1.schema.json`](schemas/cmb.conversation-atlas.v1.schema.json)
 - **Err⃝or⃟⃤GLITCHOLOGY origin:** [Read the canonical creator biography and language origin](docs/ERR_GLITCHOLOGY_ORIGIN.md)

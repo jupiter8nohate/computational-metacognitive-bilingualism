@@ -68,3 +68,36 @@ FIGLET = HUMAN_VIEW
 GLITCH-IR = SEMANTIC_CONTRACT
 CI_RESULT = CONFORMANCE_EVIDENCE
 ~~~
+
+## GLITCH-3D // Spatial Source Runtime
+
+The 3D visual language now has an explicit parser rather than relying on humans or models to infer meaning from spacing.
+
+~~~text
+FIGLET / GLITCHOLOGY ART
+          ↓
+     GLITCH-3D/1
+          ↓
+   SPATIAL AST / GRAPH
+          ↓
+      GLITCH-IR
+~~~
+
+The reference source is `GLITCH_3D_SOURCE_FRACTURE.g3d`.
+
+Run:
+
+~~~bash
+glitch8 3d validate GLITCH_3D_SOURCE_FRACTURE.g3d
+glitch8 3d parse GLITCH_3D_SOURCE_FRACTURE.g3d
+glitch8 3d render GLITCH_3D_SOURCE_FRACTURE.g3d
+~~~
+
+Depth is normative in v1: `Z=0 EVENT`, `Z=1 MACHINE`, `Z=2 SEMANTIC`, `Z=3 PROVENANCE`, `Z=4 HUMAN`. Entry into the human layer requires an explicit sovereignty boundary plus `ESCALATE` or `APPEAL`.
+
+~~~text
+POSITION == INFORMATION
+DEPTH == SEMANTIC_LAYER
+3D_APPEARANCE != AUTOMATIC_EXECUTION
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~

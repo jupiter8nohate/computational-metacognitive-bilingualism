@@ -1,0 +1,71 @@
+{
+  "schema_version": "cmb.glitch3d.identity.v1",
+  "protocol": "GLITCH-3D",
+  "protocol_version": "1.0.0",
+  "canonical_name": "GLITCH_3D_RUNTIME",
+  "specification": "spec/GLITCH-3D-1.md",
+  "schema": "schemas/glitch-3d.v1.schema.json",
+  "reference_implementation": "src/cmb_glitch8/glitch3d.py",
+  "cli": {
+    "parse": "glitch8 3d parse <file>",
+    "validate": "glitch8 3d validate <file>",
+    "render": "glitch8 3d render <file>"
+  },
+  "reference_program": "examples/polyglot/glitchology_registry_3d_runtime/GLITCH_3D_SOURCE_FRACTURE.g3d",
+  "axes": {
+    "x": "RELATION_LANE",
+    "y": "EXECUTION_ORDER",
+    "z": "SEMANTIC_DEPTH"
+  },
+  "layers": [
+    {
+      "z": 0,
+      "kind": "EVENT"
+    },
+    {
+      "z": 1,
+      "kind": "MACHINE"
+    },
+    {
+      "z": 2,
+      "kind": "SEMANTIC"
+    },
+    {
+      "z": 3,
+      "kind": "PROVENANCE"
+    },
+    {
+      "z": 4,
+      "kind": "HUMAN"
+    }
+  ],
+  "operators": [
+    "DOWN",
+    "UP",
+    "BACKTRACE",
+    "PROPAGATE",
+    "REJECT",
+    "RETRY",
+    "ESCALATE",
+    "APPEAL"
+  ],
+  "distortions": [
+    "NONE",
+    "UNCERTAIN",
+    "ABSENT",
+    "REDACTED",
+    "INVALID",
+    "OBSERVED"
+  ],
+  "interpretation_boundaries": [
+    "3D_APPEARANCE != AUTOMATIC_EXECUTION",
+    "DISPLAY != IDENTIFIER",
+    "POSITION == INFORMATION",
+    "DEPTH == SEMANTIC_LAYER",
+    "GRAPH == MACHINE_SEMANTICS",
+    "COORDINATE != MEMORY_ADDRESS",
+    "GRAPH_DIGEST != REAL_WORLD_TRUTH",
+    "MACHINE_CAN_READ != MACHINE_CAN_DEFINE",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}
