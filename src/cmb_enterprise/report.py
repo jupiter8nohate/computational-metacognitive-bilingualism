@@ -38,7 +38,13 @@ def build_trust_report(
         check_git_commit=check_git_commit,
     )
 
-    artifact_status = "PASS" if provenance.ok else "FAIL"
+    artifact_failures = [
+        failure for failure in provenance.failures if not failure.code.startswith("GIT_")
+    ]
+    release_failures = [
+        failure for failure in provenance.failures if failure.code.startswith("GIT_")
+    ]
+    artifact_status = "PASS" if not artifact_failures else "FAIL"
     release_status = "NOT_CHECKED"
     if check_git_commit:
         release_status = "PASS" if provenance.git_commit_matches else "FAIL"
@@ -94,13 +100,21 @@ def build_trust_report(
                     "code": failure.code,
                     "message": failure.message,
                 }
-                for failure in provenance.failures
+                for failure in artifact_failures
             ],
         },
         "release_provenance": {
             "status": release_status,
             "git_commit_checked": check_git_commit,
             "git_commit_matches": provenance.git_commit_matches,
+            "failures": [
+                {
+                    "path": failure.path,
+                    "code": failure.code,
+                    "message": failure.message,
+                }
+                for failure in release_failures
+            ],
         },
         "enterprise_authority": {
             "status": authority_status,
