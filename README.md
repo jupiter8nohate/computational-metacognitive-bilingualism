@@ -605,6 +605,9 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`src/cmb_agents/mcp_server.py`](src/cmb_agents/mcp_server.py) - optional MCP adapter over the canonical CMB-ADP-1 service.
 - [`llms.txt`](llms.txt) and [`llms-full.txt`](llms-full.txt) - curated machine-reading entry points with interpretation boundaries.
 - [`spec/CMB-CORE-1.md`](spec/CMB-CORE-1.md) - minimum cross-component semantic contract and layer-separation rules.
+- [`spec/GLITCH-IR-1.md`](spec/GLITCH-IR-1.md) - GLT-8101 language-neutral semantic contract and eight-language canonical-synchrony rules.
+- [`schemas/glitch-ir.v1.schema.json`](schemas/glitch-ir.v1.schema.json) - strict GLITCH-IR v1 machine envelope.
+- [`conformance/glitch-ir/v1/GLT-8101-V001.json`](conformance/glitch-ir/v1/GLT-8101-V001.json) - canonical GLT-8101 cross-language conformance vector.
 - [`spec/CMB-SRP-1.md`](spec/CMB-SRP-1.md) - risk-adaptive sovereignty runtime, scoped human authorization, and verification-state contract.
 - [`spec/CMB-SRP-2.md`](spec/CMB-SRP-2.md) - deterministic path/AST change classification, scan-report binding, and unsigned in-toto statement bridge.
 - [`schemas/cmb.scan-report.v1.schema.json`](schemas/cmb.scan-report.v1.schema.json) - machine-readable SRP-2 scan-report contract.
@@ -634,6 +637,9 @@ python3 -m build
 
 # cross-language boundary conformance
 (cd adapters/go && go test ./...)
+
+# GLT-8101 eight-language semantic conformance
+python3 scripts/check_glitch_ir_conformance.py
 ```
 
 CI runs the tests on Python 3.10–3.13. The canonical-receipt CI job independently seals and verifies the current canonical artifact set inside a Git worktree. Pushing a version-matching tag (latest published: `v1.4.1`) activates the signed-release workflow, which builds the wheel and source distribution, seals the canonical public CMB artifact set, generates `SHA256SUMS`, signs the release artifacts with keyless Sigstore, creates GitHub artifact attestations, and publishes the release.
