@@ -6,7 +6,7 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Release candidate
 
-- Prepared package, tool, CFF, and BibTeX metadata for `1.5.0rc1` on the dedicated release-candidate branch.
+- Prepared package, tool, CFF, and BibTeX metadata for `1.5.0-rc.1` on the dedicated release-candidate branch.
 - Added regression tests that fail if release version metadata drifts or TypeScript/Rust dependency locking is weakened.
 - This candidate is not the final v1.5.0 validation claim; independent review under issue #63 remains required before the final release.
 
