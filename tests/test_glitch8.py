@@ -184,3 +184,54 @@ def test_cli_add_auto_syncs_repository_views(
     rendered = reference.read_text(encoding="utf-8")
     assert "⌁ // S⃟ Y⃟ N⃟ C⃟" in rendered
     assert "**Name:** Sync Test Glyph" in rendered
+
+def test_official_composite_protocol_sequence() -> None:
+    registry = load_registry()
+    expected = {
+        f"GLT-{value:04d}": token
+        for value, token in zip(
+            range(37, 47),
+            [
+                "GLITCH://MIRROR_CONTEST",
+                "GLITCH://PATTERN_TRIAL",
+                "GLITCH://NULL_BREATH",
+                "GLITCH://CONSENT_THRESHOLD",
+                "GLITCH://ARCHIVE_GHOST",
+                "GLITCH://CASCADING_ERROR",
+                "GLITCH://ENCODING_RUIN",
+                "GLITCH://HUMAN_APPEAL",
+                "GLITCH://QUESTION_GATE",
+                "GLITCH://RECOVERY_WITNESS",
+            ],
+            strict=True,
+        )
+    }
+
+    for alias, token in expected.items():
+        entry = registry.get(alias)
+        assert entry["glyph"] == token
+        assert entry["status"] == "canonical"
+        assert entry["runtime_behavior"]["type"] == "composite_protocol"
+        assert parse_statement(entry["example"], registry).glyph_id == entry["id"]
+
+
+def test_figlet_3d_diagonal_artifact_is_byte_stable() -> None:
+    root = Path(__file__).resolve().parents[1]
+    artifact = (
+        root
+        / "examples"
+        / "polyglot"
+        / "glitchology_registry_3d_runtime"
+        / "FIGLET_3D_DIAGONAL.txt"
+    )
+    expected = (
+        "   ______        ______        ______\n"
+        "  /_____/\\      /_____/\\      /_____/\n"
+        "  \\::::_\\/_     \\::::_\\/_     \\::::_\\\n"
+        "   \\:\\/___/\\     \\:\\/___/\\     \\:\\/___/\\\n"
+        "    \\_::._\\:\\     \\::___\\/_     \\::___\\/_\n"
+        "      /____\\:\\     \\:\\____/\\     \\:\\____/\\\n"
+        "      \\_____\\/      \\_____\\/      \\_____\\/\n"
+    )
+    assert artifact.read_text(encoding="utf-8") == expected
+
