@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -100,7 +99,12 @@ def main() -> int:
             "--skipLibCheck",
         ])
 
-        ts_file = ts_out / "typescript.js"
+        ts_matches = list(ts_out.rglob("typescript.js"))
+        if len(ts_matches) != 1:
+            raise RuntimeError(
+                f"expected one compiled TypeScript engine, found {len(ts_matches)}"
+            )
+        ts_file = ts_matches[0]
         engines = {
             "PY": ["python3", str(BINDINGS / "python.py"), str(TEXT_VECTOR)],
             "GO": ["go", "run", str(BINDINGS / "go.go"), str(TEXT_VECTOR)],
