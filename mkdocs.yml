@@ -49,6 +49,7 @@ nav:
   - Threat model: THREAT_MODEL.md
   - Prior art & positioning: PRIOR_ART_AND_POSITIONING.md
   - C2PA interoperability: C2PA_INTEROPERABILITY.md
+  - Recovery & preservation: RECOVERY_AND_PRESERVATION.md
   - Independent review: EXTERNAL_REVIEW.md
   - Repository settings: REPOSITORY_SETTINGS.md
   - Roadmap: ROADMAP.md
