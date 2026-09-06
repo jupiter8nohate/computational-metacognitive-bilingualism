@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from cmb_enterprise import build_trust_report
+from cmb_enterprise.cli import main
 from cmb_provenance.sealing import save_receipt, seal
 
 
@@ -56,3 +57,7 @@ def test_required_authority_missing_denies(tmp_path: Path) -> None:
         "ENTERPRISE_AUTHORITY_REQUIRED"
     ]
     assert report["decision"] == "DENY"
+
+
+def test_enterprise_selftest() -> None:
+    assert main(["selftest"]) == 0
