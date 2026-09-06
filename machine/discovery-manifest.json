@@ -32,7 +32,8 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/datasets/cmb-canonical-corpus/corpus.jsonl",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.recovery-map.v1.schema.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.canonical-corpus-manifest.v1.schema.json",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.canonical-corpus-record.v1.schema.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.canonical-corpus-record.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/glitchology-identity.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
