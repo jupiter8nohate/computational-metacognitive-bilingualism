@@ -26,7 +26,7 @@ class _Handler(BaseHTTPRequestHandler):
         parsed = urlparse(self.path)
         query = parse_qs(parsed.query)
         try:
-            if parsed.path == "/.well-known/agent-card.json":
+            if parsed.path == "/v1/agent-card":
                 self._json(agent_card()); return
             if parsed.path == "/v1/health":
                 self._json({"ok":True,"protocol":"CMB-ADP-1"}); return
