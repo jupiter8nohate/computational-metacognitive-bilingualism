@@ -85,6 +85,22 @@ def test_discovery_urls_must_be_in_published_bundle(published_site: Path) -> Non
 
 
 
+
+def test_knowledge_graph_context_namespace_is_not_a_public_target(published_site: Path) -> None:
+    (published_site / "machine/knowledge-graph.jsonld").write_text(
+        json.dumps({
+            "@context": {
+                "@vocab": "https://schema.org/",
+                "cmb": SITE_URL + "id/",
+            },
+            "@graph": [],
+        }),
+        encoding="utf-8",
+    )
+    pages, links = check_site(published_site)
+    assert pages == 3
+    assert links > 0
+
 def test_knowledge_graph_urls_must_be_published(published_site: Path) -> None:
     (published_site / "machine/knowledge-graph.jsonld").write_text(
         json.dumps({
