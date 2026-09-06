@@ -1,0 +1,94 @@
+{
+  "schema_version": "cmb.recovery-map.v1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "canonical_repository": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+  "canonical_site": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
+  "claims": {
+    "permanence_guaranteed": false,
+    "availability_guaranteed": false,
+    "blockchain_used": false,
+    "dna_storage_deployed": false
+  },
+  "integrity_layers": [
+    {
+      "id": "git_history",
+      "status": "implemented",
+      "evidence": ["RELEASE.md"],
+      "note": "Git history preserves change history while the repository and its mirrors remain available."
+    },
+    {
+      "id": "canonical_receipt",
+      "status": "implemented",
+      "evidence": ["scripts/seal_canonical_artifacts.py","src/cmb_provenance/release.py"],
+      "note": "Canonical public artifacts can be sealed into exact-file-set SHA-256 receipts."
+    },
+    {
+      "id": "sigstore_release_signing",
+      "status": "implemented",
+      "evidence": [".github/workflows/release.yml"],
+      "note": "Release automation provides checksums and Sigstore-oriented signing and attestations; signatures support integrity and provenance, not automatic authorship proof."
+    },
+    {
+      "id": "c2pa_interoperability",
+      "status": "implemented",
+      "evidence": ["docs/C2PA_INTEROPERABILITY.md",".github/workflows/c2pa-integration.yml"],
+      "note": "C2PA round-trip interoperability is tested without claiming formal C2PA conformance."
+    }
+  ],
+  "archives": [
+    {
+      "id": "github_repository",
+      "status": "implemented",
+      "evidence": ["README.md"],
+      "note": "Canonical source and audit history."
+    },
+    {
+      "id": "github_releases",
+      "status": "implemented",
+      "evidence": ["RELEASE.md"],
+      "note": "Versioned release artifacts provide a recovery layer distinct from the moving main branch."
+    },
+    {
+      "id": "ipfs",
+      "status": "not_configured",
+      "evidence": [],
+      "note": "No canonical IPFS CID or pinning policy is currently declared. CID immutability would not by itself guarantee availability."
+    },
+    {
+      "id": "permanent_ledger_anchor",
+      "status": "not_configured",
+      "evidence": [],
+      "note": "No blockchain or permanent-ledger anchor is currently asserted."
+    },
+    {
+      "id": "institutional_archive",
+      "status": "not_configured",
+      "evidence": [],
+      "note": "Independent institutional archiving remains a future preservation option."
+    },
+    {
+      "id": "dna_archive",
+      "status": "research_only",
+      "evidence": ["docs/RECOVERY_AND_PRESERVATION.md"],
+      "note": "DNA is documented only as a non-living information-storage research direction; no biological deployment is claimed."
+    }
+  ],
+  "recovery_order": [
+    "signed_release",
+    "git_commit",
+    "canonical_receipt",
+    "sigstore_transparency_record",
+    "independent_content_addressed_archive",
+    "institutional_archive"
+  ],
+  "boundaries": [
+    "HASH != AUTHORSHIP",
+    "TIMESTAMP != OWNERSHIP",
+    "SIGNATURE != ORIGINALITY",
+    "IMMUTABILITY != AVAILABILITY",
+    "CID != GUARANTEED_PERMANENCE",
+    "DISCOVERY != TRAINING_PERMISSION",
+    "STORAGE != BIOLOGICAL_FUNCTION",
+    "RECOVERY != PLATFORM_INDEPENDENCE"
+  ]
+}
