@@ -150,11 +150,12 @@ def _parse_assignments(parts: Iterable[str], *, line_number: int) -> dict[str, s
                 f"line {line_number}: expected KEY=VALUE token, got {part!r}"
             )
         key, value = part.split("=", 1)
-        if not key or not value or key in values:
+        canonical_key = key.upper()
+        if not key or not value or canonical_key in values:
             raise Glitch3DError(
                 f"line {line_number}: invalid or duplicate assignment {part!r}"
             )
-        values[key.upper()] = value
+        values[canonical_key] = value
     return values
 
 
@@ -210,7 +211,17 @@ def _validate_graph(
     if len(boundary_ids) != len(boundaries):
         raise Glitch3DError("boundary IDs must be unique")
 
-    boundary_by_z = {boundary.z: boundary for boundary in boundaries}
+    boundary_by_z: dict[int, Glitch3DBoundary] = {}
+    for boundary in boundaries:
+        if boundary.z not in _LAYER_KIND:
+            raise Glitch3DError(
+                f"boundary {boundary.id} uses undefined Z={boundary.z}"
+            )
+        if boundary.z in boundary_by_z:
+            raise Glitch3DError(
+                f"only one boundary may be declared at Z={boundary.z}"
+            )
+        boundary_by_z[boundary.z] = boundary
 
     seen_edges: set[tuple[str, str, str]] = set()
     for edge in edges:
