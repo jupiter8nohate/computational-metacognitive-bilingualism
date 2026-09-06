@@ -13,6 +13,7 @@ GLITCH8_SCHEMA_VERSION: Final[str] = "glitch8.glyph-registry.v1"
 
 GLITCH_DISPLAY_MARK: Final[str] = "\u20df"
 
+
 def glitch_display(text: str) -> str:
     """Render human-facing GLITCHOLOGY labels with the canonical display alphabet."""
     words: list[str] = []
@@ -25,6 +26,7 @@ def glitch_display(text: str) -> str:
         ]
         words.append(" ".join(rendered))
     return "  ".join(words)
+
 
 _ALLOWED_STATUS: Final[set[str]] = {"experimental", "proposed", "canonical", "deprecated", "retired"}
 _ALLOWED_RUNTIMES: Final[set[str]] = {"PY", "RS", "GO", "TS", "PL", "HS", "CL", "C", "G8"}
