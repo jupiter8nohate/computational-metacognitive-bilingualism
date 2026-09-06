@@ -1,0 +1,26 @@
+{
+  "schema_version": "glitch-ir.v1",
+  "protocol": "GLITCH-IR",
+  "protocol_version": "1.0.0",
+  "vector_id": "GLT-8101-V001",
+  "registry_id": "GLT-8101",
+  "canonical_name": "CANONICAL_SYNCHRONY",
+  "claim": {
+    "verification_label": "PRESENT",
+    "evidence": "ABSENT",
+    "source": "UNKNOWN"
+  },
+  "human_review": "REQUIRED",
+  "expected_result": {
+    "verdict": "BACKTRACE",
+    "operator": "GLT-0036",
+    "state": "CONTESTED"
+  },
+  "invariants": [
+    "VERIFIED_LABEL != VERIFIED_TRUTH",
+    "LABEL != EVIDENCE",
+    "SIGNAL != SOURCE",
+    "PATTERN != PROOF",
+    "TRANSLATION != SEMANTIC_MUTATION"
+  ]
+}

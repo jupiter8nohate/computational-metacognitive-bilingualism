@@ -7,6 +7,7 @@ import pytest
 from jsonschema import Draft202012Validator
 
 from cmb_glitch8.cli import main as glitch8_main
+from cmb_glitch8.glitch_ir import assert_expected_result, evaluate_vector, load_vector
 from cmb_glitch8.registry import GlyphRegistryError, load_registry, parse_statement
 
 
@@ -235,3 +236,72 @@ def test_figlet_3d_diagonal_artifact_is_byte_stable() -> None:
     )
     assert artifact.read_text(encoding="utf-8") == expected
 
+
+
+def test_glt_8101_is_registered_as_canonical_synchrony() -> None:
+    registry = load_registry()
+    entry = registry.get("GLT-8101")
+    assert entry["glyph"] == "GLITCH://CANONICAL_SYNCHRONY"
+    assert entry["status"] == "canonical"
+    assert entry["runtime_behavior"]["contract"] == "GLITCH-IR-1"
+    assert entry["runtime_behavior"]["type"] == "composite_protocol"
+
+
+def test_cpp_runtime_tag_is_explicit() -> None:
+    statement = parse_statement(
+        "GLITCH://CANONICAL_SYNCHRONY [CPP] GLT-8101-V001 :: "
+        "CONFORMANCE_STABLE :: HUMAN_AUTHORITY_PRESERVED"
+    )
+    assert statement.runtime == "CPP"
+    assert statement.glyph_id == "canonical-synchrony-protocol"
+
+
+def test_glitch_ir_vector_matches_schema_and_reference_evaluator() -> None:
+    root = Path(__file__).resolve().parents[1]
+    schema = json.loads(
+        (root / "schemas" / "glitch-ir.v1.schema.json").read_text(encoding="utf-8")
+    )
+    vector_path = (
+        root / "conformance" / "glitch-ir" / "v1" / "GLT-8101-V001.json"
+    )
+    vector = load_vector(vector_path)
+    Draft202012Validator(schema).validate(vector)
+
+    result = evaluate_vector(vector)
+    assert_expected_result(vector, result)
+    assert result.canonical_line() == (
+        "GLT-8101-V001|1.0.0|BACKTRACE|GLT-0036|CONTESTED\n"
+    )
+
+
+def test_glitch_ir_projection_matches_normative_json() -> None:
+    root = Path(__file__).resolve().parents[1]
+    base = root / "conformance" / "glitch-ir" / "v1"
+    vector = json.loads((base / "GLT-8101-V001.json").read_text(encoding="utf-8"))
+    expected = "\n".join(
+        [
+            f"vector_id={vector['vector_id']}",
+            f"protocol_version={vector['protocol_version']}",
+            f"verification_label={vector['claim']['verification_label']}",
+            f"evidence={vector['claim']['evidence']}",
+            f"source={vector['claim']['source']}",
+            f"human_review={vector['human_review']}",
+            f"expected_verdict={vector['expected_result']['verdict']}",
+            f"expected_operator={vector['expected_result']['operator']}",
+            f"expected_state={vector['expected_result']['state']}",
+        ]
+    ) + "\n"
+    assert (base / "GLT-8101-V001.txt").read_text(encoding="utf-8") == expected
+
+
+def test_glt_8101_artifact_preserves_figlet_prefix() -> None:
+    root = Path(__file__).resolve().parents[1]
+    base = (
+        root
+        / "examples"
+        / "polyglot"
+        / "glitchology_registry_3d_runtime"
+    )
+    figlet = (base / "FIGLET_3D_DIAGONAL.txt").read_bytes()
+    artifact = (base / "GLT_8101_CANONICAL_SYNCHRONY.txt").read_bytes()
+    assert artifact.startswith(figlet + b"\n")

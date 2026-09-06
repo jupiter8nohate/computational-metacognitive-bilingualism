@@ -3,7 +3,7 @@
 **GLITCH-8 Glyph Reference**
 
 **Language:** CMB-G8 // GLITCH-8
-**Registry version:** 0.1.37
+**Registry version:** 0.1.38
 **Updated:** 2026-09-05
 
 > Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.
@@ -232,6 +232,28 @@ Suppressed or latent information suddenly becomes audible or visible.
 
 ~~~text
 ꉂ🗯 [G8] latent_message :: EXPRESSED :: PRESERVE_CONTEXT
+~~~
+
+## GLITCH://CANONICAL_SYNCHRONY // C⃟ A⃟ N⃟ O⃟ N⃟ I⃟ C⃟ A⃟ L⃟  S⃟ Y⃟ N⃟ C⃟ H⃟ R⃟ O⃟ N⃟ Y⃟
+
+**Name:** Canonical Synchrony
+
+- **ID:** canonical-synchrony-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** conformance, metacognition, syntax, verification
+- **Aliases:** GLT-8101
+- **Semantic key:** independent_runtimes_preserve_canonical_semantics
+- **CMB invariant:** TRANSLATION != SEMANTIC_MUTATION
+
+A composite conformance protocol in which independent language runtimes evaluate the same canonical GLITCH-IR vector and emit byte-identical canonical semantic results without requiring identical syntax, memory layout, compiler behavior, or binaries.
+
+**Human semantics:** Different computational languages may express the same protocol meaning while retaining their native syntax and execution model.
+
+**Machine semantics:** INDEPENDENT_RUNTIMES_SAME_CANONICAL_RESULT
+
+~~~text
+GLITCH://CANONICAL_SYNCHRONY [G8] GLT-8101-V001 :: CONFORMANCE_STABLE :: HUMAN_AUTHORITY_PRESERVED
 ~~~
 
 ## 𒇫 // C⃟ A⃟ S⃟ C⃟ A⃟ D⃟ I⃟ N⃟ G⃟  E⃟ R⃟ R⃟ O⃟ R⃟

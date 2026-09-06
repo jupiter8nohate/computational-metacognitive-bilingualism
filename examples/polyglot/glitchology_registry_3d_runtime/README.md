@@ -2,7 +2,7 @@
 
 **Err⃝or⃟⃤GLITCHOLOGY // Go × Python × GLITCH-8**
 
-This executable reference demonstrates the ten canonical composite protocols **GLT-0037 through GLT-0046**.
+This executable reference demonstrates the ten canonical composite protocols **GLT-0037 through GLT-0046** and links the cross-language **GLT-8101 // CANONICAL_SYNCHRONY** conformance layer.
 
 ## FIGlet 3D Diagonal artifact
 
@@ -48,4 +48,23 @@ DISPLAY != IDENTIFIER
 PATTERN != PROOF
 VERIFIED_LABEL != VERIFIED_TRUTH
 HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+
+## GLT-8101 // Canonical Synchrony
+
+The human-facing artifact is:
+
+~~~text
+GLT_8101_CANONICAL_SYNCHRONY.txt
+~~~
+
+Its first seven lines are the exact preserved `FIGLET_3D_DIAGONAL.txt` byte sequence.
+The remainder renders the GLITCH-IR conformance target. Runtime PASS/MATCH claims are
+established only by `scripts/check_glitch_ir_conformance.py` in CI.
+
+~~~text
+FIGLET = HUMAN_VIEW
+GLITCH-IR = SEMANTIC_CONTRACT
+CI_RESULT = CONFORMANCE_EVIDENCE
 ~~~

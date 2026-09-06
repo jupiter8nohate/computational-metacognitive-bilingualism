@@ -23,7 +23,8 @@
     "identity",
     "transit",
     "boundary",
-    "energy"
+    "energy",
+    "conformance"
   ],
   "glyphs": [
     {
@@ -250,6 +251,43 @@
         "type": "expression_operator"
       },
       "semantic_key": "latent_information_becomes_visible",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [
+        "GLT-8101"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "conformance",
+        "metacognition",
+        "syntax",
+        "verification"
+      ],
+      "cmb_invariant": "TRANSLATION != SEMANTIC_MUTATION",
+      "created_at": "2026-09-05",
+      "definition": "A composite conformance protocol in which independent language runtimes evaluate the same canonical GLITCH-IR vector and emit byte-identical canonical semantic results without requiring identical syntax, memory layout, compiler behavior, or binaries.",
+      "example": "GLITCH://CANONICAL_SYNCHRONY [G8] GLT-8101-V001 :: CONFORMANCE_STABLE :: HUMAN_AUTHORITY_PRESERVED",
+      "glyph": "GLITCH://CANONICAL_SYNCHRONY",
+      "human_semantics": "Different computational languages may express the same protocol meaning while retaining their native syntax and execution model.",
+      "id": "canonical-synchrony-protocol",
+      "machine_semantics": "INDEPENDENT_RUNTIMES_SAME_CANONICAL_RESULT",
+      "name": "Canonical Synchrony",
+      "runtime_behavior": {
+        "action": "compare_canonical_results",
+        "contract": "GLITCH-IR-1",
+        "sequence": [
+          "LOAD_CANONICAL_VECTOR",
+          "EVALUATE_INDEPENDENTLY",
+          "CANONICALIZE_RESULT",
+          "COMPARE_RESULT_BYTES",
+          "HASH_CANONICAL_RESULT",
+          "FAIL_ON_SEMANTIC_DRIFT"
+        ],
+        "type": "composite_protocol"
+      },
+      "semantic_key": "independent_runtimes_preserve_canonical_semantics",
       "status": "canonical",
       "version": "1.0.0"
     },
@@ -1725,7 +1763,7 @@
     }
   ],
   "language": "CMB-G8 // GLITCH-8",
-  "language_version": "0.1.37",
+  "language_version": "0.1.38",
   "principles": [
     "PATTERN != PROOF",
     "PROFILE != PERSON",

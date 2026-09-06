@@ -175,3 +175,36 @@ GLITCHOLOGY identity record: machine/glitchology-identity.json
 Living language specification: books/ERR_404_GLITCHOLOGY.md
 
 Interpretation boundary: decorative Unicode is authored display language; the plain-text fields are the canonical retrieval/accessibility equivalents.
+
+
+## GLITCH-IR / GLT-8101 canonical synchrony
+
+Machine identity record:
+machine/glitch-ir.json
+
+Normative contract:
+spec/GLITCH-IR-1.md
+
+Schema:
+schemas/glitch-ir.v1.schema.json
+
+Canonical vector:
+conformance/glitch-ir/v1/GLT-8101-V001.json
+
+Canonical language set:
+PY Python
+GO Go
+RS Rust
+TS TypeScript
+CL Common Lisp
+HS Haskell
+PL Prolog
+CPP C++20
+
+Stable identifiers are not translated. Human descriptions may be localized, including
+Chinese, Japanese, and Spanish labels in machine/glitch-ir.json.
+
+LANGUAGE != SEMANTICS
+MEMORY_LAYOUT != MEANING
+TRANSLATION != SEMANTIC_MUTATION
+SAME_RESULT_DIGEST != PROOF_OF_REAL_WORLD_TRUTH

@@ -7,6 +7,12 @@ on:
       - "conformance/**"
       - "src/cmb_provenance/boundary.py"
       - "schemas/cmb.boundary-event.v1.schema.json"
+      - "conformance/glitch-ir/**"
+      - "schemas/glitch-ir.v1.schema.json"
+      - "spec/GLITCH-IR-1.md"
+      - "src/cmb_glitch8/glitch_ir.py"
+      - "src/cmb_glitch8/glyphs.v1.json"
+      - "scripts/check_glitch_ir_conformance.py"
       - ".github/workflows/polyglot-conformance.yml"
   pull_request:
     paths:
@@ -14,6 +20,12 @@ on:
       - "conformance/**"
       - "src/cmb_provenance/boundary.py"
       - "schemas/cmb.boundary-event.v1.schema.json"
+      - "conformance/glitch-ir/**"
+      - "schemas/glitch-ir.v1.schema.json"
+      - "spec/GLITCH-IR-1.md"
+      - "src/cmb_glitch8/glitch_ir.py"
+      - "src/cmb_glitch8/glyphs.v1.json"
+      - "scripts/check_glitch_ir_conformance.py"
       - ".github/workflows/polyglot-conformance.yml"
 
 permissions:
@@ -80,3 +92,31 @@ jobs:
       - name: Run shared conformance
         working-directory: adapters/go
         run: go test ./...
+
+  glitch-ir-8-language:
+    name: GLT-8101 / 8-language semantic conformance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install semantic runtime toolchains
+        shell: bash
+        run: |
+          set -euo pipefail
+          missing=()
+          command -v sbcl >/dev/null 2>&1 || missing+=(sbcl)
+          command -v runghc >/dev/null 2>&1 || missing+=(ghc)
+          command -v swipl >/dev/null 2>&1 || missing+=(swi-prolog-nox)
+          if (( ${#missing[@]} )); then
+            sudo apt-get update
+            sudo apt-get install -y "${missing[@]}"
+          fi
+
+      - name: Install TypeScript compiler
+        working-directory: adapters/typescript-express
+        run: npm install --ignore-scripts --no-audit --no-fund
+
+      - name: Run GLT-8101 canonical synchrony
+        run: python3 scripts/check_glitch_ir_conformance.py

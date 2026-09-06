@@ -1,0 +1,9 @@
+vector_id=GLT-8101-V001
+protocol_version=1.0.0
+verification_label=PRESENT
+evidence=ABSENT
+source=UNKNOWN
+human_review=REQUIRED
+expected_verdict=BACKTRACE
+expected_operator=GLT-0036
+expected_state=CONTESTED

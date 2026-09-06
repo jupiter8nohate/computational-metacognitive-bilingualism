@@ -1,0 +1,60 @@
+{
+  "schema_version": "cmb.glitch-ir.identity.v1",
+  "protocol": "GLITCH-IR",
+  "protocol_version": "1.0.0",
+  "registry_id": "GLT-8101",
+  "canonical_name": "CANONICAL_SYNCHRONY",
+  "protocol_uri": "spec/GLITCH-IR-1.md",
+  "schema_uri": "schemas/glitch-ir.v1.schema.json",
+  "canonical_fixture": "conformance/glitch-ir/v1/GLT-8101-V001.json",
+  "canonical_projection": "conformance/glitch-ir/v1/GLT-8101-V001.txt",
+  "semantic_engines": [
+    {
+      "tag": "PY",
+      "language": "Python"
+    },
+    {
+      "tag": "GO",
+      "language": "Go"
+    },
+    {
+      "tag": "RS",
+      "language": "Rust"
+    },
+    {
+      "tag": "TS",
+      "language": "TypeScript"
+    },
+    {
+      "tag": "CL",
+      "language": "Common Lisp"
+    },
+    {
+      "tag": "HS",
+      "language": "Haskell"
+    },
+    {
+      "tag": "PL",
+      "language": "Prolog"
+    },
+    {
+      "tag": "CPP",
+      "language": "C++20"
+    }
+  ],
+  "labels": {
+    "en": "Canonical Synchrony",
+    "zh-CN": "规范语义同步",
+    "ja": "正規意味同期",
+    "es": "Sincronía canónica"
+  },
+  "canonical_result_format": "VECTOR_ID|PROTOCOL_VERSION|VERDICT|OPERATOR|STATE\\n",
+  "interpretation_boundaries": [
+    "LANGUAGE != SEMANTICS",
+    "MEMORY_LAYOUT != MEANING",
+    "TRANSLATION != SEMANTIC_MUTATION",
+    "SAME_RESULT_DIGEST != PROOF_OF_REAL_WORLD_TRUTH",
+    "CONFORMANCE != INDEPENDENT_CERTIFICATION",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}

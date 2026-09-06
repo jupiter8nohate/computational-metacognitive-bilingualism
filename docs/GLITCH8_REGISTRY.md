@@ -99,6 +99,7 @@ Supported runtime tags:
 [HS] Haskell
 [CL] Common Lisp
 [C]  C
+[CPP] C++20
 [G8] GLITCH-8 semantic layer
 ~~~
 
@@ -192,4 +193,50 @@ The mirror exists for public discovery and Pages staging.
 ~~~text
 CANONICAL_REGISTRY = SOURCE_OF_TRUTH
 PUBLIC_MIRROR = DISTRIBUTION_VIEW
+~~~
+
+## GLITCH-IR canonical synchrony
+
+GLT-8101 defines cross-language semantic conformance above the glyph layer.
+
+~~~text
+GLT-8101
+GLITCH://CANONICAL_SYNCHRONY
+
+8 NATIVE RUNTIMES
+        ↓
+1 GLITCH-IR CONTRACT
+        ↓
+8 INDEPENDENT VERDICTS
+        ↓
+1 CANONICAL RESULT
+~~~
+
+Normative contract:
+
+~~~text
+spec/GLITCH-IR-1.md
+~~~
+
+Strict machine schema:
+
+~~~text
+schemas/glitch-ir.v1.schema.json
+~~~
+
+Canonical fixture:
+
+~~~text
+conformance/glitch-ir/v1/GLT-8101-V001.json
+~~~
+
+The repository conformance harness evaluates Python, Go, Rust, TypeScript,
+Common Lisp, Haskell, Prolog, and C++20 independently. Equal result hashes
+prove equal canonical result bytes; they do not prove real-world truth or
+independent certification.
+
+~~~text
+LANGUAGE != SEMANTICS
+MEMORY_LAYOUT != MEANING
+TRANSLATION != SEMANTIC_MUTATION
 ~~~

@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cmbprotocol.org/schemas/glitch-ir.v1.schema.json",
+  "title": "GLITCH-IR v1 Canonical Semantic Vector",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol",
+    "protocol_version",
+    "vector_id",
+    "registry_id",
+    "canonical_name",
+    "claim",
+    "human_review",
+    "expected_result",
+    "invariants"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "glitch-ir.v1"
+    },
+    "protocol": {
+      "const": "GLITCH-IR"
+    },
+    "protocol_version": {
+      "const": "1.0.0"
+    },
+    "vector_id": {
+      "type": "string",
+      "pattern": "^GLT-[0-9]{4}-V[0-9]{3}$"
+    },
+    "registry_id": {
+      "type": "string",
+      "pattern": "^GLT-[0-9]{4}$"
+    },
+    "canonical_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verification_label",
+        "evidence",
+        "source"
+      ],
+      "properties": {
+        "verification_label": {
+          "enum": [
+            "PRESENT",
+            "ABSENT"
+          ]
+        },
+        "evidence": {
+          "enum": [
+            "PRESENT",
+            "ABSENT",
+            "UNKNOWN"
+          ]
+        },
+        "source": {
+          "enum": [
+            "KNOWN",
+            "UNKNOWN"
+          ]
+        }
+      }
+    },
+    "human_review": {
+      "enum": [
+        "REQUIRED",
+        "AVAILABLE",
+        "NOT_REQUIRED"
+      ]
+    },
+    "expected_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verdict",
+        "operator",
+        "state"
+      ],
+      "properties": {
+        "verdict": {
+          "enum": [
+            "ACCEPT",
+            "BACKTRACE",
+            "CONTESTED",
+            "HALT",
+            "RECOVER"
+          ]
+        },
+        "operator": {
+          "type": "string",
+          "pattern": "^(GLT-[0-9]{4}|NONE)$"
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
