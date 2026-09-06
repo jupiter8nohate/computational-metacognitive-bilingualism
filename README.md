@@ -363,7 +363,7 @@ MCP also exposes `cmb_compile_authority`, which compiles CMB-SDL authority decla
 
 CMB-CAP keeps private signing keys local. The MCP adapter exposes public credential verification and the experimental A2A extension declaration, but never accepts a CMB-CAP private key. CMB-CAP-1 delegated credentials retain the verified parent/root signing key because v1 does not yet define an independently delegated child key. The CLI refuses VC-shaped export until the CMB-CAP credential verifies. The W3C VC export remains explicitly a VC 2.0-shaped projection and does not claim W3C Data Integrity conformance.
 
-The Pages deployment publishes `/.well-known/agent-card.json` and `/agents/registry.json`. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
+The Pages deployment publishes the CMB-specific `/agents/agent-card.json` and `/agents/registry.json`; it does not publish an A2A `/.well-known/agent-card.json` until a real conformant A2A server exists. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
 
 ## E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟
 
