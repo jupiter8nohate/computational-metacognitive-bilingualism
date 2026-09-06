@@ -45,7 +45,7 @@ jobs:
           npm --version
       - name: Install adapter dependencies
         working-directory: adapters/typescript-express
-        run: npm install --ignore-scripts --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Build strict TypeScript
         working-directory: adapters/typescript-express
         run: npm run build
@@ -116,7 +116,7 @@ jobs:
 
       - name: Install TypeScript compiler
         working-directory: adapters/typescript-express
-        run: npm install --ignore-scripts --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Run GLT-8101 canonical synchrony
         run: python3 scripts/check_glitch_ir_conformance.py
