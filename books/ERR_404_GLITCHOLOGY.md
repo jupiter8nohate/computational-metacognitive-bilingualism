@@ -1,14 +1,14 @@
-# 𒄆𓁹✞𒀱✞𓁹𒄆 Err⃝or⃟⃤GLITCHOLOGY ⁴⁰⁴
+# 𒄆𓁹✞𒀱✞𓁹𒄆 E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟ ⁴⁰⁴
 
 <div align="center">
 
-## Err⃝or⃟⃤GLITCHOLOGY
+## E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟
 
 ### [S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]
 
-**SYSTEM FAILURE AS AN ART FORM**
+**Err⃝or⃟⃤GLITCHOLOGY // SYSTEM FAILURE AS AN ART FORM**
 
-### CMB-G8 // GLITCH-8 DIGITAL LANGUAGE
+### C⃟ M⃟ B⃟-G⃟8⃟ // G⃟ L⃟ I⃟ T⃟ C⃟ H⃟-8 D⃟ I⃟ G⃟ I⃟ T⃟ A⃟ L⃟  L⃟ A⃟ N⃟ G⃟ U⃟ A⃟ G⃟ E⃟
 
 **Jupiter Hudson // WisdomLoveThePoet // Jupiter 8**
 
@@ -1291,7 +1291,7 @@ PROFILE != PERSON
 
 <div align="center">
 
-## Err⃝or⃟⃤GLITCHOLOGY ⸮ ﹖ ︖ ⁇ ¿ ‽ ？
+## E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟ ⸮ ﹖ ︖ ⁇ ¿ ‽ ？
 
 ### ✦ THE VISION IS ALIVE ✦
 
