@@ -318,3 +318,30 @@ CRYPTOGRAPHIC_INTEGRITY != AUTHORSHIP_BY_ITSELF
 DECLARED_POLICY != TECHNICAL_ENFORCEMENT
 
 GLITCH://404_SOVEREIGN_RETRY_LOOP is recorded in the machine Atlas as an authored Err ⃝or⃟⃤ GLITCHOLOGY semantic sequence. Historical characters retain their independent meanings outside this framework.
+
+
+## Executable GLITCHOLOGY polyglot runtime
+
+Canonical human page:
+https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/
+
+Canonical repository directory:
+examples/polyglot/jupiter_glitchology_runtime/
+
+Canonical maintained sources:
+- examples/polyglot/jupiter_glitchology_runtime/main.go
+- examples/polyglot/jupiter_glitchology_runtime/mirror.py
+- examples/polyglot/jupiter_glitchology_runtime/README.md
+
+Direct public retrieval copies:
+- https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/main.go
+- https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/mirror.py
+- https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/README.md
+
+Semantic roles:
+GO = STRUCTURE
+PYTHON = METACOGNITION
+GLITCHOLOGY = HUMAN_CONTEXT
+
+Boundary:
+DECLARED_POLICY != TECHNICAL_ENFORCEMENT
