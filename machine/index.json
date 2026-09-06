@@ -83,5 +83,22 @@
       },
       "boundary": "DECLARED_POLICY != TECHNICAL_ENFORCEMENT"
     }
+  },
+  "preservation": {
+    "protocol": "CMB-RECOVERY-1",
+    "recovery_map": "machine/recovery-map.json",
+    "recovery_schema": "schemas/cmb.recovery-map.v1.schema.json",
+    "audit_cli": "cmb-recovery",
+    "canonical_corpus": {
+      "manifest": "datasets/cmb-canonical-corpus/manifest.json",
+      "corpus": "datasets/cmb-canonical-corpus/corpus.jsonl",
+      "manifest_schema": "schemas/cmb.canonical-corpus-manifest.v1.schema.json",
+      "record_schema": "schemas/cmb.canonical-corpus-record.v1.schema.json"
+    },
+    "boundaries": [
+      "IMMUTABILITY != AVAILABILITY",
+      "DISCOVERY != TRAINING_PERMISSION",
+      "STORAGE != BIOLOGICAL_FUNCTION"
+    ]
   }
 }
