@@ -1,3 +1,17 @@
+## Stabilization gate
+
+The v1.5 stabilization cycle is active. See `docs/STABILIZATION_CYCLE.md`.
+
+- [ ] this change is a bug/security fix, test, documentation reconciliation, dependency/reproducibility fix, external-review fix, Recovery fix, or release preparation
+- [ ] this change does **not** add a new top-level Python package, installed CLI command, protocol family, major agent authority class, payment rail, interoperability target, or major symbolic-language subsystem
+- [ ] if this crosses the freeze boundary, the PR explains why it is required for correctness/security and deliberately updates the stabilization baseline
+- [ ] scope reduction or consolidation was preferred over adding another subsystem
+
+```text
+FEATURE_VELOCITY <= AUDIT_CAPACITY
+REPRODUCIBLE > IMPRESSIVE
+```
+
 ## Problem
 
 What problem does this change solve?
