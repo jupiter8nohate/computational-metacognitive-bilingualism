@@ -840,6 +840,65 @@
         "accessible computational literacy"
       ],
       "declared_meaning": "Public manifesto for CMB-Z13, defining thirteen zodiac-inspired software-language lenses plus the Guardian Modes teaching layer while preserving human authority and rejecting deterministic classification."
+    },
+    {
+      "id": "cmb-beyond-software-ten-territories",
+      "title": "Beyond Software: Ten Emerging Territories of Code",
+      "path": "docs/BEYOND_SOFTWARE_TEN_TERRITORIES.md",
+      "format": "markdown",
+      "kind": "bounded research program and implementation roadmap",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "code beyond conventional software",
+        "research territories",
+        "human agency",
+        "prior art",
+        "falsifiability",
+        "implementation roadmap"
+      ],
+      "declared_meaning": "Human-readable CMB research map for ten emerging application territories. It explicitly does not claim that the territories are historically unprecedented and requires prior-art review before novelty claims."
+    },
+    {
+      "id": "cmb-territories-of-code-machine-record",
+      "title": "CMB Territories of Code Research Map v1",
+      "path": "research/territories-of-code.v1.json",
+      "format": "json",
+      "kind": "machine-readable research map",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "machine-readable research",
+        "research questions",
+        "evidence requirements",
+        "safeguards",
+        "priority order",
+        "claim boundaries"
+      ],
+      "declared_meaning": "Strict machine-readable record of ten CMB research territories, each with a testable question, prototype boundary, evidence requirements, safeguards, and interpretation boundaries."
+    },
+    {
+      "id": "cmb-territories-of-code-schema",
+      "title": "CMB Territories of Code v1 Schema",
+      "path": "schemas/cmb.territories-of-code.v1.schema.json",
+      "format": "json schema",
+      "kind": "strict research-map validation contract",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "research conformance",
+        "exactly ten territories",
+        "novelty boundary",
+        "safeguards"
+      ],
+      "declared_meaning": "Draft 2020-12 schema that enforces the research-map structure, exactly ten territories, evidence and safeguard fields, and an explicit non-novelty historical claim boundary."
     }
   ]
 }
