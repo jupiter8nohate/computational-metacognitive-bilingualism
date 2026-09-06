@@ -42,11 +42,24 @@
     "release_provenance": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["status", "git_commit_checked", "git_commit_matches"],
+      "required": ["status", "git_commit_checked", "git_commit_matches", "failures"],
       "properties": {
         "status": {"enum": ["PASS", "FAIL", "NOT_CHECKED"]},
         "git_commit_checked": {"type": "boolean"},
-        "git_commit_matches": {"type": ["boolean", "null"]}
+        "git_commit_matches": {"type": ["boolean", "null"]},
+        "failures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "code", "message"],
+            "properties": {
+              "path": {"type": ["string", "null"]},
+              "code": {"type": "string"},
+              "message": {"type": "string"}
+            }
+          }
+        }
       }
     },
     "enterprise_authority": {
