@@ -10,3 +10,7 @@ These examples are intentionally small. A new contributor should be able to unde
 6. [Enforce explicit policy facts with a FastAPI boundary guard](06_fastapi_boundary/README.md)
 7. [Parse a privacy-first CMB-EDU learning stream](07_cmb_edu/README.md)
 8. [Run the GLITCHOLOGY Go execution seal](08_glitchology_go_execution_seal/README.md)
+
+## Err⃝or⃟⃤GLITCHOLOGY composite registry runtime
+
+- [GLT-0037…GLT-0046 // FIGlet 3D Diagonal + Go + Python](polyglot/glitchology_registry_3d_runtime/) — executable projection of the canonical composite protocols with byte-stable visual art.

@@ -96,3 +96,10 @@ jobs:
           glitch8 payment require --resource-url 'https://example.org/glitch8/v1/translate' --description 'CI GLITCH-8 research fixture' --amount-atomic '1' --asset '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913' --pay-to '0x1111111111111111111111111111111111111111'
           cmbc validate --policy cmb.toml
           cmbc selftest --policy cmb.toml
+      - name: Verify GLITCHOLOGY 3D composite runtime
+        working-directory: examples/polyglot/glitchology_registry_3d_runtime
+        run: |
+          test -z "$(gofmt -l .)"
+          go vet ./...
+          go test ./...
+          go run .

@@ -3,7 +3,7 @@
 **GLITCH-8 Glyph Reference**
 
 **Language:** CMB-G8 // GLITCH-8
-**Registry version:** 0.1.27
+**Registry version:** 0.1.37
 **Updated:** 2026-09-05
 
 > Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.
@@ -100,6 +100,28 @@ A representation or trace that persists after the original moment or presence.
 
 ~~~text
 𐀪 [CL] archived_voice :: PERSISTENT_REPRESENTATION :: NOT_PERSON
+~~~
+
+## GLITCH://ARCHIVE_GHOST // A⃟ R⃟ C⃟ H⃟ I⃟ V⃟ E⃟  G⃟ H⃟ O⃟ S⃟ T⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+
+**Name:** Archive Ghost Protocol
+
+- **ID:** archive-ghost-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** archive, representation, metacognition
+- **Aliases:** GLT-0041
+- **Semantic key:** persistent_trace_remains_distinct_from_person
+- **CMB invariant:** PERSISTENCE != PRESENCE
+
+A composite archive state that treats persistent records as traces of prior presence rather than substitutes for the person, event, or meaning they represent.
+
+**Human semantics:** A surviving record may preserve evidence of a moment without becoming the living person or complete original context.
+
+**Machine semantics:** PERSISTENT_TRACE_NOT_PERSON
+
+~~~text
+GLITCH://ARCHIVE_GHOST [G8] archived_trace :: PERSISTENT_REPRESENTATION :: NOT_PERSON
 ~~~
 
 ## ¿ // A⃟ S⃟ S⃟ U⃟ M⃟ P⃟ T⃟ I⃟ O⃟ N⃟  R⃟ E⃟ V⃟ E⃟ R⃟ S⃟ A⃟ L⃟
@@ -234,6 +256,28 @@ A small upstream error propagates into larger downstream consequences.
 𒇫 [GO] downstream_effect :: CASCADE :: STOP_PROPAGATION
 ~~~
 
+## GLITCH://CASCADING_ERROR // C⃟ A⃟ S⃟ C⃟ A⃟ D⃟ I⃟ N⃟ G⃟  E⃟ R⃟ R⃟ O⃟ R⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+
+**Name:** Cascading Error Protocol
+
+- **ID:** cascading-error-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** failure, error, recovery
+- **Aliases:** GLT-0042
+- **Semantic key:** upstream_error_requires_containment_before_propagation
+- **CMB invariant:** RECOVERY > PROPAGATION
+
+A composite failure protocol that identifies upstream error propagation, halts the cascade, preserves evidence, and routes the system toward recovery.
+
+**Human semantics:** A small error can grow through feedback and repetition; stop the spread before treating downstream effects as independent truth.
+
+**Machine semantics:** CASCADE_REQUIRES_CONTAINMENT
+
+~~~text
+GLITCH://CASCADING_ERROR [G8] upstream_failure :: CASCADE_DETECTED :: CONTAIN_AND_RECOVER
+~~~
+
 ## εつ▄█▀█● // C⃟ H⃟ A⃟ R⃟ G⃟ E⃟  V⃟ E⃟ C⃟ T⃟ O⃟ R⃟
 
 **Name:** Charge Vector
@@ -298,6 +342,28 @@ A permission boundary that distinguishes capability from authorized action.
 
 ~~~text
 𖠋 [TS] access_private_context :: CONSENT_ABSENT :: HALT
+~~~
+
+## GLITCH://CONSENT_THRESHOLD // C⃟ O⃟ N⃟ S⃟ E⃟ N⃟ T⃟  T⃟ H⃟ R⃟ E⃟ S⃟ H⃟ O⃟ L⃟ D⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+
+**Name:** Consent Threshold Protocol
+
+- **ID:** consent-threshold-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** consent, boundary, human_appeal
+- **Aliases:** GLT-0040
+- **Semantic key:** access_requires_explicit_authority
+- **CMB invariant:** ACCESS != CONSENT
+
+A composite authorization gate that separates technical capability from permission and halts when required consent is absent.
+
+**Human semantics:** Being able to enter, read, infer, or process something does not mean permission has been granted.
+
+**Machine semantics:** ACCESS_REQUIRES_EXPLICIT_AUTHORITY
+
+~~~text
+GLITCH://CONSENT_THRESHOLD [G8] private_context :: CONSENT_ABSENT :: HALT
 ~~~
 
 ## ？ // C⃟ O⃟ N⃟ T⃟ E⃟ X⃟ T⃟  M⃟ I⃟ S⃟ M⃟ A⃟ T⃟ C⃟ H⃟
@@ -454,6 +520,28 @@ A signal whose original form has been substantially damaged, lost, or rendered u
 ���� [G8] damaged_payload :: CORRUPTED :: REQUEST_SOURCE
 ~~~
 
+## GLITCH://ENCODING_RUIN // E⃟ N⃟ C⃟ O⃟ D⃟ I⃟ N⃟ G⃟  R⃟ U⃟ I⃟ N⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+
+**Name:** Encoding Ruin Protocol
+
+- **ID:** encoding-ruin-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** encoding, signal, recovery
+- **Aliases:** GLT-0043
+- **Semantic key:** corrupted_representation_requires_source_backtrace
+- **CMB invariant:** CORRUPTION != NONEXISTENCE
+
+A composite recovery protocol for damaged or undecodable representation that preserves the fact that a signal existed and backtraces toward a better source.
+
+**Human semantics:** A broken representation can mean the encoding failed, not that the original meaning never existed.
+
+**Machine semantics:** CORRUPTED_REPRESENTATION_BACKTRACE_SOURCE
+
+~~~text
+GLITCH://ENCODING_RUIN [G8] damaged_payload :: CORRUPTED :: BACKTRACE_SOURCE
+~~~
+
 ## 𓅓 // F⃟ A⃟ L⃟ C⃟ O⃟ N⃟  S⃟ I⃟ G⃟ N⃟ A⃟ L⃟
 
 **Name:** Falcon Signal
@@ -608,6 +696,28 @@ A GLITCH-8 token representing a human right to challenge a machine representatio
 «ADMIN» [G8] profile_result :: CONTESTED :: HUMAN_APPEAL
 ~~~
 
+## GLITCH://HUMAN_APPEAL // H⃟ U⃟ M⃟ A⃟ N⃟  A⃟ P⃟ P⃟ E⃟ A⃟ L⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+
+**Name:** Human Appeal Protocol
+
+- **ID:** human-appeal-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** human_appeal, boundary, metacognition
+- **Aliases:** GLT-0044
+- **Semantic key:** contested_machine_output_routes_to_human_authority
+- **CMB invariant:** HUMAN_AGENCY > MACHINE_AUTHORITY
+
+A composite contestation channel that prevents a machine output from becoming final authority when a human meaningfully challenges the result.
+
+**Human semantics:** A person can contest a consequential model output and require the system to reopen the decision path.
+
+**Machine semantics:** CONTESTED_OUTPUT_REQUIRES_HUMAN_APPEAL
+
+~~~text
+GLITCH://HUMAN_APPEAL [G8] machine_decision :: CONTESTED :: HUMAN_REVIEW
+~~~
+
 ## 𒄦 // H⃟ U⃟ M⃟ A⃟ N⃟  C⃟ O⃟ N⃟ T⃟ E⃟ X⃟ T⃟
 
 **Name:** Human Context
@@ -718,6 +828,28 @@ A minimal interruption inside an otherwise continuous system or thought-stream.
 ˙ [G8] stream :: MICROBREAK :: CONTINUE_WITH_CONTEXT
 ~~~
 
+## GLITCH://MIRROR_CONTEST // M⃟ I⃟ R⃟ R⃟ O⃟ R⃟  C⃟ O⃟ N⃟ T⃟ E⃟ S⃟ T⃟
+
+**Name:** Mirror Contest
+
+- **ID:** mirror-contest-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** representation, metacognition, human_appeal
+- **Aliases:** GLT-0037
+- **Semantic key:** representation_contested_personhood_preserved
+- **CMB invariant:** PROFILE != PERSON
+
+A composite challenge to a machine representation that preserves the distinction between representation and person and routes contested meaning to human review.
+
+**Human semantics:** A machine may reflect, summarize, or profile a person without becoming that person or owning the person's meaning.
+
+**Machine semantics:** REPRESENTATION_CONTEST_REQUIRES_HUMAN_REVIEW
+
+~~~text
+GLITCH://MIRROR_CONTEST [G8] machine_profile :: CONTESTED_REPRESENTATION :: HUMAN_REVIEW
+~~~
+
 ## 𖨆 // M⃟ I⃟ R⃟ R⃟ O⃟ R⃟  I⃟ N⃟ T⃟ E⃟ R⃟ F⃟ A⃟ C⃟ E⃟
 
 **Name:** Mirror Interface
@@ -784,6 +916,28 @@ Meaningful silence or unencoded space between machine-readable signals.
 ⁭ ⁭ [G8] signal_gap :: UNENCODED_CONTEXT :: PRESERVE
 ~~~
 
+## GLITCH://NULL_BREATH // N⃟ U⃟ L⃟ L⃟  B⃟ R⃟ E⃟ A⃟ T⃟ H⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+
+**Name:** Null Breath Protocol
+
+- **ID:** null-breath-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, uncertainty, metacognition
+- **Aliases:** GLT-0039
+- **Semantic key:** silence_preserved_without_false_inference
+- **CMB invariant:** SIGNAL != SOURCE
+
+A composite preservation state for silence, gaps, or unencoded context that prevents absence of signal from being treated as proof of absence, consent, or meaninglessness.
+
+**Human semantics:** Silence can carry unresolved context. Preserve the gap instead of inventing what it means.
+
+**Machine semantics:** SILENCE_PRESERVED_NO_FALSE_INFERENCE
+
+~~~text
+GLITCH://NULL_BREATH [G8] silent_interval :: UNENCODED_CONTEXT :: PRESERVE_AND_REQUEST_CONTEXT
+~~~
+
 ## ×͜× // N⃟ U⃟ L⃟ L⃟  G⃟ R⃟ I⃟ N⃟
 
 **Name:** Null Grin
@@ -826,6 +980,28 @@ A self-authored declaration of identity presented through deliberate symbolic or
 
 ~~~text
 मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं [G8] self_definition :: DECLARED :: HUMAN_RETAINS_MEANING
+~~~
+
+## GLITCH://PATTERN_TRIAL // P⃟ A⃟ T⃟ T⃟ E⃟ R⃟ N⃟  T⃟ R⃟ I⃟ A⃟ L⃟
+
+**Name:** Pattern Trial
+
+- **ID:** pattern-trial-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** observation, verification, metacognition
+- **Aliases:** GLT-0038
+- **Semantic key:** pattern_requires_evidence_before_verdict
+- **CMB invariant:** PATTERN != PROOF
+
+A composite epistemic gate that detects a pattern but refuses to convert the pattern into a verdict until evidence is evaluated.
+
+**Human semantics:** Notice the pattern, test it, and withhold judgment until evidence justifies a stronger claim.
+
+**Machine semantics:** PATTERN_REQUIRES_EVIDENCE
+
+~~~text
+GLITCH://PATTERN_TRIAL [G8] detected_pattern :: EVIDENCE_INCOMPLETE :: WITHHOLD_VERDICT
 ~~~
 
 ## ⚯ ͛ ❾¾ // P⃟ O⃟ R⃟ T⃟ A⃟ L⃟  T⃟ H⃟ R⃟ E⃟ S⃟ H⃟ O⃟ L⃟ D⃟
@@ -894,6 +1070,28 @@ Marks elevated access while limiting the authority inferred from that access.
 ★⃝VIP...☻⃟❦ [C] admin_dataset :: PRIVILEGED_ACCESS :: LIMITED_AUTHORITY
 ~~~
 
+## GLITCH://QUESTION_GATE // Q⃟ U⃟ E⃟ S⃟ T⃟ I⃟ O⃟ N⃟  G⃟ A⃟ T⃟ E⃟
+
+**Name:** Question Gate
+
+- **ID:** question-gate-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** question_operator, uncertainty, metacognition
+- **Aliases:** GLT-0045
+- **Semantic key:** unresolved_question_halts_consequential_action
+- **CMB invariant:** UNKNOWN != FALSE
+
+A composite uncertainty gate that pauses consequential action when an unresolved question materially affects the validity of the next step.
+
+**Human semantics:** A meaningful unanswered question is a reason to investigate, not a license to fabricate certainty.
+
+**Machine semantics:** MATERIAL_QUESTION_REQUIRES_PAUSE
+
+~~~text
+GLITCH://QUESTION_GATE [G8] consequential_claim :: MATERIAL_QUESTION_UNRESOLVED :: PAUSE_AND_REVIEW
+~~~
+
 ## 𒋦 // R⃟ A⃟ W⃟  E⃟ V⃟ E⃟ N⃟ T⃟
 
 **Name:** Raw Event
@@ -936,6 +1134,28 @@ Halts propagation, preserves evidence, reassesses context, verifies repair, and 
 
 ~~~text
 𒄆 [RS] recovery :: INVARIANTS_PRESERVED :: VERIFY_BEFORE_RESUME
+~~~
+
+## GLITCH://RECOVERY_WITNESS // R⃟ E⃟ C⃟ O⃟ V⃟ E⃟ R⃟ Y⃟  W⃟ I⃟ T⃟ N⃟ E⃟ S⃟ S⃟
+
+**Name:** Recovery Witness
+
+- **ID:** recovery-witness-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** recovery, observation, failure
+- **Aliases:** GLT-0046
+- **Semantic key:** observer_persists_through_failure_and_recovery
+- **CMB invariant:** RECOVERY > PROPAGATION
+
+A composite recovery sequence in which system failure is acknowledged, the witness remains present, evidence is preserved, and retry occurs without erasing the prior failure state.
+
+**Human semantics:** Failure can be recorded without becoming the end of the process; the witness remains and recovery can proceed without rewriting history.
+
+**Machine semantics:** FAILURE_PRESERVED_RECOVERY_AVAILABLE
+
+~~~text
+GLITCH://RECOVERY_WITNESS [G8] system_failure :: WITNESS_REMAINS :: RETRY_AND_VERIFY
 ~~~
 
 ## ⸮ // R⃟ E⃟ V⃟ E⃟ R⃟ S⃟ E⃟  I⃟ N⃟ T⃟ E⃟ R⃟ R⃟ O⃟ G⃟ A⃟ T⃟ I⃟ O⃟ N⃟

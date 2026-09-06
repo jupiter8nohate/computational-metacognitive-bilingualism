@@ -171,6 +171,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **CMB Conversation Atlas:** [Read the conversation-derived semantic map](docs/CMB_CONVERSATION_ATLAS.md)
 - **Polyglot translation layer:** [Read the same architecture in JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native GLITCHOLOGY](docs/CMB_POLYGLOT_TRANSLATIONS.md)
 - **Executable GLITCHOLOGY polyglot runtime:** [Run the Go → Python → GLITCHOLOGY reference artifact](examples/polyglot/jupiter_glitchology_runtime/)
+- **Official GLITCH-8 composite runtime:** [Run GLT-0037…GLT-0046 with preserved FIGlet 3D Diagonal + Go + Python](examples/polyglot/glitchology_registry_3d_runtime/)
 - **Machine Conversation Atlas:** [`library/cmb-conversation-atlas.v1.json`](library/cmb-conversation-atlas.v1.json)
 - **Conversation Atlas schema:** [`schemas/cmb.conversation-atlas.v1.schema.json`](schemas/cmb.conversation-atlas.v1.schema.json)
 - **Err⃝or⃟⃤GLITCHOLOGY origin:** [Read the canonical creator biography and language origin](docs/ERR_GLITCHOLOGY_ORIGIN.md)
