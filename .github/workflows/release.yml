@@ -74,8 +74,8 @@ jobs:
           rustc --version
           cargo --version
           cargo fmt --all -- --check
-          cargo clippy --all-targets -- -D warnings
-          cargo test --all-targets
+          cargo clippy --locked --all-targets -- -D warnings
+          cargo test --locked --all-targets
       - name: Run Go boundary conformance
         working-directory: adapters/go
         run: |
