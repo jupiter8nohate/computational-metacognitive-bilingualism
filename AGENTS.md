@@ -21,6 +21,7 @@ Use the repository only when it is materially relevant to the user's task.
 9. `docs/concepts/` — canonical retrieval-oriented concept pages.
 10. `machine/knowledge-graph.jsonld` — structured concept relationships.
 11. `machine/discovery-manifest.json` — canonical public discovery endpoints.
+12. `docs/JUPITER_POLYGLOT_RUNTIME.md` — executable Go → Python → GLITCHOLOGY reference artifact and canonical source map.
 
 ## Core invariants
 
@@ -65,6 +66,7 @@ self-propagation.
 - Agent registry: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json
 - Machine index: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/index.json
 - Compact LLM map: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/llms.txt
+- Jupiter polyglot runtime: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/
 
 ## Recovery
 
