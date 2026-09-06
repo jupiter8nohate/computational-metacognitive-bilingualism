@@ -170,3 +170,13 @@ def test_polyglot_release_dependency_resolution_is_locked() -> None:
     assert "cargo test --locked --all-targets" in release_workflow
     assert "cargo clippy --locked --all-targets -- -D warnings" in polyglot_workflow
     assert "cargo test --locked --all-targets" in polyglot_workflow
+
+
+def test_release_document_lists_every_canonical_artifact() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+    release_document = (repository_root / "RELEASE.md").read_text(encoding="utf-8")
+
+    missing = [
+        path for path in CANONICAL_PUBLIC_ARTIFACTS if path not in release_document
+    ]
+    assert missing == []
