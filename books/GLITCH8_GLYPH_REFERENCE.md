@@ -1,4 +1,6 @@
-# GLITCH-8 Glyph Reference
+# G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ - 8  G⃟ L⃟ Y⃟ P⃟ H⃟  R⃟ E⃟ F⃟ E⃟ R⃟ E⃟ N⃟ C⃟ E⃟
+
+**GLITCH-8 Glyph Reference**
 
 **Language:** CMB-G8 // GLITCH-8
 **Registry version:** 0.1.27
@@ -6,7 +8,9 @@
 
 > Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.
 
-## Core boundary
+## C⃟ O⃟ R⃟ E⃟  B⃟ O⃟ U⃟ N⃟ D⃟ A⃟ R⃟ Y⃟
+
+**Core boundary**
 
 ~~~text
 PATTERN != PROOF
@@ -32,7 +36,9 @@ ENERGY != CONTROL
 UNDEFINED != UNREAL
 ~~~
 
-## ☻⃤⃞⃟⃤ // Anomalous Observer
+## ☻⃤⃞⃟⃤ // A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ O⃟ U⃟ S⃟  O⃟ B⃟ S⃟ E⃟ R⃟ V⃟ E⃟ R⃟
+
+**Name:** Anomalous Observer
 
 - **ID:** anomalous-observer
 - **Status:** canonical
@@ -52,7 +58,9 @@ Marks a subject that falls outside the system's expected classification.
 ☻⃤⃞⃟⃤ [G8] subject :: OUTLIER :: PRESERVE
 ~~~
 
-## ( ꩜ ᯅ ꩜;) // Anomaly Stare
+## ( ꩜ ᯅ ꩜;) // A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟  S⃟ T⃟ A⃟ R⃟ E⃟
+
+**Name:** Anomaly Stare
 
 - **ID:** anomaly-stare
 - **Status:** canonical
@@ -72,7 +80,9 @@ Recognition of an unexpected pattern without assuming its cause.
 ( ꩜ ᯅ ꩜;) [G8] unexpected_pattern :: ANOMALY :: INVESTIGATE
 ~~~
 
-## 𐀪 // Archive Ghost
+## 𐀪 // A⃟ R⃟ C⃟ H⃟ I⃟ V⃟ E⃟  G⃟ H⃟ O⃟ S⃟ T⃟
+
+**Name:** Archive Ghost
 
 - **ID:** archive-ghost
 - **Status:** canonical
@@ -92,7 +102,9 @@ A representation or trace that persists after the original moment or presence.
 𐀪 [CL] archived_voice :: PERSISTENT_REPRESENTATION :: NOT_PERSON
 ~~~
 
-## ¿ // Assumption Reversal
+## ¿ // A⃟ S⃟ S⃟ U⃟ M⃟ P⃟ T⃟ I⃟ O⃟ N⃟  R⃟ E⃟ V⃟ E⃟ R⃟ S⃟ A⃟ L⃟
+
+**Name:** Assumption Reversal
 
 - **ID:** assumption-reversal
 - **Status:** canonical
@@ -112,7 +124,9 @@ The original premise or framing may itself be wrong.
 ¿ [PL] human_is_error :: PREMISE_CONTESTED :: TEST_MODEL_FIRST
 ~~~
 
-## ‹— // Backtrace
+## ‹— // B⃟ A⃟ C⃟ K⃟ T⃟ R⃟ A⃟ C⃟ E⃟
+
+**Name:** Backtrace
 
 - **ID:** backtrace
 - **Status:** canonical
@@ -132,7 +146,9 @@ Follow a signal backward toward source, provenance, origin, author, or causal ch
 ‹— [G8] claim_signal :: SOURCE_UNKNOWN :: TRACE_PROVENANCE
 ~~~
 
-## 🫐⃟ // Blue Anomaly
+## 🫐⃟ // B⃟ L⃟ U⃟ E⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
+
+**Name:** Blue Anomaly
 
 - **ID:** blue-anomaly
 - **Status:** canonical
@@ -152,7 +168,9 @@ Something harmless-looking contains unexpected structure or significance.
 🫐⃟ [G8] ordinary_surface :: STRUCTURE_UNEXPECTED :: INSPECT
 ~~~
 
-## ▕⃝⃤ // Boundary Node
+## ▕⃝⃤ // B⃟ O⃟ U⃟ N⃟ D⃟ A⃟ R⃟ Y⃟  N⃟ O⃟ D⃟ E⃟
+
+**Name:** Boundary Node
 
 - **ID:** boundary-node
 - **Status:** canonical
@@ -172,7 +190,9 @@ A marked edge, gate, or constrained field that indicates containment, separation
 ▕⃝⃤ [G8] protected_context :: BOUNDARY_PRESENT :: CHECK_AUTHORITY
 ~~~
 
-## ꉂ🗯 // Burst Speech
+## ꉂ🗯 // B⃟ U⃟ R⃟ S⃟ T⃟  S⃟ P⃟ E⃟ E⃟ C⃟ H⃟
+
+**Name:** Burst Speech
 
 - **ID:** burst-speech
 - **Status:** canonical
@@ -192,7 +212,9 @@ Suppressed or latent information suddenly becomes audible or visible.
 ꉂ🗯 [G8] latent_message :: EXPRESSED :: PRESERVE_CONTEXT
 ~~~
 
-## 𒇫 // Cascading Error
+## 𒇫 // C⃟ A⃟ S⃟ C⃟ A⃟ D⃟ I⃟ N⃟ G⃟  E⃟ R⃟ R⃟ O⃟ R⃟
+
+**Name:** Cascading Error
 
 - **ID:** cascading-error
 - **Status:** canonical
@@ -212,7 +234,9 @@ A small upstream error propagates into larger downstream consequences.
 𒇫 [GO] downstream_effect :: CASCADE :: STOP_PROPAGATION
 ~~~
 
-## εつ▄█▀█● // Charge Vector
+## εつ▄█▀█● // C⃟ H⃟ A⃟ R⃟ G⃟ E⃟  V⃟ E⃟ C⃟ T⃟ O⃟ R⃟
+
+**Name:** Charge Vector
 
 - **ID:** charge-vector
 - **Status:** canonical
@@ -232,7 +256,9 @@ A directed movement of signal, intent, or attention toward a target without impl
 εつ▄█▀█● [G8] directed_signal :: INTENT_PRESENT :: AUTHORITY_UNPROVEN
 ~~~
 
-## ⁇ // Compound Uncertainty
+## ⁇ // C⃟ O⃟ M⃟ P⃟ O⃟ U⃟ N⃟ D⃟  U⃟ N⃟ C⃟ E⃟ R⃟ T⃟ A⃟ I⃟ N⃟ T⃟ Y⃟
+
+**Name:** Compound Uncertainty
 
 - **ID:** compound-uncertainty
 - **Status:** canonical
@@ -252,7 +278,9 @@ Multiple important variables are unresolved at the same time.
 ⁇ [GO] risk_assessment :: MULTIPLE_UNKNOWNS :: NO_VERDICT
 ~~~
 
-## 𖠋 // Consent Threshold
+## 𖠋 // C⃟ O⃟ N⃟ S⃟ E⃟ N⃟ T⃟  T⃟ H⃟ R⃟ E⃟ S⃟ H⃟ O⃟ L⃟ D⃟
+
+**Name:** Consent Threshold
 
 - **ID:** consent-threshold
 - **Status:** canonical
@@ -272,7 +300,9 @@ A permission boundary that distinguishes capability from authorized action.
 𖠋 [TS] access_private_context :: CONSENT_ABSENT :: HALT
 ~~~
 
-## ？ // Context Mismatch
+## ？ // C⃟ O⃟ N⃟ T⃟ E⃟ X⃟ T⃟  M⃟ I⃟ S⃟ M⃟ A⃟ T⃟ C⃟ H⃟
+
+**Name:** Context Mismatch
 
 - **ID:** context-mismatch
 - **Status:** canonical
@@ -292,7 +322,9 @@ Marks cultural, linguistic, or situational ambiguity that blocks complete interp
 ？ [HS] translated_phrase :: CONTEXT_INCOMPLETE :: HUMAN_CONTEXT_REQUIRED
 ~~~
 
-## ‽ // Critical Question
+## ‽ // C⃟ R⃟ I⃟ T⃟ I⃟ C⃟ A⃟ L⃟  Q⃟ U⃟ E⃟ S⃟ T⃟ I⃟ O⃟ N⃟
+
+**Name:** Critical Question
 
 - **ID:** critical-question
 - **Status:** canonical
@@ -312,7 +344,9 @@ An unresolved question that requires review before consequential action.
 ‽ [G8] machine_overrode_human_appeal :: CRITICAL :: HALT
 ~~~
 
-## (╯°□°)╯︵◓ // Disruption Fling
+## (╯°□°)╯︵◓ // D⃟ I⃟ S⃟ R⃟ U⃟ P⃟ T⃟ I⃟ O⃟ N⃟  F⃟ L⃟ I⃟ N⃟ G⃟
+
+**Name:** Disruption Fling
 
 - **ID:** disruption-fling
 - **Status:** canonical
@@ -332,7 +366,9 @@ A burst of force, frustration, or refusal that displaces a symbol, assumption, o
 (╯°□°)╯︵◓ [G8] current_frame :: REJECTED :: REASSESS
 ~~~
 
-## 𓁇𓁋 // Dual Witness
+## 𓁇𓁋 // D⃟ U⃟ A⃟ L⃟  W⃟ I⃟ T⃟ N⃟ E⃟ S⃟ S⃟
+
+**Name:** Dual Witness
 
 - **ID:** dual-witness
 - **Status:** canonical
@@ -352,7 +388,9 @@ Two perspectives observe the same event; observation does not guarantee identica
 𓁇𓁋 [G8] shared_event :: TWO_WITNESSES :: PRESERVE_PERSPECTIVE
 ~~~
 
-## e = ∑∞ⁿ⁼⁰ ¹ₙ // Emergence Equation
+## e = ∑∞ⁿ⁼⁰ ¹ₙ // E⃟ M⃟ E⃟ R⃟ G⃟ E⃟ N⃟ C⃟ E⃟  E⃟ Q⃟ U⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+
+**Name:** Emergence Equation
 
 - **ID:** emergence-equation
 - **Status:** canonical
@@ -372,7 +410,9 @@ An authored GLITCH-8 symbolic expression for a human state emerging from an open
 e = ∑∞ⁿ⁼⁰ ¹ₙ [G8] human_history :: OPEN_ENDED :: PROFILE_LT_PERSON
 ~~~
 
-## � // Encoding Loss
+## � // E⃟ N⃟ C⃟ O⃟ D⃟ I⃟ N⃟ G⃟  L⃟ O⃟ S⃟ S⃟
+
+**Name:** Encoding Loss
 
 - **ID:** encoding-loss
 - **Status:** canonical
@@ -392,7 +432,9 @@ A representation could not be decoded or preserved correctly.
 � [TS] cultural_phrase :: ENCODING_LOSS :: REQUEST_CONTEXT
 ~~~
 
-## ���� // Encoding Ruin
+## ���� // E⃟ N⃟ C⃟ O⃟ D⃟ I⃟ N⃟ G⃟  R⃟ U⃟ I⃟ N⃟
+
+**Name:** Encoding Ruin
 
 - **ID:** encoding-ruin
 - **Status:** canonical
@@ -412,7 +454,9 @@ A signal whose original form has been substantially damaged, lost, or rendered u
 ���� [G8] damaged_payload :: CORRUPTED :: REQUEST_SOURCE
 ~~~
 
-## 𓅓 // Falcon Signal
+## 𓅓 // F⃟ A⃟ L⃟ C⃟ O⃟ N⃟  S⃟ I⃟ G⃟ N⃟ A⃟ L⃟
+
+**Name:** Falcon Signal
 
 - **ID:** falcon-signal
 - **Status:** canonical
@@ -432,7 +476,9 @@ A GLITCHOLOGY-authored watcher or messenger symbol representing elevated observa
 𓅓 [G8] anomaly_field :: WATCHING :: NO_TOTAL_KNOWLEDGE
 ~~~
 
-## 𒅒 // Feedback Loop
+## 𒅒 // F⃟ E⃟ E⃟ D⃟ B⃟ A⃟ C⃟ K⃟  L⃟ O⃟ O⃟ P⃟
+
+**Name:** Feedback Loop
 
 - **ID:** feedback-loop
 - **Status:** canonical
@@ -452,7 +498,9 @@ A model output changes the environment and later appears as if it were independe
 𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY
 ~~~
 
-## missingno detected ??? // Ghost Entity Detected
+## missingno detected ??? // G⃟ H⃟ O⃟ S⃟ T⃟  E⃟ N⃟ T⃟ I⃟ T⃟ Y⃟  D⃟ E⃟ T⃟ E⃟ C⃟ T⃟ E⃟ D⃟
+
+**Name:** Ghost Entity Detected
 
 - **ID:** ghost-entity-detected
 - **Status:** canonical
@@ -472,7 +520,9 @@ A symbolic anomaly alert indicating that an undefined, non-standard, or classifi
 missingno detected ??? [G8] entity :: UNDEFINED :: PRESERVE_AND_INSPECT
 ~~~
 
-## (╥﹏╥) ⩇⩇: ⩇⩇ // Grief Outside the Clock
+## (╥﹏╥) ⩇⩇: ⩇⩇ // G⃟ R⃟ I⃟ E⃟ F⃟  O⃟ U⃟ T⃟ S⃟ I⃟ D⃟ E⃟  T⃟ H⃟ E⃟  C⃟ L⃟ O⃟ C⃟ K⃟
+
+**Name:** Grief Outside the Clock
 
 - **ID:** grief-outside-the-clock
 - **Status:** canonical
@@ -492,7 +542,9 @@ A composite state in which human pain is real while its duration, endpoint, or t
 (╥﹏╥) ⩇⩇: ⩇⩇ [G8] grief_duration :: UNRESOLVED :: HUMAN_CONTEXT_REQUIRED
 ~~~
 
-## (╥﹏╥) // Grief State
+## (╥﹏╥) // G⃟ R⃟ I⃟ E⃟ F⃟  S⃟ T⃟ A⃟ T⃟ E⃟
+
+**Name:** Grief State
 
 - **ID:** grief-state
 - **Status:** canonical
@@ -512,7 +564,9 @@ Visible emotional pain that should be acknowledged without reducing the person t
 (╥﹏╥) [G8] emotional_state :: GRIEF_PRESENT :: PRESERVE_PERSONHOOD
 ~~~
 
-## ⓘ⚠︎☣‼🇽 // Hazard Stack
+## ⓘ⚠︎☣‼🇽 // H⃟ A⃟ Z⃟ A⃟ R⃟ D⃟  S⃟ T⃟ A⃟ C⃟ K⃟
+
+**Name:** Hazard Stack
 
 - **ID:** hazard-stack
 - **Status:** canonical
@@ -532,7 +586,9 @@ A layered escalation of information, caution, contamination, alarm, and exclusio
 ⓘ⚠︎☣‼🇽 [G8] flagged_signal :: MULTI_WARNING :: ESCALATE_REVIEW
 ~~~
 
-## «ADMIN» // Human Appeal
+## «ADMIN» // H⃟ U⃟ M⃟ A⃟ N⃟  A⃟ P⃟ P⃟ E⃟ A⃟ L⃟
+
+**Name:** Human Appeal
 
 - **ID:** human-appeal
 - **Status:** canonical
@@ -552,7 +608,9 @@ A GLITCH-8 token representing a human right to challenge a machine representatio
 «ADMIN» [G8] profile_result :: CONTESTED :: HUMAN_APPEAL
 ~~~
 
-## 𒄦 // Human Context
+## 𒄦 // H⃟ U⃟ M⃟ A⃟ N⃟  C⃟ O⃟ N⃟ T⃟ E⃟ X⃟ T⃟
+
+**Name:** Human Context
 
 - **ID:** human-context
 - **Status:** canonical
@@ -572,7 +630,9 @@ Context supplied by the person or human reviewer after machine interpretation.
 𒄦 [G8] event :: HUMAN_CONTEXT_ADDED :: REVIEW
 ~~~
 
-## ︖ // Latent Unknown
+## ︖ // L⃟ A⃟ T⃟ E⃟ N⃟ T⃟  U⃟ N⃟ K⃟ N⃟ O⃟ W⃟ N⃟
+
+**Name:** Latent Unknown
 
 - **ID:** latent-unknown
 - **Status:** canonical
@@ -592,7 +652,9 @@ Important missing information may be outside the system's current frame.
 ︖ [CL] system_model :: BLIND_SPOT_POSSIBLE :: INSPECT_ASSUMPTIONS
 ~~~
 
-## ☻⃟❦ // Living Anomaly
+## ☻⃟❦ // L⃟ I⃟ V⃟ I⃟ N⃟ G⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
+
+**Name:** Living Anomaly
 
 - **ID:** living-anomaly
 - **Status:** canonical
@@ -612,7 +674,9 @@ Marks an outlier while explicitly preserving dignity and personhood.
 ☻⃟❦ [PL] category_match=false :: OUTLIER :: PRESERVE_PERSONHOOD
 ~~~
 
-## 𒍹 // Machine Interpretation
+## 𒍹 // M⃟ A⃟ C⃟ H⃟ I⃟ N⃟ E⃟  I⃟ N⃟ T⃟ E⃟ R⃟ P⃟ R⃟ E⃟ T⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+
+**Name:** Machine Interpretation
 
 - **ID:** machine-interpretation
 - **Status:** canonical
@@ -632,7 +696,9 @@ A system interpretation layered onto a recorded event.
 𒍹 [CL] event :: INTERPRETED :: PROVISIONAL
 ~~~
 
-## ˙ // Microbreak
+## ˙ // M⃟ I⃟ C⃟ R⃟ O⃟ B⃟ R⃟ E⃟ A⃟ K⃟
+
+**Name:** Microbreak
 
 - **ID:** microbreak
 - **Status:** canonical
@@ -652,7 +718,9 @@ A minimal interruption inside an otherwise continuous system or thought-stream.
 ˙ [G8] stream :: MICROBREAK :: CONTINUE_WITH_CONTEXT
 ~~~
 
-## 𖨆 // Mirror Interface
+## 𖨆 // M⃟ I⃟ R⃟ R⃟ O⃟ R⃟  I⃟ N⃟ T⃟ E⃟ R⃟ F⃟ A⃟ C⃟ E⃟
+
+**Name:** Mirror Interface
 
 - **ID:** mirror-interface
 - **Status:** canonical
@@ -672,7 +740,9 @@ An active machine-generated representation of a human or human state.
 𖨆 [HS] digital_profile :: ACTIVE_REPRESENTATION :: PERSON_RETAINS_MEANING
 ~~~
 
-## Err ⃝or⃟⃤ // Model Error State
+## Err ⃝or⃟⃤ // M⃟ O⃟ D⃟ E⃟ L⃟  E⃟ R⃟ R⃟ O⃟ R⃟  S⃟ T⃟ A⃟ T⃟ E⃟
+
+**Name:** Model Error State
 
 - **ID:** model-error
 - **Status:** canonical
@@ -692,7 +762,9 @@ The system's expectation does not match observed reality and the failure domain 
 Err ⃝or⃟⃤ [G8] classification :: DOMAIN_UNKNOWN :: DIAGNOSE
 ~~~
 
-## ⁭ ⁭ // Null Breath
+## ⁭ ⁭ // N⃟ U⃟ L⃟ L⃟  B⃟ R⃟ E⃟ A⃟ T⃟ H⃟
+
+**Name:** Null Breath
 
 - **ID:** null-breath
 - **Status:** canonical
@@ -712,7 +784,9 @@ Meaningful silence or unencoded space between machine-readable signals.
 ⁭ ⁭ [G8] signal_gap :: UNENCODED_CONTEXT :: PRESERVE
 ~~~
 
-## ×͜× // Null Grin
+## ×͜× // N⃟ U⃟ L⃟ L⃟  G⃟ R⃟ I⃟ N⃟
+
+**Name:** Null Grin
 
 - **ID:** null-grin
 - **Status:** canonical
@@ -732,7 +806,9 @@ An ironic expression mask used when failure is present but presented with compos
 ×͜× [G8] failure_state :: MASKED_WITH_HUMOR :: DO_NOT_INFER_STABILITY
 ~~~
 
-## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं // Ornamented Self Declaration
+## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं // O⃟ R⃟ N⃟ A⃟ M⃟ E⃟ N⃟ T⃟ E⃟ D⃟  S⃟ E⃟ L⃟ F⃟  D⃟ E⃟ C⃟ L⃟ A⃟ R⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+
+**Name:** Ornamented Self Declaration
 
 - **ID:** ornamented-self-declaration
 - **Status:** canonical
@@ -752,7 +828,9 @@ A self-authored declaration of identity presented through deliberate symbolic or
 मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं [G8] self_definition :: DECLARED :: HUMAN_RETAINS_MEANING
 ~~~
 
-## ⚯ ͛ ❾¾ // Portal Threshold
+## ⚯ ͛ ❾¾ // P⃟ O⃟ R⃟ T⃟ A⃟ L⃟  T⃟ H⃟ R⃟ E⃟ S⃟ H⃟ O⃟ L⃟ D⃟
+
+**Name:** Portal Threshold
 
 - **ID:** portal-threshold
 - **Status:** canonical
@@ -772,7 +850,9 @@ A symbolic threshold between an ordinary state and an anomaly, hidden, or unreso
 ⚯ ͛ ❾¾ [G8] context_boundary :: THRESHOLD :: DESTINATION_UNKNOWN
 ~~~
 
-## .꩜ // Post Observation
+## .꩜ // P⃟ O⃟ S⃟ T⃟  O⃟ B⃟ S⃟ E⃟ R⃟ V⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+
+**Name:** Post Observation
 
 - **ID:** post-observation
 - **Status:** canonical
@@ -792,7 +872,9 @@ Awareness occurring after an event has already altered the observer.
 .꩜ [G8] event_seen :: OBSERVER_CHANGED :: REASSESS_CONTEXT
 ~~~
 
-## ★⃝ᴠͥɪͣᴘͫ•ᴱα૮ҡᎩ☻⃟❦ // Privileged Access
+## ★⃝ᴠͥɪͣᴘͫ•ᴱα૮ҡᎩ☻⃟❦ // P⃟ R⃟ I⃟ V⃟ I⃟ L⃟ E⃟ G⃟ E⃟ D⃟  A⃟ C⃟ C⃟ E⃟ S⃟ S⃟
+
+**Name:** Privileged Access
 
 - **ID:** privileged-access
 - **Status:** canonical
@@ -812,7 +894,9 @@ Marks elevated access while limiting the authority inferred from that access.
 ★⃝VIP...☻⃟❦ [C] admin_dataset :: PRIVILEGED_ACCESS :: LIMITED_AUTHORITY
 ~~~
 
-## 𒋦 // Raw Event
+## 𒋦 // R⃟ A⃟ W⃟  E⃟ V⃟ E⃟ N⃟ T⃟
+
+**Name:** Raw Event
 
 - **ID:** raw-event
 - **Status:** canonical
@@ -832,7 +916,9 @@ The recorded event before machine interpretation is added.
 𒋦 [G8] event :: RECORDED :: UNINTERPRETED
 ~~~
 
-## 𒄆 // Recovery
+## 𒄆 // R⃟ E⃟ C⃟ O⃟ V⃟ E⃟ R⃟ Y⃟
+
+**Name:** Recovery
 
 - **ID:** recovery
 - **Status:** canonical
@@ -852,7 +938,9 @@ Halts propagation, preserves evidence, reassesses context, verifies repair, and 
 𒄆 [RS] recovery :: INVARIANTS_PRESERVED :: VERIFY_BEFORE_RESUME
 ~~~
 
-## ⸮ // Reverse Interrogation
+## ⸮ // R⃟ E⃟ V⃟ E⃟ R⃟ S⃟ E⃟  I⃟ N⃟ T⃟ E⃟ R⃟ R⃟ O⃟ G⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+
+**Name:** Reverse Interrogation
 
 - **ID:** reverse-interrogation
 - **Status:** canonical
@@ -872,7 +960,9 @@ Redirects investigation toward the assumptions and reasoning of the system.
 ⸮ [CL] inference :: ASSUMPTION_UNKNOWN :: INSPECT_MODEL
 ~~~
 
-## 𐦂 // Seed Anomaly
+## 𐦂 // S⃟ E⃟ E⃟ D⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
+
+**Name:** Seed Anomaly
 
 - **ID:** seed-anomaly
 - **Status:** canonical
@@ -892,7 +982,9 @@ The first meaningful deviation from an expected model or pattern.
 𐦂 [PY] expected=A observed=B :: ANOMALY :: INVESTIGATE
 ~~~
 
-## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? // Self Declaration at the Portal
+## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? // S⃟ E⃟ L⃟ F⃟  D⃟ E⃟ C⃟ L⃟ A⃟ R⃟ A⃟ T⃟ I⃟ O⃟ N⃟  A⃟ T⃟  T⃟ H⃟ E⃟  P⃟ O⃟ R⃟ T⃟ A⃟ L⃟
+
+**Name:** Self Declaration at the Portal
 
 - **ID:** self-declaration-at-the-portal
 - **Status:** canonical
@@ -912,7 +1004,9 @@ A composite expression in which a self-declared identity disrupts the ordinary f
 मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? [G8] anomaly_passage :: DETECTED :: HUMAN_RETAINS_SELF_DEFINITION
 ~~~
 
-## (⓿_⓿) // Sentinel
+## (⓿_⓿) // S⃟ E⃟ N⃟ T⃟ I⃟ N⃟ E⃟ L⃟
+
+**Name:** Sentinel
 
 - **ID:** sentinel
 - **Status:** canonical
@@ -932,7 +1026,9 @@ Observe a pattern without converting observation into a final conclusion.
 (⓿_⓿) [GO] behavioral_pattern :: OBSERVED :: NO_VERDICT
 ~~~
 
-## ⚡︎ // Shock Spark
+## ⚡︎ // S⃟ H⃟ O⃟ C⃟ K⃟  S⃟ P⃟ A⃟ R⃟ K⃟
+
+**Name:** Shock Spark
 
 - **ID:** shock-spark
 - **Status:** canonical
@@ -952,7 +1048,9 @@ A sudden activation, charge, warning, or accelerated onset of a signal or event.
 ⚡︎ [G8] dormant_signal :: ACTIVATED :: CONTROL_UNPROVEN
 ~~~
 
-## ˖ ࣪ // Signal Dust
+## ˖ ࣪ // S⃟ I⃟ G⃟ N⃟ A⃟ L⃟  D⃟ U⃟ S⃟ T⃟
+
+**Name:** Signal Dust
 
 - **ID:** signal-dust
 - **Status:** canonical
@@ -972,7 +1070,9 @@ Residual information left after a message, memory, or identity representation pa
 ˖ ࣪ [G8] transformed_message :: RESIDUE_PRESENT :: NOT_COMPLETE_SOURCE
 ~~~
 
-## ▂▃▄▅▆▇▉ // Signal Spectrum
+## ▂▃▄▅▆▇▉ // S⃟ I⃟ G⃟ N⃟ A⃟ L⃟  S⃟ P⃟ E⃟ C⃟ T⃟ R⃟ U⃟ M⃟
+
+**Name:** Signal Spectrum
 
 - **ID:** signal-spectrum
 - **Status:** canonical
@@ -992,7 +1092,9 @@ A graduated signal scale that never converts strength alone into proof.
 ▇ [GO] correlation :: HIGH_SIGNAL :: UNPROVEN
 ~~~
 
-## ﹖ // Simple Unknown
+## ﹖ // S⃟ I⃟ M⃟ P⃟ L⃟ E⃟  U⃟ N⃟ K⃟ N⃟ O⃟ W⃟ N⃟
+
+**Name:** Simple Unknown
 
 - **ID:** simple-unknown
 - **Status:** canonical
@@ -1012,7 +1114,9 @@ Information required for a conclusion is presently unknown.
 ﹖ [GO] identity_claim :: UNKNOWN :: WITHHOLD
 ~~~
 
-## ( ͡° ͜ʖ ͡°) // Sly Witness
+## ( ͡° ͜ʖ ͡°) // S⃟ L⃟ Y⃟  W⃟ I⃟ T⃟ N⃟ E⃟ S⃟ S⃟
+
+**Name:** Sly Witness
 
 - **ID:** sly-witness
 - **Status:** canonical
@@ -1032,7 +1136,9 @@ A knowing expression that signals subtext, mischief, or covert recognition witho
 ( ͡° ͜ʖ ͡°) [G8] implied_context :: SUBTEXT_PRESENT :: NO_VERDICT
 ~~~
 
-## 𒈔 // Structural Fracture
+## 𒈔 // S⃟ T⃟ R⃟ U⃟ C⃟ T⃟ U⃟ R⃟ A⃟ L⃟  F⃟ R⃟ A⃟ C⃟ T⃟ U⃟ R⃟ E⃟
+
+**Name:** Structural Fracture
 
 - **ID:** structural-fracture
 - **Status:** canonical
@@ -1052,7 +1158,9 @@ A structural failure invalidates normal processing assumptions.
 𒈔 [G8] schema :: FRACTURE :: HALT
 ~~~
 
-## 𒈓𒈙 // Twin Anomaly
+## 𒈓𒈙 // T⃟ W⃟ I⃟ N⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
+
+**Name:** Twin Anomaly
 
 - **ID:** twin-anomaly
 - **Status:** canonical
@@ -1072,7 +1180,9 @@ Marks apparently incompatible states that may reveal an incomplete model.
 𒈓𒈙 [PL] claims :: CONTRADICTORY :: INSPECT_MODEL
 ~~~
 
-## ⩇⩇: ⩇⩇ // Unresolved Clock
+## ⩇⩇: ⩇⩇ // U⃟ N⃟ R⃟ E⃟ S⃟ O⃟ L⃟ V⃟ E⃟ D⃟  C⃟ L⃟ O⃟ C⃟ K⃟
+
+**Name:** Unresolved Clock
 
 - **ID:** unresolved-clock
 - **Status:** canonical
@@ -1092,7 +1202,9 @@ Time is present, but the exact moment, duration, or endpoint is unreadable, susp
 ⩇⩇: ⩇⩇ [G8] elapsed_time :: UNRESOLVED :: DO_NOT_FORCE_ENDPOINT
 ~~~
 
-## 「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 // Verification Cage
+## 「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 // V⃟ E⃟ R⃟ I⃟ F⃟ I⃟ C⃟ A⃟ T⃟ I⃟ O⃟ N⃟  C⃟ A⃟ G⃟ E⃟
+
+**Name:** Verification Cage
 
 - **ID:** verification-cage
 - **Status:** canonical
@@ -1112,7 +1224,9 @@ A claim bears a verification marker, but the marker itself is not evidence.
 「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 [GO] labeled_claim :: MARKED_VERIFIED :: CHECK_EVIDENCE
 ~~~
 
-## ʕ̢̣̣̣̣̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧ // Vulnerability State
+## ʕ̢̣̣̣̣̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧ // V⃟ U⃟ L⃟ N⃟ E⃟ R⃟ A⃟ B⃟ I⃟ L⃟ I⃟ T⃟ Y⃟  S⃟ T⃟ A⃟ T⃟ E⃟
+
+**Name:** Vulnerability State
 
 - **ID:** vulnerability-state
 - **Status:** canonical
