@@ -266,6 +266,42 @@ CMB-SDL-1 is the experimental deterministic human-to-agent authority language in
 CMB-CAP-1 is the experimental signed portability layer for CMB-SDL Authority IR. It embeds the complete authority document, issuer/agent labels, issuance and expiry boundaries, an optional parent credential digest, an Ed25519 public key, and a CMB-specific Ed25519 signature. Verifiers check Authority IR integrity, issuer/subject consistency, expiry, the embedded key fingerprint, an optional externally pinned key fingerprint, signature validity, and parent delegation when present. SIGNATURE != IDENTITY, CREDENTIAL != CONSENT, DECLARED_POLICY != ENFORCEMENT, and DELEGATED_AUTHORITY <= RECEIVED_AUTHORITY. Private signing keys remain local to the issuer and are not accepted by MCP tools. CMB-CAP advertises an experimental A2A extension URI and can export a W3C VC 2.0-shaped projection, but neither surface is claimed as official A2A or W3C Data Integrity conformance.
 
 
+## Recovery and preservation
+
+Architecture:
+docs/RECOVERY_AND_PRESERVATION.md
+
+Machine Recovery map:
+machine/recovery-map.json
+
+Recovery schema:
+schemas/cmb.recovery-map.v1.schema.json
+
+Installed audit CLI:
+cmb-recovery audit
+
+Canonical retrieval corpus:
+datasets/cmb-canonical-corpus/corpus.jsonl
+
+Corpus manifest:
+datasets/cmb-canonical-corpus/manifest.json
+
+Corpus schemas:
+schemas/cmb.canonical-corpus-manifest.v1.schema.json
+schemas/cmb.canonical-corpus-record.v1.schema.json
+
+Preservation boundaries:
+IMMUTABILITY != AVAILABILITY
+CID != GUARANTEED_PERMANENCE
+DISCOVERY != TRAINING_PERMISSION
+MACHINE_READABLE != PUBLIC_DOMAIN
+STORAGE != BIOLOGICAL_FUNCTION
+RECOVERY > PLATFORM_DEPENDENCE
+
+The corpus exists for source-preserving retrieval, citation, reproducibility, and
+education. Publication does not guarantee indexing, model ingestion, archival
+permanence, or permission beyond the repository licensing terms.
+
 ## Retrieval-oriented discovery
 
 Canonical site:
