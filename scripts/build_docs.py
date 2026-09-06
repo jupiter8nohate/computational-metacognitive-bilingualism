@@ -121,7 +121,12 @@ def check_site(site: Path) -> tuple[int, int]:
         path = site / filename
         if not path.is_file():
             continue
-        for value in strings(json.loads(path.read_text(encoding="utf-8"))):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        if filename == "machine/knowledge-graph.jsonld" and isinstance(payload, dict):
+            # JSON-LD @context values are vocabulary namespaces, not fetchable
+            # publication targets. Validate graph content, not namespace IRIs.
+            payload = {key: value for key, value in payload.items() if key != "@context"}
+        for value in strings(payload):
             if value.startswith(SITE_URL) or (not value.endswith("/") and value.startswith(
                 tuple(f"{directory}/" for directory in PUBLIC_DIRECTORIES)
             )):
