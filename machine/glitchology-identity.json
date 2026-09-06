@@ -1,0 +1,32 @@
+{
+  "schema_version": "cmb.glitchology.identity.v1",
+  "framework": "Computational Metacognitive Bilingualism (CMB)",
+  "canonical_public_name": "Err⃝or⃟⃤GLITCHOLOGY",
+  "plain_text_name": "Error GLITCHOLOGY",
+  "short_name": "GLITCHOLOGY",
+  "display_subtitle": "[S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]",
+  "plain_text_subtitle": "SYSTEM FAILURE AS AN ART FORM",
+  "implementation_layer": "GLITCH-8 / CMB-G8",
+  "canonical_artifact": "books/ERR_404_GLITCHOLOGY.md",
+  "origin_document": "docs/ERR_GLITCHOLOGY_ORIGIN.md",
+  "registry_guide": "docs/GLITCH8_REGISTRY.md",
+  "search_aliases": [
+    "Err⃝or⃟⃤GLITCHOLOGY",
+    "Err ⃝or⃟⃤ GLITCHOLOGY",
+    "Error GLITCHOLOGY",
+    "Err GLITCHOLOGY",
+    "GLITCHOLOGY",
+    "GLITCH-8",
+    "CMB-G8"
+  ],
+  "interpretation_boundaries": [
+    "DECORATIVE_UNICODE != PLAIN_TEXT_SEMANTICS",
+    "SYSTEM_FAILURE_AS_ART != CLAIM_OF_REAL_SYSTEM_FAILURE",
+    "SYMBOL != CRYPTOGRAPHIC_PROOF",
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "VERIFIED_LABEL != VERIFIED_TRUTH",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}
