@@ -153,6 +153,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Conceptual front door:** [CMB: Three Dimensions of Distinction](docs/CMB_DISTINCTION.md)
 - **Research position:** [CMB Research Position](docs/CMB_RESEARCH_POSITION.md)
 - **Research case studies:** [CMB Case Studies](docs/CASE_STUDIES.md)
+- **Beyond Software research map:** [Ten Emerging Territories of Code](docs/BEYOND_SOFTWARE_TEN_TERRITORIES.md) with a strict [machine record](research/territories-of-code.v1.json)
 - **Creator provenance:** [CMB Creator Provenance Protocol](docs/CREATOR_PROVENANCE.md)
 - **Research backbone:** [CMB Cognitive Sovereignty Dissertation](docs/dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md)
 - **Formal semantics:** [Chapter 31 - Formal CMB Semantics](docs/dissertation/31_FORMAL_SEMANTICS.md)
