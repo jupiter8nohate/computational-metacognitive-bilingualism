@@ -15,6 +15,9 @@ from pathlib import Path
 from typing import Iterator
 from urllib.parse import unquote, urljoin, urlsplit
 
+from jsonschema import Draft202012Validator, FormatChecker
+from jsonschema.exceptions import SchemaError
+
 ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
 PUBLIC_DIRECTORIES = (
@@ -28,7 +31,6 @@ REQUIRED_PUBLIC_PATHS = (
     *PUBLIC_FILES,
     "sitemap.xml",
     "robots.txt",
-    ".well-known/agent-card.json",
     "agents/agent-card.json",
     "agents/registry.json",
     "cmb-machine-origin.json",
@@ -36,6 +38,7 @@ REQUIRED_PUBLIC_PATHS = (
     "library/cmb-conversation-atlas.v1.json",
     "schemas/cmb.conversation-atlas.v1.schema.json",
     "schemas/cmb.stewardship-status.v1.schema.json",
+    "schemas/cmb.discovery.v1.schema.json",
     "machine/index.json",
     "machine/discovery-manifest.json",
     "machine/recovery-map.json",
@@ -86,6 +89,25 @@ def strings(value: object) -> Iterator[str]:
             yield from strings(child)
 
 
+def validate_discovery_manifest(site: Path, errors: set[str]) -> None:
+    """Validate the published discovery manifest against its declared Draft 2020-12 schema."""
+    manifest_path = site / "machine/discovery-manifest.json"
+    schema_path = site / "schemas/cmb.discovery.v1.schema.json"
+    if not manifest_path.is_file() or not schema_path.is_file():
+        return
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+        Draft202012Validator.check_schema(schema)
+    except (OSError, json.JSONDecodeError, SchemaError) as exc:
+        errors.add(f"Discovery schema setup failed: {exc}")
+        return
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    for error in sorted(validator.iter_errors(manifest), key=lambda item: list(item.absolute_path)):
+        location = ".".join(str(part) for part in error.absolute_path) or "<root>"
+        errors.add(f"Discovery manifest schema violation at {location}: {error.message}")
+
+
 def local_target(site: Path, source: str, link: str) -> Path | None:
     """Resolve links with browser URL rules, including the Pages project prefix."""
     url = urlsplit(urljoin(urljoin(SITE_URL, source), link))
@@ -131,6 +153,8 @@ def check_site(site: Path) -> tuple[int, int]:
 
     for path in REQUIRED_PUBLIC_PATHS:
         check("index.html", path)
+
+    validate_discovery_manifest(site, errors)
 
     for filename in ("machine/discovery-manifest.json", "machine/index.json", "machine/recovery-map.json", "machine/knowledge-graph.jsonld"):
         path = site / filename
@@ -186,8 +210,6 @@ def stage_public_assets(site: Path) -> None:
         shutil.copyfile(source, target)
     for filename in PUBLIC_FILES:
         shutil.copyfile(ROOT / filename, site / filename)
-    (site / ".well-known").mkdir(exist_ok=True)
-    shutil.copyfile(ROOT / "agents/agent-card.json", site / ".well-known/agent-card.json")
     shutil.copyfile(ROOT / "machine/fgc-origin-mark.json", site / "cmb-machine-origin.json")
     subprocess.run(
         [sys.executable, "-m", "cmb_machine.cli", "compile-core", "--output-dir",
