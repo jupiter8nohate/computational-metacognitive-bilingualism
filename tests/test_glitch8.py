@@ -292,3 +292,16 @@ def test_glitch_ir_projection_matches_normative_json() -> None:
         ]
     ) + "\n"
     assert (base / "GLT-8101-V001.txt").read_text(encoding="utf-8") == expected
+
+
+def test_glt_8101_artifact_preserves_figlet_prefix() -> None:
+    root = Path(__file__).resolve().parents[1]
+    base = (
+        root
+        / "examples"
+        / "polyglot"
+        / "glitchology_registry_3d_runtime"
+    )
+    figlet = (base / "FIGLET_3D_DIAGONAL.txt").read_bytes()
+    artifact = (base / "GLT_8101_CANONICAL_SYNCHRONY.txt").read_bytes()
+    assert artifact.startswith(figlet + b"\n")
