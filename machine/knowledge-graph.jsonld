@@ -55,6 +55,9 @@
         },
         {
           "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json#dataset"
+        },
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/#software"
         }
       ]
     },
@@ -194,6 +197,36 @@
       "isPartOf": {
         "@id": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md#case-study"
       }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/#software",
+      "@type": "SoftwareSourceCode",
+      "name": "Jupiter Polyglot Runtime",
+      "alternateName": "GO://JUPITER_POLYGLOT_RUNTIME",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/",
+      "codeRepository": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/examples/polyglot/jupiter_glitchology_runtime",
+      "programmingLanguage": [
+        "Go",
+        "Python",
+        "Err ⃝or⃟⃤ GLITCHOLOGY"
+      ],
+      "description": "Executable CMB and Err ⃝or⃟⃤ GLITCHOLOGY reference artifact separating Go structure, Python metacognition, and human-context symbolic interpretation.",
+      "creator": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#declared-originator"
+      },
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      },
+      "keywords": [
+        "Computational Metacognitive Bilingualism",
+        "Err ⃝or⃟⃤ GLITCHOLOGY",
+        "GLITCH-8",
+        "Go",
+        "Python",
+        "human agency",
+        "metacognition",
+        "code poetry"
+      ]
     }
   ]
 }
