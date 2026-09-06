@@ -21,6 +21,7 @@ PUBLIC_DIRECTORIES = (
     "assets", "agents", "datasets", "extensions", "library", "machine", "schemas", "spec",
     "conformance/glitch-ir", "research/case-studies",
     "examples/polyglot/jupiter_glitchology_runtime",
+    "examples/polyglot/glitchology_registry_3d_runtime",
 )
 PUBLIC_FILES = ("AGENTS.md", "llms.txt", "llms-full.txt", "CITATION.cff", "CITATION.bib")
 REQUIRED_PUBLIC_PATHS = (
@@ -44,6 +45,10 @@ REQUIRED_PUBLIC_PATHS = (
     "machine/glitch-ir.json",
     "schemas/glitch-ir.v1.schema.json",
     "conformance/glitch-ir/v1/GLT-8101-V001.json",
+    "machine/glitch-3d.json",
+    "schemas/glitch-3d.v1.schema.json",
+    "spec/GLITCH-3D-1.md",
+    "examples/polyglot/glitchology_registry_3d_runtime/GLITCH_3D_SOURCE_FRACTURE.g3d",
     "datasets/cmb-canonical-corpus/manifest.json",
     "datasets/cmb-canonical-corpus/corpus.jsonl",
     "schemas/cmb.recovery-map.v1.schema.json",
