@@ -279,7 +279,7 @@ def _run(args: argparse.Namespace) -> int:
 def main(argv: Sequence[str] | None = None) -> int:
     try:
         return _run(build_parser().parse_args(argv))
-    except (GlyphRegistryError, OSError, UnicodeError, ValueError) as exc:
+    except (GlyphRegistryError, Glitch3DError, OSError, UnicodeError, ValueError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
 
