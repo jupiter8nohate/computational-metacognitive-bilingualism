@@ -1,0 +1,344 @@
+{
+  "schema_version": "cmb.territories-of-code.v1",
+  "framework": "Computational Metacognitive Bilingualism (CMB)",
+  "title": "Beyond Software: Ten Emerging Territories of Code",
+  "status": "research_map",
+  "historical_claim": "candidate_and_emerging_territories_only",
+  "historical_claim_boundary": "The record does not claim these territories are historically unprecedented. Novelty claims require independent prior-art review.",
+  "invariants": [
+    "FORMALIZATION != REALITY",
+    "FORMALIZATION != REDUCTION",
+    "AUTOMATION != AUTHORITY",
+    "SIMULATION != EXPERIENCE",
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "priority_order": [
+    "cognitive-sovereignty-filters",
+    "adaptive-epistemic-curricula",
+    "executable-civic-rules",
+    "synesthetic-programming",
+    "cryptographic-adaptive-art"
+  ],
+  "territories": [
+    {
+      "id": "executable-civic-rules",
+      "title": "Executable civic rules",
+      "domain": "law",
+      "horizon": "near_term",
+      "maturity": "research_candidate",
+      "cmb_fit": [
+        "policy",
+        "formal semantics",
+        "public accountability"
+      ],
+      "research_question": "Which bounded parts of public rules can be made executable and testable without confusing a computational model with the law itself?",
+      "prototype": "A policy simulator that accepts explicit parameters and produces traceable effects, assumptions, and uncertainty.",
+      "evidence_needed": [
+        "prior-art review",
+        "policy-domain validation",
+        "impact-model verification",
+        "legal review"
+      ],
+      "safeguards": [
+        "human appeal",
+        "explicit model limitations",
+        "versioned assumptions",
+        "no automatic legal authority"
+      ],
+      "boundaries": [
+        "CODE_CAN_MODEL_LAW != CODE_IS_LAW",
+        "AUTOMATION != AUTHORITY"
+      ]
+    },
+    {
+      "id": "biological-computation-interfaces",
+      "title": "Biological computation interfaces",
+      "domain": "biology",
+      "horizon": "long_term",
+      "maturity": "research_candidate",
+      "cmb_fit": [
+        "human-machine translation",
+        "formal representation"
+      ],
+      "research_question": "How can computational abstractions describe biological sensing or logic while preserving scientific, biosafety, and ethical boundaries?",
+      "prototype": "Literature-backed simulation or educational model only until qualified laboratory collaboration exists.",
+      "evidence_needed": [
+        "peer-reviewed prior art",
+        "domain-expert review",
+        "laboratory validation",
+        "biosafety and ethics review"
+      ],
+      "safeguards": [
+        "no operational wet-lab instructions in the CMB research map",
+        "separate simulation from biological capability",
+        "qualified domain oversight"
+      ],
+      "boundaries": [
+        "SYMBOLIC_CODE != FUNCTIONING_BIOLOGY",
+        "SIMULATION != EXPERIENCE"
+      ]
+    },
+    {
+      "id": "cognitive-sovereignty-filters",
+      "title": "Cognitive sovereignty filters",
+      "domain": "cognition",
+      "horizon": "near_term",
+      "maturity": "prototype_ready",
+      "cmb_fit": [
+        "provenance",
+        "GLITCHOLOGY",
+        "attention protection",
+        "source tracing"
+      ],
+      "research_question": "Can user-controlled interfaces expose provenance gaps, manipulation signals, and uncertainty without deciding truth or identity for the user?",
+      "prototype": "A local browser-side analyzer that emits source, provenance, urgency, personalization, synthetic-media, and uncertainty signals.",
+      "evidence_needed": [
+        "precision and false-positive measurements",
+        "user-study results",
+        "accessibility evaluation",
+        "privacy review"
+      ],
+      "safeguards": [
+        "local-first processing where feasible",
+        "explainable signals",
+        "user override",
+        "no psychological diagnosis",
+        "no silent censorship"
+      ],
+      "boundaries": [
+        "MACHINE_CAN_FLAG != MACHINE_CAN_DECIDE_TRUTH",
+        "OBSERVATION != UNDERSTANDING",
+        "PROFILE != PERSON"
+      ]
+    },
+    {
+      "id": "cryptographic-adaptive-art",
+      "title": "Cryptographic adaptive art",
+      "domain": "culture",
+      "horizon": "near_term",
+      "maturity": "prototype_ready",
+      "cmb_fit": [
+        "provenance",
+        "authorship",
+        "code-poetry",
+        "C2PA-facing interoperability"
+      ],
+      "research_question": "Can adaptive digital art preserve a verifiable state history and data lineage while remaining artistically open-ended?",
+      "prototype": "An artwork that changes from authenticated public data and records each state with a provenance receipt.",
+      "evidence_needed": [
+        "data-source authentication",
+        "deterministic state tests",
+        "provenance verification",
+        "artistic authorship documentation"
+      ],
+      "safeguards": [
+        "do not equate hash with authorship",
+        "retain source attribution",
+        "record external-data uncertainty"
+      ],
+      "boundaries": [
+        "HASH != AUTHORSHIP",
+        "PROVENANCE != LEGAL_JUDGMENT"
+      ]
+    },
+    {
+      "id": "resource-coordination-oracles",
+      "title": "Resource coordination oracles",
+      "domain": "governance",
+      "horizon": "mid_term",
+      "maturity": "research_candidate",
+      "cmb_fit": [
+        "transparent rules",
+        "public-interest coordination",
+        "auditability"
+      ],
+      "research_question": "Can open coordination logic match local waste or surplus with demand while making incentives, externalities, and allocation rules inspectable?",
+      "prototype": "A simulated local resource exchange using synthetic datasets and transparent matching rules.",
+      "evidence_needed": [
+        "operations-research validation",
+        "stakeholder review",
+        "economic incentive analysis",
+        "security and abuse testing"
+      ],
+      "safeguards": [
+        "human governance",
+        "auditable allocation logic",
+        "anti-gaming controls",
+        "no claim of optimal social outcome"
+      ],
+      "boundaries": [
+        "OPTIMIZATION != MORALITY",
+        "MODEL != WORLD"
+      ]
+    },
+    {
+      "id": "privacy-preserving-profile-resistance",
+      "title": "Privacy-preserving profile resistance",
+      "domain": "cognition",
+      "horizon": "near_term",
+      "maturity": "research_candidate",
+      "cmb_fit": [
+        "privacy",
+        "cognitive sovereignty",
+        "profile-person boundary"
+      ],
+      "research_question": "Which lawful privacy techniques can reduce unwanted behavioral profiling without fraud, platform abuse, or interference with third parties?",
+      "prototype": "A local privacy testbench comparing data minimization, selective disclosure, partitioning, and benign noise on synthetic profiles.",
+      "evidence_needed": [
+        "privacy metrics",
+        "utility tradeoff analysis",
+        "terms and legal review",
+        "adversarial evaluation"
+      ],
+      "safeguards": [
+        "no fake purchases",
+        "no fake endorsements",
+        "no unauthorized traffic generation",
+        "prefer local simulation and data minimization"
+      ],
+      "boundaries": [
+        "PRIVACY != DECEPTION",
+        "OBFUSCATION != FRAUD",
+        "PROFILE != PERSON"
+      ]
+    },
+    {
+      "id": "synesthetic-programming",
+      "title": "Synesthetic programming",
+      "domain": "culture",
+      "horizon": "near_term",
+      "maturity": "prototype_ready",
+      "cmb_fit": [
+        "accessibility",
+        "education",
+        "code-poetry",
+        "multi-modal learning"
+      ],
+      "research_question": "Can multi-sensory code representations improve comprehension or expression for some users without rigidly profiling cognitive style?",
+      "prototype": "A small environment that maps program structure to optional text, sound, spatial, and haptic representations.",
+      "evidence_needed": [
+        "accessibility testing",
+        "task-performance measurements",
+        "user preference data",
+        "reproducible usability study"
+      ],
+      "safeguards": [
+        "user-selected modalities",
+        "no diagnosis from interaction patterns",
+        "fallback text representation",
+        "accessible controls"
+      ],
+      "boundaries": [
+        "LEARNING_PATTERN != IDENTITY",
+        "DIFFERENCE != DEFECT"
+      ]
+    },
+    {
+      "id": "adaptive-smart-matter-interfaces",
+      "title": "Adaptive smart-matter interfaces",
+      "domain": "matter",
+      "horizon": "long_term",
+      "maturity": "research_candidate",
+      "cmb_fit": [
+        "formal control boundaries",
+        "human override"
+      ],
+      "research_question": "How should software describe and constrain adaptive physical systems so commands remain bounded by measured capability and safety limits?",
+      "prototype": "Simulation or safe low-energy actuator demonstrator with explicit physical constraints and emergency stop behavior.",
+      "evidence_needed": [
+        "hardware validation",
+        "materials engineering review",
+        "safety testing",
+        "fault-injection testing"
+      ],
+      "safeguards": [
+        "physical failsafes",
+        "human override",
+        "bounded actuation",
+        "do not infer physical capability from software alone"
+      ],
+      "boundaries": [
+        "CODE != PHYSICAL_CAPABILITY",
+        "AUTOMATION != AUTHORITY"
+      ]
+    },
+    {
+      "id": "adaptive-epistemic-curricula",
+      "title": "Adaptive epistemic curricula",
+      "domain": "cognition",
+      "horizon": "near_term",
+      "maturity": "prototype_ready",
+      "cmb_fit": [
+        "CMB-EDU",
+        "metacognition",
+        "neurodiversity-aware learning"
+      ],
+      "research_question": "Can a learning system adapt explanations to current performance without converting temporary patterns into fixed learner identities?",
+      "prototype": "A CMB-EDU extension that tries multiple explanation modes and records contextual effectiveness rather than personality labels.",
+      "evidence_needed": [
+        "learning outcome comparisons",
+        "bias evaluation",
+        "privacy review",
+        "student and educator feedback"
+      ],
+      "safeguards": [
+        "human-declared preferences",
+        "temporary contextual models",
+        "no diagnosis",
+        "no fixed ability labels",
+        "student override"
+      ],
+      "boundaries": [
+        "OBSERVED_DIFFICULTY != FIXED_ABILITY",
+        "LEARNING_PATTERN != IDENTITY",
+        "MODEL != MIND"
+      ]
+    },
+    {
+      "id": "mission-bound-autonomous-organizations",
+      "title": "Mission-bound autonomous organizations",
+      "domain": "governance",
+      "horizon": "mid_term",
+      "maturity": "research_candidate",
+      "cmb_fit": [
+        "delegated authority",
+        "capability credentials",
+        "auditability",
+        "public stewardship"
+      ],
+      "research_question": "Which narrow organizational operations can be automated while retaining identifiable legal responsibility, appeal, governance, and human accountability?",
+      "prototype": "A sandboxed grant-disbursement simulation with signed authority limits, evidence requirements, revocation, and human review.",
+      "evidence_needed": [
+        "legal analysis",
+        "governance review",
+        "security testing",
+        "failure and dispute simulations"
+      ],
+      "safeguards": [
+        "named accountable humans or entities",
+        "revocation",
+        "human appeal",
+        "bounded treasury authority",
+        "no claim of legal sovereignty"
+      ],
+      "boundaries": [
+        "AUTONOMY_OF_SOFTWARE != SOVEREIGNTY",
+        "AUTOMATION != ACCOUNTABILITY_ESCAPE",
+        "DELEGATED_AUTHORITY <= RECEIVED_AUTHORITY"
+      ]
+    }
+  ],
+  "research_gate": [
+    "prior_art",
+    "claim_boundary",
+    "testable_question",
+    "small_prototype",
+    "evidence",
+    "failure_analysis",
+    "external_critique",
+    "reposition"
+  ]
+}

@@ -115,6 +115,26 @@ Next research work:
 - preserve explicit revision triggers and negative findings;
 - seek independent reproduction or critique of high-value cases.
 
+## P1 ✦ beyond-software research program
+
+Implemented:
+
+- human-readable ten-territory research map;
+- strict `cmb.territories-of-code.v1` machine record and JSON Schema;
+- exactly-ten / uniqueness / evidence / safeguard / novelty-boundary tests;
+- near-term priority order centered on cognitive sovereignty filters, adaptive epistemic curricula, executable civic-rule modeling, synesthetic programming, and cryptographic adaptive art.
+
+Next research work:
+
+- complete prior-art reviews before making historical novelty claims;
+- turn the first three priority territories into small falsifiable prototypes;
+- record negative results and false positives;
+- obtain domain-expert review before biological, legal, physical, or organizational claims graduate in maturity.
+
+```text
+IDEA -> PRIOR_ART -> CLAIM_BOUNDARY -> TEST -> EVIDENCE -> EXTERNAL_CRITIQUE
+```
+
 ## P1 ✦ CMB-Z13 executable notation
 
 The experimental reference parser supports:
