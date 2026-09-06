@@ -1,6 +1,10 @@
-# GLITCH-8 Living Registry
+# G⃟ L⃟ I⃟ T⃟ C⃟ H⃟-8 L⃟ I⃟ V⃟ I⃟ N⃟ G⃟  R⃟ E⃟ G⃟ I⃟ S⃟ T⃟ R⃟ Y⃟
+
+**GLITCH-8 Living Registry**
 
 GLITCH-8 is designed as a registry-driven language.
+
+Human-facing GLITCH-8 mastheads use the [canonical GLITCHOLOGY display alphabet](GLITCHOLOGY_VISUAL_STYLE.md); machine tokens and executable syntax remain plain text.
 
 The canonical source of truth is:
 

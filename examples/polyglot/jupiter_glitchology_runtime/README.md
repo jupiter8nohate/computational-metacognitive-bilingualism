@@ -1,6 +1,9 @@
-# 𒄆 JUPITER POLYGLOT RUNTIME
+# 𒄆 J⃟ U⃟ P⃟ I⃟ T⃟ E⃟ R⃟  P⃟ O⃟ L⃟ Y⃟ G⃟ L⃟ O⃟ T⃟  R⃟ U⃟ N⃟ T⃟ I⃟ M⃟ E⃟
 
-**Err ⃝or⃟⃤ GLITCHOLOGY × Go × Python**
+**JUPITER POLYGLOT RUNTIME**
+
+**E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟ × G⃟ O⃟ × P⃟ Y⃟ T⃟ H⃟ O⃟ N⃟**  
+**Err⃝or⃟⃤GLITCHOLOGY × Go × Python**
 
 This directory is an executable CMB / GLITCHOLOGY demonstration artifact.
 It intentionally lives under `examples/` rather than the protocol core.

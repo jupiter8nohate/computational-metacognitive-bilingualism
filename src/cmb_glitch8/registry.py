@@ -10,6 +10,24 @@ from pathlib import Path
 from typing import Any, Final
 
 GLITCH8_SCHEMA_VERSION: Final[str] = "glitch8.glyph-registry.v1"
+
+GLITCH_DISPLAY_MARK: Final[str] = "\u20df"
+
+
+def glitch_display(text: str) -> str:
+    """Render human-facing GLITCHOLOGY labels with the canonical display alphabet."""
+    words: list[str] = []
+    for word in text.split(" "):
+        rendered = [
+            f"{char.upper()}{GLITCH_DISPLAY_MARK}"
+            if char.isascii() and char.isalpha()
+            else char
+            for char in word
+        ]
+        words.append(" ".join(rendered))
+    return "  ".join(words)
+
+
 _ALLOWED_STATUS: Final[set[str]] = {"experimental", "proposed", "canonical", "deprecated", "retired"}
 _ALLOWED_RUNTIMES: Final[set[str]] = {"PY", "RS", "GO", "TS", "PL", "HS", "CL", "C", "G8"}
 _STATEMENT_RE: Final[re.Pattern[str]] = re.compile(
@@ -245,7 +263,9 @@ class GlyphRegistry:
 
     def render_reference(self) -> str:
         lines = [
-            "# GLITCH-8 Glyph Reference",
+            f"# {glitch_display('GLITCH-8 Glyph Reference')}",
+            "",
+            "**GLITCH-8 Glyph Reference**",
             "",
             f"**Language:** {self.data['language']}",
             f"**Registry version:** {self.language_version}",
@@ -253,7 +273,9 @@ class GlyphRegistry:
             "",
             "> Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.",
             "",
-            "## Core boundary",
+            f"## {glitch_display('Core boundary')}",
+            "",
+            "**Core boundary**",
             "",
             "~~~text",
             *self.data.get("principles", []),
@@ -264,7 +286,9 @@ class GlyphRegistry:
         for entry in self.list():
             aliases = ", ".join(entry.get("aliases", [])) or "none"
             lines.extend([
-                f"## {entry['glyph']} // {entry['name']}",
+                f"## {entry['glyph']} // {glitch_display(entry['name'])}",
+                "",
+                f"**Name:** {entry['name']}",
                 "",
                 f"- **ID:** {entry['id']}",
                 f"- **Status:** {entry['status']}",

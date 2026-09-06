@@ -84,8 +84,9 @@ def test_add_bumps_registry_version_and_rejects_semantic_collision(
 
 def test_reference_is_generated_from_registry() -> None:
     reference = load_registry().render_reference()
-    assert "# GLITCH-8 Glyph Reference" in reference
-    assert "▂▃▄▅▆▇▉ // Signal Spectrum" in reference
+    assert "G⃟ L⃟ I⃟ T⃟ C⃟ H⃟" in reference
+    assert "**GLITCH-8 Glyph Reference**" in reference
+    assert "**Name:** Signal Spectrum" in reference
     assert "Edit the registry, not this file" in reference
 
 
@@ -180,4 +181,6 @@ def test_cli_add_auto_syncs_repository_views(
     public = root / "library" / "glitch8.glyphs.v1.json"
     reference = root / "books" / "GLITCH8_GLYPH_REFERENCE.md"
     assert public.read_bytes() == canonical.read_bytes()
-    assert "⌁ // Sync Test Glyph" in reference.read_text(encoding="utf-8")
+    rendered = reference.read_text(encoding="utf-8")
+    assert "⌁ // S⃟ Y⃟ N⃟ C⃟" in rendered
+    assert "**Name:** Sync Test Glyph" in rendered

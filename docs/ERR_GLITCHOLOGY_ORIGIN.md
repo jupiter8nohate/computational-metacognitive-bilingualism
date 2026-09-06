@@ -1,4 +1,6 @@
-# Err⃝or⃟⃤GLITCHOLOGY — Origin and Creator Biography
+# E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟
+
+**Err⃝or⃟⃤GLITCHOLOGY — Origin and Creator Biography**
 
 **[S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]**  
 **SYSTEM FAILURE AS AN ART FORM**

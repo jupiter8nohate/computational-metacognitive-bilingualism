@@ -330,16 +330,17 @@ CMB-CAP keeps private signing keys local. The MCP adapter exposes public credent
 
 The Pages deployment publishes `/.well-known/agent-card.json` and `/agents/registry.json`. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
 
-## Err⃝or⃟⃤GLITCHOLOGY
+## E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟
 
 **[S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]**  
-**SYSTEM FAILURE AS AN ART FORM**
+**Err⃝or⃟⃤GLITCHOLOGY // SYSTEM FAILURE AS AN ART FORM**
 
 
 **Err⃝or⃟⃤GLITCHOLOGY** is CMB's evolving symbolic anomaly language. **GLITCH-8 / CMB-G8** is the machine-readable registry and implementation layer.
 
 - [Living book / language specification](books/ERR_404_GLITCHOLOGY.md)
 - [Machine-readable GLITCHOLOGY identity](machine/glitchology-identity.json)
+- [GLITCHOLOGY visual style](docs/GLITCHOLOGY_VISUAL_STYLE.md)
 - [Origin and creator biography](docs/ERR_GLITCHOLOGY_ORIGIN.md)
 - [Creative Cognitive Signature protocol](docs/CREATIVE_COGNITIVE_SIGNATURE.md)
 - [Living Book and Versioned Autobiography protocol](docs/LIVING_BOOK_PROTOCOL.md)
