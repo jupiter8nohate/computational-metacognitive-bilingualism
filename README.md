@@ -14,7 +14,11 @@
 
 
 <p align="center">
-  <img src="docs/media/search-for-truth-master.svg" alt="CMB Search for Truth: dark federal archive, anomaly warning, and human-agency invariants" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/media/harmoni-witness-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/media/harmoni-witness-light.svg">
+    <img src="docs/media/harmoni-witness-dark.svg" alt="HARMONI 666 Witness Gateway: eyes guide attention through CMB human-agency invariants" width="100%">
+  </picture>
 </p>
 
 <div align="center">
@@ -28,6 +32,9 @@
 **🦩 HUMAN_AGENCY > MACHINE_AUTHORITY**
 
 **♃ Jupiter Hudson // WisdomLoveThePoet // Jupiter 8**
+
+**𓁹 WITNESS → TRACE → VERIFY → BACKTRACE ‹—**  
+[HARMONI / GLITCHOLOGY visual grammar](docs/HARMONI_VISUAL_SYSTEM.md)
 
 </div>
 
