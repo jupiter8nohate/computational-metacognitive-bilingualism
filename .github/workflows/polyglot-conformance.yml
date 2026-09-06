@@ -5,6 +5,9 @@ on:
     paths:
       - "adapters/**"
       - "conformance/**"
+      - "spec/GLITCH-IR-1.md"
+      - "schemas/glitch-ir.v1.schema.json"
+      - "tests/test_glitch_ir.py"
       - "src/cmb_provenance/boundary.py"
       - "schemas/cmb.boundary-event.v1.schema.json"
       - ".github/workflows/polyglot-conformance.yml"
@@ -12,6 +15,9 @@ on:
     paths:
       - "adapters/**"
       - "conformance/**"
+      - "spec/GLITCH-IR-1.md"
+      - "schemas/glitch-ir.v1.schema.json"
+      - "tests/test_glitch_ir.py"
       - "src/cmb_provenance/boundary.py"
       - "schemas/cmb.boundary-event.v1.schema.json"
       - ".github/workflows/polyglot-conformance.yml"
@@ -20,6 +26,21 @@ permissions:
   contents: read
 
 jobs:
+  glitch-ir-reference:
+    name: GLITCH-IR reference contract
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.13"
+      - name: Install conformance dependencies
+        run: python -m pip install "pytest>=8,<10" "jsonschema>=4.23,<5"
+      - name: Validate GLT-8101 canonical vector
+        run: python -m pytest tests/test_glitch_ir.py
+
   typescript-express:
     name: TypeScript + Express
     runs-on: ubuntu-latest
