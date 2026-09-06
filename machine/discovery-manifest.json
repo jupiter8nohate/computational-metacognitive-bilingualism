@@ -23,7 +23,10 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/extensions/cmb-cap/agent-extension.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/cmb-conversation-atlas.v1.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.conversation-atlas.v1.schema.json",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/README.md",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/main.go",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/mirror.py"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
@@ -38,7 +41,8 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DEVELOPERS/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/RESEARCHERS/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_CONVERSATION_ATLAS/",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_POLYGLOT_TRANSLATIONS/"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_POLYGLOT_TRANSLATIONS/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/"
   ],
   "concept_pages": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/",
