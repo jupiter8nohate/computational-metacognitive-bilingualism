@@ -26,7 +26,13 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/README.md",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/main.go",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/mirror.py"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/mirror.py",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/recovery-map.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/datasets/cmb-canonical-corpus/manifest.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/datasets/cmb-canonical-corpus/corpus.jsonl",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.recovery-map.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.canonical-corpus-manifest.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.canonical-corpus-record.v1.schema.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
@@ -73,7 +79,9 @@
     "ABSENCE_FROM_SEARCH != PROOF_OF_ABSENCE",
     "INCUBATION != NONPROFIT",
     "PUBLIC_STEWARDSHIP != TAX_EXEMPT_STATUS",
-    "PAYMENT_CODE != FUNDRAISING"
+    "PAYMENT_CODE != FUNDRAISING",
+    "DISCOVERY != TRAINING_PERMISSION",
+    "IMMUTABILITY != AVAILABILITY"
   ],
   "research_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/",
