@@ -37,7 +37,9 @@ def test_agent_card_discloses_standards_status() -> None:
     card = agent_card()
     assert card["protocol"] == "CMB-ADP-1"
     assert card["standards_status"]["mcp"] == "official_sdk_reference_adapter_not_independently_certified"
-    assert card["standards_status"]["a2a"] == "not_conformant_no_public_a2a_server"\n    assert card["discovery_url"].endswith("/agents/agent-card.json")\n    assert "/.well-known/" not in card["discovery_url"]
+    assert card["standards_status"]["a2a"] == "not_conformant_no_public_a2a_server"
+    assert card["discovery_url"].endswith("/agents/agent-card.json")
+    assert "/.well-known/" not in card["discovery_url"]
 
 
 def test_citation_preserves_declared_originator_and_source() -> None:
