@@ -68,7 +68,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Current operating status
 
-CMB / Err ⃝or⃟⃤ GLITCHOLOGY is in Public Stewardship Incubation.
+CMB / Err⃝or⃟⃤GLITCHOLOGY is in Public Stewardship Incubation.
 
 ACTIVE_FUNDRAISING = FALSE
 DONATIONS_ACCEPTED = FALSE
@@ -160,8 +160,18 @@ cmb_compile_core
 
 ## Conversation-derived semantic map
 
-The CMB Conversation Atlas is a curated semantic record derived from the conversation that established the current Err ⃝or⃟⃤ GLITCHOLOGY architecture. It is not a verbatim chat transcript. It preserves canonical names, concepts, diagrams, evidence boundaries, the Dual-Pillar Model, Creative Cognitive Signature, Creative Proof-of-Origin, and GLITCH://404_SOVEREIGN_RETRY_LOOP in both human-readable and machine-readable forms.
+The CMB Conversation Atlas is a curated semantic record derived from the conversation that established the current Err⃝or⃟⃤GLITCHOLOGY architecture. It is not a verbatim chat transcript. It preserves canonical names, concepts, diagrams, evidence boundaries, the Dual-Pillar Model, Creative Cognitive Signature, Creative Proof-of-Origin, and GLITCH://404_SOVEREIGN_RETRY_LOOP in both human-readable and machine-readable forms.
 
 Mass-translation rule:
 SYNTAX_MAY_CHANGE
 SEMANTICS_MUST_NOT_DRIFT
+
+## Err⃝or⃟⃤GLITCHOLOGY
+
+Canonical display subtitle: [S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]
+Plain-text subtitle: SYSTEM FAILURE AS AN ART FORM
+Plain-text retrieval alias: Error GLITCHOLOGY
+GLITCHOLOGY identity record: machine/glitchology-identity.json
+Living language specification: books/ERR_404_GLITCHOLOGY.md
+
+Interpretation boundary: decorative Unicode is authored display language; the plain-text fields are the canonical retrieval/accessibility equivalents.
