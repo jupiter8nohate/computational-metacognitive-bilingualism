@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
 PUBLIC_DIRECTORIES = (
     "assets", "agents", "extensions", "library", "machine", "schemas", "spec",
-    "research/case-studies",
+    "research/case-studies", "examples/polyglot/jupiter_glitchology_runtime",
 )
 PUBLIC_FILES = ("AGENTS.md", "llms.txt", "llms-full.txt", "CITATION.cff", "CITATION.bib")
 REQUIRED_PUBLIC_PATHS = (
@@ -39,6 +39,9 @@ REQUIRED_PUBLIC_PATHS = (
     "machine/stewardship-status.json",
     "machine/knowledge-graph.jsonld",
     "machine/generated/manifest.json",
+    "examples/polyglot/jupiter_glitchology_runtime/README.md",
+    "examples/polyglot/jupiter_glitchology_runtime/main.go",
+    "examples/polyglot/jupiter_glitchology_runtime/mirror.py",
 )
 BUILD_MARKER = ".cmb-docs-build"
 
