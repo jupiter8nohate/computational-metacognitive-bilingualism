@@ -23,6 +23,26 @@ cmb-z13 validate '♍::GO -> VERIFY[claim] => EVIDENCE_REQUIRED;'
 python scripts/build_docs.py
 ```
 
+## Implementation standard
+
+When a contribution is authorized and technically feasible:
+
+- implement the requested change rather than stopping at a plan;
+- make routine reversible decisions without unnecessary approval loops;
+- finish read-only inspection, branch preparation, edits, and relevant tests before escalating a required approval gate;
+- request approval before destructive, irreversible, security-sensitive, or otherwise unauthorized changes;
+- keep verification proportional to the change and expand it only when a concrete unresolved concern remains; and
+- report what changed, what passed, and what remains uncertain.
+
+Repository defaults do not override explicit task instructions unless a higher-priority safety, legal, security, or permission boundary applies.
+
+```text
+PLAN != PATCH
+PATCH != PROOF
+TEST_SCOPE ~= CHANGE_SCOPE
+RECOVERY > ASSUMPTION
+```
+
 ## Pull requests
 
 Keep PRs narrow and explain:

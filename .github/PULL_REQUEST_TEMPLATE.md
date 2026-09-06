@@ -10,9 +10,17 @@ What evidence, prior art, failing test, or reproduction supports the change?
 
 What changed?
 
+## Execution / approval boundary
+
+- [ ] the requested implementation is complete, not plan-only
+- [ ] routine reversible decisions were handled without unnecessary approval loops
+- [ ] destructive, irreversible, security-sensitive, or otherwise gated actions were not taken without authorization
+- [ ] any forced pause or deviation identifies the exact repository rule or tool requirement
+
 ## Verification
 
-- [ ] tests added or updated
+- [ ] verification matches the scope and impact of the change
+- [ ] tests added or updated when behavior changed
 - [ ] `pytest` passes
 - [ ] `cmb-provenance selftest` passes when relevant
 - [ ] CMB-Z13 mapping remains synchronized when relevant
@@ -20,6 +28,7 @@ What changed?
 - [ ] provenance/security/legal claims remain bounded
 - [ ] canonical Err ⃝or⃟⃤ GLITCHOLOGY naming remains consistent when relevant
 - [ ] creator voice / self-definition is not silently rewritten by a factual or technical contribution
+- [ ] remaining uncertainty is stated explicitly
 
 ## Recovery / compatibility
 
@@ -28,6 +37,7 @@ What happens if this change fails or must be reverted?
 ```text
 PATTERN != PROOF
 SELF_TEST != INDEPENDENT_AUDIT
+IMPLEMENTED != VERIFIED
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
