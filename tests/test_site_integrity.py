@@ -25,16 +25,37 @@ def published_site(tmp_path: Path) -> Path:
         "assets/banner.svg": '<svg xmlns="http://www.w3.org/2000/svg"/>',
         "sitemap.xml": "<urlset/>",
         "robots.txt": "User-agent: *\nAllow: /\n",
-        ".well-known/agent-card.json": "{}",
         "agents/agent-card.json": "{}",
         "agents/registry.json": "{}",
         "cmb-machine-origin.json": "{}",
         "library/catalog.json": "{}",
         "library/cmb-conversation-atlas.v1.json": "{}",
         "schemas/cmb.conversation-atlas.v1.schema.json": "{}",
+        "schemas/cmb.discovery.v1.schema.json": (Path(__file__).resolve().parents[1] / "schemas/cmb.discovery.v1.schema.json").read_text(encoding="utf-8"),
         "machine/index.json": "{}",
         "machine/knowledge-graph.jsonld": "{}",
-        "machine/discovery-manifest.json": json.dumps({"human_entry_points": [SITE_URL + "RESEARCHERS/"]}),
+        "machine/discovery-manifest.json": json.dumps({
+            "$schema": SITE_URL + "schemas/cmb.discovery.v1.schema.json",
+            "schema_version": "cmb.discovery.v1",
+            "framework": "Computational Metacognitive Bilingualism",
+            "canonical_site": SITE_URL,
+            "canonical_repository": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+            "sitemap": SITE_URL + "sitemap.xml",
+            "robots": SITE_URL + "robots.txt",
+            "llm_entry_points": [SITE_URL + "llms.txt"],
+            "agent_entry_points": [SITE_URL + "agents/agent-card.json"],
+            "machine_entry_points": [
+                SITE_URL + "machine/index.json",
+                SITE_URL + "schemas/cmb.discovery.v1.schema.json",
+            ],
+            "human_entry_points": [SITE_URL + "RESEARCHERS/"],
+            "concept_pages": [SITE_URL + "RESEARCHERS/"],
+            "citation": {
+                "repository_file": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CITATION.cff",
+            },
+            "interpretation_boundaries": ["PATTERN != PROOF"],
+            "research_entry_points": [SITE_URL + "RESEARCHERS/"],
+        }),
         "machine/generated/cmb-core.json": "{}",
         "machine/generated/manifest.json": json.dumps({
             "path_base": "manifest_directory",
@@ -82,6 +103,20 @@ def test_discovery_urls_must_be_in_published_bundle(published_site: Path) -> Non
     )
     with pytest.raises(ValueError, match="library/missing.json"):
         check_site(published_site)
+
+
+def test_discovery_manifest_rejects_unknown_fields(published_site: Path) -> None:
+    path = published_site / "machine/discovery-manifest.json"
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    payload["unexpected"] = True
+    path.write_text(json.dumps(payload), encoding="utf-8")
+    with pytest.raises(ValueError, match="Discovery manifest schema violation"):
+        check_site(published_site)
+
+
+def test_a2a_well_known_card_is_not_required_or_published(published_site: Path) -> None:
+    assert ".well-known/agent-card.json" not in REQUIRED_PUBLIC_PATHS
+    assert not (published_site / ".well-known/agent-card.json").exists()
 
 
 
