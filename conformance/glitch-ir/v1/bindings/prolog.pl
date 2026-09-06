@@ -6,6 +6,11 @@ parse_line(Line, Key-Value) :-
 value(Key, Pairs, Value) :-
     memberchk(Key-Value, Pairs).
 
+requires_backtrace(Verified, Evidence, Source) :-
+    (Verified = "PRESENT", Evidence \= "PRESENT")
+    ;
+    Source = "UNKNOWN".
+
 main([Path]) :-
     read_file_to_string(Path, Text, []),
     split_string(Text, "\n", "\r", RawLines),
@@ -14,7 +19,7 @@ main([Path]) :-
     value("verification_label", Pairs, Verified),
     value("evidence", Pairs, Evidence),
     value("source", Pairs, Source),
-    ( (Verified = "PRESENT", Evidence \= "PRESENT") ; Source = "UNKNOWN" ->
+    ( requires_backtrace(Verified, Evidence, Source) ->
         Verdict = "BACKTRACE", Operator = "GLT-0036", State = "CONTESTED"
     ;
         Verdict = "ACCEPT", Operator = "NONE", State = "ACCEPTED"
