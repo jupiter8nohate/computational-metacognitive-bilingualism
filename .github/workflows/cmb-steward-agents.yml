@@ -1,0 +1,142 @@
+name: CMB Steward Agents
+
+on:
+  schedule:
+    # 08:17 UTC = early morning in the America/New_York project timezone.
+    - cron: "17 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: cmb-steward-agents
+  cancel-in-progress: false
+
+jobs:
+  steward:
+    name: Recovery + conformance + registry + docs steward
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install project maintenance dependencies
+        run: python -m pip install --upgrade pip ".[test,docs]"
+
+      - name: Install GLT-8101 semantic runtimes
+        shell: bash
+        run: |
+          set -euo pipefail
+          missing=()
+          command -v sbcl >/dev/null 2>&1 || missing+=(sbcl)
+          command -v runghc >/dev/null 2>&1 || missing+=(ghc)
+          command -v swipl >/dev/null 2>&1 || missing+=(swi-prolog-nox)
+          if (( ${#missing[@]} )); then
+            sudo apt-get update
+            sudo apt-get install -y "${missing[@]}"
+          fi
+          (cd adapters/typescript-express && npm install --ignore-scripts --no-audit --no-fund)
+
+      - name: Run deterministic steward audit
+        run: python -m cmb_agents.steward audit --report /tmp/cmb-steward-audit.json
+
+      - name: Ask configured AI steward to repair concrete failures
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
+        run: python -m cmb_agents.steward repair --report /tmp/cmb-steward-audit.json
+
+      - name: Verify proposed maintenance
+        run: python -m cmb_agents.steward verify
+
+      - name: Enforce mutation boundary
+        run: python -m cmb_agents.steward validate-diff
+
+      - name: Detect maintenance changes
+        id: changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -n "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Steward found no repository changes." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Avoid duplicate steward pull requests
+        if: steps.changes.outputs.changed == 'true'
+        id: open_pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          count="$(gh pr list --state open --limit 100 --json headRefName             --jq '[.[] | select(.headRefName | startswith("cmb-agent/steward-"))] | length')"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          if [[ "$count" != "0" ]]; then
+            echo "An existing CMB Steward PR is already awaiting human review; no duplicate will be opened."               >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Open bounded maintenance pull request
+        if: steps.changes.outputs.changed == 'true' && steps.open_pr.outputs.count == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          branch="cmb-agent/steward-${GITHUB_RUN_ID}"
+          git config user.name "cmb-steward-agent"
+          git config user.email "cmb-steward-agent@users.noreply.github.com"
+          git switch -c "$branch"
+
+          git add --             README.md             src/cmb_glitch8             src/cmb_agents             src/cmb_machine             docs             books             examples             library/glitch8.glyphs.v1.json
+
+          if git diff --cached --quiet; then
+            echo "No allowlisted changes remained after staging." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          git commit -m "chore(agent): bounded steward maintenance"
+          gh auth setup-git\n          git push origin "HEAD:refs/heads/$branch"
+
+          body_file="/tmp/cmb-steward-pr.md"
+          cat > "$body_file" <<'EOF'
+          ## CMB Steward Agent
+
+          This draft was produced by the bounded repository steward while the maintainer was away.
+
+          ### Agent roles
+          - Recovery: tests and repair verification
+          - GLITCH-IR Conformance: GLT-8101 semantic drift detection
+          - Registry Sync: canonical GLITCH-8 generated views
+          - Documentation: strict public-site build
+          - Steward: optional AI-assisted repair of concrete failures
+
+          ### Authority boundary
+          The agent may propose and test allowlisted changes, but it cannot edit workflows, tests, schemas,
+          machine authority records, security policy, licensing, or its own steward implementation through
+          the AI repair path. It cannot merge this pull request.
+
+          `MACHINE_CAN_PROPOSE != MACHINE_CAN_MERGE`
+
+          `CAPABILITY != AUTHORITY`
+
+          `HUMAN_AGENCY > MACHINE_AUTHORITY`
+          EOF
+
+          gh pr create             --base main             --head "$branch"             --draft             --title "chore(agent): CMB Steward maintenance"             --body-file "$body_file"
+
+          echo "Steward opened a draft PR for human review." >> "$GITHUB_STEP_SUMMARY"
