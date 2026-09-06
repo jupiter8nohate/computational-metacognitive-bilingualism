@@ -1,15 +1,15 @@
 # Release Procedure
 
-Version 1.4.x uses a tag-triggered GitHub Actions release with keyless Sigstore signatures.
+CMB signed releases use a tag-triggered GitHub Actions release with keyless Sigstore signatures. The repository is currently preparing the v1.5 line under the stabilization contract in `docs/STABILIZATION_CYCLE.md`.
 
 ## Preconditions
 
 1. The `main` branch CI matrix passes on Python 3.10, 3.11, 3.12, and 3.13.
 2. The canonical-receipt CI job successfully seals and verifies the public CMB artifact set inside a Git worktree.
-3. Polyglot boundary conformance passes for TypeScript, Rust, and Go against the shared v1 fixtures.
+3. Polyglot boundary conformance passes for TypeScript, Rust, and Go against the shared v1 fixtures, with committed TypeScript/Rust lockfiles and locked dependency installation.
 4. The MCP compatibility workflow imports the optional MCP 2.x server and the CMB-ADP self-test passes.
 5. `python -m build` produces one source distribution and one wheel.
-6. The tag exactly matches the package version, for example `v1.4.1`.
+6. The tag exactly matches the package version, for example `v1.5.0rc1` for the Python release candidate.
 7. The tag points to the reviewed commit that should appear in the artifact seal receipt.
 8. The canonical public CMB artifact set is present and committed:
    - `MANIFESTO.md`
@@ -41,18 +41,36 @@ Version 1.4.x uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `schemas/cmb.canonical-corpus-manifest.v1.schema.json`
    - `schemas/cmb.canonical-corpus-record.v1.schema.json`
 
-## Publish
+## Release-candidate and final-release sequence
+
+The v1.5 stabilization sequence is:
+
+```text
+v1.5.0rc1
+    ↓
+independent review of the exact candidate commit
+    ↓
+material findings reproduced and resolved
+    ↓
+v1.5.0
+```
+
+For a release candidate, first set the package/tool version consistently to the
+PEP 440 form `1.5.0rc1`, then tag the exact reviewed candidate commit:
 
 ```bash
-git tag v1.4.1
-git push origin v1.4.1
+git tag v1.5.0rc1
+git push origin v1.5.0rc1
 ```
+
+Do not publish final `v1.5.0` until the independent-review gate in
+`docs/EXTERNAL_REVIEW.md` and issue #63 has been satisfied.
 
 The release workflow then:
 
 1. reruns the full tests and self-test on Python 3.10, 3.11, 3.12, and 3.13;
 2. verifies the optional MCP 2.x adapter and CMB-ADP self-test;
-3. runs Go boundary conformance and format checks;
+3. runs locked TypeScript/Rust boundary conformance plus Go boundary conformance and format checks;
 4. builds and checks the package;
 5. seals the canonical public CMB artifacts with the tagged Git commit;
 6. creates `SHA256SUMS`;
@@ -132,11 +150,13 @@ not turn declared privacy fields into external enforcement or a psychological
 assessment.
 
 
-## v1.4 interoperability checks
+## Interoperability checks
 
 Before tagging:
 
 ~~~bash
+(cd adapters/typescript-express && npm ci --ignore-scripts --no-audit --no-fund && npm run build && npm test)
+(cd adapters/rust-actix && cargo fmt --all -- --check && cargo clippy --locked --all-targets -- -D warnings && cargo test --locked --all-targets)
 (cd adapters/go && go test ./...)
 python -m pip install -e ".[mcp]"
 python -c "from cmb_agents.mcp_server import mcp; assert mcp is not None"

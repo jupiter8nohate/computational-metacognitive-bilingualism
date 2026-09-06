@@ -45,7 +45,7 @@ jobs:
           npm --version
       - name: Install adapter dependencies
         working-directory: adapters/typescript-express
-        run: npm install --ignore-scripts --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Build strict TypeScript
         working-directory: adapters/typescript-express
         run: npm run build
@@ -69,10 +69,10 @@ jobs:
         run: cargo fmt --all -- --check
       - name: Clippy
         working-directory: adapters/rust-actix
-        run: cargo clippy --all-targets -- -D warnings
+        run: cargo clippy --locked --all-targets -- -D warnings
       - name: Run shared conformance
         working-directory: adapters/rust-actix
-        run: cargo test --all-targets
+        run: cargo test --locked --all-targets
 
   go-boundary:
     name: Go standard library
@@ -116,7 +116,7 @@ jobs:
 
       - name: Install TypeScript compiler
         working-directory: adapters/typescript-express
-        run: npm install --ignore-scripts --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Run GLT-8101 canonical synchrony
         run: python3 scripts/check_glitch_ir_conformance.py

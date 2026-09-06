@@ -38,7 +38,7 @@ jobs:
         run: cmb-recovery audit
 
   interoperability:
-    name: v1.4 interoperability release gate
+    name: Interoperability release gate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -65,7 +65,7 @@ jobs:
         run: |
           node --version
           npm --version
-          npm install --ignore-scripts --no-audit --no-fund
+          npm ci --ignore-scripts --no-audit --no-fund
           npm run build
           npm test
       - name: Run Rust boundary conformance
@@ -74,8 +74,8 @@ jobs:
           rustc --version
           cargo --version
           cargo fmt --all -- --check
-          cargo clippy --all-targets -- -D warnings
-          cargo test --all-targets
+          cargo clippy --locked --all-targets -- -D warnings
+          cargo test --locked --all-targets
       - name: Run Go boundary conformance
         working-directory: adapters/go
         run: |

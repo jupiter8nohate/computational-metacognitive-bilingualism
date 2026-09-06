@@ -33,6 +33,30 @@
 
 ---
 
+## 🧊 v1.5 Stabilization Mode
+
+Feature growth is intentionally frozen from commit
+`e4465d3e07ec5a9d3d56cdd9f79969641fa2a671` while the current architecture is
+reconciled, reproduced, externally reviewed, signed, and archived.
+
+During this cycle, bug fixes, tests, documentation reconciliation, dependency
+locking, security/review fixes, Recovery work, and release preparation are in
+scope. New major subsystems, top-level Python packages, and installed CLI
+commands are out of scope unless required for correctness or security and
+explicitly reviewed as a freeze-boundary exception.
+
+**Stabilization contract:** [CMB v1.5 Stabilization Cycle](docs/STABILIZATION_CYCLE.md)
+**Release-candidate handoff:** [CMB v1.5 Release Candidate Brief](docs/V1_5_RELEASE_CANDIDATE.md)  
+**Tracked gates:** [dependency reproducibility #62](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/62) · [independent review #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) · [Zenodo/DOI #44](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/44)
+
+```text
+FEATURE_VELOCITY <= AUDIT_CAPACITY
+SELF_TEST != INDEPENDENT_AUDIT
+REPRODUCIBLE > IMPRESSIVE
+```
+
+---
+
 ## Public Stewardship Incubation
 
 CMB / Err⃝or⃟⃤GLITCHOLOGY is currently an **informal public-interest project in incubation**, not a formed nonprofit or tax-exempt charity.

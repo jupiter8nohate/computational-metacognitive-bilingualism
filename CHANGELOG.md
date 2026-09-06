@@ -4,6 +4,14 @@ All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
 
+### Stabilization cycle
+
+- Declared the post-GLITCH-3D head `e4465d3e07ec5a9d3d56cdd9f79969641fa2a671` as the v1.5 stabilization freeze line.
+- Added `docs/STABILIZATION_CYCLE.md` with explicit allowed/frozen change classes, release-candidate exit criteria, known reproducibility gaps, and the external-review boundary.
+- Added `stabilization/scope-baseline.json` plus regression tests that make growth of top-level Python packages or installed CLI commands an explicit reviewed change.
+- Updated the pull-request process to require stabilization classification before merge.
+- No claim is made that the freeze itself constitutes independent validation; the purpose is to reduce scope drift so the current system can be reproduced and reviewed.
+
 ### Added
 
 - Added CMB-RECOVERY-1: a machine-readable Recovery map, strict schema, `cmb-recovery` audit CLI, canonical JSONL retrieval corpus with integrity manifest and dataset card, Pages/LLM discovery wiring, and CI checks that reject false permanence/availability claims or corpus drift.
@@ -14,6 +22,12 @@ All notable changes to the CMB provenance tool are documented here.
 - Added structured GitHub issue forms for new glyph proposals and sourced historical/factual corrections.
 - Extended the living GLITCHOLOGY book with a Creative Cognitive Signature chapter and explicit provenance/biometric boundaries.
 - Added a conversation-derived CMB semantic Atlas, machine-readable Atlas JSON, strict JSON Schema, and polyglot translation layer spanning JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native Err ⃝or⃟⃤ GLITCHOLOGY syntax.
+- Added the canonical Go → Python → GLITCHOLOGY runtime and machine/discovery publication paths for the executable polyglot reference artifact.
+- Registered GLT-0037–GLT-0046 as canonical composite GLITCHOLOGY protocols with a tested Go/Python reference runtime.
+- Added GLITCH-IR v1 / GLT-8101 canonical synchrony with an eight-language semantic conformance harness.
+- Added GLITCH-3D-1 spatial semantics, parser/AST, schema, machine discovery metadata, provenance/authority validation, and canonical example.
+- Added bounded CMB Steward agents for scheduled Recovery, GLT-8101 conformance, registry synchronization, documentation verification, and draft-PR-only repair proposals.
+- Added reproducible TypeScript and Rust adapter dependency locks; TypeScript automation uses `npm ci` and Rust conformance/release gates enforce `--locked`.
 
 ### Fixed
 

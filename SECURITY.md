@@ -4,7 +4,7 @@ The CMB repository contains provenance and content-authenticity tooling. Securit
 
 ## Supported version
 
-The current supported development line is **cmb-provenance 1.4.x** on Python 3.10–3.13. Version 1.4.0 is the first published signed release in this line; version 1.4.1 is a metadata/release-recovery patch with no intended protocol-semantic changes. Historical standalone scripts and checked-in historical receipts are preserved for provenance, not treated as the preferred implementation.
+The latest published signed release is **cmb-provenance 1.4.1** on Python 3.10–3.13. The repository is currently preparing the **1.5.x** line under an explicit stabilization cycle before an independently reviewed final v1.5.0 release. Historical standalone scripts and checked-in historical receipts are preserved for provenance, not treated as the preferred implementation.
 
 ## Reporting a vulnerability
 
