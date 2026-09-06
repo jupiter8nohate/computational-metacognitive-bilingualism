@@ -86,14 +86,14 @@ surfaces visible in code review.
 
 Before `v1.5.0-rc1`:
 
-- [ ] README and CHANGELOG accurately describe the post-v1.4.1 delta.
+- [x] README and CHANGELOG accurately describe the post-v1.4.1 delta.
 - [ ] Python 3.10–3.13 CI is green.
 - [ ] canonical receipt verification is green.
 - [ ] CodeQL and dependency review are green.
 - [ ] Recovery audit is green.
 - [x] TypeScript and Rust adapter dependency graphs are locked reproducibly.
-- [ ] no new top-level package or installed CLI has been added since the freeze line.
-- [ ] open expansion PRs are held or explicitly deferred.
+- [x] no new top-level package or installed CLI has been added since the freeze line.
+- [x] open expansion PRs are held or explicitly deferred.
 
 Before final `v1.5.0`:
 
