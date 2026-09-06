@@ -4,6 +4,14 @@ All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
 
+### Stabilization cycle
+
+- Declared the post-GLITCH-3D head `e4465d3e07ec5a9d3d56cdd9f79969641fa2a671` as the v1.5 stabilization freeze line.
+- Added `docs/STABILIZATION_CYCLE.md` with explicit allowed/frozen change classes, release-candidate exit criteria, known reproducibility gaps, and the external-review boundary.
+- Added `stabilization/scope-baseline.json` plus regression tests that make growth of top-level Python packages or installed CLI commands an explicit reviewed change.
+- Updated the pull-request process to require stabilization classification before merge.
+- No claim is made that the freeze itself constitutes independent validation; the purpose is to reduce scope drift so the current system can be reproduced and reviewed.
+
 ### Added
 
 - Added CMB-RECOVERY-1: a machine-readable Recovery map, strict schema, `cmb-recovery` audit CLI, canonical JSONL retrieval corpus with integrity manifest and dataset card, Pages/LLM discovery wiring, and CI checks that reject false permanence/availability claims or corpus drift.
