@@ -7,6 +7,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 from cmb_preservation import audit_repository
+from cmb_preservation.cli import main as recovery_main
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -55,3 +56,12 @@ def test_repository_preservation_audit_is_green() -> None:
     assert result["corpus_records"] == 8
     assert result["permanence_guaranteed"] is False
     assert result["availability_guaranteed"] is False
+
+
+def test_recovery_cli_status_is_machine_readable(capsys) -> None:
+    assert recovery_main(["--root", str(ROOT), "status"]) == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["ok"] is True
+    assert payload["corpus_records"] == 8
+    assert payload["permanence_guaranteed"] is False
+    assert payload["availability_guaranteed"] is False
