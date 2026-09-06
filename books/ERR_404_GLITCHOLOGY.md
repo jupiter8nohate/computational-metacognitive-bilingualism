@@ -908,6 +908,40 @@ See [Creative Cognitive Signature Protocol](../docs/CREATIVE_COGNITIVE_SIGNATURE
 
 ---
 
+# Executable Polyglot Runtime
+
+Err ⃝or⃟⃤ GLITCHOLOGY now has a working Go → Python demonstration artifact:
+
+**[𒄆 JUPITER POLYGLOT RUNTIME](../examples/polyglot/jupiter_glitchology_runtime/)**
+
+~~~text
+GO          = STRUCTURE
+PYTHON      = METACOGNITION
+GLITCHOLOGY = HUMAN_CONTEXT
+
+GO://COMPILE_STRUCTURE
+        ↓
+PY://INSPECT_REASONING
+        ↓
+G8://PRESERVE_HUMAN_CONTEXT
+~~~
+
+Two forms are preserved:
+
+- **split/** — the maintained engineering version, with separate Go and Python files for language-aware tooling, testing, and maintenance.
+- **embedded/** — the original one-file code-poetry form, where Go contains the Python metacognitive mirror as source text.
+
+The runtime demonstrates authored CMB / GLITCHOLOGY semantics. Its printed assertions are not cryptographic enforcement, legal authority, or proof about a person.
+
+~~~text
+MACHINE_CAN_READ != MACHINE_CAN_DEFINE
+PROFILE != PERSON
+MODEL != MIND
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+---
+
 # GLITCH-8 Reference Program
 
 ~~~text
