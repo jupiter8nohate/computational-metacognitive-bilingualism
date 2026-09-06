@@ -18,7 +18,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
 PUBLIC_DIRECTORIES = (
-    "assets", "agents", "extensions", "library", "machine", "schemas", "spec",
+    "assets", "agents", "datasets", "extensions", "library", "machine", "schemas", "spec",
     "research/case-studies", "examples/polyglot/jupiter_glitchology_runtime",
 )
 PUBLIC_FILES = ("AGENTS.md", "llms.txt", "llms-full.txt", "CITATION.cff", "CITATION.bib")
@@ -36,9 +36,15 @@ REQUIRED_PUBLIC_PATHS = (
     "schemas/cmb.stewardship-status.v1.schema.json",
     "machine/index.json",
     "machine/discovery-manifest.json",
+    "machine/recovery-map.json",
     "machine/stewardship-status.json",
     "machine/knowledge-graph.jsonld",
     "machine/generated/manifest.json",
+    "datasets/cmb-canonical-corpus/manifest.json",
+    "datasets/cmb-canonical-corpus/corpus.jsonl",
+    "schemas/cmb.recovery-map.v1.schema.json",
+    "schemas/cmb.canonical-corpus-manifest.v1.schema.json",
+    "schemas/cmb.canonical-corpus-record.v1.schema.json",
     "examples/polyglot/jupiter_glitchology_runtime/README.md",
     "examples/polyglot/jupiter_glitchology_runtime/main.go",
     "examples/polyglot/jupiter_glitchology_runtime/mirror.py",
@@ -117,7 +123,7 @@ def check_site(site: Path) -> tuple[int, int]:
     for path in REQUIRED_PUBLIC_PATHS:
         check("index.html", path)
 
-    for filename in ("machine/discovery-manifest.json", "machine/index.json", "machine/knowledge-graph.jsonld"):
+    for filename in ("machine/discovery-manifest.json", "machine/index.json", "machine/recovery-map.json", "machine/knowledge-graph.jsonld"):
         path = site / filename
         if not path.is_file():
             continue
