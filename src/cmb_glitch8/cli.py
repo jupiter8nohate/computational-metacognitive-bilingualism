@@ -226,6 +226,22 @@ def _run(args: argparse.Namespace) -> int:
         )
         return 0
 
+    if args.command == "3d":
+        program = load_glitch3d(args.source)
+        if args.spatial_command == "parse":
+            print(json.dumps(program.to_dict(), ensure_ascii=False, indent=2, sort_keys=True))
+            return 0
+        if args.spatial_command == "validate":
+            print(
+                f"VALID GLITCH-3D/{program.to_dict()['protocol_version']} "
+                f"program={program.program_id} nodes={len(program.nodes)} "
+                f"edges={len(program.edges)} sha256={program.sha256()}"
+            )
+            return 0
+        if args.spatial_command == "render":
+            print(render_spatial_summary(program), end="")
+            return 0
+
     if args.command == "reference" and args.reference_command == "build":
         registry = _registry_for_read(args.registry)
         args.output.parent.mkdir(parents=True, exist_ok=True)
