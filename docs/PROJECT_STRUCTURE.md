@@ -83,6 +83,28 @@ SEARCH_RESULT != COMPLETE_CORPUS
 ABSENCE_FROM_SEARCH != PROOF_OF_ABSENCE
 ```
 
+## Beyond-software research program
+
+The repository now treats speculative expansion of code into new domains as a bounded research program rather than a novelty claim:
+
+```text
+docs/BEYOND_SOFTWARE_TEN_TERRITORIES.md
+research/territories-of-code.v1.json
+schemas/cmb.territories-of-code.v1.schema.json
+tests/test_territories_of_code.py
+```
+
+The ten territories cover executable civic rules, biological computation interfaces, cognitive sovereignty filters, cryptographic adaptive art, resource coordination, privacy-preserving profile resistance, synesthetic programming, adaptive smart matter, adaptive epistemic curricula, and mission-bound autonomous organizations.
+
+Every territory carries an explicit research question, prototype boundary, evidence requirements, safeguards, and interpretation boundaries. The record intentionally refuses unverified "first" or "never used" claims.
+
+```text
+FORMALIZATION != REALITY
+AUTOMATION != AUTHORITY
+SIMULATION != EXPERIENCE
+NOVELTY_CLAIM -> PRIOR_ART_REQUIRED
+```
+
 ## Boundary rule
 
 ```text
