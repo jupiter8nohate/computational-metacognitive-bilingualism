@@ -1,0 +1,45 @@
+name: Stabilization lockfile generator
+
+on:
+  push:
+    branches:
+      - "stabilization/v1.5-freeze-20260906"
+    paths:
+      - ".github/workflows/stabilization-lockfiles.yml"
+      - "adapters/typescript-express/package.json"
+      - "adapters/rust-actix/Cargo.toml"
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    name: Generate reproducible adapter lockfiles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Generate TypeScript lockfile
+        working-directory: adapters/typescript-express
+        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+
+      - name: Generate Rust lockfile
+        working-directory: adapters/rust-actix
+        run: cargo generate-lockfile
+
+      - name: Confirm generated files
+        run: |
+          test -s adapters/typescript-express/package-lock.json
+          test -s adapters/rust-actix/Cargo.lock
+
+      - name: Upload generated lockfiles
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: stabilization-lockfiles
+          if-no-files-found: error
+          retention-days: 1
+          path: |
+            adapters/typescript-express/package-lock.json
+            adapters/rust-actix/Cargo.lock
