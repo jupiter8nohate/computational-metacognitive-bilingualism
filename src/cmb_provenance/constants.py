@@ -2,7 +2,7 @@
 
 from typing import Final
 
-TOOL_VERSION: Final[str] = "1.5.0rc1"
+TOOL_VERSION: Final[str] = "1.5.0-rc.1"
 MANIFEST_SCHEMA_VERSION: Final[str] = "cmb.artifact-manifest.v1"
 RECEIPT_SCHEMA_VERSION: Final[str] = "cmb.seal-receipt.v1"
 ANCHOR_SCHEMA_VERSION: Final[str] = "cmb.anchor.v2"
