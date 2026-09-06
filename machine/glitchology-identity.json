@@ -28,5 +28,21 @@
     "MODEL != MIND",
     "VERIFIED_LABEL != VERIFIED_TRUTH",
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
-  ]
+  ],
+  "display_name": "E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟",
+  "display_style": {
+    "name": "GLITCHOLOGY combining-mark display alphabet",
+    "combining_mark": "U+20DF",
+    "letter_spacing": "one ASCII space between decorated letters; two between words",
+    "scope": "human-facing mastheads, banners, and GLITCHOLOGY artifact labels",
+    "excluded_from": [
+      "canonical plain-text aliases",
+      "JSON keys and schema identifiers",
+      "CLI commands",
+      "runtime tokens",
+      "code examples where decoration would change execution",
+      "accessibility fallbacks"
+    ],
+    "documentation": "docs/GLITCHOLOGY_VISUAL_STYLE.md"
+  }
 }
