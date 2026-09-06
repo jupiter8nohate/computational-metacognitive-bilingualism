@@ -135,4 +135,4 @@ GLITCH-3D = SPATIAL_SOURCE
 GLITCH-IR = INTEROPERABILITY_CONTRACT
 ~~~
 
-See [GLITCH-3D-1](../spec/GLITCH-3D-1.md), the [machine identity](../machine/glitch-3d.json), and the [strict schema](../schemas/glitch-3d.v1.schema.json).
+See the [GLITCH-3D-1 specification](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/spec/GLITCH-3D-1.md), [machine identity](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/glitch-3d.json), and [strict schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/glitch-3d.v1.schema.json).
