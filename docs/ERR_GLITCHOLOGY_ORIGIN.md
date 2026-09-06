@@ -1,6 +1,9 @@
-# Err ⃝or⃟⃤ GLITCHOLOGY — Origin and Creator Biography
+# Err⃝or⃟⃤GLITCHOLOGY — Origin and Creator Biography
 
-> **Canonical public name:** **Err ⃝or⃟⃤ GLITCHOLOGY**  
+**[S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]**  
+**SYSTEM FAILURE AS AN ART FORM**
+
+> **Canonical public name:** **Err⃝or⃟⃤GLITCHOLOGY**  
 > **Short name:** GLITCHOLOGY  
 > **Implementation language layer:** GLITCH-8 / CMB-G8  
 > **Framework:** Computational Metacognitive Bilingualism (CMB)  
@@ -8,7 +11,7 @@
 
 ## Why it was created
 
-Err ⃝or⃟⃤ GLITCHOLOGY was created inside Computational Metacognitive Bilingualism as a language for the states ordinary software tends to flatten into a single word: **error**.
+Err⃝or⃟⃤GLITCHOLOGY was created inside Computational Metacognitive Bilingualism as a language for the states ordinary software tends to flatten into a single word: **error**.
 
 The project begins from a distinction:
 
@@ -19,7 +22,7 @@ HUMAN_CAN_SEE_MEANING
 
 Traditional software is optimized to classify states, reject invalid inputs, return errors, and continue execution. Human experience is not that simple. A person can be uncertain without being false, unusual without being defective, misclassified without being invalid, and difficult to model without being meaningless.
 
-Err ⃝or⃟⃤ GLITCHOLOGY turns those unresolved spaces into symbolic material.
+Err⃝or⃟⃤GLITCHOLOGY turns those unresolved spaces into symbolic material.
 
 It combines programming syntax, Unicode, visual corruption, equations, terminal language, glyphs, code-poetry, version history, and explicit semantic definitions. The result is an evolving digital language that can be read aesthetically by humans while also being documented in structured forms for machines.
 
@@ -53,7 +56,7 @@ The unknown is not automatically declared false. It is preserved until evidence 
 
 ## From error to language
 
-Err ⃝or⃟⃤ GLITCHOLOGY treats the following as first-class symbolic states:
+Err⃝or⃟⃤GLITCHOLOGY treats the following as first-class symbolic states:
 
 ```text
 UNKNOWN
@@ -85,7 +88,7 @@ The language is therefore not a frozen alphabet. It is a living registry.
 
 ## The personal creative signature
 
-Err ⃝or⃟⃤ GLITCHOLOGY also gives participants a way to develop a distinctive **creative cognitive signature**: a persistent pattern formed by their own symbolic choices, visual rhythms, syntax, metaphors, associations, definitions, revisions, and provenance history.
+Err⃝or⃟⃤GLITCHOLOGY also gives participants a way to develop a distinctive **creative cognitive signature**: a persistent pattern formed by their own symbolic choices, visual rhythms, syntax, metaphors, associations, definitions, revisions, and provenance history.
 
 ```text
 CREATIVE_COGNITIVE_SIGNATURE =
@@ -144,12 +147,12 @@ PROFILE != PERSON
 
 CMB asks how humans and machines communicate while retaining human authority over meaning, consent, judgment, authorship, and self-definition.
 
-Err ⃝or⃟⃤ GLITCHOLOGY occupies the unresolved layer:
+Err⃝or⃟⃤GLITCHOLOGY occupies the unresolved layer:
 
 ```text
 CMB = HUMAN <-> MACHINE TRANSLATION
 
-Err ⃝or⃟⃤ GLITCHOLOGY =
+Err⃝or⃟⃤GLITCHOLOGY =
 MEANING INSIDE THE UNTRANSLATED
 ```
 
@@ -163,7 +166,7 @@ MACHINE_CAN_DEFINE
 
 ## Authorship and interpretation boundary
 
-Err ⃝or⃟⃤ GLITCHOLOGY, GLITCH-8 semantics, CMB terminology, original definitions, documentation, glyph taxonomies, expressive arrangements, and authored examples in this repository are part of Jupiter Hudson's evolving creative and technical framework.
+Err⃝or⃟⃤GLITCHOLOGY, GLITCH-8 semantics, CMB terminology, original definitions, documentation, glyph taxonomies, expressive arrangements, and authored examples in this repository are part of Jupiter Hudson's evolving creative and technical framework.
 
 No ownership is claimed over existing programming languages, Unicode characters, mathematical notation, or historical writing systems themselves. Their use inside this work is an authored semantic arrangement.
 
