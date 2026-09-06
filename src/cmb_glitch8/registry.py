@@ -29,7 +29,7 @@ def glitch_display(text: str) -> str:
 
 
 _ALLOWED_STATUS: Final[set[str]] = {"experimental", "proposed", "canonical", "deprecated", "retired"}
-_ALLOWED_RUNTIMES: Final[set[str]] = {"PY", "RS", "GO", "TS", "PL", "HS", "CL", "C", "G8"}
+_ALLOWED_RUNTIMES: Final[set[str]] = {"PY", "RS", "GO", "TS", "PL", "HS", "CL", "C", "CPP", "G8"}
 _STATEMENT_RE: Final[re.Pattern[str]] = re.compile(
     r"^\[(?P<runtime>[A-Z0-9]+)\]\s+"
     r"(?P<claim>.+?)\s*::\s*(?P<state>[^:]+?)\s*::\s*(?P<authority>.+?)\s*$"
