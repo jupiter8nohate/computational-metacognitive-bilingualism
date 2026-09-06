@@ -100,5 +100,16 @@
       "DISCOVERY != TRAINING_PERMISSION",
       "STORAGE != BIOLOGICAL_FUNCTION"
     ]
+  },
+  "glitch_3d": {
+    "protocol": "GLITCH-3D",
+    "version": "1.0.0",
+    "specification": "spec/GLITCH-3D-1.md",
+    "schema": "schemas/glitch-3d.v1.schema.json",
+    "identity": "machine/glitch-3d.json",
+    "reference_implementation": "src/cmb_glitch8/glitch3d.py",
+    "reference_program": "examples/polyglot/glitchology_registry_3d_runtime/GLITCH_3D_SOURCE_FRACTURE.g3d",
+    "cli": "glitch8 3d",
+    "boundary": "3D_APPEARANCE != AUTOMATIC_EXECUTION"
   }
 }
