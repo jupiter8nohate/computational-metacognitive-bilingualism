@@ -9,11 +9,12 @@ The repository publishes a public documentation origin designed for human reader
 - Robots: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/robots.txt
 - Compact LLM map: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/llms.txt
 - Expanded LLM map: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/llms-full.txt
-- Agent card: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/.well-known/agent-card.json
+- CMB agent card: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/agent-card.json
 - Agent registry: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json
 - Machine index: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/index.json
 - Knowledge graph: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld
 - Discovery manifest: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json
+- Discovery schema: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json
 - Concept library: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/
 - FAQ: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/
 - Case studies: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/

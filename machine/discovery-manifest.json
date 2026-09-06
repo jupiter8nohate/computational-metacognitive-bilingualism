@@ -1,4 +1,5 @@
 {
+  "$schema": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json",
   "schema_version": "cmb.discovery.v1",
   "framework": "Computational Metacognitive Bilingualism",
   "canonical_site": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
@@ -10,7 +11,7 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/llms-full.txt"
   ],
   "agent_entry_points": [
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/.well-known/agent-card.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/agent-card.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json"
   ],
   "machine_entry_points": [
@@ -39,7 +40,8 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/conformance/glitch-ir/v1/GLT-8101-V001.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/glitch-3d.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/glitch-3d.v1.schema.json",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/spec/GLITCH-3D-1.md"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/spec/GLITCH-3D-1.md",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",

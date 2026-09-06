@@ -136,8 +136,9 @@ jobs:
               f"{site}/schemas/cmb.canonical-corpus-manifest.v1.schema.json",
               f"{site}/schemas/cmb.canonical-corpus-record.v1.schema.json",
               f"{site}/machine/knowledge-graph.jsonld",
-              f"{site}/.well-known/agent-card.json",
+              f"{site}/agents/agent-card.json",
               f"{site}/agents/registry.json",
+              f"{site}/schemas/cmb.discovery.v1.schema.json",
           ]
           payload = {
               "host": "jupiter8nohate.github.io",

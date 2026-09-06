@@ -5,7 +5,7 @@
   "version": "1.2.0",
   "protocol": "CMB-ADP-1",
   "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
-  "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/.well-known/agent-card.json",
+  "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/agent-card.json",
   "registry_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json",
   "skills": [
     {
@@ -66,7 +66,7 @@
   ],
   "standards_status": {
     "mcp": "official_sdk_reference_adapter_not_independently_certified",
-    "a2a": "discovery_pattern_only_not_claimed_conformant",
+    "a2a": "not_conformant_no_public_a2a_server",
     "w3c_vc": "vc_2_0_projection_only_not_data_integrity_conformant",
     "cmb_cap_a2a": "experimental_extension_not_official_a2a_extension"
   }

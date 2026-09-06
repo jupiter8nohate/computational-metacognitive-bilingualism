@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json",
+  "title": "CMB Discovery Manifest v1",
+  "description": "Machine-readable discovery contract for Computational Metacognitive Bilingualism.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "framework",
+    "canonical_site",
+    "canonical_repository",
+    "sitemap",
+    "robots",
+    "llm_entry_points",
+    "agent_entry_points",
+    "machine_entry_points",
+    "human_entry_points",
+    "concept_pages",
+    "citation",
+    "interpretation_boundaries",
+    "research_entry_points"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json"
+    },
+    "schema_version": {
+      "const": "cmb.discovery.v1"
+    },
+    "framework": {
+      "const": "Computational Metacognitive Bilingualism"
+    },
+    "canonical_site": {
+      "type": "string",
+      "format": "uri",
+      "const": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
+    },
+    "canonical_repository": {
+      "type": "string",
+      "format": "uri",
+      "const": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
+    },
+    "sitemap": {
+      "type": "string",
+      "format": "uri"
+    },
+    "robots": {
+      "type": "string",
+      "format": "uri"
+    },
+    "llm_entry_points": {
+      "$ref": "#/$defs/uri_array"
+    },
+    "agent_entry_points": {
+      "$ref": "#/$defs/uri_array"
+    },
+    "machine_entry_points": {
+      "$ref": "#/$defs/uri_array"
+    },
+    "human_entry_points": {
+      "$ref": "#/$defs/uri_array"
+    },
+    "concept_pages": {
+      "$ref": "#/$defs/uri_array"
+    },
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository_file"],
+      "properties": {
+        "repository_file": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "interpretation_boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "research_entry_points": {
+      "$ref": "#/$defs/uri_array"
+    }
+  },
+  "$defs": {
+    "uri_array": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    }
+  }
+}

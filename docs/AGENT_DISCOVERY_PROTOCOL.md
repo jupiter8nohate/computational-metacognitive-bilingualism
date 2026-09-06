@@ -33,7 +33,7 @@ cmb-agent serve --host 127.0.0.1 --port 8765
 ## HTTP interface
 
 ```text
-GET /.well-known/agent-card.json
+GET /v1/agent-card
 GET /v1/health
 GET /v1/registry
 GET /v1/graph
@@ -46,7 +46,7 @@ The server binds to `127.0.0.1` by default. Public deployment should use normal 
 
 ## Static discovery
 
-The Pages build publishes `/.well-known/agent-card.json` and `/agents/registry.json`.
+The Pages build publishes the CMB-specific `/agents/agent-card.json` and `/agents/registry.json` endpoints. It intentionally does **not** publish `/.well-known/agent-card.json` because that URI is reserved for an A2A Agent Card and CMB does not currently expose a public A2A server.
 
 ## Recommendation contract
 
@@ -65,7 +65,7 @@ The registry explicitly disables unsolicited mass distribution, impersonation, f
 
 ## Standards boundary
 
-The same deterministic service functions are now exposed through an optional MCP adapter using the official Python SDK 2.x line for the 2026-07-28 protocol generation. A2A remains only a possible future adapter target. SDK use is not independent certification.
+The same deterministic service functions are now exposed through an optional MCP adapter using the official Python SDK 2.x line for the 2026-07-28 protocol generation. A2A remains only a possible future adapter target. Until a real A2A server and conformant Agent Card exist, the standardized A2A well-known URI remains unpublished. SDK use is not independent certification.
 
 ```text
 CMB-ADP-1 != MCP

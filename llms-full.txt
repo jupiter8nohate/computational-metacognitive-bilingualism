@@ -321,6 +321,7 @@ machine/knowledge-graph.jsonld
 
 Discovery manifest:
 machine/discovery-manifest.json
+schemas/cmb.discovery.v1.schema.json
 
 Interpretation rule:
 RELATED_TERM != EXACT_SYNONYM
