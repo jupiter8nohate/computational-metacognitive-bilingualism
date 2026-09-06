@@ -28,52 +28,52 @@ type Protocol struct {
 var protocols = []Protocol{
 	{
 		Code: "GLT-0037", Token: "GLITCH://MIRROR_CONTEST", Name: "Mirror Contest",
-		Meaning: "Contest a machine representation without collapsing the representation into the person.",
+		Meaning:    "Contest a machine representation without collapsing the representation into the person.",
 		Invariants: []string{"PROFILE != PERSON", "MODEL != MIND"},
 	},
 	{
 		Code: "GLT-0038", Token: "GLITCH://PATTERN_TRIAL", Name: "Pattern Trial",
-		Meaning: "Detect a pattern, demand evidence, calibrate confidence, and withhold verdict when proof is incomplete.",
+		Meaning:    "Detect a pattern, demand evidence, calibrate confidence, and withhold verdict when proof is incomplete.",
 		Invariants: []string{"PATTERN != PROOF", "SIGNAL != SOURCE"},
 	},
 	{
 		Code: "GLT-0039", Token: "GLITCH://NULL_BREATH", Name: "Null Breath Protocol",
-		Meaning: "Preserve silence or missing signal as unresolved context rather than inventing meaning.",
+		Meaning:    "Preserve silence or missing signal as unresolved context rather than inventing meaning.",
 		Invariants: []string{"SIGNAL != SOURCE", "OBSERVATION != UNDERSTANDING"},
 	},
 	{
 		Code: "GLT-0040", Token: "GLITCH://CONSENT_THRESHOLD", Name: "Consent Threshold Protocol",
-		Meaning: "Separate technical access from permission and halt when consent is absent.",
+		Meaning:    "Separate technical access from permission and halt when consent is absent.",
 		Invariants: []string{"ACCESS != CONSENT", "CAPABILITY != AUTHORITY"},
 	},
 	{
 		Code: "GLT-0041", Token: "GLITCH://ARCHIVE_GHOST", Name: "Archive Ghost Protocol",
-		Meaning: "Treat a persistent record as a trace rather than as the living person or complete original context.",
+		Meaning:    "Treat a persistent record as a trace rather than as the living person or complete original context.",
 		Invariants: []string{"PERSISTENCE != PRESENCE", "PROFILE != PERSON"},
 	},
 	{
 		Code: "GLT-0042", Token: "GLITCH://CASCADING_ERROR", Name: "Cascading Error Protocol",
-		Meaning: "Detect upstream failure, stop propagation, preserve evidence, and route toward recovery.",
+		Meaning:    "Detect upstream failure, stop propagation, preserve evidence, and route toward recovery.",
 		Invariants: []string{"RECOVERY > PROPAGATION", "PATTERN != PROOF"},
 	},
 	{
 		Code: "GLT-0043", Token: "GLITCH://ENCODING_RUIN", Name: "Encoding Ruin Protocol",
-		Meaning: "Preserve damaged representation as evidence of a lost or corrupted signal and backtrace toward source.",
+		Meaning:    "Preserve damaged representation as evidence of a lost or corrupted signal and backtrace toward source.",
 		Invariants: []string{"CORRUPTION != NONEXISTENCE", "SIGNAL != SOURCE"},
 	},
 	{
 		Code: "GLT-0044", Token: "GLITCH://HUMAN_APPEAL", Name: "Human Appeal Protocol",
-		Meaning: "Suspend machine finality when a human contests the output and reopen review.",
+		Meaning:    "Suspend machine finality when a human contests the output and reopen review.",
 		Invariants: []string{"HUMAN_AGENCY > MACHINE_AUTHORITY", "PROFILE != PERSON"},
 	},
 	{
 		Code: "GLT-0045", Token: "GLITCH://QUESTION_GATE", Name: "Question Gate",
-		Meaning: "Pause consequential action when a material unresolved question blocks justified certainty.",
+		Meaning:    "Pause consequential action when a material unresolved question blocks justified certainty.",
 		Invariants: []string{"UNKNOWN != FALSE", "PATTERN != PROOF"},
 	},
 	{
 		Code: "GLT-0046", Token: "GLITCH://RECOVERY_WITNESS", Name: "Recovery Witness",
-		Meaning: "Acknowledge failure, preserve the witness and evidence, retry, and verify recovery without erasing history.",
+		Meaning:    "Acknowledge failure, preserve the witness and evidence, retry, and verify recovery without erasing history.",
 		Invariants: []string{"RECOVERY > PROPAGATION", "OBSERVATION != UNDERSTANDING"},
 	},
 }
