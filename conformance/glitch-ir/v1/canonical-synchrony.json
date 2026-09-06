@@ -1,0 +1,31 @@
+{
+  "vector_version": "1.0.0",
+  "protocol": "GLT-8101",
+  "name": "Canonical Synchrony",
+  "description": "Reference GLITCH-IR vector proving deterministic projection of a provenance backtrace state across independent runtimes.",
+  "input": {
+    "claim": "verified_label_without_independent_source",
+    "verification_label_present": true,
+    "independent_source_present": false,
+    "witness_present": true
+  },
+  "expected": {
+    "contract": "glitch-ir/1",
+    "vector": "GLT-8101-V001",
+    "protocol": "GLT-8101",
+    "operator": "GLT-0036",
+    "state": "BACKTRACE",
+    "verdict": "CONTESTED",
+    "evidence": [],
+    "source": "SOURCE_UNKNOWN",
+    "witness": "PRESENT",
+    "human_review": true
+  },
+  "invariants": [
+    "VERIFIED_LABEL != VERIFIED_TRUTH",
+    "SIGNAL != SOURCE",
+    "PATTERN != PROOF",
+    "DIGEST_MATCH != TRUTH",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}
