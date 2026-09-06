@@ -117,7 +117,7 @@ def check_site(site: Path) -> tuple[int, int]:
     for path in REQUIRED_PUBLIC_PATHS:
         check("index.html", path)
 
-    for filename in ("machine/discovery-manifest.json", "machine/index.json"):
+    for filename in ("machine/discovery-manifest.json", "machine/index.json", "machine/knowledge-graph.jsonld"):
         path = site / filename
         if not path.is_file():
             continue
