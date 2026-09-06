@@ -77,13 +77,25 @@ In **Settings → Branches / Rulesets**, prefer:
 - block branch deletion;
 - require linear history if it matches the project's squash-merge workflow.
 
-### Audit note — 2026-09-04
+### Audit note — 2026-09-05 (America/New_York)
 
-The repository rulesets endpoint returned no configured rulesets during this audit. Classic branch-protection state could not be inspected with the connected GitHub integration, so this does **not** prove that `main` is unprotected. If classic protection is not already active, create a modern ruleset that at minimum blocks force pushes/deletion and requires the project's critical checks.
+The GitHub branch API currently reports `main` as `protected: false`, with protection disabled and no required status checks. The repository rulesets endpoint also returns an empty ruleset list.
+
+This is now a verified configuration gap rather than an unknown state. Repository files cannot enable that platform control through the available integration. Configure a GitHub ruleset or classic branch protection for `main` and require the critical workflows before treating the branch as protected.
+
+Recommended required checks after the ruleset is created:
+
+- CI
+- CMB Sovereignty Gate
+- CodeQL
+- Documentation
+- OpenSSF Scorecard
+- any release-specific checks that are required for release branches or tags
 
 ```text
-NO_RULESET_FOUND != NO_PROTECTION_PROVEN
+PROTECTED_FALSE == VERIFIED_CONFIGURATION_GAP
 PLATFORM_SETTING != REPOSITORY_FILE
+GREEN_CI != PROTECTED_BRANCH
 ```
 
 ## Release and DOI gate
