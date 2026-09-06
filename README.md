@@ -188,6 +188,26 @@ You should not need the entire CMB universe to understand the thesis.
 - **Independent validation status:** [Independent Review Requested](docs/EXTERNAL_REVIEW.md)
 - **Optional symbolic-language deep dive:** [CMB-Z13™](manifestos/CMB_Z13_LANGUAGE_SPEC.md), including the 13 Guardian Modes teaching layer
 
+## Recovery & preservation
+
+CMB now publishes a machine-readable [Recovery map](machine/recovery-map.json), a strict [Recovery schema](schemas/cmb.recovery-map.v1.schema.json), and a compact [canonical retrieval corpus](datasets/cmb-canonical-corpus/) with an integrity manifest. The installed `cmb-recovery` CLI audits evidence paths, corpus record count, and the exact JSONL SHA-256.
+
+```bash
+cmb-recovery audit
+```
+
+The preservation layer records what exists and what does not. IPFS, permanent-ledger anchoring, institutional archiving, and DNA archival storage are not silently represented as deployed.
+
+```text
+IMMUTABILITY != AVAILABILITY
+CID != GUARANTEED_PERMANENCE
+DISCOVERY != TRAINING_PERMISSION
+STORAGE != BIOLOGICAL_FUNCTION
+RECOVERY > PLATFORM_DEPENDENCE
+```
+
+See [CMB Recovery & Preservation Architecture](docs/RECOVERY_AND_PRESERVATION.md).
+
 ### What CMB does not claim
 
 ```text
