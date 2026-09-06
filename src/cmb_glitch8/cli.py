@@ -9,6 +9,7 @@ import sys
 from pathlib import Path
 from typing import Sequence
 
+from .glitch3d import Glitch3DError, load_glitch3d, render_spatial_summary
 from .payments import (
     BASE_MAINNET_CAIP2,
     build_payment_required,
