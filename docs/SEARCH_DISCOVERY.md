@@ -13,7 +13,8 @@ The repository publishes a public documentation origin designed for human reader
 - Agent registry: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json
 - Machine index: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/index.json
 - Knowledge graph: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld
-- Discovery manifest: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json\n- Discovery schema: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json
+- Discovery manifest: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json
+- Discovery schema: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json
 - Concept library: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/
 - FAQ: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/
 - Case studies: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/
