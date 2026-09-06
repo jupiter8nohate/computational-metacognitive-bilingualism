@@ -84,6 +84,20 @@ def test_discovery_urls_must_be_in_published_bundle(published_site: Path) -> Non
         check_site(published_site)
 
 
+
+def test_knowledge_graph_urls_must_be_published(published_site: Path) -> None:
+    (published_site / "machine/knowledge-graph.jsonld").write_text(
+        json.dumps({
+            "@graph": [{
+                "@id": SITE_URL + "JUPITER_POLYGLOT_RUNTIME/#software",
+                "url": SITE_URL + "JUPITER_POLYGLOT_RUNTIME/",
+            }],
+        }),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="JUPITER_POLYGLOT_RUNTIME"):
+        check_site(published_site)
+
 def test_llm_map_links_must_resolve(published_site: Path) -> None:
     (published_site / "llms.txt").write_text(f"[Broken]({SITE_URL}missing/)\n", encoding="utf-8")
     with pytest.raises(ValueError, match="llms.txt"):
