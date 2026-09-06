@@ -68,5 +68,20 @@
     "schema": "schemas/cmb.stewardship-status.v1.schema.json",
     "human_document": "docs/PUBLIC_STEWARDSHIP_INCUBATION.md",
     "project_status": "public-stewardship-incubation"
+  },
+  "executable_examples": {
+    "jupiter_glitchology_polyglot_runtime": {
+      "status": "reference-demo",
+      "human_page": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/",
+      "readme": "examples/polyglot/jupiter_glitchology_runtime/README.md",
+      "go": "examples/polyglot/jupiter_glitchology_runtime/main.go",
+      "python": "examples/polyglot/jupiter_glitchology_runtime/mirror.py",
+      "semantic_roles": {
+        "go": "structure",
+        "python": "metacognition",
+        "glitchology": "human_context"
+      },
+      "boundary": "DECLARED_POLICY != TECHNICAL_ENFORCEMENT"
+    }
   }
 }
