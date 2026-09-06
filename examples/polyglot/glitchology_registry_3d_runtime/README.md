@@ -35,6 +35,7 @@ Go validates protocol identity and sequence, renders the preserved 3D Diagonal b
 Run:
 
 ~~~bash
+go test ./...
 go run .
 ~~~
 
