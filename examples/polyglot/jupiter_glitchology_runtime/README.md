@@ -23,20 +23,22 @@ The runtime is expressive code-poetry and a reference demonstration. Its
 printed assertions are authored policy/philosophical invariants; they are not
 cryptographic enforcement, legal authority, or proof about a person.
 
-## Recommended executable version
+## Canonical executable version
 
-The maintained example is in [`split/`](split/):
+The maintained example is the top-level pair in this directory:
 
-- [`main.go`](split/main.go) owns structure, types, invariant checks, and process orchestration.
-- [`mirror.py`](split/mirror.py) owns the metacognitive mirror, epistemic checks, and provenance backtrace.
+- [`main.go`](main.go) owns structure, types, invariant checks, and process orchestration.
+- [`mirror.py`](mirror.py) owns the metacognitive mirror, epistemic checks, and provenance backtrace.
 
-Run it from the split directory:
+Run it from this directory:
 
 ```bash
-cd examples/polyglot/jupiter_glitchology_runtime/split
+cd examples/polyglot/jupiter_glitchology_runtime
 python3 -m py_compile mirror.py
 go run main.go
 ```
+
+The `embedded/` and `split/` directories preserve earlier presentation variants for provenance and comparison; they are not the canonical indexing target.
 
 ## Why the languages are separated
 
