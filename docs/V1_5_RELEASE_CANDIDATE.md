@@ -1,7 +1,8 @@
 # CMB v1.5 Release Candidate Brief
 
-**Status:** PREPARATION  
+**Status:** CANDIDATE BRANCH  
 **Latest published signed release:** `v1.4.1`  
+**Candidate branch:** `release/v1.5.0rc1`  
 **Candidate package version:** `1.5.0rc1`  
 **Candidate tag:** `v1.5.0rc1`  
 **Final target:** `v1.5.0`
