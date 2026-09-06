@@ -33,7 +33,10 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.recovery-map.v1.schema.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.canonical-corpus-manifest.v1.schema.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.canonical-corpus-record.v1.schema.json",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/glitchology-identity.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/glitchology-identity.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/glitch-ir.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/glitch-ir.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/conformance/glitch-ir/v1/GLT-8101-V001.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
@@ -83,7 +86,8 @@
     "PUBLIC_STEWARDSHIP != TAX_EXEMPT_STATUS",
     "PAYMENT_CODE != FUNDRAISING",
     "DISCOVERY != TRAINING_PERMISSION",
-    "IMMUTABILITY != AVAILABILITY"
+    "IMMUTABILITY != AVAILABILITY",
+    "TRANSLATION != SEMANTIC_MUTATION"
   ],
   "research_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/",
