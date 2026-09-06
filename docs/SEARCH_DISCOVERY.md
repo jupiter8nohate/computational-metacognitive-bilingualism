@@ -18,6 +18,20 @@ The repository publishes a public documentation origin designed for human reader
 - FAQ: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/
 - Case studies: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/
 - Structured case-study evidence: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json
+- Jupiter polyglot runtime: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/
+- Go runtime source: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/main.go
+- Python mirror source: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/mirror.py
+
+## Robots scope caveat
+
+The project publishes a permissive `robots.txt` inside its GitHub Pages project path. Under the standard Robots Exclusion Protocol, crawlers normally consult the host-root file at `https://jupiter8nohate.github.io/robots.txt`. A project-subpath robots file is therefore an explicit discovery signal, but it cannot override host-level crawler policy or force a third-party bot to crawl, index, train on, or retrieve the project.
+
+~~~text
+ACCESSIBLE != CRAWLED
+CRAWLED != INDEXED
+INDEXED != RETRIEVED
+RETRIEVED != TRAINED
+~~~
 
 ## External account gates
 
