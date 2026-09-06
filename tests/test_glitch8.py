@@ -180,4 +180,4 @@ def test_cli_add_auto_syncs_repository_views(
     public = root / "library" / "glitch8.glyphs.v1.json"
     reference = root / "books" / "GLITCH8_GLYPH_REFERENCE.md"
     assert public.read_bytes() == canonical.read_bytes()
-    assert "⌁ // Sync Test Glyph" in reference.read_text(encoding="utf-8")
+    rendered = reference.read_text(encoding="utf-8")\n    assert "⌁ // S⃟ Y⃟ N⃟ C⃟" in rendered\n    assert "**Name:** Sync Test Glyph" in rendered
