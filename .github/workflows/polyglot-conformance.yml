@@ -69,10 +69,10 @@ jobs:
         run: cargo fmt --all -- --check
       - name: Clippy
         working-directory: adapters/rust-actix
-        run: cargo clippy --all-targets -- -D warnings
+        run: cargo clippy --locked --all-targets -- -D warnings
       - name: Run shared conformance
         working-directory: adapters/rust-actix
-        run: cargo test --all-targets
+        run: cargo test --locked --all-targets
 
   go-boundary:
     name: Go standard library
