@@ -91,7 +91,7 @@ Before `v1.5.0-rc1`:
 - [ ] canonical receipt verification is green.
 - [ ] CodeQL and dependency review are green.
 - [ ] Recovery audit is green.
-- [ ] TypeScript and Rust adapter dependency graphs are locked reproducibly.
+- [x] TypeScript and Rust adapter dependency graphs are locked reproducibly.
 - [ ] no new top-level package or installed CLI has been added since the freeze line.
 - [ ] open expansion PRs are held or explicitly deferred.
 
@@ -105,11 +105,10 @@ Before final `v1.5.0`:
 
 ## Known stabilization gaps
 
-1. The TypeScript adapter currently lacks a committed `package-lock.json` and
-   CI uses `npm install`; lock the dependency graph and switch the relevant
-   CI/release steps to `npm ci`.
-2. The Rust adapter currently lacks a committed `Cargo.lock`; commit the lock
-   file so conformance uses a reproducible dependency resolution.
+1. **Resolved:** the TypeScript adapter now commits `package-lock.json`, and
+   release, conformance, and steward paths use `npm ci`.
+2. **Resolved:** the Rust adapter now commits `Cargo.lock` so conformance uses
+   a fixed dependency resolution.
 3. Independent external review is requested but not yet completed.
 4. Zenodo issue #44 remains open until the public record, version DOI, concept
    DOI, and archived release files are independently verified.
