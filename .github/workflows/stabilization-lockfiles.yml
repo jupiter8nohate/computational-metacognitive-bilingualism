@@ -10,16 +10,14 @@ on:
       - "adapters/rust-actix/Cargo.toml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   generate:
-    name: Generate reproducible adapter lockfiles
+    name: Generate and commit reproducible adapter lockfiles
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
 
       - name: Generate TypeScript lockfile
         working-directory: adapters/typescript-express
@@ -34,12 +32,18 @@ jobs:
           test -s adapters/typescript-express/package-lock.json
           test -s adapters/rust-actix/Cargo.lock
 
-      - name: Upload generated lockfiles
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: stabilization-lockfiles
-          if-no-files-found: error
-          retention-days: 1
-          path: |
-            adapters/typescript-express/package-lock.json
-            adapters/rust-actix/Cargo.lock
+      - name: Commit generated lockfiles
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- adapters/typescript-express/package-lock.json adapters/rust-actix/Cargo.lock &&
+             git ls-files --error-unmatch adapters/typescript-express/package-lock.json adapters/rust-actix/Cargo.lock >/dev/null 2>&1; then
+            echo "Lockfiles are already committed."
+            exit 0
+          fi
+
+          git config user.name "cmb-stabilization-bot"
+          git config user.email "cmb-stabilization-bot@users.noreply.github.com"
+          git add adapters/typescript-express/package-lock.json adapters/rust-actix/Cargo.lock
+          git commit -m "build: lock adapter dependency graphs"
+          git push origin "HEAD:stabilization/v1.5-freeze-20260906"
