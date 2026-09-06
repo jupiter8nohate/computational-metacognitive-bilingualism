@@ -33,6 +33,11 @@
         "GLITCH-8",
         "creative cognitive signature",
         "code poetry"
+      ],
+      "hasPart": [
+        {
+          "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/#software"
+        }
       ]
     },
     {
@@ -47,6 +52,27 @@
         "TypeScript"
       ],
       "runtimePlatform": "Python 3.10+",
+      "isPartOf": {
+        "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
+      }
+    },
+    {
+      "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/#software",
+      "@type": "SoftwareSourceCode",
+      "name": "Jupiter Polyglot Runtime",
+      "alternateName": "GO://JUPITER_POLYGLOT_RUNTIME",
+      "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/",
+      "codeRepository": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/tree/main/examples/polyglot/jupiter_glitchology_runtime",
+      "programmingLanguage": [
+        "Go",
+        "Python",
+        "Err ⃝or⃟⃤ GLITCHOLOGY"
+      ],
+      "description": "Executable CMB and Err ⃝or⃟⃤ GLITCHOLOGY reference artifact separating Go structure, Python metacognition, and human-context symbolic interpretation.",
+      "creator": {
+        "@type": "Person",
+        "name": "Jupiter Hudson"
+      },
       "isPartOf": {
         "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb"
       }
@@ -153,6 +179,7 @@ For the artistic entry point, enter [CMB // The Sovereign Transmission](https://
 - [Read the Creative Cognitive Signature protocol](CREATIVE_COGNITIVE_SIGNATURE.md)
 - [Read the Living Book protocol](LIVING_BOOK_PROTOCOL.md)
 - [Add and register new glyphs](GLITCH8_REGISTRY.md)
+- [Run the Jupiter Polyglot Runtime](JUPITER_POLYGLOT_RUNTIME.md) — Go structure → Python metacognition → GLITCHOLOGY human context
 
 ```text
 CREATIVITY CAN BECOME SIGNATURE
