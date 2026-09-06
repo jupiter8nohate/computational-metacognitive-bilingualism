@@ -9,13 +9,14 @@ CMB signed releases use a tag-triggered GitHub Actions release with keyless Sigs
 3. Polyglot boundary conformance passes for TypeScript, Rust, and Go against the shared v1 fixtures, with committed TypeScript/Rust lockfiles and locked dependency installation.
 4. The MCP compatibility workflow imports the optional MCP 2.x server and the CMB-ADP self-test passes.
 5. `python -m build` produces one source distribution and one wheel.
-6. The tag exactly matches the package version, for example `v1.5.0rc1` for the Python release candidate.
+6. The tag exactly matches the package version, for example `v1.5.0-rc.1` for the release candidate.
 7. The tag points to the reviewed commit that should appear in the artifact seal receipt.
 8. The canonical public CMB artifact set is present and committed:
    - `MANIFESTO.md`
    - `manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md`
    - `CMB_Polyglot_Firewall_Specification.md`
    - `manifestos/DEMONS_NEED_ATTENTION_DNA.md`
+   - `manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md`
    - `manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`
    - `manifestos/CMB_UNCLASSIFIABLE_INDEX.md`
    - `manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md`
@@ -46,7 +47,7 @@ CMB signed releases use a tag-triggered GitHub Actions release with keyless Sigs
 The v1.5 stabilization sequence is:
 
 ```text
-v1.5.0rc1
+v1.5.0-rc.1
     ↓
 independent review of the exact candidate commit
     ↓
@@ -56,12 +57,14 @@ v1.5.0
 ```
 
 For a release candidate, first set the package/tool version consistently to the
-PEP 440 form `1.5.0rc1`, then tag the exact reviewed candidate commit:
+SemVer form `1.5.0-rc.1`, then tag the exact reviewed candidate commit:
 
 ```bash
-git tag v1.5.0rc1
-git push origin v1.5.0rc1
+git tag v1.5.0-rc.1
+git push origin v1.5.0-rc.1
 ```
+
+Python packaging may normalize `1.5.0-rc.1` to `1.5.0rc1` in built distribution metadata/filenames. The source/tool version and Git tag remain SemVer-compatible.
 
 Do not publish final `v1.5.0` until the independent-review gate in
 `docs/EXTERNAL_REVIEW.md` and issue #63 has been satisfied.
@@ -85,6 +88,7 @@ MANIFESTO.md
 manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
 CMB_Polyglot_Firewall_Specification.md
 manifestos/DEMONS_NEED_ATTENTION_DNA.md
+manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md
 manifestos/DNA_CHICKEN_RUN_MANIFESTO.md
 manifestos/CMB_UNCLASSIFIABLE_INDEX.md
 manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md

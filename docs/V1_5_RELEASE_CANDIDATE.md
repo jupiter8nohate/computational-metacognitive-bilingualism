@@ -1,9 +1,10 @@
 # CMB v1.5 Release Candidate Brief
 
-**Status:** PREPARATION  
+**Status:** CANDIDATE BRANCH  
 **Latest published signed release:** `v1.4.1`  
-**Candidate package version:** `1.5.0rc1`  
-**Candidate tag:** `v1.5.0rc1`  
+**Candidate branch:** `release/v1.5.0rc1`  
+**Candidate source/tool version:** `1.5.0-rc.1`  
+**Candidate tag:** `v1.5.0-rc.1`  
 **Final target:** `v1.5.0`
 
 This document is the short technical handoff for the v1.5 release candidate.
@@ -62,10 +63,10 @@ educational experiment, or research subsystem.
 
 ## Candidate gates
 
-Before tagging `v1.5.0rc1`:
+Before tagging `v1.5.0-rc.1`:
 
 - [ ] stabilization PR is merged into `main`;
-- [ ] package/tool/citation versions are synchronized to the release-candidate version;
+- [ ] package/tool/citation versions are synchronized to the SemVer release-candidate version;
 - [ ] Python 3.10–3.13 CI passes;
 - [ ] canonical receipt generation passes;
 - [ ] CodeQL and dependency review pass;
@@ -77,7 +78,7 @@ Before tagging `v1.5.0rc1`:
 
 ## Final v1.5.0 gate
 
-The release candidate is a review object, not the final validation claim.
+The release candidate is a review object, not the final validation claim. Python build tooling may normalize `1.5.0-rc.1` to `1.5.0rc1` in wheel/sdist metadata and filenames; the CMB receipt/tool source version remains SemVer `1.5.0-rc.1`.
 
 Before final `v1.5.0`:
 
