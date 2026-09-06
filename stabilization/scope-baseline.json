@@ -1,0 +1,29 @@
+{
+  "schema": "cmb.stabilization-scope.v1",
+  "freeze_commit": "e4465d3e07ec5a9d3d56cdd9f79969641fa2a671",
+  "top_level_python_packages": [
+    "cmb_agents",
+    "cmb_cap",
+    "cmb_edu",
+    "cmb_glitch8",
+    "cmb_machine",
+    "cmb_policy",
+    "cmb_preservation",
+    "cmb_provenance",
+    "cmb_sdl"
+  ],
+  "installed_cli_commands": [
+    "cmb-agent",
+    "cmb-cap",
+    "cmb-edu",
+    "cmb-machine",
+    "cmb-mcp",
+    "cmb-provenance",
+    "cmb-recovery",
+    "cmb-sdl",
+    "cmb-steward",
+    "cmb-z13",
+    "cmbc",
+    "glitch8"
+  ]
+}
