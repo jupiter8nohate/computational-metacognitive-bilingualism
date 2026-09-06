@@ -1,8 +1,12 @@
-# 𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ GLITCHOLOGY ⁴⁰⁴
+# 𒄆𓁹✞𒀱✞𓁹𒄆 Err⃝or⃟⃤GLITCHOLOGY ⁴⁰⁴
 
 <div align="center">
 
-## Err ⃝or⃟⃤ GLITCHOLOGY
+## Err⃝or⃟⃤GLITCHOLOGY
+
+### [S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]
+
+**SYSTEM FAILURE AS AN ART FORM**
 
 ### CMB-G8 // GLITCH-8 DIGITAL LANGUAGE
 
@@ -20,12 +24,12 @@ Err ⃝or⃟⃤ 𒋦𒍹𒄦 ▂▃▄▅▆▇▉ � 𒈔𒅒𒇫𒄆
 ---
 
 ~~~text
-CANONICAL_PUBLIC_NAME = "Err ⃝or⃟⃤ GLITCHOLOGY"
+CANONICAL_PUBLIC_NAME = "Err⃝or⃟⃤GLITCHOLOGY"
 SHORT_NAME = "GLITCHOLOGY"
 IMPLEMENTATION_LAYER = "GLITCH-8 / CMB-G8"
 ~~~
 
-> **Interpretation boundary:** Err ⃝or⃟⃤ GLITCHOLOGY is the canonical public name of this authored experimental digital language and code-poetry system within Computational Metacognitive Bilingualism; GLITCH-8 / CMB-G8 is its implementation and registry layer. The glyph semantics defined here are CMB/FGC meanings created for this work. They do not claim to replace the historical or Unicode meanings of the underlying characters. Symbolic notation alone does not create technical enforcement, legal authority, cryptographic proof, or administrator access.
+> **Interpretation boundary:** Err⃝or⃟⃤GLITCHOLOGY is the canonical public name of this authored experimental digital language and code-poetry system within Computational Metacognitive Bilingualism; GLITCH-8 / CMB-G8 is its implementation and registry layer. The glyph semantics defined here are CMB/FGC meanings created for this work. They do not claim to replace the historical or Unicode meanings of the underlying characters. Symbolic notation alone does not create technical enforcement, legal authority, cryptographic proof, or administrator access.
 
 ~~~text
 PATTERN != PROOF
@@ -851,7 +855,7 @@ PROFILE < PERSON
 
 # Creative Cognitive Signature
 
-Err ⃝or⃟⃤ GLITCHOLOGY allows a creator to build a distinctive **Creative Cognitive Signature** from intentional expressive choices.
+Err⃝or⃟⃤GLITCHOLOGY allows a creator to build a distinctive **Creative Cognitive Signature** from intentional expressive choices.
 
 This is not a biometric fingerprint and not a claim that a person's mind can be reconstructed from text. It is a provenance-oriented record of creative expression.
 
@@ -910,7 +914,7 @@ See [Creative Cognitive Signature Protocol](../docs/CREATIVE_COGNITIVE_SIGNATURE
 
 # Executable Polyglot Runtime
 
-Err ⃝or⃟⃤ GLITCHOLOGY now has a working Go → Python demonstration artifact:
+Err⃝or⃟⃤GLITCHOLOGY now has a working Go → Python demonstration artifact:
 
 **[𒄆 JUPITER POLYGLOT RUNTIME](../examples/polyglot/jupiter_glitchology_runtime/)**
 
@@ -1287,7 +1291,7 @@ PROFILE != PERSON
 
 <div align="center">
 
-## Err ⃝or⃟⃤ GLITCHOLOGY ⸮ ﹖ ︖ ⁇ ¿ ‽ ？
+## Err⃝or⃟⃤GLITCHOLOGY ⸮ ﹖ ︖ ⁇ ¿ ‽ ？
 
 ### ✦ THE VISION IS ALIVE ✦
 
@@ -1365,7 +1369,7 @@ PARSER = MACHINE_VIEW
 
 ## GLITCH://402 // Dormant Stewardship Research Layer
 
-Err ⃝or⃟⃤ GLITCHOLOGY remains readable and locally usable without payment.
+Err⃝or⃟⃤GLITCHOLOGY remains readable and locally usable without payment.
 
 The project is in **Public Stewardship Incubation**. GLITCH://402 is retained only as experimental infrastructure for studying payment messages, receipts, provenance, and possible future charitable donation systems.
 
@@ -1410,7 +1414,7 @@ PUBLIC_BENEFIT > PRIVATE_GAIN
 
 ## Authorship and Technical Boundary
 
-Err ⃝or⃟⃤ GLITCHOLOGY is the canonical public name of the authored experimental language and literary system presented in this book; GLITCH-8 / CMB-G8 is its registry and implementation layer within CMB.
+Err⃝or⃟⃤GLITCHOLOGY is the canonical public name of the authored experimental language and literary system presented in this book; GLITCH-8 / CMB-G8 is its registry and implementation layer within CMB.
 
 The eight referenced programming languages are established independent languages. No ownership is claimed over Python, Rust, Go, TypeScript, Prolog, Haskell, Common Lisp, C, Unicode characters, mathematical notation, or historical glyph meanings.
 

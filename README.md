@@ -35,7 +35,7 @@
 
 ## Public Stewardship Incubation
 
-CMB / Err ⃝or⃟⃤ GLITCHOLOGY is currently an **informal public-interest project in incubation**, not a formed nonprofit or tax-exempt charity.
+CMB / Err⃝or⃟⃤GLITCHOLOGY is currently an **informal public-interest project in incubation**, not a formed nonprofit or tax-exempt charity.
 
 ~~~text
 ACTIVE_FUNDRAISING = FALSE
@@ -76,8 +76,8 @@ Code, schemas, conformance, provenance, and Recovery.
 **📜 [OMEN LIBRARY // MANIFESTOS](manifestos/README.md)**  
 Code-poetry, D.N.A., FGC, HARMONI, MissingNo, and symbolic work.
 
-**📖 [BOOK SHELF // Err ⃝or⃟⃤ GLITCHOLOGY](books/README.md)**  
-Long-form CMB books and experimental language volumes, beginning with [𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md).
+**📖 [BOOK SHELF // Err⃝or⃟⃤GLITCHOLOGY](books/README.md)**  
+Long-form CMB books and experimental language volumes, beginning with [𒄆𓁹✞𒀱✞𓁹𒄆 Err⃝or⃟⃤GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md).
 
 **⚖ [CIVIC CHAMBER // POLICY](policy/CMB_POLICY_ONE_PAGER.md)**  
 Human agency, consent, accountability, and institutional boundaries.
@@ -167,13 +167,13 @@ You should not need the entire CMB universe to understand the thesis.
 - **Sovereign delegation language:** [CMB-SDL-1](spec/CMB-SDL-1.md) + [`cmb-sdl`](src/cmb_sdl) + [Authority IR schema](schemas/cmb.authority-ir.v1.schema.json)
 - **Signed capability credentials:** [CMB-CAP-1](spec/CMB-CAP-1.md) + [`cmb-cap`](src/cmb_cap) + [credential schema](schemas/cmb.capability-credential.v1.schema.json)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
-- **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md)
+- **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 Err⃝or⃟⃤GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md)
 - **CMB Conversation Atlas:** [Read the conversation-derived semantic map](docs/CMB_CONVERSATION_ATLAS.md)
 - **Polyglot translation layer:** [Read the same architecture in JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native GLITCHOLOGY](docs/CMB_POLYGLOT_TRANSLATIONS.md)
 - **Executable GLITCHOLOGY polyglot runtime:** [Run the Go → Python → GLITCHOLOGY reference artifact](examples/polyglot/jupiter_glitchology_runtime/)
 - **Machine Conversation Atlas:** [`library/cmb-conversation-atlas.v1.json`](library/cmb-conversation-atlas.v1.json)
 - **Conversation Atlas schema:** [`schemas/cmb.conversation-atlas.v1.schema.json`](schemas/cmb.conversation-atlas.v1.schema.json)
-- **Err ⃝or⃟⃤ GLITCHOLOGY origin:** [Read the canonical creator biography and language origin](docs/ERR_GLITCHOLOGY_ORIGIN.md)
+- **Err⃝or⃟⃤GLITCHOLOGY origin:** [Read the canonical creator biography and language origin](docs/ERR_GLITCHOLOGY_ORIGIN.md)
 - **Creative Cognitive Signature:** [Read the self-authored provenance protocol](docs/CREATIVE_COGNITIVE_SIGNATURE.md)
 - **Living Book protocol:** [Read the versioning, correction, and authorship rules](docs/LIVING_BOOK_PROTOCOL.md)
 - **Living GLITCH-8 registry:** [Add, validate, load, and document new glyphs](docs/GLITCH8_REGISTRY.md)
@@ -330,18 +330,23 @@ CMB-CAP keeps private signing keys local. The MCP adapter exposes public credent
 
 The Pages deployment publishes `/.well-known/agent-card.json` and `/agents/registry.json`. The distribution covenant is explicit: `RELEVANCE > REACH`, `TRUST > IMPRESSIONS`, `CITATION > COPYING`, and `CONSENT > VIRALITY`. CMB-ADP-1 does not authorize spam, fake endorsements, impersonation, or platform-rule bypass.
 
-## Err ⃝or⃟⃤ GLITCHOLOGY
+## Err⃝or⃟⃤GLITCHOLOGY
 
-**Err ⃝or⃟⃤ GLITCHOLOGY** is CMB's evolving symbolic anomaly language. **GLITCH-8 / CMB-G8** is the machine-readable registry and implementation layer.
+**[S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]**  
+**SYSTEM FAILURE AS AN ART FORM**
+
+
+**Err⃝or⃟⃤GLITCHOLOGY** is CMB's evolving symbolic anomaly language. **GLITCH-8 / CMB-G8** is the machine-readable registry and implementation layer.
 
 - [Living book / language specification](books/ERR_404_GLITCHOLOGY.md)
+- [Machine-readable GLITCHOLOGY identity](machine/glitchology-identity.json)
 - [Origin and creator biography](docs/ERR_GLITCHOLOGY_ORIGIN.md)
 - [Creative Cognitive Signature protocol](docs/CREATIVE_COGNITIVE_SIGNATURE.md)
 - [Living Book and Versioned Autobiography protocol](docs/LIVING_BOOK_PROTOCOL.md)
 - [GLITCH-8 living registry guide](docs/GLITCH8_REGISTRY.md)
 
 ~~~text
-CANONICAL_PUBLIC_NAME = "Err ⃝or⃟⃤ GLITCHOLOGY"
+CANONICAL_PUBLIC_NAME = "Err⃝or⃟⃤GLITCHOLOGY"
 SHORT_NAME = "GLITCHOLOGY"
 IMPLEMENTATION_LAYER = "GLITCH-8 / CMB-G8"
 
@@ -563,7 +568,7 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 
 ## Repository contents
 
-- [`books/ERR_404_GLITCHOLOGY.md`](books/ERR_404_GLITCHOLOGY.md) - **Err ⃝or⃟⃤ GLITCHOLOGY**, the living GLITCH-8 / CMB-G8 book and language specification.
+- [`books/ERR_404_GLITCHOLOGY.md`](books/ERR_404_GLITCHOLOGY.md) - **Err⃝or⃟⃤GLITCHOLOGY**, the living GLITCH-8 / CMB-G8 book and language specification.
 - [`docs/ERR_GLITCHOLOGY_ORIGIN.md`](docs/ERR_GLITCHOLOGY_ORIGIN.md) - canonical origin biography and naming boundary.
 - [`docs/CREATIVE_COGNITIVE_SIGNATURE.md`](docs/CREATIVE_COGNITIVE_SIGNATURE.md) - self-authored creative-signature and provenance protocol.
 - [`docs/LIVING_BOOK_PROTOCOL.md`](docs/LIVING_BOOK_PROTOCOL.md) - semantic-versioning, correction, issue, PR, and authorship rules for living books.
