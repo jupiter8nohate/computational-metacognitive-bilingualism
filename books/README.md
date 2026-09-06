@@ -10,7 +10,9 @@
 
 ---
 
-## 𒄆𓁹✞𒀱✞𓁹𒄆 Err ⃝or⃟⃤ GLITCHOLOGY ⁴⁰⁴
+## 𒄆𓁹✞𒀱✞𓁹𒄆 E⃟ r⃟ r⃟⃝ o⃟ r⃟⃤ G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ O⃟ L⃟ O⃟ G⃟ Y⃟ ⁴⁰⁴
+
+**[S⃟ Y⃟ S⃟ T⃟ E⃟ M⃟  F⃟ A⃟ I⃟ L⃟ U⃟ R⃟ E⃟  A⃟ S⃟  A⃟ N⃟  A⃟ R⃟ T⃟  F⃟ O⃟ R⃟ M⃟]**
 
 **[Read the book](ERR_404_GLITCHOLOGY.md)**
 
@@ -20,7 +22,7 @@
 **[Creative Cognitive Signature](../docs/CREATIVE_COGNITIVE_SIGNATURE.md)**  
 **[Living Book Protocol](../docs/LIVING_BOOK_PROTOCOL.md)**
 
-> **Err ⃝or⃟⃤ GLITCHOLOGY** is the canonical public name of the experimental CMB digital language; **GLITCH-8 / CMB-G8** is its registry and implementation layer for representing anomaly, uncertainty, representation boundaries, consent, human appeal, error domains, context, recovery, and creative provenance.
+> **Err⃝or⃟⃤GLITCHOLOGY** is the canonical public name of the experimental CMB digital language; **GLITCH-8 / CMB-G8** is its registry and implementation layer for representing anomaly, uncertainty, representation boundaries, consent, human appeal, error domains, context, recovery, and creative provenance.
 
 ~~~text
 PATTERN != PROOF
