@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from cmb_provenance import load_receipt
+from cmb_provenance import __version__, load_receipt
 from cmb_provenance.release import CANONICAL_PUBLIC_ARTIFACTS, build_checksums
 
 
@@ -132,3 +132,41 @@ def test_legacy_bootstrap_receipt_remains_valid_history() -> None:
         "manifestos/DEMONS_NEED_ATTENTION_DNA.md",
     )
     assert receipt.coverage.excludes_unlisted is True
+
+
+def test_release_version_metadata_is_synchronized() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+
+    pyproject = (repository_root / "pyproject.toml").read_text(encoding="utf-8")
+    citation_cff = (repository_root / "CITATION.cff").read_text(encoding="utf-8")
+    citation_bib = (repository_root / "CITATION.bib").read_text(encoding="utf-8")
+
+    assert f'version = "{__version__}"' in pyproject
+    assert f"version: {__version__}" in citation_cff
+    assert f"version = {{{__version__}}}" in citation_bib
+
+
+def test_polyglot_release_dependency_resolution_is_locked() -> None:
+    repository_root = Path(__file__).resolve().parents[1]
+
+    assert (repository_root / "adapters" / "typescript-express" / "package-lock.json").is_file()
+    assert (repository_root / "adapters" / "rust-actix" / "Cargo.lock").is_file()
+
+    release_workflow = (
+        repository_root / ".github" / "workflows" / "release.yml"
+    ).read_text(encoding="utf-8")
+    polyglot_workflow = (
+        repository_root / ".github" / "workflows" / "polyglot-conformance.yml"
+    ).read_text(encoding="utf-8")
+    steward_workflow = (
+        repository_root / ".github" / "workflows" / "cmb-steward-agents.yml"
+    ).read_text(encoding="utf-8")
+
+    assert "npm ci --ignore-scripts --no-audit --no-fund" in release_workflow
+    assert "npm ci --ignore-scripts --no-audit --no-fund" in polyglot_workflow
+    assert "npm ci --ignore-scripts --no-audit --no-fund" in steward_workflow
+
+    assert "cargo clippy --locked --all-targets -- -D warnings" in release_workflow
+    assert "cargo test --locked --all-targets" in release_workflow
+    assert "cargo clippy --locked --all-targets -- -D warnings" in polyglot_workflow
+    assert "cargo test --locked --all-targets" in polyglot_workflow
