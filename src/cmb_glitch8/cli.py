@@ -67,6 +67,30 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=Path("books/GLITCH8_GLYPH_REFERENCE.md"),
     )
+    spatial = subparsers.add_parser(
+        "3d",
+        help="Parse, validate, and render GLITCH-3D spatial programs.",
+    )
+    spatial_sub = spatial.add_subparsers(dest="spatial_command", required=True)
+
+    spatial_parse = spatial_sub.add_parser(
+        "parse",
+        help="Parse GLITCH-3D source and emit the canonical spatial AST.",
+    )
+    spatial_parse.add_argument("source", type=Path)
+
+    spatial_validate = spatial_sub.add_parser(
+        "validate",
+        help="Validate GLITCH-3D source and print its deterministic graph digest.",
+    )
+    spatial_validate.add_argument("source", type=Path)
+
+    spatial_render = spatial_sub.add_parser(
+        "render",
+        help="Render a deterministic human-readable spatial summary.",
+    )
+    spatial_render.add_argument("source", type=Path)
+
     payment = subparsers.add_parser(
         "payment",
         help="Create x402 requirements and validate GLITCH://402 receipts.",
