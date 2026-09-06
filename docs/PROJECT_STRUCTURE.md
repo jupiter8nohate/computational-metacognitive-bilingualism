@@ -169,3 +169,21 @@ BUILD -> DOCUMENT -> TEST -> LEARN -> GOVERN
 ~~~
 
 The future-foundation files are planning artifacts, not adopted bylaws, a trust instrument, tax-exempt status, or a transfer of IP.
+
+## Recovery and preservation layer
+
+- `src/cmb_preservation/` - zero-dependency repository audit engine and installed `cmb-recovery` CLI.
+- `machine/recovery-map.json` / `schemas/cmb.recovery-map.v1.schema.json` - explicit status map for implemented, research-only, and not-configured integrity/archive layers.
+- `datasets/cmb-canonical-corpus/` - compact JSONL retrieval corpus with strict record/manifest schemas and byte-level SHA-256 integrity.
+- `docs/RECOVERY_AND_PRESERVATION.md` - preservation architecture and boundaries for IPFS, ledger anchors, C2PA media, AI-native retrieval, and non-living DNA storage research.
+- `tests/test_preservation.py` - schema, digest, record-count, and false-permanence regression checks.
+
+The Recovery layer deliberately distinguishes verifiable integrity from availability and permanence.
+
+~~~text
+IMMUTABILITY != AVAILABILITY
+CID != GUARANTEED_PERMANENCE
+DISCOVERY != TRAINING_PERMISSION
+STORAGE != BIOLOGICAL_FUNCTION
+RECOVERY > PLATFORM_DEPENDENCE
+~~~
