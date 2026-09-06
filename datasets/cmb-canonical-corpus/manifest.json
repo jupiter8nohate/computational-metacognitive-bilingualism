@@ -1,0 +1,18 @@
+{
+  "schema_version":"cmb.canonical-corpus-manifest.v1",
+  "framework":"Computational Metacognitive Bilingualism",
+  "format":"jsonl",
+  "record_schema":"schemas/cmb.canonical-corpus-record.v1.schema.json",
+  "corpus_file":"datasets/cmb-canonical-corpus/corpus.jsonl",
+  "record_count":8,
+  "sha256":"00e6bd6ab68aa0448fda689e9a758c974ff1871437a968050951c135c2fe146d",
+  "canonical_repository":"https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
+  "license_reference":"CONTENT_LICENSE.md",
+  "boundaries":[
+    "MACHINE_READABLE != PUBLIC_DOMAIN",
+    "DISCOVERY != TRAINING_PERMISSION",
+    "INDEXED != ENDORSED",
+    "CANONICAL_RECORD != COMPLETE_PERSON",
+    "CITATION > COPYING"
+  ]
+}

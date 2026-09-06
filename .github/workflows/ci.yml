@@ -29,6 +29,8 @@ jobs:
         run: pytest
       - name: Run installed self-test
         run: cmb-provenance selftest
+      - name: Audit Recovery and canonical corpus
+        run: cmb-recovery audit
       - name: GLITCH-8 registry smoke test
         run: |
           glitch8 glyph validate
@@ -85,6 +87,7 @@ jobs:
           cmb-agent selftest
           cmb-agent recommend 'algorithmic profiling evidence'
           cmb-machine targets
+          cmb-recovery audit
           cmb-machine compile-core --output-dir /tmp/cmb-machine
           cmb-sdl compile examples/cmb_sdl/research.cmb --output /tmp/research.authority.json
           glitch8 glyph validate

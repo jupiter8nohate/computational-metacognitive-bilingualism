@@ -33,6 +33,13 @@ Version 1.4.x uses a tag-triggered GitHub Actions release with keyless Sigstore 
    - `agents/agent-card.json`
    - `docs/AGENT_DISCOVERY_PROTOCOL.md`
    - `schemas/cmb.agent-registry.v1.schema.json`
+   - `docs/RECOVERY_AND_PRESERVATION.md`
+   - `machine/recovery-map.json`
+   - `schemas/cmb.recovery-map.v1.schema.json`
+   - `datasets/cmb-canonical-corpus/manifest.json`
+   - `datasets/cmb-canonical-corpus/corpus.jsonl`
+   - `schemas/cmb.canonical-corpus-manifest.v1.schema.json`
+   - `schemas/cmb.canonical-corpus-record.v1.schema.json`
 
 ## Publish
 
@@ -77,6 +84,13 @@ agents/registry.json
 agents/agent-card.json
 docs/AGENT_DISCOVERY_PROTOCOL.md
 schemas/cmb.agent-registry.v1.schema.json
+docs/RECOVERY_AND_PRESERVATION.md
+machine/recovery-map.json
+schemas/cmb.recovery-map.v1.schema.json
+datasets/cmb-canonical-corpus/manifest.json
+datasets/cmb-canonical-corpus/corpus.jsonl
+schemas/cmb.canonical-corpus-manifest.v1.schema.json
+schemas/cmb.canonical-corpus-record.v1.schema.json
 ```
 
 Because the receipt uses explicit-file-set coverage, adding a file to the repository does not silently add it to the provenance claim. New canonical artifacts must be deliberately added to `CANONICAL_PUBLIC_ARTIFACTS`, the tests, and this documentation.

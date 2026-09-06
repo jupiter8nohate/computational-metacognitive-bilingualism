@@ -6,6 +6,8 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Added
 
+- Added CMB-RECOVERY-1: a machine-readable Recovery map, strict schema, `cmb-recovery` audit CLI, canonical JSONL retrieval corpus with integrity manifest and dataset card, Pages/LLM discovery wiring, and CI checks that reject false permanence/availability claims or corpus drift.
+- Added explicit preservation boundaries for content-addressed archives, permanent-ledger research, C2PA media provenance, AI-native retrieval, and non-living DNA archival research: `IMMUTABILITY != AVAILABILITY`, `DISCOVERY != TRAINING_PERMISSION`, and `STORAGE != BIOLOGICAL_FUNCTION`.
 - Added a strict machine-readable Public Stewardship Incubation status record and JSON Schema, promoted the status into the public docs and LLM discovery maps, and added regression tests that keep active fundraising, paid access, production settlement, project treasury, and tax-exempt claims disabled during incubation.
 - Established the canonical public name **Err ⃝or⃟⃤ GLITCHOLOGY**, while retaining GLITCHOLOGY as a short name and GLITCH-8 / CMB-G8 as the registry and implementation layer.
 - Added a canonical origin biography, a Creative Cognitive Signature protocol, and a Living Book / Versioned Autobiography protocol.

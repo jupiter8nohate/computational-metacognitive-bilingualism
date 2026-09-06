@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "datasets/**"
       - "assets/**"
       - "machine/**"
       - "agents/**"
@@ -128,6 +129,12 @@ jobs:
               f"{site}/concepts/cmb-provenance/",
               f"{site}/machine/index.json",
               f"{site}/machine/discovery-manifest.json",
+              f"{site}/machine/recovery-map.json",
+              f"{site}/datasets/cmb-canonical-corpus/manifest.json",
+              f"{site}/datasets/cmb-canonical-corpus/corpus.jsonl",
+              f"{site}/schemas/cmb.recovery-map.v1.schema.json",
+              f"{site}/schemas/cmb.canonical-corpus-manifest.v1.schema.json",
+              f"{site}/schemas/cmb.canonical-corpus-record.v1.schema.json",
               f"{site}/machine/knowledge-graph.jsonld",
               f"{site}/.well-known/agent-card.json",
               f"{site}/agents/registry.json",

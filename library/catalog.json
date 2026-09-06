@@ -115,6 +115,81 @@
       "declared_meaning": "Defines C2PA as the external provenance interoperability target and explicitly states that current cmb_provenance is not C2PA-conformant."
     },
     {
+      "id": "cmb-canonical-corpus",
+      "title": "CMB Canonical Retrieval Corpus v1",
+      "path": "datasets/cmb-canonical-corpus/corpus.jsonl",
+      "format": "jsonl",
+      "kind": "machine-readable canonical retrieval corpus",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "CMB invariants",
+        "retrieval",
+        "citation",
+        "canonical meaning",
+        "AI discovery"
+      ],
+      "declared_meaning": "Compact source-preserving records for core CMB invariants; publication supports retrieval and citation but does not itself grant training permission or public-domain status."
+    },
+    {
+      "id": "cmb-canonical-corpus-manifest",
+      "title": "CMB Canonical Corpus Manifest v1",
+      "path": "datasets/cmb-canonical-corpus/manifest.json",
+      "format": "json",
+      "kind": "machine-readable corpus integrity manifest",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "canonical corpus",
+        "JSONL",
+        "SHA-256",
+        "record count",
+        "retrieval"
+      ],
+      "declared_meaning": "Binds the canonical retrieval corpus to a strict record schema, exact record count, licensing reference, and SHA-256 digest."
+    },
+    {
+      "id": "cmb-canonical-corpus-manifest-schema",
+      "title": "CMB Canonical Corpus Manifest v1 Schema",
+      "path": "schemas/cmb.canonical-corpus-manifest.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable corpus manifest schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "corpus manifest",
+        "SHA-256",
+        "retrieval integrity"
+      ],
+      "declared_meaning": "Strict validation contract for the canonical corpus manifest."
+    },
+    {
+      "id": "cmb-canonical-corpus-record-schema",
+      "title": "CMB Canonical Corpus Record v1 Schema",
+      "path": "schemas/cmb.canonical-corpus-record.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable corpus record schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "CMB invariant",
+        "canonical source",
+        "epistemic status",
+        "licensing boundary"
+      ],
+      "declared_meaning": "Strict validation contract for individual canonical CMB retrieval records."
+    },
+    {
       "id": "cmb-case-google-generative-misclassification-2026-09-04",
       "title": "Case Study 001 - Google Generative Narrative Misclassification",
       "path": "research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md",
@@ -696,6 +771,64 @@
         "polyglot expression"
       ],
       "declared_meaning": "Expresses the CMB motto and mission across Python, Rust, Go, TypeScript, Prolog, Haskell, Common Lisp, and C while preserving the boundary between machine interpretation and human authority."
+    },
+    {
+      "id": "cmb-recovery-architecture",
+      "title": "CMB Recovery & Preservation Architecture",
+      "path": "docs/RECOVERY_AND_PRESERVATION.md",
+      "format": "markdown",
+      "kind": "preservation architecture",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "recovery",
+        "preservation",
+        "content addressing",
+        "C2PA",
+        "archival boundaries",
+        "AI-native retrieval",
+        "DNA archival research"
+      ],
+      "declared_meaning": "Defines layered CMB preservation without claiming guaranteed permanence, availability, blockchain deployment, or biological storage."
+    },
+    {
+      "id": "cmb-recovery-map",
+      "title": "CMB Recovery Map v1",
+      "path": "machine/recovery-map.json",
+      "format": "json",
+      "kind": "machine-readable preservation status map",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "recovery",
+        "integrity",
+        "archive status",
+        "evidence paths",
+        "availability boundary"
+      ],
+      "declared_meaning": "Machine-readable inventory of implemented, research-only, and not-configured preservation layers with explicit evidence and anti-overclaim boundaries."
+    },
+    {
+      "id": "cmb-recovery-map-schema",
+      "title": "CMB Recovery Map v1 Schema",
+      "path": "schemas/cmb.recovery-map.v1.schema.json",
+      "format": "json",
+      "kind": "machine-readable preservation schema",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "recovery map",
+        "preservation status",
+        "false permanence prevention"
+      ],
+      "declared_meaning": "Strict schema requiring explicit preservation status and forbidding claims of guaranteed permanence, availability, or deployed DNA storage."
     },
     {
       "id": "cmb-sovereign-transmission",

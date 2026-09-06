@@ -34,6 +34,8 @@ jobs:
         run: pytest
       - name: Run installed self-test
         run: cmb-provenance selftest
+      - name: Audit Recovery and canonical corpus
+        run: cmb-recovery audit
 
   interoperability:
     name: v1.4 interoperability release gate
@@ -126,6 +128,7 @@ jobs:
           cmb-agent --version
           cmb-agent selftest
           cmb-machine targets
+          cmb-recovery audit
           cmb-machine compile-core --output-dir /tmp/cmb-machine-release
           cmb-sdl compile examples/cmb_sdl/research.cmb --output /tmp/research.authority.json
           cmbc validate --policy cmb.toml

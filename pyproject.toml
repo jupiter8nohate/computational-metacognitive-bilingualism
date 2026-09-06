@@ -53,6 +53,7 @@ cmb-edu = "cmb_edu.cli:main"
 cmb-agent = "cmb_agents.cli:main"
 cmb-mcp = "cmb_agents.mcp_server:main"
 cmb-machine = "cmb_machine.cli:main"
+cmb-recovery = "cmb_preservation.cli:main"
 cmb-sdl = "cmb_sdl.cli:main"
 cmb-cap = "cmb_cap.cli:main"
 cmbc = "cmb_policy.runtime_cli:main"
@@ -74,6 +75,7 @@ cmb_agents = ["py.typed"]
 cmb_sdl = ["py.typed"]
 cmb_cap = ["py.typed"]
 cmb_glitch8 = ["py.typed", "glyphs.v1.json"]
+cmb_preservation = ["py.typed"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

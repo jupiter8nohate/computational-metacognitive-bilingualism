@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "datasets/**"
       - "assets/**"
       - "machine/**"
       - "agents/**"
@@ -33,6 +34,7 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "datasets/**"
       - "assets/**"
       - "machine/**"
       - "agents/**"
