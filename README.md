@@ -46,6 +46,8 @@ commands are out of scope unless required for correctness or security and
 explicitly reviewed as a freeze-boundary exception.
 
 **Stabilization contract:** [CMB v1.5 Stabilization Cycle](docs/STABILIZATION_CYCLE.md)
+**Release-candidate handoff:** [CMB v1.5 Release Candidate Brief](docs/V1_5_RELEASE_CANDIDATE.md)  
+**Tracked gates:** [dependency reproducibility #62](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/62) · [independent review #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) · [Zenodo/DOI #44](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/44)
 
 ```text
 FEATURE_VELOCITY <= AUDIT_CAPACITY
