@@ -15,13 +15,23 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Agent roles
 
-The scheduled steward executes five roles:
+The scheduled steward now separates deterministic maintenance from read-only specialist review:
 
 1. **RECOVERY** — runs the repository test suite, checks patch integrity, and verifies repairs.
 2. **GLITCH_IR_CONFORMANCE** — runs the GLT-8101 eight-language semantic conformance harness.
 3. **REGISTRY_SYNC** — regenerates the GLITCH-8 human reference and public machine-readable registry mirror.
 4. **DOCUMENTATION** — performs a strict public documentation build and verifies public discovery assets.
-5. **STEWARD** — when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
+5. **CANON** — checks GLITCH-8 source/mirror/reference semantic consistency.
+6. **ACCESSIBILITY** — checks primary entry surfaces for alt-text and CSS accessibility safeguards.
+7. **RELEASE** — checks repository-declared v1.5 release boundaries without self-certifying external gates.
+8. **LIBRARIAN** — checks documentation navigation targets and catalogue integrity.
+9. **ARCHAEOLOGIST** — backtraces the canonical registry through repository Git history.
+10. **DISCOVERY** — validates the machine-discovery contract.
+11. **SECURITY** — verifies repository-side security-control files are present.
+12. **REVIEWER** — rejects evidence packets that escalate authority or self-certify external gates.
+13. **STEWARD** — when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
+
+The specialist roles are read-only. They communicate through structured evidence packets. See [CMB Specialist Agent Operating Model](AGENT_OPERATING_MODEL.md).
 
 ## Schedule
 
@@ -115,6 +125,18 @@ cmb-steward validate-diff
 ~~~
 
 For local AI repair, set `OPENAI_API_KEY` and `CMB_AGENT_MODEL` in the environment. Do not commit API keys.
+
+## Structured specialist evidence
+
+Every specialist emits a packet with `agent`, `task`, `observed`, `evidence`, `confidence`, `recommended_action`, `authority`, and `severity`. The Reviewer inspects those packets before they are treated as Steward evidence.
+
+The latest repository-side audit is also rendered as [CMB System Status](generated/CMB_SYSTEM_STATUS.md) and `generated/cmb-system-status.json`. These files do not claim to verify GitHub platform settings, an external reviewer, or a DOI.
+
+```text
+PACKET != PROOF
+CONFIDENCE != AUTHORITY
+SELF_REVIEW != INDEPENDENT_REVIEW
+```
 
 ## Practical work it can perform
 
