@@ -1,0 +1,51 @@
+/* Accessibility safeguards stay separate so aesthetics cannot silently override them. */
+
+.rst-content a:focus-visible,
+.wy-menu-vertical a:focus-visible,
+.cmb-card:focus-visible,
+.cmb-omen-card:focus-visible,
+.cmb-lane:focus-visible {
+  outline: 3px solid var(--cmb-evidence);
+  outline-offset: 4px;
+}
+
+.rst-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rst-content table {
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+
+  .cmb-card,
+  .cmb-omen-card,
+  .cmb-lane {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --cmb-text: #fff;
+    --cmb-muted: #d0d0d0;
+    --cmb-border: #858585;
+  }
+
+  .cmb-lane,
+  .cmb-status-led,
+  .cmb-evidence-note,
+  .cmb-omen,
+  .cmb-omen-card,
+  .cmb-federal-seal {
+    border-color: #aaa;
+  }
+}
