@@ -99,6 +99,45 @@
 
 </div>
 
+
+## Choose your depth
+
+<div class="cmb-entry-lanes">
+
+<a class="cmb-lane cmb-lane--human" href="concepts/what-is-cmb/">
+<strong>🦩 HUMAN // Understand</strong>
+<span>Start with the thesis, rights boundaries, cognitive sovereignty, and why human judgment remains authoritative.</span>
+</a>
+
+<a class="cmb-lane cmb-lane--engineer" href="DEVELOPERS/">
+<strong>⌘ ENGINEER // Build + Verify</strong>
+<span>Move into APIs, schemas, provenance, conformance, Recovery, structured agent evidence, and release gates.</span>
+</a>
+
+<a class="cmb-lane cmb-lane--archive" href="SEARCH_FOR_TRUTH/">
+<strong>𓁹 ARCHIVE // Explore</strong>
+<span>Enter Err ⃝or⃟⃤ GLITCHOLOGY, HARMONI, D.N.A., code-poetry, symbolic systems, and provenance backtraces.</span>
+</a>
+
+</div>
+
+## 𓁹 CMB Control Room
+
+<div class="cmb-control-room">
+
+<div class="cmb-status-led cmb-status-led--warn"><strong>RELEASE</strong><span>v1.5.0-rc.1 CANDIDATE</span></div>
+<div class="cmb-status-led cmb-status-led--warn"><strong>EXTERNAL REVIEW</strong><span>PENDING</span></div>
+<div class="cmb-status-led cmb-status-led--warn"><strong>DOI / ARCHIVE</strong><span>VERIFYING</span></div>
+
+</div>
+
+Repository-side specialist audits now publish a [CMB System Status](generated/CMB_SYSTEM_STATUS.md) surface with structured evidence packets. External gates are deliberately kept separate from self-reported automation.
+
+```text
+SELF_TEST != INDEPENDENT_AUDIT
+GENERATED != VERIFIED
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
 ## Current stewardship status
 
 <div class="cmb-boundary">

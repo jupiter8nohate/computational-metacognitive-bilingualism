@@ -194,6 +194,8 @@ You should not need the entire CMB universe to understand the thesis.
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
 - **Autonomous maintenance:** [Bounded CMB Steward Agents](docs/AUTONOMOUS_STEWARD_AGENTS.md) — scheduled Recovery, GLT-8101 conformance, registry sync, docs verification, optional AI repair, and draft-PR-only authority
+- **Specialist agent operating model:** [Read-only auditors + structured evidence packets](docs/AGENT_OPERATING_MODEL.md)
+- **System control room:** [Latest repository-side Steward status](docs/generated/CMB_SYSTEM_STATUS.md)
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)
 - **Normative core:** [CMB-CORE-1](spec/CMB-CORE-1.md) and [protocol versioning](spec/PROTOCOL_VERSIONING.md)
 - **Sovereignty runtime:** [CMB-SRP-1](spec/CMB-SRP-1.md) + [CMB-SRP-2](spec/CMB-SRP-2.md) + [`cmb.toml`](cmb.toml) + installed `cmbc` gate

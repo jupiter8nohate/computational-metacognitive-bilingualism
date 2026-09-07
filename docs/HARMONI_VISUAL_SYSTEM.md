@@ -123,6 +123,42 @@ Use plain text for:
 - accessibility-critical content;
 - long-form explanation.
 
+## GLITCHOLOGY visual severity
+
+Glitch density is a controlled presentation signal rather than an arbitrary increase in combining characters.
+
+| Level | Meaning | Recommended use |
+| --- | --- | --- |
+| `GLITCH_LEVEL_0` | Plain documentation | APIs, research, security, long-form explanation |
+| `GLITCH_LEVEL_1` | Subtle anomaly | quiet transition or secondary signal |
+| `GLITCH_LEVEL_2` | Noticeable interruption | local warning or anomaly |
+| `GLITCH_LEVEL_3` | Conceptual rupture | major boundary or contradiction |
+| `GLITCH_LEVEL_4` | HARMONI gate | high-priority transition or archive threshold |
+| `GLITCH_LEVEL_5` | Canonical transmission | scarce code-poetry / symbolic transmission |
+
+Corresponding documentation classes are `.cmb-glitch-level-0` through `.cmb-glitch-level-5`.
+
+```text
+GLITCH_DENSITY != EVIDENCE_STRENGTH
+VISUAL_SEVERITY != CLAIM_CERTAINTY
+READABILITY > DECORATION
+```
+
+## Modular stylesheet architecture
+
+The public documentation now loads visual layers in this order:
+
+1. `stylesheets/cmb.css` — compatibility/theme shell;
+2. `stylesheets/tokens.css` — canonical design tokens;
+3. `stylesheets/components.css` — control room, entry lanes, and GLITCHOLOGY components;
+4. `stylesheets/accessibility.css` — focus, reduced-motion, contrast, and responsive safeguards.
+
+This keeps aesthetics from silently overriding accessibility and makes the final token layer explicit.
+
+```text
+TOKENS -> COMPONENTS -> ACCESSIBILITY
+AESTHETIC != AUTHORITY
+```
 ## Repository hierarchy
 
 Recommended visual flow:

@@ -17,6 +17,9 @@ All notable changes to the CMB provenance tool are documented here.
 - Added `stabilization/scope-baseline.json` plus regression tests that make growth of top-level Python packages or installed CLI commands an explicit reviewed change.
 - Updated the pull-request process to require stabilization classification before merge.
 - No claim is made that the freeze itself constitutes independent validation; the purpose is to reduce scope drift so the current system can be reproduced and reviewed.
+- Extended the existing bounded `cmb-steward` surface with read-only CANON, ACCESSIBILITY, RELEASE, LIBRARIAN, ARCHAEOLOGIST, DISCOVERY, SECURITY, and REVIEWER roles. Specialist roles emit structured evidence packets and cannot self-certify external review, DOI status, GitHub platform settings, or merge authority.
+- Added a human/machine CMB System Status control room generated from repository-side Steward checks, while keeping external evidence gates explicitly separate.
+- Consolidated the public visual layer into canonical tokens, reusable components, and isolated accessibility safeguards; added the three-lane Human / Engineer / Archive entry experience and defined `GLITCH_LEVEL_0` through `GLITCH_LEVEL_5` as presentation severity rather than evidence strength.
 
 ### Added
 

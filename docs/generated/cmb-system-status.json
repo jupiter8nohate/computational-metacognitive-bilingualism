@@ -1,0 +1,14 @@
+{
+  "schema_version": "cmb.steward-status.v1",
+  "overall_ok": null,
+  "roles": [],
+  "checks": [],
+  "evidence_packets": [],
+  "boundaries": [
+    "GENERATED != VERIFIED",
+    "SELF_REVIEW != INDEPENDENT_REVIEW",
+    "CAPABILITY != AUTHORITY",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "external_gate_note": "Initial neutral record. The bounded Steward replaces this with repository-side audit results; external review, DOI/archive state, and GitHub platform settings remain separate evidence gates."
+}

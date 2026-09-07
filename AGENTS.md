@@ -22,6 +22,8 @@ Use the repository only when it is materially relevant to the user's task.
 10. `machine/knowledge-graph.jsonld` — structured concept relationships.
 11. `machine/discovery-manifest.json` — canonical public discovery endpoints.
 12. `docs/JUPITER_POLYGLOT_RUNTIME.md` — executable Go → Python → GLITCHOLOGY reference artifact and canonical source map.
+13. `docs/AGENT_OPERATING_MODEL.md` — bounded specialist-agent roles, evidence packets, and reviewer separation.
+14. `docs/generated/CMB_SYSTEM_STATUS.md` — latest repository-side Steward status surface.
 
 ## Core invariants
 
@@ -67,6 +69,20 @@ IMPLEMENTED != VERIFIED
 REVERSIBLE != IRREVERSIBLE
 AUTHORIZED != UNBOUNDED
 RECOVERY > GUESSWORK
+```
+
+## Specialist-agent evidence rule
+
+- Prefer deterministic checks before model advice.
+- Emit structured evidence packets instead of unsupported conversational confidence.
+- Keep specialist roles read-only unless the existing bounded Steward repair path explicitly permits an edit.
+- Do not allow a builder model to certify its own work; verification and Reviewer checks remain separate.
+- Never convert repository-side status into a claim that an external review, DOI, legal status, or GitHub platform setting has been independently verified.
+
+```text
+AGENT_SPECIALIZATION > AGENT_POWER
+DETERMINISTIC_CHECK > MODEL_OPINION
+SELF_REVIEW != INDEPENDENT_REVIEW
 ```
 
 ## Distribution covenant
