@@ -12,7 +12,9 @@
   ],
   "agent_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/agent-card.json",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/AGENT_OPERATING_MODEL/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/AUTONOMOUS_STEWARD_AGENTS/"
   ],
   "machine_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/stewardship-status.json",
@@ -41,7 +43,8 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/glitch-3d.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/glitch-3d.v1.schema.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/spec/GLITCH-3D-1.md",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/generated/cmb-system-status.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
@@ -58,7 +61,8 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_CONVERSATION_ATLAS/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_POLYGLOT_TRANSLATIONS/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/RECOVERY_AND_PRESERVATION/"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/RECOVERY_AND_PRESERVATION/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/generated/CMB_SYSTEM_STATUS/"
   ],
   "concept_pages": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/",
