@@ -120,3 +120,44 @@ def test_plan_edit_count_is_bounded(
             {"summary": "too many", "rationale": "test", "edits": edits},
             context,
         )
+
+
+def test_public_status_writer_emits_machine_and_human_views(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setattr(steward, "ROOT", tmp_path)
+    report = steward.AuditReport(
+        roles=("CANON",),
+        checks=(
+            steward.CheckResult(
+                role="CANON",
+                name="glitch8_semantic_consistency",
+                command=[],
+                returncode=0,
+                output="ok",
+            ),
+        ),
+        generated_changes=(),
+        evidence_packets=(
+            {
+                "agent": "CANON",
+                "task": "glitch8_semantic_consistency",
+                "observed": {"mirror_matches": True},
+                "evidence": ["source", "mirror"],
+                "confidence": 1.0,
+                "recommended_action": "none",
+                "authority": "read_only",
+                "severity": "info",
+            },
+        ),
+    )
+
+    steward._write_public_status(report)
+
+    human = (tmp_path / "docs/generated/CMB_SYSTEM_STATUS.md").read_text(encoding="utf-8")
+    machine = (tmp_path / "docs/generated/cmb-system-status.json").read_text(encoding="utf-8")
+    assert "| CANON | glitch8_semantic_consistency | PASS |" in human
+    assert "\\n" not in human
+    assert '"overall_ok": true' in machine
+    assert "\\n" not in machine
