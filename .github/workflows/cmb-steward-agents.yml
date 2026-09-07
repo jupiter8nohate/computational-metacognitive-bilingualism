@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   steward:
-    name: Recovery + conformance + registry + docs steward
+    name: Recovery + specialist evidence steward
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -123,7 +123,20 @@ jobs:
           - GLITCH-IR Conformance: GLT-8101 semantic drift detection
           - Registry Sync: canonical GLITCH-8 generated views
           - Documentation: strict public-site build
+          - Canon: source/mirror/reference semantic consistency
+          - Accessibility: front-door accessibility safeguards
+          - Release: repository-declared release gate consistency
+          - Librarian: documentation navigation integrity
+          - Archaeologist: repository-history backtrace
+          - Discovery: machine discovery contract
+          - Security: repository-side security-control files
+          - Reviewer: authority-escalation and self-certification check
           - Steward: optional AI-assisted repair of concrete failures
+
+          ### Evidence
+          Specialist roles are read-only and emit structured evidence packets. The generated
+          CMB System Status reflects repository-side checks only; it does not self-certify
+          external review, DOI/archive state, or GitHub platform settings.
 
           ### Authority boundary
           The agent may propose and test allowlisted changes, but it cannot edit workflows, tests, schemas,
