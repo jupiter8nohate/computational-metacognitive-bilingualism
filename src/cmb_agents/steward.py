@@ -229,11 +229,11 @@ def _write_public_status(report: AuditReport) -> None:
         ),
     }
     (generated / "cmb-system-status.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\\n",
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
 
-    rows = "\\n".join(
+    rows = "\n".join(
         f"| {check.role} | {check.name} | {'PASS' if check.ok else 'FAIL'} |"
         for check in report.checks
     )
@@ -270,7 +270,7 @@ def _write_public_status(report: AuditReport) -> None:
         "HUMAN_AGENCY > MACHINE_AUTHORITY",
         "",
     ]
-    (generated / "CMB_SYSTEM_STATUS.md").write_text("\\n".join(lines), encoding="utf-8")
+    (generated / "CMB_SYSTEM_STATUS.md").write_text("\n".join(lines), encoding="utf-8")
 
 def run_audit(*, include_docs: bool = True) -> AuditReport:
     """Run deterministic maintenance agents and normalize generated GLITCH-8 views."""
@@ -678,6 +678,14 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "verify":
             checks = verify()
             _print_checks(checks)
+            specialist_audits = run_specialist_audits(ROOT)
+            status_report = AuditReport(
+                roles=ROLE_NAMES,
+                checks=checks,
+                generated_changes=(),
+                evidence_packets=tuple(audit.packet.to_dict() for audit in specialist_audits),
+            )
+            _write_public_status(status_report)
             validate_worktree_changes()
             return 0 if all(check.ok for check in checks) else 1
 
