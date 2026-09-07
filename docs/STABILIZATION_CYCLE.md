@@ -54,6 +54,17 @@ Changes should fit at least one of these categories:
 - accessibility or documentation corrections that do not create a new subsystem;
 - release-candidate preparation.
 
+## Current verification-extension classification
+
+The specialist-agent/control-room work extends the already-installed `cmb-steward` maintenance surface. It adds no top-level Python package, installed CLI command, protocol family, merge authority, release authority, payment mechanism, or interoperability target. New specialist roles are read-only and exist to improve canon, accessibility, release, navigation, provenance-history, discovery, security-file, and authority-boundary verification.
+
+Visual changes are documentation/accessibility consolidation: canonical tokens, reusable components, a three-lane entry experience, and a generated status page.
+
+```text
+READ_ONLY_AUDITOR != NEW_AUTHORITY_CLASS
+VERIFICATION_EXTENSION != PRODUCT_EXPANSION
+```
+
 ## Frozen during stabilization
 
 Do not add a new:
