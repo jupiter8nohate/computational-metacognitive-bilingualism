@@ -112,10 +112,20 @@ adapters/README.md
 ## Agent entry points
 
 docs/AGENT_DISCOVERY_PROTOCOL.md
+docs/AGENT_OPERATING_MODEL.md
+docs/AUTONOMOUS_STEWARD_AGENTS.md
+docs/generated/CMB_SYSTEM_STATUS.md
+docs/generated/cmb-system-status.json
 docs/MCP_INTEGRATION.md
 agents/registry.json
 agents/agent-card.json
 src/cmb_agents/
+
+Specialist Steward boundaries:
+AGENT_SPECIALIZATION > AGENT_POWER
+DETERMINISTIC_CHECK > MODEL_OPINION
+SELF_REVIEW != INDEPENDENT_REVIEW
+MACHINE_CAN_PROPOSE != MACHINE_CAN_MERGE
 
 Distribution covenant:
 RELEVANCE > REACH
