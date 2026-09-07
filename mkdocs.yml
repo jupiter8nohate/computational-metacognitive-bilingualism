@@ -7,6 +7,7 @@ theme:
   name: readthedocs
 nav:
   - Home: index.md
+  - System status: generated/CMB_SYSTEM_STATUS.md
   - Search for Truth: SEARCH_FOR_TRUTH.md
   - Public Stewardship Incubation: PUBLIC_STEWARDSHIP_INCUBATION.md
   - Future Foundation Blueprint: FUTURE_FOUNDATION_BLUEPRINT.md
@@ -36,6 +37,7 @@ nav:
   - Search & AI discovery: SEARCH_DISCOVERY.md
   - Interactive playground: PLAYGROUND.md
   - CMB-EDU Kids: CMB_EDU_KIDS.md
+  - Agent operating model: AGENT_OPERATING_MODEL.md
   - Agent discovery protocol: AGENT_DISCOVERY_PROTOCOL.md
   - MCP integration: MCP_INTEGRATION.md
   - For developers: DEVELOPERS.md
@@ -57,3 +59,6 @@ nav:
 
 extra_css:
   - stylesheets/cmb.css
+  - stylesheets/tokens.css
+  - stylesheets/components.css
+  - stylesheets/accessibility.css
