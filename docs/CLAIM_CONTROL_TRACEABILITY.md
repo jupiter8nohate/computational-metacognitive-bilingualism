@@ -46,18 +46,22 @@ PREDICTION != DESTINY
 RISK_SCORE != INTENT
 MACHINE_CAN_PROPOSE != MACHINE_CAN_MERGE
 HUMAN_AGENCY > MACHINE_AUTHORITY
+SYSTEM_CAN_REFLEX
+AGENT_CAN_PROPOSE
+HUMAN_CAN_JUDGE
 ```
 
-These are mapped to the strategy constitution, deterministic validators, and tests in the traceability manifest.
+The first group is mapped to the strategy constitution, deterministic validators, and tests. The DNIS tokens are mapped to bounded routing code and tests. In particular, SYSTEM_CAN_REFLEX means policy-preserving application routing, not an arbitrary network-layer kill switch, and HUMAN_CAN_JUDGE means consequential decisions are routed toward human review rather than machine judgment being treated as final.
 
-Two useful principles remain intentionally symbolic until separate infrastructure exists:
+OBSERVATION != UNDERSTANDING is now DECLARED by the DNIS documentation. It remains a semantic boundary rather than a claim that software can technically prove or disprove subjective understanding.
+
+One useful principle remains intentionally SYMBOLIC until a dedicated input-authority control is implemented:
 
 ```text
 SENSATION != AUTHORITY
-OBSERVATION != UNDERSTANDING
 ```
 
-They are not described as network isolation, consent enforcement, copyright determination, or proof about machine consciousness.
+It is not described as network isolation, consent enforcement, copyright determination, or proof about machine consciousness.
 
 ## Fail-closed drift detection
 
