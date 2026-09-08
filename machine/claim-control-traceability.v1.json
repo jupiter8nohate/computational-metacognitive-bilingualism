@@ -208,13 +208,82 @@
     {
       "claim_id": "CMB-EPISTEMIC-003",
       "expression": "OBSERVATION != UNDERSTANDING",
-      "maturity": "symbolic",
+      "maturity": "declared",
       "meaning": "Observation alone does not establish subjective understanding, authorship, ownership, or authority.",
       "controls": [
         {
           "kind": "doc",
-          "path": "docs/CLAIM_CONTROL_TRACEABILITY.md",
+          "path": "docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md",
           "anchor": "OBSERVATION != UNDERSTANDING"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-DNIS-001",
+      "expression": "SYSTEM_CAN_REFLEX",
+      "maturity": "verified",
+      "meaning": "The DNIS runtime can perform bounded policy-preserving reflex routing for explicit allow or deny outcomes. This does not mean arbitrary network socket termination or unrestricted infrastructure control.",
+      "controls": [
+        {
+          "kind": "doc",
+          "path": "docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md",
+          "anchor": "SYSTEM_CAN_REFLEX"
+        },
+        {
+          "kind": "runtime",
+          "path": "src/cmb_agents/immune_system.py",
+          "anchor": "\"REFLEX_CELL\""
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_immune_system.py",
+          "anchor": "test_low_risk_allowed_signal_uses_reflex_path"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-DNIS-002",
+      "expression": "AGENT_CAN_PROPOSE",
+      "maturity": "verified",
+      "meaning": "A bounded recovery cell may emit a recovery proposal after a concrete denial without receiving merge, release, credential, or policy-expansion authority.",
+      "controls": [
+        {
+          "kind": "doc",
+          "path": "docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md",
+          "anchor": "AGENT_CAN_PROPOSE"
+        },
+        {
+          "kind": "runtime",
+          "path": "src/cmb_agents/immune_system.py",
+          "anchor": "\"MACROPHAGE_RECOVERY\""
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_immune_system.py",
+          "anchor": "test_policy_denial_triggers_reflex_and_recovery_proposal"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-DNIS-003",
+      "expression": "HUMAN_CAN_JUDGE",
+      "maturity": "verified",
+      "meaning": "The DNIS runtime routes explicit escalation and high-risk allowed signals to the human-facing cortex liaison instead of treating machine routing as final human judgment.",
+      "controls": [
+        {
+          "kind": "doc",
+          "path": "docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md",
+          "anchor": "HUMAN_CAN_JUDGE"
+        },
+        {
+          "kind": "runtime",
+          "path": "src/cmb_agents/immune_system.py",
+          "anchor": "\"CORTEX_LIAISON\""
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_immune_system.py",
+          "anchor": "test_high_risk_allowed_signal_escalates_to_human"
         }
       ]
     }
