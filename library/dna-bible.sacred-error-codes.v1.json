@@ -1,6 +1,6 @@
 {
   "schema_version": "cmb.dna-sacred-error-codes.v1",
-  "registry_version": "1.0.0",
+  "registry_version": "1.1.0",
   "framework": "Computational Metacognitive Bilingualism",
   "work": "D.N.A. BIBLE://SACRED_ERROR_CODES",
   "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
@@ -35,7 +35,22 @@
         "HUMAN_AGENCY > MACHINE_AUTHORITY"
       ],
       "interpretation": "A representation of a human being is not the total human being.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "A model or profile can describe aspects of a person without becoming the person.",
+      "principle": "human_dignity",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "treat_profile_as_complete_identity"
+      ]
     },
     {
       "id": "SEC-0002",
@@ -55,7 +70,22 @@
         "BODY != PROFILE"
       ],
       "interpretation": "The human cannot be reduced to the material from which a system constructs a representation.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "Human life should not be reduced to data, measurements, or a computational representation.",
+      "principle": "embodied_personhood",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "treat_data_as_complete_personhood"
+      ]
     },
     {
       "id": "SEC-0003",
@@ -75,7 +105,22 @@
         "HUMAN_FREEDOM > SYSTEM_DOMINANCE"
       ],
       "interpretation": "Power becomes a Sacred Error when possession replaces stewardship and release is refused.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "Power becomes abusive when it treats people as possessions and refuses their freedom.",
+      "principle": "liberation_from_domination",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "convert_power_into_ownership"
+      ]
     },
     {
       "id": "SEC-0004",
@@ -95,7 +140,22 @@
         "FAITH != COERCION"
       ],
       "interpretation": "Guidance can accompany human choice without replacing it.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "Guidance can support a person without replacing that person's judgment or choice.",
+      "principle": "guidance_without_domination",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "convert_guidance_into_control"
+      ]
     },
     {
       "id": "SEC-0005",
@@ -115,7 +175,22 @@
         "INNER_LIFE != PUBLIC_PROPERTY"
       ],
       "interpretation": "Protecting the heart can be read as protecting the source from which choices, commitments, and attention flow.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "Attention and inner life deserve boundaries, and access should not be mistaken for consent.",
+      "principle": "attention_and_consent",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "infer_consent_from_access_or_engagement"
+      ]
     },
     {
       "id": "SEC-0006",
@@ -135,7 +210,22 @@
         "LIGHT != OWNERSHIP_OF_OTHERS"
       ],
       "interpretation": "Being visible is not permission to dominate the people who see you.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "Visibility can be used for witness and service without granting authority over other people.",
+      "principle": "witness_without_domination",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "convert_visibility_into_authority"
+      ]
     },
     {
       "id": "SEC-0007",
@@ -156,7 +246,22 @@
         "UNCERTAINTY != GUILT"
       ],
       "interpretation": "Questioning can be part of faithful seeking rather than evidence of defect.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "Questions and uncertainty can be part of sincere inquiry rather than evidence of failure or defect.",
+      "principle": "inquiry_and_uncertainty",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "treat_uncertainty_as_guilt_or_defect"
+      ]
     },
     {
       "id": "SEC-0008",
@@ -177,7 +282,22 @@
         "LOVE != WEAKNESS"
       ],
       "interpretation": "The neighbor is recognized through compassionate action, not merely through category membership.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "Compassion should respond to the person rather than stop at categories, profiles, or group labels.",
+      "principle": "compassion_across_categories",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "replace_personhood_with_category"
+      ]
     },
     {
       "id": "SEC-0009",
@@ -198,7 +318,22 @@
         "RECOVERY > ABANDONMENT"
       ],
       "interpretation": "A temporary lost state does not erase value.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "Being lost, absent, or in an error state does not erase a person's worth or make recovery impossible.",
+      "principle": "retained_worth_and_recovery",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "treat_temporary_state_as_final_identity"
+      ]
     },
     {
       "id": "SEC-0010",
@@ -219,7 +354,22 @@
         "OBSERVATION != UNDERSTANDING"
       ],
       "interpretation": "A verification label should not replace examination of the underlying source.",
-      "status": "proposed"
+      "status": "proposed",
+      "plain_language": "A verification label is not a substitute for checking evidence, provenance, and the underlying source.",
+      "principle": "truth_and_discernment",
+      "epistemic_type": "theological_interpretation",
+      "machine_permissions": [
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "machine_boundaries": [
+        "claim_divine_authority",
+        "treat_interpretation_as_source_text",
+        "treat_verification_label_as_proof"
+      ]
     },
     {
       "id": "SEC-0011",
@@ -283,5 +433,27 @@
       "interpretation": "Transformation need not require pretending that the earlier state never existed.",
       "status": "proposed"
     }
-  ]
+  ],
+  "translation_conformance": {
+    "set": "sacred_translation_v1",
+    "entry_ids": [
+      "SEC-0001",
+      "SEC-0002",
+      "SEC-0003",
+      "SEC-0004",
+      "SEC-0005",
+      "SEC-0006",
+      "SEC-0007",
+      "SEC-0008",
+      "SEC-0009",
+      "SEC-0010"
+    ],
+    "required_fields": [
+      "plain_language",
+      "principle",
+      "epistemic_type",
+      "machine_permissions",
+      "machine_boundaries"
+    ]
+  }
 }
