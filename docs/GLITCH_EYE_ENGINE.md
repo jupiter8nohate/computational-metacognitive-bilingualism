@@ -26,7 +26,39 @@ They may not merge, release, sign, mutate protected authority, expand their own 
 | --- | --- | --- |
 | `𓁹𓁹` | Semantic Parallax | Compare multiple representations of the same concept and surface contradictions. |
 | `𓁿` | Hidden Context | Detect strong co-change relationships that lack an explicit dependency. |
-| `𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃` | Temporal Eye | Detect provenance or meaning drift across repository history. |
+| `𝄃𝄃𝄂𝄂𝄀𝄁𝄃𝄂𝄂𝄃` | Temporal Eye | Detect exact invariant-signature changes across repository history. |
+
+## Deterministic evidence collectors
+
+The first live collector layer is implemented in `cmb_agents.eyes.collectors`.
+
+It collects two classes of repository evidence before any model interpretation:
+
+1. Recent Git commit path sets are converted into bounded co-change statistics.
+2. Current Python imports under `src/` are parsed with the Python AST and used to mark explicit dependencies.
+3. Files containing CMB-style invariant expressions are traced through bounded Git history to detect exact signature changes.
+
+The Hidden Context Eye only emits a co-change observation when the pair is strong enough and is not already explained by the current Python import graph.
+
+A co-change score means only that two files repeatedly changed together. It does not prove architectural dependency, shared ownership, defect, intent, or causation.
+
+## Run the Eyes
+
+From a repository checkout:
+
+```bash
+cmb-agent eyes
+```
+
+A more conservative scan can require more supporting commits:
+
+```bash
+cmb-agent eyes --commits 300 --min-support 5 --min-score 0.90
+```
+
+The command is read-only. It emits JSON containing collector metadata, evidence records, perceptions, confidence values, and the authority boundaries attached to the report.
+
+It does not edit files, create commits, open pull requests, merge changes, release software, or change permissions.
 
 ## Eye fusion
 
@@ -61,41 +93,41 @@ The proposal is:
 
 This makes perception extensible without making authority self-expanding.
 
-## Data contract
+## Normalized data contract
 
-The current engine accepts normalized repository-state records.
+The engine consumes normalized repository-state records.
 
 ```python
 state = {
-    "semantic_contradictions": [
-        {
-            "files": ["README.md", "docs/contract.md"],
-            "confidence": 0.92,
-            "description": "The same invariant is defined differently.",
-        }
-    ],
     "cochange_relations": [
         {
             "file_a": "schemas/cmb.json",
             "file_b": "src/cmb_agents/validator.py",
             "score": 0.94,
+            "support": 7,
             "explicit_dependency": False,
         }
     ],
     "provenance_drift": [
         {
-            "artifacts": ["commit:a1", "commit:b2"],
-            "confidence": 0.88,
-            "description": "A small textual change altered the semantic invariant.",
+            "artifacts": [
+                "path:docs/invariants.md",
+                "commit:older",
+                "commit:newer",
+            ],
+            "confidence": 1.0,
+            "description": "Invariant signature changed in docs/invariants.md.",
         }
     ],
 }
 ```
 
-The next integration layer should build these normalized records from deterministic Git history, dependency graphs, schema analysis, and repository audits before any model-based interpretation occurs.
+Semantic Parallax remains available as an engine detector, but this collector move deliberately does not invent semantic contradictions. A later layer may generate those records only when there is a deterministic or independently verifiable comparison source.
 
 ## Recovery rule
 
 If evidence is absent, malformed, contradictory, or below threshold, the Eye emits nothing.
+
+Large bulk commits are excluded from co-change counting once they exceed the configured collector bound. Files that cannot be parsed are skipped rather than guessed.
 
 Silence is preferable to invented certainty.
