@@ -80,7 +80,7 @@ The preferred public intake path is the repository's [external review issue form
 
 A useful review must identify the exact commit examined. Reviewers may cover only part of the requested scope, but should say what was excluded and why.
 
-If the finding is security-sensitive, do not publish exploit details in a public issue. Follow [SECURITY.md](../SECURITY.md).
+If the finding is security-sensitive, do not publish exploit details in a public issue. Follow [SECURITY.md](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/SECURITY.md).
 
 The project should preserve criticism as criticism. Findings should not be rewritten as endorsements.
 
