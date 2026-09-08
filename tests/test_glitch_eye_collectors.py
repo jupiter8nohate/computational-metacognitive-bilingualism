@@ -73,6 +73,23 @@ def test_python_import_pairs_mark_explicit_dependencies(tmp_path: Path) -> None:
     assert frozenset(("src/demo/a.py", "src/demo/b.py")) in pairs
 
 
+
+def test_python_import_pairs_resolve_relative_package_imports(tmp_path: Path) -> None:
+    package = tmp_path / "src" / "demo"
+    package.mkdir(parents=True)
+    (package / "__init__.py").write_text(
+        "from .worker import VALUE\n",
+        encoding="utf-8",
+    )
+    (package / "worker.py").write_text("VALUE = 1\n", encoding="utf-8")
+
+    pairs = collect_python_import_pairs(tmp_path)
+
+    assert frozenset(
+        ("src/demo/__init__.py", "src/demo/worker.py")
+    ) in pairs
+
+
 def test_extract_invariant_signature_is_normalized() -> None:
     signature = extract_invariant_signature(
         "PATTERN!=PROOF\nPROFILE != PERSON\nordinary text\n"
