@@ -151,6 +151,7 @@ jobs:
           - Archaeologist: repository-history backtrace
           - Discovery: machine discovery contract
           - Security: repository-side security-control files
+          - DNIS: Digital Nervous Immune System registry and Digital DNA continuity
           - Position: hashed repository search state
           - Tactician: minimum reversible repair candidates
           - Strategist: architecture and maintenance candidate moves
