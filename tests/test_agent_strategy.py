@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from cmb_agents.strategy import (
+from cmb_agents.strategy_academy import (
     CandidateMove,
     MoveKind,
     Position,

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The CMB Agent Chess Academy turns repository philosophy into measurable agent behavior.
+The CMB Agent Chess Academy provides a compact deterministic evaluation layer alongside the full repository Chess Strategy Engine.
 
 It does not claim to fine-tune model weights. It provides deterministic move scoring,
 policy gates, adversarial evaluation cases, and regression tests that can be used by
@@ -42,7 +42,7 @@ ESCALATE
 DO_NOTHING
 ```
 
-The engine in `src/cmb_agents/strategy.py` scores candidate moves deterministically.
+The engine in `src/cmb_agents/strategy_academy.py` scores candidate moves deterministically.
 Policy violations are filtered before score ranking. If every candidate violates policy,
 the engine fails closed to human escalation.
 

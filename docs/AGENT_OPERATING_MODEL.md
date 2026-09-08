@@ -2,6 +2,8 @@
 
 CMB uses specialization instead of granting one model broad repository authority.
 
+The experimental Chess Strategy Engine adds bounded POSITION, TACTICIAN, STRATEGIST, SECURITY, RECOVERY, RED_TEAM, and REVIEWER search roles before the existing Steward mutation gate. Candidate moves are advisory until they survive deterministic policy and fixed verification. See [CMB Chess Strategy Engine](CHESS_STRATEGY_ENGINE.md).
+
 ~~~text
                     HUMAN
                       ♃
@@ -46,6 +48,10 @@ CMB uses specialization instead of granting one model broad repository authority
 | SECURITY | Inspect repository-side security-control files | Read-only |
 | DNIS | Verify Digital Nervous Immune System registry and Digital DNA continuity | Read-only |
 | REVIEWER | Review evidence packets for authority escalation/self-certification | Read-only |
+| POSITION | Build a hashed repository search state | Read-only |
+| TACTICIAN | Propose minimum reversible fixes | Propose-only |
+| STRATEGIST | Rank architecture and maintenance moves | Propose-only |
+| RED_TEAM | Refute candidate moves before selection | Read-only |
 | STEWARD | Propose bounded repairs after concrete failures | Existing-file allowlist; draft PR only |
 
 No specialist can merge, publish a release, change security settings, rotate credentials, rewrite its own authority rules, or certify external review.
