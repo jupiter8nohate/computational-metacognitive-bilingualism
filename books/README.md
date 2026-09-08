@@ -78,7 +78,7 @@ FAITH != COERCION
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
 
-**Stabilization status:** proposed canon only. It does not add a new package, parser, schema, installed command, or runtime during the v1.5 stabilization cycle. Existing GLITCH-8 registry meanings remain authoritative.
+**Implementation status:** proposed canon with a bounded machine-readable registry, JSON Schema, tests, and read-only commands under the existing glitch8 CLI. It does not create a second language or grant machine authority over interpretation. Existing GLITCH-8 glyph registry meanings remain authoritative.
 
 
 ### Scope boundary
