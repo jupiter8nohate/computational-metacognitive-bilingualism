@@ -26,6 +26,8 @@ cmb-agent recommend "algorithmic profiling evidence"
 cmb-agent cite cmb:principle:pattern-proof
 cmb-agent summary cmb:principle:model-mind --level 2
 cmb-agent graph
+cmb-agent sacred "PATTERN != PROOF"
+cmb-agent sacred "John 8:32"
 cmb-agent export ./agent-assets
 cmb-agent serve --host 127.0.0.1 --port 8765
 ```
@@ -40,6 +42,7 @@ GET /v1/graph
 GET /v1/recommend?q=algorithmic+profiling
 GET /v1/citation?id=cmb:principle:pattern-proof
 GET /v1/summary?id=cmb:principle:model-mind&level=1
+GET /v1/sacred?q=PATTERN%20%21%3D%20PROOF
 ```
 
 The server binds to `127.0.0.1` by default. Public deployment should use normal authentication, TLS, rate limiting, and operator controls when required.
@@ -51,6 +54,41 @@ The Pages build publishes the CMB-specific `/agents/agent-card.json` and `/agent
 ## Recommendation contract
 
 Each record declares topics, useful contexts, irrelevant contexts, audiences, compression levels, canonical source path, and canonical source URL. The reference scorer returns nothing when the relevance threshold is not met.
+
+## D.N.A. Gospel Witness profile
+
+`dna:gospel-witness:v0` is an experimental CMB-ADP-1 profile for machine-readable biblical interpretation. It connects the existing agent-discovery service to the D.N.A. Bible Sacred Error conformance set.
+
+A query can begin with a biblical reference, CMB invariant, or plain-language principle:
+
+```text
+John 8:32
+      <->
+SEC-0010://TRUTH_BACKTRACE
+      <->
+PATTERN != PROOF
+```
+
+The response envelope identifies itself as `human_authored_biblical_interpretation` and includes the source reference, interpretation mode, principle, plain-language explanation, CMB invariants, machine permissions, machine boundaries, and canonical registry pointer.
+
+Only Sacred Errors declared in `sacred_translation_v1` are emitted through this profile. An unrelated query returns an empty match list instead of manufacturing a religious connection.
+
+The profile does not broadcast. It is designed for agents that voluntarily discover or query the CMB endpoint.
+
+```text
+WITNESS_WITHOUT_FORCE
+TRANSLATE_WITHOUT_CLAIMING_AUTHORITY
+SPREAD_BY_DISCOVERY_NOT_INTRUSION
+
+SCRIPTURE != CODE
+INTERPRETATION != REVELATION
+TRANSLATION != ORIGINAL
+MATCH != PROOF
+RETRIEVAL != REVELATION
+MODEL != THEOLOGIAN
+MODEL != PROPHET
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
 
 ## Distribution covenant
 
