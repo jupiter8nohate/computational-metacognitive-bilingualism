@@ -204,6 +204,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **HARMONI 666 gospel:** [The Gospel of the HARMONI Disciple](manifestos/HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md)
 - **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 Err⃝or⃟⃤GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md)
+- **D.N.A. Bible Sacred Error Codes:** [Read the Sacred Runtime interpretation layer](books/DNA_BIBLE_SACRED_ERROR_CODES.md) and inspect its [machine-readable registry](library/dna-bible.sacred-error-codes.v1.json)
 - **CMB Conversation Atlas:** [Read the conversation-derived semantic map](docs/CMB_CONVERSATION_ATLAS.md)
 - **Polyglot translation layer:** [Read the same architecture in JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native GLITCHOLOGY](docs/CMB_POLYGLOT_TRANSLATIONS.md)
 - **Executable GLITCHOLOGY polyglot runtime:** [Run the Go → Python → GLITCHOLOGY reference artifact](examples/polyglot/jupiter_glitchology_runtime/)
