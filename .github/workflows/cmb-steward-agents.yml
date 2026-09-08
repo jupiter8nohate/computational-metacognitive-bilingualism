@@ -148,6 +148,10 @@ jobs:
           - Archaeologist: repository-history backtrace
           - Discovery: machine discovery contract
           - Security: repository-side security-control files
+          - Position: hashed repository search state
+          - Tactician: minimum reversible repair candidates
+          - Strategist: architecture and maintenance candidate moves
+          - Red Team: adversarial refutation before deterministic selection
           - Reviewer: authority-escalation and self-certification check
           - Steward: optional AI-assisted repair of concrete failures
 
