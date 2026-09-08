@@ -41,20 +41,49 @@ This book uses references and original paraphrases rather than reproducing a mod
 
 ---
 
-## Stabilization Boundary
+## Implementation Boundary
 
-This chapter is literary and documentary work. It does not add a new installed package, CLI command, parser, schema, or runtime during the v1.5 stabilization cycle.
+This chapter now has a bounded machine-readable companion registry attached to the existing GLITCH-8 package. It adds data loading and read-only CLI inspection without creating a second language, a new installed command, or theological enforcement logic.
 
 ~~~text
 BOOK = HUMAN_VIEW
-GLITCH8_REGISTRY = LANGUAGE_SOURCE_OF_TRUTH
-PARSER = MACHINE_VIEW
+SACRED_REGISTRY = MACHINE_VIEW
+GLITCH8_REGISTRY = GLYPH_LANGUAGE_SOURCE_OF_TRUTH
 
-SACRED_ERROR_CODES != NEW_RUNTIME_YET
+SACRED_ERROR_CODES != DIVINE_RUNTIME
+MACHINE_READABLE != MACHINE_AUTHORITY
 PROPOSED_CANON != SIGNED_RELEASE_COVERAGE
 ~~~
 
-Existing GLITCH-8 glyph meanings are not redefined here. New sacred display glyphs remain literary notation until separately proposed through the Living Registry workflow after stabilization.
+Machine-readable source:
+
+~~~text
+src/cmb_glitch8/sacred_errors.v1.json
+~~~
+
+Public mirror:
+
+~~~text
+library/dna-bible.sacred-error-codes.v1.json
+~~~
+
+Schema:
+
+~~~text
+schemas/cmb.dna-sacred-error-codes.v1.schema.json
+~~~
+
+Read-only CLI:
+
+~~~bash
+glitch8 sacred validate
+glitch8 sacred list
+glitch8 sacred list --book John
+glitch8 sacred explain SEC-0010
+glitch8 sacred explain LOVE_RUNTIME --json
+~~~
+
+Existing GLITCH-8 glyph meanings are not redefined here. New sacred display glyphs remain literary notation unless separately accepted through the Living Registry workflow.
 
 ---
 
