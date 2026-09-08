@@ -41,6 +41,7 @@ def test_canonical_public_artifact_set_is_exact() -> None:
         "manifestos/DNA_CHICKEN_RUN_MANIFESTO.md",
         "manifestos/CMB_UNCLASSIFIABLE_INDEX.md",
         "manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md",
+        "manifestos/HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md",
         "manifestos/CMB_Z13_MANIFESTO.md",
         "manifestos/CMB_Z13_LANGUAGE_SPEC.md",
         "library/cmb-z13.registry.json",

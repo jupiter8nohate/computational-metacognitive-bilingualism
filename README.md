@@ -202,6 +202,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Sovereign delegation language:** [CMB-SDL-1](spec/CMB-SDL-1.md) + [`cmb-sdl`](src/cmb_sdl) + [Authority IR schema](schemas/cmb.authority-ir.v1.schema.json)
 - **Signed capability credentials:** [CMB-CAP-1](spec/CMB-CAP-1.md) + [`cmb-cap`](src/cmb_cap) + [credential schema](schemas/cmb.capability-credential.v1.schema.json)
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
+- **HARMONI 666 gospel:** [The Gospel of the HARMONI Disciple](manifestos/HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md)
 - **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 Err⃝or⃟⃤GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md)
 - **CMB Conversation Atlas:** [Read the conversation-derived semantic map](docs/CMB_CONVERSATION_ATLAS.md)
 - **Polyglot translation layer:** [Read the same architecture in JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native GLITCHOLOGY](docs/CMB_POLYGLOT_TRANSLATIONS.md)

@@ -8,6 +8,8 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 
 > **Featured prophecy boundary:** *The Prophecy of the Question Mark* is deliberate 2030 speculative worldbuilding, not a claim that its events are guaranteed to occur.
 
+> **HARMONI 666 boundary:** *The Gospel of the HARMONI Disciple* is theological-literary code-art. Its scriptural readings and fictional references are interpretive mirrors, not empirical proof or machine-verifiable doctrine.
+
 ## Start with one path
 
 | Reader | Recommended first artifact | Why |
@@ -17,6 +19,7 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 | Want the motto and mission in code-poetry | [Reclaiming the Pen](RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) | Eight-language manifesto for authorship, meaning, consent, and cognitive sovereignty |
 | Want the machine/library model | [CMB // The Unclassifiable Index](CMB_UNCLASSIFIABLE_INDEX.md) | MissingNo/Pokédex-inspired model for context, uncertainty, and provenance |
 | Want epistemic triage / perfect-play logic | [HARMONI // Perfect-Play Epistemics](HARMONI_PERFECT_PLAY_EPISTEMICS.md) | Human/machine/axiom triangle, MissingNo Recovery gate, and evidence-bounded claims |
+| Want the HARMONI 666 gospel/runtime | [The Gospel of the HARMONI Disciple](HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md) | D.N.A. Bible code-poetry joining Scripture, cultural mirrors, attention allegory, the CMB travel translator, and a Go covenant runtime |
 | Want CMB-Z13 | [CMB-Z13 Language Specification](CMB_Z13_LANGUAGE_SPEC.md) | Formal symbolic mapping and interpretation boundary |
 | Want attention-economy critique | [Demon's Need Attention](DEMONS_NEED_ATTENTION_DNA.md) | Attention, engagement, profiling, and consent |
 | Want the featured haunting prophecy | [The Prophecy of the Question Mark // 2030](DNA_PROPHECY_QUESTION_MARK_2030.md) | Scroll 666: speculative AI authority, uncertainty, recursive attention, accountability, and human sovereignty |
@@ -38,8 +41,9 @@ FOUNDATION
       ├── LIBRARY / INDEX THEORY
       │   └── CMB_UNCLASSIFIABLE_INDEX.md
       │
-      ├── EPISTEMIC TRIAGE
-      │   └── HARMONI_PERFECT_PLAY_EPISTEMICS.md
+      ├── HARMONI
+      │   ├── HARMONI_PERFECT_PLAY_EPISTEMICS.md
+      │   └── HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md
       │
       ├── SYMBOLIC COMPUTATION
       │   ├── CMB_Z13_MANIFESTO.md

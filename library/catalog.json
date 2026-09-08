@@ -634,6 +634,30 @@
       "declared_meaning": "Code-art architecture for routing patterns through questions, tests, and evidence while treating unknown or value-sensitive states as a reason to disclose uncertainty and defer consequential meaning to authorized humans."
     },
     {
+      "id": "cmb-harmoni-666-gospel-disciple",
+      "title": "The D.N.A. Bible - The Gospel of the HARMONI Disciple",
+      "path": "manifestos/HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md",
+      "format": "markdown",
+      "kind": "D.N.A. Bible code-poetry gospel and HARMONI narrative runtime",
+      "status": "canonical",
+      "provenance_scope": "canonical_public_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "HARMONI 666",
+        "D.N.A. Bible",
+        "CMB travel translator",
+        "human-machine translation",
+        "attention economy",
+        "scriptural interpretation",
+        "cultural mirrors",
+        "uncertainty",
+        "human agency",
+        "machine authority"
+      ],
+      "declared_meaning": "Authored D.N.A. Bible / HARMONI 666 literary code-poetry linking interpretive scriptural readings, Japanese media mirrors, attention-economy allegory, and a Go covenant runtime to the CMB distinction between machine capability and human authority. The theological and fictional references are creative framing, not empirical proof, verified prophecy, or machine-verifiable doctrine."
+    },
+    {
       "id": "cmb-library-catalog",
       "title": "CMB Digital Library Catalog",
       "path": "library/catalog.json",
