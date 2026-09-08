@@ -51,6 +51,9 @@ jobs:
       - name: Run deterministic steward audit
         run: python -m cmb_agents.steward audit --report /tmp/cmb-steward-audit.json
 
+      - name: Verify CMB claim-control traceability
+        run: python -m cmb_agents.claim_control --manifest machine/claim-control-traceability.v1.json
+
       - name: Search the current position with bounded chess agents
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
