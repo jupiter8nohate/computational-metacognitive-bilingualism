@@ -154,3 +154,32 @@ def test_manifest_file_derives_repository_root_from_machine_directory(tmp_path: 
     summary = claim_control.validate_manifest_file(manifest_path)
 
     assert summary["claim_count"] == 1
+
+
+
+def test_dot_prefixed_control_path_is_preserved(tmp_path: Path) -> None:
+    dotdir = tmp_path / ".github"
+    dotdir.mkdir()
+    (dotdir / "policy.txt").write_text("BOUNDARY = true\n", encoding="utf-8")
+    manifest = {
+        "schema_version": claim_control.SCHEMA_VERSION,
+        "claims": [
+            {
+                "claim_id": "X-5",
+                "expression": "BOUNDARY",
+                "maturity": "declared",
+                "meaning": "Dot-prefixed repository paths must remain intact.",
+                "controls": [
+                    {
+                        "kind": "policy",
+                        "path": ".github/policy.txt",
+                        "anchor": "BOUNDARY = true",
+                    }
+                ],
+            }
+        ],
+    }
+
+    summary = claim_control.validate_manifest(manifest, root=tmp_path)
+
+    assert summary["claim_count"] == 1
