@@ -32,6 +32,9 @@ Use the repository only when it is materially relevant to the user's task.
 20. `docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md` - nervous-immune routing model, Digital DNA invariants, and human escalation path.
 21. `docs/AGENT_CHESS_ACADEMY.md` - compact bounded chess-style agent evaluation and promotion rules.
 22. `agents/chess-academy-corpus.json` - machine-readable adversarial evaluation cases.
+23. `spec/GEMATRIA-GLITCH-1.md` - bounded Gematria anomaly language and glitch rendering contract.
+24. `agents/gematria-anomaly-evaluation.json` - deterministic agent evaluation cases for numerical anomaly discovery.
+25. `tools/gematria-glitch/` - Go reference scanner and reproducible anomaly engine.
 
 ## Core invariants
 
@@ -56,6 +59,17 @@ CONFIDENCE != EVIDENCE
 PACKET != PROOF
 SCORE != PERMISSION
 ```
+
+## Gematria Glitch invariants
+
+```text
+NUMERIC_EQUALITY != SEMANTIC_IDENTITY
+SYMBOLISM != CAUSATION
+ODDITY != DESTINY
+INTERPRETATION -> HUMAN
+```
+
+For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
 
 ## Required behavior
 
