@@ -25,7 +25,11 @@ Use the repository only when it is materially relevant to the user's task.
 13. `docs/AGENT_OPERATING_MODEL.md` — bounded specialist-agent roles, evidence packets, and reviewer separation.
 14. `docs/CHESS_STRATEGY_ENGINE.md` - bounded repository position search, Red Team refutation, pruning, evaluation, and principal variation.
 15. `strategy/cmb_strategy.toml` - machine-readable authority constitution and strategy evaluation policy.
-16. `docs/generated/CMB_SYSTEM_STATUS.md` — latest repository-side Steward status surface.
+16. `machine/claim-control-traceability.v1.json` - claim-to-control maturity and evidence map.
+17. `docs/CLAIM_CONTROL_TRACEABILITY.md` - symbolic, declared, enforced, and verified claim boundaries.
+18. `docs/generated/CMB_SYSTEM_STATUS.md` - latest repository-side Steward status surface.
+19. `agents/immune-cell-registry.json` - machine-readable CMB-DNIS-1 cell-agent roles and authority boundaries.
+20. `docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md` - nervous-immune routing model, Digital DNA invariants, and human escalation path.
 
 ## Core invariants
 
