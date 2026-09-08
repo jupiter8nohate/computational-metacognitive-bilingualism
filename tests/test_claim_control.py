@@ -120,3 +120,37 @@ def test_control_path_traversal_is_rejected(tmp_path: Path) -> None:
 
     with pytest.raises(claim_control.ClaimControlError, match="unsafe control path"):
         claim_control.validate_manifest(manifest, root=tmp_path)
+
+
+def test_manifest_file_derives_repository_root_from_machine_directory(tmp_path: Path) -> None:
+    machine = tmp_path / "machine"
+    machine.mkdir()
+    (tmp_path / "policy.txt").write_text("CLAIM = true\n", encoding="utf-8")
+    manifest_path = machine / "claim-control.json"
+    manifest_path.write_text(
+        json.dumps(
+            {
+                "schema_version": claim_control.SCHEMA_VERSION,
+                "claims": [
+                    {
+                        "claim_id": "X-4",
+                        "expression": "CLAIM",
+                        "maturity": "declared",
+                        "meaning": "Manifest-relative repository discovery must survive wheel installation.",
+                        "controls": [
+                            {
+                                "kind": "policy",
+                                "path": "policy.txt",
+                                "anchor": "CLAIM = true",
+                            }
+                        ],
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    summary = claim_control.validate_manifest_file(manifest_path)
+
+    assert summary["claim_count"] == 1
