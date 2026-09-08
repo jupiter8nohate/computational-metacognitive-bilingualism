@@ -178,7 +178,7 @@ def _explain(entry: dict) -> str:
 def _explain_sacred(entry: dict) -> str:
     source = entry["source"]
     reference = f"{source['book']} {source['chapter']}:{source['verses']}"
-    return "\n".join([
+    lines = [
         f"ID: {entry['id']}",
         f"NAME: {entry['name']}",
         f"SOURCE: {reference}",
@@ -188,8 +188,17 @@ def _explain_sacred(entry: dict) -> str:
         f"RECOVERY: {entry['recovery']}",
         f"INVARIANTS: {' | '.join(entry['invariants'])}",
         f"INTERPRETATION: {entry['interpretation']}",
-        f"STATUS: {entry['status']}",
-    ])
+    ]
+    if "plain_language" in entry:
+        lines.extend([
+            f"PLAIN: {entry['plain_language']}",
+            f"PRINCIPLE: {entry['principle']}",
+            f"EPISTEMIC: {entry['epistemic_type']}",
+            f"MACHINE_MAY: {' | '.join(entry['machine_permissions'])}",
+            f"MACHINE_MUST_NOT: {' | '.join(entry['machine_boundaries'])}",
+        ])
+    lines.append(f"STATUS: {entry['status']}")
+    return "\n".join(lines)
 
 
 def _sync_repository_views(registry, destination: Path) -> list[Path]:
