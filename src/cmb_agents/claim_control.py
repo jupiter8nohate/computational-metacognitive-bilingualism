@@ -34,7 +34,9 @@ def _safe_relative_path(raw: Any) -> Path:
     candidate = Path(value)
     if candidate.is_absolute() or ".." in candidate.parts:
         raise ClaimControlError(f"unsafe control path: {value!r}")
-    normalized = candidate.as_posix().lstrip("./")
+    normalized = candidate.as_posix()
+    if normalized.startswith("./"):
+        normalized = normalized[2:]
     if not normalized:
         raise ClaimControlError("control path must not be empty")
     return Path(normalized)
@@ -55,7 +57,7 @@ def _validate_control(control: Any, *, root: Path, context: str) -> str:
     if kind not in CONTROL_KINDS:
         raise ClaimControlError(f"{context}.kind is unsupported: {kind}")
 
-    relative_path = _safe_relative_path(control.get("path"))
+    relative_path = _safe_relative_path(_require_text(control, "path", context))
     anchor = _require_text(control, "anchor", context)
     target = root / relative_path
 
