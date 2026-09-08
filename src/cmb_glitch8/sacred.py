@@ -16,7 +16,7 @@ _ALLOWED_STATUS: Final[set[str]] = {
     "deprecated",
     "retired",
 }
-_SEC_ID_RE: Final[re.Pattern[str]] = re.compile(r"^SEC-\\d{4}$")
+_SEC_ID_RE: Final[re.Pattern[str]] = re.compile(r"^SEC-\d{4}$")
 
 
 class SacredErrorRegistryError(ValueError):
