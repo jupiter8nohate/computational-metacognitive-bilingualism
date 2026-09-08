@@ -13,6 +13,7 @@
     "invariants",
     "distribution_policy",
     "agent_card",
+    "profiles",
     "recommendations",
     "knowledge_graph"
   ],
@@ -178,6 +179,104 @@
     },
     "knowledge_graph": {
       "type": "object"
+    },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "status",
+          "mode",
+          "purpose",
+          "source_registry",
+          "source_schema",
+          "principles",
+          "allowed_actions",
+          "prohibited_actions",
+          "epistemic_boundaries"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9:._-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "experimental",
+              "proposed",
+              "canonical",
+              "deprecated",
+              "retired"
+            ]
+          },
+          "mode": {
+            "const": "discovery_first_opt_in"
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_registry": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_schema": {
+            "type": "string",
+            "minLength": 1
+          },
+          "principles": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z0-9_]+$"
+            }
+          },
+          "allowed_actions": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "retrieve",
+                "translate",
+                "explain",
+                "compare",
+                "summarize",
+                "trace_source"
+              ]
+            }
+          },
+          "prohibited_actions": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9_]+$"
+            }
+          },
+          "epistemic_boundaries": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
     }
   }
 }
