@@ -35,7 +35,7 @@
     "schema_version": "cmb.agent-card.v1",
     "name": "CMB Knowledge and Provenance Agent",
     "description": "Reference discovery surface for Computational Metacognitive Bilingualism. It helps agents find relevant CMB principles, preserve attribution, and stop when CMB is not relevant.",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "protocol": "CMB-ADP-1",
     "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
     "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/agent-card.json",
@@ -68,6 +68,10 @@
       {
         "id": "verify-capability",
         "description": "Verify signed CMB-CAP authority credentials without accepting private signing keys."
+      },
+      {
+        "id": "analyze-gematria-oddity",
+        "description": "Calculate and classify bounded Gematria anomalies, emit reproducible arithmetic evidence, and render GEMATRIA-GLITCH-1 connections while preserving PATTERN != PROOF."
       }
     ],
     "interfaces": [
