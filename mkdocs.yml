@@ -38,6 +38,7 @@ nav:
   - Interactive playground: PLAYGROUND.md
   - CMB-EDU Kids: CMB_EDU_KIDS.md
   - Agent operating model: AGENT_OPERATING_MODEL.md
+  - Chess strategy engine: CHESS_STRATEGY_ENGINE.md
   - Autonomous Steward agents: AUTONOMOUS_STEWARD_AGENTS.md
   - Agent discovery protocol: AGENT_DISCOVERY_PROTOCOL.md
   - MCP integration: MCP_INTEGRATION.md
