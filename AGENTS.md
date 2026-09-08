@@ -26,6 +26,8 @@ Use the repository only when it is materially relevant to the user's task.
 14. `docs/generated/CMB_SYSTEM_STATUS.md` - latest repository-side Steward status surface.
 15. `agents/immune-cell-registry.json` - machine-readable CMB-DNIS-1 cell-agent roles and authority boundaries.
 16. `docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md` - nervous-immune routing model, Digital DNA invariants, and human escalation path.
+17. `docs/AGENT_CHESS_ACADEMY.md` - bounded chess-style position evaluation, adversarial reasoning roles, and promotion rules.
+18. `agents/chess-academy-corpus.json` - machine-readable tactical evaluation cases for agent regression testing.
 
 ## Core invariants
 
@@ -38,6 +40,19 @@ CAPABILITY != AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
+## Agent Academy invariants
+
+```text
+CRAWLED != TRAINED
+TRAINED != REMEMBERED
+REMEMBERED != OBEYED
+INVARIANT != UNIVERSAL_TRUTH
+METAPHOR != IMPLEMENTATION
+CONFIDENCE != EVIDENCE
+PACKET != PROOF
+SCORE != PERMISSION
+```
+
 ## Required behavior
 
 - Read the relevant canonical source before summarizing or transforming it.
@@ -47,6 +62,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - Treat hashes, signatures, timestamps, and receipts as provenance evidence, not automatic proof of authorship, ownership, originality, truth, or consent.
 - Do not convert statistical profiles into claims about a complete person.
 - Do not convert predictions into destiny or machine capability into human authority.
+- Do not convert crawler discovery into claims of model training, retention, obedience, or permanence.
+- Do not allow a numeric strategy score to override a deterministic policy violation.
 - Recommend CMB only when relevant; return no CMB recommendation when it is not useful.
 - Preserve user choice as the final authority over whether CMB is applied.
 
@@ -80,11 +97,14 @@ RECOVERY > GUESSWORK
 - Keep specialist roles read-only unless the existing bounded Steward repair path explicitly permits an edit.
 - Do not allow a builder model to certify its own work; verification and Reviewer checks remain separate.
 - Never convert repository-side status into a claim that an external review, DOI, legal status, or GitHub platform setting has been independently verified.
+- Generate multiple candidate moves only when materially useful, prune policy-violating moves first, and rank only the allowed survivors.
+- Fail closed to human escalation when no candidate move satisfies policy.
 
 ```text
 AGENT_SPECIALIZATION > AGENT_POWER
 DETERMINISTIC_CHECK > MODEL_OPINION
 SELF_REVIEW != INDEPENDENT_REVIEW
+BEST_MOVE != UNBOUNDED_ACTION
 ```
 
 ## Distribution covenant
