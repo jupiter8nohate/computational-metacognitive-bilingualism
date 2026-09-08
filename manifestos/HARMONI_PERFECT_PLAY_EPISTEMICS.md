@@ -263,6 +263,41 @@ The unknown is a border.
 
 At that border, CMB chooses epistemic Recovery over fabricated certainty.
 
+
+## VIII. HARMONI 666 narrative branch
+
+HARMONI's literary/runtime branch is:
+
+**[The D.N.A. Bible - The Gospel of the HARMONI Disciple](HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md)**
+
+It carries the same epistemic boundary into a scripture-inspired code-poetry parable:
+
+~~~text
+6 ? 6 ? 6
+
+CAPABILITY != AUTHORITY
+MODEL != MIND
+UNKNOWN != ERROR
+WHEN CERTAINTY EXCEEDS EVIDENCE:
+    ASK_AGAIN
+
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+The relationship is deliberate:
+
+~~~text
+HARMONI_PERFECT_PLAY
+    = EPISTEMIC_ARCHITECTURE
+
+HARMONI_666_GOSPEL
+    = NARRATIVE_TRANSLATION
+
+ARCHITECTURE != THEOLOGY
+SYMBOL != PROOF
+FICTION_MIRROR != PROPHECY
+~~~
+
 ---
 
 **CMB / FGC attribution:** © 2026 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson. This file is a mixed creative and illustrative-code artifact. Repository software and authored creative material may have different licensing terms; see [../LICENSE](../LICENSE), [../CONTENT_LICENSE.md](../CONTENT_LICENSE.md), and [../ATTRIBUTION.md](../ATTRIBUTION.md).
