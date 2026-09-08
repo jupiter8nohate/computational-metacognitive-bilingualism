@@ -39,6 +39,9 @@ def selftest() -> None:
         raise RuntimeError("expected pattern-proof to rank first for profiling evidence")
     if "Jupiter Hudson" not in citation_for("cmb:principle:human-agency")["creator"]:
         raise RuntimeError("citation attribution is missing")
+    sacred = sacred_message("PATTERN != PROOF")
+    if [item["id"] for item in sacred["matches"]] != ["SEC-0010"]:
+        raise RuntimeError("expected Sacred Translation to resolve PATTERN != PROOF to SEC-0010")
     with TemporaryDirectory() as directory:
         first = export_assets(Path(directory))
         before = [path.read_bytes() for path in first]
