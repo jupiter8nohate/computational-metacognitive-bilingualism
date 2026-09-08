@@ -33,7 +33,7 @@
 
 **♃ Jupiter Hudson // WisdomLoveThePoet // Jupiter 8**
 
-**𓁹 WITNESS → TRACE → VERIFY → BACKTRACE ‹—**  
+**𓁹 WITNESS → TRACE → VERIFY → BACKTRACE ‹-**  
 [HARMONI / GLITCHOLOGY visual grammar](docs/HARMONI_VISUAL_SYSTEM.md)
 
 </div>
@@ -54,7 +54,7 @@ explicitly reviewed as a freeze-boundary exception.
 
 **Stabilization contract:** [CMB v1.5 Stabilization Cycle](docs/STABILIZATION_CYCLE.md)
 **Release-candidate handoff:** [CMB v1.5 Release Candidate Brief](docs/V1_5_RELEASE_CANDIDATE.md)  
-**Candidate branch/version:** `release/v1.5.0rc1` / `1.5.0-rc.1` — not yet a published release.  
+**Candidate branch/version:** `release/v1.5.0rc1` / `1.5.0-rc.1` - not yet a published release.  
 **Tracked gates:** [dependency reproducibility #62](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/62) · [independent review #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) · [Zenodo/DOI #44](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/44)
 
 ```text
@@ -62,6 +62,46 @@ FEATURE_VELOCITY <= AUDIT_CAPACITY
 SELF_TEST != INDEPENDENT_AUDIT
 REPRODUCIBLE > IMPRESSIVE
 ```
+
+## Repository status at a glance
+
+This repository separates the published baseline, the current release candidate, and external validation so a skimming reviewer does not have to infer maturity from project size.
+
+| Surface | Current state | Meaning |
+| --- | --- | --- |
+| Published signed baseline | `v1.4.1` | Last published signed release |
+| Development target | `1.5.0-rc.1` | Release candidate, not the final v1.5.0 claim |
+| Independent technical review | **Pending** | Self-tests and CI are not external validation |
+| Default-branch governance | **Active ruleset** | Pull request, linear-history, review-thread, and required-check gates protect `main` |
+| External archive / DOI | **Pending public verification** | Citation metadata must not claim a DOI until the record resolves publicly |
+
+### What is load-bearing
+
+A technical reviewer can audit the core without reading the entire artistic and research corpus.
+
+- **Core engineering:** `src/cmb_provenance/`, schemas, tests, release tooling, canonical receipt checks, threat model, and C2PA interoperability.
+- **Extensions:** CMB-SDL, CMB-CAP, boundary adapters, MCP, and bounded steward agents.
+- **Research / policy:** dissertation, prior-art work, case studies, and advocacy proposals.
+- **Art / canon:** Err ⃝or⃟⃤ GLITCHOLOGY, D.N.A. Bible, CMB-Z13, manifestos, and symbolic interfaces.
+
+Optional layers do not strengthen the cryptographic claims of the core merely by existing beside it.
+
+### Claim boundary
+
+Strong project vocabulary is intentionally bounded close to first contact:
+
+```text
+COGNITIVE_SOVEREIGNTY = philosophical_and_policy_language
+RECEIPT = integrity_and_provenance_record
+FIREWALL = conceptual_or_policy_boundary_unless_explicitly_network_enforced
+
+TAMPER_EVIDENT != IMMUTABLE
+SIGNATURE != AUTHORSHIP_JUDGMENT
+PROVENANCE != LEGAL_OWNERSHIP_VERDICT
+SELF_TEST != INDEPENDENT_AUDIT
+```
+
+**External reviewers:** start with [the independent review contract](docs/EXTERNAL_REVIEW.md) or [submit an external review](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/new?template=external_review.yml).
 
 ---
 
@@ -193,7 +233,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix + Go](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
-- **Autonomous maintenance:** [Bounded CMB Steward Agents](docs/AUTONOMOUS_STEWARD_AGENTS.md) — scheduled Recovery, GLT-8101 conformance, registry sync, docs verification, optional AI repair, and draft-PR-only authority
+- **Autonomous maintenance:** [Bounded CMB Steward Agents](docs/AUTONOMOUS_STEWARD_AGENTS.md) - scheduled Recovery, GLT-8101 conformance, registry sync, docs verification, optional AI repair, and draft-PR-only authority
 - **Specialist agent operating model:** [Read-only auditors + structured evidence packets](docs/AGENT_OPERATING_MODEL.md)
 - **System control room:** [Latest repository-side Steward status](docs/generated/CMB_SYSTEM_STATUS.md)
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)
