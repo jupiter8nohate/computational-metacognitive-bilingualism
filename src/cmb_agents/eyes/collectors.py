@@ -152,7 +152,7 @@ def _module_name(src_root: Path, path: Path) -> str:
 
 
 def _resolve_import_module(
-    current_module: str,
+    current_package: str,
     *,
     module: str | None,
     level: int,
@@ -160,8 +160,7 @@ def _resolve_import_module(
     if level <= 0:
         return module or ""
 
-    current_parts = current_module.split(".")
-    package_parts = current_parts[:-1]
+    package_parts = current_package.split(".") if current_package else []
     keep = max(0, len(package_parts) - (level - 1))
     base = package_parts[:keep]
 
@@ -216,13 +215,19 @@ def collect_python_import_pairs(root: Path) -> frozenset[frozenset[str]]:
         except (OSError, SyntaxError, UnicodeDecodeError):
             continue
 
+        current_package = (
+            current_module
+            if path.name == "__init__.py"
+            else current_module.rpartition(".")[0]
+        )
+
         imported_modules: set[str] = set()
         for node in ast.walk(tree):
             if isinstance(node, ast.Import):
                 imported_modules.update(alias.name for alias in node.names)
             elif isinstance(node, ast.ImportFrom):
                 resolved = _resolve_import_module(
-                    current_module,
+                    current_package,
                     module=node.module,
                     level=node.level,
                 )
@@ -324,6 +329,9 @@ def _candidate_invariant_files(root: Path, *, max_files: int) -> tuple[Path, ...
     for path in sorted(root.rglob("*")):
         if len(candidates) >= max_files:
             break
+        relative_parts = path.relative_to(root).parts
+        if ".git" in relative_parts:
+            continue
         if not path.is_file() or path.suffix.lower() not in _TEXT_SUFFIXES:
             continue
         try:
