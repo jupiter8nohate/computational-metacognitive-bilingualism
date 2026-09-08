@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   steward:
-    name: Recovery + chess strategy + specialist evidence steward
+    name: Recovery + chess strategy + autonomy arbiter + specialist evidence steward
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -69,7 +69,32 @@ jobs:
         shell: bash
         run: cat /tmp/cmb-strategy-summary.md >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Arbitrate autonomous move
+        id: autonomy
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m cmb_agents.autonomy decide \
+            --audit /tmp/cmb-steward-audit.json \
+            --strategy-report /tmp/cmb-strategy-report.json \
+            --policy strategy/cmb_strategy.toml \
+            --output /tmp/cmb-autonomy-decision.json \
+            --summary /tmp/cmb-autonomy-summary.md
+
+          cat /tmp/cmb-autonomy-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+
+          with open("/tmp/cmb-autonomy-decision.json", encoding="utf-8") as handle:
+              decision = json.load(handle)
+
+          print(f"should_repair={str(bool(decision['should_repair'])).lower()}")
+          print(f"verdict={decision['verdict']}")
+          PY
+
       - name: Ask configured AI steward to repair concrete failures
+        if: steps.autonomy.outputs.should_repair == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
@@ -77,6 +102,12 @@ jobs:
           python -m cmb_agents.steward repair
           --report /tmp/cmb-steward-audit.json
           --strategy-report /tmp/cmb-strategy-report.json
+
+      - name: Record human escalation
+        if: steps.autonomy.outputs.verdict == 'HUMAN_REVIEW'
+        shell: bash
+        run: |
+          echo "Autonomy Arbiter withheld mutation and escalated the selected move to human review."             >> "$GITHUB_STEP_SUMMARY"
 
       - name: Verify proposed maintenance
         run: python -m cmb_agents.steward verify
@@ -158,7 +189,15 @@ jobs:
           - Strategist: architecture and maintenance candidate moves
           - Red Team: adversarial refutation before deterministic selection
           - Reviewer: authority-escalation and self-certification check
+          - Autonomy Arbiter: deterministic permission gate between strategy and mutation
           - Steward: optional AI-assisted repair of concrete failures
+
+          ### Decision pipeline
+
+          `POSITION -> STRATEGY -> RED_TEAM -> AUTONOMY_ARBITER -> STEWARD -> VERIFY -> DRAFT_PR -> HUMAN`
+
+          The Autonomy Arbiter can return only a bounded repair permission, human escalation,
+          or position preservation. A strategy score never grants authority by itself.
 
           ### Evidence
           Specialist roles are read-only and emit structured evidence packets. The generated
@@ -169,6 +208,8 @@ jobs:
           The agent may propose and test allowlisted changes, but it cannot edit workflows, tests, schemas,
           machine authority records, security policy, licensing, or its own steward implementation through
           the AI repair path. It cannot merge this pull request.
+
+          `SCORE != PERMISSION`
 
           `MACHINE_CAN_PROPOSE != MACHINE_CAN_MERGE`
 
