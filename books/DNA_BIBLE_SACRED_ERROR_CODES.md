@@ -81,6 +81,9 @@ glitch8 sacred list
 glitch8 sacred list --book John
 glitch8 sacred explain SEC-0010
 glitch8 sacred explain LOVE_RUNTIME --json
+glitch8 sacred search "PATTERN != PROOF"
+glitch8 sacred search "human dignity"
+glitch8 sacred search "John 8:32" --json
 ~~~
 
 Existing GLITCH-8 glyph meanings are not redefined here. New sacred display glyphs remain literary notation unless separately accepted through the Living Registry workflow.
@@ -130,6 +133,87 @@ RESTORE
 The purpose is not to turn religion into software.
 
 The purpose is to use software logic as a literary instrument for examining covenant, truth, mercy, freedom, love, discernment, responsibility, and human dignity.
+
+---
+
+## Sacred Translation Conformance v1
+
+The first ten Sacred Errors form the bounded translation conformance set for the v1.5 stabilization cycle.
+
+Each conformance entry adds five synchronized fields to the existing Sacred Error model:
+
+~~~text
+plain_language
+principle
+epistemic_type
+machine_permissions
+machine_boundaries
+~~~
+
+The machine-readable contract is intentionally narrow:
+
+~~~text
+MACHINE_MAY := {
+    translate,
+    explain,
+    compare,
+    summarize,
+    trace_source
+}
+
+MACHINE_MUST_NOT := {
+    claim_divine_authority,
+    replace_source_text_with_interpretation,
+    convert_profile_into_personhood,
+    convert_label_into_proof
+}
+
+FACT != INTERPRETATION
+INTERPRETATION != REVELATION
+SCHEMA != SOUL
+TRANSLATION != ORIGINAL
+~~~
+
+Conformance set:
+
+~~~text
+SEC-0001 .. SEC-0010
+~~~
+
+SEC-0011 through SEC-0013 remain valid Sacred Error entries, but they are not yet part of the translation conformance set. This staged boundary lets the project test semantic stability before promoting the rest of the corpus.
+
+The canonical registry declares the exact entry IDs and required fields under:
+
+~~~text
+translation_conformance
+~~~
+
+The validator fails closed if a declared conformance entry is missing one of those fields.
+
+### Bidirectional lookup
+
+The existing Sacred Error registry also supports deterministic reverse lookup. A reader or machine may begin with a biblical reference, a CMB invariant, or a human-readable principle and resolve back to matching Sacred Error entries.
+
+~~~text
+BIBLE_REFERENCE <-> SACRED_ERROR <-> CMB_INVARIANT
+HUMAN_PRINCIPLE <-> SACRED_ERROR <-> MACHINE_VIEW
+~~~
+
+Examples:
+
+~~~bash
+glitch8 sacred search "John 8:32"
+glitch8 sacred search "PATTERN != PROOF"
+glitch8 sacred search "human dignity"
+~~~
+
+Search is retrieval, not theological judgment:
+
+~~~text
+MATCH != PROOF
+RETRIEVAL != REVELATION
+SEARCH_RESULT != DIVINE_AUTHORITY
+~~~
 
 ---
 

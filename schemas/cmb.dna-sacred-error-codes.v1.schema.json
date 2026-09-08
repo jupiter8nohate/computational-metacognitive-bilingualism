@@ -13,6 +13,7 @@
     "updated_at",
     "status",
     "boundaries",
+    "translation_conformance",
     "errors"
   ],
   "properties": {
@@ -60,6 +61,43 @@
       "minItems": 1,
       "items": {
         "$ref": "#/$defs/error"
+      }
+    },
+    "translation_conformance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "set",
+        "entry_ids",
+        "required_fields"
+      ],
+      "properties": {
+        "set": {
+          "const": "sacred_translation_v1"
+        },
+        "entry_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^SEC-\\d{4}$"
+          }
+        },
+        "required_fields": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "plain_language",
+              "principle",
+              "epistemic_type",
+              "machine_permissions",
+              "machine_boundaries"
+            ]
+          }
+        }
       }
     }
   },
@@ -153,6 +191,45 @@
             "deprecated",
             "retired"
           ]
+        },
+        "plain_language": {
+          "type": "string",
+          "minLength": 1
+        },
+        "principle": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]+$"
+        },
+        "epistemic_type": {
+          "enum": [
+            "theological_interpretation",
+            "philosophical_principle",
+            "code_poetry",
+            "textual_reference"
+          ]
+        },
+        "machine_permissions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "translate",
+              "explain",
+              "compare",
+              "summarize",
+              "trace_source"
+            ]
+          }
+        },
+        "machine_boundaries": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          }
         }
       }
     }

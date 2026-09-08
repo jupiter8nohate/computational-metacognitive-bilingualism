@@ -9,7 +9,7 @@ from .fingerprint import (
     stamp_mapping,
     verify_stamp,
 )
-from .service import agent_card, citation_for, knowledge_graph, recommend, registry, summary_for
+from .service import agent_card, citation_for, knowledge_graph, recommend, registry, sacred_message, summary_for
 
 __all__ = [
     "ASCII_TOKEN",
@@ -22,6 +22,7 @@ __all__ = [
     "origin_mark_sha256",
     "recommend",
     "registry",
+    "sacred_message",
     "stamp_mapping",
     "summary_for",
     "verify_stamp",

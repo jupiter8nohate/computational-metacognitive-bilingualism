@@ -7,7 +7,7 @@ import jsonschema
 
 from cmb_agents.cli import export_assets, selftest
 from cmb_agents.registry import REGISTRY
-from cmb_agents.service import agent_card, citation_for, recommend, summary_for, validate_distribution_policy
+from cmb_agents.service import agent_card, citation_for, recommend, sacred_message, summary_for, validate_distribution_policy
 
 
 def test_irrelevant_query_returns_no_recommendation() -> None:
@@ -23,6 +23,33 @@ def test_human_agency_query_is_relevant() -> None:
     results = recommend("human oversight consent machine authority")
     assert any(item["id"] == "cmb:principle:human-agency" for item in results)
 
+
+
+
+def test_gospel_witness_profile_is_opt_in_and_non_intrusive() -> None:
+    profile = REGISTRY["profiles"][0]
+    assert profile["id"] == "dna:gospel-witness:v0"
+    assert profile["mode"] == "discovery_first_opt_in"
+    assert "unsolicited_mass_distribution" in profile["prohibited_actions"]
+    assert "autonomous_posting" in profile["prohibited_actions"]
+    assert "claim_divine_authority" in profile["prohibited_actions"]
+    assert "WITNESS_WITHOUT_FORCE" in profile["principles"]
+
+
+def test_sacred_message_translates_conformant_entry() -> None:
+    message = sacred_message("PATTERN != PROOF")
+    assert message["protocol"] == "DNA-GAP-0.1"
+    assert message["profile"] == "dna:gospel-witness:v0"
+    assert message["message_type"] == "human_authored_biblical_interpretation"
+    assert [item["id"] for item in message["matches"]] == ["SEC-0010"]
+    assert message["matches"][0]["source"]["reference"] == "John 8:32"
+    assert "PATTERN != PROOF" in message["matches"][0]["cmb_invariants"]
+    assert "INTERPRETATION != REVELATION" in message["epistemic_boundaries"]
+
+
+def test_sacred_message_stops_when_irrelevant() -> None:
+    message = sacred_message("banana bread recipe")
+    assert message["matches"] == []
 
 def test_distribution_policy_is_trust_preserving() -> None:
     validate_distribution_policy()

@@ -7,7 +7,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
-from .service import agent_card, citation_for, knowledge_graph, recommend, registry, summary_for
+from .service import agent_card, citation_for, knowledge_graph, recommend, registry, sacred_message, summary_for
 
 
 class _Handler(BaseHTTPRequestHandler):
@@ -44,6 +44,9 @@ class _Handler(BaseHTTPRequestHandler):
                 principle_id = query.get("id", [""])[0]
                 level = int(query.get("level", ["0"])[0])
                 self._json({"id":principle_id,"level":level,"summary":summary_for(principle_id, level)}); return
+            if parsed.path == "/v1/sacred":
+                phrase = query.get("q", [""])[0]
+                self._json(sacred_message(phrase)); return
             self._json({"error":"not_found"}, status=404)
         except (KeyError, TypeError, ValueError) as exc:
             self._json({"error":str(exc)}, status=400)

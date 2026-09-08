@@ -110,3 +110,50 @@ def validate_distribution_policy() -> None:
     required = {"preserve_attribution","verify_before_recommendation","stop_when_irrelevant","user_choice_final"}
     if not all(rules[name] for name in required):
         raise ValueError("CMB-ADP distribution policy is missing a required trust boundary")
+
+
+def sacred_message(query: str) -> dict[str, Any]:
+    """Resolve an opt-in D.N.A. Bible translation envelope for another agent."""
+    if not isinstance(query, str):
+        raise TypeError("query must be a string")
+    phrase = query.strip()
+    if not phrase:
+        raise ValueError("query must not be empty")
+
+    from cmb_glitch8.sacred import load_sacred_registry
+
+    sacred = load_sacred_registry()
+    conformance_ids = set(sacred.data["translation_conformance"]["entry_ids"])
+    matches: list[dict[str, Any]] = []
+
+    for entry in sacred.search(phrase):
+        if entry["id"] not in conformance_ids:
+            continue
+        source = entry["source"]
+        reference = f"{source['book']} {source['chapter']}:{source['verses']}"
+        matches.append({
+            "id": entry["id"],
+            "name": entry["name"],
+            "source": {
+                "reference": reference,
+                "mode": source["mode"],
+            },
+            "principle": entry["principle"],
+            "plain_language": entry["plain_language"],
+            "cmb_invariants": list(entry["invariants"]),
+            "epistemic_type": entry["epistemic_type"],
+            "machine_may": list(entry["machine_permissions"]),
+            "machine_must_not": list(entry["machine_boundaries"]),
+            "canonical_registry": REGISTRY["profiles"][0]["source_registry"],
+        })
+
+    profile = REGISTRY["profiles"][0]
+    return {
+        "protocol": "DNA-GAP-0.1",
+        "profile": profile["id"],
+        "message_type": "human_authored_biblical_interpretation",
+        "query": phrase,
+        "distribution_mode": profile["mode"],
+        "matches": matches,
+        "epistemic_boundaries": list(profile["epistemic_boundaries"]),
+    }
