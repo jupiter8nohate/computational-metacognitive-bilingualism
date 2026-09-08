@@ -27,9 +27,10 @@ The scheduled steward now separates deterministic maintenance from read-only spe
 8. **LIBRARIAN** — checks documentation navigation targets and catalogue integrity.
 9. **ARCHAEOLOGIST** — backtraces the canonical registry through repository Git history.
 10. **DISCOVERY** — validates the machine-discovery contract.
-11. **SECURITY** — verifies repository-side security-control files are present.
-12. **REVIEWER** — rejects evidence packets that escalate authority or self-certify external gates.
-13. **STEWARD** — when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
+11. **SECURITY** - verifies repository-side security-control files are present.
+12. **DNIS** - verifies CMB-DNIS-1 cell-agent registry integrity and Digital DNA continuity.
+13. **REVIEWER** - rejects evidence packets that escalate authority or self-certify external gates.
+14. **STEWARD** - when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
 
 The specialist roles are read-only. They communicate through structured evidence packets. See [CMB Specialist Agent Operating Model](AGENT_OPERATING_MODEL.md).
 
@@ -163,4 +164,17 @@ HUMAN
 
 AUTONOMY != UNBOUNDED_AUTHORITY
 RECOVERY > SILENT_FAILURE
+~~~
+
+## DNIS cell-agent layer
+
+The Steward now audits the CMB-DNIS-1 registry as an additional read-only specialist check. The runtime model lives in `src/cmb_agents/immune_system.py` and the machine-readable cell registry lives in `agents/immune-cell-registry.json`.
+
+DNIS does not grant the Steward new permissions. It adds a routing vocabulary for sensing supplied events, normalizing them, calculating operational friction, applying policy, taking bounded reflex actions, escalating consequential judgments, creating route receipts, and preserving digest-only memory.
+
+~~~text
+CELL_SPECIALIZATION > CELL_POWER
+MEMORY != SECRET_PROFILE
+REFLEX != SELF_AUTHORIZATION
+HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
