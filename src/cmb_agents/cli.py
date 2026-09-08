@@ -11,7 +11,7 @@ from typing import Sequence
 
 from . import __version__
 from .server import serve
-from .service import agent_card, citation_for, knowledge_graph, recommend, registry, summary_for, validate_distribution_policy
+from .service import agent_card, citation_for, knowledge_graph, recommend, registry, sacred_message, summary_for, validate_distribution_policy
 
 
 def _dump(payload: object) -> None:
@@ -55,6 +55,7 @@ def build_parser() -> argparse.ArgumentParser:
     rec = commands.add_parser("recommend"); rec.add_argument("query"); rec.add_argument("--limit", type=int, default=3)
     cite = commands.add_parser("cite"); cite.add_argument("principle_id")
     summary = commands.add_parser("summary"); summary.add_argument("principle_id"); summary.add_argument("--level", type=int, choices=(0,1,2), default=0)
+    sacred = commands.add_parser("sacred"); sacred.add_argument("query")
     export = commands.add_parser("export"); export.add_argument("output_dir", type=Path)
     srv = commands.add_parser("serve"); srv.add_argument("--host", default="127.0.0.1"); srv.add_argument("--port", type=int, default=8765)
     return parser
@@ -67,6 +68,7 @@ def _run(args: argparse.Namespace) -> int:
     elif args.command == "recommend": _dump({"query":args.query,"results":recommend(args.query, limit=args.limit)})
     elif args.command == "cite": _dump(citation_for(args.principle_id))
     elif args.command == "summary": _dump({"id":args.principle_id,"level":args.level,"summary":summary_for(args.principle_id,args.level)})
+    elif args.command == "sacred": _dump(sacred_message(args.query))
     elif args.command == "export": _dump({"written":[str(path) for path in export_assets(args.output_dir)]})
     elif args.command == "serve": serve(args.host,args.port)
     elif args.command == "selftest": selftest(); print("CMB-ADP-1 selftest: PASS")
