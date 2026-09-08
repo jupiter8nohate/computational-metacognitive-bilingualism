@@ -27,11 +27,18 @@ The scheduled steward now separates deterministic maintenance from read-only spe
 8. **LIBRARIAN** — checks documentation navigation targets and catalogue integrity.
 9. **ARCHAEOLOGIST** — backtraces the canonical registry through repository Git history.
 10. **DISCOVERY** — validates the machine-discovery contract.
-11. **SECURITY** — verifies repository-side security-control files are present.
-12. **REVIEWER** — rejects evidence packets that escalate authority or self-certify external gates.
-13. **STEWARD** — when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
+11. **SECURITY** - verifies repository-side security-control files are present.
+12. **DNIS** - verifies CMB-DNIS-1 cell-agent registry integrity and Digital DNA continuity.
+13. **REVIEWER** - rejects evidence packets that escalate authority or self-certify external gates.
+14. **POSITION** - builds a hashed repository position from the exact commit, deterministic audit state, evidence packets, and latest changed paths.
+15. **TACTICIAN** - searches for the smallest immediate repair to a concrete failure.
+16. **STRATEGIST** - evaluates architecture and maintenance consequences without bypassing stabilization scope.
+17. **RED_TEAM** - attempts to refute candidate moves before deterministic selection.
+18. **STEWARD** - when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
 
-The specialist roles are read-only. They communicate through structured evidence packets. See [CMB Specialist Agent Operating Model](AGENT_OPERATING_MODEL.md).
+The chess roles are proposal and review roles. They do not receive direct repository mutation authority. The Strategy Engine feeds an advisory principal variation into the existing bounded Steward repair path.
+
+The specialist roles are read-only. They communicate through structured evidence packets. See [CMB Specialist Agent Operating Model](AGENT_OPERATING_MODEL.md) and [CMB Chess Strategy Engine](CHESS_STRATEGY_ENGINE.md).
 
 ## Schedule
 
@@ -163,4 +170,17 @@ HUMAN
 
 AUTONOMY != UNBOUNDED_AUTHORITY
 RECOVERY > SILENT_FAILURE
+~~~
+
+## DNIS cell-agent layer
+
+The Steward now audits the CMB-DNIS-1 registry as an additional read-only specialist check. The runtime model lives in `src/cmb_agents/immune_system.py` and the machine-readable cell registry lives in `agents/immune-cell-registry.json`.
+
+DNIS does not grant the Steward new permissions. It adds a routing vocabulary for sensing supplied events, normalizing them, calculating operational friction, applying policy, taking bounded reflex actions, escalating consequential judgments, creating route receipts, and preserving digest-only memory.
+
+~~~text
+CELL_SPECIALIZATION > CELL_POWER
+MEMORY != SECRET_PROFILE
+REFLEX != SELF_AUTHORIZATION
+HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~

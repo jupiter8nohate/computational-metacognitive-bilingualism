@@ -234,6 +234,8 @@ You should not need the entire CMB universe to understand the thesis.
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
 - **Autonomous maintenance:** [Bounded CMB Steward Agents](docs/AUTONOMOUS_STEWARD_AGENTS.md) — scheduled Recovery, GLT-8101 conformance, registry sync, docs verification, optional AI repair, and draft-PR-only authority
+- **Chess strategy engine:** [Position search, Red Team pruning, deterministic evaluation, and principal variation](docs/CHESS_STRATEGY_ENGINE.md)
+- **Claim-control traceability:** [Separate symbolic, declared, enforced, and verified CMB principles](docs/CLAIM_CONTROL_TRACEABILITY.md)
 - **Specialist agent operating model:** [Read-only auditors + structured evidence packets](docs/AGENT_OPERATING_MODEL.md)
 - **System control room:** [Latest repository-side Steward status](docs/generated/CMB_SYSTEM_STATUS.md)
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)

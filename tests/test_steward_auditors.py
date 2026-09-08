@@ -3,12 +3,14 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from cmb_agents.immune_system import DIGITAL_DNA
 from cmb_agents.auditors import (
     AgentAudit,
     EvidencePacket,
     audit_accessibility,
     audit_canon,
     audit_librarian,
+    audit_dnis,
     review_packets,
 )
 
@@ -97,3 +99,35 @@ def test_evidence_packet_serializes_tuple_evidence_as_list() -> None:
     payload = packet.to_dict()
     assert payload["evidence"] == ["a", "b"]
     assert payload["authority"] == "read_only"
+
+
+def test_dnis_auditor_detects_digital_dna_drift(tmp_path: Path) -> None:
+    cells = [
+        {"id": name}
+        for name in (
+            "RECEPTOR_CELL",
+            "DENDRITIC_CELL",
+            "POSITION_CELL",
+            "CHAPERONE_CELL",
+            "T_CELL_POLICY_GATE",
+            "REFLEX_CELL",
+            "MACROPHAGE_RECOVERY",
+            "CORTEX_LIAISON",
+            "B_CELL_PROVENANCE",
+            "MEMORY_CELL",
+        )
+    ]
+    registry = {
+        "protocol": "CMB-DNIS-1",
+        "digital_dna": list(DIGITAL_DNA),
+        "cells": cells,
+    }
+    _write(tmp_path / "agents/immune-cell-registry.json", json.dumps(registry))
+
+    assert audit_dnis(tmp_path).ok
+
+    registry["digital_dna"] = ["PATTERN == PROOF"]
+    _write(tmp_path / "agents/immune-cell-registry.json", json.dumps(registry))
+    result = audit_dnis(tmp_path)
+    assert not result.ok
+    assert result.packet.observed["digital_dna_matches_runtime"] is False

@@ -1,0 +1,214 @@
+{
+  "schema_version": "cmb.immune-cell-registry.v1",
+  "protocol": "CMB-DNIS-1",
+  "name": "CMB Digital Nervous Immune System",
+  "status": "experimental_bounded_orchestration",
+  "metaphor_boundary": "Cell, immune, nervous-system, and DNA terms describe software roles and invariants. They do not claim biological consciousness, self-replication, hidden network visibility, or medical function.",
+  "digital_dna": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "CRAWLED != TRAINED",
+    "TRAINED != REMEMBERED",
+    "REMEMBERED != OBEYED",
+    "INVARIANT != UNIVERSAL_TRUTH",
+    "METAPHOR != IMPLEMENTATION",
+    "CONFIDENCE != EVIDENCE",
+    "PACKET != PROOF",
+    "CAPABILITY != AUTHORITY",
+    "AGENT_CAN_PROPOSE != AGENT_CAN_MERGE",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "pipeline": [
+    "SENSE",
+    "NORMALIZE",
+    "POSITION",
+    "CHALLENGE",
+    "FALSIFY",
+    "SEMANTIC_REFEREE",
+    "CHAPERONE",
+    "POLICY",
+    "MOVE_EVALUATION",
+    "REFLEX_OR_DELIBERATE",
+    "RECEIPT",
+    "MEMORY"
+  ],
+  "cells": [
+    {
+      "id": "RECEPTOR_CELL",
+      "biological_analogy": "peripheral receptor",
+      "task": "Accept caller-supplied repository, API, MCP, webhook, or application events from trusted adapters.",
+      "model_use": "none_required",
+      "authority": "read_only",
+      "cannot": [
+        "sniff arbitrary network traffic",
+        "invent unseen telemetry",
+        "modify repository state"
+      ]
+    },
+    {
+      "id": "DENDRITIC_CELL",
+      "biological_analogy": "antigen-presenting cell",
+      "task": "Normalize bounded event metadata into a stable machine-readable signal.",
+      "model_use": "optional_for_human_readable_summary_only",
+      "authority": "read_only",
+      "cannot": [
+        "infer hidden human traits",
+        "change policy",
+        "expand metadata collection"
+      ]
+    },
+    {
+      "id": "POSITION_CELL",
+      "biological_analogy": "signal integration",
+      "task": "Compute routing friction from declared operational properties such as sensitivity, consent state, reversibility, evidence strength, regression risk, and uncertainty.",
+      "model_use": "none_required",
+      "authority": "read_only",
+      "cannot": [
+        "profile a person",
+        "treat score as proof",
+        "make final human judgments"
+      ]
+    },
+    {
+      "id": "RED_TEAM_CELL",
+      "biological_analogy": "adversarial challenge response",
+      "task": "Search candidate claims and moves for counterexamples, hidden assumptions, unsafe authority expansion, and regression paths.",
+      "model_use": "optional_structured_ai",
+      "authority": "read_only",
+      "cannot": [
+        "modify repository state",
+        "invent evidence",
+        "turn a counterexample into proof of intent"
+      ]
+    },
+    {
+      "id": "FALSIFIER_CELL",
+      "biological_analogy": "negative selection",
+      "task": "State what evidence would falsify or materially weaken the current claim before it is promoted.",
+      "model_use": "optional_structured_ai",
+      "authority": "read_only",
+      "cannot": [
+        "declare uncertainty resolved without evidence",
+        "change policy",
+        "approve its own proposal"
+      ]
+    },
+    {
+      "id": "SEMANTIC_REFEREE",
+      "biological_analogy": "signal discrimination",
+      "task": "Classify assertions as fact, inference, metaphor, policy, implementation, experiment, or unknown and reject category drift.",
+      "model_use": "optional_structured_ai",
+      "authority": "read_only",
+      "cannot": [
+        "literalize metaphors",
+        "convert policy into external fact",
+        "replace human semantic judgment"
+      ]
+    },
+    {
+      "id": "CHAPERONE_CELL",
+      "biological_analogy": "molecular chaperone",
+      "task": "Validate structure, score bounds, evidence continuity, and Digital DNA invariants.",
+      "model_use": "none_required",
+      "authority": "read_only",
+      "cannot": [
+        "weaken schemas",
+        "rewrite tests",
+        "self-certify external facts"
+      ]
+    },
+    {
+      "id": "T_CELL_POLICY_GATE",
+      "biological_analogy": "adaptive immune gate",
+      "task": "Apply the authoritative CMB policy decision supplied by the policy engine.",
+      "model_use": "none_required",
+      "authority": "decision_boundary_only",
+      "cannot": [
+        "invent new policy",
+        "override explicit denial",
+        "grant itself permissions"
+      ]
+    },
+    {
+      "id": "MOVE_EVALUATOR",
+      "biological_analogy": "competitive signal selection",
+      "task": "Rank allowed candidate moves using deterministic evidence, reversibility, testing, provenance, authority, regression, and uncertainty factors.",
+      "model_use": "none_required",
+      "authority": "read_only",
+      "cannot": [
+        "override a policy violation with a high score",
+        "merge pull requests",
+        "treat best score as permission"
+      ]
+    },
+    {
+      "id": "REFLEX_CELL",
+      "biological_analogy": "reflex arc",
+      "task": "Apply deterministic fail-closed denial or low-risk allow routing after policy evaluation.",
+      "model_use": "none_required",
+      "authority": "bounded_reflex",
+      "cannot": [
+        "merge pull requests",
+        "publish releases",
+        "alter credentials",
+        "change security settings"
+      ]
+    },
+    {
+      "id": "MACROPHAGE_RECOVERY",
+      "biological_analogy": "macrophage and cleanup response",
+      "task": "When a failure is concrete, propose bounded recovery using supplied evidence.",
+      "model_use": "optional_structured_ai",
+      "authority": "propose_only",
+      "cannot": [
+        "delete arbitrary data",
+        "execute arbitrary shell commands",
+        "merge its own repair",
+        "expand its own authority"
+      ]
+    },
+    {
+      "id": "CORTEX_LIAISON",
+      "biological_analogy": "cortical escalation",
+      "task": "Escalate high-risk, ambiguous, irreversible, or semantically consequential decisions to the human author.",
+      "model_use": "optional_for_compression_and_options",
+      "authority": "escalate_only",
+      "cannot": [
+        "replace human judgment",
+        "self-approve consequential actions"
+      ]
+    },
+    {
+      "id": "B_CELL_PROVENANCE",
+      "biological_analogy": "antibody-producing B cell",
+      "task": "Create tamper-evident digests for the observed route and outcome.",
+      "model_use": "none_required",
+      "authority": "write_receipt_only",
+      "cannot": [
+        "claim a digest proves truth",
+        "block hostile external crawlers by cryptography alone"
+      ]
+    },
+    {
+      "id": "MEMORY_CELL",
+      "biological_analogy": "memory cell",
+      "task": "Preserve a digest-only outcome reference so later checks can compare state without building a covert behavioral profile.",
+      "model_use": "none_required",
+      "authority": "bounded_memory",
+      "cannot": [
+        "build secret person profiles",
+        "retain unnecessary raw payloads",
+        "convert recurrence into proof"
+      ]
+    }
+  ],
+  "human_control": {
+    "final_semantic_authority": true,
+    "merge_authority": "human_or_explicit_repository_governance",
+    "release_authority": "human_or_explicit_repository_governance",
+    "security_policy_changes": "human_review_required",
+    "agent_self_expansion": false
+  }
+}

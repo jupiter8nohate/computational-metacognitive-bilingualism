@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   steward:
-    name: Recovery + specialist evidence steward
+    name: Recovery + chess strategy + specialist evidence steward
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -51,11 +51,32 @@ jobs:
       - name: Run deterministic steward audit
         run: python -m cmb_agents.steward audit --report /tmp/cmb-steward-audit.json
 
+      - name: Verify CMB claim-control traceability
+        run: python -m cmb_agents.claim_control --manifest machine/claim-control-traceability.v1.json
+
+      - name: Search the current position with bounded chess agents
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
+        run: >-
+          python -m cmb_agents.strategy
+          --audit /tmp/cmb-steward-audit.json
+          --policy strategy/cmb_strategy.toml
+          --output /tmp/cmb-strategy-report.json
+          --summary /tmp/cmb-strategy-summary.md
+
+      - name: Publish strategy principal variation
+        shell: bash
+        run: cat /tmp/cmb-strategy-summary.md >> "$GITHUB_STEP_SUMMARY"
+
       - name: Ask configured AI steward to repair concrete failures
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
-        run: python -m cmb_agents.steward repair --report /tmp/cmb-steward-audit.json
+        run: >-
+          python -m cmb_agents.steward repair
+          --report /tmp/cmb-steward-audit.json
+          --strategy-report /tmp/cmb-strategy-report.json
 
       - name: Verify proposed maintenance
         run: python -m cmb_agents.steward verify
@@ -110,7 +131,8 @@ jobs:
           fi
 
           git commit -m "chore(agent): bounded steward maintenance"
-          gh auth setup-git\n          git push origin "HEAD:refs/heads/$branch"
+          gh auth setup-git
+          git push origin "HEAD:refs/heads/$branch"
 
           body_file="/tmp/cmb-steward-pr.md"
           cat > "$body_file" <<'EOF'
@@ -130,6 +152,11 @@ jobs:
           - Archaeologist: repository-history backtrace
           - Discovery: machine discovery contract
           - Security: repository-side security-control files
+          - DNIS: Digital Nervous Immune System registry and Digital DNA continuity
+          - Position: hashed repository search state
+          - Tactician: minimum reversible repair candidates
+          - Strategist: architecture and maintenance candidate moves
+          - Red Team: adversarial refutation before deterministic selection
           - Reviewer: authority-escalation and self-certification check
           - Steward: optional AI-assisted repair of concrete failures
 

@@ -18,6 +18,8 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Final
 
+from .immune_system import DIGITAL_DNA, digital_dna_digest
+
 _SAFE_AUTHORITIES: Final[set[str]] = {"read_only", "propose_only"}
 
 
@@ -416,6 +418,62 @@ def audit_security(root: Path) -> AgentAudit:
     return AgentAudit("SECURITY", ok, f"repository security files missing={len(missing)}.", packet)
 
 
+def audit_dnis(root: Path) -> AgentAudit:
+    """Check Digital Nervous Immune System registry and invariant continuity."""
+
+    path = "agents/immune-cell-registry.json"
+    registry = _read_json(root, path)
+    declared_dna = tuple(registry.get("digital_dna", [])) if isinstance(registry, dict) else ()
+    cells = registry.get("cells", []) if isinstance(registry, dict) else []
+    cell_ids = {
+        str(item.get("id"))
+        for item in cells
+        if isinstance(item, dict) and item.get("id")
+    }
+    required_cells = {
+        "RECEPTOR_CELL",
+        "DENDRITIC_CELL",
+        "POSITION_CELL",
+        "CHAPERONE_CELL",
+        "T_CELL_POLICY_GATE",
+        "REFLEX_CELL",
+        "MACROPHAGE_RECOVERY",
+        "CORTEX_LIAISON",
+        "B_CELL_PROVENANCE",
+        "MEMORY_CELL",
+    }
+    missing_cells = sorted(required_cells - cell_ids)
+    dna_matches = declared_dna == DIGITAL_DNA
+    protocol_ok = isinstance(registry, dict) and registry.get("protocol") == "CMB-DNIS-1"
+    ok = dna_matches and protocol_ok and not missing_cells
+
+    packet = _packet(
+        agent="DNIS",
+        task="digital_nervous_immune_integrity",
+        observed={
+            "protocol_ok": protocol_ok,
+            "digital_dna_matches_runtime": dna_matches,
+            "digital_dna_digest": digital_dna_digest(),
+            "declared_cell_count": len(cell_ids),
+            "missing_required_cells": missing_cells,
+        },
+        evidence=(path, "src/cmb_agents/immune_system.py"),
+        confidence=1.0,
+        recommended_action=(
+            "DNIS registry and runtime Digital DNA are aligned."
+            if ok
+            else "Repair DNIS registry/runtime drift before treating cell-agent routing as canonical."
+        ),
+        severity="info" if ok else "error",
+    )
+    return AgentAudit(
+        "DNIS",
+        ok,
+        f"protocol={'ok' if protocol_ok else 'invalid'}; dna={'aligned' if dna_matches else 'drifted'}; missing_cells={len(missing_cells)}.",
+        packet,
+    )
+
+
 def review_packets(audits: tuple[AgentAudit, ...]) -> AgentAudit:
     """Review specialist outputs for authority escalation and ungrounded self-certification."""
 
@@ -468,5 +526,6 @@ def run_specialist_audits(root: Path) -> tuple[AgentAudit, ...]:
         audit_archaeologist(root),
         audit_discovery(root),
         audit_security(root),
+        audit_dnis(root),
     )
     return (*audits, review_packets(audits))
