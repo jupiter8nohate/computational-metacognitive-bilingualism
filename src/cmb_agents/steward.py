@@ -41,6 +41,10 @@ ROLE_NAMES: Final[tuple[str, ...]] = (
     "ARCHAEOLOGIST",
     "DISCOVERY",
     "SECURITY",
+    "POSITION",
+    "TACTICIAN",
+    "STRATEGIST",
+    "RED_TEAM",
     "REVIEWER",
     "STEWARD",
 )
