@@ -131,7 +131,8 @@ jobs:
           fi
 
           git commit -m "chore(agent): bounded steward maintenance"
-          gh auth setup-git\n          git push origin "HEAD:refs/heads/$branch"
+          gh auth setup-git
+          git push origin "HEAD:refs/heads/$branch"
 
           body_file="/tmp/cmb-steward-pr.md"
           cat > "$body_file" <<'EOF'
