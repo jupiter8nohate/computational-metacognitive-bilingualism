@@ -44,6 +44,7 @@ CMB uses specialization instead of granting one model broad repository authority
 | ARCHAEOLOGIST | Backtrace canonical registry history | Read-only |
 | DISCOVERY | Inspect machine-discovery contract | Read-only |
 | SECURITY | Inspect repository-side security-control files | Read-only |
+| DNIS | Verify Digital Nervous Immune System registry and Digital DNA continuity | Read-only |
 | REVIEWER | Review evidence packets for authority escalation/self-certification | Read-only |
 | STEWARD | Propose bounded repairs after concrete failures | Existing-file allowlist; draft PR only |
 
@@ -132,3 +133,50 @@ EVIDENCE > CONFIDENCE
 MACHINE_CAN_PROPOSE != MACHINE_CAN_MERGE
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
+
+## Digital Nervous Immune System
+
+CMB-DNIS-1 adds a bounded cell-agent routing layer without replacing the existing Steward authority model.
+
+~~~text
+RECEPTOR_CELL
+      |
+      v
+DENDRITIC_CELL
+      |
+      v
+POSITION_CELL
+      |
+      v
+CHAPERONE_CELL
+      |
+      v
+T_CELL_POLICY_GATE
+   /         \\
+  v           v
+REFLEX     CORTEX_LIAISON
+  |           |
+  +-----+-----+
+        |
+        v
+B_CELL_PROVENANCE
+        |
+        v
+MEMORY_CELL
+~~~
+
+On a concrete denial, MACROPHAGE_RECOVERY may propose a bounded repair through the existing Steward path. It does not gain merge, release, credential, workflow, or security-policy authority.
+
+Every cell packet carries the same Digital DNA digest:
+
+~~~text
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
+PREDICTION != DESTINY
+CAPABILITY != AUTHORITY
+AGENT_CAN_PROPOSE != AGENT_CAN_MERGE
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+See [CMB Digital Nervous Immune System](DIGITAL_NERVOUS_IMMUNE_SYSTEM.md) and `../agents/immune-cell-registry.json`.
