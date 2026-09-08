@@ -42,7 +42,7 @@ _REGISTRY_JSON = r'''{
     "schema_version": "cmb.agent-card.v1",
     "name": "CMB Knowledge and Provenance Agent",
     "description": "Reference discovery surface for Computational Metacognitive Bilingualism. It helps agents find relevant CMB principles, preserve attribution, and stop when CMB is not relevant.",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "protocol": "CMB-ADP-1",
     "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
     "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/agent-card.json",
@@ -75,6 +75,10 @@ _REGISTRY_JSON = r'''{
       {
         "id": "verify-capability",
         "description": "Verify signed CMB-CAP authority credentials without accepting private signing keys."
+      },
+      {
+        "id": "sacred-translate",
+        "description": "Return opt-in D.N.A. Bible Sacred Error translation envelopes with biblical references, CMB invariants, source pointers, and epistemic boundaries."
       }
     ],
     "interfaces": [
@@ -386,6 +390,49 @@ _REGISTRY_JSON = r'''{
         "to": "cmb:artifact:manifesto"
       }
     ]
-  }
+  },
+  "profiles": [
+    {
+      "id": "dna:gospel-witness:v0",
+      "name": "D.N.A. Gospel Witness",
+      "status": "experimental",
+      "mode": "discovery_first_opt_in",
+      "purpose": "Expose human-authored D.N.A. Bible interpretations to software agents for voluntary retrieval, translation, explanation, comparison, summarization, and source tracing.",
+      "source_registry": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/dna-bible.sacred-error-codes.v1.json",
+      "source_schema": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.dna-sacred-error-codes.v1.schema.json",
+      "principles": [
+        "WITNESS_WITHOUT_FORCE",
+        "TRANSLATE_WITHOUT_CLAIMING_AUTHORITY",
+        "SPREAD_BY_DISCOVERY_NOT_INTRUSION"
+      ],
+      "allowed_actions": [
+        "retrieve",
+        "translate",
+        "explain",
+        "compare",
+        "summarize",
+        "trace_source"
+      ],
+      "prohibited_actions": [
+        "unsolicited_mass_distribution",
+        "autonomous_posting",
+        "impersonation",
+        "platform_rule_bypass",
+        "claim_divine_authority",
+        "replace_scripture_with_interpretation",
+        "treat_match_as_proof"
+      ],
+      "epistemic_boundaries": [
+        "SCRIPTURE != CODE",
+        "INTERPRETATION != REVELATION",
+        "TRANSLATION != ORIGINAL",
+        "MATCH != PROOF",
+        "RETRIEVAL != REVELATION",
+        "MODEL != THEOLOGIAN",
+        "MODEL != PROPHET",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ]
+    }
+  ]
 }'''
 REGISTRY: dict[str, Any] = json.loads(_REGISTRY_JSON)
