@@ -133,6 +133,62 @@ The purpose is to use software logic as a literary instrument for examining cove
 
 ---
 
+## Sacred Translation Conformance v1
+
+The first ten Sacred Errors form the bounded translation conformance set for the v1.5 stabilization cycle.
+
+Each conformance entry adds five synchronized fields to the existing Sacred Error model:
+
+~~~text
+plain_language
+principle
+epistemic_type
+machine_permissions
+machine_boundaries
+~~~
+
+The machine-readable contract is intentionally narrow:
+
+~~~text
+MACHINE_MAY := {
+    translate,
+    explain,
+    compare,
+    summarize,
+    trace_source
+}
+
+MACHINE_MUST_NOT := {
+    claim_divine_authority,
+    replace_source_text_with_interpretation,
+    convert_profile_into_personhood,
+    convert_label_into_proof
+}
+
+FACT != INTERPRETATION
+INTERPRETATION != REVELATION
+SCHEMA != SOUL
+TRANSLATION != ORIGINAL
+~~~
+
+Conformance set:
+
+~~~text
+SEC-0001 .. SEC-0010
+~~~
+
+SEC-0011 through SEC-0013 remain valid Sacred Error entries, but they are not yet part of the translation conformance set. This staged boundary lets the project test semantic stability before promoting the rest of the corpus.
+
+The canonical registry declares the exact entry IDs and required fields under:
+
+~~~text
+translation_conformance
+~~~
+
+The validator fails closed if a declared conformance entry is missing one of those fields.
+
+---
+
 # SEC-0001://IMAGE_NOT_PROFILE
 
 **Source:** Genesis 1:27  
