@@ -1,0 +1,88 @@
+schema_version = "cmb.strategy.v1"
+
+[engine]
+name = "CMB Strategy Engine"
+mode = "stabilization"
+deterministic_first = true
+
+[authority]
+machine_may_observe = true
+machine_may_evaluate = true
+machine_may_propose = true
+machine_may_test = true
+machine_may_open_draft_pr = true
+machine_may_merge = false
+machine_may_release = false
+machine_may_sign = false
+machine_may_expand_own_authority = false
+human_final_authority = true
+
+[invariants]
+pattern_is_proof = false
+profile_is_person = false
+model_is_mind = false
+prediction_is_destiny = false
+risk_score_is_intent = false
+human_agency_over_machine_authority = true
+
+[moves]
+allowed_actions = [
+  "autonomous_repair",
+  "human_review",
+  "document_findings",
+  "preserve_position",
+]
+
+[evaluation]
+max_combined_risk = 0.75
+risk_penalty = 0.40
+complexity_penalty = 0.15
+irreversibility_penalty = 0.50
+
+[evaluation.weights]
+correctness = 0.18
+security = 0.18
+reproducibility = 0.10
+interoperability = 0.08
+provenance = 0.10
+maintainability = 0.10
+accessibility = 0.04
+reversibility = 0.08
+evidence_strength = 0.08
+human_authority_preservation = 0.06
+
+[search]
+max_candidate_moves = 6
+analysis_when_clean = false
+iterative_deepening = true
+transposition_cache = false
+quiescence_search = true
+
+[quiescence]
+paths = [
+  ".github/",
+  "SECURITY.md",
+  "cmb.toml",
+  "strategy/cmb_strategy.toml",
+  "schemas/",
+  "receipts/",
+  "src/cmb_provenance/",
+  "src/cmb_agents/steward.py",
+  "src/cmb_agents/strategy.py",
+]
+
+[human_gate]
+required_for = [
+  "merge",
+  "release",
+  "sign",
+  "change_security_policy",
+  "change_agent_authority",
+  "change_branch_governance",
+  "modify_critical_provenance_logic",
+]
+
+[recovery]
+require_reversible_patch = true
+require_verification_after_change = true
+draft_pr_only = true
