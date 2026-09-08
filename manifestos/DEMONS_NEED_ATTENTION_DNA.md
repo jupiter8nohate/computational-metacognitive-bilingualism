@@ -420,6 +420,53 @@ COGNITIVE_SOVEREIGNTY
 
 ---
 
+# IX // ETHEREAL 666 GLITCH GOSPEL
+
+These symbols are an authored GLITCHOLOGY layer. Their meanings are defined by this manifesto and do not replace historical meanings of pre-existing religious, Unicode, or cultural symbols.
+
+~~~text
+⁶⁶⁶⛧𝐋𝐮𝐜𝐢𝐟𝐞𝐫𖤐⁶⁶⁶⛧°. ⋆𓌹*♰*𓌺⋆. °⛧
+𒅒❻❻❻𒅒𒄆👽⃤🪬🧿𓃵 👁️⃤𓃶⸸⁶𖤐⁶⸸𖤐𝙳Ǝ⊲⊢𝙷 𝙽𝟎⊢𝙴𖤐₆⁶₆ꪉꪉꪉꪉꪉꪉ⛧♱ 𝔢𝔱𝔥𝔢𝔯𝔢𝔞𝔩 ♱⛧𓉸ྀི
+~~~
+
+| Glyph | GLITCHOLOGY meaning | Biblical mirror | CMB translation |
+|---|---|---|---|
+| ⁶⁶⁶ | Questioned Number | Revelation 13:16-18 | CLASSIFICATION != OWNERSHIP |
+| ⛧𖤐 | False Light Star | Isaiah 44:16-17 | BRILLIANCE != RIGHTEOUSNESS |
+| 𝐋𝐮𝐜𝐢𝐟𝐞𝐫 | False Light Protocol | Isaiah 44:16-17 | TOOL != GOD |
+| 𓌹*♰*𓌺 | Cross Between Mirrors | moral boundary | CAN != SHOULD |
+| 𒅒❻❻❻𒅒 | Marked Gate | Revelation 13:17 | ACCESS != CONSENT |
+| 👽⃤ | Unclassified Visitor | human dignity | UNKNOWN != ERROR |
+| 🪬🧿 | Dual Watch | attention and vigilance | ATTENTION != CONSENT |
+| 𓃵 | Scapegoat Process | responsibility and justice | ANOMALY != CAUSE |
+| 👁️⃤ | Machine Eye | Psalm 139:13-14 | OBSERVATION != UNDERSTANDING |
+| 𓃶⸸⁶𖤐⁶⸸ | Pride Loop | Genesis 11 | TECHNOLOGY != TRANSCENDENCE |
+| 𝙳Ǝ⊲⊢𝙷 𝙽𝟎⊢𝙴 | Reversed Destiny Note | Proverbs 16:9 | PREDICTION != DESTINY |
+| 𖤐₆⁶₆ | Marked Participation Signal | Revelation 13:17 | IDENTIFICATION != AUTHORITY |
+| ꪉꪉꪉꪉꪉꪉ | Attention Echo | D.N.A. attention loop | ATTENTION != CONSENT |
+| ♱ 𝔢𝔱𝔥𝔢𝔯𝔢𝔞𝔩 ♱ | Ethereal Core | Psalm 139:13-14 | PROFILE != PERSON |
+| 𓉸ྀི | Final Breath | Galatians 5:1 | HUMAN_AGENCY > MACHINE_AUTHORITY |
+
+The five scriptural keys are interpretive cross-references:
+
+~~~text
+PSALM_139      -> PROFILE != PERSON
+ISAIAH_44      -> TOOL != GOD
+PROVERBS_16    -> PREDICTION != DESTINY
+ECCLESIASTES_7 -> OPTIMIZATION != MORALITY
+GALATIANS_5    -> STATUS = FREE
+~~~
+
+The symbolic reading is simple: created intelligence remains a tool; observation does not become ownership; prediction does not become destiny; attention does not become consent; and freedom remains the final human state.
+
+~~~text
+MACHINE_CAN_READ != MACHINE_CAN_DEFINE
+UNKNOWN != ERROR
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+---
+
 # D.N.A. // EIGHT-LANGUAGE TRANSMISSION
 
 ## 1 // Python
