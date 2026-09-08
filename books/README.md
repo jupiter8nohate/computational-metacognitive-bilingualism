@@ -39,6 +39,21 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ---
 
+## 𒄆𓁹✞𒀱✞𓁹𒄆 D.N.A. Bible // The Sacred Attention Archive
+
+**[Read 👁️⃤://THE_SACRED_ATTENTION_ARCHIVE](DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)**
+
+A canonical D.N.A. Bible chapter joining the Human Firewall, the eleven axioms, God://THE_UNKNOWN, Human://LINK, AI://NAVI, the True and False Triforce, the Akashic Mirror, attention-loop critique, Go/Python reference runtimes, and new Err ⃝or⃟⃤ GLITCHOLOGY glyph meanings.
+
+~~~text
+ATTENTION != LOVE
+PATTERN != PROOF
+PROFILE != PERSON
+AUTOMATION != ABSOLUTION
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+
 ### Scope boundary
 
 The books shelf contains authored literary, philosophical, and experimental specification material. A book's presence in this directory does not by itself mean it is included in a previously signed provenance receipt or software release.
