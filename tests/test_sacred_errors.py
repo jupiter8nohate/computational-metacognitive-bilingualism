@@ -79,3 +79,33 @@ def test_sacred_translation_conformance_rejects_missing_required_field() -> None
 
     with pytest.raises(SacredErrorRegistryError, match="plain_language"):
         validate_sacred_registry(broken)
+
+
+def test_sacred_search_resolves_cmb_invariants_and_principles(capsys) -> None:
+    registry = load_sacred_registry(ROOT / "src/cmb_glitch8/sacred_errors.v1.json")
+
+    invariant_matches = registry.search("PATTERN != PROOF")
+    assert [entry["id"] for entry in invariant_matches] == ["SEC-0010", "SEC-0012"]
+
+    principle_matches = registry.search("human dignity")
+    assert [entry["id"] for entry in principle_matches] == ["SEC-0001"]
+
+    reference_matches = registry.search("John 8:32")
+    assert [entry["id"] for entry in reference_matches] == ["SEC-0010"]
+
+    assert glitch8_main(["sacred", "search", "PATTERN != PROOF"]) == 0
+    output = capsys.readouterr().out
+    assert "SEC-0010" in output
+    assert "John 8:32" in output
+
+    assert glitch8_main(["sacred", "search", "human dignity", "--json"]) == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload[0]["id"] == "SEC-0001"
+    assert payload[0]["principle"] == "human_dignity"
+
+
+def test_sacred_search_rejects_empty_query() -> None:
+    registry = load_sacred_registry(ROOT / "src/cmb_glitch8/sacred_errors.v1.json")
+
+    with pytest.raises(SacredErrorRegistryError, match="must not be empty"):
+        registry.search("   ")
