@@ -23,7 +23,9 @@ Use the repository only when it is materially relevant to the user's task.
 11. `machine/discovery-manifest.json` — canonical public discovery endpoints.
 12. `docs/JUPITER_POLYGLOT_RUNTIME.md` — executable Go → Python → GLITCHOLOGY reference artifact and canonical source map.
 13. `docs/AGENT_OPERATING_MODEL.md` — bounded specialist-agent roles, evidence packets, and reviewer separation.
-14. `docs/generated/CMB_SYSTEM_STATUS.md` — latest repository-side Steward status surface.
+14. `docs/CHESS_STRATEGY_ENGINE.md` - bounded repository position search, Red Team refutation, pruning, evaluation, and principal variation.
+15. `strategy/cmb_strategy.toml` - machine-readable authority constitution and strategy evaluation policy.
+16. `docs/generated/CMB_SYSTEM_STATUS.md` — latest repository-side Steward status surface.
 
 ## Core invariants
 
