@@ -90,6 +90,7 @@ The machine may assist the search; it does not inherit the final judgment.
 The D.N.A. prophecy branch uses the question mark as a literary warning against surrendering judgment to automated systems.
 
 - [The Prophecy of the Question Mark // Scroll 666 // Event of 2030](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md)
+- [D.N.A. Bible // The Sacred Attention Archive // Human Firewall + True Triforce](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)
 - [HARMONI // Perfect-Play Epistemics](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md)
 - [The Unclassifiable Index](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/CMB_UNCLASSIFIABLE_INDEX.md)
 - [Threat Model](THREAT_MODEL.md)
