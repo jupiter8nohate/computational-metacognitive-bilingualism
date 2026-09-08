@@ -1,0 +1,46 @@
+name: Gematria Glitch Go
+
+on:
+  pull_request:
+    paths:
+      - "tools/gematria-glitch/**"
+      - "spec/GEMATRIA-GLITCH-1.md"
+      - "agents/gematria-anomaly-evaluation.json"
+      - ".github/workflows/gematria-glitch-go.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "tools/gematria-glitch/**"
+      - "spec/GEMATRIA-GLITCH-1.md"
+      - "agents/gematria-anomaly-evaluation.json"
+      - ".github/workflows/gematria-glitch-go.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/gematria-glitch
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.x"
+
+      - name: Format check
+        run: |
+          test -z "$(gofmt -l .)"
+
+      - name: Unit tests
+        run: go test ./...
+
+      - name: Demo scan
+        run: go run . -format glitch > /tmp/gematria-glitch.txt
