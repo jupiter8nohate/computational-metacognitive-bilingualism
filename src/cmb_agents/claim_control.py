@@ -19,7 +19,6 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Final
 
-ROOT: Final[Path] = Path(__file__).resolve().parents[2]
 SCHEMA_VERSION: Final[str] = "cmb.claim-control.v1"
 MATURITIES: Final[tuple[str, ...]] = ("symbolic", "declared", "enforced", "verified")
 CONTROL_KINDS: Final[set[str]] = {"doc", "policy", "validator", "runtime", "test", "workflow"}
@@ -71,8 +70,9 @@ def _validate_control(control: Any, *, root: Path, context: str) -> str:
     return kind
 
 
-def validate_manifest(data: Any, *, root: Path = ROOT) -> dict[str, Any]:
+def validate_manifest(data: Any, *, root: Path | None = None) -> dict[str, Any]:
     """Validate structure, maturity semantics, file references, and anchors."""
+    root = (root or Path.cwd()).resolve()
     if not isinstance(data, dict):
         raise ClaimControlError("manifest must be a JSON object")
     if data.get("schema_version") != SCHEMA_VERSION:
@@ -134,9 +134,13 @@ def validate_manifest(data: Any, *, root: Path = ROOT) -> dict[str, Any]:
     }
 
 
-def validate_manifest_file(path: Path, *, root: Path = ROOT) -> dict[str, Any]:
+def validate_manifest_file(path: Path, *, root: Path | None = None) -> dict[str, Any]:
+    resolved_path = path.resolve()
+    if root is None:
+        root = resolved_path.parent.parent if resolved_path.parent.name == "machine" else Path.cwd()
+    root = root.resolve()
     try:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(resolved_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         raise ClaimControlError(f"unable to read claim-control manifest: {exc}") from exc
     return validate_manifest(data, root=root)
