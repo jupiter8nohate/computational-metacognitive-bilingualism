@@ -1,0 +1,98 @@
+name: External technical review
+description: Submit an independent review of a pinned CMB commit or release candidate.
+title: "[External review] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reviewing CMB. Critical findings are useful. Please identify the exact commit you examined and state the limits of your review.
+
+        Do not publish sensitive vulnerability details here. Follow SECURITY.md for security-sensitive reports.
+
+  - type: input
+    id: reviewer
+    attributes:
+      label: Reviewer
+      description: GitHub handle, name, or public reviewer identifier.
+      placeholder: "@reviewer"
+    validations:
+      required: true
+
+  - type: textarea
+    id: relationship
+    attributes:
+      label: Independence disclosure
+      description: Disclose any relevant relationship to the project or creator. "None" is acceptable.
+      placeholder: None.
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Exact commit SHA
+      description: Pin the exact commit examined so the review is reproducible.
+      placeholder: 40-character Git commit SHA
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope examined
+      description: List the files, subsystems, commands, tests, or claims you actually reviewed.
+      placeholder: |
+        src/cmb_provenance/
+        tests/
+        .github/workflows/release.yml
+    validations:
+      required: true
+
+  - type: textarea
+    id: major
+    attributes:
+      label: Major findings
+      description: Findings that materially affect correctness, security, provenance claims, reproducibility, or release readiness.
+      placeholder: Describe the finding, evidence, and reproduction steps.
+    validations:
+      required: false
+
+  - type: textarea
+    id: minor
+    attributes:
+      label: Minor findings
+      description: Documentation, maintainability, terminology, usability, or lower-severity concerns.
+      placeholder: Describe any minor findings.
+    validations:
+      required: false
+
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations and exclusions
+      description: State what you did not inspect, could not reproduce, or are uncertain about.
+      placeholder: I did not review...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: recommendation
+    attributes:
+      label: Recommendation
+      options:
+        - Ready for the reviewed scope
+        - Ready after minor fixes
+        - Material fixes required
+        - Insufficient evidence to recommend
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Review boundaries
+      options:
+        - label: I understand that a review is not certification or endorsement.
+          required: true
+        - label: I have not included sensitive exploit details that should be reported privately.
+          required: true

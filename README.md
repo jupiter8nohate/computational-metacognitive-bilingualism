@@ -63,6 +63,46 @@ SELF_TEST != INDEPENDENT_AUDIT
 REPRODUCIBLE > IMPRESSIVE
 ```
 
+## Repository status at a glance
+
+This repository separates the published baseline, the current release candidate, and external validation so a skimming reviewer does not have to infer maturity from project size.
+
+| Surface | Current state | Meaning |
+| --- | --- | --- |
+| Published signed baseline | `v1.4.1` | Last published signed release |
+| Development target | `1.5.0-rc.1` | Release candidate, not the final v1.5.0 claim |
+| Independent technical review | **Pending** | Self-tests and CI are not external validation |
+| Default-branch governance | **Active ruleset** | Pull request, linear-history, review-thread, and required-check gates protect `main` |
+| External archive / DOI | **Pending public verification** | Citation metadata must not claim a DOI until the record resolves publicly |
+
+### What is load-bearing
+
+A technical reviewer can audit the core without reading the entire artistic and research corpus.
+
+- **Core engineering:** `src/cmb_provenance/`, schemas, tests, release tooling, canonical receipt checks, threat model, and C2PA interoperability.
+- **Extensions:** CMB-SDL, CMB-CAP, boundary adapters, MCP, and bounded steward agents.
+- **Research / policy:** dissertation, prior-art work, case studies, and advocacy proposals.
+- **Art / canon:** Err ⃝or⃟⃤ GLITCHOLOGY, D.N.A. Bible, CMB-Z13, manifestos, and symbolic interfaces.
+
+Optional layers do not strengthen the cryptographic claims of the core merely by existing beside it.
+
+### Claim boundary
+
+Strong project vocabulary is intentionally bounded close to first contact:
+
+```text
+COGNITIVE_SOVEREIGNTY = philosophical_and_policy_language
+RECEIPT = integrity_and_provenance_record
+FIREWALL = conceptual_or_policy_boundary_unless_explicitly_network_enforced
+
+TAMPER_EVIDENT != IMMUTABLE
+SIGNATURE != AUTHORSHIP_JUDGMENT
+PROVENANCE != LEGAL_OWNERSHIP_VERDICT
+SELF_TEST != INDEPENDENT_AUDIT
+```
+
+**External reviewers:** start with [the independent review contract](docs/EXTERNAL_REVIEW.md) or [submit an external review](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/new?template=external_review.yml).
+
 ---
 
 ## Public Stewardship Incubation

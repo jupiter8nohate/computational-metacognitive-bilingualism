@@ -10,6 +10,26 @@ Contributions are welcome when they preserve the project's evidence boundaries a
 
 Do not silently move a claim from one lane to another. A metaphor is not a security control; a test result is not a legal conclusion.
 
+## First-time external reviewers
+
+You do not need to become a contributor or endorse CMB to review it.
+
+1. Read [docs/EXTERNAL_REVIEW.md](docs/EXTERNAL_REVIEW.md).
+2. Pin the exact commit SHA you examined.
+3. Keep the scope narrow enough that another person can reproduce your work.
+4. Submit findings through the [external review issue form](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/new?template=external_review.yml) or reference them in the active v1.5 review issue.
+5. State limitations and anything you did not inspect.
+
+Negative findings are useful. A review is evidence about the reviewed scope, not an endorsement or certification.
+
+```text
+REVIEW != ENDORSEMENT
+REVIEW != CERTIFICATION
+CRITICISM -> REPRODUCE -> FIX_OR_DISPUTE_WITH_EVIDENCE
+```
+
+Do not publish sensitive vulnerability details through the review form. Use [SECURITY.md](SECURITY.md) for security-sensitive reports.
+
 ## Development setup
 
 ```bash
