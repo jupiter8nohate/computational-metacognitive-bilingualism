@@ -442,6 +442,7 @@ def request_repair_plan(
     *,
     api_key: str,
     model: str,
+    strategy_context: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Ask a configured OpenAI Responses API model for a bounded repair proposal."""
     if not api_key:
@@ -466,6 +467,7 @@ def request_repair_plan(
             "HUMAN_AGENCY > MACHINE_AUTHORITY",
         ],
         "failed_checks": _failed_checks(report),
+        "strategy_context": strategy_context or {},
         "editable_file_context": context,
     }
 
@@ -640,6 +642,11 @@ def main(argv: list[str] | None = None) -> int:
 
     repair_parser = sub.add_parser("repair", help="Apply a bounded AI repair proposal.")
     repair_parser.add_argument("--report", type=Path, default=Path(".cmb-agent/audit.json"))
+    repair_parser.add_argument(
+        "--strategy-report",
+        type=Path,
+        help="Optional advisory CMB Strategy Engine report. Audit evidence remains authoritative.",
+    )
 
     sub.add_parser("verify", help="Run fixed post-repair verification.")
     sub.add_parser("validate-diff", help="Reject protected-path mutations.")
@@ -669,7 +676,30 @@ def main(argv: list[str] | None = None) -> int:
                 )
                 return 0
             context = collect_context(report)
-            plan = request_repair_plan(report, context, api_key=api_key, model=model)
+            strategy_context: dict[str, Any] | None = None
+            if args.strategy_report:
+                strategy_payload = json.loads(args.strategy_report.read_text(encoding="utf-8"))
+                if not isinstance(strategy_payload, dict):
+                    raise StewardError("strategy report must be a JSON object")
+                strategy_context = {
+                    "selected_move_id": strategy_payload.get("selected_move_id"),
+                    "selected_move_title": strategy_payload.get("selected_move_title"),
+                    "selected_move_action": strategy_payload.get("selected_move_action"),
+                    "selected_move_requires_human": strategy_payload.get("selected_move_requires_human"),
+                    "principal_variation": strategy_payload.get("principal_variation", []),
+                    "position": strategy_payload.get("position", {}),
+                    "boundary": (
+                        "Strategy output is advisory. Concrete deterministic audit failures, edit allowlists, "
+                        "fixed verification, and human review remain authoritative."
+                    ),
+                }
+            plan = request_repair_plan(
+                report,
+                context,
+                api_key=api_key,
+                model=model,
+                strategy_context=strategy_context,
+            )
             changed = apply_repair_plan(plan, context)
             print(plan.get("summary", "Repair proposal applied."))
             print(f"AI-edited files: {len(changed)}")
