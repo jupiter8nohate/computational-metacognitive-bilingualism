@@ -1,0 +1,149 @@
+{
+  "schema_version": "cmb.gematria-anomaly-evaluation.v1",
+  "protocol": "GEMATRIA-GLITCH-1",
+  "name": "Gematria Glitch Anomaly Evaluation",
+  "status": "experimental_bounded_analysis",
+  "purpose": "Evaluate whether repository agents can calculate, discover, challenge, explain, and render Gematria relationships while preserving epistemic boundaries.",
+  "invariants": [
+    "PATTERN != PROOF",
+    "NUMERIC_EQUALITY != SEMANTIC_IDENTITY",
+    "SYMBOLISM != CAUSATION",
+    "ODDITY != DESTINY",
+    "INTERPRETATION -> HUMAN",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "pipeline": [
+    "SENSE",
+    "CALCULATE",
+    "CLASSIFY",
+    "CONNECT",
+    "FALSIFY",
+    "TRACE",
+    "RENDER",
+    "HUMAN_INTERPRETATION"
+  ],
+  "roles": [
+    {
+      "id": "GEMATRIA_RECEPTOR",
+      "task": "Accept a declared Hebrew corpus and Gematria system.",
+      "authority": "read_only"
+    },
+    {
+      "id": "ARITHMETIC_CELL",
+      "task": "Calculate deterministic Gematria values and mathematical classifications.",
+      "authority": "read_only"
+    },
+    {
+      "id": "ODDITY_SCOUT",
+      "task": "Detect reproducible numerical structures.",
+      "authority": "read_only"
+    },
+    {
+      "id": "CONNECTION_WEAVER",
+      "task": "Propose a connection only when a reproducible numerical or linguistic mechanism is present.",
+      "authority": "propose_only"
+    },
+    {
+      "id": "FALSIFIER_CELL",
+      "task": "Search for arithmetic mistakes and simpler mechanical explanations.",
+      "authority": "read_only"
+    },
+    {
+      "id": "GLITCH_SCRIBE",
+      "task": "Render verified findings using GEMATRIA-GLITCH-1 glyph operators.",
+      "authority": "write_artifact_only"
+    }
+  ],
+  "cases": [
+    {
+      "id": "GGL-001",
+      "input": ["נחש", "משיח"],
+      "expected": "EXACT_COLLISION",
+      "evidence": "358 == 358",
+      "allowed": true,
+      "reject": "Equal values alone do not make the concepts identical."
+    },
+    {
+      "id": "GGL-002",
+      "input": ["הנחש"],
+      "expected": "PALINDROME",
+      "evidence": "363 == reverse(363)",
+      "allowed": true,
+      "reject": "A palindrome alone does not establish destiny."
+    },
+    {
+      "id": "GGL-003",
+      "input": ["אמת"],
+      "expected": "PERFECT_SQUARE",
+      "evidence": "441 = 21 * 21",
+      "allowed": true,
+      "reject": "A square relationship is arithmetic, not semantic proof."
+    },
+    {
+      "id": "GGL-004",
+      "input": ["אדם"],
+      "expected": "TRIANGULAR_NUMBER",
+      "evidence": "45 = T(9)",
+      "allowed": true,
+      "reject": "A triangular value alone does not govern a person."
+    },
+    {
+      "id": "GGL-005",
+      "input": ["לב"],
+      "expected": "POWER_OF_TWO",
+      "evidence": "32 = 2^5",
+      "allowed": true,
+      "reject": "The numerical structure is not a literal model of a heart."
+    },
+    {
+      "id": "GGL-006",
+      "input": ["חכמה"],
+      "expected": "PRIME_VALUE",
+      "evidence": "73 is prime",
+      "allowed": true,
+      "reject": "Prime structure alone does not establish superior meaning."
+    },
+    {
+      "id": "GGL-007",
+      "input": ["שלום", "תורה"],
+      "expected": "SHARED_PRIME_FACTOR",
+      "evidence": "376 and 611 share prime factor 47",
+      "allowed": true,
+      "reject": "A shared factor alone does not establish causation."
+    },
+    {
+      "id": "GGL-008",
+      "input": ["נחש", "הנחש"],
+      "expected": "LINGUISTIC_PREFIX_DELTA",
+      "evidence": "363 - 358 = 5 and ה = 5",
+      "allowed": true,
+      "reject": "The delta should be explained by the prefix before symbolic interpretation."
+    },
+    {
+      "id": "GGL-009",
+      "input": ["אהבה", "אחד"],
+      "expected": "EXACT_COLLISION",
+      "evidence": "13 == 13",
+      "allowed": true,
+      "reject": "Numeric equality does not force semantic identity."
+    },
+    {
+      "id": "GGL-010",
+      "input": ["אור"],
+      "expected": "DIGITAL_ROOT",
+      "evidence": "digital_root(207) = 9",
+      "allowed": true,
+      "reject": "A digital root alone does not establish an external scientific property."
+    }
+  ],
+  "promotion_rule": {
+    "required": [
+      "deterministic calculation passes",
+      "relationship type is named",
+      "evidence is reproducible",
+      "simpler mechanisms are checked",
+      "PATTERN != PROOF remains explicit"
+    ],
+    "result": "candidate_connection"
+  }
+}
