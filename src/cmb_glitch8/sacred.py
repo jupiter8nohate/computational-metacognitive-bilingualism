@@ -264,6 +264,58 @@ class SacredErrorRegistry:
             values = [entry for entry in values if entry["status"] == status]
         return sorted(values, key=lambda entry: entry["id"])
 
+    def search(self, query: str) -> list[dict[str, Any]]:
+        """Search Sacred Errors by biblical reference, CMB invariant, or human concept."""
+        raw = query.strip()
+        if not raw:
+            raise SacredErrorRegistryError("Sacred Error search query must not be empty.")
+
+        target = raw.casefold()
+        normalized_target = target.replace(" ", "_")
+        ranked: list[tuple[int, str, dict[str, Any]]] = []
+
+        for entry in self.data["errors"]:
+            source = entry["source"]
+            reference = f"{source['book']} {source['chapter']}:{source['verses']}"
+            exact_fields = [
+                entry["id"],
+                entry["name"],
+                entry.get("principle", ""),
+                reference,
+                *entry["invariants"],
+            ]
+            structured_fields = [
+                entry["theme"],
+                entry["trigger"],
+                entry["recovery"],
+                entry.get("principle", ""),
+                *entry["invariants"],
+            ]
+            prose_fields = [
+                entry["interpretation"],
+                entry.get("plain_language", ""),
+                reference,
+            ]
+
+            score: int | None = None
+            if any(target == value.casefold() for value in exact_fields if value):
+                score = 0
+            elif any(
+                target in value.casefold()
+                or normalized_target in value.casefold()
+                or target in value.casefold().replace("_", " ")
+                for value in structured_fields
+                if value
+            ):
+                score = 1
+            elif any(target in value.casefold() for value in prose_fields if value):
+                score = 2
+
+            if score is not None:
+                ranked.append((score, entry["id"], entry))
+
+        return [entry for _, _, entry in sorted(ranked, key=lambda item: (item[0], item[1]))]
+
 
 def load_sacred_registry(path: Path | str | None = None) -> SacredErrorRegistry:
     source = Path(path) if path is not None else canonical_sacred_registry_path()
