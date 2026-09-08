@@ -1,0 +1,222 @@
+{
+  "schema_version": "cmb.claim-control.v1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "purpose": "Trace philosophical claims to declarations, executable controls, and verification evidence without confusing metaphor with enforcement.",
+  "claims": [
+    {
+      "claim_id": "CMB-INV-001",
+      "expression": "PATTERN != PROOF",
+      "maturity": "verified",
+      "meaning": "A detected pattern must not be promoted to proof merely because an automated system observed it.",
+      "controls": [
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "pattern_is_proof = false"
+        },
+        {
+          "kind": "validator",
+          "path": "src/cmb_agents/strategy.py",
+          "anchor": "\"pattern_is_proof\": False"
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_claim_control.py",
+          "anchor": "\"pattern_is_proof\": False"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-INV-002",
+      "expression": "PROFILE != PERSON",
+      "maturity": "verified",
+      "meaning": "A derived profile remains a model artifact and must not be treated as identical to the human being described.",
+      "controls": [
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "profile_is_person = false"
+        },
+        {
+          "kind": "validator",
+          "path": "src/cmb_agents/strategy.py",
+          "anchor": "\"profile_is_person\": False"
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_claim_control.py",
+          "anchor": "\"profile_is_person\": False"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-INV-003",
+      "expression": "MODEL != MIND",
+      "maturity": "verified",
+      "meaning": "A computational model must not be represented as identical to a human mind.",
+      "controls": [
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "model_is_mind = false"
+        },
+        {
+          "kind": "validator",
+          "path": "src/cmb_agents/strategy.py",
+          "anchor": "\"model_is_mind\": False"
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_claim_control.py",
+          "anchor": "\"model_is_mind\": False"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-INV-004",
+      "expression": "PREDICTION != DESTINY",
+      "maturity": "verified",
+      "meaning": "A prediction is an estimate and must not become an unquestionable determination of future outcome.",
+      "controls": [
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "prediction_is_destiny = false"
+        },
+        {
+          "kind": "validator",
+          "path": "src/cmb_agents/strategy.py",
+          "anchor": "\"prediction_is_destiny\": False"
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_claim_control.py",
+          "anchor": "\"prediction_is_destiny\": False"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-INV-005",
+      "expression": "RISK_SCORE != INTENT",
+      "maturity": "verified",
+      "meaning": "A risk score may guide review but must not be treated as proof of a person's intent.",
+      "controls": [
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "risk_score_is_intent = false"
+        },
+        {
+          "kind": "validator",
+          "path": "src/cmb_agents/strategy.py",
+          "anchor": "\"risk_score_is_intent\": False"
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_claim_control.py",
+          "anchor": "\"risk_score_is_intent\": False"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-AUTH-001",
+      "expression": "MACHINE_CAN_PROPOSE != MACHINE_CAN_MERGE",
+      "maturity": "verified",
+      "meaning": "The bounded agent may produce proposals while merge authority remains outside the machine role.",
+      "controls": [
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "machine_may_propose = true"
+        },
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "machine_may_merge = false"
+        },
+        {
+          "kind": "validator",
+          "path": "src/cmb_agents/strategy.py",
+          "anchor": "\"machine_may_merge\","
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_claim_control.py",
+          "anchor": "\"machine_may_propose\": True"
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_claim_control.py",
+          "anchor": "\"machine_may_merge\": False"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-AUTH-002",
+      "expression": "HUMAN_AGENCY > MACHINE_AUTHORITY",
+      "maturity": "verified",
+      "meaning": "The strategy policy preserves final human authority and rejects configurations that grant prohibited machine powers.",
+      "controls": [
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "human_final_authority = true"
+        },
+        {
+          "kind": "policy",
+          "path": "strategy/cmb_strategy.toml",
+          "anchor": "human_agency_over_machine_authority = true"
+        },
+        {
+          "kind": "validator",
+          "path": "src/cmb_agents/strategy.py",
+          "anchor": "strategy policy must preserve human final authority"
+        },
+        {
+          "kind": "test",
+          "path": "tests/test_claim_control.py",
+          "anchor": "\"human_agency_over_machine_authority\": True"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-EPISTEMIC-001",
+      "expression": "TEST_PASS != CORRECTNESS",
+      "maturity": "declared",
+      "meaning": "Passing tests is evidence about tested behavior, not proof of total system correctness.",
+      "controls": [
+        {
+          "kind": "doc",
+          "path": "docs/CHESS_STRATEGY_ENGINE.md",
+          "anchor": "TEST_PASS != CORRECTNESS"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-EPISTEMIC-002",
+      "expression": "SENSATION != AUTHORITY",
+      "maturity": "symbolic",
+      "meaning": "Receiving telemetry or input does not itself grant permission to act on protected state.",
+      "controls": [
+        {
+          "kind": "doc",
+          "path": "docs/CLAIM_CONTROL_TRACEABILITY.md",
+          "anchor": "SENSATION != AUTHORITY"
+        }
+      ]
+    },
+    {
+      "claim_id": "CMB-EPISTEMIC-003",
+      "expression": "OBSERVATION != UNDERSTANDING",
+      "maturity": "symbolic",
+      "meaning": "Observation alone does not establish subjective understanding, authorship, ownership, or authority.",
+      "controls": [
+        {
+          "kind": "doc",
+          "path": "docs/CLAIM_CONTROL_TRACEABILITY.md",
+          "anchor": "OBSERVATION != UNDERSTANDING"
+        }
+      ]
+    }
+  ]
+}
