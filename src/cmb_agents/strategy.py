@@ -159,6 +159,7 @@ class StrategyReport:
     selected_move_action: str | None
     selected_move_requires_human: bool
     model_used: bool
+    model_error: str | None = None
     boundaries: tuple[str, ...] = field(
         default=(
             "PATTERN != PROOF",
@@ -181,6 +182,7 @@ class StrategyReport:
             "selected_move_action": self.selected_move_action,
             "selected_move_requires_human": self.selected_move_requires_human,
             "model_used": self.model_used,
+            "model_error": self.model_error,
             "boundaries": list(self.boundaries),
         }
 
@@ -669,9 +671,25 @@ def analyze(
     analysis_when_clean = bool(policy["search"].get("analysis_when_clean", False))
 
     model_used = bool(api_key and model and (not position.audit_ok or analysis_when_clean))
+    model_error: str | None = None
     if model_used:
-        candidates = request_candidate_moves(position, audit, policy, api_key=api_key, model=model)
-        refutations = request_refutations(position, candidates, policy, api_key=api_key, model=model)
+        try:
+            candidates = request_candidate_moves(position, audit, policy, api_key=api_key, model=model)
+            refutations = request_refutations(position, candidates, policy, api_key=api_key, model=model)
+        except StrategyError as exc:
+            model_used = False
+            model_error = str(exc)
+            candidates = deterministic_moves(position)
+            refutations = tuple(
+                Refutation(
+                    move_id=item.move_id,
+                    survives=True,
+                    reason="AI search unavailable. Deterministic Recovery preserves human review.",
+                    risk_delta=0.0,
+                    requires_human=True,
+                )
+                for item in candidates
+            )
     else:
         candidates = deterministic_moves(position)
         refutations = tuple(
@@ -731,6 +749,7 @@ def analyze(
             else False
         ),
         model_used=model_used,
+        model_error=model_error,
     )
 
 
@@ -750,6 +769,7 @@ def _write_summary(path: Path, report: StrategyReport) -> None:
         f"Position: `{report.position.state_hash}`",
         f"Audit: {'PASS' if report.position.audit_ok else 'ATTENTION'}",
         f"Model used: {'yes' if report.model_used else 'no'}",
+        f"Model fallback: {report.model_error or 'none'}",
         f"Selected move: **{selected}**",
         "",
         "## Principal variation",
