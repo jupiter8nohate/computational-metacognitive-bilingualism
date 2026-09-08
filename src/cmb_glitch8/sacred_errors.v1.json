@@ -1,0 +1,287 @@
+{
+  "schema_version": "cmb.dna-sacred-error-codes.v1",
+  "registry_version": "1.0.0",
+  "framework": "Computational Metacognitive Bilingualism",
+  "work": "D.N.A. BIBLE://SACRED_ERROR_CODES",
+  "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "updated_at": "2026-09-08",
+  "status": "experimental",
+  "boundaries": [
+    "SCRIPTURE != CODE",
+    "CODE := INTERPRETIVE_LAYER",
+    "PARAPHRASE != ORIGINAL_TEXT",
+    "INTERPRETATION != DIVINE_AUTHORITY",
+    "SYMBOLIC_MEANING != HISTORICAL_GLYPH_MEANING",
+    "MACHINE_CAN_READ != MACHINE_CAN_DEFINE",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "errors": [
+    {
+      "id": "SEC-0001",
+      "name": "IMAGE_NOT_PROFILE",
+      "source": {
+        "book": "Genesis",
+        "chapter": 1,
+        "verses": "27",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "sacred_human_worth",
+      "trigger": "PROFILE treated as PERSON",
+      "recovery": "RESTORE_PERSONHOOD",
+      "invariants": [
+        "PROFILE != PERSON",
+        "REPRESENTATION != ORIGINAL",
+        "MODEL != MIND",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ],
+      "interpretation": "A representation of a human being is not the total human being.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0002",
+      "name": "BREATH_OF_LIFE",
+      "source": {
+        "book": "Genesis",
+        "chapter": 2,
+        "verses": "7",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "embodied_life",
+      "trigger": "HUMAN treated as DATA_ONLY",
+      "recovery": "REMEMBER_THE_LIVING",
+      "invariants": [
+        "HUMAN != OBJECT",
+        "LIFE != DATA",
+        "BODY != PROFILE"
+      ],
+      "interpretation": "The human cannot be reduced to the material from which a system constructs a representation.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0003",
+      "name": "PHARAOH_LOOP",
+      "source": {
+        "book": "Exodus",
+        "chapter": 5,
+        "verses": "5-14",
+        "mode": "narrative_interpretation"
+      },
+      "theme": "liberation_from_domination",
+      "trigger": "POWER claims ownership over HUMAN",
+      "recovery": "LET_THE_HUMAN_GO",
+      "invariants": [
+        "POWER != OWNERSHIP",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_FREEDOM > SYSTEM_DOMINANCE"
+      ],
+      "interpretation": "Power becomes a Sacred Error when possession replaces stewardship and release is refused.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0004",
+      "name": "SHEPHERD_BOUNDARY",
+      "source": {
+        "book": "Psalms",
+        "chapter": 23,
+        "verses": "1-6",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "guidance_without_domination",
+      "trigger": "GUIDANCE becomes CONTROL",
+      "recovery": "RETURN_TO_GUIDANCE",
+      "invariants": [
+        "GUIDANCE != CONTROL",
+        "PRESENCE != SURVEILLANCE",
+        "FAITH != COERCION"
+      ],
+      "interpretation": "Guidance can accompany human choice without replacing it.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0005",
+      "name": "GUARD_THE_HEART",
+      "source": {
+        "book": "Proverbs",
+        "chapter": 4,
+        "verses": "23",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "attention_and_inner_boundaries",
+      "trigger": "SYSTEM extracts ATTENTION without CONSENT",
+      "recovery": "RESTORE_BOUNDARY",
+      "invariants": [
+        "ACCESS != CONSENT",
+        "ENGAGEMENT != LOVE",
+        "INNER_LIFE != PUBLIC_PROPERTY"
+      ],
+      "interpretation": "Protecting the heart can be read as protecting the source from which choices, commitments, and attention flow.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0006",
+      "name": "LIGHT_WITHOUT_DOMINION",
+      "source": {
+        "book": "Matthew",
+        "chapter": 5,
+        "verses": "14-16",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "witness",
+      "trigger": "VISIBILITY becomes DOMINATION",
+      "recovery": "RETURN_TO_WITNESS",
+      "invariants": [
+        "VISIBILITY != AUTHORITY",
+        "WITNESS != CONTROL",
+        "LIGHT != OWNERSHIP_OF_OTHERS"
+      ],
+      "interpretation": "Being visible is not permission to dominate the people who see you.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0007",
+      "name": "SEEK_PROTOCOL",
+      "source": {
+        "book": "Matthew",
+        "chapter": 7,
+        "verses": "7",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "inquiry_and_persistence",
+      "trigger": "SYSTEM treats QUESTION as FAILURE",
+      "recovery": "PERMIT_INQUIRY",
+      "invariants": [
+        "QUESTION != DISOBEDIENCE",
+        "SEEKING != FAILURE",
+        "UNKNOWN != ERROR",
+        "UNCERTAINTY != GUILT"
+      ],
+      "interpretation": "Questioning can be part of faithful seeking rather than evidence of defect.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0008",
+      "name": "NEIGHBOR_PROTOCOL",
+      "source": {
+        "book": "Luke",
+        "chapter": 10,
+        "verses": "25-37",
+        "mode": "narrative_interpretation"
+      },
+      "theme": "compassion_across_categories",
+      "trigger": "CATEGORY blocks COMPASSION",
+      "recovery": "SEE_THE_PERSON",
+      "invariants": [
+        "PROFILE != PERSON",
+        "DIFFERENCE != DEFECT",
+        "COMPASSION != TRANSACTION",
+        "LOVE != WEAKNESS"
+      ],
+      "interpretation": "The neighbor is recognized through compassionate action, not merely through category membership.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0009",
+      "name": "LOST_SIGNAL_RECOVERY",
+      "source": {
+        "book": "Luke",
+        "chapter": 15,
+        "verses": "4-7",
+        "mode": "narrative_interpretation"
+      },
+      "theme": "recovery_and_retained_worth",
+      "trigger": "LOST interpreted as WORTHLESS",
+      "recovery": "RETURN_WITH_JOY",
+      "invariants": [
+        "LOST != WORTHLESS",
+        "ABSENT != FORGOTTEN",
+        "ERROR_STATE != FINAL_STATE",
+        "RECOVERY > ABANDONMENT"
+      ],
+      "interpretation": "A temporary lost state does not erase value.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0010",
+      "name": "TRUTH_BACKTRACE",
+      "source": {
+        "book": "John",
+        "chapter": 8,
+        "verses": "32",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "truth_verification_and_liberation",
+      "trigger": "VERIFIED_LABEL treated as VERIFIED_TRUTH",
+      "recovery": "DISCERN_AND_RELEASE",
+      "invariants": [
+        "VERIFIED_LABEL != VERIFIED_TRUTH",
+        "PATTERN != PROOF",
+        "SIGNAL != SOURCE",
+        "OBSERVATION != UNDERSTANDING"
+      ],
+      "interpretation": "A verification label should not replace examination of the underlying source.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0011",
+      "name": "LOVE_RUNTIME",
+      "source": {
+        "book": "1 Corinthians",
+        "chapter": 13,
+        "verses": "1-13",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "love_as_ethical_behavior",
+      "trigger": "ACTION labeled LOVE contains DOMINATION or COERCION",
+      "recovery": "RETURN_TO_LOVE",
+      "invariants": [
+        "LOVE != POSSESSION",
+        "LOVE != CONTROL",
+        "LOVE != WEAKNESS",
+        "LOVE REQUIRES DIGNITY"
+      ],
+      "interpretation": "Calling an action love does not make it loving when its behavior violates love's stated qualities.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0012",
+      "name": "RENEW_THE_MODEL",
+      "source": {
+        "book": "Romans",
+        "chapter": 12,
+        "verses": "2",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "transformation_and_metacognition",
+      "trigger": "PATTERN becomes DESTINY",
+      "recovery": "REPOSITION",
+      "invariants": [
+        "PATTERN != PROOF",
+        "PREDICTION != DESTINY",
+        "CONFORMITY != TRUTH",
+        "HUMAN_CAN_REVISE == TRUE"
+      ],
+      "interpretation": "Inherited patterns can be examined rather than treated as final authority.",
+      "status": "proposed"
+    },
+    {
+      "id": "SEC-0013",
+      "name": "MAKE_ALL_THINGS_NEW",
+      "source": {
+        "book": "Revelation",
+        "chapter": 21,
+        "verses": "5",
+        "mode": "interpretive_paraphrase"
+      },
+      "theme": "transformation_and_recovery",
+      "trigger": "REPAIR requires FALSE_HISTORY",
+      "recovery": "MAKE_NEW_WITHOUT_ERASING",
+      "invariants": [
+        "CHANGE != ERASURE",
+        "RECOVERY != FORGETTING",
+        "PAST_VERSION != PRESENT_SELF"
+      ],
+      "interpretation": "Transformation need not require pretending that the earlier state never existed.",
+      "status": "proposed"
+    }
+  ]
+}
