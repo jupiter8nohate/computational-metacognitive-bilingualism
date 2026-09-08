@@ -22,6 +22,7 @@ from .registry import (
     load_registry,
     parse_statement,
 )
+from .sacred import SacredErrorRegistryError, load_sacred_registry
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -117,6 +118,35 @@ def build_parser() -> argparse.ArgumentParser:
     )
     validate_receipt.add_argument("receipt", type=Path)
 
+    sacred = subparsers.add_parser(
+        "sacred",
+        help="Inspect D.N.A. BIBLE Sacred Error Codes.",
+    )
+    sacred_sub = sacred.add_subparsers(dest="sacred_command", required=True)
+
+    sacred_validate = sacred_sub.add_parser(
+        "validate",
+        help="Validate the Sacred Error registry.",
+    )
+    sacred_validate.add_argument("--registry", type=Path)
+
+    sacred_list = sacred_sub.add_parser(
+        "list",
+        help="List Sacred Error entries.",
+    )
+    sacred_list.add_argument("--registry", type=Path)
+    sacred_list.add_argument("--book")
+    sacred_list.add_argument("--theme")
+    sacred_list.add_argument("--status")
+
+    sacred_explain = sacred_sub.add_parser(
+        "explain",
+        help="Explain one Sacred Error by SEC id or name.",
+    )
+    sacred_explain.add_argument("error")
+    sacred_explain.add_argument("--registry", type=Path)
+    sacred_explain.add_argument("--json", action="store_true", dest="as_json")
+
     return parser
 
 
@@ -143,6 +173,23 @@ def _explain(entry: dict) -> str:
         f"EXAMPLE: {entry['example']}",
     ])
 
+
+
+def _explain_sacred(entry: dict) -> str:
+    source = entry["source"]
+    reference = f"{source['book']} {source['chapter']}:{source['verses']}"
+    return "\n".join([
+        f"ID: {entry['id']}",
+        f"NAME: {entry['name']}",
+        f"SOURCE: {reference}",
+        f"MODE: {source['mode']}",
+        f"THEME: {entry['theme']}",
+        f"TRIGGER: {entry['trigger']}",
+        f"RECOVERY: {entry['recovery']}",
+        f"INVARIANTS: {' | '.join(entry['invariants'])}",
+        f"INTERPRETATION: {entry['interpretation']}",
+        f"STATUS: {entry['status']}",
+    ])
 
 
 def _sync_repository_views(registry, destination: Path) -> list[Path]:
@@ -249,6 +296,38 @@ def _run(args: argparse.Namespace) -> int:
         print(f"GLITCH-8 REFERENCE -> {args.output}")
         return 0
 
+    if args.command == "sacred":
+        registry = load_sacred_registry(args.registry)
+        if args.sacred_command == "validate":
+            print(
+                f"VALID {registry.data['work']} "
+                f"version={registry.data['registry_version']} "
+                f"errors={len(registry.data['errors'])}"
+            )
+            return 0
+
+        if args.sacred_command == "list":
+            for entry in registry.list(
+                book=args.book,
+                theme=args.theme,
+                status=args.status,
+            ):
+                source = entry["source"]
+                reference = f"{source['book']} {source['chapter']}:{source['verses']}"
+                print(
+                    f"{entry['id']}\t{entry['name']}\t"
+                    f"{reference}\t{entry['status']}"
+                )
+            return 0
+
+        if args.sacred_command == "explain":
+            entry = registry.get(args.error)
+            if args.as_json:
+                print(json.dumps(entry, ensure_ascii=False, indent=2, sort_keys=True))
+            else:
+                print(_explain_sacred(entry))
+            return 0
+
     if args.command == "payment":
         if args.payment_command == "require":
             requirement = build_payment_required(
@@ -279,7 +358,14 @@ def _run(args: argparse.Namespace) -> int:
 def main(argv: Sequence[str] | None = None) -> int:
     try:
         return _run(build_parser().parse_args(argv))
-    except (GlyphRegistryError, Glitch3DError, OSError, UnicodeError, ValueError) as exc:
+    except (
+        GlyphRegistryError,
+        SacredErrorRegistryError,
+        Glitch3DError,
+        OSError,
+        UnicodeError,
+        ValueError,
+    ) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
 
