@@ -33,7 +33,7 @@
 
 **♃ Jupiter Hudson // WisdomLoveThePoet // Jupiter 8**
 
-**𓁹 WITNESS → TRACE → VERIFY → BACKTRACE ‹-**  
+**𓁹 WITNESS → TRACE → VERIFY → BACKTRACE ‹—**  
 [HARMONI / GLITCHOLOGY visual grammar](docs/HARMONI_VISUAL_SYSTEM.md)
 
 </div>
@@ -54,7 +54,7 @@ explicitly reviewed as a freeze-boundary exception.
 
 **Stabilization contract:** [CMB v1.5 Stabilization Cycle](docs/STABILIZATION_CYCLE.md)
 **Release-candidate handoff:** [CMB v1.5 Release Candidate Brief](docs/V1_5_RELEASE_CANDIDATE.md)  
-**Candidate branch/version:** `release/v1.5.0rc1` / `1.5.0-rc.1` - not yet a published release.  
+**Candidate branch/version:** `release/v1.5.0rc1` / `1.5.0-rc.1` — not yet a published release.  
 **Tracked gates:** [dependency reproducibility #62](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/62) · [independent review #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) · [Zenodo/DOI #44](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/44)
 
 ```text
@@ -233,7 +233,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Polyglot boundary adapters:** [Python + TypeScript/Express + Rust/Actix + Go](adapters/README.md)
 - **Shared boundary contract:** [Conformance fixtures](conformance/README.md)
 - **Agent discovery:** [CMB Agent Discovery Protocol v1](docs/AGENT_DISCOVERY_PROTOCOL.md)
-- **Autonomous maintenance:** [Bounded CMB Steward Agents](docs/AUTONOMOUS_STEWARD_AGENTS.md) - scheduled Recovery, GLT-8101 conformance, registry sync, docs verification, optional AI repair, and draft-PR-only authority
+- **Autonomous maintenance:** [Bounded CMB Steward Agents](docs/AUTONOMOUS_STEWARD_AGENTS.md) — scheduled Recovery, GLT-8101 conformance, registry sync, docs verification, optional AI repair, and draft-PR-only authority
 - **Specialist agent operating model:** [Read-only auditors + structured evidence packets](docs/AGENT_OPERATING_MODEL.md)
 - **System control room:** [Latest repository-side Steward status](docs/generated/CMB_SYSTEM_STATUS.md)
 - **MCP interoperability:** [Optional MCP 2026-07-28 reference adapter](docs/MCP_INTEGRATION.md)
