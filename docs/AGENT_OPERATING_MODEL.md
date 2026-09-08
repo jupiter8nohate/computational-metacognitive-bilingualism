@@ -2,7 +2,7 @@
 
 CMB uses specialization instead of granting one model broad repository authority.
 
-The experimental Chess Strategy Engine adds bounded POSITION, TACTICIAN, STRATEGIST, SECURITY, RECOVERY, RED_TEAM, and REVIEWER search roles before the existing Steward mutation gate. Candidate moves are advisory until they survive deterministic policy and fixed verification. See [CMB Chess Strategy Engine](CHESS_STRATEGY_ENGINE.md).
+The experimental Chess Strategy Engine adds bounded POSITION, TACTICIAN, STRATEGIST, SECURITY, RECOVERY, RED_TEAM, and REVIEWER search roles before the existing Steward mutation gate. Candidate moves are advisory until they survive deterministic policy and fixed verification. The AUTONOMY_ARBITER then converts the selected move into exactly one bounded verdict: PROPOSE_REPAIR, HUMAN_REVIEW, or PRESERVE_POSITION. See [CMB Chess Strategy Engine](CHESS_STRATEGY_ENGINE.md).
 
 ~~~text
                     HUMAN
@@ -107,7 +107,7 @@ DRAFT PULL REQUEST
 HUMAN DECISION
 ~~~
 
-The current Reviewer is intentionally conservative: it checks structured outputs for authority escalation and prohibited self-certification. Independent external human review remains a separate release gate.
+The current Reviewer is intentionally conservative: it checks structured outputs for authority escalation and prohibited self-certification. The Autonomy Arbiter is a second deterministic control boundary. It cannot create edits; it can only permit the existing bounded Steward repair path, fail closed to human review, or preserve the current position. Independent external human review remains a separate release gate.
 
 ## Librarian
 
