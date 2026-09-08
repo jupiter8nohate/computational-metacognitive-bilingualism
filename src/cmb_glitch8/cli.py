@@ -147,6 +147,14 @@ def build_parser() -> argparse.ArgumentParser:
     sacred_explain.add_argument("--registry", type=Path)
     sacred_explain.add_argument("--json", action="store_true", dest="as_json")
 
+    sacred_search = sacred_sub.add_parser(
+        "search",
+        help="Resolve a biblical reference, CMB invariant, or human concept to Sacred Errors.",
+    )
+    sacred_search.add_argument("query")
+    sacred_search.add_argument("--registry", type=Path)
+    sacred_search.add_argument("--json", action="store_true", dest="as_json")
+
     return parser
 
 
@@ -335,6 +343,21 @@ def _run(args: argparse.Namespace) -> int:
                 print(json.dumps(entry, ensure_ascii=False, indent=2, sort_keys=True))
             else:
                 print(_explain_sacred(entry))
+            return 0
+
+        if args.sacred_command == "search":
+            entries = registry.search(args.query)
+            if args.as_json:
+                print(json.dumps(entries, ensure_ascii=False, indent=2, sort_keys=True))
+            else:
+                for entry in entries:
+                    source = entry["source"]
+                    reference = f"{source['book']} {source['chapter']}:{source['verses']}"
+                    principle = entry.get("principle", "unclassified")
+                    print(
+                        f"{entry['id']}\t{entry['name']}\t"
+                        f"{reference}\t{principle}"
+                    )
             return 0
 
     if args.command == "payment":
