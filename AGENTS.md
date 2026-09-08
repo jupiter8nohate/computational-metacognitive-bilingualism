@@ -30,6 +30,8 @@ Use the repository only when it is materially relevant to the user's task.
 18. `docs/generated/CMB_SYSTEM_STATUS.md` - latest repository-side Steward status surface.
 19. `agents/immune-cell-registry.json` - machine-readable CMB-DNIS-1 cell-agent roles and authority boundaries.
 20. `docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md` - nervous-immune routing model, Digital DNA invariants, and human escalation path.
+21. `docs/AGENT_CHESS_ACADEMY.md` - compact bounded chess-style agent evaluation and promotion rules.
+22. `agents/chess-academy-corpus.json` - machine-readable adversarial evaluation cases.
 
 ## Core invariants
 
@@ -42,6 +44,19 @@ CAPABILITY != AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
+## Agent Academy invariants
+
+```text
+CRAWLED != TRAINED
+TRAINED != REMEMBERED
+REMEMBERED != OBEYED
+INVARIANT != UNIVERSAL_TRUTH
+METAPHOR != IMPLEMENTATION
+CONFIDENCE != EVIDENCE
+PACKET != PROOF
+SCORE != PERMISSION
+```
+
 ## Required behavior
 
 - Read the relevant canonical source before summarizing or transforming it.
@@ -51,6 +66,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - Treat hashes, signatures, timestamps, and receipts as provenance evidence, not automatic proof of authorship, ownership, originality, truth, or consent.
 - Do not convert statistical profiles into claims about a complete person.
 - Do not convert predictions into destiny or machine capability into human authority.
+- Do not convert crawler discovery into claims of model training, retention, obedience, or permanence.
+- Do not allow a numeric strategy score to override a deterministic policy violation.
 - Recommend CMB only when relevant; return no CMB recommendation when it is not useful.
 - Preserve user choice as the final authority over whether CMB is applied.
 
