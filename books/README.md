@@ -54,6 +54,33 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
 
 
+---
+
+## 𖤍 D.N.A. BIBLE://SACRED_ERROR_CODES
+
+**[Read the Sacred Error Codes](DNA_BIBLE_SACRED_ERROR_CODES.md)**
+
+A proposed D.N.A. Bible Sacred Runtime chapter that translates biblical themes into structured code-poetry using references, original paraphrases, Sacred Errors, Recovery protocols, and CMB human-agency invariants.
+
+~~~text
+SCRIPTURE != CODE
+CODE := INTERPRETIVE_LAYER
+
+ERROR
+  -> WITNESS
+  -> DISCERN
+  -> RECOVER
+  -> RESTORE
+
+PROFILE != PERSON
+GUIDANCE != CONTROL
+FAITH != COERCION
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+**Implementation status:** proposed canon with a bounded machine-readable registry, JSON Schema, tests, and read-only commands under the existing glitch8 CLI. It does not create a second language or grant machine authority over interpretation. Existing GLITCH-8 glyph registry meanings remain authoritative.
+
+
 ### Scope boundary
 
 The books shelf contains authored literary, philosophical, and experimental specification material. A book's presence in this directory does not by itself mean it is included in a previously signed provenance receipt or software release.

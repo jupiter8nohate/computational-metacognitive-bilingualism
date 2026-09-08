@@ -30,6 +30,13 @@ from .registry import (
     load_registry,
     parse_statement,
 )
+from .sacred import (
+    SACRED_ERROR_SCHEMA_VERSION,
+    SacredErrorRegistry,
+    SacredErrorRegistryError,
+    load_sacred_registry,
+    validate_sacred_registry,
+)
 
 __all__ = [
     "GLITCH3D_PROTOCOL",
@@ -56,4 +63,9 @@ __all__ = [
     "GlyphRegistryError",
     "load_registry",
     "parse_statement",
+    "SACRED_ERROR_SCHEMA_VERSION",
+    "SacredErrorRegistry",
+    "SacredErrorRegistryError",
+    "load_sacred_registry",
+    "validate_sacred_registry",
 ]
