@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   steward:
-    name: Recovery + specialist evidence steward
+    name: Recovery + chess strategy + specialist evidence steward
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -51,11 +51,29 @@ jobs:
       - name: Run deterministic steward audit
         run: python -m cmb_agents.steward audit --report /tmp/cmb-steward-audit.json
 
+      - name: Search the current position with bounded chess agents
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
+        run: >-
+          python -m cmb_agents.strategy
+          --audit /tmp/cmb-steward-audit.json
+          --policy strategy/cmb_strategy.toml
+          --output /tmp/cmb-strategy-report.json
+          --summary /tmp/cmb-strategy-summary.md
+
+      - name: Publish strategy principal variation
+        shell: bash
+        run: cat /tmp/cmb-strategy-summary.md >> "$GITHUB_STEP_SUMMARY"
+
       - name: Ask configured AI steward to repair concrete failures
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
-        run: python -m cmb_agents.steward repair --report /tmp/cmb-steward-audit.json
+        run: >-
+          python -m cmb_agents.steward repair
+          --report /tmp/cmb-steward-audit.json
+          --strategy-report /tmp/cmb-strategy-report.json
 
       - name: Verify proposed maintenance
         run: python -m cmb_agents.steward verify
