@@ -1,7 +1,7 @@
 # CMB provenance threat model
 
 **Status:** living engineering document  
-**Applies to:** `cmb_provenance` 1.3.x and its C2PA-facing adapter
+**Applies to:** `cmb_provenance` published 1.4.1 baseline, 1.5.0-rc.1 candidate, and the C2PA-facing adapter
 
 ## Assets
 

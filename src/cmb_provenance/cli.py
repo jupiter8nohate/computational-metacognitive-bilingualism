@@ -13,7 +13,12 @@ from .c2pa import (
     save_c2pa_assertion_payload,
     save_c2pa_manifest_definition,
 )
-from .constants import ANCHOR_TYPES, DEFAULT_LEDGER_NAME, TOOL_VERSION
+from .constants import (
+    ANCHOR_TYPES,
+    DEFAULT_LEDGER_NAME,
+    GIT_COMMIT_VERIFIED,
+    TOOL_VERSION,
+)
 from .errors import CMBProvenanceError
 from .ledger import append_anchor, verify_ledger
 from .sealing import load_receipt, save_receipt, seal, verify
@@ -125,27 +130,57 @@ def _run(args: argparse.Namespace) -> int:
         return 0
 
     if args.command == "verify":
+        receipt = load_receipt(args.receipt)
         result = verify(
             args.paths,
-            load_receipt(args.receipt),
+            receipt,
             base_dir=args.base_dir,
             check_git_commit=args.check_git_commit,
         )
+        artifacts_git_verified_at_seal = (
+            receipt.manifest.git_commit_status == GIT_COMMIT_VERIFIED
+        )
         if args.json_output:
+            payload = result.to_dict()
+            payload["receipt_git_commit_status"] = receipt.manifest.git_commit_status
+            payload["verification_scope"] = {
+                "artifact_bytes_against_receipt_checked": True,
+                "git_head_against_receipt_commit_checked": args.check_git_commit,
+                "artifacts_verified_against_git_commit_at_seal": (
+                    artifacts_git_verified_at_seal
+                ),
+            }
             print(
                 json.dumps(
-                    result.to_dict(), ensure_ascii=False, indent=2, sort_keys=True
+                    payload, ensure_ascii=False, indent=2, sort_keys=True
                 )
             )
         elif result.ok:
             print(
-                f"VERIFIED {len(result.checked_paths)} file(s) ✦ {result.manifest_sha256}"
+                f"VERIFIED_RECEIPT_BYTES {len(result.checked_paths)} file(s) "
+                f"✦ {result.manifest_sha256}"
             )
+            print(
+                f"receipt_git_commit_status={receipt.manifest.git_commit_status}"
+            )
+            print(
+                "artifacts_verified_against_git_commit_at_seal="
+                f"{str(artifacts_git_verified_at_seal).lower()}"
+            )
+            if args.check_git_commit:
+                print(
+                    "git_head_matches_receipt_commit="
+                    f"{str(bool(result.git_commit_matches)).lower()}"
+                )
         else:
             print("VERIFICATION FAILED", file=sys.stderr)
             for failure in result.failures:
                 target = f"{failure.path}: " if failure.path else ""
                 print(f"  {target}{failure.code} ✦ {failure.message}", file=sys.stderr)
+            print(
+                f"  receipt_git_commit_status={receipt.manifest.git_commit_status}",
+                file=sys.stderr,
+            )
         return 0 if result.ok else 1
 
     if args.command == "anchor":
