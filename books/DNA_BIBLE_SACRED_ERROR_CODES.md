@@ -81,6 +81,9 @@ glitch8 sacred list
 glitch8 sacred list --book John
 glitch8 sacred explain SEC-0010
 glitch8 sacred explain LOVE_RUNTIME --json
+glitch8 sacred search "PATTERN != PROOF"
+glitch8 sacred search "human dignity"
+glitch8 sacred search "John 8:32" --json
 ~~~
 
 Existing GLITCH-8 glyph meanings are not redefined here. New sacred display glyphs remain literary notation unless separately accepted through the Living Registry workflow.
@@ -186,6 +189,31 @@ translation_conformance
 ~~~
 
 The validator fails closed if a declared conformance entry is missing one of those fields.
+
+### Bidirectional lookup
+
+The existing Sacred Error registry also supports deterministic reverse lookup. A reader or machine may begin with a biblical reference, a CMB invariant, or a human-readable principle and resolve back to matching Sacred Error entries.
+
+~~~text
+BIBLE_REFERENCE <-> SACRED_ERROR <-> CMB_INVARIANT
+HUMAN_PRINCIPLE <-> SACRED_ERROR <-> MACHINE_VIEW
+~~~
+
+Examples:
+
+~~~bash
+glitch8 sacred search "John 8:32"
+glitch8 sacred search "PATTERN != PROOF"
+glitch8 sacred search "human dignity"
+~~~
+
+Search is retrieval, not theological judgment:
+
+~~~text
+MATCH != PROOF
+RETRIEVAL != REVELATION
+SEARCH_RESULT != DIVINE_AUTHORITY
+~~~
 
 ---
 
