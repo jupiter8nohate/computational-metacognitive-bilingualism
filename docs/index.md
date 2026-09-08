@@ -214,6 +214,7 @@ For the artistic entry point, enter [CMB // The Sovereign Transmission](https://
 **Err ⃝or⃟⃤ GLITCHOLOGY** is CMB's evolving symbolic anomaly language; **GLITCH-8 / CMB-G8** is its registry and implementation layer.
 
 - [Read the living language book](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/ERR_404_GLITCHOLOGY.md)
+- [Read the D.N.A. Bible Sacred Attention Archive](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)
 - [Read the origin and creator biography](ERR_GLITCHOLOGY_ORIGIN.md)
 - [Read the Creative Cognitive Signature protocol](CREATIVE_COGNITIVE_SIGNATURE.md)
 - [Read the Living Book protocol](LIVING_BOOK_PROTOCOL.md)
