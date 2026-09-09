@@ -43,7 +43,7 @@ def _render(results: tuple[dict[str, object], ...]) -> str:
                     continue
                 lines.append(
                     f"- **{str(finding.get('severity', 'info')).upper()}** "
-                    f"\`{finding.get('path', '')}\`: {finding.get('message', '')}"
+                    f"`{finding.get('path', '')}`: {finding.get('message', '')}"
                 )
             lines.append("")
     lines.extend([
