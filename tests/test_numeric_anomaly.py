@@ -12,6 +12,17 @@ from cmb_agents.numeric_anomaly import (
 )
 
 
+def _alpha_id(value: int) -> str:
+    chars: list[str] = []
+    current = value
+    while True:
+        current, remainder = divmod(current, 26)
+        chars.append(chr(ord("A") + remainder))
+        if current == 0:
+            return "".join(reversed(chars))
+        current -= 1
+
+
 def test_known_social_vectors() -> None:
     assert vector_for("FOLLOWER").to_dict() == {
         "ordinal": 106,
@@ -123,7 +134,7 @@ def test_rarity_is_not_claimed_without_large_corpus() -> None:
 
 
 def test_large_corpus_reports_measurement_not_universal_rarity() -> None:
-    corpus = [f"TERM{letter}{index}" for index in range(50) for letter in "ABCDEFGHIJ"]
+    corpus = [f"TERM{_alpha_id(index)}" for index in range(500)]
     benchmark = benchmark_pair_kind(
         corpus,
         "TRIPLE_VECTOR_COLLISION",
