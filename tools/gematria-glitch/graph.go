@@ -68,6 +68,28 @@ var allowedGraphRelations = map[string]struct{}{
 	"LINGUISTIC_PREFIX_DELTA_TO": {},
 }
 
+var receiptBackedGraphRelations = map[string]struct{}{
+	"DERIVED_FROM_CORPUS":        {},
+	"ASSERTS_ANOMALY":            {},
+	"REFERENCES_SOURCE":          {},
+	"INVOLVES_RECORD":            {},
+	"HAS_ANOMALY":                {},
+	"EXACT_COLLISION_WITH":       {},
+	"SHARES_PRIME_FACTOR_WITH":   {},
+	"LINGUISTIC_PREFIX_DELTA_TO": {},
+}
+
+func setGraphNode(nodes map[string]GraphNode, node GraphNode) error {
+	if existing, ok := nodes[node.ID]; ok {
+		if existing != node {
+			return fmt.Errorf("graph node id collision: %s", node.ID)
+		}
+		return nil
+	}
+	nodes[node.ID] = node
+	return nil
+}
+
 func buildKnowledgeGraph(corpus Corpus) (KnowledgeGraph, error) {
 	if err := validateCorpus(corpus); err != nil {
 		return KnowledgeGraph{}, err
@@ -92,26 +114,19 @@ func buildKnowledgeGraph(corpus Corpus) (KnowledgeGraph, error) {
 	nodes := make(map[string]GraphNode)
 	edges := make(map[string]GraphEdge)
 
-	addNode := func(node GraphNode) {
-		if existing, ok := nodes[node.ID]; ok {
-			if existing != node {
-				panic(fmt.Sprintf("graph node id collision: %s", node.ID))
-			}
-			return
-		}
-		nodes[node.ID] = node
-	}
 	addEdge := func(edge GraphEdge) {
 		edge.ID = graphEdgeID(edge)
 		edges[edge.ID] = edge
 	}
 
 	corpusNodeID := "corpus:" + corpus.CorpusID + "@" + corpus.Version
-	addNode(GraphNode{
+	if err := setGraphNode(nodes, GraphNode{
 		ID:    corpusNodeID,
 		Kind:  "CORPUS",
 		Label: corpus.CorpusID + "@" + corpus.Version,
-	})
+	}); err != nil {
+		return KnowledgeGraph{}, err
+	}
 
 	for _, entry := range corpus.Records {
 		recordNodeID := "record:" + entry.ID
@@ -119,27 +134,33 @@ func buildKnowledgeGraph(corpus Corpus) (KnowledgeGraph, error) {
 		value := Gematria(entry.Word)
 		valueNodeID := "value:" + strconv.Itoa(value)
 
-		addNode(GraphNode{
+		if err := setGraphNode(nodes, GraphNode{
 			ID:    recordNodeID,
 			Kind:  "RECORD",
 			Label: entry.Word,
 			Word:  entry.Word,
 			Gloss: entry.Gloss,
-		})
-		addNode(GraphNode{
+		}); err != nil {
+			return KnowledgeGraph{}, err
+		}
+		if err := setGraphNode(nodes, GraphNode{
 			ID:              sourceNodeID,
 			Kind:            "SOURCE",
 			Label:           entry.Source.ID,
 			SourceKind:      entry.Source.Kind,
 			SourceReference: entry.Source.Reference,
 			SourceURL:       entry.Source.URL,
-		})
-		addNode(GraphNode{
+		}); err != nil {
+			return KnowledgeGraph{}, err
+		}
+		if err := setGraphNode(nodes, GraphNode{
 			ID:    valueNodeID,
 			Kind:  "VALUE",
 			Label: strconv.Itoa(value),
 			Value: value,
-		})
+		}); err != nil {
+			return KnowledgeGraph{}, err
+		}
 
 		addEdge(GraphEdge{From: corpusNodeID, Relation: "CONTAINS_RECORD", To: recordNodeID})
 		addEdge(GraphEdge{From: recordNodeID, Relation: "SOURCED_BY", To: sourceNodeID})
@@ -147,12 +168,14 @@ func buildKnowledgeGraph(corpus Corpus) (KnowledgeGraph, error) {
 
 		for factor := range uniquePrimeFactors(value) {
 			factorNodeID := "factor:" + strconv.Itoa(factor)
-			addNode(GraphNode{
+			if err := setGraphNode(nodes, GraphNode{
 				ID:     factorNodeID,
 				Kind:   "PRIME_FACTOR",
 				Label:  strconv.Itoa(factor),
 				Factor: factor,
-			})
+			}); err != nil {
+				return KnowledgeGraph{}, err
+			}
 			addEdge(GraphEdge{
 				From:         valueNodeID,
 				Relation:     "HAS_PRIME_FACTOR",
@@ -167,18 +190,22 @@ func buildKnowledgeGraph(corpus Corpus) (KnowledgeGraph, error) {
 		receiptNodeID := "receipt:" + receipt.ReceiptSHA256
 		anomalyNodeID := "anomaly:" + finding.Type
 
-		addNode(GraphNode{
+		if err := setGraphNode(nodes, GraphNode{
 			ID:            receiptNodeID,
 			Kind:          "RECEIPT",
 			Label:         finding.Type,
 			ReceiptSHA256: receipt.ReceiptSHA256,
-		})
-		addNode(GraphNode{
+		}); err != nil {
+			return KnowledgeGraph{}, err
+		}
+		if err := setGraphNode(nodes, GraphNode{
 			ID:          anomalyNodeID,
 			Kind:        "ANOMALY_TYPE",
 			Label:       finding.Type,
 			AnomalyType: finding.Type,
-		})
+		}); err != nil {
+			return KnowledgeGraph{}, err
+		}
 
 		addEdge(GraphEdge{
 			From:          receiptNodeID,
@@ -445,6 +472,9 @@ func verifyKnowledgeGraph(graph KnowledgeGraph) error {
 			NumericValue:  edge.NumericValue,
 		}) {
 			return fmt.Errorf("edge %q has non-deterministic id", edge.ID)
+		}
+		if _, requiresReceipt := receiptBackedGraphRelations[edge.Relation]; requiresReceipt && edge.ReceiptSHA256 == "" {
+			return fmt.Errorf("edge %q relation %q requires receipt backing", edge.ID, edge.Relation)
 		}
 		if edge.ReceiptSHA256 != "" {
 			if _, ok := nodeIDs["receipt:"+edge.ReceiptSHA256]; !ok {
