@@ -11,6 +11,15 @@ import (
 
 const maxQueryCandidates = 10000
 
+var pathDiscoveryRelations = map[string]struct{}{
+	"SOURCED_BY":                  {},
+	"HAS_GEMATRIA_VALUE":          {},
+	"HAS_PRIME_FACTOR":            {},
+	"EXACT_COLLISION_WITH":        {},
+	"SHARES_PRIME_FACTOR_WITH":    {},
+	"LINGUISTIC_PREFIX_DELTA_TO":  {},
+}
+
 type PathQuery struct {
 	From     string `json:"from"`
 	To       string `json:"to"`
@@ -183,6 +192,9 @@ func resolveGraphSelector(graph KnowledgeGraph, selector string) []string {
 func buildGraphAdjacency(graph KnowledgeGraph) map[string][]graphTraversal {
 	adjacency := make(map[string][]graphTraversal)
 	for _, edge := range graph.Payload.Edges {
+		if _, ok := pathDiscoveryRelations[edge.Relation]; !ok {
+			continue
+		}
 		adjacency[edge.From] = append(adjacency[edge.From], graphTraversal{
 			Edge:      edge,
 			Neighbor:  edge.To,
