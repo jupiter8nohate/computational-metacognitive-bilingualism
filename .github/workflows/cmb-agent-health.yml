@@ -128,6 +128,7 @@ jobs:
           tests/test_review_council.py
           tests/test_ai_review_council.py
           tests/test_immune_system.py
+          tests/test_model_gateway.py
 
       - name: Exercise bounded strategy engine
         run: >-
