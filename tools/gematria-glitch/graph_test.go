@@ -190,3 +190,38 @@ func graphHasNode(graph KnowledgeGraph, id string) bool {
 	}
 	return false
 }
+
+func TestReceiptBackedRelationCannotDropReceipt(t *testing.T) {
+	graph, err := buildKnowledgeGraph(demoCorpusEnvelope())
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	for i := range graph.Payload.Edges {
+		edge := &graph.Payload.Edges[i]
+		if edge.Relation != "EXACT_COLLISION_WITH" {
+			continue
+		}
+
+		edge.ReceiptSHA256 = ""
+		edge.ID = graphEdgeID(GraphEdge{
+			From:         edge.From,
+			Relation:     edge.Relation,
+			To:           edge.To,
+			Evidence:     edge.Evidence,
+			NumericValue: edge.NumericValue,
+		})
+		digest, err := graphDigest(graph.Payload)
+		if err != nil {
+			t.Fatal(err)
+		}
+		graph.GraphSHA256 = digest
+
+		if err := verifyKnowledgeGraph(graph); err == nil {
+			t.Fatal("receipt-backed semantic relation must fail without receipt hash")
+		}
+		return
+	}
+
+	t.Fatal("expected exact collision edge")
+}
