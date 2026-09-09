@@ -39,7 +39,13 @@ jobs:
 
       - name: Format check
         run: |
-          test -z "$(gofmt -l .)"
+          unformatted="$(gofmt -l .)"
+          if [ -n "$unformatted" ]; then
+            echo "Unformatted Go files:"
+            echo "$unformatted"
+            gofmt -d .
+            exit 1
+          fi
 
       - name: Unit tests
         run: go test ./...
