@@ -50,6 +50,20 @@ jobs:
       - name: Install agent test dependencies
         run: python -m pip install --upgrade pip ".[test]"
 
+      - name: Install GLT-8101 semantic runtimes
+        shell: bash
+        run: |
+          set -euo pipefail
+          missing=()
+          command -v sbcl >/dev/null 2>&1 || missing+=(sbcl)
+          command -v runghc >/dev/null 2>&1 || missing+=(ghc)
+          command -v swipl >/dev/null 2>&1 || missing+=(swi-prolog-nox)
+          if (( ${#missing[@]} )); then
+            sudo apt-get update
+            sudo apt-get install -y "${missing[@]}"
+          fi
+          (cd adapters/typescript-express && npm ci --ignore-scripts --no-audit --no-fund)
+
       - name: Run deterministic specialist audit
         run: >-
           python -m cmb_agents.steward audit
