@@ -19,6 +19,8 @@ jobs:
     name: Recovery + chess strategy + autonomy arbiter + specialist evidence steward
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    env:
+      CMB_REPOSITORY_ROOT: ${{ github.workspace }}
 
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -47,6 +49,14 @@ jobs:
             sudo apt-get install -y "${missing[@]}"
           fi
           (cd adapters/typescript-express && npm ci --ignore-scripts --no-audit --no-fund)
+
+      - name: Verify steward workspace root
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$CMB_REPOSITORY_ROOT/pyproject.toml"
+          test -f "$CMB_REPOSITORY_ROOT/src/cmb_agents/steward.py"
+          test -f "$CMB_REPOSITORY_ROOT/src/cmb_glitch8/glyphs.v1.json"
 
       - name: Run deterministic steward audit
         run: python -m cmb_agents.steward audit --report /tmp/cmb-steward-audit.json

@@ -161,3 +161,40 @@ def test_public_status_writer_emits_machine_and_human_views(
     assert "\\n" not in human
     assert '"overall_ok": true' in machine
     assert "\\n" not in machine
+
+
+def _make_repository_root(root: Path) -> None:
+    (root / "src/cmb_agents").mkdir(parents=True)
+    (root / "src/cmb_glitch8").mkdir(parents=True)
+    (root / "pyproject.toml").write_text("[project]\nname = \"test\"\n", encoding="utf-8")
+    (root / "src/cmb_agents/steward.py").write_text("# steward\n", encoding="utf-8")
+    (root / "src/cmb_glitch8/glyphs.v1.json").write_text("{}\n", encoding="utf-8")
+
+
+def test_resolve_repository_root_prefers_explicit_checkout(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    root = tmp_path / "checkout"
+    _make_repository_root(root)
+    monkeypatch.setenv("CMB_REPOSITORY_ROOT", str(root))
+    monkeypatch.setenv("GITHUB_WORKSPACE", str(tmp_path / "wrong"))
+
+    assert steward._resolve_repository_root() == root.resolve()
+
+
+def test_resolve_repository_root_uses_current_checkout(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    root = tmp_path / "checkout"
+    _make_repository_root(root)
+    monkeypatch.delenv("CMB_REPOSITORY_ROOT", raising=False)
+    monkeypatch.delenv("GITHUB_WORKSPACE", raising=False)
+    monkeypatch.chdir(root)
+
+    assert steward._resolve_repository_root() == root.resolve()
+
+
+def test_role_registry_includes_autonomy_arbiter() -> None:
+    assert "AUTONOMY_ARBITER" in steward.ROLE_NAMES
