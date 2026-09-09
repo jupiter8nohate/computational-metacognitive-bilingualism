@@ -50,6 +50,8 @@ Use the repository only when it is materially relevant to the user's task.
 38. `schemas/gematria-glitch.null-model.v1.1.schema.json` - family-aware null-model contract with Benjamini-Hochberg adjusted q-values.
 39. `schemas/gematria-glitch.null-ensemble.v1.schema.json` - cross-baseline null-model ensemble contract.
 40. `docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md` - assumption sensitivity, length-stratified permutation, and robustness boundaries.
+41. `schemas/gematria-glitch.out-of-sample.v1.schema.json` - discovery/validation separation and result contract.
+42. `docs/GEMATRIA_OUT_OF_SAMPLE_VALIDATION.md` - locked hypotheses, sample independence, instance replication, and class validation.
 
 ## Core invariants
 
@@ -104,10 +106,17 @@ ROBUST_ACROSS_MODELS != TRUTH
 MODEL_AGREEMENT != CAUSATION
 Q_THRESHOLD != SEMANTIC_THRESHOLD
 ASSUMPTION_SENSITIVITY != FALSEHOOD
+DISCOVERY_SET != VALIDATION_SET
+DISCOVERY != CONFIRMATION
+INSTANCE_REPLICATION != INDEPENDENT_VALIDATION
+CLASS_RECURRED_OUT_OF_SAMPLE != TRUTH
+NOT_RECURRED != DISPROVEN
+NOT_TESTABLE != FAILED
+VALIDATION_CORPUS != UNIVERSE
 INTERPRETATION -> HUMAN
 ```
 
-For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, preserve corpus-relative rarity as descriptive only, require receipt backing for semantic graph edges, rank graph paths by evidence floor before hop count, compare repeated anomalies across corpora without treating recurrence as proof, test named anomalies against declared null models, apply family-aware multiple-testing correction, reject ambiguous duplicate word tokens, compare more than one declared null assumption when robustness matters, never treat p-values, q-values, or model agreement as truth probabilities, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
+For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, preserve corpus-relative rarity as descriptive only, require receipt backing for semantic graph edges, rank graph paths by evidence floor before hop count, compare repeated anomalies across corpora without treating recurrence as proof, test named anomalies against declared null models, apply family-aware multiple-testing correction, reject ambiguous duplicate word tokens, compare more than one declared null assumption when robustness matters, lock discovery candidates before testing a distinct validation corpus, report validation failures and not-testable cases instead of cherry-picking successes, never treat p-values, q-values, replication, validation, or model agreement as truth probabilities, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
 
 ## Required behavior
 
