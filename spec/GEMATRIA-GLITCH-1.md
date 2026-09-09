@@ -358,3 +358,42 @@ NO_PATH != NO_RELATIONSHIP
 ```
 
 A returned path shows graph connectivity under the current corpus and search bounds. It does not prove semantic identity, causation, prophecy, diagnosis, destiny, or significance.
+
+## Multi-corpus replication
+
+GGL-1 may compare two to sixteen provenance-grade corpora that use the same declared Gematria system.
+
+Canonical result schema:
+
+```text
+schemas/gematria-glitch.multicorpus.v1.schema.json
+```
+
+Canonical documentation:
+
+```text
+docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md
+```
+
+The engine reports two distinct layers:
+
+```text
+INSTANCE_REPLICATION
+TYPE_RECURRENCE
+```
+
+Instance replication asks whether the same canonical anomaly signature appears in multiple corpora. Type recurrence asks whether the same anomaly class appears across corpora, even when the specific words differ.
+
+Cross-corpus signatures exclude corpus-relative rarity and support metadata.
+
+Every comparison MUST preserve:
+
+```text
+REPLICATION != PROOF
+RECURRENCE != CAUSATION
+REPEATED != UNIVERSAL
+CORPUS_DEPENDENCE != FALSEHOOD
+ABSENCE != DISPROOF
+```
+
+A repeated structure is stronger evidence that the arithmetic pattern is not unique to one corpus. It is not proof of interpretation, causation, prophecy, diagnosis, destiny, or universal significance.
