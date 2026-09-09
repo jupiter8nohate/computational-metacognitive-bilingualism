@@ -11,9 +11,67 @@ permissions:
 jobs:
   dependency-review:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
+
     steps:
-      - name: Review dependency changes
-        id: dependency_review
+      - name: Detect GitHub Dependency Graph support
+        id: dependency_graph
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(
+            curl --silent --show-error               --output /tmp/cmb-sbom.json               --write-out '%{http_code}'               --header "Accept: application/vnd.github+json"               --header "Authorization: Bearer $GH_TOKEN"               --header "X-GitHub-Api-Version: 2026-03-10"               "https://api.github.com/repos/$GITHUB_REPOSITORY/dependency-graph/sbom"
+          )"
+          if [ "$status" = "200" ]; then
+            echo "supported=true" >> "$GITHUB_OUTPUT"
+            echo "GitHub Dependency Graph is available."
+          else
+            echo "supported=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::GitHub Dependency Graph unavailable (HTTP $status); using strict local vulnerability fallback."
+          fi
+
+      - name: Review dependency changes with GitHub Dependency Graph
+        if: steps.dependency_graph.outputs.supported == 'true'
         uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
         with:
           fail-on-severity: high
+
+      - name: Checkout for strict fallback scanners
+        if: steps.dependency_graph.outputs.supported != 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python for strict fallback
+        if: steps.dependency_graph.outputs.supported != 'true'
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Audit resolved Python dependencies
+        if: steps.dependency_graph.outputs.supported != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install ".[test,docs,mcp,sovereignty,build]" "pip-audit==2.10.1"
+          python -m pip freeze --local             | grep -v '^cmb-provenance=='             > /tmp/cmb-python-dependencies.txt
+          pip-audit --strict --requirement /tmp/cmb-python-dependencies.txt
+
+      - name: Set up Go for cross-ecosystem fallback
+        if: steps.dependency_graph.outputs.supported != 'true'
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: "1.26.2"
+          cache: false
+
+      - name: Audit source lockfiles with OSV-Scanner
+        if: steps.dependency_graph.outputs.supported != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          go install github.com/google/osv-scanner/v2/cmd/osv-scanner@v2.4.0
+          osv-scanner scan source -r .
