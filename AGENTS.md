@@ -48,6 +48,8 @@ Use the repository only when it is materially relevant to the user's task.
 36. `schemas/gematria-glitch.null-model.v1.schema.json` - deterministic value-permutation null-model result contract.
 37. `docs/GEMATRIA_NULL_MODEL.md` - null assumptions, Monte Carlo estimates, surprise metrics, and interpretation boundaries.
 38. `schemas/gematria-glitch.null-model.v1.1.schema.json` - family-aware null-model contract with Benjamini-Hochberg adjusted q-values.
+39. `schemas/gematria-glitch.null-ensemble.v1.schema.json` - cross-baseline null-model ensemble contract.
+40. `docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md` - assumption sensitivity, length-stratified permutation, and robustness boundaries.
 
 ## Core invariants
 
@@ -97,10 +99,15 @@ BH_Q_VALUE != TRUTH_PROBABILITY
 MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF
 SURPRISE != SIGNIFICANCE
 RARE_UNDER_NULL != SUPERNATURAL
+NULL_MODEL_ENSEMBLE != REALITY
+ROBUST_ACROSS_MODELS != TRUTH
+MODEL_AGREEMENT != CAUSATION
+Q_THRESHOLD != SEMANTIC_THRESHOLD
+ASSUMPTION_SENSITIVITY != FALSEHOOD
 INTERPRETATION -> HUMAN
 ```
 
-For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, preserve corpus-relative rarity as descriptive only, require receipt backing for semantic graph edges, rank graph paths by evidence floor before hop count, compare repeated anomalies across corpora without treating recurrence as proof, test named anomalies against declared null models, apply family-aware multiple-testing correction, reject ambiguous duplicate word tokens, never treat p-values or q-values as truth probabilities, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
+For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, preserve corpus-relative rarity as descriptive only, require receipt backing for semantic graph edges, rank graph paths by evidence floor before hop count, compare repeated anomalies across corpora without treating recurrence as proof, test named anomalies against declared null models, apply family-aware multiple-testing correction, reject ambiguous duplicate word tokens, compare more than one declared null assumption when robustness matters, never treat p-values, q-values, or model agreement as truth probabilities, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
 
 ## Required behavior
 
