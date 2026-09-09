@@ -200,3 +200,23 @@ RARE_UNDER_NULL != SUPERNATURAL
 ```
 
 See `../../docs/GEMATRIA_NULL_MODEL.md`.
+
+## Null-model multiple-testing correction
+
+Null-model v1.1 reports both the raw Monte Carlo empirical p-value and a Benjamini-Hochberg false-discovery-rate adjusted q-value across the complete observed finding family.
+
+```text
+EMPIRICAL_P_VALUE
+BH_Q_VALUE
+TEST_FAMILY_SIZE
+MULTIPLE_TESTING://benjamini_hochberg_fdr
+```
+
+The q-value controls for the fact that the scanner tests many observed anomalies at once.
+
+```text
+BH_Q_VALUE != TRUTH_PROBABILITY
+MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF
+```
+
+The current value-permutation null model requires unique Hebrew word tokens in the input corpus because assignments are keyed by word. Duplicate word tokens are rejected rather than silently collapsed.
