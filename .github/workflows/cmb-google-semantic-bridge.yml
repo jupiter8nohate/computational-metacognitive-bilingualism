@@ -10,6 +10,10 @@ on:
       - "labs/cmb-google-semantic-bridge/**"
       - ".github/workflows/cmb-google-semantic-bridge.yml"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
