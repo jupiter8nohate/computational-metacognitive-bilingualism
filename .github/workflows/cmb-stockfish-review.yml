@@ -1,0 +1,90 @@
+name: CMB Stockfish Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    name: Stockfish Review Council
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install package
+        run: python -m pip install --upgrade pip .
+
+      - name: Fetch base branch
+        run: git fetch --no-tags origin "${{ github.base_ref }}:refs/remotes/origin/${{ github.base_ref }}"
+
+      - name: Run deterministic Stockfish Review Council
+        run: >-
+          python scripts/run_stockfish_review.py
+          --base "origin/${{ github.base_ref }}"
+          --head HEAD
+          --json /tmp/stockfish-review.json
+          --markdown /tmp/stockfish-review.md
+
+      - name: Run optional AI specialist council
+        if: always()
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
+        run: >-
+          python scripts/run_ai_review_council.py
+          --base "origin/${{ github.base_ref }}"
+          --head HEAD
+          --json /tmp/ai-review-council.json
+          --markdown /tmp/ai-review-council.md
+
+      - name: Publish review summaries
+        if: always()
+        run: |
+          if [ -f /tmp/stockfish-review.md ]; then
+            cat /tmp/stockfish-review.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            printf '%s\n' '# CMB Stockfish Review Council' '' 'Deterministic review packet was not produced.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f /tmp/ai-review-council.md ]; then
+            printf '\n%s\n' '---' >> "$GITHUB_STEP_SUMMARY"
+            cat /tmp/ai-review-council.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Enforce deterministic verdict
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          packet_path = Path("/tmp/stockfish-review.json")
+          if not packet_path.is_file():
+              print("Deterministic review packet is missing.", file=sys.stderr)
+              raise SystemExit(2)
+
+          packet = json.loads(packet_path.read_text(encoding="utf-8"))
+          verdict = packet.get("verdict")
+          if verdict == "REQUEST_CHANGES":
+              print("Stockfish Review Council requested changes.", file=sys.stderr)
+              raise SystemExit(1)
+          if verdict not in {"APPROVE", "HUMAN_REVIEW"}:
+              print(f"Unknown deterministic verdict: {verdict!r}", file=sys.stderr)
+              raise SystemExit(2)
+
+          print(f"Deterministic verdict accepted by workflow gate: {verdict}")
+          PY
