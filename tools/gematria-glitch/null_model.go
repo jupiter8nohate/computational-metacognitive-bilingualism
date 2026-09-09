@@ -190,7 +190,6 @@ func runNullModel(corpus Corpus, simulations int, seed uint64) (NullModelReport,
 	}, nil
 }
 
-
 func validateNullModelCorpus(corpus Corpus) error {
 	seen := make(map[string]string, len(corpus.Records))
 	for _, entry := range corpus.Records {
