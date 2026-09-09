@@ -6,6 +6,7 @@ on:
       - "tools/gematria-glitch/**"
       - "spec/GEMATRIA-GLITCH-1.md"
       - "agents/gematria-anomaly-evaluation.json"
+      - "schemas/gematria-glitch.finding.v1.schema.json"
       - ".github/workflows/gematria-glitch-go.yml"
   push:
     branches:
@@ -14,6 +15,7 @@ on:
       - "tools/gematria-glitch/**"
       - "spec/GEMATRIA-GLITCH-1.md"
       - "agents/gematria-anomaly-evaluation.json"
+      - "schemas/gematria-glitch.finding.v1.schema.json"
       - ".github/workflows/gematria-glitch-go.yml"
 
 permissions:
@@ -44,3 +46,6 @@ jobs:
 
       - name: Demo scan
         run: go run . -format glitch > /tmp/gematria-glitch.txt
+
+      - name: Ranked JSON scan
+        run: go run . -format json -rank > /tmp/gematria-glitch-ranked.json
