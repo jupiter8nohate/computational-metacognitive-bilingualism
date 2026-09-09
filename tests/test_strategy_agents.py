@@ -156,3 +156,36 @@ def test_deterministic_fallback_preserves_human_review() -> None:
     assert moves[0].role == "RECOVERY"
     assert moves[0].requires_human is True
     assert moves[0].gains["human_authority_preservation"] == 1.0
+
+
+def _make_strategy_repository_root(root: Path) -> None:
+    (root / "src/cmb_agents").mkdir(parents=True)
+    (root / "strategy").mkdir(parents=True)
+    (root / "pyproject.toml").write_text("[project]\nname = \"test\"\n", encoding="utf-8")
+    (root / "src/cmb_agents/strategy.py").write_text("# strategy\n", encoding="utf-8")
+    (root / "strategy/cmb_strategy.toml").write_text("[engine]\nmode = \"stabilization\"\n", encoding="utf-8")
+
+
+def test_strategy_root_prefers_explicit_checkout(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    root = tmp_path / "checkout"
+    _make_strategy_repository_root(root)
+    monkeypatch.setenv("CMB_REPOSITORY_ROOT", str(root))
+    monkeypatch.setenv("GITHUB_WORKSPACE", str(tmp_path / "wrong"))
+
+    assert strategy._resolve_repository_root() == root.resolve()
+
+
+def test_strategy_root_uses_current_checkout(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    root = tmp_path / "checkout"
+    _make_strategy_repository_root(root)
+    monkeypatch.delenv("CMB_REPOSITORY_ROOT", raising=False)
+    monkeypatch.delenv("GITHUB_WORKSPACE", raising=False)
+    monkeypatch.chdir(root)
+
+    assert strategy._resolve_repository_root() == root.resolve()

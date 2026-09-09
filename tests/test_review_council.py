@@ -153,3 +153,22 @@ def test_load_changes_rejects_negative_counts() -> None:
         assert "non-negative" in str(exc)
     else:
         raise AssertionError("negative change counts must be rejected")
+
+
+def test_many_governance_warnings_escalate_without_blocking() -> None:
+    changes = tuple(
+        ReviewChange(
+            path=f".github/workflows/governance-{index}.yml",
+            patch="@@ -0,0 +1 @@\n+name: governance check\n",
+            additions=1,
+        )
+        for index in range(12)
+    )
+
+    packet = review_changes(changes)
+
+    assert packet.verdict is Verdict.HUMAN_REVIEW
+    assert not any(
+        finding.severity in {Severity.ERROR, Severity.CRITICAL}
+        for finding in packet.findings
+    )

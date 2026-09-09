@@ -11,6 +11,8 @@ from cmb_agents.auditors import (
     audit_canon,
     audit_librarian,
     audit_dnis,
+    audit_review_council,
+    audit_security,
     review_packets,
 )
 
@@ -131,3 +133,66 @@ def test_dnis_auditor_detects_digital_dna_drift(tmp_path: Path) -> None:
     result = audit_dnis(tmp_path)
     assert not result.ok
     assert result.packet.observed["digital_dna_matches_runtime"] is False
+
+
+def test_security_auditor_rejects_fail_open_dependency_review_and_unpinned_actions(
+    tmp_path: Path,
+) -> None:
+    _write(tmp_path / "SECURITY.md", "# Security\n")
+    _write(tmp_path / ".github/dependabot.yml", "version: 2\n")
+    _write(tmp_path / ".github/workflows/codeql.yml", "name: CodeQL\n")
+    _write(tmp_path / ".github/workflows/scorecard.yml", "name: Scorecard\n")
+    _write(
+        tmp_path / ".github/workflows/dependency-review.yml",
+        "jobs:\n  review:\n    steps:\n"
+        "      - continue-on-error: true\n"
+        "        uses: actions/dependency-review-action@v5\n",
+    )
+
+    result = audit_security(tmp_path)
+    assert not result.ok
+    assert result.packet.observed["dependency_review_fail_closed"] is False
+    assert result.packet.observed["unpinned_workflow_actions"]
+
+    _write(
+        tmp_path / ".github/workflows/dependency-review.yml",
+        "jobs:\n  review:\n    steps:\n"
+        "      - uses: actions/dependency-review-action@"
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+    )
+    assert audit_security(tmp_path).ok
+
+
+def test_review_council_auditor_requires_all_roles_and_read_only_workflow(
+    tmp_path: Path,
+) -> None:
+    agent_ids = [
+        "TACTICIAN",
+        "SECURITY_SENTINEL",
+        "CORRECTNESS_ENGINE",
+        "ARCHITECT",
+        "TEST_ADVERSARY",
+        "GOVERNANCE_GUARD",
+        "SKEPTIC",
+        "ARBITER",
+    ]
+    registry = {
+        "protocol": "CMB-SRC-1",
+        "merge_authority": False,
+        "release_authority": False,
+        "agents": [{"id": agent_id} for agent_id in agent_ids],
+    }
+    _write(tmp_path / "agents/review-council-registry.json", json.dumps(registry))
+    _write(
+        tmp_path / ".github/workflows/cmb-stockfish-review.yml",
+        "permissions:\n  contents: read\nsteps:\n  - name: Enforce deterministic verdict\n",
+    )
+    _write(tmp_path / "src/cmb_agents/review_council.py", "# review council\n")
+
+    assert audit_review_council(tmp_path).ok
+
+    registry["agents"] = [{"id": agent_id} for agent_id in agent_ids[:-1]]
+    _write(tmp_path / "agents/review-council-registry.json", json.dumps(registry))
+    result = audit_review_council(tmp_path)
+    assert not result.ok
+    assert result.packet.observed["missing_required_agents"] == ["ARBITER"]

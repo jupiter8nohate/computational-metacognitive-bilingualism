@@ -27,14 +27,16 @@ The scheduled steward now separates deterministic maintenance from read-only spe
 8. **LIBRARIAN** — checks documentation navigation targets and catalogue integrity.
 9. **ARCHAEOLOGIST** — backtraces the canonical registry through repository Git history.
 10. **DISCOVERY** — validates the machine-discovery contract.
-11. **SECURITY** - verifies repository-side security-control files are present.
+11. **SECURITY** - verifies repository-side security controls, fail-closed dependency review, and SHA-pinned external Actions.
 12. **DNIS** - verifies CMB-DNIS-1 cell-agent registry integrity and Digital DNA continuity.
-13. **REVIEWER** - rejects evidence packets that escalate authority or self-certify external gates.
-14. **POSITION** - builds a hashed repository position from the exact commit, deterministic audit state, evidence packets, and latest changed paths.
-15. **TACTICIAN** - searches for the smallest immediate repair to a concrete failure.
-16. **STRATEGIST** - evaluates architecture and maintenance consequences without bypassing stabilization scope.
-17. **RED_TEAM** - attempts to refute candidate moves before deterministic selection.
-18. **STEWARD** - when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
+13. **REVIEW_COUNCIL** - verifies the CMB-SRC-1 registry, deterministic PR-review workflow, and no-merge authority boundary.
+14. **REVIEWER** - rejects evidence packets that escalate authority or self-certify external gates.
+15. **POSITION** - builds a hashed repository position from the exact commit, deterministic audit state, evidence packets, and latest changed paths.
+16. **TACTICIAN** - searches for the smallest immediate repair to a concrete failure.
+17. **STRATEGIST** - evaluates architecture and maintenance consequences without bypassing stabilization scope.
+18. **RED_TEAM** - attempts to refute candidate moves before deterministic selection.
+19. **AUTONOMY_ARBITER** - converts strategy output into bounded repair permission, human escalation, or position preservation.
+20. **STEWARD** - when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
 
 The chess roles are proposal and review roles. They do not receive direct repository mutation authority. The Strategy Engine feeds an advisory principal variation into the existing bounded Steward repair path.
 
@@ -44,22 +46,26 @@ The specialist roles are read-only. They communicate through structured evidence
 
 The workflow is `.github/workflows/cmb-steward-agents.yml`.
 
-It runs once per day at `08:17 UTC` and may also be launched manually with `workflow_dispatch`.
+It is scheduled once per hour at minute `17` and may also be launched manually with `workflow_dispatch`.
 
-The schedule is maintenance cadence, not a guarantee that a code change will be created every day.
+A separate read-only health workflow, `.github/workflows/cmb-agent-health.yml`, runs once per hour at minute `47`. It exercises the specialist audit, strategy engine, Autonomy Arbiter, DNIS, and Stockfish review regression suites without repository write permission.
+
+This provides 24-hour coverage, not a continuously running daemon. GitHub scheduled workflows are best-effort and may be delayed by the platform.
 
 ## AI activation
 
 Deterministic audits work without an AI provider.
 
-AI-assisted repair requires two repository settings:
+The model-assisted layer supports two bounded providers:
 
-- GitHub Actions secret: `OPENAI_API_KEY`
-- GitHub Actions repository variable: `CMB_AGENT_MODEL`
+- OpenAI Responses API when the `OPENAI_API_KEY` secret and `CMB_AGENT_MODEL` repository variable are explicitly configured.
+- GitHub Copilot CLI in GitHub Actions using the short-lived `GITHUB_TOKEN` with `copilot-requests: write`.
 
-The implementation uses the OpenAI Responses API and requests a strict JSON-schema repair response. The repository does not store the API key.
+GitHub Models is not used because GitHub retired that inference service on July 30, 2026. The Copilot CLI fallback is a separate current GitHub Copilot service.
 
-If either setting is absent, the Steward role reports that AI repair was skipped. It does not invent a configured model or silently fall back to another provider.
+The workflow installs a pinned Copilot CLI release and verifies its SHA-256 digest. Structured CMB model calls disable repository custom instructions and built-in MCP servers, then deny shell, write, URL, memory, and task tools. The model receives bounded task data and must return JSON that is validated by the existing CMB contracts.
+
+Model output remains advisory. Deterministic policy, fixed verification, the Autonomy Arbiter, mutation allowlists, draft pull requests, and human merge authority remain the control boundary.
 
 ## Mutation policy
 
@@ -131,7 +137,7 @@ cmb-steward verify
 cmb-steward validate-diff
 ~~~
 
-For local AI repair, set `OPENAI_API_KEY` and `CMB_AGENT_MODEL` in the environment. Do not commit API keys.
+For local AI repair, set `OPENAI_API_KEY` and `CMB_AGENT_MODEL` in the environment. GitHub Actions can instead use the bounded Copilot CLI provider with the short-lived `GITHUB_TOKEN`. Do not commit API keys or long-lived Copilot tokens.
 
 ## Structured specialist evidence
 
