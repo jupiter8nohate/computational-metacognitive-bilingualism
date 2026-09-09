@@ -29,7 +29,12 @@
     "SURPRISE != SIGNIFICANCE",
     "RARE_UNDER_NULL != SUPERNATURAL",
     "BH_Q_VALUE != TRUTH_PROBABILITY",
-    "MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF"
+    "MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF",
+    "NULL_MODEL_ENSEMBLE != REALITY",
+    "ROBUST_ACROSS_MODELS != TRUTH",
+    "MODEL_AGREEMENT != CAUSATION",
+    "Q_THRESHOLD != SEMANTIC_THRESHOLD",
+    "ASSUMPTION_SENSITIVITY != FALSEHOOD"
   ],
   "pipeline": [
     "SENSE",
@@ -44,6 +49,7 @@
     "PATH_QUERY",
     "REPLICATE",
     "NULL_TEST",
+    "NULL_ENSEMBLE",
     "RENDER",
     "HUMAN_INTERPRETATION"
   ],
@@ -96,6 +102,11 @@
     {
       "id": "NULL_MODEL_CELL",
       "task": "Run deterministic value-permutation baselines, reject ambiguous duplicate word tokens, and report raw empirical p-values plus Benjamini-Hochberg adjusted q-values without converting statistical rarity into truth.",
+      "authority": "read_only"
+    },
+    {
+      "id": "NULL_ENSEMBLE_CELL",
+      "task": "Compare observed findings across unrestricted and word-length-stratified permutation baselines, then report cross-model q-value robustness without converting model agreement into truth.",
       "authority": "read_only"
     }
   ],
@@ -324,6 +335,27 @@
       "test family size",
       "raw empirical p-value",
       "Benjamini-Hochberg adjusted q-value"
+    ]
+  },
+  "null_ensemble_rule": {
+    "purpose": "Expose sensitivity of anomaly rarity to more than one declared null assumption.",
+    "models": [
+      "value_permutation",
+      "word_length_stratified_value_permutation"
+    ],
+    "multiple_testing": "benjamini_hochberg_fdr_per_model",
+    "default_q_threshold": 0.05,
+    "statuses": [
+      "NOT_UNCOMMON_UNDER_ENSEMBLE",
+      "UNCOMMON_IN_MODEL_SUBSET",
+      "UNCOMMON_ACROSS_ALL_MODELS"
+    ],
+    "boundaries": [
+      "NULL_MODEL_ENSEMBLE != REALITY",
+      "ROBUST_ACROSS_MODELS != TRUTH",
+      "MODEL_AGREEMENT != CAUSATION",
+      "Q_THRESHOLD != SEMANTIC_THRESHOLD",
+      "ASSUMPTION_SENSITIVITY != FALSEHOOD"
     ]
   }
 }
