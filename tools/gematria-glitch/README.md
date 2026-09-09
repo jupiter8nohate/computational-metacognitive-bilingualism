@@ -66,7 +66,7 @@ Use the versioned corpus envelope when a finding needs reproducible provenance.
 
 ```text
 go run . -input ../../datasets/gematria/demo-corpus.v1.json -format receipts > receipts.json
-go run . -verify-receipts receipts.json
+go run . -input ../../datasets/gematria/demo-corpus.v1.json -verify-receipts receipts.json
 ```
 
 Each receipt binds:
@@ -92,3 +92,5 @@ PROVENANCE != PROPHECY
 ```
 
 A valid receipt proves that the stored payload hashes to the stated digest. It does not prove the theological, philosophical, scientific, diagnostic, or personal interpretation of the finding.
+
+For a lighter integrity-only check, omit `-input`. That verifies the receipt payload hash but does not prove the receipt still matches a specific corpus file. Corpus-bound verification is preferred when the source corpus is available.
