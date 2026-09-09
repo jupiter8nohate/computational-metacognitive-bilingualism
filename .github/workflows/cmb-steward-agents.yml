@@ -19,6 +19,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
   copilot-requests: write
 
 concurrency:
@@ -157,7 +158,7 @@ jobs:
             echo "Steward found no repository changes." >> "$GITHUB_STEP_SUMMARY"
           fi
 
-      - name: Avoid duplicate steward pull requests
+      - name: Avoid duplicate steward review requests
         if: steps.changes.outputs.changed == 'true'
         id: open_pr
         env:
@@ -165,10 +166,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          count="$(gh pr list --state open --limit 100 --json headRefName             --jq '[.[] | select(.headRefName | startswith("cmb-agent/steward-"))] | length')"
+          pr_count="$(gh pr list --state open --limit 100 --json headRefName --jq '[.[] | select(.headRefName | startswith("cmb-agent/steward-"))] | length')"
+          issue_count="$(gh issue list --state open --limit 100 --json title --jq '[.[] | select(.title == "CMB Steward maintenance branch awaiting review")] | length')"
+          count="$((pr_count + issue_count))"
           echo "count=$count" >> "$GITHUB_OUTPUT"
           if [[ "$count" != "0" ]]; then
-            echo "An existing CMB Steward PR is already awaiting human review; no duplicate will be opened."               >> "$GITHUB_STEP_SUMMARY"
+            echo "Existing CMB Steward work is already awaiting human review; no duplicate will be opened." >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Open bounded maintenance pull request
@@ -248,6 +251,48 @@ jobs:
           `HUMAN_AGENCY > MACHINE_AUTHORITY`
           EOF
 
-          gh pr create             --base main             --head "$branch"             --draft             --title "chore(agent): CMB Steward maintenance"             --body-file "$body_file"
+          set +e
+          pr_output="$(gh pr create --base main --head "$branch" --draft --title "chore(agent): CMB Steward maintenance" --body-file "$body_file" 2>&1)"
+          pr_status=$?
+          set -e
 
-          echo "Steward opened a draft PR for human review." >> "$GITHUB_STEP_SUMMARY"
+          if [[ "$pr_status" -eq 0 ]]; then
+            echo "$pr_output"
+            echo "Steward opened a draft PR for human review." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          if ! grep -Fq "GitHub Actions is not permitted to create or approve pull requests" <<< "$pr_output"; then
+            echo "$pr_output" >&2
+            exit "$pr_status"
+          fi
+
+          issue_title="CMB Steward maintenance branch awaiting review"
+          issue_file="/tmp/cmb-steward-fallback-issue.md"
+          compare_url="https://github.com/$GITHUB_REPOSITORY/compare/main...$branch?expand=1"
+          cat > "$issue_file" <<EOF
+          ## CMB Steward human review required
+
+          The bounded Steward completed audit, strategy, autonomy, verification, mutation-boundary checks,
+          commit creation, and branch push.
+
+          GitHub repository settings currently prevent GitHub Actions from creating pull requests.
+
+          Maintenance branch: `$branch`
+
+          Review/create PR: $compare_url
+
+          Enable the repository's "Allow GitHub Actions to create and approve pull requests" setting
+          if direct draft-PR creation by the Steward is desired.
+
+          `MACHINE_CAN_PROPOSE != MACHINE_CAN_MERGE`
+          EOF
+
+          existing_issue="$(gh issue list --state open --limit 100 --json number,title --jq '[.[] | select(.title == "CMB Steward maintenance branch awaiting review")][0].number // ""')"
+          if [[ -n "$existing_issue" ]]; then
+            gh issue comment "$existing_issue" --body-file "$issue_file"
+            echo "Steward updated the existing human-review issue after GitHub blocked PR creation." >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh issue create --title "$issue_title" --body-file "$issue_file"
+            echo "Steward opened a human-review issue after GitHub blocked PR creation." >> "$GITHUB_STEP_SUMMARY"
+          fi
