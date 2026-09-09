@@ -1,0 +1,66 @@
+{
+  "schema_version": "cmb.stockfish-review-registry.v1",
+  "protocol": "CMB-SRC-1",
+  "name": "CMB Stockfish Review Council",
+  "status": "bounded_pr_review",
+  "purpose": "Review pull requests using independent specialist agents, adversarial challenge, deterministic scoring, and human-preserving arbitration.",
+  "invariants": [
+    "REVIEW != MERGE",
+    "SCORE != TRUTH",
+    "MODEL_OPINION != EVIDENCE",
+    "SELF_REVIEW != INDEPENDENT_REVIEW",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "search_model": {
+    "position": "changed files plus patches plus authority-sensitive paths",
+    "candidate_lines": ["safe_merge", "request_changes", "human_escalation"],
+    "selection": "deterministic principal-line selection followed by skeptic challenge",
+    "principal_variation": ["POSITION_EVALUATION", "CANDIDATE_LINE", "SKEPTIC_CHALLENGE", "COUNCIL_VOTE", "ARBITER"]
+  },
+  "agents": [
+    {
+      "id": "TACTICIAN",
+      "role": "Generate and rank candidate review lines.",
+      "authority": "read_only"
+    },
+    {
+      "id": "SECURITY_SENTINEL",
+      "role": "Detect credential exposure, dangerous execution primitives, and security regressions.",
+      "authority": "read_only"
+    },
+    {
+      "id": "CORRECTNESS_ENGINE",
+      "role": "Look for incomplete work, hidden failures, and correctness smells.",
+      "authority": "read_only"
+    },
+    {
+      "id": "ARCHITECT",
+      "role": "Evaluate change size, cohesion, maintainability, and recovery cost.",
+      "authority": "read_only"
+    },
+    {
+      "id": "TEST_ADVERSARY",
+      "role": "Search for weakened tests, skipped verification, and missing focused coverage signals.",
+      "authority": "read_only"
+    },
+    {
+      "id": "GOVERNANCE_GUARD",
+      "role": "Escalate security, policy, schema, workflow, and authority-sensitive changes.",
+      "authority": "read_only"
+    },
+    {
+      "id": "SKEPTIC",
+      "role": "Attack the leading candidate line and search for contradictions before approval.",
+      "authority": "read_only"
+    },
+    {
+      "id": "ARBITER",
+      "role": "Combine findings and votes into APPROVE, REQUEST_CHANGES, or HUMAN_REVIEW.",
+      "authority": "recommendation_only"
+    }
+  ],
+  "verdicts": ["APPROVE", "REQUEST_CHANGES", "HUMAN_REVIEW"],
+  "merge_authority": false,
+  "release_authority": false,
+  "self_expansion": false
+}

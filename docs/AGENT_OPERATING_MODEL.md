@@ -4,6 +4,8 @@ CMB uses specialization instead of granting one model broad repository authority
 
 The experimental Chess Strategy Engine adds bounded POSITION, TACTICIAN, STRATEGIST, SECURITY, RECOVERY, RED_TEAM, and REVIEWER search roles before the existing Steward mutation gate. Candidate moves are advisory until they survive deterministic policy and fixed verification. The AUTONOMY_ARBITER then converts the selected move into exactly one bounded verdict: PROPOSE_REPAIR, HUMAN_REVIEW, or PRESERVE_POSITION. See [CMB Chess Strategy Engine](CHESS_STRATEGY_ENGINE.md).
 
+CMB-SRC-1 adds a separate pull-request review council with TACTICIAN, SECURITY_SENTINEL, CORRECTNESS_ENGINE, ARCHITECT, TEST_ADVERSARY, GOVERNANCE_GUARD, SKEPTIC, and ARBITER roles. It can emit advisory review verdicts but cannot merge, approve through the GitHub API, publish releases, or expand its own permissions. See [CMB Stockfish Review Council](STOCKFISH_REVIEW_COUNCIL.md).
+
 ~~~text
                     HUMAN
                       ♃
@@ -186,3 +188,36 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
 
 See [CMB Digital Nervous Immune System](DIGITAL_NERVOUS_IMMUNE_SYSTEM.md) and `../agents/immune-cell-registry.json`.
+
+## Stockfish pull-request review council
+
+CMB-SRC-1 reviews changed paths and patches as a bounded repository position. Deterministic checks run first. Optional model-assisted specialists receive bounded, untrusted diff text and cannot convert model output into repository authority.
+
+~~~text
+PR_DIFF
+  |
+  v
+DETERMINISTIC_SPECIALISTS
+  |
+  v
+SKEPTIC
+  |
+  v
+COUNCIL_VOTE
+  |
+  v
+ARBITER
+  |
+  +--> APPROVE
+  +--> REQUEST_CHANGES
+  +--> HUMAN_REVIEW
+~~~
+
+The workflow keeps `contents: read` permission. A HUMAN_REVIEW result is an explicit routing decision, not an automated approval. A REQUEST_CHANGES result may fail the review gate, but only a human or separately authorized repository mechanism can merge.
+
+~~~text
+REVIEW != MERGE
+MODEL_OPINION != EVIDENCE
+SCORE != TRUTH
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~

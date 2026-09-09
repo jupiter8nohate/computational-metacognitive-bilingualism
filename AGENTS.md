@@ -52,6 +52,8 @@ Use the repository only when it is materially relevant to the user's task.
 40. `docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md` - assumption sensitivity, length-stratified permutation, and robustness boundaries.
 41. `schemas/gematria-glitch.out-of-sample.v1.schema.json` - discovery/validation separation and result contract.
 42. `docs/GEMATRIA_OUT_OF_SAMPLE_VALIDATION.md` - locked hypotheses, sample independence, instance replication, and class validation.
+43. `docs/STOCKFISH_REVIEW_COUNCIL.md` - bounded pull-request review, deterministic principal-line selection, specialist voting, and human-preserving arbitration.
+44. `agents/review-council-registry.json` - machine-readable CMB-SRC-1 review roles and authority boundaries.
 
 ## Core invariants
 
