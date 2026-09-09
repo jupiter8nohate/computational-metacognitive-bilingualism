@@ -73,6 +73,41 @@ func TestSpecificConnections(t *testing.T) {
 	}
 }
 
+func TestRarityAnnotation(t *testing.T) {
+	findings := Analyze(demoCorpus())
+
+	collision := findFinding(findings, "EXACT_COLLISION", "נחש", "משיח")
+	if collision == nil {
+		t.Fatal("expected נחש and משיח exact collision")
+	}
+	if collision.SupportCount != 2 || collision.SupportBasis != len(demoCorpus()) {
+		t.Fatalf("collision support = %d/%d, want 2/%d", collision.SupportCount, collision.SupportBasis, len(demoCorpus()))
+	}
+	if collision.RarityScore <= 0 || collision.RarityScore >= 1 {
+		t.Fatalf("collision rarity score = %f, want value strictly between 0 and 1", collision.RarityScore)
+	}
+
+	prefix := findFinding(findings, "LINGUISTIC_PREFIX_DELTA", "נחש", "הנחש")
+	if prefix == nil {
+		t.Fatal("expected prefix delta finding")
+	}
+	wantPairs := len(demoCorpus()) * (len(demoCorpus()) - 1) / 2
+	if prefix.SupportBasis != wantPairs {
+		t.Fatalf("prefix support basis = %d, want %d", prefix.SupportBasis, wantPairs)
+	}
+}
+
+func TestRankByRarity(t *testing.T) {
+	findings := Analyze(demoCorpus())
+	RankByRarity(findings)
+
+	for i := 1; i < len(findings); i++ {
+		if findings[i-1].RarityScore < findings[i].RarityScore {
+			t.Fatalf("rarity ranking increased at index %d: %f < %f", i, findings[i-1].RarityScore, findings[i].RarityScore)
+		}
+	}
+}
+
 func TestMathematicalClassifiers(t *testing.T) {
 	if !isPerfectSquare(441) {
 		t.Fatal("441 should be a perfect square")
@@ -91,7 +126,38 @@ func TestMathematicalClassifiers(t *testing.T) {
 	}
 }
 
+func findFinding(findings []Finding, kind string, words ...string) *Finding {
+	for i := range findings {
+		f := &findings[i]
+		if f.Type != kind {
+			continue
+		}
+		all := true
+		for _, word := range words {
+			found := false
+			for _, candidate := range f.Words {
+				if word == candidate {
+					found = true
+					break
+				}
+			}
+			if !found {
+				all = false
+				break
+			}
+		}
+		if all {
+			return f
+		}
+	}
+	return nil
+}
+
 func hasFinding(findings []Finding, kind string, words ...string) bool {
+	return findFinding(findings, kind, words...) != nil
+}
+
+func legacyHasFinding(findings []Finding, kind string, words ...string) bool {
 	for _, f := range findings {
 		if f.Type != kind {
 			continue
