@@ -21,6 +21,7 @@ type ValidationCorpusRef struct {
 	CorpusID      string `json:"corpus_id"`
 	CorpusVersion string `json:"corpus_version"`
 	CorpusSHA256  string `json:"corpus_sha256"`
+	SampleSHA256  string `json:"sample_sha256"`
 	RecordCount   int    `json:"record_count"`
 }
 
@@ -104,15 +105,23 @@ func runOutOfSampleValidation(
 	if err != nil {
 		return OutOfSampleValidationReport{}, err
 	}
+	discoverySampleSHA, err := validationSampleDigest(discovery)
+	if err != nil {
+		return OutOfSampleValidationReport{}, err
+	}
+	validationSampleSHA, err := validationSampleDigest(validation)
+	if err != nil {
+		return OutOfSampleValidationReport{}, err
+	}
 	if corpusRef(discovery) == corpusRef(validation) {
 		return OutOfSampleValidationReport{}, fmt.Errorf(
 			"discovery and validation corpus identities must differ: %s",
 			corpusRef(discovery),
 		)
 	}
-	if discoverySHA == validationSHA {
+	if discoverySHA == validationSHA || discoverySampleSHA == validationSampleSHA {
 		return OutOfSampleValidationReport{}, fmt.Errorf(
-			"discovery and validation corpus contents must differ",
+			"discovery and validation sample contents must differ",
 		)
 	}
 
@@ -279,14 +288,16 @@ func runOutOfSampleValidation(
 		Discovery: ValidationCorpusRef{
 			CorpusID:      discovery.CorpusID,
 			CorpusVersion: discovery.Version,
-			CorpusSHA256:  discoverySHA,
-			RecordCount:   len(discovery.Records),
+			CorpusSHA256: discoverySHA,
+			SampleSHA256: discoverySampleSHA,
+			RecordCount:  len(discovery.Records),
 		},
 		Validation: ValidationCorpusRef{
 			CorpusID:      validation.CorpusID,
 			CorpusVersion: validation.Version,
-			CorpusSHA256:  validationSHA,
-			RecordCount:   len(validation.Records),
+			CorpusSHA256: validationSHA,
+			SampleSHA256: validationSampleSHA,
+			RecordCount:  len(validation.Records),
 		},
 		CandidateSetSHA256:  candidateSetSHA,
 		HypothesisSetSHA256: hypothesisSetSHA,
@@ -322,6 +333,33 @@ func requiredWordsForValidation(finding Finding) []string {
 	}
 	sort.Strings(out)
 	return out
+}
+
+
+func validationSampleDigest(corpus Corpus) (string, error) {
+	type sampleRecord struct {
+		Word  string `json:"word"`
+		Value int    `json:"value"`
+	}
+	records := make([]sampleRecord, len(corpus.Records))
+	for i, entry := range corpus.Records {
+		records[i] = sampleRecord{
+			Word:  entry.Word,
+			Value: Gematria(entry.Word),
+		}
+	}
+	sort.Slice(records, func(i, j int) bool {
+		if records[i].Word != records[j].Word {
+			return records[i].Word < records[j].Word
+		}
+		return records[i].Value < records[j].Value
+	})
+	data, err := json.Marshal(records)
+	if err != nil {
+		return "", fmt.Errorf("marshal validation sample: %w", err)
+	}
+	sum := sha256.Sum256(data)
+	return hex.EncodeToString(sum[:]), nil
 }
 
 func stringSetDigest(values []string) (string, error) {
