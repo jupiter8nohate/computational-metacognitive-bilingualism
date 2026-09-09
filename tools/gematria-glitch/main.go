@@ -663,7 +663,70 @@ func verifyReceipt(receipt Receipt) error {
 	return nil
 }
 
-func verifyReceiptFile(path string) (int, error) {
+func verifyReceiptAgainstCorpus(receipt Receipt, corpus Corpus) error {
+	if err := verifyReceipt(receipt); err != nil {
+		return err
+	}
+	if err := validateCorpus(corpus); err != nil {
+		return err
+	}
+
+	digest, err := corpusDigest(corpus)
+	if err != nil {
+		return err
+	}
+	if receipt.Payload.CorpusSHA256 != digest {
+		return fmt.Errorf("corpus digest mismatch")
+	}
+	if receipt.Payload.CorpusID != corpus.CorpusID {
+		return fmt.Errorf("corpus id mismatch")
+	}
+	if receipt.Payload.CorpusVersion != corpus.Version {
+		return fmt.Errorf("corpus version mismatch")
+	}
+	if receipt.Payload.GematriaSystem != corpus.GematriaSystem {
+		return fmt.Errorf("gematria system mismatch")
+	}
+
+	expectedSources := sourceRecordIDs(receipt.Payload.Finding, corpus.Records)
+	if !sameStrings(receipt.Payload.SourceRecordIDs, expectedSources) {
+		return fmt.Errorf("source record ids do not match corpus")
+	}
+
+	recomputed := Analyze(corpus.Records)
+	if !containsFinding(recomputed, receipt.Payload.Finding) {
+		return fmt.Errorf("finding is not reproducible from corpus")
+	}
+	return nil
+}
+
+func sameStrings(left, right []string) bool {
+	if len(left) != len(right) {
+		return false
+	}
+	for i := range left {
+		if left[i] != right[i] {
+			return false
+		}
+	}
+	return true
+}
+
+func containsFinding(findings []Finding, target Finding) bool {
+	targetJSON, err := json.Marshal(target)
+	if err != nil {
+		return false
+	}
+	for _, candidate := range findings {
+		candidateJSON, err := json.Marshal(candidate)
+		if err == nil && string(candidateJSON) == string(targetJSON) {
+			return true
+		}
+	}
+	return false
+}
+
+func verifyReceiptFile(path string, corpus *Corpus) (int, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return 0, fmt.Errorf("read receipts: %w", err)
@@ -676,7 +739,13 @@ func verifyReceiptFile(path string) (int, error) {
 		return 0, fmt.Errorf("receipt file contains no receipts")
 	}
 	for i, receipt := range receipts {
-		if err := verifyReceipt(receipt); err != nil {
+		var err error
+		if corpus == nil {
+			err = verifyReceipt(receipt)
+		} else {
+			err = verifyReceiptAgainstCorpus(receipt, *corpus)
+		}
+		if err != nil {
 			return 0, fmt.Errorf("receipt %d: %w", i, err)
 		}
 	}
@@ -710,12 +779,25 @@ func main() {
 	flag.Parse()
 
 	if *verifyReceipts != "" {
-		count, err := verifyReceiptFile(*verifyReceipts)
+		var corpus *Corpus
+		if *inputPath != "" {
+			loaded, err := loadCorpus(*inputPath)
+			if err != nil {
+				fmt.Fprintln(os.Stderr, "error:", err)
+				os.Exit(2)
+			}
+			corpus = &loaded
+		}
+		count, err := verifyReceiptFile(*verifyReceipts, corpus)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, "error:", err)
 			os.Exit(2)
 		}
-		fmt.Printf("VERIFIED://%d RECEIPTS\n", count)
+		if corpus == nil {
+			fmt.Printf("VERIFIED://%d RECEIPTS | MODE://SELF_CONSISTENCY\n", count)
+		} else {
+			fmt.Printf("VERIFIED://%d RECEIPTS | MODE://CORPUS_BOUND\n", count)
+		}
 		return
 	}
 
