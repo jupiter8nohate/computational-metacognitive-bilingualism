@@ -320,3 +320,41 @@ CONNECTED != IDENTICAL
 ```
 
 A graph edge describes a reproducible relationship encoded by the implementation. It does not establish semantic identity, causation, prophecy, diagnosis, destiny, or human worth.
+
+## Bounded graph path discovery
+
+GGL-1 may query its verified anomaly graph for simple paths between exact graph node IDs or exact Hebrew record words.
+
+Canonical result schema:
+
+```text
+schemas/gematria-glitch.path-query.v1.schema.json
+```
+
+Canonical documentation:
+
+```text
+docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md
+```
+
+The query engine may traverse a stored edge in either direction for navigation while preserving the original relation and recording `FORWARD` or `REVERSE` traversal.
+
+Path ranking MUST use the declared evidence ordering, not symbolic appeal:
+
+```text
+EVIDENCE_FLOOR descending
+HOP_COUNT ascending
+PATH_ID lexical ascending
+```
+
+Every result MUST preserve:
+
+```text
+PATH != PROOF
+PATH_RANK != TRUTH
+EDGE != CAUSATION
+CONNECTED != IDENTICAL
+NO_PATH != NO_RELATIONSHIP
+```
+
+A returned path shows graph connectivity under the current corpus and search bounds. It does not prove semantic identity, causation, prophecy, diagnosis, destiny, or significance.

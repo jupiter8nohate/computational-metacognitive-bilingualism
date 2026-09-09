@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/gematria-glitch.path-query.v1.schema.json",
+  "title": "GEMATRIA-GLITCH-1 Path Query Result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol",
+    "graph_sha256",
+    "query",
+    "resolved_from",
+    "resolved_to",
+    "paths",
+    "boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "gematria-glitch.path-query.v1"
+    },
+    "protocol": {
+      "const": "GEMATRIA-GLITCH-1"
+    },
+    "graph_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "query": {
+      "type": "object",
+      "required": [
+        "from",
+        "to",
+        "max_depth",
+        "max_paths"
+      ],
+      "properties": {
+        "from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "to": {
+          "type": "string",
+          "minLength": 1
+        },
+        "max_depth": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "max_paths": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        }
+      },
+      "additionalProperties": false
+    },
+    "resolved_from": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "resolved_to": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path_id",
+          "nodes",
+          "steps",
+          "hop_count",
+          "evidence_floor",
+          "evidence_class",
+          "receipt_sha256s",
+          "source_node_ids"
+        ],
+        "properties": {
+          "path_id": {
+            "type": "string",
+            "pattern": "^path:[0-9a-f]{64}$"
+          },
+          "nodes": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "steps": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "edge_id",
+                "from",
+                "relation",
+                "to",
+                "traversal",
+                "evidence_tier"
+              ],
+              "properties": {
+                "edge_id": {
+                  "type": "string",
+                  "pattern": "^edge:[0-9a-f]{64}$"
+                },
+                "from": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "relation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "to": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "traversal": {
+                  "enum": [
+                    "FORWARD",
+                    "REVERSE"
+                  ]
+                },
+                "evidence_tier": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "receipt_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "evidence": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "hop_count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "evidence_floor": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "evidence_class": {
+            "enum": [
+              "DIRECT_STRUCTURAL",
+              "RECEIPT_BACKED",
+              "LOWER_ASSURANCE"
+            ]
+          },
+          "receipt_sha256s": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "uniqueItems": true
+          },
+          "source_node_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^source:.+"
+            },
+            "uniqueItems": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "boundary": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": "PATH != PROOF"
+          }
+        },
+        {
+          "contains": {
+            "const": "PATH_RANK != TRUTH"
+          }
+        },
+        {
+          "contains": {
+            "const": "NO_PATH != NO_RELATIONSHIP"
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

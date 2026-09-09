@@ -15,7 +15,10 @@
     "RECEIPT != TRUTH",
     "GRAPH != PROOF",
     "EDGE != CAUSATION",
-    "CONNECTED != IDENTICAL"
+    "CONNECTED != IDENTICAL",
+    "PATH != PROOF",
+    "PATH_RANK != TRUTH",
+    "NO_PATH != NO_RELATIONSHIP"
   ],
   "pipeline": [
     "SENSE",
@@ -27,6 +30,7 @@
     "RANK",
     "RECEIPT",
     "GRAPH",
+    "PATH_QUERY",
     "RENDER",
     "HUMAN_INTERPRETATION"
   ],
@@ -65,6 +69,11 @@
       "id": "GRAPH_WEAVER",
       "task": "Project corpus records and verified receipt-backed relationships into a deterministic typed anomaly graph.",
       "authority": "write_artifact_only"
+    },
+    {
+      "id": "PATHFINDER_CELL",
+      "task": "Search bounded simple paths in the verified anomaly graph, rank by evidence floor and hop count, and return receipt and source traces.",
+      "authority": "read_only"
     }
   ],
   "cases": [
@@ -224,6 +233,26 @@
       "GRAPH != PROOF",
       "EDGE != CAUSATION",
       "CONNECTED != IDENTICAL"
+    ]
+  },
+  "path_query_rule": {
+    "purpose": "Answer bounded connection questions without inventing missing edges or converting path rank into truth.",
+    "ranking": [
+      "evidence floor descending",
+      "hop count ascending",
+      "path id lexical ascending"
+    ],
+    "limits": {
+      "max_depth": 8,
+      "max_paths": 50,
+      "max_candidate_expansions": 10000
+    },
+    "boundaries": [
+      "PATH != PROOF",
+      "PATH_RANK != TRUTH",
+      "EDGE != CAUSATION",
+      "CONNECTED != IDENTICAL",
+      "NO_PATH != NO_RELATIONSHIP"
     ]
   }
 }
