@@ -94,3 +94,27 @@ PROVENANCE != PROPHECY
 A valid receipt proves that the stored payload hashes to the stated digest. It does not prove the theological, philosophical, scientific, diagnostic, or personal interpretation of the finding.
 
 For a lighter integrity-only check, omit `-input`. That verifies the receipt payload hash but does not prove the receipt still matches a specific corpus file. Corpus-bound verification is preferred when the source corpus is available.
+
+## Receipt-backed anomaly knowledge graph
+
+Generate a deterministic graph:
+
+```text
+go run . -input ../../datasets/gematria/demo-corpus.v1.json -format graph > graph.json
+```
+
+Verify it against the source corpus:
+
+```text
+go run . -input ../../datasets/gematria/demo-corpus.v1.json -verify-graph graph.json
+```
+
+The graph contains corpus, record, source, value, prime-factor, receipt, and anomaly-type nodes. Reproducible mathematical connections become typed edges. Semantic edges carry the receipt hash that admitted them.
+
+```text
+GRAPH != PROOF
+EDGE != CAUSATION
+CONNECTED != IDENTICAL
+```
+
+See `../../docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md` and `../../schemas/gematria-glitch.graph.v1.schema.json`.
