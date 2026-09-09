@@ -397,3 +397,53 @@ ABSENCE != DISPROOF
 ```
 
 A repeated structure is stronger evidence that the arithmetic pattern is not unique to one corpus. It is not proof of interpretation, causation, prophecy, diagnosis, destiny, or universal significance.
+
+## Permutation null model
+
+GGL-1 may test observed findings against a deterministic value-permutation null model.
+
+Canonical result schema:
+
+```text
+schemas/gematria-glitch.null-model.v1.schema.json
+```
+
+Canonical documentation:
+
+```text
+docs/GEMATRIA_NULL_MODEL.md
+```
+
+The model preserves:
+
+```text
+CORPUS_SIZE
+WORD_SET
+VALUE_MULTISET
+GEMATRIA_SYSTEM
+```
+
+It randomly reassigns the exact observed values among the existing words using a deterministic seeded Fisher-Yates permutation.
+
+For each observed finding:
+
+```text
+CHANCE_RATE = NULL_HITS / SIMULATIONS
+EMPIRICAL_P_VALUE = (NULL_HITS + 1) / (SIMULATIONS + 1)
+SURPRISE_BITS = -log2(EMPIRICAL_P_VALUE)
+```
+
+The empirical p-value describes recurrence under this declared null model. It is not the probability that an interpretation is true.
+
+Every null-model report MUST preserve:
+
+```text
+NULL_MODEL != REALITY
+EMPIRICAL_P_VALUE != TRUTH_PROBABILITY
+SURPRISE != SIGNIFICANCE
+RARE_UNDER_NULL != SUPERNATURAL
+REPLICATION != PROOF
+PATTERN != PROOF
+```
+
+A finding that is uncommon under the permutation baseline may justify further investigation. It does not establish causation, prophecy, diagnosis, destiny, supernatural origin, or universal significance.
