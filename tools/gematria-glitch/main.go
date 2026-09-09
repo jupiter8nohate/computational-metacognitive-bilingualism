@@ -785,12 +785,18 @@ func main() {
 	compareInputs := flag.String("compare-inputs", "", "comma-separated provenance-grade corpus files to compare")
 	compareFormat := flag.String("compare-format", "glitch", "multi-corpus comparison output format: glitch or json")
 	nullModel := flag.Bool("null-model", false, "run deterministic value-permutation null-model analysis")
-	nullSimulations := flag.Int("null-simulations", 10000, "number of null-model permutations")
+	nullEnsemble := flag.Bool("null-ensemble", false, "run deterministic multi-baseline null-model ensemble analysis")
+	nullSimulations := flag.Int("null-simulations", 10000, "number of null-model permutations per model")
 	nullSeed := flag.Uint64("null-seed", 369, "deterministic null-model seed")
+	nullQThreshold := flag.Float64("null-q-threshold", defaultEnsembleQThreshold, "ensemble adjusted q-value threshold")
 	nullFormat := flag.String("null-format", "glitch", "null-model output format: glitch or json")
 	flag.Parse()
 
-	if *compareInputs != "" && (*verifyReceipts != "" || *verifyGraph != "" || *pathFrom != "" || *pathTo != "" || *nullModel) {
+	if *nullModel && *nullEnsemble {
+		fmt.Fprintln(os.Stderr, "error: null-model and null-ensemble are mutually exclusive")
+		os.Exit(2)
+	}
+	if *compareInputs != "" && (*verifyReceipts != "" || *verifyGraph != "" || *pathFrom != "" || *pathTo != "" || *nullModel || *nullEnsemble) {
 		fmt.Fprintln(os.Stderr, "error: compare-inputs cannot be combined with receipt, graph, path-query, or null-model modes")
 		os.Exit(2)
 	}
@@ -804,12 +810,12 @@ func main() {
 		fmt.Fprintln(os.Stderr, "error: path-from and path-to must be supplied together")
 		os.Exit(2)
 	}
-	if *pathFrom != "" && (*verifyReceipts != "" || *verifyGraph != "" || *nullModel) {
+	if *pathFrom != "" && (*verifyReceipts != "" || *verifyGraph != "" || *nullModel || *nullEnsemble) {
 		fmt.Fprintln(os.Stderr, "error: path query cannot be combined with verification or null-model modes")
 		os.Exit(2)
 	}
-	if *nullModel && (*verifyReceipts != "" || *verifyGraph != "") {
-		fmt.Fprintln(os.Stderr, "error: null-model mode cannot be combined with verification modes")
+	if (*nullModel || *nullEnsemble) && (*verifyReceipts != "" || *verifyGraph != "") {
+		fmt.Fprintln(os.Stderr, "error: null-model modes cannot be combined with verification modes")
 		os.Exit(2)
 	}
 
@@ -907,6 +913,34 @@ func main() {
 		switch *nullFormat {
 		case "glitch":
 			fmt.Print(renderNullModelGlitch(report))
+		case "json":
+			encoder := json.NewEncoder(os.Stdout)
+			encoder.SetIndent("", "  ")
+			if err := encoder.Encode(report); err != nil {
+				fmt.Fprintln(os.Stderr, "error:", err)
+				os.Exit(2)
+			}
+		default:
+			fmt.Fprintln(os.Stderr, "error: null-format must be glitch or json")
+			os.Exit(2)
+		}
+		return
+	}
+
+	if *nullEnsemble {
+		report, err := runNullModelEnsemble(
+			corpus,
+			*nullSimulations,
+			*nullSeed,
+			*nullQThreshold,
+		)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		switch *nullFormat {
+		case "glitch":
+			fmt.Print(renderNullEnsembleGlitch(report))
 		case "json":
 			encoder := json.NewEncoder(os.Stdout)
 			encoder.SetIndent("", "  ")
