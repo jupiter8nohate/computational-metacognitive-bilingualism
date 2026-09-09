@@ -156,4 +156,3 @@ func findFinding(findings []Finding, kind string, words ...string) *Finding {
 func hasFinding(findings []Finding, kind string, words ...string) bool {
 	return findFinding(findings, kind, words...) != nil
 }
-
