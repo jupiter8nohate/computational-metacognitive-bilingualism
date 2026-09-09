@@ -23,7 +23,11 @@
     "RECURRENCE != CAUSATION",
     "REPEATED != UNIVERSAL",
     "CORPUS_DEPENDENCE != FALSEHOOD",
-    "ABSENCE != DISPROOF"
+    "ABSENCE != DISPROOF",
+    "NULL_MODEL != REALITY",
+    "EMPIRICAL_P_VALUE != TRUTH_PROBABILITY",
+    "SURPRISE != SIGNIFICANCE",
+    "RARE_UNDER_NULL != SUPERNATURAL"
   ],
   "pipeline": [
     "SENSE",
@@ -37,6 +41,7 @@
     "GRAPH",
     "PATH_QUERY",
     "REPLICATE",
+    "NULL_TEST",
     "RENDER",
     "HUMAN_INTERPRETATION"
   ],
@@ -84,6 +89,11 @@
     {
       "id": "REPLICATION_CELL",
       "task": "Compare canonical anomaly signatures and anomaly-type recurrence across multiple provenance-grade corpora using the same Gematria system.",
+      "authority": "read_only"
+    },
+    {
+      "id": "NULL_MODEL_CELL",
+      "task": "Run deterministic value-permutation baselines that preserve corpus size and the exact Gematria value multiset, then report empirical recurrence without converting p-values into truth claims.",
       "authority": "read_only"
     }
   ],
@@ -282,6 +292,27 @@
       "REPEATED != UNIVERSAL",
       "CORPUS_DEPENDENCE != FALSEHOOD",
       "ABSENCE != DISPROOF"
+    ]
+  },
+  "null_model_rule": {
+    "purpose": "Estimate how often an observed named anomaly reappears when the exact observed value multiset is randomly reassigned among the existing words.",
+    "model": "value_permutation",
+    "preserves": [
+      "corpus size",
+      "word set",
+      "exact value multiset",
+      "gematria system"
+    ],
+    "limits": {
+      "min_simulations": 100,
+      "max_simulations": 1000000
+    },
+    "boundaries": [
+      "NULL_MODEL != REALITY",
+      "EMPIRICAL_P_VALUE != TRUTH_PROBABILITY",
+      "SURPRISE != SIGNIFICANCE",
+      "RARE_UNDER_NULL != SUPERNATURAL",
+      "PATTERN != PROOF"
     ]
   }
 }
