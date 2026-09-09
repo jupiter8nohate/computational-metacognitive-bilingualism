@@ -56,16 +56,16 @@ This provides 24-hour coverage, not a continuously running daemon. GitHub schedu
 
 Deterministic audits work without an AI provider.
 
-AI-assisted repair requires two repository settings:
+The model-assisted layer supports two bounded providers:
 
-- GitHub Actions secret: `OPENAI_API_KEY`
-- GitHub Actions repository variable: `CMB_AGENT_MODEL`
+- OpenAI Responses API when the `OPENAI_API_KEY` secret and `CMB_AGENT_MODEL` repository variable are explicitly configured.
+- GitHub Copilot CLI in GitHub Actions using the short-lived `GITHUB_TOKEN` with `copilot-requests: write`.
 
-The implementation uses the OpenAI Responses API and requests a strict JSON-schema repair response. The repository does not store the API key.
+GitHub Models is not used because GitHub retired that inference service on July 30, 2026. The Copilot CLI fallback is a separate current GitHub Copilot service.
 
-If either setting is absent, the Steward role reports that AI repair was skipped. It does not invent a configured model or silently fall back to an unsupported provider.
+The workflow installs a pinned Copilot CLI release and verifies its SHA-256 digest. Structured CMB model calls disable repository custom instructions and built-in MCP servers, then deny shell, write, URL, memory, and task tools. The model receives bounded task data and must return JSON that is validated by the existing CMB contracts.
 
-GitHub Models cannot be used as a fallback because GitHub retired that service on July 30, 2026. The deterministic agents remain fully operational without an external model; only the optional model-assisted proposal layers require the OpenAI configuration.
+Model output remains advisory. Deterministic policy, fixed verification, the Autonomy Arbiter, mutation allowlists, draft pull requests, and human merge authority remain the control boundary.
 
 ## Mutation policy
 
@@ -137,7 +137,7 @@ cmb-steward verify
 cmb-steward validate-diff
 ~~~
 
-For local AI repair, set `OPENAI_API_KEY` and `CMB_AGENT_MODEL` in the environment. Do not commit API keys.
+For local AI repair, set `OPENAI_API_KEY` and `CMB_AGENT_MODEL` in the environment. GitHub Actions can instead use the bounded Copilot CLI provider with the short-lived `GITHUB_TOKEN`. Do not commit API keys or long-lived Copilot tokens.
 
 ## Structured specialist evidence
 
