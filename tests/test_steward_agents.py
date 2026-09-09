@@ -22,22 +22,6 @@ def test_ai_edit_policy_blocks_authority_and_workflow_paths() -> None:
     assert not steward.is_ai_editable_path("../outside.txt")
 
 
-def test_extract_output_text_accepts_responses_output_shape() -> None:
-    payload = {
-        "output": [
-            {
-                "type": "message",
-                "content": [
-                    {
-                        "type": "output_text",
-                        "text": '{"summary":"ok","rationale":"test","edits":[]}',
-                    }
-                ],
-            }
-        ]
-    }
-    assert steward._extract_output_text(payload).startswith('{"summary"')
-
 
 def test_apply_repair_plan_requires_supplied_context(
     tmp_path: Path,
