@@ -21,11 +21,11 @@ import hashlib
 import json
 import os
 import subprocess
-import urllib.error
-import urllib.request
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Final
+
+from cmb_agents.model_gateway import ModelGatewayError, model_available, request_json
 
 try:
     import tomllib
@@ -418,21 +418,6 @@ def evaluate(candidate: CandidateMove, refutation: Refutation, policy: dict[str,
     return round(gain_score - penalty, 6)
 
 
-def _extract_output_text(payload: dict[str, Any]) -> str:
-    direct = payload.get("output_text")
-    if isinstance(direct, str) and direct.strip():
-        return direct
-    for item in payload.get("output", []):
-        if not isinstance(item, dict) or item.get("type") != "message":
-            continue
-        for content in item.get("content", []):
-            if isinstance(content, dict) and content.get("type") == "output_text":
-                value = content.get("text")
-                if isinstance(value, str) and value.strip():
-                    return value
-    raise StrategyError("model response contained no output_text")
-
-
 def _responses_json(
     *,
     api_key: str,
@@ -442,43 +427,20 @@ def _responses_json(
     schema_name: str,
     schema: dict[str, Any],
 ) -> dict[str, Any]:
-    body = {
-        "model": model,
-        "store": False,
-        "instructions": instructions,
-        "input": json.dumps(input_payload, ensure_ascii=False),
-        "max_output_tokens": 8000,
-        "text": {
-            "format": {
-                "type": "json_schema",
-                "name": schema_name,
-                "strict": True,
-                "schema": schema,
-            }
-        },
-    }
-    request = urllib.request.Request(
-        "https://api.openai.com/v1/responses",
-        data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-        },
-        method="POST",
-    )
     try:
-        with urllib.request.urlopen(request, timeout=180) as response:
-            payload = json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise StrategyError(f"model request failed with HTTP {exc.code}: {detail[:1500]}") from exc
-    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-        raise StrategyError(f"model request failed: {exc}") from exc
-
-    result = json.loads(_extract_output_text(payload))
-    if not isinstance(result, dict):
-        raise StrategyError("model result must be a JSON object")
-    return result
+        result = request_json(
+            instructions=instructions,
+            input_payload=input_payload,
+            schema_name=schema_name,
+            schema=schema,
+            openai_api_key=api_key,
+            openai_model=model,
+            max_output_tokens=8000,
+            timeout=180,
+        )
+    except ModelGatewayError as exc:
+        raise StrategyError(str(exc)) from exc
+    return result.payload
 
 
 def _candidate_schema(max_moves: int) -> dict[str, Any]:
@@ -702,7 +664,10 @@ def analyze(
     position = build_position(audit, stabilization_mode=mode == "stabilization")
     analysis_when_clean = bool(policy["search"].get("analysis_when_clean", False))
 
-    model_used = bool(api_key and model and (not position.audit_ok or analysis_when_clean))
+    model_used = bool(
+        model_available(openai_api_key=api_key, openai_model=model)
+        and (not position.audit_ok or analysis_when_clean)
+    )
     model_error: str | None = None
     if model_used:
         try:
