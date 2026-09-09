@@ -31,14 +31,14 @@ type PathStep struct {
 }
 
 type GraphPath struct {
-	PathID            string     `json:"path_id"`
-	Nodes             []string   `json:"nodes"`
-	Steps             []PathStep `json:"steps"`
-	HopCount          int        `json:"hop_count"`
-	EvidenceFloor     int        `json:"evidence_floor"`
-	EvidenceClass     string     `json:"evidence_class"`
-	ReceiptSHA256s    []string   `json:"receipt_sha256s"`
-	SourceNodeIDs     []string   `json:"source_node_ids"`
+	PathID         string     `json:"path_id"`
+	Nodes          []string   `json:"nodes"`
+	Steps          []PathStep `json:"steps"`
+	HopCount       int        `json:"hop_count"`
+	EvidenceFloor  int        `json:"evidence_floor"`
+	EvidenceClass  string     `json:"evidence_class"`
+	ReceiptSHA256s []string   `json:"receipt_sha256s"`
+	SourceNodeIDs  []string   `json:"source_node_ids"`
 }
 
 type PathQueryResult struct {
