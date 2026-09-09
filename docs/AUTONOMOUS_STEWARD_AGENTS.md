@@ -120,7 +120,9 @@ The model does not receive a general shell. It cannot return commands for the wo
 
 If verified allowlisted changes exist, the workflow may create a branch named `cmb-agent/steward-<github-run-id>` and open a **draft pull request**.
 
-The steward does not merge the PR. If another Steward PR is already open, the workflow does not create a duplicate.
+If repository settings prohibit GitHub Actions from creating pull requests, the Steward does not fail or bypass the control. It preserves the pushed maintenance branch and opens or updates one human-review issue containing a compare/PR link. An existing Steward PR or fallback review issue suppresses duplicate maintenance requests.
+
+The steward does not merge the PR, close the fallback issue as if work were accepted, or alter the repository setting itself.
 
 ~~~text
 AI_CHANGE != ACCEPTED_CHANGE
@@ -153,7 +155,7 @@ SELF_REVIEW != INDEPENDENT_REVIEW
 
 ## Practical work it can perform
 
-The current system can detect regressions while the maintainer is offline; detect GLT-8101 semantic drift across eight language engines; repair generated GLITCH-8 references and public registry mirrors; detect broken documentation builds; use a configured model to propose minimal repairs to concrete failures; reject edits outside the allowed scope; rerun deterministic verification; and open a reviewable draft PR when a repair survives verification.
+The current system can detect regressions while the maintainer is offline; detect GLT-8101 semantic drift across eight language engines; repair generated GLITCH-8 references and public registry mirrors; detect broken documentation builds; use a configured model to propose minimal repairs to concrete failures; reject edits outside the allowed scope; rerun deterministic verification; and route verified maintenance to a draft PR or, when GitHub blocks Actions PR creation, to a preserved branch plus a human-review issue.
 
 It is deliberately **not** configured to autonomously merge, release, modify security rules, rotate credentials, alter legal material, or expand its own permissions.
 
