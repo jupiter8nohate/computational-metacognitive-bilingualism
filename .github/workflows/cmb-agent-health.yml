@@ -4,6 +4,21 @@ on:
   schedule:
     # Read-only health sweep once per hour, offset from the Steward maintenance run.
     - cron: "47 * * * *"
+  pull_request:
+    branches: ["main"]
+    paths:
+      - "agents/**"
+      - "src/cmb_agents/**"
+      - "strategy/**"
+      - "tests/test_agent_*.py"
+      - "tests/test_ai_review_council.py"
+      - "tests/test_immune_system.py"
+      - "tests/test_review_council.py"
+      - "tests/test_steward_*.py"
+      - ".github/workflows/cmb-agent-health.yml"
+      - ".github/workflows/cmb-steward-agents.yml"
+      - ".github/workflows/cmb-stockfish-review.yml"
+      - ".github/workflows/dependency-review.yml"
   workflow_dispatch:
 
 permissions:
