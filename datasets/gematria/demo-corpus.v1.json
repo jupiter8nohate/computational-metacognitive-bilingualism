@@ -1,0 +1,128 @@
+{
+  "schema_version": "gematria-glitch.corpus.v1",
+  "corpus_id": "cmb.gematria.demo",
+  "version": "1.0.0",
+  "gematria_system": "mispar_hechrachi",
+  "records": [
+    {
+      "id": "demo-001",
+      "word": "נחש",
+      "gloss": "serpent",
+      "source": {
+        "id": "demo-source-001",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-002",
+      "word": "משיח",
+      "gloss": "anointed one",
+      "source": {
+        "id": "demo-source-002",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-003",
+      "word": "הנחש",
+      "gloss": "the serpent",
+      "source": {
+        "id": "demo-source-003",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-004",
+      "word": "אהבה",
+      "gloss": "love",
+      "source": {
+        "id": "demo-source-004",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-005",
+      "word": "אחד",
+      "gloss": "one",
+      "source": {
+        "id": "demo-source-005",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-006",
+      "word": "אמת",
+      "gloss": "truth",
+      "source": {
+        "id": "demo-source-006",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-007",
+      "word": "אדם",
+      "gloss": "human",
+      "source": {
+        "id": "demo-source-007",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-008",
+      "word": "לב",
+      "gloss": "heart",
+      "source": {
+        "id": "demo-source-008",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-009",
+      "word": "חכמה",
+      "gloss": "wisdom",
+      "source": {
+        "id": "demo-source-009",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-010",
+      "word": "שלום",
+      "gloss": "peace",
+      "source": {
+        "id": "demo-source-010",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-011",
+      "word": "תורה",
+      "gloss": "Torah",
+      "source": {
+        "id": "demo-source-011",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    },
+    {
+      "id": "demo-012",
+      "word": "אור",
+      "gloss": "light",
+      "source": {
+        "id": "demo-source-012",
+        "kind": "declared_demo",
+        "reference": "GEMATRIA-GLITCH-1 demonstration corpus"
+      }
+    }
+  ]
+}

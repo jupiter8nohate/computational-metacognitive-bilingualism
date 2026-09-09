@@ -11,7 +11,8 @@
     "ODDITY != DESTINY",
     "INTERPRETATION -> HUMAN",
     "HUMAN_AGENCY > MACHINE_AUTHORITY",
-    "RARITY != SIGNIFICANCE"
+    "RARITY != SIGNIFICANCE",
+    "RECEIPT != TRUTH"
   ],
   "pipeline": [
     "SENSE",
@@ -21,6 +22,7 @@
     "FALSIFY",
     "TRACE",
     "RANK",
+    "RECEIPT",
     "RENDER",
     "HUMAN_INTERPRETATION"
   ],
@@ -183,5 +185,18 @@
       "human worth"
     ],
     "boundary": "RARITY != SIGNIFICANCE"
+  },
+  "provenance_rule": {
+    "purpose": "Bind findings to a declared corpus version, source records, and deterministic SHA-256 receipt.",
+    "required": [
+      "corpus id",
+      "corpus version",
+      "gematria system",
+      "corpus digest",
+      "source record ids",
+      "finding payload",
+      "receipt digest"
+    ],
+    "boundary": "RECEIPT != TRUTH"
   }
 }

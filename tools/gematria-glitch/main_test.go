@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"encoding/json"
+	"testing"
+)
 
 func TestGematriaKnownValues(t *testing.T) {
 	cases := map[string]int{
@@ -155,4 +158,100 @@ func findFinding(findings []Finding, kind string, words ...string) *Finding {
 
 func hasFinding(findings []Finding, kind string, words ...string) bool {
 	return findFinding(findings, kind, words...) != nil
+}
+
+func TestProvenanceReceiptDeterminism(t *testing.T) {
+	corpus := demoCorpusEnvelope()
+	findings := Analyze(corpus.Records)
+
+	first, err := buildReceipts(corpus, findings)
+	if err != nil {
+		t.Fatal(err)
+	}
+	second, err := buildReceipts(corpus, findings)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	firstJSON, err := json.Marshal(first)
+	if err != nil {
+		t.Fatal(err)
+	}
+	secondJSON, err := json.Marshal(second)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if string(firstJSON) != string(secondJSON) {
+		t.Fatal("receipt generation must be deterministic")
+	}
+	if len(first) == 0 {
+		t.Fatal("expected at least one receipt")
+	}
+	for i, receipt := range first {
+		if err := verifyReceipt(receipt); err != nil {
+			t.Fatalf("receipt %d failed verification: %v", i, err)
+		}
+		if receipt.Payload.CorpusSHA256 == "" {
+			t.Fatalf("receipt %d has empty corpus digest", i)
+		}
+		if len(receipt.Payload.SourceRecordIDs) == 0 {
+			t.Fatalf("receipt %d has no source record ids", i)
+		}
+	}
+}
+
+func TestReceiptTamperDetection(t *testing.T) {
+	corpus := demoCorpusEnvelope()
+	receipts, err := buildReceipts(corpus, Analyze(corpus.Records))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(receipts) == 0 {
+		t.Fatal("expected receipts")
+	}
+
+	tampered := receipts[0]
+	tampered.Payload.Finding.Evidence += " tampered"
+	if err := verifyReceipt(tampered); err == nil {
+		t.Fatal("tampered receipt must fail verification")
+	}
+}
+
+func TestRepositoryDemoCorpusMatchesBuiltIn(t *testing.T) {
+	fromFile, err := loadCorpus("../../datasets/gematria/demo-corpus.v1.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	fileDigest, err := corpusDigest(fromFile)
+	if err != nil {
+		t.Fatal(err)
+	}
+	builtinDigest, err := corpusDigest(demoCorpusEnvelope())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if fileDigest != builtinDigest {
+		t.Fatalf("demo corpus drift: file=%s builtin=%s", fileDigest, builtinDigest)
+	}
+}
+
+func TestReceiptCorpusBoundVerification(t *testing.T) {
+	corpus := demoCorpusEnvelope()
+	receipts, err := buildReceipts(corpus, Analyze(corpus.Records))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(receipts) == 0 {
+		t.Fatal("expected receipts")
+	}
+	if err := verifyReceiptAgainstCorpus(receipts[0], corpus); err != nil {
+		t.Fatalf("receipt should verify against source corpus: %v", err)
+	}
+
+	changed := corpus
+	changed.Version = "1.0.1"
+	if err := verifyReceiptAgainstCorpus(receipts[0], changed); err == nil {
+		t.Fatal("receipt must fail against a changed corpus version")
+	}
 }

@@ -7,6 +7,9 @@ on:
       - "spec/GEMATRIA-GLITCH-1.md"
       - "agents/gematria-anomaly-evaluation.json"
       - "schemas/gematria-glitch.finding.v1.schema.json"
+      - "schemas/gematria-glitch.corpus.v1.schema.json"
+      - "schemas/gematria-glitch.receipt.v1.schema.json"
+      - "datasets/gematria/**"
       - ".github/workflows/gematria-glitch-go.yml"
   push:
     branches:
@@ -16,6 +19,9 @@ on:
       - "spec/GEMATRIA-GLITCH-1.md"
       - "agents/gematria-anomaly-evaluation.json"
       - "schemas/gematria-glitch.finding.v1.schema.json"
+      - "schemas/gematria-glitch.corpus.v1.schema.json"
+      - "schemas/gematria-glitch.receipt.v1.schema.json"
+      - "datasets/gematria/**"
       - ".github/workflows/gematria-glitch-go.yml"
 
 permissions:
@@ -55,3 +61,9 @@ jobs:
 
       - name: Ranked JSON scan
         run: go run . -format json -rank > /tmp/gematria-glitch-ranked.json
+
+      - name: Generate provenance receipts
+        run: go run . -input ../../datasets/gematria/demo-corpus.v1.json -format receipts -rank > /tmp/gematria-glitch-receipts.json
+
+      - name: Verify provenance receipts
+        run: go run . -input ../../datasets/gematria/demo-corpus.v1.json -verify-receipts /tmp/gematria-glitch-receipts.json

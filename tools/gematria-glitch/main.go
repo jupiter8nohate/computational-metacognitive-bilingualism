@@ -1,6 +1,8 @@
 package main
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -12,9 +14,43 @@ import (
 	"unicode/utf8"
 )
 
+type SourceRecord struct {
+	ID        string `json:"id"`
+	Kind      string `json:"kind"`
+	Reference string `json:"reference"`
+	URL       string `json:"url,omitempty"`
+}
+
 type Entry struct {
-	Word  string `json:"word"`
-	Gloss string `json:"gloss,omitempty"`
+	ID     string       `json:"id,omitempty"`
+	Word   string       `json:"word"`
+	Gloss  string       `json:"gloss,omitempty"`
+	Source SourceRecord `json:"source,omitempty"`
+}
+
+type Corpus struct {
+	SchemaVersion  string  `json:"schema_version"`
+	CorpusID       string  `json:"corpus_id"`
+	Version        string  `json:"version"`
+	GematriaSystem string  `json:"gematria_system"`
+	Records        []Entry `json:"records"`
+}
+
+type ReceiptPayload struct {
+	SchemaVersion   string   `json:"schema_version"`
+	Protocol        string   `json:"protocol"`
+	GematriaSystem  string   `json:"gematria_system"`
+	CorpusID        string   `json:"corpus_id"`
+	CorpusVersion   string   `json:"corpus_version"`
+	CorpusSHA256    string   `json:"corpus_sha256"`
+	SourceRecordIDs []string `json:"source_record_ids"`
+	Finding         Finding  `json:"finding"`
+	Boundary        []string `json:"boundary"`
+}
+
+type Receipt struct {
+	Payload       ReceiptPayload `json:"payload"`
+	ReceiptSHA256 string         `json:"receipt_sha256"`
 }
 
 type Finding struct {
@@ -409,43 +445,311 @@ func singleRunePrefix(shorter, longer string) (string, bool) {
 }
 
 func demoCorpus() []Entry {
-	return []Entry{
-		{Word: "נחש", Gloss: "serpent"},
-		{Word: "משיח", Gloss: "anointed one"},
-		{Word: "הנחש", Gloss: "the serpent"},
-		{Word: "אהבה", Gloss: "love"},
-		{Word: "אחד", Gloss: "one"},
-		{Word: "אמת", Gloss: "truth"},
-		{Word: "אדם", Gloss: "human"},
-		{Word: "לב", Gloss: "heart"},
-		{Word: "חכמה", Gloss: "wisdom"},
-		{Word: "שלום", Gloss: "peace"},
-		{Word: "תורה", Gloss: "Torah"},
-		{Word: "אור", Gloss: "light"},
+	return demoCorpusEnvelope().Records
+}
+
+func demoCorpusEnvelope() Corpus {
+	source := func(id string) SourceRecord {
+		return SourceRecord{
+			ID:        "demo-source-" + id,
+			Kind:      "declared_demo",
+			Reference: "GEMATRIA-GLITCH-1 demonstration corpus",
+		}
+	}
+	return Corpus{
+		SchemaVersion:  "gematria-glitch.corpus.v1",
+		CorpusID:       "cmb.gematria.demo",
+		Version:        "1.0.0",
+		GematriaSystem: "mispar_hechrachi",
+		Records: []Entry{
+			{ID: "demo-001", Word: "נחש", Gloss: "serpent", Source: source("001")},
+			{ID: "demo-002", Word: "משיח", Gloss: "anointed one", Source: source("002")},
+			{ID: "demo-003", Word: "הנחש", Gloss: "the serpent", Source: source("003")},
+			{ID: "demo-004", Word: "אהבה", Gloss: "love", Source: source("004")},
+			{ID: "demo-005", Word: "אחד", Gloss: "one", Source: source("005")},
+			{ID: "demo-006", Word: "אמת", Gloss: "truth", Source: source("006")},
+			{ID: "demo-007", Word: "אדם", Gloss: "human", Source: source("007")},
+			{ID: "demo-008", Word: "לב", Gloss: "heart", Source: source("008")},
+			{ID: "demo-009", Word: "חכמה", Gloss: "wisdom", Source: source("009")},
+			{ID: "demo-010", Word: "שלום", Gloss: "peace", Source: source("010")},
+			{ID: "demo-011", Word: "תורה", Gloss: "Torah", Source: source("011")},
+			{ID: "demo-012", Word: "אור", Gloss: "light", Source: source("012")},
+		},
 	}
 }
 
-func loadEntries(path string) ([]Entry, error) {
+func loadCorpus(path string) (Corpus, error) {
 	if path == "" {
-		return demoCorpus(), nil
+		return demoCorpusEnvelope(), nil
 	}
+
 	data, err := os.ReadFile(path)
 	if err != nil {
-		return nil, fmt.Errorf("read corpus: %w", err)
+		return Corpus{}, fmt.Errorf("read corpus: %w", err)
 	}
+
+	var corpus Corpus
+	if err := json.Unmarshal(data, &corpus); err == nil && len(corpus.Records) > 0 {
+		if err := validateCorpus(corpus); err != nil {
+			return Corpus{}, err
+		}
+		return corpus, nil
+	}
+
 	var entries []Entry
 	if err := json.Unmarshal(data, &entries); err != nil {
-		return nil, fmt.Errorf("parse corpus: %w", err)
+		return Corpus{}, fmt.Errorf("parse corpus: %w", err)
 	}
 	if len(entries) == 0 {
-		return nil, fmt.Errorf("corpus must contain at least one entry")
+		return Corpus{}, fmt.Errorf("corpus must contain at least one entry")
 	}
-	for i, entry := range entries {
-		if strings.TrimSpace(entry.Word) == "" {
-			return nil, fmt.Errorf("entry %d has an empty word", i)
+	for i := range entries {
+		if entries[i].ID == "" {
+			entries[i].ID = fmt.Sprintf("legacy-%03d", i+1)
+		}
+		if entries[i].Source.ID == "" {
+			entries[i].Source = SourceRecord{
+				ID:        fmt.Sprintf("legacy-source-%03d", i+1),
+				Kind:      "legacy_array",
+				Reference: "legacy JSON array input",
+			}
 		}
 	}
-	return entries, nil
+	corpus = Corpus{
+		SchemaVersion:  "gematria-glitch.corpus.v1",
+		CorpusID:       "legacy.local",
+		Version:        "1",
+		GematriaSystem: "mispar_hechrachi",
+		Records:        entries,
+	}
+	if err := validateCorpus(corpus); err != nil {
+		return Corpus{}, err
+	}
+	return corpus, nil
+}
+
+func validateCorpus(corpus Corpus) error {
+	if corpus.SchemaVersion != "gematria-glitch.corpus.v1" {
+		return fmt.Errorf("unsupported corpus schema_version %q", corpus.SchemaVersion)
+	}
+	if strings.TrimSpace(corpus.CorpusID) == "" {
+		return fmt.Errorf("corpus_id is required")
+	}
+	if strings.TrimSpace(corpus.Version) == "" {
+		return fmt.Errorf("corpus version is required")
+	}
+	if corpus.GematriaSystem != "mispar_hechrachi" {
+		return fmt.Errorf("unsupported gematria_system %q", corpus.GematriaSystem)
+	}
+	if len(corpus.Records) == 0 {
+		return fmt.Errorf("corpus must contain at least one record")
+	}
+
+	entryIDs := make(map[string]struct{}, len(corpus.Records))
+	sourceIDs := make(map[string]struct{}, len(corpus.Records))
+	for i, entry := range corpus.Records {
+		if strings.TrimSpace(entry.ID) == "" {
+			return fmt.Errorf("record %d has an empty id", i)
+		}
+		if _, exists := entryIDs[entry.ID]; exists {
+			return fmt.Errorf("duplicate record id %q", entry.ID)
+		}
+		entryIDs[entry.ID] = struct{}{}
+
+		if strings.TrimSpace(entry.Word) == "" {
+			return fmt.Errorf("record %q has an empty word", entry.ID)
+		}
+		if strings.TrimSpace(entry.Source.ID) == "" {
+			return fmt.Errorf("record %q has an empty source id", entry.ID)
+		}
+		if strings.TrimSpace(entry.Source.Kind) == "" {
+			return fmt.Errorf("record %q has an empty source kind", entry.ID)
+		}
+		if strings.TrimSpace(entry.Source.Reference) == "" {
+			return fmt.Errorf("record %q has an empty source reference", entry.ID)
+		}
+		if _, exists := sourceIDs[entry.Source.ID]; exists {
+			return fmt.Errorf("duplicate source id %q", entry.Source.ID)
+		}
+		sourceIDs[entry.Source.ID] = struct{}{}
+	}
+	return nil
+}
+
+func corpusDigest(corpus Corpus) (string, error) {
+	data, err := json.Marshal(corpus)
+	if err != nil {
+		return "", fmt.Errorf("marshal corpus: %w", err)
+	}
+	sum := sha256.Sum256(data)
+	return hex.EncodeToString(sum[:]), nil
+}
+
+func sourceRecordIDs(f Finding, entries []Entry) []string {
+	ids := make(map[string]struct{})
+	for _, word := range f.Words {
+		for _, entry := range entries {
+			if entry.Word == word && entry.Source.ID != "" {
+				ids[entry.Source.ID] = struct{}{}
+			}
+		}
+	}
+	out := make([]string, 0, len(ids))
+	for id := range ids {
+		out = append(out, id)
+	}
+	sort.Strings(out)
+	return out
+}
+
+func buildReceipts(corpus Corpus, findings []Finding) ([]Receipt, error) {
+	digest, err := corpusDigest(corpus)
+	if err != nil {
+		return nil, err
+	}
+
+	receipts := make([]Receipt, 0, len(findings))
+	for _, f := range findings {
+		payload := ReceiptPayload{
+			SchemaVersion:   "gematria-glitch.receipt.v1",
+			Protocol:        "GEMATRIA-GLITCH-1",
+			GematriaSystem:  corpus.GematriaSystem,
+			CorpusID:        corpus.CorpusID,
+			CorpusVersion:   corpus.Version,
+			CorpusSHA256:    digest,
+			SourceRecordIDs: sourceRecordIDs(f, corpus.Records),
+			Finding:         f,
+			Boundary: []string{
+				"PATTERN != PROOF",
+				"RARITY != SIGNIFICANCE",
+				"RECEIPT != TRUTH",
+			},
+		}
+		hash, err := receiptDigest(payload)
+		if err != nil {
+			return nil, err
+		}
+		receipts = append(receipts, Receipt{
+			Payload:       payload,
+			ReceiptSHA256: hash,
+		})
+	}
+	return receipts, nil
+}
+
+func receiptDigest(payload ReceiptPayload) (string, error) {
+	data, err := json.Marshal(payload)
+	if err != nil {
+		return "", fmt.Errorf("marshal receipt payload: %w", err)
+	}
+	sum := sha256.Sum256(data)
+	return hex.EncodeToString(sum[:]), nil
+}
+
+func verifyReceipt(receipt Receipt) error {
+	if receipt.Payload.SchemaVersion != "gematria-glitch.receipt.v1" {
+		return fmt.Errorf("unsupported receipt schema_version %q", receipt.Payload.SchemaVersion)
+	}
+	if receipt.Payload.Protocol != "GEMATRIA-GLITCH-1" {
+		return fmt.Errorf("unsupported receipt protocol %q", receipt.Payload.Protocol)
+	}
+	expected, err := receiptDigest(receipt.Payload)
+	if err != nil {
+		return err
+	}
+	if expected != receipt.ReceiptSHA256 {
+		return fmt.Errorf("receipt digest mismatch: got %s want %s", receipt.ReceiptSHA256, expected)
+	}
+	return nil
+}
+
+func verifyReceiptAgainstCorpus(receipt Receipt, corpus Corpus) error {
+	if err := verifyReceipt(receipt); err != nil {
+		return err
+	}
+	if err := validateCorpus(corpus); err != nil {
+		return err
+	}
+
+	digest, err := corpusDigest(corpus)
+	if err != nil {
+		return err
+	}
+	if receipt.Payload.CorpusSHA256 != digest {
+		return fmt.Errorf("corpus digest mismatch")
+	}
+	if receipt.Payload.CorpusID != corpus.CorpusID {
+		return fmt.Errorf("corpus id mismatch")
+	}
+	if receipt.Payload.CorpusVersion != corpus.Version {
+		return fmt.Errorf("corpus version mismatch")
+	}
+	if receipt.Payload.GematriaSystem != corpus.GematriaSystem {
+		return fmt.Errorf("gematria system mismatch")
+	}
+
+	expectedSources := sourceRecordIDs(receipt.Payload.Finding, corpus.Records)
+	if !sameStrings(receipt.Payload.SourceRecordIDs, expectedSources) {
+		return fmt.Errorf("source record ids do not match corpus")
+	}
+
+	recomputed := Analyze(corpus.Records)
+	if !containsFinding(recomputed, receipt.Payload.Finding) {
+		return fmt.Errorf("finding is not reproducible from corpus")
+	}
+	return nil
+}
+
+func sameStrings(left, right []string) bool {
+	if len(left) != len(right) {
+		return false
+	}
+	for i := range left {
+		if left[i] != right[i] {
+			return false
+		}
+	}
+	return true
+}
+
+func containsFinding(findings []Finding, target Finding) bool {
+	targetJSON, err := json.Marshal(target)
+	if err != nil {
+		return false
+	}
+	for _, candidate := range findings {
+		candidateJSON, err := json.Marshal(candidate)
+		if err == nil && string(candidateJSON) == string(targetJSON) {
+			return true
+		}
+	}
+	return false
+}
+
+func verifyReceiptFile(path string, corpus *Corpus) (int, error) {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return 0, fmt.Errorf("read receipts: %w", err)
+	}
+	var receipts []Receipt
+	if err := json.Unmarshal(data, &receipts); err != nil {
+		return 0, fmt.Errorf("parse receipts: %w", err)
+	}
+	if len(receipts) == 0 {
+		return 0, fmt.Errorf("receipt file contains no receipts")
+	}
+	for i, receipt := range receipts {
+		var err error
+		if corpus == nil {
+			err = verifyReceipt(receipt)
+		} else {
+			err = verifyReceiptAgainstCorpus(receipt, *corpus)
+		}
+		if err != nil {
+			return 0, fmt.Errorf("receipt %d: %w", i, err)
+		}
+	}
+	return len(receipts), nil
 }
 
 func renderGlitch(findings []Finding) string {
@@ -469,17 +773,41 @@ func renderGlitch(findings []Finding) string {
 
 func main() {
 	inputPath := flag.String("input", "", "path to a JSON corpus; defaults to the built-in demonstration corpus")
-	format := flag.String("format", "glitch", "output format: glitch or json")
+	format := flag.String("format", "glitch", "output format: glitch, json, or receipts")
 	rank := flag.Bool("rank", false, "rank findings by corpus rarity score")
+	verifyReceipts := flag.String("verify-receipts", "", "verify a JSON receipt array and exit")
 	flag.Parse()
 
-	entries, err := loadEntries(*inputPath)
+	if *verifyReceipts != "" {
+		var corpus *Corpus
+		if *inputPath != "" {
+			loaded, err := loadCorpus(*inputPath)
+			if err != nil {
+				fmt.Fprintln(os.Stderr, "error:", err)
+				os.Exit(2)
+			}
+			corpus = &loaded
+		}
+		count, err := verifyReceiptFile(*verifyReceipts, corpus)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		if corpus == nil {
+			fmt.Printf("VERIFIED://%d RECEIPTS | MODE://SELF_CONSISTENCY\n", count)
+		} else {
+			fmt.Printf("VERIFIED://%d RECEIPTS | MODE://CORPUS_BOUND\n", count)
+		}
+		return
+	}
+
+	corpus, err := loadCorpus(*inputPath)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "error:", err)
 		os.Exit(2)
 	}
 
-	findings := Analyze(entries)
+	findings := Analyze(corpus.Records)
 	if *rank {
 		RankByRarity(findings)
 	}
@@ -494,8 +822,20 @@ func main() {
 			fmt.Fprintln(os.Stderr, "error:", err)
 			os.Exit(2)
 		}
+	case "receipts":
+		receipts, err := buildReceipts(corpus, findings)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		encoder := json.NewEncoder(os.Stdout)
+		encoder.SetIndent("", "  ")
+		if err := encoder.Encode(receipts); err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
 	default:
-		fmt.Fprintln(os.Stderr, "error: format must be glitch or json")
+		fmt.Fprintln(os.Stderr, "error: format must be glitch, json, or receipts")
 		os.Exit(2)
 	}
 }
