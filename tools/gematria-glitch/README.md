@@ -34,3 +34,28 @@ Input format:
 ```
 
 The scanner is deterministic. Decorative rendering happens only after the arithmetic is calculated.
+
+## Corpus rarity ranking
+
+Use `-rank` to sort findings by how uncommon their reproducible structure is inside the supplied corpus.
+
+```text
+go run . -format glitch -rank
+go run . -format json -rank
+```
+
+Each finding includes `support_count`, `support_basis`, and `rarity_score`.
+
+```text
+RARITY != SIGNIFICANCE
+RARITY != TRUTH
+RARITY != DESTINY
+```
+
+The score is descriptive only. It does not measure theological importance, scientific importance, personal meaning, or predictive authority.
+
+Machine-readable finding schema:
+
+```text
+../../schemas/gematria-glitch.finding.v1.schema.json
+```

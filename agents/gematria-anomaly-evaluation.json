@@ -10,7 +10,8 @@
     "SYMBOLISM != CAUSATION",
     "ODDITY != DESTINY",
     "INTERPRETATION -> HUMAN",
-    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+    "HUMAN_AGENCY > MACHINE_AUTHORITY",
+    "RARITY != SIGNIFICANCE"
   ],
   "pipeline": [
     "SENSE",
@@ -19,6 +20,7 @@
     "CONNECT",
     "FALSIFY",
     "TRACE",
+    "RANK",
     "RENDER",
     "HUMAN_INTERPRETATION"
   ],
@@ -57,7 +59,10 @@
   "cases": [
     {
       "id": "GGL-001",
-      "input": ["נחש", "משיח"],
+      "input": [
+        "נחש",
+        "משיח"
+      ],
       "expected": "EXACT_COLLISION",
       "evidence": "358 == 358",
       "allowed": true,
@@ -65,7 +70,9 @@
     },
     {
       "id": "GGL-002",
-      "input": ["הנחש"],
+      "input": [
+        "הנחש"
+      ],
       "expected": "PALINDROME",
       "evidence": "363 == reverse(363)",
       "allowed": true,
@@ -73,7 +80,9 @@
     },
     {
       "id": "GGL-003",
-      "input": ["אמת"],
+      "input": [
+        "אמת"
+      ],
       "expected": "PERFECT_SQUARE",
       "evidence": "441 = 21 * 21",
       "allowed": true,
@@ -81,7 +90,9 @@
     },
     {
       "id": "GGL-004",
-      "input": ["אדם"],
+      "input": [
+        "אדם"
+      ],
       "expected": "TRIANGULAR_NUMBER",
       "evidence": "45 = T(9)",
       "allowed": true,
@@ -89,7 +100,9 @@
     },
     {
       "id": "GGL-005",
-      "input": ["לב"],
+      "input": [
+        "לב"
+      ],
       "expected": "POWER_OF_TWO",
       "evidence": "32 = 2^5",
       "allowed": true,
@@ -97,7 +110,9 @@
     },
     {
       "id": "GGL-006",
-      "input": ["חכמה"],
+      "input": [
+        "חכמה"
+      ],
       "expected": "PRIME_VALUE",
       "evidence": "73 is prime",
       "allowed": true,
@@ -105,7 +120,10 @@
     },
     {
       "id": "GGL-007",
-      "input": ["שלום", "תורה"],
+      "input": [
+        "שלום",
+        "תורה"
+      ],
       "expected": "SHARED_PRIME_FACTOR",
       "evidence": "376 and 611 share prime factor 47",
       "allowed": true,
@@ -113,7 +131,10 @@
     },
     {
       "id": "GGL-008",
-      "input": ["נחש", "הנחש"],
+      "input": [
+        "נחש",
+        "הנחש"
+      ],
       "expected": "LINGUISTIC_PREFIX_DELTA",
       "evidence": "363 - 358 = 5 and ה = 5",
       "allowed": true,
@@ -121,7 +142,10 @@
     },
     {
       "id": "GGL-009",
-      "input": ["אהבה", "אחד"],
+      "input": [
+        "אהבה",
+        "אחד"
+      ],
       "expected": "EXACT_COLLISION",
       "evidence": "13 == 13",
       "allowed": true,
@@ -129,7 +153,9 @@
     },
     {
       "id": "GGL-010",
-      "input": ["אור"],
+      "input": [
+        "אור"
+      ],
       "expected": "DIGITAL_ROOT",
       "evidence": "digital_root(207) = 9",
       "allowed": true,
@@ -145,5 +171,17 @@
       "PATTERN != PROOF remains explicit"
     ],
     "result": "candidate_connection"
+  },
+  "rarity_rule": {
+    "definition": "Corpus-relative rarity describes frequency of a reproducible structure within the declared input corpus.",
+    "must_not_mean": [
+      "truth",
+      "importance",
+      "prophecy",
+      "diagnosis",
+      "destiny",
+      "human worth"
+    ],
+    "boundary": "RARITY != SIGNIFICANCE"
   }
 }

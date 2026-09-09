@@ -66,10 +66,11 @@ SCORE != PERMISSION
 NUMERIC_EQUALITY != SEMANTIC_IDENTITY
 SYMBOLISM != CAUSATION
 ODDITY != DESTINY
+RARITY != SIGNIFICANCE
 INTERPRETATION -> HUMAN
 ```
 
-For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
+For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, preserve corpus-relative rarity as descriptive only, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
 
 ## Required behavior
 
