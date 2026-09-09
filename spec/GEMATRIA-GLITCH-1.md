@@ -277,3 +277,46 @@ RECEIPT != TRUTH
 ```
 
 A receipt proves payload integrity under the implemented hash procedure. It does not prove external truth, authorship, originality, prophecy, causation, diagnosis, identity, or destiny.
+
+## Receipt-backed anomaly graph
+
+GGL-1 may project a verified corpus and its deterministic receipts into a typed anomaly knowledge graph.
+
+Canonical schema:
+
+```text
+schemas/gematria-glitch.graph.v1.schema.json
+```
+
+Canonical documentation:
+
+```text
+docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md
+```
+
+Graph projection follows:
+
+```text
+CORPUS
+  -> RECORD
+  -> VALUE
+  -> PRIME_FACTOR
+
+FINDING
+  -> RECEIPT
+  -> ANOMALY_TYPE
+  -> TYPED_EDGE
+  -> SOURCE_TRACE
+```
+
+Receipt-backed relationships include exact collisions, shared prime factors, linguistic prefix deltas, anomaly membership, source references, and corpus derivation.
+
+Every graph MUST preserve:
+
+```text
+GRAPH != PROOF
+EDGE != CAUSATION
+CONNECTED != IDENTICAL
+```
+
+A graph edge describes a reproducible relationship encoded by the implementation. It does not establish semantic identity, causation, prophecy, diagnosis, destiny, or human worth.

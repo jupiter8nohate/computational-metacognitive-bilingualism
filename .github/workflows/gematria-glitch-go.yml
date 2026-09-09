@@ -9,6 +9,8 @@ on:
       - "schemas/gematria-glitch.finding.v1.schema.json"
       - "schemas/gematria-glitch.corpus.v1.schema.json"
       - "schemas/gematria-glitch.receipt.v1.schema.json"
+      - "schemas/gematria-glitch.graph.v1.schema.json"
+      - "docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md"
       - "datasets/gematria/**"
       - ".github/workflows/gematria-glitch-go.yml"
   push:
@@ -21,6 +23,8 @@ on:
       - "schemas/gematria-glitch.finding.v1.schema.json"
       - "schemas/gematria-glitch.corpus.v1.schema.json"
       - "schemas/gematria-glitch.receipt.v1.schema.json"
+      - "schemas/gematria-glitch.graph.v1.schema.json"
+      - "docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md"
       - "datasets/gematria/**"
       - ".github/workflows/gematria-glitch-go.yml"
 
@@ -67,3 +71,9 @@ jobs:
 
       - name: Verify provenance receipts
         run: go run . -input ../../datasets/gematria/demo-corpus.v1.json -verify-receipts /tmp/gematria-glitch-receipts.json
+
+      - name: Generate anomaly knowledge graph
+        run: go run . -input ../../datasets/gematria/demo-corpus.v1.json -format graph > /tmp/gematria-glitch-graph.json
+
+      - name: Verify anomaly knowledge graph
+        run: go run . -input ../../datasets/gematria/demo-corpus.v1.json -verify-graph /tmp/gematria-glitch-graph.json

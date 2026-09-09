@@ -12,7 +12,10 @@
     "INTERPRETATION -> HUMAN",
     "HUMAN_AGENCY > MACHINE_AUTHORITY",
     "RARITY != SIGNIFICANCE",
-    "RECEIPT != TRUTH"
+    "RECEIPT != TRUTH",
+    "GRAPH != PROOF",
+    "EDGE != CAUSATION",
+    "CONNECTED != IDENTICAL"
   ],
   "pipeline": [
     "SENSE",
@@ -23,6 +26,7 @@
     "TRACE",
     "RANK",
     "RECEIPT",
+    "GRAPH",
     "RENDER",
     "HUMAN_INTERPRETATION"
   ],
@@ -55,6 +59,11 @@
     {
       "id": "GLITCH_SCRIBE",
       "task": "Render verified findings using GEMATRIA-GLITCH-1 glyph operators.",
+      "authority": "write_artifact_only"
+    },
+    {
+      "id": "GRAPH_WEAVER",
+      "task": "Project corpus records and verified receipt-backed relationships into a deterministic typed anomaly graph.",
       "authority": "write_artifact_only"
     }
   ],
@@ -198,5 +207,23 @@
       "receipt digest"
     ],
     "boundary": "RECEIPT != TRUTH"
+  },
+  "graph_rule": {
+    "purpose": "Make reproducible anomaly relationships traversable without converting connectivity into proof or causation.",
+    "receipt_backed_relations": [
+      "DERIVED_FROM_CORPUS",
+      "ASSERTS_ANOMALY",
+      "REFERENCES_SOURCE",
+      "INVOLVES_RECORD",
+      "HAS_ANOMALY",
+      "EXACT_COLLISION_WITH",
+      "SHARES_PRIME_FACTOR_WITH",
+      "LINGUISTIC_PREFIX_DELTA_TO"
+    ],
+    "boundaries": [
+      "GRAPH != PROOF",
+      "EDGE != CAUSATION",
+      "CONNECTED != IDENTICAL"
+    ]
   }
 }
