@@ -790,14 +790,21 @@ func main() {
 	nullSeed := flag.Uint64("null-seed", 369, "deterministic null-model seed")
 	nullQThreshold := flag.Float64("null-q-threshold", defaultEnsembleQThreshold, "ensemble adjusted q-value threshold")
 	nullFormat := flag.String("null-format", "glitch", "null-model output format: glitch or json")
+	discoveryInput := flag.String("discovery-input", "", "provenance-grade corpus used only for candidate discovery")
+	validationInput := flag.String("validation-input", "", "separate provenance-grade corpus used only for out-of-sample validation")
+	validationFormat := flag.String("validation-format", "glitch", "out-of-sample validation output format: glitch or json")
 	flag.Parse()
 
 	if *nullModel && *nullEnsemble {
 		fmt.Fprintln(os.Stderr, "error: null-model and null-ensemble are mutually exclusive")
 		os.Exit(2)
 	}
-	if *compareInputs != "" && (*verifyReceipts != "" || *verifyGraph != "" || *pathFrom != "" || *pathTo != "" || *nullModel || *nullEnsemble) {
-		fmt.Fprintln(os.Stderr, "error: compare-inputs cannot be combined with receipt, graph, path-query, or null-model modes")
+	if (*discoveryInput == "") != (*validationInput == "") {
+		fmt.Fprintln(os.Stderr, "error: discovery-input and validation-input must be supplied together")
+		os.Exit(2)
+	}
+	if *compareInputs != "" && (*verifyReceipts != "" || *verifyGraph != "" || *pathFrom != "" || *pathTo != "" || *nullModel || *nullEnsemble || *discoveryInput != "") {
+		fmt.Fprintln(os.Stderr, "error: compare-inputs cannot be combined with receipt, graph, path-query, null-model, or validation modes")
 		os.Exit(2)
 	}
 
@@ -810,13 +817,50 @@ func main() {
 		fmt.Fprintln(os.Stderr, "error: path-from and path-to must be supplied together")
 		os.Exit(2)
 	}
-	if *pathFrom != "" && (*verifyReceipts != "" || *verifyGraph != "" || *nullModel || *nullEnsemble) {
-		fmt.Fprintln(os.Stderr, "error: path query cannot be combined with verification or null-model modes")
+	if *pathFrom != "" && (*verifyReceipts != "" || *verifyGraph != "" || *nullModel || *nullEnsemble || *discoveryInput != "") {
+		fmt.Fprintln(os.Stderr, "error: path query cannot be combined with verification, null-model, or validation modes")
 		os.Exit(2)
 	}
-	if (*nullModel || *nullEnsemble) && (*verifyReceipts != "" || *verifyGraph != "") {
-		fmt.Fprintln(os.Stderr, "error: null-model modes cannot be combined with verification modes")
+	if (*nullModel || *nullEnsemble) && (*verifyReceipts != "" || *verifyGraph != "" || *discoveryInput != "") {
+		fmt.Fprintln(os.Stderr, "error: null-model modes cannot be combined with verification or validation modes")
 		os.Exit(2)
+	}
+	if *discoveryInput != "" && (*verifyReceipts != "" || *verifyGraph != "") {
+		fmt.Fprintln(os.Stderr, "error: out-of-sample validation cannot be combined with verification modes")
+		os.Exit(2)
+	}
+
+	if *discoveryInput != "" {
+		discovery, err := loadCorpus(*discoveryInput)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		validation, err := loadCorpus(*validationInput)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		report, err := runOutOfSampleValidation(discovery, validation)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		switch *validationFormat {
+		case "glitch":
+			fmt.Print(renderOutOfSampleGlitch(report))
+		case "json":
+			encoder := json.NewEncoder(os.Stdout)
+			encoder.SetIndent("", "  ")
+			if err := encoder.Encode(report); err != nil {
+				fmt.Fprintln(os.Stderr, "error:", err)
+				os.Exit(2)
+			}
+		default:
+			fmt.Fprintln(os.Stderr, "error: validation-format must be glitch or json")
+			os.Exit(2)
+		}
+		return
 	}
 
 	if *compareInputs != "" {

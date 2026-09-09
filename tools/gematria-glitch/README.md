@@ -251,3 +251,27 @@ Q_THRESHOLD != SEMANTIC_THRESHOLD
 ```
 
 See `../../docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md`.
+
+## Out-of-sample validation
+
+Separate discovery from later testing:
+
+```text
+go run . \
+  -discovery-input ../../datasets/gematria/demo-corpus.v1.json \
+  -validation-input ../../datasets/gematria/demo-corpus.replication.v1.json \
+  -validation-format glitch
+```
+
+Use `-validation-format json` for machine-readable output.
+
+The report separates exact instance replication from stronger class recurrence on validation signatures that were not seen during discovery.
+
+```text
+DISCOVERY_SET != VALIDATION_SET
+INSTANCE_REPLICATION != INDEPENDENT_VALIDATION
+CLASS_RECURRED_OUT_OF_SAMPLE != TRUTH
+NOT_TESTABLE != FAILED
+```
+
+See `../../docs/GEMATRIA_OUT_OF_SAMPLE_VALIDATION.md`.

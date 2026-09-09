@@ -531,3 +531,47 @@ Q_THRESHOLD != SEMANTIC_THRESHOLD
 ASSUMPTION_SENSITIVITY != FALSEHOOD
 PATTERN != PROOF
 ```
+
+## Out-of-sample validation
+
+GGL-1 may lock candidates on one provenance-grade corpus and validate them against a separate corpus.
+
+Canonical schema:
+
+```text
+schemas/gematria-glitch.out-of-sample.v1.schema.json
+```
+
+Canonical documentation:
+
+```text
+docs/GEMATRIA_OUT_OF_SAMPLE_VALIDATION.md
+```
+
+The validator distinguishes:
+
+```text
+INSTANCE_REPLICATION
+CLASS_VALIDATION
+```
+
+Exact instance replication checks whether the same deterministic signature appears when the required words are present.
+
+Independent class validation checks whether the same anomaly type appears on validation signatures that were absent from the discovery signature set.
+
+The discovery candidate set and anomaly-class hypothesis set are SHA-256 locked before validation results are summarized.
+
+A validation corpus MUST differ from the discovery corpus in identity and in the Hebrew word/value sample digest.
+
+Every report MUST preserve:
+
+```text
+DISCOVERY_SET != VALIDATION_SET
+DISCOVERY != CONFIRMATION
+INSTANCE_REPLICATION != INDEPENDENT_VALIDATION
+CLASS_RECURRED_OUT_OF_SAMPLE != TRUTH
+NOT_RECURRED != DISPROVEN
+NOT_TESTABLE != FAILED
+VALIDATION_CORPUS != UNIVERSE
+PATTERN != PROOF
+```
