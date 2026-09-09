@@ -777,10 +777,24 @@ func main() {
 	rank := flag.Bool("rank", false, "rank findings by corpus rarity score")
 	verifyReceipts := flag.String("verify-receipts", "", "verify a JSON receipt array and exit")
 	verifyGraph := flag.String("verify-graph", "", "verify a JSON anomaly graph and exit")
+	pathFrom := flag.String("path-from", "", "path query start selector: exact node id or Hebrew record word")
+	pathTo := flag.String("path-to", "", "path query destination selector: exact node id or Hebrew record word")
+	pathDepth := flag.Int("path-depth", 3, "maximum path query depth from 1 to 8")
+	pathLimit := flag.Int("path-limit", 5, "maximum returned paths from 1 to 50")
+	pathFormat := flag.String("path-format", "glitch", "path query output format: glitch or json")
 	flag.Parse()
 
 	if *verifyReceipts != "" && *verifyGraph != "" {
 		fmt.Fprintln(os.Stderr, "error: verify-receipts and verify-graph are mutually exclusive")
+		os.Exit(2)
+	}
+
+	if (*pathFrom == "") != (*pathTo == "") {
+		fmt.Fprintln(os.Stderr, "error: path-from and path-to must be supplied together")
+		os.Exit(2)
+	}
+	if *pathFrom != "" && (*verifyReceipts != "" || *verifyGraph != "") {
+		fmt.Fprintln(os.Stderr, "error: path query cannot be combined with verification modes")
 		os.Exit(2)
 	}
 
@@ -838,6 +852,39 @@ func main() {
 	findings := Analyze(corpus.Records)
 	if *rank {
 		RankByRarity(findings)
+	}
+
+	if *pathFrom != "" {
+		graph, err := buildKnowledgeGraph(corpus)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		result, err := queryKnowledgeGraph(graph, PathQuery{
+			From:     *pathFrom,
+			To:       *pathTo,
+			MaxDepth: *pathDepth,
+			MaxPaths: *pathLimit,
+		})
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		switch *pathFormat {
+		case "glitch":
+			fmt.Print(renderPathQueryGlitch(result))
+		case "json":
+			encoder := json.NewEncoder(os.Stdout)
+			encoder.SetIndent("", "  ")
+			if err := encoder.Encode(result); err != nil {
+				fmt.Fprintln(os.Stderr, "error:", err)
+				os.Exit(2)
+			}
+		default:
+			fmt.Fprintln(os.Stderr, "error: path-format must be glitch or json")
+			os.Exit(2)
+		}
+		return
 	}
 
 	switch *format {
