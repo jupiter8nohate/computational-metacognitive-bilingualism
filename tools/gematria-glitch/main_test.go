@@ -235,3 +235,23 @@ func TestRepositoryDemoCorpusMatchesBuiltIn(t *testing.T) {
 		t.Fatalf("demo corpus drift: file=%s builtin=%s", fileDigest, builtinDigest)
 	}
 }
+
+func TestReceiptCorpusBoundVerification(t *testing.T) {
+	corpus := demoCorpusEnvelope()
+	receipts, err := buildReceipts(corpus, Analyze(corpus.Records))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(receipts) == 0 {
+		t.Fatal("expected receipts")
+	}
+	if err := verifyReceiptAgainstCorpus(receipts[0], corpus); err != nil {
+		t.Fatalf("receipt should verify against source corpus: %v", err)
+	}
+
+	changed := corpus
+	changed.Version = "1.0.1"
+	if err := verifyReceiptAgainstCorpus(receipts[0], changed); err == nil {
+		t.Fatal("receipt must fail against a changed corpus version")
+	}
+}
