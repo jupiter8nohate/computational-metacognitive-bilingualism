@@ -137,6 +137,8 @@ func TestNullModelBoundaries(t *testing.T) {
 	for _, boundary := range []string{
 		"NULL_MODEL != REALITY",
 		"EMPIRICAL_P_VALUE != TRUTH_PROBABILITY",
+		"BH_Q_VALUE != TRUTH_PROBABILITY",
+		"MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF",
 		"SURPRISE != SIGNIFICANCE",
 		"RARE_UNDER_NULL != SUPERNATURAL",
 		"REPLICATION != PROOF",
@@ -181,4 +183,93 @@ func findNullFinding(report NullModelReport, kind string, words ...string) *Null
 		}
 	}
 	return nil
+}
+
+func TestBenjaminiHochbergAdjustment(t *testing.T) {
+	results := []NullModelFinding{
+		{SignatureID: "sig:a", EmpiricalPValue: 0.01},
+		{SignatureID: "sig:b", EmpiricalPValue: 0.03},
+		{SignatureID: "sig:c", EmpiricalPValue: 0.04},
+	}
+
+	applyBenjaminiHochberg(results)
+
+	want := []float64{0.03, 0.04, 0.04}
+	for i := range results {
+		if results[i].BHAdjustedQValue != want[i] {
+			t.Fatalf("result %d q-value = %f, want %f", i, results[i].BHAdjustedQValue, want[i])
+		}
+		if results[i].BHAdjustedQValue < results[i].EmpiricalPValue {
+			t.Fatalf("result %d q-value %f must not be below raw p-value %f", i, results[i].BHAdjustedQValue, results[i].EmpiricalPValue)
+		}
+	}
+}
+
+func TestNullModelReportsMultipleTestingFamily(t *testing.T) {
+	report, err := runNullModel(demoCorpusEnvelope(), 1000, 369)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if report.SchemaVersion != "gematria-glitch.null-model.v1.1" {
+		t.Fatalf("schema version = %q", report.SchemaVersion)
+	}
+	if report.TestFamilySize != len(report.Findings) {
+		t.Fatalf("test family size = %d, findings = %d", report.TestFamilySize, len(report.Findings))
+	}
+	if report.Config.MultipleTesting != "benjamini_hochberg_fdr" {
+		t.Fatalf("multiple testing method = %q", report.Config.MultipleTesting)
+	}
+
+	for _, finding := range report.Findings {
+		if finding.BHAdjustedQValue < finding.EmpiricalPValue {
+			t.Fatalf(
+				"q-value %f below raw p-value %f for %s",
+				finding.BHAdjustedQValue,
+				finding.EmpiricalPValue,
+				finding.SignatureID,
+			)
+		}
+		if finding.BHAdjustedQValue <= 0 || finding.BHAdjustedQValue > 1 {
+			t.Fatalf("q-value out of bounds for %s: %f", finding.SignatureID, finding.BHAdjustedQValue)
+		}
+	}
+}
+
+func TestNullModelRejectsDuplicateWordTokens(t *testing.T) {
+	corpus := demoCorpusEnvelope()
+	corpus.Records = append(corpus.Records, Entry{
+		ID:    "demo-duplicate",
+		Word:  corpus.Records[0].Word,
+		Gloss: "duplicate token for ambiguity test",
+		Source: SourceRecord{
+			ID:        "demo-source-duplicate",
+			Kind:      "declared_demo",
+			Reference: "duplicate token safety test",
+		},
+	})
+
+	if _, err := runNullModel(corpus, 1000, 369); err == nil {
+		t.Fatal("duplicate word tokens must be rejected by the word-keyed permutation null model")
+	}
+}
+
+func TestNullModelAdjustedOrderingIsMonotonic(t *testing.T) {
+	report, err := runNullModel(demoCorpusEnvelope(), 2000, 369)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	for i := 1; i < len(report.Findings); i++ {
+		previous := report.Findings[i-1]
+		current := report.Findings[i]
+		if previous.BHAdjustedQValue > current.BHAdjustedQValue {
+			t.Fatalf(
+				"q-value ordering drift at %d: %f > %f",
+				i,
+				previous.BHAdjustedQValue,
+				current.BHAdjustedQValue,
+			)
+		}
+	}
 }
