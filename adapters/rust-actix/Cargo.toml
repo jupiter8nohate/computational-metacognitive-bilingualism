@@ -7,6 +7,19 @@ description = "Reference Actix adapter for the CMB boundary-event v1 contract."
 license = "Apache-2.0"
 
 [dependencies]
-actix-web = { version = "4", default-features = false, features = ["macros"] }
+# Preserve the Actix Web default feature set except HTTP/2.
+# actix-http 3.13.x still selects h2 0.3.x when the http2 feature is enabled,
+# and that line is affected by RUSTSEC-2026-0258. This reference adapter
+# binds plain TCP and does not require HTTP/2 or h2c.
+actix-web = { version = "4", default-features = false, features = [
+    "macros",
+    "compress-brotli",
+    "compress-gzip",
+    "compress-zstd",
+    "cookies",
+    "unicode",
+    "compat",
+    "ws",
+] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
