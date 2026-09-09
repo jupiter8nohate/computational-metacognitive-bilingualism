@@ -196,5 +196,6 @@ def test_resolve_repository_root_uses_current_checkout(
     assert steward._resolve_repository_root() == root.resolve()
 
 
-def test_role_registry_includes_autonomy_arbiter() -> None:
+def test_role_registry_includes_control_roles() -> None:
     assert "AUTONOMY_ARBITER" in steward.ROLE_NAMES
+    assert "REVIEW_COUNCIL" in steward.ROLE_NAMES
