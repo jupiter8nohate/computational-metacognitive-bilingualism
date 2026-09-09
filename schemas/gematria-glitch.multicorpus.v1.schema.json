@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/gematria-glitch.multicorpus.v1.schema.json",
+  "title": "GEMATRIA-GLITCH-1 Multi-Corpus Replication Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol",
+    "gematria_system",
+    "corpora",
+    "instances",
+    "type_recurrence",
+    "boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "gematria-glitch.multicorpus.v1"
+    },
+    "protocol": {
+      "const": "GEMATRIA-GLITCH-1"
+    },
+    "gematria_system": {
+      "const": "mispar_hechrachi"
+    },
+    "corpora": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "required": [
+          "corpus_id",
+          "corpus_version",
+          "corpus_sha256",
+          "record_count"
+        ],
+        "properties": {
+          "corpus_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "corpus_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "corpus_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "record_count": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "instances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "signature_id",
+          "type",
+          "words",
+          "values",
+          "corpus_refs",
+          "corpus_count",
+          "total_corpora",
+          "replication_rate",
+          "status"
+        ],
+        "properties": {
+          "signature_id": {
+            "type": "string",
+            "pattern": "^sig:[0-9a-f]{64}$"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "words": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "values": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "corpus_refs": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "corpus_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "total_corpora": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 16
+          },
+          "replication_rate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "status": {
+            "enum": [
+              "SINGLE_CORPUS",
+              "REPLICATED_SUBSET",
+              "REPLICATED_ALL_CORPORA"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "type_recurrence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "corpus_refs",
+          "corpus_count",
+          "total_corpora",
+          "recurrence_rate"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "corpus_refs": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "corpus_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "total_corpora": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 16
+          },
+          "recurrence_rate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "boundary": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": "REPLICATION != PROOF"
+          }
+        },
+        {
+          "contains": {
+            "const": "REPEATED != UNIVERSAL"
+          }
+        },
+        {
+          "contains": {
+            "const": "ABSENCE != DISPROOF"
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}
