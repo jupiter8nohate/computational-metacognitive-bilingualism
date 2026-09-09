@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 from cmb_agents.ai_review_council import run_ai_council
+from cmb_agents.model_gateway import model_available
 from run_stockfish_review import collect_changes
 
 
@@ -26,12 +27,16 @@ def _render(results: tuple[dict[str, object], ...]) -> str:
         confidence = float(result.get("confidence", 0.0))
         summary = str(result.get("summary", ""))
         truncated = bool(result.get("input_truncated", False))
+        provider = str(result.get("model_provider", "unknown"))
+        model_name = str(result.get("model", "unknown"))
         lines.extend([
             f"## {agent}",
             "",
             f"Verdict: **{verdict}**  ",
             f"Confidence: **{confidence:.3f}**  ",
             f"Input truncated: **{str(truncated).lower()}**",
+            f"Provider: **{provider}**",
+            f"Model: **{model_name}**",
             "",
             summary,
             "",
@@ -86,8 +91,14 @@ def main(argv: list[str] | None = None) -> int:
 
     api_key = os.environ.get("OPENAI_API_KEY", "")
     model = os.environ.get("CMB_AGENT_MODEL", "")
-    if not api_key or not model:
-        message = "AI review skipped because OPENAI_API_KEY and CMB_AGENT_MODEL are both required."
+    copilot_token = os.environ.get("CMB_COPILOT_TOKEN", "")
+    copilot_model = os.environ.get("CMB_COPILOT_MODEL", "")
+    if not model_available(
+        openai_api_key=api_key,
+        openai_model=model,
+        copilot_token=copilot_token,
+    ):
+        message = "AI review skipped because no model provider is available."
         args.markdown.write_text(_render_unavailable(message), encoding="utf-8")
         print(message)
         return 1 if args.strict else 0
@@ -99,7 +110,13 @@ def main(argv: list[str] | None = None) -> int:
             args.markdown.write_text(_render_unavailable(message), encoding="utf-8")
             print(message)
             return 0
-        results = run_ai_council(changes, api_key=api_key, model=model)
+        results = run_ai_council(
+            changes,
+            api_key=api_key,
+            model=model,
+            copilot_token=copilot_token,
+            copilot_model=copilot_model,
+        )
         args.json.write_text(
             json.dumps(results, indent=2, sort_keys=True) + "\n",
             encoding="utf-8",

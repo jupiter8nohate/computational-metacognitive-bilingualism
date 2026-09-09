@@ -19,13 +19,12 @@ import os
 import re
 import subprocess
 import sys
-import urllib.error
-import urllib.request
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Final
 
 from cmb_agents.auditors import run_specialist_audits
+from cmb_agents.model_gateway import ModelGatewayError, model_available, request_json
 
 
 def _looks_like_repository_root(path: Path) -> bool:
@@ -460,34 +459,26 @@ def _failed_checks(report: AuditReport) -> list[dict[str, Any]]:
     ]
 
 
-def _extract_output_text(payload: dict[str, Any]) -> str:
-    direct = payload.get("output_text")
-    if isinstance(direct, str) and direct.strip():
-        return direct
-    for item in payload.get("output", []):
-        if not isinstance(item, dict) or item.get("type") != "message":
-            continue
-        for content in item.get("content", []):
-            if isinstance(content, dict) and content.get("type") == "output_text":
-                value = content.get("text")
-                if isinstance(value, str) and value.strip():
-                    return value
-    raise StewardError("model response contained no output_text")
-
-
 def request_repair_plan(
     report: AuditReport,
     context: dict[str, str],
     *,
-    api_key: str,
-    model: str,
+    api_key: str = "",
+    model: str = "",
+    copilot_token: str = "",
+    copilot_model: str = "",
     strategy_context: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Ask a configured OpenAI Responses API model for a bounded repair proposal."""
-    if not api_key:
-        raise StewardError("OPENAI_API_KEY is required for AI repair mode")
-    if not model:
-        raise StewardError("CMB_AGENT_MODEL is required for AI repair mode")
+    """Ask the strongest configured bounded model provider for a repair proposal."""
+
+    if not model_available(
+        openai_api_key=api_key,
+        openai_model=model,
+        copilot_token=copilot_token,
+    ):
+        raise StewardError(
+            "AI repair mode requires configured OpenAI credentials or Copilot access"
+        )
     if not _failed_checks(report):
         return {"summary": "No repair required.", "rationale": "All checks passed.", "edits": []}
 
@@ -510,46 +501,27 @@ def request_repair_plan(
         "editable_file_context": context,
     }
 
-    body = {
-        "model": model,
-        "store": False,
-        "instructions": (
-            "You are the CMB Recovery Steward. Diagnose repository failures conservatively. "
-            "Only propose complete replacement contents for paths supplied in editable_file_context. "
-            "Never claim a check passed unless the audit evidence shows it. Keep semantic and "
-            "provenance boundaries intact."
-        ),
-        "input": json.dumps(prompt, ensure_ascii=False),
-        "max_output_tokens": 12000,
-        "text": {
-            "format": {
-                "type": "json_schema",
-                "name": "cmb_steward_repair_plan",
-                "strict": True,
-                "schema": _PLAN_SCHEMA,
-            }
-        },
-    }
-
-    request = urllib.request.Request(
-        "https://api.openai.com/v1/responses",
-        data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-        },
-        method="POST",
-    )
     try:
-        with urllib.request.urlopen(request, timeout=180) as response:
-            payload = json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise StewardError(f"model request failed with HTTP {exc.code}: {detail[:2000]}") from exc
-    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-        raise StewardError(f"model request failed: {exc}") from exc
+        plan, _config = request_json(
+            instructions=(
+                "You are the CMB Recovery Steward. Diagnose repository failures conservatively. "
+                "Only propose complete replacement contents for paths supplied in editable_file_context. "
+                "Never claim a check passed unless the audit evidence shows it. Keep semantic and "
+                "provenance boundaries intact."
+            ),
+            input_payload=prompt,
+            schema_name="cmb_steward_repair_plan",
+            schema=_PLAN_SCHEMA,
+            openai_api_key=api_key,
+            openai_model=model,
+            copilot_token=copilot_token,
+            copilot_model=copilot_model,
+            max_output_tokens=12000,
+            timeout=120,
+        )
+    except ModelGatewayError as exc:
+        raise StewardError(str(exc)) from exc
 
-    plan = json.loads(_extract_output_text(payload))
     if not isinstance(plan, dict):
         raise StewardError("repair plan must be a JSON object")
     return plan
@@ -707,10 +679,15 @@ def main(argv: list[str] | None = None) -> int:
                 return 0
             api_key = os.environ.get("OPENAI_API_KEY", "")
             model = os.environ.get("CMB_AGENT_MODEL", "")
-            if not api_key or not model:
+            copilot_token = os.environ.get("CMB_COPILOT_TOKEN", "")
+            copilot_model = os.environ.get("CMB_COPILOT_MODEL", "")
+            if not model_available(
+                openai_api_key=api_key,
+                openai_model=model,
+                copilot_token=copilot_token,
+            ):
                 print(
-                    "AI repair skipped: configure OPENAI_API_KEY secret and "
-                    "CMB_AGENT_MODEL repository variable.",
+                    "AI repair skipped: no OpenAI credentials or Copilot token is available.",
                     file=sys.stderr,
                 )
                 return 0
@@ -737,6 +714,8 @@ def main(argv: list[str] | None = None) -> int:
                 context,
                 api_key=api_key,
                 model=model,
+                copilot_token=copilot_token,
+                copilot_model=copilot_model,
                 strategy_context=strategy_context,
             )
             changed = apply_repair_plan(plan, context)
