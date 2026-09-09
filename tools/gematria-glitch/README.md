@@ -118,3 +118,37 @@ CONNECTED != IDENTICAL
 ```
 
 See `../../docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md` and `../../schemas/gematria-glitch.graph.v1.schema.json`.
+
+## Bounded graph path discovery
+
+Ask how two records connect inside the verified graph:
+
+```text
+go run . \
+  -input ../../datasets/gematria/demo-corpus.v1.json \
+  -path-from נחש \
+  -path-to משיח \
+  -path-depth 2 \
+  -path-limit 5 \
+  -path-format glitch
+```
+
+JSON output uses `-path-format json`.
+
+Ranking is deterministic:
+
+```text
+EVIDENCE_FLOOR descending
+HOP_COUNT ascending
+PATH_ID ascending
+```
+
+Every returned path includes receipt hashes and source-node traces where available.
+
+```text
+PATH != PROOF
+PATH_RANK != TRUTH
+NO_PATH != NO_RELATIONSHIP
+```
+
+See `../../docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md`.
