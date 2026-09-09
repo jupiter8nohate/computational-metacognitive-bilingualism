@@ -447,3 +447,41 @@ PATTERN != PROOF
 ```
 
 A finding that is uncommon under the permutation baseline may justify further investigation. It does not establish causation, prophecy, diagnosis, destiny, supernatural origin, or universal significance.
+
+## Null-model statistical hardening
+
+Null-model report version `gematria-glitch.null-model.v1.1` extends the original permutation report with family-aware multiple-testing correction.
+
+Canonical schema:
+
+```text
+schemas/gematria-glitch.null-model.v1.1.schema.json
+```
+
+Each finding reports:
+
+```text
+EMPIRICAL_P_VALUE
+BH_ADJUSTED_Q_VALUE
+```
+
+The report also records:
+
+```text
+TEST_FAMILY_SIZE
+MULTIPLE_TESTING://benjamini_hochberg_fdr
+```
+
+The Benjamini-Hochberg adjustment is computed across all observed findings tested in the report. It reduces the risk of treating the smallest raw p-value from a large anomaly family as uniquely compelling.
+
+The current value-permutation model is word-keyed and therefore requires unique Hebrew word tokens inside a corpus. Duplicate tokens MUST fail validation rather than overwrite one another.
+
+Every v1.1 report MUST preserve:
+
+```text
+EMPIRICAL_P_VALUE != TRUTH_PROBABILITY
+BH_Q_VALUE != TRUTH_PROBABILITY
+MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF
+NULL_MODEL != REALITY
+PATTERN != PROOF
+```

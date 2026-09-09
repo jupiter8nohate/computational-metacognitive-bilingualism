@@ -191,3 +191,48 @@ NULL_MODEL != REALITY
 ```text
 schemas/gematria-glitch.null-model.v1.schema.json
 ```
+
+## Multiple-testing correction
+
+A single null-model report may test many observed anomalies. Selecting the smallest raw empirical p-value after testing a large family can exaggerate how unusual that result appears.
+
+Version 1.1 therefore reports a Benjamini-Hochberg false-discovery-rate adjusted q-value for every finding.
+
+```text
+TEST_FAMILY_SIZE = number of observed findings tested
+MULTIPLE_TESTING = benjamini_hochberg_fdr
+BH_Q_VALUE = family-adjusted value
+```
+
+The adjustment is performed over the complete finding family in the report. Results are ordered first by adjusted q-value and then by raw empirical p-value.
+
+```text
+RAW_P_VALUE != FAMILY_ADJUSTED_Q_VALUE
+BH_Q_VALUE != TRUTH_PROBABILITY
+MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF
+```
+
+A low q-value means the finding remains uncommon under the declared permutation baseline after accounting for the number of findings tested. It does not establish meaning, causation, theology, prophecy, diagnosis, destiny, or supernatural origin.
+
+## Duplicate-token safety
+
+The current permutation implementation associates simulated values with Hebrew words. Therefore each corpus used by this null model must contain unique word tokens.
+
+If the same Hebrew word appears in two records, the run fails with a validation error instead of silently choosing one assignment.
+
+```text
+AMBIGUOUS_TOKEN_ASSIGNMENT -> REJECT
+SILENT_OVERWRITE -> FORBIDDEN
+```
+
+This is a current model constraint, not a claim that real corpora can never contain repeated words. A future record-ID keyed null model may relax this constraint without ambiguity.
+
+## Current machine contract
+
+New reports use:
+
+```text
+schemas/gematria-glitch.null-model.v1.1.schema.json
+```
+
+The original `v1` schema remains in the repository for compatibility with earlier outputs.
