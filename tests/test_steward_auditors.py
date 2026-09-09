@@ -11,6 +11,7 @@ from cmb_agents.auditors import (
     audit_canon,
     audit_librarian,
     audit_dnis,
+    audit_review_council,
     review_packets,
 )
 
@@ -131,3 +132,43 @@ def test_dnis_auditor_detects_digital_dna_drift(tmp_path: Path) -> None:
     result = audit_dnis(tmp_path)
     assert not result.ok
     assert result.packet.observed["digital_dna_matches_runtime"] is False
+
+
+def test_review_council_auditor_requires_complete_read_only_workflow(tmp_path: Path) -> None:
+    agents = [
+        {"id": name}
+        for name in (
+            "TACTICIAN",
+            "SECURITY_SENTINEL",
+            "CORRECTNESS_ENGINE",
+            "ARCHITECT",
+            "TEST_ADVERSARY",
+            "GOVERNANCE_GUARD",
+            "SKEPTIC",
+            "ARBITER",
+        )
+    ]
+    registry = {
+        "protocol": "CMB-SRC-1",
+        "agents": agents,
+        "merge_authority": False,
+        "release_authority": False,
+    }
+    _write(tmp_path / "agents/review-council-registry.json", json.dumps(registry))
+    _write(
+        tmp_path / ".github/workflows/cmb-stockfish-review.yml",
+        "permissions:\n"
+        "  contents: read\n"
+        "  copilot-requests: write\n"
+        "steps:\n"
+        "  - run: npm install -g @github/copilot@1.0.83\n"
+        "  - name: Enforce deterministic verdict\n",
+    )
+
+    assert audit_review_council(tmp_path).ok
+
+    registry["agents"] = agents[:-1]
+    _write(tmp_path / "agents/review-council-registry.json", json.dumps(registry))
+    result = audit_review_council(tmp_path)
+    assert not result.ok
+    assert result.packet.observed["missing_required_agents"] == ["ARBITER"]

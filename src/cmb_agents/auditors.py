@@ -397,25 +397,38 @@ def audit_security(root: Path) -> AgentAudit:
         ".github/workflows/scorecard.yml",
     )
     missing = [path for path in required_paths if not (root / path).is_file()]
-    ok = not missing
+    dependency_review_path = ".github/workflows/dependency-review.yml"
+    dependency_review_text = (
+        _read_text(root, dependency_review_path)
+        if (root / dependency_review_path).is_file()
+        else ""
+    )
+    dependency_review_fail_closed = "continue-on-error: true" not in dependency_review_text
+    ok = not missing and dependency_review_fail_closed
 
     packet = _packet(
         agent="SECURITY",
         task="repository_security_surface",
         observed={
             "missing_repository_controls": missing,
+            "dependency_review_fail_closed": dependency_review_fail_closed,
             "platform_security_settings_checked": False,
         },
         evidence=required_paths,
         confidence=1.0,
         recommended_action=(
-            "Repository-side security control files are present; platform settings remain independently verifiable."
+            "Repository-side security controls are present and Dependency Review fails closed; platform settings remain independently verifiable."
             if ok
-            else "Restore missing repository-side security controls."
+            else "Restore missing security controls and remove false-green Dependency Review behavior."
         ),
         severity="info" if ok else "error",
     )
-    return AgentAudit("SECURITY", ok, f"repository security files missing={len(missing)}.", packet)
+    return AgentAudit(
+        "SECURITY",
+        ok,
+        f"repository security files missing={len(missing)}; dependency_review_fail_closed={dependency_review_fail_closed}.",
+        packet,
+    )
 
 
 def audit_dnis(root: Path) -> AgentAudit:
@@ -474,6 +487,88 @@ def audit_dnis(root: Path) -> AgentAudit:
     )
 
 
+
+def audit_review_council(root: Path) -> AgentAudit:
+    """Check the CMB-SRC-1 review council registry and workflow continuity."""
+
+    registry_path = "agents/review-council-registry.json"
+    workflow_path = ".github/workflows/cmb-stockfish-review.yml"
+    registry = _read_json(root, registry_path)
+    agents = registry.get("agents", []) if isinstance(registry, dict) else []
+    agent_ids = {
+        str(item.get("id"))
+        for item in agents
+        if isinstance(item, dict) and item.get("id")
+    }
+    required_agents = {
+        "TACTICIAN",
+        "SECURITY_SENTINEL",
+        "CORRECTNESS_ENGINE",
+        "ARCHITECT",
+        "TEST_ADVERSARY",
+        "GOVERNANCE_GUARD",
+        "SKEPTIC",
+        "ARBITER",
+    }
+    missing_agents = sorted(required_agents - agent_ids)
+    protocol_ok = isinstance(registry, dict) and registry.get("protocol") == "CMB-SRC-1"
+    merge_authority_ok = isinstance(registry, dict) and registry.get("merge_authority") is False
+    release_authority_ok = isinstance(registry, dict) and registry.get("release_authority") is False
+    workflow_present = (root / workflow_path).is_file()
+    workflow_text = _read_text(root, workflow_path) if workflow_present else ""
+    read_only = "contents: read" in workflow_text
+    copilot_access = "copilot-requests: write" in workflow_text
+    copilot_pinned = "@github/copilot@1.0.83" in workflow_text
+    deterministic_gate = "Enforce deterministic verdict" in workflow_text
+
+    ok = (
+        protocol_ok
+        and merge_authority_ok
+        and release_authority_ok
+        and workflow_present
+        and read_only
+        and copilot_access
+        and copilot_pinned
+        and deterministic_gate
+        and not missing_agents
+    )
+
+    packet = _packet(
+        agent="REVIEW_COUNCIL",
+        task="stockfish_review_council_integrity",
+        observed={
+            "protocol_ok": protocol_ok,
+            "declared_agent_count": len(agent_ids),
+            "missing_required_agents": missing_agents,
+            "merge_authority_disabled": merge_authority_ok,
+            "release_authority_disabled": release_authority_ok,
+            "workflow_present": workflow_present,
+            "contents_read_only": read_only,
+            "copilot_requests_enabled": copilot_access,
+            "copilot_cli_pinned": copilot_pinned,
+            "deterministic_verdict_gate": deterministic_gate,
+        },
+        evidence=(registry_path, workflow_path, "src/cmb_agents/review_council.py"),
+        confidence=1.0,
+        recommended_action=(
+            "CMB-SRC-1 registry, Copilot access, deterministic gate, and authority boundaries are aligned."
+            if ok
+            else "Repair review-council registry/workflow drift before relying on automated PR review."
+        ),
+        severity="info" if ok else "error",
+    )
+    return AgentAudit(
+        "REVIEW_COUNCIL",
+        ok,
+        (
+            f"protocol={'ok' if protocol_ok else 'invalid'}; "
+            f"missing_agents={len(missing_agents)}; "
+            f"workflow={'ok' if workflow_present and read_only and copilot_access and copilot_pinned and deterministic_gate else 'invalid'}."
+        ),
+        packet,
+    )
+
+
 def review_packets(audits: tuple[AgentAudit, ...]) -> AgentAudit:
     """Review specialist outputs for authority escalation and ungrounded self-certification."""
 
@@ -527,5 +622,6 @@ def run_specialist_audits(root: Path) -> tuple[AgentAudit, ...]:
         audit_discovery(root),
         audit_security(root),
         audit_dnis(root),
+        audit_review_council(root),
     )
     return (*audits, review_packets(audits))

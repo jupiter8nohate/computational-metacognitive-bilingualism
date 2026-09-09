@@ -34,7 +34,7 @@ The scheduled steward now separates deterministic maintenance from read-only spe
 15. **TACTICIAN** - searches for the smallest immediate repair to a concrete failure.
 16. **STRATEGIST** - evaluates architecture and maintenance consequences without bypassing stabilization scope.
 17. **RED_TEAM** - attempts to refute candidate moves before deterministic selection.
-18. **STEWARD** - when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
+18. **STEWARD** - when deterministic checks fail and a model provider is available, asks the model for a bounded structured repair plan.
 
 The chess roles are proposal and review roles. They do not receive direct repository mutation authority. The Strategy Engine feeds an advisory principal variation into the existing bounded Steward repair path.
 
@@ -44,9 +44,9 @@ The specialist roles are read-only. They communicate through structured evidence
 
 The workflow is `.github/workflows/cmb-steward-agents.yml`.
 
-It runs once per day at `08:17 UTC` and may also be launched manually with `workflow_dispatch`.
+It is scheduled once per hour at minute `17` and may also be launched manually with `workflow_dispatch`. This provides all-day coverage; it is not a continuously running daemon, and GitHub may delay scheduled jobs under platform load.
 
-The schedule is maintenance cadence, not a guarantee that a code change will be created every day.
+The schedule is maintenance cadence, not a guarantee that a code change will be created every hour.
 
 ## AI activation
 
@@ -54,12 +54,11 @@ Deterministic audits work without an AI provider.
 
 AI-assisted repair requires two repository settings:
 
-- GitHub Actions secret: `OPENAI_API_KEY`
-- GitHub Actions repository variable: `CMB_AGENT_MODEL`
+The model gateway prefers an explicitly configured OpenAI provider when both `OPENAI_API_KEY` and `CMB_AGENT_MODEL` are present.
 
-The implementation uses the OpenAI Responses API and requests a strict JSON-schema repair response. The repository does not store the API key.
+When those are absent in GitHub Actions, the workflow can use GitHub Copilot CLI with the short-lived Actions token and `copilot-requests: write`. The optional `CMB_COPILOT_MODEL` repository variable selects a Copilot model; the default is `auto`. Copilot CLI is pinned in the workflow.
 
-If either setting is absent, the Steward role reports that AI repair was skipped. It does not invent a configured model or silently fall back to another provider.
+If neither provider is available or authorized for the repository, the Strategy Engine falls back to deterministic moves and the Steward does not invent model output.
 
 ## Mutation policy
 
@@ -131,7 +130,7 @@ cmb-steward verify
 cmb-steward validate-diff
 ~~~
 
-For local AI repair, set `OPENAI_API_KEY` and `CMB_AGENT_MODEL` in the environment. Do not commit API keys.
+For local AI repair, either set `OPENAI_API_KEY` and `CMB_AGENT_MODEL`, or provide `CMB_COPILOT_TOKEN` for an authenticated Copilot CLI environment. Do not commit tokens or API keys.
 
 ## Structured specialist evidence
 

@@ -2,13 +2,14 @@ name: CMB Steward Agents
 
 on:
   schedule:
-    # 08:17 UTC = early morning in the America/New_York project timezone.
-    - cron: "17 8 * * *"
+    # Hourly coverage keeps the bounded Steward available across all 24 hours.
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
   pull-requests: write
+  copilot-requests: write
 
 concurrency:
   group: cmb-steward-agents
@@ -50,6 +51,11 @@ jobs:
           fi
           (cd adapters/typescript-express && npm ci --ignore-scripts --no-audit --no-fund)
 
+      - name: Install Copilot CLI fallback
+        run: |
+          npm install -g @github/copilot@1.0.83 --no-audit --no-fund
+          copilot --version
+
       - name: Verify steward workspace root
         shell: bash
         run: |
@@ -68,6 +74,8 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
+          CMB_COPILOT_TOKEN: ${{ github.token }}
+          CMB_COPILOT_MODEL: ${{ vars.CMB_COPILOT_MODEL || 'auto' }}
         run: >-
           python -m cmb_agents.strategy
           --audit /tmp/cmb-steward-audit.json
@@ -108,6 +116,8 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
+          CMB_COPILOT_TOKEN: ${{ github.token }}
+          CMB_COPILOT_MODEL: ${{ vars.CMB_COPILOT_MODEL || 'auto' }}
         run: >-
           python -m cmb_agents.steward repair
           --report /tmp/cmb-steward-audit.json

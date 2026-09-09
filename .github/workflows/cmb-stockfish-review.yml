@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  copilot-requests: write
 
 jobs:
   review:
@@ -38,11 +39,18 @@ jobs:
           --json /tmp/stockfish-review.json
           --markdown /tmp/stockfish-review.md
 
+      - name: Install Copilot CLI fallback
+        run: |
+          npm install -g @github/copilot@1.0.83 --no-audit --no-fund
+          copilot --version
+
       - name: Run optional AI specialist council
         if: always()
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
+          CMB_COPILOT_TOKEN: ${{ github.token }}
+          CMB_COPILOT_MODEL: ${{ vars.CMB_COPILOT_MODEL || 'auto' }}
         run: >-
           python scripts/run_ai_review_council.py
           --base "origin/${{ github.base_ref }}"

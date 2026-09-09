@@ -89,7 +89,7 @@ The workflow `.github/workflows/cmb-stockfish-review.yml` runs on pull requests.
 
 It checks out full Git history, calculates the diff from the base branch, runs the review council, and writes the review packet to the GitHub Actions job summary.
 
-The workflow has only `contents: read` permission. It does not post approvals, request changes through the GitHub review API, modify the branch, merge the pull request, publish releases, or alter credentials.
+The workflow has `contents: read` plus `copilot-requests: write` for bounded model inference. The Copilot permission does not grant repository mutation. The workflow does not post approvals, request changes through the GitHub review API, modify the branch, merge the pull request, publish releases, or alter credentials.
 
 ~~~text
 REVIEW != MERGE
@@ -131,3 +131,16 @@ REFLEX_FINDING      CORTEX_LIAISON
 ~~~
 
 The council may detect and explain a dangerous position, but consequential repository authority remains outside the council.
+
+
+## Model-assisted specialist fallback
+
+The five optional model-assisted specialists prefer an explicitly configured OpenAI provider when `OPENAI_API_KEY` and `CMB_AGENT_MODEL` are available. Otherwise the workflow can use the pinned GitHub Copilot CLI with the short-lived Actions token.
+
+Copilot is invoked non-interactively with custom repository instructions disabled and without preapproved tools. Its structured output is advisory and is validated before rendering. The deterministic council remains the workflow gate.
+
+~~~text
+MODEL_ACCESS != REPOSITORY_AUTHORITY
+MODEL_OPINION != EVIDENCE
+AI_REVIEW != HUMAN_APPROVAL
+~~~
