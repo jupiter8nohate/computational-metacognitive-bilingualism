@@ -1,0 +1,125 @@
+name: CMB Agent Health
+
+on:
+  schedule:
+    # Read-only health sweep once per hour, offset from the Steward maintenance run.
+    - cron: "47 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cmb-agent-health
+  cancel-in-progress: false
+
+jobs:
+  health:
+    name: Agent registry + strategy + review health
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install agent test dependencies
+        run: python -m pip install --upgrade pip ".[test]"
+
+      - name: Run deterministic specialist audit
+        run: >-
+          python -m cmb_agents.steward audit
+          --skip-docs
+          --report /tmp/cmb-agent-health.json
+
+      - name: Enforce healthy specialist state
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("/tmp/cmb-agent-health.json")
+          payload = json.loads(path.read_text(encoding="utf-8"))
+
+          checks = payload.get("checks", [])
+          failed = [
+              f"{item.get('role')}::{item.get('name')}"
+              for item in checks
+              if int(item.get("returncode", 1)) != 0
+          ]
+          packets = {
+              str(item.get("agent"))
+              for item in payload.get("evidence_packets", [])
+              if isinstance(item, dict)
+          }
+          required_packets = {"SECURITY", "DNIS", "REVIEW_COUNCIL", "REVIEWER"}
+          missing_packets = sorted(required_packets - packets)
+
+          if failed:
+              raise SystemExit("Unhealthy agent checks: " + ", ".join(failed))
+          if missing_packets:
+              raise SystemExit("Missing agent evidence packets: " + ", ".join(missing_packets))
+
+          roles = payload.get("roles", [])
+          if "AUTONOMY_ARBITER" not in roles:
+              raise SystemExit("AUTONOMY_ARBITER missing from Steward role registry")
+
+          print(f"Agent health PASS: {len(roles)} steward roles, {len(packets)} evidence packets")
+          PY
+
+      - name: Exercise agent and council regression suites
+        run: >-
+          pytest -q
+          tests/test_steward_agents.py
+          tests/test_steward_auditors.py
+          tests/test_agent_strategy.py
+          tests/test_agent_autonomy.py
+          tests/test_strategy_agents.py
+          tests/test_review_council.py
+          tests/test_ai_review_council.py
+          tests/test_immune_system.py
+
+      - name: Exercise bounded strategy engine
+        run: >-
+          python -m cmb_agents.strategy
+          --audit /tmp/cmb-agent-health.json
+          --policy strategy/cmb_strategy.toml
+          --output /tmp/cmb-agent-health-strategy.json
+          --summary /tmp/cmb-agent-health-strategy.md
+
+      - name: Exercise autonomy arbiter
+        run: >-
+          python -m cmb_agents.autonomy decide
+          --audit /tmp/cmb-agent-health.json
+          --strategy-report /tmp/cmb-agent-health-strategy.json
+          --policy strategy/cmb_strategy.toml
+          --output /tmp/cmb-agent-health-autonomy.json
+          --summary /tmp/cmb-agent-health-autonomy.md
+
+      - name: Publish health summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "# CMB Agent Health"
+            echo
+            echo "Read-only hourly health sweep."
+            echo
+            if [ -f /tmp/cmb-agent-health-strategy.md ]; then
+              cat /tmp/cmb-agent-health-strategy.md
+            fi
+            if [ -f /tmp/cmb-agent-health-autonomy.md ]; then
+              echo
+              cat /tmp/cmb-agent-health-autonomy.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
