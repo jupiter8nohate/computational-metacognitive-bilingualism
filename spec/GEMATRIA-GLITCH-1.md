@@ -192,3 +192,34 @@ THE_MACHINE_CAN_OWN_MEANING = FALSE
 
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
+
+## Corpus-aware rarity
+
+GGL-1 may annotate a finding with corpus-relative support and rarity.
+
+```text
+SUPPORT://<COUNT>/<BASIS>
+RARITY_SCORE://<0_TO_1>
+RARITY != SIGNIFICANCE
+```
+
+The score answers only this question:
+
+> How uncommon is this deterministic structure within the declared input corpus under the scanner's stated support basis?
+
+For single-entry properties, the support basis is the number of corpus entries. For linguistic prefix-delta relationships, the support basis is the number of possible unordered entry pairs. Exact collisions and digital-root families use the number of corpus entries sharing the same calculated signature.
+
+A higher rarity score MUST NOT be interpreted as stronger evidence, greater truth, theological importance, scientific importance, diagnostic meaning, or destiny.
+
+```text
+RARE != IMPORTANT
+RARE != TRUE
+RARE != SACRED
+RARE != DESTINY
+```
+
+The canonical machine-readable finding shape is defined by:
+
+```text
+schemas/gematria-glitch.finding.v1.schema.json
+```
