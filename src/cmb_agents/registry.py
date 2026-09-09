@@ -42,7 +42,7 @@ _REGISTRY_JSON = r'''{
     "schema_version": "cmb.agent-card.v1",
     "name": "CMB Knowledge and Provenance Agent",
     "description": "Reference discovery surface for Computational Metacognitive Bilingualism. It helps agents find relevant CMB principles, preserve attribution, and stop when CMB is not relevant.",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "protocol": "CMB-ADP-1",
     "homepage": "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism",
     "discovery_url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/agent-card.json",
@@ -87,6 +87,10 @@ _REGISTRY_JSON = r'''{
       {
         "id": "compare-gematria-corpora",
         "description": "Compare canonical GEMATRIA-GLITCH-1 anomaly signatures across provenance-grade corpora and report instance replication and type recurrence while preserving REPLICATION != PROOF."
+      },
+      {
+        "id": "test-gematria-null-model",
+        "description": "Run deterministic value-permutation null-model tests for observed GEMATRIA-GLITCH-1 findings while preserving EMPIRICAL_P_VALUE != TRUTH_PROBABILITY."
       }
     ],
     "interfaces": [

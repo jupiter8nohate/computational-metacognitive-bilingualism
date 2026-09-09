@@ -174,3 +174,29 @@ ABSENCE != DISPROOF
 ```
 
 See `../../docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md`.
+
+## Permutation null model
+
+Test how often an observed named anomaly reappears when the exact observed Gematria values are randomly reassigned among the existing words.
+
+```text
+go run . \
+  -input ../../datasets/gematria/demo-corpus.v1.json \
+  -null-model \
+  -null-simulations 10000 \
+  -null-seed 369 \
+  -null-format glitch
+```
+
+Use `-null-format json` for machine-readable output.
+
+The null model preserves corpus size and the exact value multiset. It does not generate fake Hebrew words.
+
+```text
+NULL_MODEL != REALITY
+EMPIRICAL_P_VALUE != TRUTH_PROBABILITY
+SURPRISE != SIGNIFICANCE
+RARE_UNDER_NULL != SUPERNATURAL
+```
+
+See `../../docs/GEMATRIA_NULL_MODEL.md`.
