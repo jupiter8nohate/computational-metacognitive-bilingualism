@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/gematria-glitch.null-ensemble.v1.schema.json",
+  "title": "GEMATRIA-GLITCH-1 Null-Model Ensemble Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol",
+    "corpus_id",
+    "corpus_version",
+    "corpus_sha256",
+    "gematria_system",
+    "config",
+    "findings",
+    "boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "gematria-glitch.null-ensemble.v1"
+    },
+    "protocol": {
+      "const": "GEMATRIA-GLITCH-1"
+    },
+    "corpus_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "corpus_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "corpus_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gematria_system": {
+      "const": "mispar_hechrachi"
+    },
+    "config": {
+      "type": "object",
+      "required": [
+        "models",
+        "simulations",
+        "seed",
+        "q_threshold"
+      ],
+      "properties": {
+        "models": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "value_permutation",
+              "word_length_stratified_value_permutation"
+            ]
+          }
+        },
+        "simulations": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 1000000
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "q_threshold": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "signature_id",
+          "type",
+          "words",
+          "observed_values",
+          "model_results",
+          "uncommon_models",
+          "total_models",
+          "worst_case_q_value",
+          "robustness_status"
+        ],
+        "properties": {
+          "signature_id": {
+            "type": "string",
+            "pattern": "^sig:[0-9a-f]{64}$"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "words": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "observed_values": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "model_results": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "required": [
+                "model",
+                "null_hits",
+                "simulations",
+                "empirical_p_value",
+                "bh_adjusted_q_value",
+                "surprise_bits",
+                "frequency_class"
+              ],
+              "properties": {
+                "model": {
+                  "enum": [
+                    "value_permutation",
+                    "word_length_stratified_value_permutation"
+                  ]
+                },
+                "null_hits": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "simulations": {
+                  "type": "integer",
+                  "minimum": 100,
+                  "maximum": 1000000
+                },
+                "empirical_p_value": {
+                  "type": "number",
+                  "exclusiveMinimum": 0,
+                  "maximum": 1
+                },
+                "bh_adjusted_q_value": {
+                  "type": "number",
+                  "exclusiveMinimum": 0,
+                  "maximum": 1
+                },
+                "surprise_bits": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "frequency_class": {
+                  "enum": [
+                    "RARE_UNDER_NULL",
+                    "UNCOMMON_UNDER_NULL",
+                    "OCCASIONAL_UNDER_NULL",
+                    "COMMON_UNDER_NULL"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "uncommon_models": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "total_models": {
+            "const": 2
+          },
+          "worst_case_q_value": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 1
+          },
+          "robustness_status": {
+            "enum": [
+              "NOT_UNCOMMON_UNDER_ENSEMBLE",
+              "UNCOMMON_IN_MODEL_SUBSET",
+              "UNCOMMON_ACROSS_ALL_MODELS"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "boundary": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": "NULL_MODEL_ENSEMBLE != REALITY"
+          }
+        },
+        {
+          "contains": {
+            "const": "ROBUST_ACROSS_MODELS != TRUTH"
+          }
+        },
+        {
+          "contains": {
+            "const": "MODEL_AGREEMENT != CAUSATION"
+          }
+        },
+        {
+          "contains": {
+            "const": "Q_THRESHOLD != SEMANTIC_THRESHOLD"
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

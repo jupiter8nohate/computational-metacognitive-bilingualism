@@ -485,3 +485,49 @@ MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF
 NULL_MODEL != REALITY
 PATTERN != PROOF
 ```
+
+## Null-model ensemble
+
+GGL-1 may compare observed findings across multiple declared null assumptions.
+
+Canonical ensemble models:
+
+```text
+value_permutation
+word_length_stratified_value_permutation
+```
+
+Canonical schema:
+
+```text
+schemas/gematria-glitch.null-ensemble.v1.schema.json
+```
+
+Canonical documentation:
+
+```text
+docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md
+```
+
+The length-stratified model preserves the value multiset independently within each Unicode rune-length stratum.
+
+Each model computes raw empirical p-values and Benjamini-Hochberg adjusted q-values over the same observed finding family.
+
+Ensemble classification:
+
+```text
+NOT_UNCOMMON_UNDER_ENSEMBLE
+UNCOMMON_IN_MODEL_SUBSET
+UNCOMMON_ACROSS_ALL_MODELS
+```
+
+Every ensemble report MUST preserve:
+
+```text
+NULL_MODEL_ENSEMBLE != REALITY
+ROBUST_ACROSS_MODELS != TRUTH
+MODEL_AGREEMENT != CAUSATION
+Q_THRESHOLD != SEMANTIC_THRESHOLD
+ASSUMPTION_SENSITIVITY != FALSEHOOD
+PATTERN != PROOF
+```

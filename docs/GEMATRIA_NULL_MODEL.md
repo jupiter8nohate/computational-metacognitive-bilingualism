@@ -236,3 +236,19 @@ schemas/gematria-glitch.null-model.v1.1.schema.json
 ```
 
 The original `v1` schema remains in the repository for compatibility with earlier outputs.
+
+## Ensemble extension
+
+The single value-permutation baseline is now complemented by a separate null-model ensemble.
+
+```text
+docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md
+schemas/gematria-glitch.null-ensemble.v1.schema.json
+```
+
+The ensemble compares unrestricted value permutation against a word-length-stratified permutation. This makes sensitivity to null-model assumptions explicit.
+
+```text
+ONE_NULL_MODEL != ALL_REASONABLE_NULL_MODELS
+ROBUST_ACROSS_MODELS != TRUTH
+```
