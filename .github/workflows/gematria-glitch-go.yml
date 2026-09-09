@@ -15,6 +15,8 @@ on:
       - "schemas/gematria-glitch.null-model.v1.schema.json"
       - "schemas/gematria-glitch.null-model.v1.1.schema.json"
       - "schemas/gematria-glitch.null-ensemble.v1.schema.json"
+      - "schemas/gematria-glitch.out-of-sample.v1.schema.json"
+      - "docs/GEMATRIA_OUT_OF_SAMPLE_VALIDATION.md"
       - "docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md"
       - "docs/GEMATRIA_NULL_MODEL.md"
       - "docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md"
@@ -38,6 +40,8 @@ on:
       - "schemas/gematria-glitch.null-model.v1.schema.json"
       - "schemas/gematria-glitch.null-model.v1.1.schema.json"
       - "schemas/gematria-glitch.null-ensemble.v1.schema.json"
+      - "schemas/gematria-glitch.out-of-sample.v1.schema.json"
+      - "docs/GEMATRIA_OUT_OF_SAMPLE_VALIDATION.md"
       - "docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md"
       - "docs/GEMATRIA_NULL_MODEL.md"
       - "docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md"
@@ -122,3 +126,13 @@ jobs:
           grep -q '"word_length_stratified_value_permutation"' /tmp/gematria-glitch-null-ensemble.json
           grep -q '"worst_case_q_value"' /tmp/gematria-glitch-null-ensemble.json
           go run . -input ../../datasets/gematria/demo-corpus.v1.json -null-ensemble -null-simulations 2000 -null-seed 369 -null-format glitch > /tmp/gematria-glitch-null-ensemble.txt
+
+      - name: Run out-of-sample validation
+        run: |
+          go run . -discovery-input ../../datasets/gematria/demo-corpus.v1.json -validation-input ../../datasets/gematria/demo-corpus.replication.v1.json -validation-format json > /tmp/gematria-glitch-validation.json
+          grep -q '"schema_version": "gematria-glitch.out-of-sample.v1"' /tmp/gematria-glitch-validation.json
+          grep -q '"candidate_set_sha256"' /tmp/gematria-glitch-validation.json
+          grep -q '"hypothesis_set_sha256"' /tmp/gematria-glitch-validation.json
+          grep -q '"CLASS_RECURRED_OUT_OF_SAMPLE"' /tmp/gematria-glitch-validation.json
+          grep -q '"INSTANCE_REPLICATED_IN_VALIDATION"' /tmp/gematria-glitch-validation.json
+          go run . -discovery-input ../../datasets/gematria/demo-corpus.v1.json -validation-input ../../datasets/gematria/demo-corpus.replication.v1.json -validation-format glitch > /tmp/gematria-glitch-validation.txt
