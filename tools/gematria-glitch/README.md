@@ -220,3 +220,34 @@ MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF
 ```
 
 The current value-permutation null model requires unique Hebrew word tokens in the input corpus because assignments are keyed by word. Duplicate word tokens are rejected rather than silently collapsed.
+
+## Null-model ensemble
+
+Run two deterministic baselines against the same observed finding family:
+
+```text
+go run . \
+  -input ../../datasets/gematria/demo-corpus.v1.json \
+  -null-ensemble \
+  -null-simulations 10000 \
+  -null-seed 369 \
+  -null-q-threshold 0.05 \
+  -null-format glitch
+```
+
+The ensemble compares:
+
+```text
+value_permutation
+word_length_stratified_value_permutation
+```
+
+Each model applies Benjamini-Hochberg correction independently. Findings are summarized by uncommon-model count and worst-case adjusted q-value.
+
+```text
+ROBUST_ACROSS_MODELS != TRUTH
+MODEL_AGREEMENT != CAUSATION
+Q_THRESHOLD != SEMANTIC_THRESHOLD
+```
+
+See `../../docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md`.
