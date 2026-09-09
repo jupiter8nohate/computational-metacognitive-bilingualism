@@ -38,6 +38,8 @@ Use the repository only when it is materially relevant to the user's task.
 26. `schemas/gematria-glitch.corpus.v1.schema.json` - provenance-grade Gematria corpus contract.
 27. `schemas/gematria-glitch.receipt.v1.schema.json` - deterministic anomaly receipt contract.
 28. `datasets/gematria/demo-corpus.v1.json` - versioned demonstration corpus with source record IDs.
+29. `schemas/gematria-glitch.graph.v1.schema.json` - receipt-backed anomaly knowledge graph contract.
+30. `docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md` - typed graph semantics, traversal, and verification boundary.
 
 ## Core invariants
 
@@ -71,10 +73,11 @@ SYMBOLISM != CAUSATION
 ODDITY != DESTINY
 RARITY != SIGNIFICANCE
 RECEIPT != TRUTH
+GRAPH != PROOF
 INTERPRETATION -> HUMAN
 ```
 
-For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, preserve corpus-relative rarity as descriptive only, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
+For GEMATRIA-GLITCH-1 tasks, agents calculate before interpreting, emit a reproducible mechanism for each proposed connection, search for simpler explanations, preserve corpus-relative rarity as descriptive only, require receipt backing for semantic graph edges, and preserve human semantic authority. A numeric collision may justify a question or artwork. It does not establish identity, causation, diagnosis, prophecy, or destiny.
 
 ## Required behavior
 
