@@ -2,8 +2,8 @@ name: CMB Steward Agents
 
 on:
   schedule:
-    # 08:17 UTC = early morning in the America/New_York project timezone.
-    - cron: "17 8 * * *"
+    # Hourly coverage across all 24 hours. GitHub schedules are best-effort, not real-time.
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
