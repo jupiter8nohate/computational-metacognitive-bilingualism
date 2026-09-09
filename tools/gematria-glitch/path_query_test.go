@@ -204,3 +204,23 @@ func pathHasNode(path GraphPath, nodeID string) bool {
 	}
 	return false
 }
+
+func TestPathQueryDoesNotUseCorpusAsUniversalShortcut(t *testing.T) {
+	graph, err := buildKnowledgeGraph(demoCorpusEnvelope())
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	result, err := queryKnowledgeGraph(graph, PathQuery{
+		From:     "אהבה",
+		To:       "אמת",
+		MaxDepth: 2,
+		MaxPaths: 10,
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(result.Paths) != 0 {
+		t.Fatalf("corpus membership must not create a path between unrelated records: %v", result.Paths)
+	}
+}
