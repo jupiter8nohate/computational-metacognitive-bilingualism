@@ -12,6 +12,8 @@ on:
       - "schemas/gematria-glitch.graph.v1.schema.json"
       - "schemas/gematria-glitch.path-query.v1.schema.json"
       - "schemas/gematria-glitch.multicorpus.v1.schema.json"
+      - "schemas/gematria-glitch.null-model.v1.schema.json"
+      - "docs/GEMATRIA_NULL_MODEL.md"
       - "docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md"
       - "docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md"
       - "docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md"
@@ -30,6 +32,8 @@ on:
       - "schemas/gematria-glitch.graph.v1.schema.json"
       - "schemas/gematria-glitch.path-query.v1.schema.json"
       - "schemas/gematria-glitch.multicorpus.v1.schema.json"
+      - "schemas/gematria-glitch.null-model.v1.schema.json"
+      - "docs/GEMATRIA_NULL_MODEL.md"
       - "docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md"
       - "docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md"
       - "docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md"
@@ -95,3 +99,8 @@ jobs:
         run: |
           go run . -compare-inputs ../../datasets/gematria/demo-corpus.v1.json,../../datasets/gematria/demo-corpus.replication.v1.json -compare-format json > /tmp/gematria-glitch-multicorpus.json
           go run . -compare-inputs ../../datasets/gematria/demo-corpus.v1.json,../../datasets/gematria/demo-corpus.replication.v1.json -compare-format glitch > /tmp/gematria-glitch-multicorpus.txt
+
+      - name: Run permutation null model
+        run: |
+          go run . -input ../../datasets/gematria/demo-corpus.v1.json -null-model -null-simulations 2000 -null-seed 369 -null-format json > /tmp/gematria-glitch-null.json
+          go run . -input ../../datasets/gematria/demo-corpus.v1.json -null-model -null-simulations 2000 -null-seed 369 -null-format glitch > /tmp/gematria-glitch-null.txt
