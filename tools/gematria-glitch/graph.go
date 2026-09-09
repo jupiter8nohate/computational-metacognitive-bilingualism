@@ -54,17 +54,17 @@ type KnowledgeGraph struct {
 }
 
 var allowedGraphRelations = map[string]struct{}{
-	"CONTAINS_RECORD":           {},
-	"SOURCED_BY":                {},
-	"HAS_GEMATRIA_VALUE":        {},
-	"HAS_PRIME_FACTOR":          {},
-	"DERIVED_FROM_CORPUS":       {},
-	"ASSERTS_ANOMALY":           {},
-	"REFERENCES_SOURCE":         {},
-	"INVOLVES_RECORD":           {},
-	"HAS_ANOMALY":               {},
-	"EXACT_COLLISION_WITH":      {},
-	"SHARES_PRIME_FACTOR_WITH":  {},
+	"CONTAINS_RECORD":            {},
+	"SOURCED_BY":                 {},
+	"HAS_GEMATRIA_VALUE":         {},
+	"HAS_PRIME_FACTOR":           {},
+	"DERIVED_FROM_CORPUS":        {},
+	"ASSERTS_ANOMALY":            {},
+	"REFERENCES_SOURCE":          {},
+	"INVOLVES_RECORD":            {},
+	"HAS_ANOMALY":                {},
+	"EXACT_COLLISION_WITH":       {},
+	"SHARES_PRIME_FACTOR_WITH":   {},
 	"LINGUISTIC_PREFIX_DELTA_TO": {},
 }
 
