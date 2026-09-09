@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/gematria-glitch.receipt.v1.schema.json",
+  "title": "GEMATRIA-GLITCH-1 Provenance Receipt",
+  "type": "object",
+  "required": [
+    "payload",
+    "receipt_sha256"
+  ],
+  "properties": {
+    "payload": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "protocol",
+        "gematria_system",
+        "corpus_id",
+        "corpus_version",
+        "corpus_sha256",
+        "source_record_ids",
+        "finding",
+        "boundary"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "gematria-glitch.receipt.v1"
+        },
+        "protocol": {
+          "const": "GEMATRIA-GLITCH-1"
+        },
+        "gematria_system": {
+          "const": "mispar_hechrachi"
+        },
+        "corpus_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "corpus_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "corpus_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source_record_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "finding": {
+          "$ref": "gematria-glitch.finding.v1.schema.json"
+        },
+        "boundary": {
+          "type": "array",
+          "contains": {
+            "const": "RECEIPT != TRUTH"
+          },
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "receipt_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": false
+}
