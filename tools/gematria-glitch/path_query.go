@@ -12,12 +12,12 @@ import (
 const maxQueryCandidates = 10000
 
 var pathDiscoveryRelations = map[string]struct{}{
-	"SOURCED_BY":                  {},
-	"HAS_GEMATRIA_VALUE":          {},
-	"HAS_PRIME_FACTOR":            {},
-	"EXACT_COLLISION_WITH":        {},
-	"SHARES_PRIME_FACTOR_WITH":    {},
-	"LINGUISTIC_PREFIX_DELTA_TO":  {},
+	"SOURCED_BY":                 {},
+	"HAS_GEMATRIA_VALUE":         {},
+	"HAS_PRIME_FACTOR":           {},
+	"EXACT_COLLISION_WITH":       {},
+	"SHARES_PRIME_FACTOR_WITH":   {},
+	"LINGUISTIC_PREFIX_DELTA_TO": {},
 }
 
 type PathQuery struct {
