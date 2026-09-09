@@ -145,6 +145,7 @@ def test_public_status_writer_emits_machine_and_human_views(
     assert "\\n" not in human
     assert '"overall_ok": true' in machine
     assert "\\n" not in machine
+    assert all(not line.endswith((" ", "\t")) for line in human.splitlines())
 
 
 def _make_repository_root(root: Path) -> None:
