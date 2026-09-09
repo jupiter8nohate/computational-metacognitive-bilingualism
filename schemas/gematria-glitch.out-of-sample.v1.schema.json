@@ -1,0 +1,314 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/gematria-glitch.out-of-sample.v1.schema.json",
+  "title": "GEMATRIA-GLITCH-1 Out-of-Sample Validation Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol",
+    "gematria_system",
+    "discovery",
+    "validation",
+    "candidate_set_sha256",
+    "hypothesis_set_sha256",
+    "summary",
+    "instance_replication",
+    "class_validation",
+    "boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "gematria-glitch.out-of-sample.v1"
+    },
+    "protocol": {
+      "const": "GEMATRIA-GLITCH-1"
+    },
+    "gematria_system": {
+      "const": "mispar_hechrachi"
+    },
+    "discovery": {
+      "$ref": "#/$defs/corpus_ref"
+    },
+    "validation": {
+      "$ref": "#/$defs/corpus_ref"
+    },
+    "candidate_set_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "hypothesis_set_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "candidate_count",
+        "instance_testable_count",
+        "instance_replicated_count",
+        "instance_failed_count",
+        "instance_not_testable_count",
+        "class_hypothesis_count",
+        "class_recurred_count",
+        "class_not_recurred_count"
+      ],
+      "properties": {
+        "candidate_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "instance_testable_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "instance_replicated_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "instance_failed_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "instance_not_testable_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "class_hypothesis_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "class_recurred_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "class_not_recurred_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "instance_replication": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "signature_id",
+          "type",
+          "words",
+          "values",
+          "discovery_evidence",
+          "required_words",
+          "missing_words",
+          "testable",
+          "status"
+        ],
+        "properties": {
+          "signature_id": {
+            "type": "string",
+            "pattern": "^sig:[0-9a-f]{64}$"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "words": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "values": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "discovery_evidence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required_words": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "missing_words": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "testable": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "INSTANCE_REPLICATED_IN_VALIDATION",
+              "INSTANCE_NOT_REPLICATED_IN_VALIDATION",
+              "INSTANCE_NOT_TESTABLE_IN_VALIDATION"
+            ]
+          },
+          "validation_evidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "class_validation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "discovery_signature_count",
+          "validation_signature_count",
+          "independent_example_count",
+          "status",
+          "independent_examples"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "discovery_signature_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "validation_signature_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "independent_example_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "status": {
+            "enum": [
+              "CLASS_RECURRED_OUT_OF_SAMPLE",
+              "CLASS_NOT_RECURRED_OUT_OF_SAMPLE"
+            ]
+          },
+          "independent_examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "signature_id",
+                "words",
+                "values",
+                "evidence"
+              ],
+              "properties": {
+                "signature_id": {
+                  "type": "string",
+                  "pattern": "^sig:[0-9a-f]{64}$"
+                },
+                "words": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "values": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "boundary": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": "DISCOVERY_SET != VALIDATION_SET"
+          }
+        },
+        {
+          "contains": {
+            "const": "INSTANCE_REPLICATION != INDEPENDENT_VALIDATION"
+          }
+        },
+        {
+          "contains": {
+            "const": "CLASS_RECURRED_OUT_OF_SAMPLE != TRUTH"
+          }
+        },
+        {
+          "contains": {
+            "const": "NOT_TESTABLE != FAILED"
+          }
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "corpus_ref": {
+      "type": "object",
+      "required": [
+        "corpus_id",
+        "corpus_version",
+        "corpus_sha256",
+        "sample_sha256",
+        "record_count"
+      ],
+      "properties": {
+        "corpus_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "corpus_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "corpus_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "sample_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "record_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
