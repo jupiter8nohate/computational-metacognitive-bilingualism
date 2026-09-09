@@ -157,28 +157,3 @@ func hasFinding(findings []Finding, kind string, words ...string) bool {
 	return findFinding(findings, kind, words...) != nil
 }
 
-func legacyHasFinding(findings []Finding, kind string, words ...string) bool {
-	for _, f := range findings {
-		if f.Type != kind {
-			continue
-		}
-		all := true
-		for _, word := range words {
-			found := false
-			for _, candidate := range f.Words {
-				if word == candidate {
-					found = true
-					break
-				}
-			}
-			if !found {
-				all = false
-				break
-			}
-		}
-		if all {
-			return true
-		}
-	}
-	return false
-}
