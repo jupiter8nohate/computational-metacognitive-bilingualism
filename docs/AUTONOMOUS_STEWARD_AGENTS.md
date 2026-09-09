@@ -27,14 +27,16 @@ The scheduled steward now separates deterministic maintenance from read-only spe
 8. **LIBRARIAN** — checks documentation navigation targets and catalogue integrity.
 9. **ARCHAEOLOGIST** — backtraces the canonical registry through repository Git history.
 10. **DISCOVERY** — validates the machine-discovery contract.
-11. **SECURITY** - verifies repository-side security-control files are present.
+11. **SECURITY** - verifies repository-side security controls, fail-closed dependency review, and SHA-pinned external Actions.
 12. **DNIS** - verifies CMB-DNIS-1 cell-agent registry integrity and Digital DNA continuity.
-13. **REVIEWER** - rejects evidence packets that escalate authority or self-certify external gates.
-14. **POSITION** - builds a hashed repository position from the exact commit, deterministic audit state, evidence packets, and latest changed paths.
-15. **TACTICIAN** - searches for the smallest immediate repair to a concrete failure.
-16. **STRATEGIST** - evaluates architecture and maintenance consequences without bypassing stabilization scope.
-17. **RED_TEAM** - attempts to refute candidate moves before deterministic selection.
-18. **STEWARD** - when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
+13. **REVIEW_COUNCIL** - verifies the CMB-SRC-1 registry, deterministic PR-review workflow, and no-merge authority boundary.
+14. **REVIEWER** - rejects evidence packets that escalate authority or self-certify external gates.
+15. **POSITION** - builds a hashed repository position from the exact commit, deterministic audit state, evidence packets, and latest changed paths.
+16. **TACTICIAN** - searches for the smallest immediate repair to a concrete failure.
+17. **STRATEGIST** - evaluates architecture and maintenance consequences without bypassing stabilization scope.
+18. **RED_TEAM** - attempts to refute candidate moves before deterministic selection.
+19. **AUTONOMY_ARBITER** - converts strategy output into bounded repair permission, human escalation, or position preservation.
+20. **STEWARD** - when deterministic checks fail and an AI model is configured, asks the model for a bounded structured repair plan.
 
 The chess roles are proposal and review roles. They do not receive direct repository mutation authority. The Strategy Engine feeds an advisory principal variation into the existing bounded Steward repair path.
 
@@ -44,9 +46,11 @@ The specialist roles are read-only. They communicate through structured evidence
 
 The workflow is `.github/workflows/cmb-steward-agents.yml`.
 
-It runs once per day at `08:17 UTC` and may also be launched manually with `workflow_dispatch`.
+It is scheduled once per hour at minute `17` and may also be launched manually with `workflow_dispatch`.
 
-The schedule is maintenance cadence, not a guarantee that a code change will be created every day.
+A separate read-only health workflow, `.github/workflows/cmb-agent-health.yml`, runs once per hour at minute `47`. It exercises the specialist audit, strategy engine, Autonomy Arbiter, DNIS, and Stockfish review regression suites without repository write permission.
+
+This provides 24-hour coverage, not a continuously running daemon. GitHub scheduled workflows are best-effort and may be delayed by the platform.
 
 ## AI activation
 
@@ -59,7 +63,9 @@ AI-assisted repair requires two repository settings:
 
 The implementation uses the OpenAI Responses API and requests a strict JSON-schema repair response. The repository does not store the API key.
 
-If either setting is absent, the Steward role reports that AI repair was skipped. It does not invent a configured model or silently fall back to another provider.
+If either setting is absent, the Steward role reports that AI repair was skipped. It does not invent a configured model or silently fall back to an unsupported provider.
+
+GitHub Models cannot be used as a fallback because GitHub retired that service on July 30, 2026. The deterministic agents remain fully operational without an external model; only the optional model-assisted proposal layers require the OpenAI configuration.
 
 ## Mutation policy
 
