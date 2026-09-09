@@ -27,7 +27,40 @@ from typing import Any, Final
 
 from cmb_agents.auditors import run_specialist_audits
 
-ROOT: Final[Path] = Path(__file__).resolve().parents[2]
+
+def _looks_like_repository_root(path: Path) -> bool:
+    return (
+        (path / "pyproject.toml").is_file()
+        and (path / "src/cmb_agents/steward.py").is_file()
+        and (path / "src/cmb_glitch8/glyphs.v1.json").is_file()
+    )
+
+
+def _resolve_repository_root() -> Path:
+    candidates: list[Path] = []
+    for variable in ("CMB_REPOSITORY_ROOT", "GITHUB_WORKSPACE"):
+        raw = os.environ.get(variable)
+        if raw:
+            candidates.append(Path(raw))
+
+    candidates.extend((Path.cwd(), Path(__file__).resolve().parents[2]))
+
+    seen: set[Path] = set()
+    for candidate in candidates:
+        try:
+            resolved = candidate.resolve()
+        except OSError:
+            continue
+        if resolved in seen:
+            continue
+        seen.add(resolved)
+        if _looks_like_repository_root(resolved):
+            return resolved
+
+    return Path(__file__).resolve().parents[2]
+
+
+ROOT: Final[Path] = _resolve_repository_root()
 
 ROLE_NAMES: Final[tuple[str, ...]] = (
     "RECOVERY",
@@ -47,6 +80,7 @@ ROLE_NAMES: Final[tuple[str, ...]] = (
     "STRATEGIST",
     "RED_TEAM",
     "REVIEWER",
+    "AUTONOMY_ARBITER",
     "STEWARD",
 )
 
