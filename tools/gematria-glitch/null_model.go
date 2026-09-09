@@ -17,22 +17,24 @@ const (
 )
 
 type NullModelConfig struct {
-	Model       string `json:"model"`
-	Simulations int    `json:"simulations"`
-	Seed        uint64 `json:"seed"`
+	Model           string `json:"model"`
+	Simulations     int    `json:"simulations"`
+	Seed            uint64 `json:"seed"`
+	MultipleTesting string `json:"multiple_testing"`
 }
 
 type NullModelFinding struct {
-	SignatureID     string   `json:"signature_id"`
-	Type            string   `json:"type"`
-	Words           []string `json:"words"`
-	ObservedValues  []int    `json:"observed_values"`
-	NullHits        int      `json:"null_hits"`
-	Simulations     int      `json:"simulations"`
-	ChanceRate      float64  `json:"chance_rate"`
-	EmpiricalPValue float64  `json:"empirical_p_value"`
-	SurpriseBits    float64  `json:"surprise_bits"`
-	FrequencyClass  string   `json:"frequency_class"`
+	SignatureID      string   `json:"signature_id"`
+	Type             string   `json:"type"`
+	Words            []string `json:"words"`
+	ObservedValues   []int    `json:"observed_values"`
+	NullHits         int      `json:"null_hits"`
+	Simulations      int      `json:"simulations"`
+	ChanceRate       float64  `json:"chance_rate"`
+	EmpiricalPValue  float64  `json:"empirical_p_value"`
+	BHAdjustedQValue float64  `json:"bh_adjusted_q_value"`
+	SurpriseBits     float64  `json:"surprise_bits"`
+	FrequencyClass   string   `json:"frequency_class"`
 }
 
 type NullModelReport struct {
@@ -43,6 +45,7 @@ type NullModelReport struct {
 	CorpusSHA256     string             `json:"corpus_sha256"`
 	GematriaSystem   string             `json:"gematria_system"`
 	ValueMultisetSHA string             `json:"value_multiset_sha256"`
+	TestFamilySize   int                `json:"test_family_size"`
 	Config           NullModelConfig    `json:"config"`
 	Findings         []NullModelFinding `json:"findings"`
 	Boundary         []string           `json:"boundary"`
@@ -69,6 +72,9 @@ func (r *splitMix64) intn(n int) int {
 
 func runNullModel(corpus Corpus, simulations int, seed uint64) (NullModelReport, error) {
 	if err := validateCorpus(corpus); err != nil {
+		return NullModelReport{}, err
+	}
+	if err := validateNullModelCorpus(corpus); err != nil {
 		return NullModelReport{}, err
 	}
 	if simulations < minNullSimulations || simulations > maxNullSimulations {
@@ -140,8 +146,12 @@ func runNullModel(corpus Corpus, simulations int, seed uint64) (NullModelReport,
 		result.SurpriseBits = round6(-math.Log2(result.EmpiricalPValue))
 		result.FrequencyClass = nullFrequencyClass(result.EmpiricalPValue)
 	}
+	applyBenjaminiHochberg(results)
 
 	sort.Slice(results, func(i, j int) bool {
+		if results[i].BHAdjustedQValue != results[j].BHAdjustedQValue {
+			return results[i].BHAdjustedQValue < results[j].BHAdjustedQValue
+		}
 		if results[i].EmpiricalPValue != results[j].EmpiricalPValue {
 			return results[i].EmpiricalPValue < results[j].EmpiricalPValue
 		}
@@ -152,28 +162,92 @@ func runNullModel(corpus Corpus, simulations int, seed uint64) (NullModelReport,
 	})
 
 	return NullModelReport{
-		SchemaVersion:    "gematria-glitch.null-model.v1",
+		SchemaVersion:    "gematria-glitch.null-model.v1.1",
 		Protocol:         "GEMATRIA-GLITCH-1",
 		CorpusID:         corpus.CorpusID,
 		CorpusVersion:    corpus.Version,
 		CorpusSHA256:     corpusSHA,
 		GematriaSystem:   corpus.GematriaSystem,
 		ValueMultisetSHA: valueSHA,
+		TestFamilySize:   len(results),
 		Config: NullModelConfig{
-			Model:       "value_permutation",
-			Simulations: simulations,
-			Seed:        seed,
+			Model:           "value_permutation",
+			Simulations:     simulations,
+			Seed:            seed,
+			MultipleTesting: "benjamini_hochberg_fdr",
 		},
 		Findings: results,
 		Boundary: []string{
 			"NULL_MODEL != REALITY",
 			"EMPIRICAL_P_VALUE != TRUTH_PROBABILITY",
+			"BH_Q_VALUE != TRUTH_PROBABILITY",
+			"MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF",
 			"SURPRISE != SIGNIFICANCE",
 			"RARE_UNDER_NULL != SUPERNATURAL",
 			"REPLICATION != PROOF",
 			"PATTERN != PROOF",
 		},
 	}, nil
+}
+
+
+func validateNullModelCorpus(corpus Corpus) error {
+	seen := make(map[string]string, len(corpus.Records))
+	for _, entry := range corpus.Records {
+		if previousID, exists := seen[entry.Word]; exists {
+			return fmt.Errorf(
+				"null model requires unique word tokens; %q appears in records %q and %q",
+				entry.Word,
+				previousID,
+				entry.ID,
+			)
+		}
+		seen[entry.Word] = entry.ID
+	}
+	return nil
+}
+
+func applyBenjaminiHochberg(results []NullModelFinding) {
+	if len(results) == 0 {
+		return
+	}
+
+	type rankedFinding struct {
+		index       int
+		pValue      float64
+		signatureID string
+	}
+
+	ranked := make([]rankedFinding, len(results))
+	for i, result := range results {
+		ranked[i] = rankedFinding{
+			index:       i,
+			pValue:      result.EmpiricalPValue,
+			signatureID: result.SignatureID,
+		}
+	}
+	sort.Slice(ranked, func(i, j int) bool {
+		if ranked[i].pValue != ranked[j].pValue {
+			return ranked[i].pValue < ranked[j].pValue
+		}
+		return ranked[i].signatureID < ranked[j].signatureID
+	})
+
+	previous := 1.0
+	familySize := float64(len(ranked))
+	for rank := len(ranked); rank >= 1; rank-- {
+		item := ranked[rank-1]
+		adjusted := item.pValue * familySize / float64(rank)
+		if adjusted > 1 {
+			adjusted = 1
+		}
+		if adjusted > previous {
+			adjusted = previous
+		}
+		adjusted = round6(adjusted)
+		results[item.index].BHAdjustedQValue = adjusted
+		previous = adjusted
+	}
 }
 
 func signatureIDsForSort(left, right NullModelFinding) bool {
@@ -304,6 +378,8 @@ func renderNullModelGlitch(report NullModelReport) string {
 	fmt.Fprintf(&b, "CORPUS://%s@%s\n", report.CorpusID, report.CorpusVersion)
 	fmt.Fprintf(&b, "SIMULATIONS://%d\n", report.Config.Simulations)
 	fmt.Fprintf(&b, "SEED://%d\n", report.Config.Seed)
+	fmt.Fprintf(&b, "TEST_FAMILY_SIZE://%d\n", report.TestFamilySize)
+	fmt.Fprintf(&b, "MULTIPLE_TESTING://%s\n", report.Config.MultipleTesting)
 	fmt.Fprintf(&b, "VALUE_MULTISET_SHA256://%s\n\n", report.ValueMultisetSHA)
 
 	for _, result := range report.Findings {
@@ -314,8 +390,10 @@ func renderNullModelGlitch(report NullModelReport) string {
 		fmt.Fprintf(&b, "NULL_HITS://%d/%d\n", result.NullHits, result.Simulations)
 		fmt.Fprintf(&b, "CHANCE_RATE://%.6f\n", result.ChanceRate)
 		fmt.Fprintf(&b, "EMPIRICAL_P_VALUE://%.6f\n", result.EmpiricalPValue)
+		fmt.Fprintf(&b, "BH_Q_VALUE://%.6f\n", result.BHAdjustedQValue)
 		fmt.Fprintf(&b, "SURPRISE_BITS://%.6f\n", result.SurpriseBits)
 		b.WriteString("EMPIRICAL_P_VALUE != TRUTH_PROBABILITY\n")
+		b.WriteString("BH_Q_VALUE != TRUTH_PROBABILITY\n")
 		b.WriteString("RARE_UNDER_NULL != SUPERNATURAL\n\n")
 	}
 
@@ -335,5 +413,6 @@ func nullModelSummary(report NullModelReport) string {
 		best.Type,
 		strings.Join(best.Words, "|"),
 		strconv.FormatFloat(best.EmpiricalPValue, 'f', 6, 64),
+		strconv.FormatFloat(best.BHAdjustedQValue, 'f', 6, 64),
 	}, ":")
 }
