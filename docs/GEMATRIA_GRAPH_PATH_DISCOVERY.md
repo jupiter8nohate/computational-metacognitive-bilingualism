@@ -51,6 +51,21 @@ go run . \
 
 The stored graph remains directed. Path discovery may traverse a stored edge in either direction for research navigation.
 
+The default search surface intentionally excludes high-degree metadata hubs such as corpus membership, receipt plumbing, and anomaly-type membership. Those remain available as trace metadata but are not used as shortcuts between otherwise unrelated records.
+
+Queryable discovery relations are:
+
+```text
+SOURCED_BY
+HAS_GEMATRIA_VALUE
+HAS_PRIME_FACTOR
+EXACT_COLLISION_WITH
+SHARES_PRIME_FACTOR_WITH
+LINGUISTIC_PREFIX_DELTA_TO
+```
+
+This pruning prevents paths such as `record -> corpus -> unrelated_record` from masquerading as meaningful connections.
+
 Each step records:
 
 ```text
