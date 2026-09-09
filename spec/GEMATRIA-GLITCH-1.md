@@ -223,3 +223,57 @@ The canonical machine-readable finding shape is defined by:
 ```text
 schemas/gematria-glitch.finding.v1.schema.json
 ```
+
+## Provenance receipts
+
+A provenance-grade GGL-1 corpus uses:
+
+```text
+schema_version
+corpus_id
+version
+gematria_system
+records[]
+records[].id
+records[].word
+records[].source.id
+records[].source.kind
+records[].source.reference
+```
+
+The canonical corpus schema is:
+
+```text
+schemas/gematria-glitch.corpus.v1.schema.json
+```
+
+The canonical receipt schema is:
+
+```text
+schemas/gematria-glitch.receipt.v1.schema.json
+```
+
+Receipt generation follows:
+
+```text
+CORPUS
+  -> NORMALIZE
+  -> SHA256(CORPUS)
+  -> FINDING
+  -> SOURCE_RECORD_IDS
+  -> RECEIPT_PAYLOAD
+  -> SHA256(RECEIPT_PAYLOAD)
+  -> RECEIPT
+```
+
+No current clock value is included in the deterministic receipt hash. The same normalized corpus and finding produce the same receipt digest.
+
+A receipt MUST preserve:
+
+```text
+PATTERN != PROOF
+RARITY != SIGNIFICANCE
+RECEIPT != TRUTH
+```
+
+A receipt proves payload integrity under the implemented hash procedure. It does not prove external truth, authorship, originality, prophecy, causation, diagnosis, identity, or destiny.
