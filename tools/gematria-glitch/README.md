@@ -152,3 +152,25 @@ NO_PATH != NO_RELATIONSHIP
 ```
 
 See `../../docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md`.
+
+## Multi-corpus replication
+
+Compare the same anomaly logic across multiple provenance-grade corpora:
+
+```text
+go run . \
+  -compare-inputs ../../datasets/gematria/demo-corpus.v1.json,../../datasets/gematria/demo-corpus.replication.v1.json \
+  -compare-format glitch
+```
+
+Use `-compare-format json` for machine-readable output.
+
+The comparator reports both exact instance replication and anomaly-type recurrence.
+
+```text
+REPLICATION != PROOF
+REPEATED != UNIVERSAL
+ABSENCE != DISPROOF
+```
+
+See `../../docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md`.
