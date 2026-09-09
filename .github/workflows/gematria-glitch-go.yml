@@ -14,6 +14,8 @@ on:
       - "schemas/gematria-glitch.multicorpus.v1.schema.json"
       - "schemas/gematria-glitch.null-model.v1.schema.json"
       - "schemas/gematria-glitch.null-model.v1.1.schema.json"
+      - "schemas/gematria-glitch.null-ensemble.v1.schema.json"
+      - "docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md"
       - "docs/GEMATRIA_NULL_MODEL.md"
       - "docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md"
       - "docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md"
@@ -35,6 +37,8 @@ on:
       - "schemas/gematria-glitch.multicorpus.v1.schema.json"
       - "schemas/gematria-glitch.null-model.v1.schema.json"
       - "schemas/gematria-glitch.null-model.v1.1.schema.json"
+      - "schemas/gematria-glitch.null-ensemble.v1.schema.json"
+      - "docs/GEMATRIA_NULL_MODEL_ENSEMBLE.md"
       - "docs/GEMATRIA_NULL_MODEL.md"
       - "docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md"
       - "docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md"
@@ -109,3 +113,12 @@ jobs:
           grep -q '"multiple_testing": "benjamini_hochberg_fdr"' /tmp/gematria-glitch-null.json
           grep -q '"bh_adjusted_q_value"' /tmp/gematria-glitch-null.json
           go run . -input ../../datasets/gematria/demo-corpus.v1.json -null-model -null-simulations 2000 -null-seed 369 -null-format glitch > /tmp/gematria-glitch-null.txt
+
+      - name: Run null-model ensemble
+        run: |
+          go run . -input ../../datasets/gematria/demo-corpus.v1.json -null-ensemble -null-simulations 2000 -null-seed 369 -null-q-threshold 0.05 -null-format json > /tmp/gematria-glitch-null-ensemble.json
+          grep -q '"schema_version": "gematria-glitch.null-ensemble.v1"' /tmp/gematria-glitch-null-ensemble.json
+          grep -q '"value_permutation"' /tmp/gematria-glitch-null-ensemble.json
+          grep -q '"word_length_stratified_value_permutation"' /tmp/gematria-glitch-null-ensemble.json
+          grep -q '"worst_case_q_value"' /tmp/gematria-glitch-null-ensemble.json
+          go run . -input ../../datasets/gematria/demo-corpus.v1.json -null-ensemble -null-simulations 2000 -null-seed 369 -null-format glitch > /tmp/gematria-glitch-null-ensemble.txt
