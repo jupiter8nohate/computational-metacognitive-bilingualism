@@ -1,6 +1,17 @@
 name: CMB Agent Health
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - "agents/**"
+      - "src/cmb_agents/**"
+      - "strategy/**"
+      - "scripts/install_copilot_cli.sh"
+      - ".github/workflows/cmb-agent-health.yml"
+      - ".github/workflows/cmb-steward-agents.yml"
+      - ".github/workflows/cmb-stockfish-review.yml"
+      - ".github/workflows/dependency-review.yml"
   schedule:
     # Read-only health sweep once per hour, offset from the Steward maintenance run.
     - cron: "47 * * * *"
