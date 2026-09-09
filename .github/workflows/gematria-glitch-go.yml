@@ -66,4 +66,4 @@ jobs:
         run: go run . -input ../../datasets/gematria/demo-corpus.v1.json -format receipts -rank > /tmp/gematria-glitch-receipts.json
 
       - name: Verify provenance receipts
-        run: go run . -verify-receipts /tmp/gematria-glitch-receipts.json
+        run: go run . -input ../../datasets/gematria/demo-corpus.v1.json -verify-receipts /tmp/gematria-glitch-receipts.json
