@@ -88,14 +88,14 @@ func TestSemanticGraphEdgesAreReceiptBacked(t *testing.T) {
 	}
 
 	semantic := map[string]bool{
-		"HAS_ANOMALY":                 true,
-		"EXACT_COLLISION_WITH":        true,
-		"SHARES_PRIME_FACTOR_WITH":    true,
-		"LINGUISTIC_PREFIX_DELTA_TO":  true,
-		"ASSERTS_ANOMALY":             true,
-		"REFERENCES_SOURCE":           true,
-		"INVOLVES_RECORD":             true,
-		"DERIVED_FROM_CORPUS":         true,
+		"HAS_ANOMALY":                true,
+		"EXACT_COLLISION_WITH":       true,
+		"SHARES_PRIME_FACTOR_WITH":   true,
+		"LINGUISTIC_PREFIX_DELTA_TO": true,
+		"ASSERTS_ANOMALY":            true,
+		"REFERENCES_SOURCE":          true,
+		"INVOLVES_RECORD":            true,
+		"DERIVED_FROM_CORPUS":        true,
 	}
 
 	for _, edge := range graph.Payload.Edges {
