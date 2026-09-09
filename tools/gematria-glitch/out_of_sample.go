@@ -10,11 +10,11 @@ import (
 )
 
 const (
-	instanceStatusReplicated   = "INSTANCE_REPLICATED_IN_VALIDATION"
-	instanceStatusFailed       = "INSTANCE_NOT_REPLICATED_IN_VALIDATION"
-	instanceStatusNotTestable  = "INSTANCE_NOT_TESTABLE_IN_VALIDATION"
-	classStatusRecurred        = "CLASS_RECURRED_OUT_OF_SAMPLE"
-	classStatusNotRecurred     = "CLASS_NOT_RECURRED_OUT_OF_SAMPLE"
+	instanceStatusReplicated  = "INSTANCE_REPLICATED_IN_VALIDATION"
+	instanceStatusFailed      = "INSTANCE_NOT_REPLICATED_IN_VALIDATION"
+	instanceStatusNotTestable = "INSTANCE_NOT_TESTABLE_IN_VALIDATION"
+	classStatusRecurred       = "CLASS_RECURRED_OUT_OF_SAMPLE"
+	classStatusNotRecurred    = "CLASS_NOT_RECURRED_OUT_OF_SAMPLE"
 )
 
 type ValidationCorpusRef struct {
@@ -46,37 +46,37 @@ type IndependentValidationExample struct {
 }
 
 type ClassValidationResult struct {
-	Type                       string                         `json:"type"`
-	DiscoverySignatureCount    int                            `json:"discovery_signature_count"`
-	ValidationSignatureCount   int                            `json:"validation_signature_count"`
-	IndependentExampleCount    int                            `json:"independent_example_count"`
-	Status                     string                         `json:"status"`
-	IndependentExamples        []IndependentValidationExample `json:"independent_examples"`
+	Type                     string                         `json:"type"`
+	DiscoverySignatureCount  int                            `json:"discovery_signature_count"`
+	ValidationSignatureCount int                            `json:"validation_signature_count"`
+	IndependentExampleCount  int                            `json:"independent_example_count"`
+	Status                   string                         `json:"status"`
+	IndependentExamples      []IndependentValidationExample `json:"independent_examples"`
 }
 
 type OutOfSampleValidationSummary struct {
-	CandidateCount             int `json:"candidate_count"`
-	InstanceTestableCount      int `json:"instance_testable_count"`
-	InstanceReplicatedCount    int `json:"instance_replicated_count"`
-	InstanceFailedCount        int `json:"instance_failed_count"`
-	InstanceNotTestableCount   int `json:"instance_not_testable_count"`
-	ClassHypothesisCount       int `json:"class_hypothesis_count"`
-	ClassRecurredCount         int `json:"class_recurred_count"`
-	ClassNotRecurredCount      int `json:"class_not_recurred_count"`
+	CandidateCount           int `json:"candidate_count"`
+	InstanceTestableCount    int `json:"instance_testable_count"`
+	InstanceReplicatedCount  int `json:"instance_replicated_count"`
+	InstanceFailedCount      int `json:"instance_failed_count"`
+	InstanceNotTestableCount int `json:"instance_not_testable_count"`
+	ClassHypothesisCount     int `json:"class_hypothesis_count"`
+	ClassRecurredCount       int `json:"class_recurred_count"`
+	ClassNotRecurredCount    int `json:"class_not_recurred_count"`
 }
 
 type OutOfSampleValidationReport struct {
-	SchemaVersion        string                       `json:"schema_version"`
-	Protocol             string                       `json:"protocol"`
-	GematriaSystem       string                       `json:"gematria_system"`
-	Discovery            ValidationCorpusRef          `json:"discovery"`
-	Validation           ValidationCorpusRef          `json:"validation"`
-	CandidateSetSHA256   string                       `json:"candidate_set_sha256"`
-	HypothesisSetSHA256  string                       `json:"hypothesis_set_sha256"`
-	Summary              OutOfSampleValidationSummary `json:"summary"`
-	InstanceReplication []InstanceReplicationResult   `json:"instance_replication"`
-	ClassValidation     []ClassValidationResult       `json:"class_validation"`
-	Boundary             []string                     `json:"boundary"`
+	SchemaVersion       string                       `json:"schema_version"`
+	Protocol            string                       `json:"protocol"`
+	GematriaSystem      string                       `json:"gematria_system"`
+	Discovery           ValidationCorpusRef          `json:"discovery"`
+	Validation          ValidationCorpusRef          `json:"validation"`
+	CandidateSetSHA256  string                       `json:"candidate_set_sha256"`
+	HypothesisSetSHA256 string                       `json:"hypothesis_set_sha256"`
+	Summary             OutOfSampleValidationSummary `json:"summary"`
+	InstanceReplication []InstanceReplicationResult  `json:"instance_replication"`
+	ClassValidation     []ClassValidationResult      `json:"class_validation"`
+	Boundary            []string                     `json:"boundary"`
 }
 
 func runOutOfSampleValidation(
@@ -288,20 +288,20 @@ func runOutOfSampleValidation(
 		Discovery: ValidationCorpusRef{
 			CorpusID:      discovery.CorpusID,
 			CorpusVersion: discovery.Version,
-			CorpusSHA256: discoverySHA,
-			SampleSHA256: discoverySampleSHA,
-			RecordCount:  len(discovery.Records),
+			CorpusSHA256:  discoverySHA,
+			SampleSHA256:  discoverySampleSHA,
+			RecordCount:   len(discovery.Records),
 		},
 		Validation: ValidationCorpusRef{
 			CorpusID:      validation.CorpusID,
 			CorpusVersion: validation.Version,
-			CorpusSHA256: validationSHA,
-			SampleSHA256: validationSampleSHA,
-			RecordCount:  len(validation.Records),
+			CorpusSHA256:  validationSHA,
+			SampleSHA256:  validationSampleSHA,
+			RecordCount:   len(validation.Records),
 		},
 		CandidateSetSHA256:  candidateSetSHA,
 		HypothesisSetSHA256: hypothesisSetSHA,
-		Summary:              summary,
+		Summary:             summary,
 		InstanceReplication: instanceResults,
 		ClassValidation:     classResults,
 		Boundary: []string{
@@ -334,7 +334,6 @@ func requiredWordsForValidation(finding Finding) []string {
 	sort.Strings(out)
 	return out
 }
-
 
 func validationSampleDigest(corpus Corpus) (string, error) {
 	type sampleRecord struct {
