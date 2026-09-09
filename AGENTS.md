@@ -35,6 +35,9 @@ Use the repository only when it is materially relevant to the user's task.
 23. `spec/GEMATRIA-GLITCH-1.md` - bounded Gematria anomaly language and glitch rendering contract.
 24. `agents/gematria-anomaly-evaluation.json` - deterministic agent evaluation cases for numerical anomaly discovery.
 25. `tools/gematria-glitch/` - Go reference scanner and reproducible anomaly engine.
+26. `schemas/gematria-glitch.corpus.v1.schema.json` - provenance-grade Gematria corpus contract.
+27. `schemas/gematria-glitch.receipt.v1.schema.json` - deterministic anomaly receipt contract.
+28. `datasets/gematria/demo-corpus.v1.json` - versioned demonstration corpus with source record IDs.
 
 ## Core invariants
 
@@ -67,6 +70,7 @@ NUMERIC_EQUALITY != SEMANTIC_IDENTITY
 SYMBOLISM != CAUSATION
 ODDITY != DESTINY
 RARITY != SIGNIFICANCE
+RECEIPT != TRUTH
 INTERPRETATION -> HUMAN
 ```
 
