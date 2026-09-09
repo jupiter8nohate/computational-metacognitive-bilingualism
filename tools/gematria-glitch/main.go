@@ -18,13 +18,16 @@ type Entry struct {
 }
 
 type Finding struct {
-	Type        string   `json:"type"`
-	Words       []string `json:"words"`
-	Values      []int    `json:"values"`
-	Evidence    string   `json:"evidence"`
-	Confidence  string   `json:"confidence"`
-	Boundary    string   `json:"boundary"`
-	GlitchGlyph string   `json:"glitch_glyph"`
+	Type         string   `json:"type"`
+	Words        []string `json:"words"`
+	Values       []int    `json:"values"`
+	Evidence     string   `json:"evidence"`
+	Confidence   string   `json:"confidence"`
+	Boundary     string   `json:"boundary"`
+	GlitchGlyph  string   `json:"glitch_glyph"`
+	SupportCount int      `json:"support_count"`
+	SupportBasis int      `json:"support_basis"`
+	RarityScore  float64  `json:"rarity_score"`
 }
 
 var gematriaValues = map[rune]int{
@@ -265,6 +268,7 @@ func Analyze(entries []Entry) []Finding {
 		}
 	}
 
+	annotateRarity(entries, findings)
 	sort.SliceStable(findings, func(i, j int) bool {
 		if findings[i].Type != findings[j].Type {
 			return findings[i].Type < findings[j].Type
@@ -272,6 +276,111 @@ func Analyze(entries []Entry) []Finding {
 		return strings.Join(findings[i].Words, "\x00") < strings.Join(findings[j].Words, "\x00")
 	})
 	return findings
+}
+
+func annotateRarity(entries []Entry, findings []Finding) {
+	entryBasis := len(entries)
+	if entryBasis < 1 {
+		entryBasis = 1
+	}
+	pairBasis := len(entries) * (len(entries) - 1) / 2
+	if pairBasis < 1 {
+		pairBasis = 1
+	}
+
+	for i := range findings {
+		f := &findings[i]
+		support := 1
+		basis := entryBasis
+
+		switch f.Type {
+		case "EXACT_COLLISION":
+			target := f.Values[0]
+			support = countEntries(entries, func(value int) bool { return value == target })
+		case "PALINDROME":
+			support = countEntries(entries, func(value int) bool {
+				return value >= 10 && value == reverseDigits(value)
+			})
+		case "PERFECT_SQUARE":
+			support = countEntries(entries, isPerfectSquare)
+		case "TRIANGULAR_NUMBER":
+			support = countEntries(entries, func(value int) bool {
+				_, ok := triangularIndex(value)
+				return ok
+			})
+		case "POWER_OF_TWO":
+			support = countEntries(entries, isPowerOfTwo)
+		case "PRIME_VALUE":
+			support = countEntries(entries, isPrime)
+		case "DIGITAL_ROOT":
+			target := f.Values[1]
+			support = countEntries(entries, func(value int) bool {
+				return digitalRoot(value) == target
+			})
+		case "SHARED_PRIME_FACTOR":
+			factor := f.Values[2]
+			support = countEntries(entries, func(value int) bool {
+				return factor > 1 && value%factor == 0
+			})
+		case "LINGUISTIC_PREFIX_DELTA":
+			basis = pairBasis
+			targetDelta := f.Values[2]
+			support = countPrefixDeltaPairs(entries, targetDelta)
+		}
+
+		if support < 1 {
+			support = 1
+		}
+		if support > basis {
+			support = basis
+		}
+		f.SupportCount = support
+		f.SupportBasis = basis
+		f.RarityScore = math.Round((1-float64(support)/float64(basis))*1_000_000) / 1_000_000
+	}
+}
+
+func countEntries(entries []Entry, predicate func(int) bool) int {
+	count := 0
+	for _, entry := range entries {
+		if predicate(Gematria(entry.Word)) {
+			count++
+		}
+	}
+	return count
+}
+
+func countPrefixDeltaPairs(entries []Entry, targetDelta int) int {
+	count := 0
+	for i := 0; i < len(entries); i++ {
+		for j := i + 1; j < len(entries); j++ {
+			if prefixDeltaMatches(entries[i].Word, entries[j].Word, targetDelta) ||
+				prefixDeltaMatches(entries[j].Word, entries[i].Word, targetDelta) {
+				count++
+			}
+		}
+	}
+	return count
+}
+
+func prefixDeltaMatches(shorter, longer string, targetDelta int) bool {
+	prefix, ok := singleRunePrefix(shorter, longer)
+	if !ok {
+		return false
+	}
+	return Gematria(longer)-Gematria(shorter) == targetDelta && Gematria(prefix) == targetDelta
+}
+
+func RankByRarity(findings []Finding) {
+	sort.SliceStable(findings, func(i, j int) bool {
+		if findings[i].RarityScore != findings[j].RarityScore {
+			return findings[i].RarityScore > findings[j].RarityScore
+		}
+		if findings[i].Type != findings[j].Type {
+			return findings[i].Type < findings[j].Type
+		}
+		return strings.Join(findings[i].Words, "\x00") < strings.Join(findings[j].Words, "\x00")
+	})
 }
 
 func sharedPrimeFactors(a, b int) []int {
@@ -348,6 +457,9 @@ func renderGlitch(findings []Finding) string {
 		fmt.Fprintf(&b, "WORDS://%s\n", strings.Join(f.Words, " | "))
 		fmt.Fprintf(&b, "VALUES://%v\n", f.Values)
 		fmt.Fprintf(&b, "EVIDENCE://%s\n", f.Evidence)
+		fmt.Fprintf(&b, "SUPPORT://%d/%d\n", f.SupportCount, f.SupportBasis)
+		fmt.Fprintf(&b, "RARITY_SCORE://%.6f\n", f.RarityScore)
+		b.WriteString("RARITY != SIGNIFICANCE\n")
 		b.WriteString("INTERPRETATION://HUMAN\n")
 		b.WriteString("PROOF_OF_DESTINY://FALSE\n\n")
 	}
@@ -358,6 +470,7 @@ func renderGlitch(findings []Finding) string {
 func main() {
 	inputPath := flag.String("input", "", "path to a JSON corpus; defaults to the built-in demonstration corpus")
 	format := flag.String("format", "glitch", "output format: glitch or json")
+	rank := flag.Bool("rank", false, "rank findings by corpus rarity score")
 	flag.Parse()
 
 	entries, err := loadEntries(*inputPath)
@@ -367,6 +480,9 @@ func main() {
 	}
 
 	findings := Analyze(entries)
+	if *rank {
+		RankByRarity(findings)
+	}
 
 	switch *format {
 	case "glitch":
