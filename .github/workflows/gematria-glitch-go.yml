@@ -11,6 +11,8 @@ on:
       - "schemas/gematria-glitch.receipt.v1.schema.json"
       - "schemas/gematria-glitch.graph.v1.schema.json"
       - "schemas/gematria-glitch.path-query.v1.schema.json"
+      - "schemas/gematria-glitch.multicorpus.v1.schema.json"
+      - "docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md"
       - "docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md"
       - "docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md"
       - "datasets/gematria/**"
@@ -27,6 +29,8 @@ on:
       - "schemas/gematria-glitch.receipt.v1.schema.json"
       - "schemas/gematria-glitch.graph.v1.schema.json"
       - "schemas/gematria-glitch.path-query.v1.schema.json"
+      - "schemas/gematria-glitch.multicorpus.v1.schema.json"
+      - "docs/GEMATRIA_MULTI_CORPUS_REPLICATION.md"
       - "docs/GEMATRIA_GRAPH_PATH_DISCOVERY.md"
       - "docs/GEMATRIA_ANOMALY_KNOWLEDGE_GRAPH.md"
       - "datasets/gematria/**"
@@ -86,3 +90,8 @@ jobs:
         run: |
           go run . -input ../../datasets/gematria/demo-corpus.v1.json -path-from נחש -path-to משיח -path-depth 2 -path-limit 5 -path-format json > /tmp/gematria-glitch-paths.json
           go run . -input ../../datasets/gematria/demo-corpus.v1.json -path-from שלום -path-to תורה -path-depth 4 -path-limit 5 -path-format glitch > /tmp/gematria-glitch-paths.txt
+
+      - name: Compare multiple corpora
+        run: |
+          go run . -compare-inputs ../../datasets/gematria/demo-corpus.v1.json,../../datasets/gematria/demo-corpus.replication.v1.json -compare-format json > /tmp/gematria-glitch-multicorpus.json
+          go run . -compare-inputs ../../datasets/gematria/demo-corpus.v1.json,../../datasets/gematria/demo-corpus.replication.v1.json -compare-format glitch > /tmp/gematria-glitch-multicorpus.txt

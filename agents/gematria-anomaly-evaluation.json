@@ -18,7 +18,12 @@
     "CONNECTED != IDENTICAL",
     "PATH != PROOF",
     "PATH_RANK != TRUTH",
-    "NO_PATH != NO_RELATIONSHIP"
+    "NO_PATH != NO_RELATIONSHIP",
+    "REPLICATION != PROOF",
+    "RECURRENCE != CAUSATION",
+    "REPEATED != UNIVERSAL",
+    "CORPUS_DEPENDENCE != FALSEHOOD",
+    "ABSENCE != DISPROOF"
   ],
   "pipeline": [
     "SENSE",
@@ -31,6 +36,7 @@
     "RECEIPT",
     "GRAPH",
     "PATH_QUERY",
+    "REPLICATE",
     "RENDER",
     "HUMAN_INTERPRETATION"
   ],
@@ -73,6 +79,11 @@
     {
       "id": "PATHFINDER_CELL",
       "task": "Search bounded simple paths in the verified anomaly graph, rank by evidence floor and hop count, and return receipt and source traces.",
+      "authority": "read_only"
+    },
+    {
+      "id": "REPLICATION_CELL",
+      "task": "Compare canonical anomaly signatures and anomaly-type recurrence across multiple provenance-grade corpora using the same Gematria system.",
       "authority": "read_only"
     }
   ],
@@ -253,6 +264,24 @@
       "EDGE != CAUSATION",
       "CONNECTED != IDENTICAL",
       "NO_PATH != NO_RELATIONSHIP"
+    ]
+  },
+  "replication_rule": {
+    "purpose": "Distinguish corpus-specific anomalies from repeated structures across declared corpora.",
+    "comparison_levels": [
+      "instance replication",
+      "type recurrence"
+    ],
+    "limits": {
+      "min_corpora": 2,
+      "max_corpora": 16
+    },
+    "boundaries": [
+      "REPLICATION != PROOF",
+      "RECURRENCE != CAUSATION",
+      "REPEATED != UNIVERSAL",
+      "CORPUS_DEPENDENCE != FALSEHOOD",
+      "ABSENCE != DISPROOF"
     ]
   }
 }

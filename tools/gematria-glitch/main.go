@@ -782,7 +782,14 @@ func main() {
 	pathDepth := flag.Int("path-depth", 3, "maximum path query depth from 1 to 8")
 	pathLimit := flag.Int("path-limit", 5, "maximum returned paths from 1 to 50")
 	pathFormat := flag.String("path-format", "glitch", "path query output format: glitch or json")
+	compareInputs := flag.String("compare-inputs", "", "comma-separated provenance-grade corpus files to compare")
+	compareFormat := flag.String("compare-format", "glitch", "multi-corpus comparison output format: glitch or json")
 	flag.Parse()
+
+	if *compareInputs != "" && (*verifyReceipts != "" || *verifyGraph != "" || *pathFrom != "" || *pathTo != "") {
+		fmt.Fprintln(os.Stderr, "error: compare-inputs cannot be combined with receipt, graph, or path-query modes")
+		os.Exit(2)
+	}
 
 	if *verifyReceipts != "" && *verifyGraph != "" {
 		fmt.Fprintln(os.Stderr, "error: verify-receipts and verify-graph are mutually exclusive")
@@ -796,6 +803,35 @@ func main() {
 	if *pathFrom != "" && (*verifyReceipts != "" || *verifyGraph != "") {
 		fmt.Fprintln(os.Stderr, "error: path query cannot be combined with verification modes")
 		os.Exit(2)
+	}
+
+	if *compareInputs != "" {
+		corpora, err := loadComparisonCorpora(*compareInputs)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		report, err := compareCorpora(corpora)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+
+		switch *compareFormat {
+		case "glitch":
+			fmt.Print(renderMultiCorpusGlitch(report))
+		case "json":
+			encoder := json.NewEncoder(os.Stdout)
+			encoder.SetIndent("", "  ")
+			if err := encoder.Encode(report); err != nil {
+				fmt.Fprintln(os.Stderr, "error:", err)
+				os.Exit(2)
+			}
+		default:
+			fmt.Fprintln(os.Stderr, "error: compare-format must be glitch or json")
+			os.Exit(2)
+		}
+		return
 	}
 
 	if *verifyGraph != "" {
