@@ -27,7 +27,9 @@
     "NULL_MODEL != REALITY",
     "EMPIRICAL_P_VALUE != TRUTH_PROBABILITY",
     "SURPRISE != SIGNIFICANCE",
-    "RARE_UNDER_NULL != SUPERNATURAL"
+    "RARE_UNDER_NULL != SUPERNATURAL",
+    "BH_Q_VALUE != TRUTH_PROBABILITY",
+    "MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF"
   ],
   "pipeline": [
     "SENSE",
@@ -93,7 +95,7 @@
     },
     {
       "id": "NULL_MODEL_CELL",
-      "task": "Run deterministic value-permutation baselines that preserve corpus size and the exact Gematria value multiset, then report empirical recurrence without converting p-values into truth claims.",
+      "task": "Run deterministic value-permutation baselines, reject ambiguous duplicate word tokens, and report raw empirical p-values plus Benjamini-Hochberg adjusted q-values without converting statistical rarity into truth.",
       "authority": "read_only"
     }
   ],
@@ -312,7 +314,16 @@
       "EMPIRICAL_P_VALUE != TRUTH_PROBABILITY",
       "SURPRISE != SIGNIFICANCE",
       "RARE_UNDER_NULL != SUPERNATURAL",
-      "PATTERN != PROOF"
+      "PATTERN != PROOF",
+      "BH_Q_VALUE != TRUTH_PROBABILITY",
+      "MULTIPLE_TESTING_CORRECTION != SEMANTIC_PROOF"
+    ],
+    "multiple_testing": "benjamini_hochberg_fdr",
+    "requires_unique_word_tokens": true,
+    "report_fields": [
+      "test family size",
+      "raw empirical p-value",
+      "Benjamini-Hochberg adjusted q-value"
     ]
   }
 }
