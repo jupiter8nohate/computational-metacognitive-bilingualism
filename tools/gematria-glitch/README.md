@@ -59,3 +59,36 @@ Machine-readable finding schema:
 ```text
 ../../schemas/gematria-glitch.finding.v1.schema.json
 ```
+
+## Provenance-grade corpus
+
+Use the versioned corpus envelope when a finding needs reproducible provenance.
+
+```text
+go run . -input ../../datasets/gematria/demo-corpus.v1.json -format receipts > receipts.json
+go run . -verify-receipts receipts.json
+```
+
+Each receipt binds:
+
+```text
+GEMATRIA_SYSTEM
+CORPUS_ID
+CORPUS_VERSION
+CORPUS_SHA256
+SOURCE_RECORD_IDS
+FINDING
+ARITHMETIC_EVIDENCE
+RARITY_METADATA
+RECEIPT_SHA256
+```
+
+The hash is deterministic and excludes runtime timestamps.
+
+```text
+RECEIPT != TRUTH
+HASH != INTERPRETATION
+PROVENANCE != PROPHECY
+```
+
+A valid receipt proves that the stored payload hashes to the stated digest. It does not prove the theological, philosophical, scientific, diagnostic, or personal interpretation of the finding.
