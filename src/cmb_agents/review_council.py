@@ -476,7 +476,7 @@ def render_markdown(packet: ReviewPacket) -> str:
         f"Verdict: **{packet.verdict.value}**",
         f"Position score: **{packet.score:.2f}/100**",
         f"Confidence: **{packet.confidence:.3f}**",
-        f"Receipt: \`{packet.digest}\`",
+        f"Receipt: `{packet.digest}`",
         "",
         "## Principal variation",
         "",
@@ -494,7 +494,7 @@ def render_markdown(packet: ReviewPacket) -> str:
     else:
         for finding in packet.findings:
             lines.append(
-                f"- **{finding.severity.value.upper()}** \`{finding.agent}\` \`{finding.path}\`: {finding.message}"
+                f"- **{finding.severity.value.upper()}** `{finding.agent}` `{finding.path}`: {finding.message}"
             )
     lines.extend([
         "",
