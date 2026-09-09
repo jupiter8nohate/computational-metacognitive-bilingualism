@@ -199,7 +199,6 @@ def _request_copilot_json(
 
     command = [
         "copilot",
-        "--no-banner",
         "--no-color",
         "--no-custom-instructions",
         "--disable-builtin-mcps",
