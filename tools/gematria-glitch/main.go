@@ -773,10 +773,38 @@ func renderGlitch(findings []Finding) string {
 
 func main() {
 	inputPath := flag.String("input", "", "path to a JSON corpus; defaults to the built-in demonstration corpus")
-	format := flag.String("format", "glitch", "output format: glitch, json, or receipts")
+	format := flag.String("format", "glitch", "output format: glitch, json, receipts, or graph")
 	rank := flag.Bool("rank", false, "rank findings by corpus rarity score")
 	verifyReceipts := flag.String("verify-receipts", "", "verify a JSON receipt array and exit")
+	verifyGraph := flag.String("verify-graph", "", "verify a JSON anomaly graph and exit")
 	flag.Parse()
+
+	if *verifyReceipts != "" && *verifyGraph != "" {
+		fmt.Fprintln(os.Stderr, "error: verify-receipts and verify-graph are mutually exclusive")
+		os.Exit(2)
+	}
+
+	if *verifyGraph != "" {
+		var corpus *Corpus
+		if *inputPath != "" {
+			loaded, err := loadCorpus(*inputPath)
+			if err != nil {
+				fmt.Fprintln(os.Stderr, "error:", err)
+				os.Exit(2)
+			}
+			corpus = &loaded
+		}
+		if err := verifyGraphFile(*verifyGraph, corpus); err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		if corpus == nil {
+			fmt.Println("VERIFIED://GRAPH | MODE://SELF_CONSISTENCY")
+		} else {
+			fmt.Println("VERIFIED://GRAPH | MODE://CORPUS_BOUND")
+		}
+		return
+	}
 
 	if *verifyReceipts != "" {
 		var corpus *Corpus
@@ -834,8 +862,20 @@ func main() {
 			fmt.Fprintln(os.Stderr, "error:", err)
 			os.Exit(2)
 		}
+	case "graph":
+		graph, err := buildKnowledgeGraph(corpus)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
+		encoder := json.NewEncoder(os.Stdout)
+		encoder.SetIndent("", "  ")
+		if err := encoder.Encode(graph); err != nil {
+			fmt.Fprintln(os.Stderr, "error:", err)
+			os.Exit(2)
+		}
 	default:
-		fmt.Fprintln(os.Stderr, "error: format must be glitch, json, or receipts")
+		fmt.Fprintln(os.Stderr, "error: format must be glitch, json, receipts, or graph")
 		os.Exit(2)
 	}
 }
