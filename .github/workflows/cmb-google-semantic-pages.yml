@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: cmb-google-semantic-pages
+  group: cmb-google-semantic-pages-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 permissions:
