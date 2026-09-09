@@ -34,7 +34,14 @@
     "ROBUST_ACROSS_MODELS != TRUTH",
     "MODEL_AGREEMENT != CAUSATION",
     "Q_THRESHOLD != SEMANTIC_THRESHOLD",
-    "ASSUMPTION_SENSITIVITY != FALSEHOOD"
+    "ASSUMPTION_SENSITIVITY != FALSEHOOD",
+    "DISCOVERY_SET != VALIDATION_SET",
+    "DISCOVERY != CONFIRMATION",
+    "INSTANCE_REPLICATION != INDEPENDENT_VALIDATION",
+    "CLASS_RECURRED_OUT_OF_SAMPLE != TRUTH",
+    "NOT_RECURRED != DISPROVEN",
+    "NOT_TESTABLE != FAILED",
+    "VALIDATION_CORPUS != UNIVERSE"
   ],
   "pipeline": [
     "SENSE",
@@ -50,6 +57,7 @@
     "REPLICATE",
     "NULL_TEST",
     "NULL_ENSEMBLE",
+    "VALIDATE_OUT_OF_SAMPLE",
     "RENDER",
     "HUMAN_INTERPRETATION"
   ],
@@ -107,6 +115,11 @@
     {
       "id": "NULL_ENSEMBLE_CELL",
       "task": "Compare observed findings across unrestricted and word-length-stratified permutation baselines, then report cross-model q-value robustness without converting model agreement into truth.",
+      "authority": "read_only"
+    },
+    {
+      "id": "VALIDATION_CELL",
+      "task": "Test prelocked discovery candidates and anomaly-class hypotheses against a separate validation corpus, report all outcomes, and forbid post-validation hypothesis invention.",
       "authority": "read_only"
     }
   ],
@@ -356,6 +369,31 @@
       "MODEL_AGREEMENT != CAUSATION",
       "Q_THRESHOLD != SEMANTIC_THRESHOLD",
       "ASSUMPTION_SENSITIVITY != FALSEHOOD"
+    ]
+  },
+  "out_of_sample_rule": {
+    "purpose": "Separate candidate discovery from independent validation and expose whether anomaly classes recur on signatures not seen in discovery.",
+    "requires": [
+      "distinct discovery corpus identity",
+      "distinct validation corpus identity",
+      "distinct Hebrew word/value sample digest",
+      "same Gematria system",
+      "locked candidate set hash",
+      "locked anomaly-class hypothesis set hash",
+      "all discovery candidates reported"
+    ],
+    "result_layers": [
+      "instance replication",
+      "independent class validation"
+    ],
+    "boundaries": [
+      "DISCOVERY_SET != VALIDATION_SET",
+      "DISCOVERY != CONFIRMATION",
+      "INSTANCE_REPLICATION != INDEPENDENT_VALIDATION",
+      "CLASS_RECURRED_OUT_OF_SAMPLE != TRUTH",
+      "NOT_RECURRED != DISPROVEN",
+      "NOT_TESTABLE != FAILED",
+      "VALIDATION_CORPUS != UNIVERSE"
     ]
   }
 }
