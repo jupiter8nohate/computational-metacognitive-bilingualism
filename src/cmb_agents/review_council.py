@@ -328,7 +328,12 @@ def _candidate_lines(findings: tuple[Finding, ...], score: float) -> tuple[Candi
     warnings = tuple(i for i, f in enumerate(findings) if f.severity is Severity.WARNING)
     return (
         CandidateLine("safe_merge", score + (4.0 if not critical and not errors else -40.0), "No blocking evidence found.", warnings[:4]),
-        CandidateLine("request_changes", 100.0 - score + (45.0 if critical else 20.0 if errors else 0.0), "Blocking defects or authority risks dominate.", critical + errors),
+        CandidateLine(
+            "request_changes",
+            100.0 - score + (45.0 if critical else 20.0) if critical or errors else -1.0,
+            "Blocking defects dominate." if critical or errors else "No blocking evidence supports this line.",
+            critical + errors,
+        ),
         CandidateLine("human_escalation", 35.0 + len(warnings) * 3.0, "Ambiguity or governance-sensitive changes justify human review.", warnings),
     )
 

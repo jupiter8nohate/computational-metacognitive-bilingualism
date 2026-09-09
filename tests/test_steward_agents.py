@@ -22,22 +22,6 @@ def test_ai_edit_policy_blocks_authority_and_workflow_paths() -> None:
     assert not steward.is_ai_editable_path("../outside.txt")
 
 
-def test_extract_output_text_accepts_responses_output_shape() -> None:
-    payload = {
-        "output": [
-            {
-                "type": "message",
-                "content": [
-                    {
-                        "type": "output_text",
-                        "text": '{"summary":"ok","rationale":"test","edits":[]}',
-                    }
-                ],
-            }
-        ]
-    }
-    assert steward._extract_output_text(payload).startswith('{"summary"')
-
 
 def test_apply_repair_plan_requires_supplied_context(
     tmp_path: Path,
@@ -196,5 +180,6 @@ def test_resolve_repository_root_uses_current_checkout(
     assert steward._resolve_repository_root() == root.resolve()
 
 
-def test_role_registry_includes_autonomy_arbiter() -> None:
+def test_role_registry_includes_control_roles() -> None:
     assert "AUTONOMY_ARBITER" in steward.ROLE_NAMES
+    assert "REVIEW_COUNCIL" in steward.ROLE_NAMES

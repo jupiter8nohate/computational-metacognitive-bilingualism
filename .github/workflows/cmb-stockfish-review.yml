@@ -4,8 +4,13 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
+  copilot-requests: write
 
 jobs:
   review:
@@ -38,11 +43,18 @@ jobs:
           --json /tmp/stockfish-review.json
           --markdown /tmp/stockfish-review.md
 
+      - name: Install pinned Copilot CLI fallback
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        run: bash scripts/install_copilot_cli.sh
+
       - name: Run optional AI specialist council
         if: always()
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
+          CMB_COPILOT_CLI: ${{ github.event.pull_request.head.repo.full_name == github.repository && 'true' || 'false' }}
+          CMB_COPILOT_MODEL: ${{ vars.CMB_COPILOT_MODEL || 'auto' }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: >-
           python scripts/run_ai_review_council.py
           --base "origin/${{ github.base_ref }}"

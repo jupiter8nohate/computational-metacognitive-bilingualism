@@ -87,9 +87,9 @@ CONFIDENCE != AUTHORITY
 
 The workflow `.github/workflows/cmb-stockfish-review.yml` runs on pull requests.
 
-It checks out full Git history, calculates the diff from the base branch, runs the review council, and writes the review packet to the GitHub Actions job summary.
+It checks out full Git history, calculates the diff from the base branch, runs the deterministic review council, and writes the review packet to the GitHub Actions job summary. On same-repository pull requests, the model-assisted specialists prefer an explicitly configured OpenAI provider and otherwise use the pinned GitHub Copilot CLI fallback. Fork pull requests remain deterministic-only.
 
-The workflow has only `contents: read` permission. It does not post approvals, request changes through the GitHub review API, modify the branch, merge the pull request, publish releases, or alter credentials.
+The deterministic review job has `contents: read`, and the workflow also grants `copilot-requests: write` solely so the same-repository model-assisted review can call GitHub Copilot CLI with the short-lived Actions token. That permission authorizes Copilot inference requests; it does not grant repository-content write or merge authority. The workflow does not post approvals, request changes through the GitHub review API, modify the branch, merge the pull request, publish releases, or alter credentials.
 
 ~~~text
 REVIEW != MERGE
