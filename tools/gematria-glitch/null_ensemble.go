@@ -11,16 +11,16 @@ import (
 )
 
 const (
-	nullModelValuePermutation          = "value_permutation"
+	nullModelValuePermutation            = "value_permutation"
 	nullModelLengthStratifiedPermutation = "word_length_stratified_value_permutation"
-	defaultEnsembleQThreshold          = 0.05
+	defaultEnsembleQThreshold            = 0.05
 )
 
 type NullEnsembleConfig struct {
-	Models     []string `json:"models"`
-	Simulations int     `json:"simulations"`
-	Seed        uint64  `json:"seed"`
-	QThreshold  float64 `json:"q_threshold"`
+	Models      []string `json:"models"`
+	Simulations int      `json:"simulations"`
+	Seed        uint64   `json:"seed"`
+	QThreshold  float64  `json:"q_threshold"`
 }
 
 type NullEnsembleModelResult struct {
@@ -34,15 +34,15 @@ type NullEnsembleModelResult struct {
 }
 
 type NullEnsembleFinding struct {
-	SignatureID       string                    `json:"signature_id"`
-	Type              string                    `json:"type"`
-	Words             []string                  `json:"words"`
-	ObservedValues    []int                     `json:"observed_values"`
-	ModelResults      []NullEnsembleModelResult `json:"model_results"`
-	UncommonModels    int                       `json:"uncommon_models"`
-	TotalModels       int                       `json:"total_models"`
-	WorstCaseQValue   float64                   `json:"worst_case_q_value"`
-	RobustnessStatus  string                    `json:"robustness_status"`
+	SignatureID      string                    `json:"signature_id"`
+	Type             string                    `json:"type"`
+	Words            []string                  `json:"words"`
+	ObservedValues   []int                     `json:"observed_values"`
+	ModelResults     []NullEnsembleModelResult `json:"model_results"`
+	UncommonModels   int                       `json:"uncommon_models"`
+	TotalModels      int                       `json:"total_models"`
+	WorstCaseQValue  float64                   `json:"worst_case_q_value"`
+	RobustnessStatus string                    `json:"robustness_status"`
 }
 
 type NullEnsembleReport struct {
