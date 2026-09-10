@@ -19,6 +19,7 @@ from typing import Final, Sequence
 MAX_FILE_BYTES: Final[int] = 64 * 1024
 MAX_EXCERPT_CHARS: Final[int] = 3000
 MAX_DIRECTORY_FILES: Final[int] = 8
+HASH_CHUNK_BYTES: Final[int] = 64 * 1024
 _DIRECTORY_EXTENSIONS: Final[frozenset[str]] = frozenset(
     {".md", ".txt", ".py", ".json", ".toml", ".yaml", ".yml"}
 )
@@ -41,17 +42,39 @@ class EvidenceRecord:
         return asdict(self)
 
 
+def _resolve_root(root: Path) -> Path:
+    try:
+        resolved = root.resolve(strict=True)
+    except (FileNotFoundError, RuntimeError) as exc:
+        raise EvidenceError(f"repository root does not exist: {root}") from exc
+    if not resolved.is_dir():
+        raise EvidenceError(f"repository root is not a directory: {resolved}")
+    return resolved
+
+
 def _safe_resolve(root: Path, relative_path: str) -> Path:
     if not relative_path or Path(relative_path).is_absolute():
         raise EvidenceError(f"source path must be repository-relative: {relative_path!r}")
 
-    root_resolved = root.resolve(strict=True)
-    candidate = (root_resolved / relative_path).resolve(strict=True)
+    root_resolved = _resolve_root(root)
+    try:
+        candidate = (root_resolved / relative_path).resolve(strict=True)
+    except (FileNotFoundError, RuntimeError) as exc:
+        raise EvidenceError(f"source path does not exist: {relative_path}") from exc
+
     try:
         candidate.relative_to(root_resolved)
     except ValueError as exc:
         raise EvidenceError(f"source path escapes repository root: {relative_path}") from exc
     return candidate
+
+
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(HASH_CHUNK_BYTES), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _read_sample(path: Path) -> tuple[bytes, str]:
@@ -60,13 +83,12 @@ def _read_sample(path: Path) -> tuple[bytes, str]:
     return sample, sample.decode("utf-8", errors="replace")[:MAX_EXCERPT_CHARS]
 
 
-def _file_record(root: Path, relative_path: str, path: Path) -> EvidenceRecord:
-    data = path.read_bytes()
+def _file_record(relative_path: str, path: Path) -> EvidenceRecord:
     sample, excerpt = _read_sample(path)
     return EvidenceRecord(
         path=relative_path,
         kind="file",
-        sha256=hashlib.sha256(data).hexdigest(),
+        sha256=_sha256_file(path),
         excerpt=excerpt,
         bytes_sampled=len(sample),
         files_sampled=1,
@@ -85,13 +107,12 @@ def _directory_record(root: Path, relative_path: str, path: Path) -> EvidenceRec
     digest = hashlib.sha256()
     excerpts: list[str] = []
     bytes_sampled = 0
-    root_resolved = root.resolve(strict=True)
+    root_resolved = _resolve_root(root)
 
     for child in candidates:
         child_relative = child.relative_to(root_resolved).as_posix()
-        data = child.read_bytes()
         sample, excerpt = _read_sample(child)
-        child_digest = hashlib.sha256(data).hexdigest()
+        child_digest = _sha256_file(child)
         digest.update(child_relative.encode("utf-8"))
         digest.update(b"\0")
         digest.update(child_digest.encode("ascii"))
@@ -115,15 +136,12 @@ def collect_source_evidence(
 ) -> tuple[EvidenceRecord, ...]:
     """Resolve, hash, and sample each declared source inside ``repo_root``."""
 
-    root = repo_root.resolve(strict=True)
-    if not root.is_dir():
-        raise EvidenceError(f"repository root is not a directory: {root}")
-
+    root = _resolve_root(repo_root)
     records: list[EvidenceRecord] = []
     for relative_path in source_paths:
         path = _safe_resolve(root, relative_path)
         if path.is_file():
-            records.append(_file_record(root, relative_path, path))
+            records.append(_file_record(relative_path, path))
         elif path.is_dir():
             records.append(_directory_record(root, relative_path, path))
         else:
