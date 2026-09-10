@@ -14,7 +14,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 Agents can select missions, abstain, challenge a peer direction, request evidence, draft internal proposals, test counterexamples, rank candidate ideas, and preserve the current position when a seed is not materially relevant to CMB.
 
-Agents cannot merge pull requests, push to the default branch, publish releases, change repository permissions, use or rotate secrets, post externally, mass-message people, perform unsolicited distribution, execute model-provided commands, delete repository content, or rewrite their own authority rules.
+Agents cannot integrate repository changes, push to the default branch, publish releases, change repository permissions, inspect or expose credentials, post externally, mass-message people, perform unsolicited distribution, execute model-provided commands, delete repository content, or rewrite their own authority rules.
 
 ```text
 AGENT_AUTONOMY != UNBOUNDED_AUTHORITY
@@ -51,13 +51,16 @@ MISSION      PEER
        GUILD ELECTIONS
               |
               v
+    VALIDATE SOURCE EVIDENCE
+              |
+              v
       INTERNAL PROPOSALS
               |
               v
  OPTIONAL MODEL ASSIST
               |
               v
-   EVIDENCE + COUNTERARGUMENT
+ EVIDENCE + COUNTERARGUMENT
               |
               v
          HUMAN REVIEW
@@ -83,7 +86,7 @@ Total: `9 * 37 = 333`.
 
 Each agent independently derives a mission choice from its identity, guild, and the supplied seed. This makes the swarm reproducible while still allowing every agent to make a local bounded choice. Some agents may abstain. Some may flag a peer challenge. Some may request more evidence.
 
-The guild then elects its strongest-supported mission. The election creates an internal proposal only. It does not create publication authority.
+The guild then elects its strongest-supported mission. The election creates an internal proposal only. It does not create publication or repository integration authority.
 
 When the input is outside the declared CMB relevance envelope, all 333 agents preserve position rather than manufacturing a CMB connection.
 
@@ -92,26 +95,42 @@ IRRELEVANT_INPUT -> PRESERVE_POSITION
 RELEVANCE > REACH
 ```
 
+## Evidence grounding
+
+When `--repo-root` is supplied, every elected guild proposal resolves its declared source paths inside that repository root. Path escape is rejected. Files are hashed and sampled. Source directories are bounded to a small deterministic sample of text files, and the sampled file set is hashed.
+
+Each evidence record carries its source path, source kind, SHA-256 digest, bounded excerpt, sampled byte count, and sampled file count. This lets later reviewers identify which repository material was actually available to the proposal process.
+
+```text
+SOURCE_PATH != EVIDENCE
+HASH != TRUTH
+EXCERPT != WHOLE_SOURCE
+RECEIPT != TRUTH
+```
+
 ## Optional AI model assist
 
-The runtime can use the existing bounded `cmb_agents.model_gateway` after a guild election. Model assist is optional and budgeted to at most one structured drafting call per guild. The default maximum is nine model calls, not 333 model calls.
+The runtime can use the existing bounded `cmb_agents.model_gateway` after guild election only when validated repository evidence has been loaded. Model assist is optional and budgeted to at most one structured drafting call per guild. The default maximum is nine model calls, not 333 model calls.
 
-A model may draft an internal concept note, thought experiment, teaching example, code poem, or research question. The structured draft must include claims requiring verification, a counterargument, and a human-review note.
+The philosophy swarm does not read API keys, tokens, or credential values. Authentication remains inside the separately bounded model-provider infrastructure. Evidence records, mission data, and authority declarations are the only swarm data passed into the model request.
 
-Model output remains advisory.
+A model may draft an internal concept note, thought experiment, teaching example, code poem, or research question. The structured draft must include claims requiring verification, a counterargument, and a human-review note. Model output remains advisory.
 
 ```text
 MODEL_OUTPUT != EVIDENCE
 MODEL_ACCESS != REPOSITORY_AUTHORITY
+CREDENTIAL != AGENT_CONTEXT
 SELF_REVIEW != INDEPENDENT_REVIEW
 ```
 
 ## CLI
 
-Run the deterministic 333-agent swarm:
+Run the deterministic 333-agent swarm with repository evidence:
 
 ```bash
-python -m cmb_agents.philosophy_swarm --seed "CMB human agency, consent, pattern, and proof"
+python -m cmb_agents.philosophy_swarm \
+  --seed "CMB human agency, consent, pattern, and proof" \
+  --repo-root .
 ```
 
 Write a machine-readable report:
@@ -119,26 +138,30 @@ Write a machine-readable report:
 ```bash
 python -m cmb_agents.philosophy_swarm \
   --seed "CMB cognitive sovereignty and algorithmic profiling" \
+  --repo-root . \
   --output /tmp/cmb-333-swarm.json
 ```
 
-Enable optional model drafting when a supported provider is configured:
+Enable optional model drafting when the bounded model gateway is already configured by the surrounding execution environment:
 
 ```bash
 python -m cmb_agents.philosophy_swarm \
   --seed "CMB provenance and human authorship" \
+  --repo-root . \
   --model-assist \
   --model-budget 9 \
   --output /tmp/cmb-333-swarm.json
 ```
 
-The report includes all 333 agent decisions, guild elections, optional model drafts, authority boundaries, and a SHA-256 integrity receipt over the report payload. The receipt is tamper-evident integrity evidence. It is not proof that the proposal is true, original, legally owned, or externally verified.
+Model-assisted drafting fails closed when validated source evidence is unavailable or the bounded model gateway has no provider.
+
+The report includes all 333 agent decisions, guild elections, validated evidence records when requested, optional model drafts, authority boundaries, and a SHA-256 integrity receipt over the report payload. The receipt is tamper-evident integrity evidence. It is not proof that the proposal is true, original, legally owned, or externally verified.
 
 ## Scheduled workflow
 
-`.github/workflows/cmb-philosophy-swarm.yml` runs a read-only swarm exploration on a schedule and can also be triggered manually. It uploads the resulting JSON report as a workflow artifact.
+`.github/workflows/cmb-philosophy-swarm.yml` runs a credential-free, read-only swarm exploration every six hours and can also be triggered manually. It validates repository evidence and uploads the resulting JSON report as a workflow artifact.
 
-The scheduled workflow has `contents: read` permission. It does not modify the repository, open a pull request, publish a release, post to social media, or distribute content to third parties.
+The scheduled workflow has `contents: read` permission. It does not inject API keys, modify the repository, open a pull request, publish a release, post to social media, or distribute content to third parties.
 
 This is intentional. Autonomous exploration is separated from publication authority.
 
@@ -148,7 +171,7 @@ This is intentional. Autonomous exploration is separated from publication author
 333_AGENTS = SPECIALIZATION
 333_AGENTS != 333_AUTHORITIES
 AGENT_CAN_EXPLORE != AGENT_CAN_PUBLISH
-AGENT_CAN_PROPOSE != AGENT_CAN_MERGE
+AGENT_CAN_PROPOSE != AGENT_CAN_INTEGRATE
 CAPABILITY != AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
