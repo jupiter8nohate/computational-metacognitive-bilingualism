@@ -1,4 +1,5 @@
 from collections import Counter
+from pathlib import Path
 
 from cmb_agents.philosophy_swarm import (
     AGENT_COUNT,
@@ -31,11 +32,13 @@ def test_authority_envelope_blocks_self_escalation_and_publication() -> None:
     report = run_swarm("CMB human agency and provenance")
 
     assert "self_modify_authority" in DENIED_ACTIONS
-    assert "merge_pull_request" in DENIED_ACTIONS
+    assert "integrate_repository_changes" in DENIED_ACTIONS
+    assert "inspect_or_expose_credentials" in DENIED_ACTIONS
     assert "unsolicited_distribution" in DENIED_ACTIONS
     assert report["authority"]["may_modify_own_authority"] is False
     assert report["authority"]["may_publish_externally"] is False
-    assert report["authority"]["may_merge"] is False
+    assert report["authority"]["may_integrate_repository_changes"] is False
+    assert report["authority"]["may_inspect_credentials"] is False
     assert report["authority"]["human_final_authority"] is True
 
 
@@ -64,3 +67,19 @@ def test_swarm_report_is_deterministic_without_model_assist() -> None:
 
     assert first == second
     assert first["sha256_receipt"] == second["sha256_receipt"]
+
+
+def test_repo_grounded_run_records_validated_evidence() -> None:
+    report = run_swarm(
+        "CMB human agency, evidence, and cognitive sovereignty",
+        repo_root=Path("."),
+    )
+
+    assert report["evidence_state"] == "validated"
+    assert report["summary"]["validated_evidence_records"] == 27
+    assert len(report["evidence"]) == 9
+    assert all(
+        record["sha256"] and record["excerpt"]
+        for records in report["evidence"].values()
+        for record in records
+    )
