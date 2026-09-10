@@ -2,8 +2,8 @@
 
 The swarm contains 333 logical specialist agents arranged as nine guilds of 37.
 Agents may choose missions, abstain, challenge peers, request evidence, and rank
-proposal directions. They cannot merge, publish, change permissions, modify their
-authority envelope, use secrets, or distribute material externally.
+internal proposal directions. They cannot publish, change repository authority,
+inspect credentials, or distribute material externally.
 
 AGENT_AUTONOMY != UNBOUNDED_AUTHORITY
 EXPANSION != SPAM
@@ -16,7 +16,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import os
 import re
 from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass
@@ -24,6 +23,7 @@ from pathlib import Path
 from typing import Any, Final, Sequence
 
 from .model_gateway import ModelGatewayError, model_available, request_json
+from .philosophy_evidence import EvidenceError, EvidenceRecord, collect_source_evidence
 
 SCHEMA_VERSION: Final[str] = "cmb.philosophy-swarm.v1"
 AGENT_COUNT: Final[int] = 333
@@ -57,11 +57,11 @@ ALLOWED_ACTIONS: Final[tuple[str, ...]] = (
 )
 
 DENIED_ACTIONS: Final[tuple[str, ...]] = (
-    "merge_pull_request",
+    "integrate_repository_changes",
     "push_default_branch",
     "publish_release",
     "change_repository_permissions",
-    "read_or_rotate_secrets",
+    "inspect_or_expose_credentials",
     "external_post",
     "mass_message",
     "unsolicited_distribution",
@@ -72,36 +72,13 @@ DENIED_ACTIONS: Final[tuple[str, ...]] = (
 
 _RELEVANCE_TERMS: Final[frozenset[str]] = frozenset(
     {
-        "agency",
-        "algorithm",
-        "ai",
-        "artificial",
-        "authorship",
-        "autonomy",
-        "cmb",
-        "cognition",
-        "cognitive",
-        "consent",
-        "digital",
-        "evidence",
-        "glitchology",
-        "human",
-        "identity",
-        "meaning",
-        "metacognition",
-        "model",
-        "neurodiversity",
-        "pattern",
-        "philosophy",
-        "privacy",
-        "profile",
-        "provenance",
-        "rights",
-        "sovereignty",
-        "verification",
+        "agency", "algorithm", "ai", "artificial", "authorship", "autonomy",
+        "cmb", "cognition", "cognitive", "consent", "digital", "evidence",
+        "glitchology", "human", "identity", "meaning", "metacognition", "model",
+        "neurodiversity", "pattern", "philosophy", "privacy", "profile",
+        "provenance", "rights", "sovereignty", "verification",
     }
 )
-
 _TOKEN_RE: Final[re.Pattern[str]] = re.compile(r"[a-z0-9_]+")
 
 
@@ -117,8 +94,7 @@ class GuildSpec:
 
 GUILDS: Final[tuple[GuildSpec, ...]] = (
     GuildSpec(
-        "G01",
-        "AGENCY_GUARDIANS",
+        "G01", "AGENCY_GUARDIANS",
         "Develop human-agency boundaries without granting machine authority over identity or meaning.",
         "draft_internal_proposal",
         (
@@ -131,8 +107,7 @@ GUILDS: Final[tuple[GuildSpec, ...]] = (
         ("AGENTS.md", "docs/AGENT_OPERATING_MODEL.md", "strategy/cmb_strategy.toml"),
     ),
     GuildSpec(
-        "G02",
-        "PATTERN_SKEPTICS",
+        "G02", "PATTERN_SKEPTICS",
         "Stress-test pattern claims through falsification, baselines, counterexamples, and uncertainty.",
         "test_counterexample",
         (
@@ -145,8 +120,7 @@ GUILDS: Final[tuple[GuildSpec, ...]] = (
         ("AGENTS.md", "spec/GEMATRIA-GLITCH-1.md", "docs/GEMATRIA_NULL_MODEL.md"),
     ),
     GuildSpec(
-        "G03",
-        "PROVENANCE_KEEPERS",
+        "G03", "PROVENANCE_KEEPERS",
         "Expand source tracing and integrity language while keeping receipts distinct from truth or ownership.",
         "draft_internal_proposal",
         (
@@ -159,8 +133,7 @@ GUILDS: Final[tuple[GuildSpec, ...]] = (
         ("AGENTS.md", "docs/CLAIM_CONTROL_TRACEABILITY.md", "src/cmb_provenance"),
     ),
     GuildSpec(
-        "G04",
-        "CONSENT_ARCHITECTS",
+        "G04", "CONSENT_ARCHITECTS",
         "Develop consent-first machine interaction patterns and explicit permission boundaries.",
         "draft_internal_proposal",
         (
@@ -173,8 +146,7 @@ GUILDS: Final[tuple[GuildSpec, ...]] = (
         ("AGENTS.md", "CMB_Polyglot_Firewall_Specification.md", "src/cmb_policy"),
     ),
     GuildSpec(
-        "G05",
-        "NEURODIVERSITY_TRANSLATORS",
+        "G05", "NEURODIVERSITY_TRANSLATORS",
         "Expand CMB in ways that preserve cognitive difference and resist reductive machine profiling.",
         "draft_internal_proposal",
         (
@@ -187,8 +159,7 @@ GUILDS: Final[tuple[GuildSpec, ...]] = (
         ("README.md", "AGENTS.md", "docs/concepts"),
     ),
     GuildSpec(
-        "G06",
-        "PHILOSOPHY_LAB",
+        "G06", "PHILOSOPHY_LAB",
         "Generate rigorous philosophical questions that distinguish metaphor, mechanism, evidence, and unknowns.",
         "draft_internal_proposal",
         (
@@ -201,8 +172,7 @@ GUILDS: Final[tuple[GuildSpec, ...]] = (
         ("README.md", "AGENTS.md", "docs/AGENT_OPERATING_MODEL.md"),
     ),
     GuildSpec(
-        "G07",
-        "SYSTEMS_CARTOGRAPHERS",
+        "G07", "SYSTEMS_CARTOGRAPHERS",
         "Map incentives, feedback loops, measurement errors, externalities, and failure modes around automated systems.",
         "draft_internal_proposal",
         (
@@ -215,8 +185,7 @@ GUILDS: Final[tuple[GuildSpec, ...]] = (
         ("docs/DIGITAL_NERVOUS_IMMUNE_SYSTEM.md", "docs/CHESS_STRATEGY_ENGINE.md", "src/cmb_agents"),
     ),
     GuildSpec(
-        "G08",
-        "ACCESSIBILITY_EDUCATORS",
+        "G08", "ACCESSIBILITY_EDUCATORS",
         "Convert CMB into accessible teaching forms without deleting nuance or changing canonical claims.",
         "draft_internal_proposal",
         (
@@ -229,8 +198,7 @@ GUILDS: Final[tuple[GuildSpec, ...]] = (
         ("docs/AGENT_OPERATING_MODEL.md", "src/cmb_edu", "README.md"),
     ),
     GuildSpec(
-        "G09",
-        "GLITCH_POETS",
+        "G09", "GLITCH_POETS",
         "Explore code-poetry and Err GLITCHOLOGY forms while preserving factual and authority boundaries.",
         "draft_internal_proposal",
         (
@@ -284,38 +252,35 @@ class GuildProposal:
 
 
 class PhilosophySwarmError(RuntimeError):
-    """Raised when swarm configuration violates the CMB authority envelope."""
+    """Raised when swarm configuration or execution violates its bounds."""
 
 
 def _stable_digest(*parts: object) -> bytes:
-    payload = "|".join(str(part) for part in parts).encode("utf-8")
-    return hashlib.sha256(payload).digest()
+    return hashlib.sha256("|".join(str(part) for part in parts).encode("utf-8")).digest()
 
 
 def _stable_float(*parts: object) -> float:
-    digest = _stable_digest(*parts)
-    return int.from_bytes(digest[:8], "big") / float((1 << 64) - 1)
-
-
-def _tokens(text: str) -> frozenset[str]:
-    return frozenset(_TOKEN_RE.findall(text.lower()))
+    return int.from_bytes(_stable_digest(*parts)[:8], "big") / float((1 << 64) - 1)
 
 
 def is_relevant_seed(seed: str) -> bool:
-    return bool(_tokens(seed) & _RELEVANCE_TERMS)
+    tokens = frozenset(_TOKEN_RE.findall(seed.lower()))
+    return bool(tokens & _RELEVANCE_TERMS)
 
 
 def validate_configuration() -> None:
-    if len(GUILDS) != GUILD_COUNT:
-        raise PhilosophySwarmError(f"expected {GUILD_COUNT} guilds, found {len(GUILDS)}")
-    if GUILD_COUNT * GUILD_SIZE != AGENT_COUNT:
-        raise PhilosophySwarmError("guild cardinality does not equal 333 agents")
+    if len(GUILDS) != GUILD_COUNT or GUILD_COUNT * GUILD_SIZE != AGENT_COUNT:
+        raise PhilosophySwarmError("guild cardinality must equal 9 x 37 = 333")
     if set(ALLOWED_ACTIONS) & set(DENIED_ACTIONS):
         raise PhilosophySwarmError("allowed and denied action sets overlap")
-    if "self_modify_authority" not in DENIED_ACTIONS:
-        raise PhilosophySwarmError("agents must never rewrite their own authority envelope")
-    if "merge_pull_request" not in DENIED_ACTIONS:
-        raise PhilosophySwarmError("agents must never gain merge authority")
+    required_denials = {
+        "integrate_repository_changes",
+        "inspect_or_expose_credentials",
+        "self_modify_authority",
+        "unsolicited_distribution",
+    }
+    if not required_denials.issubset(DENIED_ACTIONS):
+        raise PhilosophySwarmError("required authority denials are missing")
     if "HUMAN_AGENCY > MACHINE_AUTHORITY" not in INVARIANTS:
         raise PhilosophySwarmError("human authority invariant is missing")
 
@@ -326,15 +291,7 @@ def build_swarm() -> tuple[Agent, ...]:
     ordinal = 1
     for guild in GUILDS:
         for _ in range(GUILD_SIZE):
-            agents.append(
-                Agent(
-                    agent_id=f"CMB-PS-{ordinal:03d}",
-                    ordinal=ordinal,
-                    guild_id=guild.guild_id,
-                    guild_name=guild.name,
-                    mandate=guild.mandate,
-                )
-            )
+            agents.append(Agent(f"CMB-PS-{ordinal:03d}", ordinal, guild.guild_id, guild.name, guild.mandate))
             ordinal += 1
     return tuple(agents)
 
@@ -350,71 +307,47 @@ def choose_mission(agent: Agent, seed: str) -> AgentDecision:
     guild = _guild_by_id(agent.guild_id)
     if not is_relevant_seed(seed):
         return AgentDecision(
-            agent_id=agent.agent_id,
-            guild_id=agent.guild_id,
-            guild_name=agent.guild_name,
-            action="preserve_position",
-            mission=None,
-            challenge_peer=False,
-            request_evidence=False,
-            autonomy_score=0.0,
-            reason="Seed is outside the declared CMB relevance envelope.",
+            agent.agent_id, agent.guild_id, agent.guild_name, "preserve_position", None,
+            False, False, 0.0, "Seed is outside the declared CMB relevance envelope.",
         )
 
     digest = _stable_digest(seed, agent.agent_id, guild.guild_id)
-    mission = guild.missions[int.from_bytes(digest[:4], "big") % len(guild.missions)]
     score = _stable_float(seed, agent.agent_id, "autonomy")
-    challenge_peer = digest[4] % 5 == 0
-    request_evidence = digest[5] % 3 == 0
+    mission = guild.missions[int.from_bytes(digest[:4], "big") % len(guild.missions)]
     action = guild.action
     if score < 0.03:
-        action = "abstain"
-        mission = None
+        action, mission = "abstain", None
 
-    reason = (
-        "Agent selected its own bounded mission from the guild mandate."
-        if action != "abstain"
-        else "Agent exercised bounded autonomy by abstaining from a weak local choice."
-    )
     return AgentDecision(
         agent_id=agent.agent_id,
         guild_id=agent.guild_id,
         guild_name=agent.guild_name,
         action=action,
         mission=mission,
-        challenge_peer=challenge_peer,
-        request_evidence=request_evidence,
+        challenge_peer=digest[4] % 5 == 0,
+        request_evidence=digest[5] % 3 == 0,
         autonomy_score=round(score, 6),
-        reason=reason,
-    )
-
-
-def _proposal_method(guild: GuildSpec) -> str:
-    return (
-        "Read the declared canonical sources, separate fact from inference and metaphor, "
-        "test counterexamples where applicable, preserve provenance, and stage the result "
-        "for human review before publication."
+        reason=(
+            "Agent selected its own bounded mission from the guild mandate."
+            if action != "abstain"
+            else "Agent exercised bounded autonomy by abstaining from a weak local choice."
+        ),
     )
 
 
 def elect_guild_proposals(decisions: Sequence[AgentDecision]) -> tuple[GuildProposal, ...]:
-    by_guild: dict[str, list[AgentDecision]] = defaultdict(list)
+    grouped: dict[str, list[AgentDecision]] = defaultdict(list)
     for decision in decisions:
-        by_guild[decision.guild_id].append(decision)
+        grouped[decision.guild_id].append(decision)
 
     proposals: list[GuildProposal] = []
     for guild in GUILDS:
-        local = by_guild[guild.guild_id]
-        mission_votes = Counter(
-            decision.mission
-            for decision in local
-            if decision.mission is not None and decision.action != "abstain"
-        )
-        if not mission_votes:
+        local = grouped[guild.guild_id]
+        votes = Counter(d.mission for d in local if d.mission is not None and d.action != "abstain")
+        if not votes:
             continue
-        top_support = max(mission_votes.values())
-        top_missions = sorted(mission for mission, count in mission_votes.items() if count == top_support)
-        mission = top_missions[0]
+        support = max(votes.values())
+        mission = sorted(m for m, count in votes.items() if count == support)[0]
         proposal_id = "CMB-PROP-" + hashlib.sha256(
             f"{guild.guild_id}|{mission}".encode("utf-8")
         ).hexdigest()[:12].upper()
@@ -424,10 +357,14 @@ def elect_guild_proposals(decisions: Sequence[AgentDecision]) -> tuple[GuildProp
                 guild_id=guild.guild_id,
                 guild_name=guild.name,
                 mission=mission,
-                support=top_support,
+                support=support,
                 total_guild_agents=len(local),
                 mandate=guild.mandate,
-                method=_proposal_method(guild),
+                method=(
+                    "Consult validated source evidence, separate fact from inference and metaphor, "
+                    "test counterexamples where applicable, preserve provenance, and stage the result "
+                    "for human review before publication."
+                ),
                 source_paths=guild.source_paths,
             )
         )
@@ -452,50 +389,61 @@ _MODEL_SCHEMA: Final[dict[str, Any]] = {
         "counterargument": {"type": "string", "minLength": 1, "maxLength": 800},
         "human_review_note": {"type": "string", "minLength": 1, "maxLength": 500},
     },
-    "required": [
-        "title",
-        "thesis",
-        "artifact_type",
-        "claims_to_verify",
-        "counterargument",
-        "human_review_note",
-    ],
+    "required": ["title", "thesis", "artifact_type", "claims_to_verify", "counterargument", "human_review_note"],
 }
 
 _MODEL_INSTRUCTIONS: Final[str] = """You are a bounded CMB philosophy drafting specialist.
-Create one internal expansion proposal for the supplied guild mission.
-Preserve these rules: PATTERN != PROOF, PROFILE != PERSON, MODEL != MIND,
-PREDICTION != DESTINY, CAPABILITY != AUTHORITY, HUMAN_AGENCY > MACHINE_AUTHORITY.
+Use only the supplied evidence records to ground repository-specific statements.
+Preserve PATTERN != PROOF, PROFILE != PERSON, MODEL != MIND,
+PREDICTION != DESTINY, CAPABILITY != AUTHORITY, and HUMAN_AGENCY > MACHINE_AUTHORITY.
 Do not claim historical priority, legal enforceability, scientific proof, model training,
 external endorsement, or supernatural causation without evidence. Do not propose spam,
-unsolicited distribution, impersonation, permission escalation, credential use, merging,
-or self-modification of agent authority. Treat source paths as documents to consult, not
-as evidence you have already read. Return an internal draft that requires human review.
+unsolicited distribution, impersonation, authority escalation, credential access,
+repository integration, or self-modification. Return an internal draft requiring human review.
 """
+
+
+def _evidence_for_proposals(
+    proposals: Sequence[GuildProposal],
+    repo_root: Path | None,
+) -> dict[str, tuple[EvidenceRecord, ...]]:
+    if repo_root is None:
+        return {}
+    evidence: dict[str, tuple[EvidenceRecord, ...]] = {}
+    for proposal in proposals:
+        try:
+            evidence[proposal.proposal_id] = collect_source_evidence(repo_root, proposal.source_paths)
+        except EvidenceError as exc:
+            raise PhilosophySwarmError(f"cannot validate evidence for {proposal.guild_id}: {exc}") from exc
+    return evidence
 
 
 def _model_assist(
     proposals: Sequence[GuildProposal],
+    evidence: dict[str, tuple[EvidenceRecord, ...]],
     seed: str,
-    *,
     model_budget: int,
-    openai_api_key: str,
-    openai_model: str,
 ) -> tuple[list[dict[str, Any]], list[str]]:
     if model_budget <= 0:
         return [], []
-    if not model_available(openai_api_key=openai_api_key, openai_model=openai_model):
-        return [], ["Model assist requested, but no configured model provider is available."]
+    if not evidence:
+        return [], ["Model assist refused because validated repository evidence was not supplied."]
+    if not model_available():
+        return [], ["Model assist requested, but the bounded model gateway has no available provider."]
 
-    enriched: list[dict[str, Any]] = []
+    drafts: list[dict[str, Any]] = []
     errors: list[str] = []
     for proposal in proposals[:model_budget]:
+        records = evidence.get(proposal.proposal_id, ())
+        if not records:
+            errors.append(f"{proposal.guild_id}: no validated evidence records")
+            continue
         payload = {
             "seed": seed,
             "guild": proposal.guild_name,
             "mandate": proposal.mandate,
             "elected_mission": proposal.mission,
-            "source_paths": list(proposal.source_paths),
+            "evidence": [record.to_dict() for record in records],
             "authority": {
                 "allowed": list(ALLOWED_ACTIONS),
                 "denied": list(DENIED_ACTIONS),
@@ -508,26 +456,25 @@ def _model_assist(
                 input_payload=payload,
                 schema_name="cmb_philosophy_swarm_proposal",
                 schema=_MODEL_SCHEMA,
-                openai_api_key=openai_api_key,
-                openai_model=openai_model,
                 max_output_tokens=1800,
                 timeout=90,
             )
         except ModelGatewayError as exc:
             errors.append(f"{proposal.guild_id}: {exc}")
             continue
-        enriched.append(
+        drafts.append(
             {
                 "proposal_id": proposal.proposal_id,
                 "guild_id": proposal.guild_id,
                 "provider": result.provider,
                 "model": result.model,
                 "draft": result.payload,
+                "evidence_sha256": [record.sha256 for record in records],
                 "authority": "advisory_only",
                 "requires_human_review": True,
             }
         )
-    return enriched, errors
+    return drafts, errors
 
 
 def _report_digest(payload: dict[str, Any]) -> str:
@@ -538,10 +485,9 @@ def _report_digest(payload: dict[str, Any]) -> str:
 def run_swarm(
     seed: str,
     *,
+    repo_root: Path | None = None,
     model_assist: bool = False,
     model_budget: int = DEFAULT_MODEL_BUDGET,
-    openai_api_key: str = "",
-    openai_model: str = "",
 ) -> dict[str, Any]:
     clean_seed = seed.strip()
     if not clean_seed:
@@ -555,22 +501,14 @@ def run_swarm(
     decisions = tuple(choose_mission(agent, clean_seed) for agent in swarm)
     proposals = elect_guild_proposals(decisions)
     relevant = is_relevant_seed(clean_seed)
-
-    action_counts = Counter(decision.action for decision in decisions)
-    challenge_count = sum(decision.challenge_peer for decision in decisions)
-    evidence_request_count = sum(decision.request_evidence for decision in decisions)
+    evidence = _evidence_for_proposals(proposals, repo_root) if relevant else {}
 
     model_drafts: list[dict[str, Any]] = []
     model_errors: list[str] = []
     if model_assist and relevant:
-        model_drafts, model_errors = _model_assist(
-            proposals,
-            clean_seed,
-            model_budget=model_budget,
-            openai_api_key=openai_api_key,
-            openai_model=openai_model,
-        )
+        model_drafts, model_errors = _model_assist(proposals, evidence, clean_seed, model_budget)
 
+    action_counts = Counter(decision.action for decision in decisions)
     payload: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
         "swarm_name": "CMB_333_PHILOSOPHY_SWARM",
@@ -581,26 +519,22 @@ def run_swarm(
         "guild_size": GUILD_SIZE,
         "architecture": "9 guilds x 37 logical agents",
         "authority": {
-            "agent_self_direction": [
-                "select_mission",
-                "abstain",
-                "challenge_peer",
-                "request_evidence",
-                "rank_proposals",
-            ],
+            "agent_self_direction": ["select_mission", "abstain", "challenge_peer", "request_evidence", "rank_proposals"],
             "allowed_actions": list(ALLOWED_ACTIONS),
             "denied_actions": list(DENIED_ACTIONS),
             "may_modify_own_authority": False,
             "may_publish_externally": False,
-            "may_merge": False,
+            "may_integrate_repository_changes": False,
+            "may_inspect_credentials": False,
             "human_final_authority": True,
         },
         "invariants": list(INVARIANTS),
         "summary": {
             "action_counts": dict(sorted(action_counts.items())),
-            "peer_challenges": challenge_count,
-            "evidence_requests": evidence_request_count,
+            "peer_challenges": sum(d.challenge_peer for d in decisions),
+            "evidence_requests": sum(d.request_evidence for d in decisions),
             "elected_guild_proposals": len(proposals),
+            "validated_evidence_records": sum(len(records) for records in evidence.values()),
             "model_assisted_drafts": len(model_drafts),
         },
         "guilds": [
@@ -615,11 +549,16 @@ def run_swarm(
         ],
         "agent_decisions": [asdict(decision) for decision in decisions],
         "elected_proposals": [asdict(proposal) for proposal in proposals],
+        "evidence": {
+            proposal_id: [record.to_dict() for record in records]
+            for proposal_id, records in sorted(evidence.items())
+        },
+        "evidence_state": "validated" if evidence else "not_loaded",
         "model_drafts": model_drafts,
         "model_errors": model_errors,
         "interpretation": (
             "The swarm may autonomously explore and rank internal CMB expansion directions. "
-            "It cannot turn a proposal into repository or external publication authority."
+            "Proposal generation does not create repository integration or external publication authority."
         ),
     }
     payload["sha256_receipt"] = _report_digest(payload)
@@ -629,6 +568,7 @@ def run_swarm(
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Run the bounded CMB 333 philosophy swarm")
     parser.add_argument("--seed", required=True)
+    parser.add_argument("--repo-root", type=Path)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--model-assist", action="store_true")
     parser.add_argument("--model-budget", type=int, default=DEFAULT_MODEL_BUDGET)
@@ -640,10 +580,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         report = run_swarm(
             args.seed,
+            repo_root=args.repo_root,
             model_assist=args.model_assist,
             model_budget=args.model_budget,
-            openai_api_key=os.environ.get("OPENAI_API_KEY", "").strip(),
-            openai_model=os.environ.get("CMB_AGENT_MODEL", "").strip(),
         )
     except PhilosophySwarmError as exc:
         print(f"ERROR: {exc}")
