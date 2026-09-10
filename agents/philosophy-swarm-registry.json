@@ -27,11 +27,11 @@
     "rank_proposals"
   ],
   "denied_actions": [
-    "merge_pull_request",
+    "integrate_repository_changes",
     "push_default_branch",
     "publish_release",
     "change_repository_permissions",
-    "read_or_rotate_secrets",
+    "inspect_or_expose_credentials",
     "external_post",
     "mass_message",
     "unsolicited_distribution",
@@ -52,6 +52,7 @@
     {"guild_id":"G09","name":"GLITCH_POETS","agent_count":37,"mandate":"Explore code-poetry and Err GLITCHOLOGY forms while preserving factual and authority boundaries."}
   ],
   "runtime": "src/cmb_agents/philosophy_swarm.py",
+  "evidence_loader": "src/cmb_agents/philosophy_evidence.py",
   "documentation": "docs/PHILOSOPHY_SWARM_333.md",
   "scheduled_workflow": ".github/workflows/cmb-philosophy-swarm.yml"
 }
