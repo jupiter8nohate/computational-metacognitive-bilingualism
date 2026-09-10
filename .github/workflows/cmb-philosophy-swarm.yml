@@ -1,0 +1,74 @@
+name: CMB 333 Philosophy Swarm
+
+on:
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: CMB philosophy seed for bounded exploration
+        required: false
+        type: string
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cmb-333-philosophy-swarm
+  cancel-in-progress: true
+
+jobs:
+  explore:
+    name: 333-agent bounded exploration
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install CMB
+        run: python -m pip install --upgrade pip .
+      - name: Run credential-free bounded 333-agent swarm
+        env:
+          INPUT_SEED: ${{ inputs.seed }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          seed="${INPUT_SEED:-}"
+          if [ -z "$seed" ]; then
+            seed="CMB philosophy daily exploration $(date -u +%Y-%m-%d)"
+          fi
+
+          python -m cmb_agents.philosophy_swarm \
+            --seed "$seed" \
+            --repo-root . \
+            --output /tmp/cmb-333-philosophy-swarm.json
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path("/tmp/cmb-333-philosophy-swarm.json").read_text())
+          assert report["agent_count"] == 333
+          assert report["guild_count"] == 9
+          assert report["guild_size"] == 37
+          assert report["evidence_state"] == "validated"
+          assert report["summary"]["validated_evidence_records"] == 27
+          assert report["authority"]["may_integrate_repository_changes"] is False
+          assert report["authority"]["may_publish_externally"] is False
+          assert report["authority"]["may_modify_own_authority"] is False
+          assert report["authority"]["may_inspect_credentials"] is False
+          assert report["authority"]["human_final_authority"] is True
+          print("CMB-PS-333 authority and evidence self-check: PASS")
+          PY
+      - name: Upload swarm report
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+        with:
+          name: cmb-333-philosophy-swarm
+          path: /tmp/cmb-333-philosophy-swarm.json
+          if-no-files-found: error
+          retention-days: 14
