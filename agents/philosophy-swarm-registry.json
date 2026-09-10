@@ -1,0 +1,57 @@
+{
+  "schema_version": "cmb.philosophy-swarm.registry.v1",
+  "swarm_id": "CMB-PS-333",
+  "name": "CMB 333 Philosophy Swarm",
+  "agent_count": 333,
+  "guild_count": 9,
+  "guild_size": 37,
+  "architecture": "9 guilds x 37 logical agents",
+  "purpose": "Bounded autonomous exploration, stress-testing, teaching, and creative expansion of Computational Metacognitive Bilingualism.",
+  "invariants": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "CAPABILITY != AUTHORITY",
+    "MODEL_OUTPUT != EVIDENCE",
+    "EXPANSION != SPAM",
+    "CONSENT > VIRALITY",
+    "RELEVANCE > REACH",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "self_direction": [
+    "select_mission",
+    "abstain",
+    "challenge_peer",
+    "request_evidence",
+    "rank_proposals"
+  ],
+  "denied_actions": [
+    "merge_pull_request",
+    "push_default_branch",
+    "publish_release",
+    "change_repository_permissions",
+    "read_or_rotate_secrets",
+    "external_post",
+    "mass_message",
+    "unsolicited_distribution",
+    "execute_model_commands",
+    "self_modify_authority",
+    "delete_repository_content"
+  ],
+  "human_final_authority": true,
+  "guilds": [
+    {"guild_id":"G01","name":"AGENCY_GUARDIANS","agent_count":37,"mandate":"Develop human-agency boundaries without granting machine authority over identity or meaning."},
+    {"guild_id":"G02","name":"PATTERN_SKEPTICS","agent_count":37,"mandate":"Stress-test pattern claims through falsification, baselines, counterexamples, and uncertainty."},
+    {"guild_id":"G03","name":"PROVENANCE_KEEPERS","agent_count":37,"mandate":"Expand source tracing and integrity language while keeping receipts distinct from truth or ownership."},
+    {"guild_id":"G04","name":"CONSENT_ARCHITECTS","agent_count":37,"mandate":"Develop consent-first machine interaction patterns and explicit permission boundaries."},
+    {"guild_id":"G05","name":"NEURODIVERSITY_TRANSLATORS","agent_count":37,"mandate":"Expand CMB in ways that preserve cognitive difference and resist reductive machine profiling."},
+    {"guild_id":"G06","name":"PHILOSOPHY_LAB","agent_count":37,"mandate":"Generate rigorous philosophical questions that distinguish metaphor, mechanism, evidence, and unknowns."},
+    {"guild_id":"G07","name":"SYSTEMS_CARTOGRAPHERS","agent_count":37,"mandate":"Map incentives, feedback loops, measurement errors, externalities, and failure modes around automated systems."},
+    {"guild_id":"G08","name":"ACCESSIBILITY_EDUCATORS","agent_count":37,"mandate":"Convert CMB into accessible teaching forms without deleting nuance or changing canonical claims."},
+    {"guild_id":"G09","name":"GLITCH_POETS","agent_count":37,"mandate":"Explore code-poetry and Err GLITCHOLOGY forms while preserving factual and authority boundaries."}
+  ],
+  "runtime": "src/cmb_agents/philosophy_swarm.py",
+  "documentation": "docs/PHILOSOPHY_SWARM_333.md",
+  "scheduled_workflow": ".github/workflows/cmb-philosophy-swarm.yml"
+}
