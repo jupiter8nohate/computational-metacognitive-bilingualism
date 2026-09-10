@@ -32,11 +32,9 @@ jobs:
           cache: pip
       - name: Install CMB
         run: python -m pip install --upgrade pip .
-      - name: Run bounded 333-agent swarm
+      - name: Run credential-free bounded 333-agent swarm
         env:
           INPUT_SEED: ${{ inputs.seed }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          CMB_AGENT_MODEL: ${{ vars.CMB_AGENT_MODEL }}
         shell: bash
         run: |
           set -euo pipefail
@@ -45,12 +43,10 @@ jobs:
             seed="CMB philosophy daily exploration $(date -u +%Y-%m-%d)"
           fi
 
-          args=(--seed "$seed" --output /tmp/cmb-333-philosophy-swarm.json)
-          if [ -n "${OPENAI_API_KEY:-}" ] && [ -n "${CMB_AGENT_MODEL:-}" ]; then
-            args+=(--model-assist --model-budget 9)
-          fi
-
-          python -m cmb_agents.philosophy_swarm "${args[@]}"
+          python -m cmb_agents.philosophy_swarm \
+            --seed "$seed" \
+            --repo-root . \
+            --output /tmp/cmb-333-philosophy-swarm.json
 
           python - <<'PY'
           import json
@@ -60,11 +56,14 @@ jobs:
           assert report["agent_count"] == 333
           assert report["guild_count"] == 9
           assert report["guild_size"] == 37
-          assert report["authority"]["may_merge"] is False
+          assert report["evidence_state"] == "validated"
+          assert report["summary"]["validated_evidence_records"] == 27
+          assert report["authority"]["may_integrate_repository_changes"] is False
           assert report["authority"]["may_publish_externally"] is False
           assert report["authority"]["may_modify_own_authority"] is False
+          assert report["authority"]["may_inspect_credentials"] is False
           assert report["authority"]["human_final_authority"] is True
-          print("CMB-PS-333 authority self-check: PASS")
+          print("CMB-PS-333 authority and evidence self-check: PASS")
           PY
       - name: Upload swarm report
         uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
