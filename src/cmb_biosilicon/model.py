@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from dataclasses import asdict, dataclass
+from decimal import Decimal
 import math
 from typing import Final
 
@@ -17,12 +18,6 @@ PROTOCOL_ID: Final = "CMB://BIO_SILICON_VERIFICATION"
 SYMBOLIC_ALIAS: Final = "CMB://ORGANOID_SILICON_INTERFUSE"
 PROTOCOL_VERSION: Final = "1.0"
 VERIFICATION_METHOD: Final = "bounded_residual"
-
-# Relative tolerance protects a declared nonzero boundary from binary float
-# representation noise. Zero tolerance remains exact. The absolute tolerance is
-# used only when comparing serialized residuals with recomputed residuals.
-_COMPARISON_REL_TOL: Final = 1e-12
-_SERIALIZATION_ABS_TOL: Final = 1e-15
 
 CLAIM_BOUNDARIES: Final[tuple[str, ...]] = (
     "ORGANOID != BRAIN",
@@ -52,25 +47,20 @@ def _finite(name: str, value: float) -> float:
     return number
 
 
-def _within_bound(residual: float, tolerance: float) -> bool:
-    """Return whether a residual is within a declared bound.
+def _decimal(value: float) -> Decimal:
+    """Interpret a finite float through its stable decimal representation."""
 
-    The direct comparison handles ordinary cases. ``math.isclose`` protects a
-    nonzero decimal boundary from binary floating-point representation noise.
-    A declared zero tolerance remains an exact-zero requirement.
-    """
+    return Decimal(str(value))
 
-    magnitude = abs(residual)
-    if magnitude <= tolerance:
-        return True
-    if tolerance == 0.0:
-        return False
-    return math.isclose(
-        magnitude,
-        tolerance,
-        rel_tol=_COMPARISON_REL_TOL,
-        abs_tol=0.0,
-    )
+
+def _decimal_residual(observed: float, reference: float) -> Decimal:
+    return _decimal(observed) - _decimal(reference)
+
+
+def _within_bound(observed: float, reference: float, tolerance: float) -> bool:
+    """Check the declared bound without adding an implicit acceptance margin."""
+
+    return abs(_decimal_residual(observed, reference)) <= _decimal(tolerance)
 
 
 @dataclass(frozen=True, slots=True)
@@ -170,23 +160,39 @@ def verify_biosilicon_state(
 ) -> VerificationResult:
     """Compare observed state with a reference using declared channel bounds.
 
-    The function performs no biological or cognitive inference. It only answers
-    whether each numerical observation lies within the caller-declared tolerance
-    of the caller-declared reference.
+    Decimal comparison is used for the declared numerical contract so a boundary
+    such as 0.4 - 0.3 <= 0.1 remains exact without creating any hidden margin.
+    The function performs no biological or cognitive inference.
     """
 
     residuals = BioSiliconResiduals(
-        biological=observed.biological - reference.biological,
-        electrical=observed.electrical - reference.electrical,
-        optical=observed.optical - reference.optical,
-        modulation=observed.modulation - reference.modulation,
+        biological=float(_decimal_residual(observed.biological, reference.biological)),
+        electrical=float(_decimal_residual(observed.electrical, reference.electrical)),
+        optical=float(_decimal_residual(observed.optical, reference.optical)),
+        modulation=float(_decimal_residual(observed.modulation, reference.modulation)),
     )
 
     channels = {
-        "R_bio": _within_bound(residuals.biological, bounds.biological),
-        "R_elec": _within_bound(residuals.electrical, bounds.electrical),
-        "R_opt": _within_bound(residuals.optical, bounds.optical),
-        "R_mod": _within_bound(residuals.modulation, bounds.modulation),
+        "R_bio": _within_bound(
+            observed.biological,
+            reference.biological,
+            bounds.biological,
+        ),
+        "R_elec": _within_bound(
+            observed.electrical,
+            reference.electrical,
+            bounds.electrical,
+        ),
+        "R_opt": _within_bound(
+            observed.optical,
+            reference.optical,
+            bounds.optical,
+        ),
+        "R_mod": _within_bound(
+            observed.modulation,
+            reference.modulation,
+            bounds.modulation,
+        ),
     }
     consistent = all(channels.values())
 
@@ -265,12 +271,7 @@ def validate_biosilicon_record(record: Mapping[str, object]) -> VerificationResu
     expected_residuals = asdict(expected.residuals)
     for channel, expected_value in expected_residuals.items():
         actual_value = _record_number(residual_record, channel, "residuals")
-        if not math.isclose(
-            actual_value,
-            expected_value,
-            rel_tol=_COMPARISON_REL_TOL,
-            abs_tol=_SERIALIZATION_ABS_TOL,
-        ):
+        if _decimal(actual_value) != _decimal(expected_value):
             raise ValueError(f"residuals.{channel} contradicts recomputation")
 
     channels_record = _record_mapping(record, "channels_within_bounds")
