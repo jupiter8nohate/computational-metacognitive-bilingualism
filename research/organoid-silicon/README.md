@@ -12,7 +12,7 @@ This directory contains a bounded, non-clinical verification model for describin
 R = [R_bio, R_elec, R_opt, R_mod]
 ```
 
-Each residual is defined as an observed numerical value minus a stated reference value. A channel passes only when its absolute residual is less than or equal to a declared tolerance.
+Each residual is defined as an observed numerical value minus a stated reference value. A channel passes only when its absolute residual is less than or equal to a declared tolerance. The implementation includes a narrow floating-point boundary guard so decimal values intended to lie exactly on a declared tolerance are not rejected only because of binary representation noise.
 
 ```text
 OBSERVATION
@@ -44,6 +44,26 @@ PATTERN != PROOF
 CAPABILITY != AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
+
+## Machine contract
+
+The reference implementation and public machine record use the same contract. `VerificationResult.to_dict()` emits the observation, reference, tolerance, residuals, channel verdicts, verification state, and claim boundaries defined by `schemas/cmb.bio-interface-state.v1.schema.json`.
+
+Validation has two distinct stages:
+
+```text
+JSON SCHEMA
+structure + types
+      |
+      v
+validate_biosilicon_record(...)
+recompute residuals + verdicts + status
+      |
+      v
+SEMANTICALLY CONSISTENT RECORD
+```
+
+JSON Schema cannot express the arithmetic relation between all of these fields. A schema-valid record is therefore not automatically a verified record. `validate_biosilicon_record` recomputes the result and rejects contradictory derived fields.
 
 ## Software
 
