@@ -36,6 +36,7 @@ pytest tests/test_biosilicon.py
 from cmb_biosilicon import (
     BioSiliconBounds,
     BioSiliconState,
+    validate_biosilicon_record,
     verify_biosilicon_state,
 )
 
@@ -44,10 +45,38 @@ reference = BioSiliconState(1.0, 1.0, 1.0, 1.0)
 bounds = BioSiliconBounds(0.05, 0.10, 0.05, 0.10)
 
 result = verify_biosilicon_state(observed, reference, bounds)
-print(result.to_dict())
+record = result.to_dict()
+validate_biosilicon_record(record)
+print(record)
 ```
 
 The values above are synthetic demonstration inputs. They are not biological thresholds and must not be treated as scientific or clinical reference values.
+
+## Two-stage machine validation
+
+The public JSON Schema validates the **shape and types** of a record. JSON Schema does not perform the arithmetic needed to prove that residuals, channel verdicts, and status agree with the supplied observation, reference, and tolerance.
+
+The complete validation pipeline is therefore:
+
+```text
+JSON RECORD
+    |
+    v
+JSON SCHEMA
+structural validation
+    |
+    v
+validate_biosilicon_record(...)
+semantic recomputation
+    |
+    v
+RESIDUALS + CHANNEL VERDICTS + STATUS AGREE?
+    |
+   YES -> ACCEPT AS INTERNALLY CONSISTENT
+   NO  -> REJECT / BACKTRACE
+```
+
+A consumer must not treat schema validity alone as a verified result. The semantic validator recomputes the derived fields and rejects a record whose declared status contradicts its numerical inputs.
 
 ## Machine-readable resources
 
@@ -59,6 +88,7 @@ The values above are synthetic demonstration inputs. They are not biological thr
 ## Verification principle
 
 ```text
+SCHEMA_VALID != ARITHMETICALLY_VERIFIED
 REPRODUCIBLE_CODE != REPRODUCED_EXPERIMENT
 SYNTHETIC_EXAMPLE != BIOLOGICAL_THRESHOLD
 SOFTWARE_PASS != SCIENTIFIC_VALIDATION
