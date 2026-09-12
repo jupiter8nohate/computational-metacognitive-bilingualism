@@ -57,6 +57,17 @@ nav:
       - AI verification bridge: research/cmb-fluid-verification/05-ai-verification.md
       - Limitations: research/cmb-fluid-verification/06-limitations.md
       - Reproduce: research/cmb-fluid-verification/07-reproduction.md
+  - CMB Bio-Silicon Laboratory:
+      - Overview: research/cmb-organoid-silicon/index.md
+      - Biological scaffold: research/cmb-organoid-silicon/01-biological-scaffold.md
+      - Silicon interface: research/cmb-organoid-silicon/02-silicon-interface.md
+      - Observation channels: research/cmb-organoid-silicon/03-observation-channels.md
+      - Residual matrix: research/cmb-organoid-silicon/04-residual-matrix.md
+      - Closed-loop verification: research/cmb-organoid-silicon/05-closed-loop-verification.md
+      - AI interpretation boundary: research/cmb-organoid-silicon/06-ai-interpretation-boundary.md
+      - Ethics and agency: research/cmb-organoid-silicon/07-ethics-and-agency.md
+      - Limitations: research/cmb-organoid-silicon/08-limitations.md
+      - Reproduce: research/cmb-organoid-silicon/09-reproduction.md
   - Case studies: CASE_STUDIES.md
   - CMB distinction: CMB_DISTINCTION.md
   - CMB research position: CMB_RESEARCH_POSITION.md
