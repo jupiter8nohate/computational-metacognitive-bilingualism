@@ -8,10 +8,11 @@ Start with:
 2. [CMB Research Position](CMB_RESEARCH_POSITION.md)
 3. [Prior Art & Positioning](PRIOR_ART_AND_POSITIONING.md)
 4. [Falsifiability and evidence matrix](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/research/FALSIFIABILITY.md)
-5. [CMB case studies](CASE_STUDIES.md)
-6. the public policy one-pager:
+5. [CMB Residual Verification Laboratory](research/cmb-fluid-verification/index.md) for a reproducible symbolic-physics case study with explicit claim boundaries
+6. [CMB case studies](CASE_STUDIES.md)
+7. the public policy one-pager:
    https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_POLICY_ONE_PAGER.md
-7. the full Global Advocacy Charter:
+8. the full Global Advocacy Charter:
    https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/policy/CMB_GLOBAL_ADVOCACY_CHARTER.md
 
 ## CMB's narrower contribution
