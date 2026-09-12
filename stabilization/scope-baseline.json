@@ -3,6 +3,7 @@
   "freeze_commit": "e4465d3e07ec5a9d3d56cdd9f79969641fa2a671",
   "top_level_python_packages": [
     "cmb_agents",
+    "cmb_biosilicon",
     "cmb_cap",
     "cmb_edu",
     "cmb_glitch8",
