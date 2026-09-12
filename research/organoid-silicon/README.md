@@ -12,7 +12,7 @@ This directory contains a bounded, non-clinical verification model for describin
 R = [R_bio, R_elec, R_opt, R_mod]
 ```
 
-Each residual is defined as an observed numerical value minus a stated reference value. A channel passes only when its absolute residual is less than or equal to a declared tolerance. The implementation includes a narrow floating-point boundary guard so decimal values intended to lie exactly on a declared tolerance are not rejected only because of binary representation noise.
+Each residual is defined as an observed numerical value minus a stated reference value. A channel passes only when its absolute residual is less than or equal to a declared tolerance. The implementation compares the stable decimal representations of the declared values, so a boundary such as `0.4 - 0.3 <= 0.1` is evaluated exactly without creating an additional hidden acceptance margin at larger scales.
 
 ```text
 OBSERVATION
