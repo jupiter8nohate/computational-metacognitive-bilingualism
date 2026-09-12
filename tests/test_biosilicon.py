@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import json
 import math
+from pathlib import Path
 
+from jsonschema import Draft202012Validator
 import pytest
 
 from cmb_biosilicon import (
@@ -9,6 +12,8 @@ from cmb_biosilicon import (
     BioSiliconState,
     verify_biosilicon_state,
 )
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_state_within_bounds_is_consistent() -> None:
@@ -21,6 +26,7 @@ def test_state_within_bounds_is_consistent() -> None:
     assert result.model_consistent is True
     assert result.claim == "WITHIN_DEFINED_BOUNDS"
     assert all(result.channels_within_bounds.values())
+    assert result.residuals.max_abs() == pytest.approx(0.07)
     assert result.to_dict()["protocol"] == "CMB://BIO_SILICON_VERIFICATION"
     assert result.to_dict()["symbolic_alias"] == "CMB://ORGANOID_SILICON_INTERFUSE"
 
@@ -43,3 +49,15 @@ def test_invalid_numbers_are_rejected() -> None:
 
     with pytest.raises(ValueError, match="nonnegative"):
         BioSiliconBounds(-0.1, 0.1, 0.1, 0.1)
+
+
+def test_example_record_conforms_to_public_schema() -> None:
+    schema = json.loads(
+        (ROOT / "schemas/cmb.bio-interface-state.v1.schema.json").read_text(encoding="utf-8")
+    )
+    record = json.loads(
+        (ROOT / "research/organoid-silicon/example_state.json").read_text(encoding="utf-8")
+    )
+
+    Draft202012Validator.check_schema(schema)
+    Draft202012Validator(schema).validate(record)
