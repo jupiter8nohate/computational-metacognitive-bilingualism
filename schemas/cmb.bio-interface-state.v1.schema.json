@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CMB Bio-Interface Verification State v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol", "version", "observation", "reference", "tolerance", "verification"],
+  "properties": {
+    "protocol": {"const": "CMB://BIO_SILICON_VERIFICATION"},
+    "version": {"const": "1.0"},
+    "observation": {"$ref": "#/$defs/state"},
+    "reference": {"$ref": "#/$defs/state"},
+    "tolerance": {"$ref": "#/$defs/bounds"},
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "status"],
+      "properties": {
+        "method": {"const": "bounded_residual"},
+        "status": {"enum": ["WITHIN_DEFINED_BOUNDS", "BACKTRACE_REQUIRED"]}
+      }
+    }
+  },
+  "$defs": {
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["biological", "electrical", "optical", "response"],
+      "properties": {
+        "biological": {"type": "number"},
+        "electrical": {"type": "number"},
+        "optical": {"type": "number"},
+        "response": {"type": "number"}
+      }
+    },
+    "bounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["biological", "electrical", "optical", "response"],
+      "properties": {
+        "biological": {"type": "number", "minimum": 0},
+        "electrical": {"type": "number", "minimum": 0},
+        "optical": {"type": "number", "minimum": 0},
+        "response": {"type": "number", "minimum": 0}
+      }
+    }
+  }
+}
