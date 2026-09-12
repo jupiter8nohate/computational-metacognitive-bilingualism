@@ -18,11 +18,11 @@ SYMBOLIC_ALIAS: Final = "CMB://ORGANOID_SILICON_INTERFUSE"
 PROTOCOL_VERSION: Final = "1.0"
 VERIFICATION_METHOD: Final = "bounded_residual"
 
-# This guard applies only to floating-point comparison at the declared boundary.
-# It is intentionally much smaller than any domain tolerance and does not invent
-# biological acceptance margins.
+# Relative tolerance protects a declared nonzero boundary from binary float
+# representation noise. Zero tolerance remains exact. The absolute tolerance is
+# used only when comparing serialized residuals with recomputed residuals.
 _COMPARISON_REL_TOL: Final = 1e-12
-_COMPARISON_ABS_TOL: Final = 1e-15
+_SERIALIZATION_ABS_TOL: Final = 1e-15
 
 CLAIM_BOUNDARIES: Final[tuple[str, ...]] = (
     "ORGANOID != BRAIN",
@@ -55,16 +55,21 @@ def _finite(name: str, value: float) -> float:
 def _within_bound(residual: float, tolerance: float) -> bool:
     """Return whether a residual is within a declared bound.
 
-    The direct comparison handles ordinary cases. ``math.isclose`` only protects
-    an exact decimal boundary from binary floating-point representation noise.
+    The direct comparison handles ordinary cases. ``math.isclose`` protects a
+    nonzero decimal boundary from binary floating-point representation noise.
+    A declared zero tolerance remains an exact-zero requirement.
     """
 
     magnitude = abs(residual)
-    return magnitude <= tolerance or math.isclose(
+    if magnitude <= tolerance:
+        return True
+    if tolerance == 0.0:
+        return False
+    return math.isclose(
         magnitude,
         tolerance,
         rel_tol=_COMPARISON_REL_TOL,
-        abs_tol=_COMPARISON_ABS_TOL,
+        abs_tol=0.0,
     )
 
 
@@ -203,30 +208,36 @@ def _record_mapping(record: Mapping[str, object], key: str) -> Mapping[str, obje
     return value
 
 
+def _record_number(section: Mapping[str, object], key: str, label: str) -> float:
+    try:
+        value = section[key]
+    except KeyError as exc:
+        raise ValueError(f"{label}.{key} is missing") from exc
+    if isinstance(value, bool):
+        raise ValueError(f"{label}.{key} must be numeric, not boolean")
+    try:
+        return _finite(f"{label}.{key}", float(value))
+    except (TypeError, ValueError) as exc:
+        raise ValueError(f"{label}.{key} is invalid") from exc
+
+
 def _state_from_record(record: Mapping[str, object], key: str) -> BioSiliconState:
     section = _record_mapping(record, key)
-    try:
-        return BioSiliconState(
-            biological=float(section["biological"]),
-            electrical=float(section["electrical"]),
-            optical=float(section["optical"]),
-            modulation=float(section["modulation"]),
-        )
-    except (KeyError, TypeError, ValueError) as exc:
-        raise ValueError(f"{key} contains invalid channel values") from exc
+    return BioSiliconState(
+        biological=_record_number(section, "biological", key),
+        electrical=_record_number(section, "electrical", key),
+        optical=_record_number(section, "optical", key),
+        modulation=_record_number(section, "modulation", key),
+    )
 
 
 def _bounds_from_record(record: Mapping[str, object]) -> BioSiliconBounds:
     section = _record_mapping(record, "tolerance")
-    try:
-        return BioSiliconBounds(
-            biological=float(section["biological"]),
-            electrical=float(section["electrical"]),
-            optical=float(section["optical"]),
-            modulation=float(section["modulation"]),
-        )
-    except (KeyError, TypeError, ValueError) as exc:
-        raise ValueError("tolerance contains invalid channel values") from exc
+    values = {
+        key: _record_number(section, key, "tolerance")
+        for key in ("biological", "electrical", "optical", "modulation")
+    }
+    return BioSiliconBounds(**values)
 
 
 def validate_biosilicon_record(record: Mapping[str, object]) -> VerificationResult:
@@ -253,15 +264,12 @@ def validate_biosilicon_record(record: Mapping[str, object]) -> VerificationResu
     residual_record = _record_mapping(record, "residuals")
     expected_residuals = asdict(expected.residuals)
     for channel, expected_value in expected_residuals.items():
-        try:
-            actual_value = _finite(f"residuals.{channel}", float(residual_record[channel]))
-        except (KeyError, TypeError, ValueError) as exc:
-            raise ValueError(f"residuals.{channel} is invalid") from exc
+        actual_value = _record_number(residual_record, channel, "residuals")
         if not math.isclose(
             actual_value,
             expected_value,
             rel_tol=_COMPARISON_REL_TOL,
-            abs_tol=_COMPARISON_ABS_TOL,
+            abs_tol=_SERIALIZATION_ABS_TOL,
         ):
             raise ValueError(f"residuals.{channel} contradicts recomputation")
 
