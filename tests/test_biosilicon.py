@@ -19,9 +19,10 @@ def test_state_within_bounds_is_consistent() -> None:
     result = verify_biosilicon_state(observed, reference, bounds)
 
     assert result.model_consistent is True
-    assert result.claim == "INTERFACE_BEHAVIOR_WITHIN_DEFINED_BOUNDS"
+    assert result.claim == "WITHIN_DEFINED_BOUNDS"
     assert all(result.channels_within_bounds.values())
-    assert result.to_dict()["protocol"] == "CMB://ORGANOID_SILICON_INTERFUSE"
+    assert result.to_dict()["protocol"] == "CMB://BIO_SILICON_VERIFICATION"
+    assert result.to_dict()["symbolic_alias"] == "CMB://ORGANOID_SILICON_INTERFUSE"
 
 
 def test_failed_channel_requires_backtrace() -> None:
