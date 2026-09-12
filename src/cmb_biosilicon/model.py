@@ -8,6 +8,7 @@ intent, or identity.
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import asdict, dataclass
 import math
 from typing import Final
@@ -15,6 +16,13 @@ from typing import Final
 PROTOCOL_ID: Final = "CMB://BIO_SILICON_VERIFICATION"
 SYMBOLIC_ALIAS: Final = "CMB://ORGANOID_SILICON_INTERFUSE"
 PROTOCOL_VERSION: Final = "1.0"
+VERIFICATION_METHOD: Final = "bounded_residual"
+
+# This guard applies only to floating-point comparison at the declared boundary.
+# It is intentionally much smaller than any domain tolerance and does not invent
+# biological acceptance margins.
+_COMPARISON_REL_TOL: Final = 1e-12
+_COMPARISON_ABS_TOL: Final = 1e-15
 
 CLAIM_BOUNDARIES: Final[tuple[str, ...]] = (
     "ORGANOID != BRAIN",
@@ -42,6 +50,22 @@ def _finite(name: str, value: float) -> float:
     if not math.isfinite(number):
         raise ValueError(f"{name} must be finite")
     return number
+
+
+def _within_bound(residual: float, tolerance: float) -> bool:
+    """Return whether a residual is within a declared bound.
+
+    The direct comparison handles ordinary cases. ``math.isclose`` only protects
+    an exact decimal boundary from binary floating-point representation noise.
+    """
+
+    magnitude = abs(residual)
+    return magnitude <= tolerance or math.isclose(
+        magnitude,
+        tolerance,
+        rel_tol=_COMPARISON_REL_TOL,
+        abs_tol=_COMPARISON_ABS_TOL,
+    )
 
 
 @dataclass(frozen=True, slots=True)
@@ -89,24 +113,47 @@ class BioSiliconResiduals:
 class VerificationResult:
     """Result of a bounded four-channel residual audit."""
 
-    protocol: str
-    symbolic_alias: str
-    version: str
+    observed: BioSiliconState
+    reference: BioSiliconState
+    bounds: BioSiliconBounds
     residuals: BioSiliconResiduals
     channels_within_bounds: dict[str, bool]
     model_consistent: bool
     claim: str
-    claim_boundaries: tuple[str, ...]
+
+    @property
+    def protocol(self) -> str:
+        return PROTOCOL_ID
+
+    @property
+    def symbolic_alias(self) -> str:
+        return SYMBOLIC_ALIAS
+
+    @property
+    def version(self) -> str:
+        return PROTOCOL_VERSION
+
+    @property
+    def claim_boundaries(self) -> tuple[str, ...]:
+        return CLAIM_BOUNDARIES
 
     def to_dict(self) -> dict[str, object]:
+        """Serialize to the canonical public verification-record contract."""
+
         return {
             "protocol": self.protocol,
             "symbolic_alias": self.symbolic_alias,
             "version": self.version,
+            "observation": asdict(self.observed),
+            "reference": asdict(self.reference),
+            "tolerance": asdict(self.bounds),
             "residuals": asdict(self.residuals),
             "channels_within_bounds": dict(self.channels_within_bounds),
-            "model_consistent": self.model_consistent,
-            "claim": self.claim,
+            "verification": {
+                "method": VERIFICATION_METHOD,
+                "status": self.claim,
+                "model_consistent": self.model_consistent,
+            },
             "claim_boundaries": list(self.claim_boundaries),
         }
 
@@ -131,20 +178,107 @@ def verify_biosilicon_state(
     )
 
     channels = {
-        "R_bio": abs(residuals.biological) <= bounds.biological,
-        "R_elec": abs(residuals.electrical) <= bounds.electrical,
-        "R_opt": abs(residuals.optical) <= bounds.optical,
-        "R_mod": abs(residuals.modulation) <= bounds.modulation,
+        "R_bio": _within_bound(residuals.biological, bounds.biological),
+        "R_elec": _within_bound(residuals.electrical, bounds.electrical),
+        "R_opt": _within_bound(residuals.optical, bounds.optical),
+        "R_mod": _within_bound(residuals.modulation, bounds.modulation),
     }
     consistent = all(channels.values())
 
     return VerificationResult(
-        protocol=PROTOCOL_ID,
-        symbolic_alias=SYMBOLIC_ALIAS,
-        version=PROTOCOL_VERSION,
+        observed=observed,
+        reference=reference,
+        bounds=bounds,
         residuals=residuals,
         channels_within_bounds=channels,
         model_consistent=consistent,
         claim="WITHIN_DEFINED_BOUNDS" if consistent else "BACKTRACE_REQUIRED",
-        claim_boundaries=CLAIM_BOUNDARIES,
     )
+
+
+def _record_mapping(record: Mapping[str, object], key: str) -> Mapping[str, object]:
+    value = record.get(key)
+    if not isinstance(value, Mapping):
+        raise ValueError(f"{key} must be an object")
+    return value
+
+
+def _state_from_record(record: Mapping[str, object], key: str) -> BioSiliconState:
+    section = _record_mapping(record, key)
+    try:
+        return BioSiliconState(
+            biological=float(section["biological"]),
+            electrical=float(section["electrical"]),
+            optical=float(section["optical"]),
+            modulation=float(section["modulation"]),
+        )
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError(f"{key} contains invalid channel values") from exc
+
+
+def _bounds_from_record(record: Mapping[str, object]) -> BioSiliconBounds:
+    section = _record_mapping(record, "tolerance")
+    try:
+        return BioSiliconBounds(
+            biological=float(section["biological"]),
+            electrical=float(section["electrical"]),
+            optical=float(section["optical"]),
+            modulation=float(section["modulation"]),
+        )
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ValueError("tolerance contains invalid channel values") from exc
+
+
+def validate_biosilicon_record(record: Mapping[str, object]) -> VerificationResult:
+    """Recompute a serialized record and reject contradictory derived fields.
+
+    JSON Schema validates the public record's structure. This function performs
+    the arithmetic semantic check that JSON Schema cannot express: residuals,
+    channel verdicts, model consistency, and status must all match recomputation.
+    The verified result is returned when the record is semantically consistent.
+    """
+
+    if record.get("protocol") != PROTOCOL_ID:
+        raise ValueError("protocol does not match the CMB bio-silicon protocol")
+    if record.get("symbolic_alias") != SYMBOLIC_ALIAS:
+        raise ValueError("symbolic_alias does not match the canonical alias")
+    if record.get("version") != PROTOCOL_VERSION:
+        raise ValueError("version is not supported")
+
+    observed = _state_from_record(record, "observation")
+    reference = _state_from_record(record, "reference")
+    bounds = _bounds_from_record(record)
+    expected = verify_biosilicon_state(observed, reference, bounds)
+
+    residual_record = _record_mapping(record, "residuals")
+    expected_residuals = asdict(expected.residuals)
+    for channel, expected_value in expected_residuals.items():
+        try:
+            actual_value = _finite(f"residuals.{channel}", float(residual_record[channel]))
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError(f"residuals.{channel} is invalid") from exc
+        if not math.isclose(
+            actual_value,
+            expected_value,
+            rel_tol=_COMPARISON_REL_TOL,
+            abs_tol=_COMPARISON_ABS_TOL,
+        ):
+            raise ValueError(f"residuals.{channel} contradicts recomputation")
+
+    channels_record = _record_mapping(record, "channels_within_bounds")
+    if dict(channels_record) != expected.channels_within_bounds:
+        raise ValueError("channels_within_bounds contradicts recomputation")
+
+    verification = _record_mapping(record, "verification")
+    if verification.get("method") != VERIFICATION_METHOD:
+        raise ValueError("verification.method is not supported")
+    if verification.get("status") != expected.claim:
+        raise ValueError("verification.status contradicts recomputation")
+    if verification.get("model_consistent") is not expected.model_consistent:
+        raise ValueError("verification.model_consistent contradicts recomputation")
+
+    boundaries = record.get("claim_boundaries")
+    if boundaries != list(CLAIM_BOUNDARIES):
+        raise ValueError("claim_boundaries do not match the canonical boundaries")
+
+    return expected
