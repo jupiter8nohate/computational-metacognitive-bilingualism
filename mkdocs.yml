@@ -89,3 +89,4 @@ extra_css:
   - stylesheets/tokens.css
   - stylesheets/components.css
   - stylesheets/accessibility.css
+  - stylesheets/lived-experience.css

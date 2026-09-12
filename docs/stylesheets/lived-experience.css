@@ -1,0 +1,63 @@
+/* Lived-experience testimony page background and readability layer. */
+
+body:has(h1#why-i-write-this-way) .wy-nav-content-wrap {
+  background:
+    linear-gradient(rgba(5, 5, 8, 0.74), rgba(5, 5, 8, 0.88)),
+    url("../media/cmb-cognitive-offloading-adaptive-symbiosis.jpg") center top / cover fixed no-repeat;
+}
+
+body:has(h1#why-i-write-this-way) .wy-nav-content {
+  background: rgba(8, 8, 12, 0.82);
+  color: #f5f5f5;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+body:has(h1#why-i-write-this-way) .wy-nav-content h1,
+body:has(h1#why-i-write-this-way) .wy-nav-content h2,
+body:has(h1#why-i-write-this-way) .wy-nav-content h3,
+body:has(h1#why-i-write-this-way) .wy-nav-content h4,
+body:has(h1#why-i-write-this-way) .wy-nav-content p,
+body:has(h1#why-i-write-this-way) .wy-nav-content li,
+body:has(h1#why-i-write-this-way) .wy-nav-content blockquote,
+body:has(h1#why-i-write-this-way) .wy-nav-content strong {
+  color: #f5f5f5;
+}
+
+body:has(h1#why-i-write-this-way) .wy-nav-content a {
+  color: #ffd782;
+}
+
+body:has(h1#why-i-write-this-way) .wy-nav-content a:visited {
+  color: #e6c7ff;
+}
+
+body:has(h1#why-i-write-this-way) .wy-nav-content pre,
+body:has(h1#why-i-write-this-way) .wy-nav-content code {
+  background: rgba(0, 0, 0, 0.64);
+  color: #f8f8f2;
+}
+
+body:has(h1#why-i-write-this-way) .wy-nav-content blockquote {
+  border-left-color: #ffd782;
+  background: rgba(0, 0, 0, 0.34);
+  padding: 0.75rem 1rem;
+}
+
+body:has(h1#why-i-write-this-way) .wy-nav-content hr {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+@media (max-width: 768px) {
+  body:has(h1#why-i-write-this-way) .wy-nav-content-wrap {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  body:has(h1#why-i-write-this-way) .wy-nav-content {
+    border-radius: 8px;
+    background: rgba(8, 8, 12, 0.86);
+  }
+}
