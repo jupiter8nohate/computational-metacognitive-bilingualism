@@ -1,0 +1,45 @@
+{
+  "experiment": "cmb-forced-fluid-equilibrium-v1",
+  "status": "verified_under_stated_assumptions",
+  "claim_boundary": {
+    "general_navier_stokes_solution": false,
+    "extra_physical_dimensions_claimed": false,
+    "symbolic_residual_zero_is_universal_truth": false
+  },
+  "state": {
+    "rho": "rho0",
+    "u": "0",
+    "v": "0",
+    "w": "0",
+    "p": "cos(k*x - omega*t)",
+    "E": "E0"
+  },
+  "sign_convention": "d(rho*u)/dt + d(rho*u^2)/dx + dp/dx - f_x = 0",
+  "derived": {
+    "pressure_gradient": "-k*sin(k*x - omega*t)",
+    "force_x": "-k*sin(k*x - omega*t)"
+  },
+  "residuals": {
+    "mass": "0",
+    "momentum_x": "0",
+    "energy": "0"
+  },
+  "audit_state": [
+    "x",
+    "y",
+    "z",
+    "t",
+    "R_mass",
+    "norm_R_momentum",
+    "R_energy",
+    "verification_state"
+  ],
+  "invariants": [
+    "PATTERN != PROOF",
+    "MODEL != REALITY",
+    "RESIDUAL_ZERO != UNIVERSAL_TRUTH",
+    "SYMBOLIC_EXACTNESS != PHYSICAL_COMPLETENESS",
+    "CAPABILITY != AUTHORITY",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}
