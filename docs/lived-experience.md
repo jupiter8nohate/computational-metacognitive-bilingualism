@@ -2,7 +2,6 @@
 layout: default
 title: "Why I Write This Way: Autism, Schizophrenia & CMB"
 description: "A first-person testimony by Jupiter Hudson on autism, schizophrenia, metacognition, verification, and the origins of Computational Metacognitive Bilingualism."
-permalink: /lived-experience/
 ---
 
 # Why I Write This Way
