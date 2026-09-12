@@ -1,0 +1,50 @@
+{
+  "protocol": "CMB://BIO_SILICON_VERIFICATION",
+  "symbolic_alias": "CMB://ORGANOID_SILICON_INTERFUSE",
+  "version": "1.0",
+  "observation": {
+    "biological": 0.97,
+    "electrical": 0.94,
+    "optical": 0.96,
+    "modulation": 0.93
+  },
+  "reference": {
+    "biological": 1.0,
+    "electrical": 1.0,
+    "optical": 1.0,
+    "modulation": 1.0
+  },
+  "tolerance": {
+    "biological": 0.05,
+    "electrical": 0.10,
+    "optical": 0.05,
+    "modulation": 0.10
+  },
+  "residuals": {
+    "biological": -0.03,
+    "electrical": -0.06,
+    "optical": -0.04,
+    "modulation": -0.07
+  },
+  "channels_within_bounds": {
+    "R_bio": true,
+    "R_elec": true,
+    "R_opt": true,
+    "R_mod": true
+  },
+  "verification": {
+    "method": "bounded_residual",
+    "status": "WITHIN_DEFINED_BOUNDS",
+    "model_consistent": true
+  },
+  "claim_boundaries": [
+    "ORGANOID != BRAIN",
+    "SIGNAL != THOUGHT",
+    "ACTIVITY != CONSCIOUSNESS",
+    "STIMULATION != CONTROL",
+    "MODEL != MIND",
+    "PATTERN != PROOF",
+    "CAPABILITY != AUTHORITY",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}
