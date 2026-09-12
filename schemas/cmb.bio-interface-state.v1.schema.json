@@ -1,8 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.bio-interface-state.v1.schema.json",
-  "title": "CMB Bio-Interface Verification State v1",
-  "description": "Bounded residual record. Passing means only consistency with declared numerical bounds.",
+  "title": "CMB Bio-Interface Verification Record v1",
+  "description": "Canonical structural contract for bounded bio-interface residual verification. Passing means only consistency with declared numerical bounds. JSON Schema validates record structure; arithmetic consistency must be recomputed with cmb_biosilicon.validate_biosilicon_record.",
+  "$comment": "Do not treat schema validity as proof that derived residuals or status are numerically correct. Use the semantic validator to recompute them from observation, reference, and tolerance.",
+  "x-cmb-semantic-validator": "cmb_biosilicon.validate_biosilicon_record",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -12,6 +14,8 @@
     "observation",
     "reference",
     "tolerance",
+    "residuals",
+    "channels_within_bounds",
     "verification",
     "claim_boundaries"
   ],
@@ -22,13 +26,26 @@
     "observation": {"$ref": "#/$defs/state"},
     "reference": {"$ref": "#/$defs/state"},
     "tolerance": {"$ref": "#/$defs/bounds"},
+    "residuals": {"$ref": "#/$defs/state"},
+    "channels_within_bounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["R_bio", "R_elec", "R_opt", "R_mod"],
+      "properties": {
+        "R_bio": {"type": "boolean"},
+        "R_elec": {"type": "boolean"},
+        "R_opt": {"type": "boolean"},
+        "R_mod": {"type": "boolean"}
+      }
+    },
     "verification": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["method", "status"],
+      "required": ["method", "status", "model_consistent"],
       "properties": {
         "method": {"const": "bounded_residual"},
-        "status": {"enum": ["WITHIN_DEFINED_BOUNDS", "BACKTRACE_REQUIRED"]}
+        "status": {"enum": ["WITHIN_DEFINED_BOUNDS", "BACKTRACE_REQUIRED"]},
+        "model_consistent": {"type": "boolean"}
       }
     },
     "claim_boundaries": {
