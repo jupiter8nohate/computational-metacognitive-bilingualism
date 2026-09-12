@@ -12,7 +12,8 @@ from dataclasses import asdict, dataclass
 import math
 from typing import Final
 
-PROTOCOL_ID: Final = "CMB://ORGANOID_SILICON_INTERFUSE"
+PROTOCOL_ID: Final = "CMB://BIO_SILICON_VERIFICATION"
+SYMBOLIC_ALIAS: Final = "CMB://ORGANOID_SILICON_INTERFUSE"
 PROTOCOL_VERSION: Final = "1.0"
 
 CLAIM_BOUNDARIES: Final[tuple[str, ...]] = (
@@ -89,6 +90,7 @@ class VerificationResult:
     """Result of a bounded four-channel residual audit."""
 
     protocol: str
+    symbolic_alias: str
     version: str
     residuals: BioSiliconResiduals
     channels_within_bounds: dict[str, bool]
@@ -99,6 +101,7 @@ class VerificationResult:
     def to_dict(self) -> dict[str, object]:
         return {
             "protocol": self.protocol,
+            "symbolic_alias": self.symbolic_alias,
             "version": self.version,
             "residuals": asdict(self.residuals),
             "channels_within_bounds": dict(self.channels_within_bounds),
@@ -137,14 +140,11 @@ def verify_biosilicon_state(
 
     return VerificationResult(
         protocol=PROTOCOL_ID,
+        symbolic_alias=SYMBOLIC_ALIAS,
         version=PROTOCOL_VERSION,
         residuals=residuals,
         channels_within_bounds=channels,
         model_consistent=consistent,
-        claim=(
-            "INTERFACE_BEHAVIOR_WITHIN_DEFINED_BOUNDS"
-            if consistent
-            else "BACKTRACE_REQUIRED"
-        ),
+        claim="WITHIN_DEFINED_BOUNDS" if consistent else "BACKTRACE_REQUIRED",
         claim_boundaries=CLAIM_BOUNDARIES,
     )
