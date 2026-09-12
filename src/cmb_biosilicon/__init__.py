@@ -6,6 +6,7 @@ from .model import (
     BioSiliconResiduals,
     BioSiliconState,
     VerificationResult,
+    validate_biosilicon_record,
     verify_biosilicon_state,
 )
 
@@ -15,5 +16,6 @@ __all__ = [
     "BioSiliconResiduals",
     "BioSiliconState",
     "VerificationResult",
+    "validate_biosilicon_record",
     "verify_biosilicon_state",
 ]
