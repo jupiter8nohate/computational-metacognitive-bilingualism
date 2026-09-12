@@ -51,16 +51,28 @@ def test_failed_channel_requires_backtrace() -> None:
     assert result.channels_within_bounds["R_elec"] is False
 
 
-def test_declared_decimal_boundary_survives_float_noise() -> None:
+def test_declared_decimal_boundary_is_exact() -> None:
     observed = BioSiliconState(0.4, 1.0, 1.0, 1.0)
     reference = BioSiliconState(0.3, 1.0, 1.0, 1.0)
     bounds = BioSiliconBounds(0.1, 0.0, 0.0, 0.0)
 
     result = verify_biosilicon_state(observed, reference, bounds)
 
-    assert result.residuals.biological > 0.1
+    assert result.residuals.biological == 0.1
     assert result.channels_within_bounds["R_bio"] is True
     assert result.model_consistent is True
+
+
+def test_large_tolerance_does_not_create_hidden_margin() -> None:
+    observed = BioSiliconState(1_000_000_000.0001, 1.0, 1.0, 1.0)
+    reference = BioSiliconState(0.0, 1.0, 1.0, 1.0)
+    bounds = BioSiliconBounds(1_000_000_000.0, 0.0, 0.0, 0.0)
+
+    result = verify_biosilicon_state(observed, reference, bounds)
+
+    assert result.channels_within_bounds["R_bio"] is False
+    assert result.model_consistent is False
+    assert result.claim == "BACKTRACE_REQUIRED"
 
 
 def test_invalid_numbers_are_rejected() -> None:
