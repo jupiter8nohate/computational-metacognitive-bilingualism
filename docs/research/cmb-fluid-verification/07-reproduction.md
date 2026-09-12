@@ -2,9 +2,17 @@
 
 The laboratory is designed to be auditable with a short symbolic script and a focused test.
 
-## Run the reference implementation
+## Install research dependencies
 
 From the repository root:
+
+```bash
+python -m pip install -e ".[research,test]"
+```
+
+The research extra adds SymPy without making symbolic mathematics a required dependency of the core CMB package.
+
+## Run the reference implementation
 
 ```bash
 python research/fluid-verification/cmb_navier_stokes.py
