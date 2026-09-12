@@ -48,6 +48,15 @@ nav:
   - MCP integration: MCP_INTEGRATION.md
   - For developers: DEVELOPERS.md
   - For researchers & policy: RESEARCHERS.md
+  - CMB Physics Laboratory:
+      - Overview: research/cmb-fluid-verification/index.md
+      - Governing equations: research/cmb-fluid-verification/01-equations.md
+      - Exact forced equilibrium: research/cmb-fluid-verification/02-exact-forced-equilibrium.md
+      - Residual verification: research/cmb-fluid-verification/03-residual-method.md
+      - 3D-8D Audit Geometry: research/cmb-fluid-verification/04-hypergeometry-3d-8d.md
+      - AI verification bridge: research/cmb-fluid-verification/05-ai-verification.md
+      - Limitations: research/cmb-fluid-verification/06-limitations.md
+      - Reproduce: research/cmb-fluid-verification/07-reproduction.md
   - Case studies: CASE_STUDIES.md
   - CMB distinction: CMB_DISTINCTION.md
   - CMB research position: CMB_RESEARCH_POSITION.md
