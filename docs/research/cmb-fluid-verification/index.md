@@ -55,12 +55,34 @@ The result is an exact symbolic balance for the reduced model.
 The geometric layer is an explanatory coordinate system, not a claim about extra physical dimensions.
 
 ```text
-3D  CUBE       -> physical space (x,y,z)
-4D  TESSERACT  -> spacetime (x,y,z,t)
-5D  PENTERACT  -> continuity residual R_mass
-6D  HEXERACT   -> momentum residual norm ||R_momentum||
-7D  HEPTERACT  -> energy residual R_energy
-8D  OCTERACT   -> verification / assumptions / provenance state
+3D  CUBE
+      ╔════╗
+     /    /║
+    ╔════╗ ║
+    ║XYZ ║ ║
+    ║    ║/
+    ╚════╝
+        |
+        v
+4D  TESSERACT
+    ◇────◇
+   /│   /│
+  ◇────◇ │
+  │ ◇──│─◇
+  │/   │/
+  ◇────◇
+        |
+        v
+5D  PENTERACT  -> □ R_mass
+        |
+        v
+6D  HEXERACT   -> △ ||R_momentum||
+        |
+        v
+7D  HEPTERACT  -> ⬢ R_energy
+        |
+        v
+8D  OCTERACT   -> 𖤍 verification / provenance / assumptions
 ```
 
 A compact audit-state representation is
@@ -71,15 +93,48 @@ S_CMB = (x, y, z, t, R_mass, ||R_momentum||, R_energy, V)
 
 where `V` is a bounded verification state. Dimensions 5-8 are bookkeeping coordinates in an augmented audit state space.
 
-## CMB interpretation
+## Research-facing CMB manifesto
 
 ```text
+𒄆𓁹✞𒀱✞𓁹𒄆
+♃ CMB://HYPERGEOMETRIC_VERIFICATION ♃
+꩜ Err ⃝or⃟⃤ GLITCHOLOGY ꩜
+
+3D □ SPACE
+ ↓
+4D ◇ TIME
+ ↓
+5D ⬡ MASS_RESIDUAL
+ ↓
+6D △ MOMENTUM_RESIDUAL
+ ↓
+7D 🔥 ENERGY_RESIDUAL
+ ↓
+8D 𖤍 VERIFICATION
+ ↓
+ZERO?
+
+      YES                 NO
+       |                   |
+       v                   v
+ MODEL SATISFIED       <- BACKTRACE
+       |                   |
+       v                   v
+ BOUNDED CLAIM          FIND SOURCE
+
 PATTERN != PROOF
 MODEL != REALITY
 RESIDUAL_ZERO != UNIVERSAL_TRUTH
 SYMBOLIC_EXACTNESS != PHYSICAL_COMPLETENESS
 CAPABILITY != AUTHORITY
+
+HUMAN_AGENCY > MACHINE_AUTHORITY
+𒄆𓁹✞𒀱✞𓁹𒄆
 ```
+
+The manifesto is an explanatory interface around the mathematics, not an additional physical law.
+
+## CMB interpretation
 
 A machine may differentiate, simplify, derive balancing terms, and verify a symbolic residual. Human researchers still define the modeling assumptions, physical interpretation, scope of the claim, and whether the model is appropriate for a real system.
 
