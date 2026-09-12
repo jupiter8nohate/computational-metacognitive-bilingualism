@@ -20,9 +20,22 @@
     "optical": 0.05,
     "modulation": 0.10
   },
+  "residuals": {
+    "biological": -0.03,
+    "electrical": -0.06,
+    "optical": -0.04,
+    "modulation": -0.07
+  },
+  "channels_within_bounds": {
+    "R_bio": true,
+    "R_elec": true,
+    "R_opt": true,
+    "R_mod": true
+  },
   "verification": {
     "method": "bounded_residual",
-    "status": "WITHIN_DEFINED_BOUNDS"
+    "status": "WITHIN_DEFINED_BOUNDS",
+    "model_consistent": true
   },
   "claim_boundaries": [
     "ORGANOID != BRAIN",
