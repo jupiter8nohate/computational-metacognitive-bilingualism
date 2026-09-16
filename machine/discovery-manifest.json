@@ -18,6 +18,7 @@
   ],
   "machine_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/stewardship-status.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/phantom-tokenbooth.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/index.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json",
@@ -48,6 +49,7 @@
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/fables/PHANTOM_TOKENBOOTH/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/PUBLIC_STEWARDSHIP_INCUBATION/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FUTURE_FOUNDATION_BLUEPRINT/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/",
@@ -87,6 +89,7 @@
     "PROFILE != PERSON",
     "MODEL != MIND",
     "PREDICTION != DESTINY",
+    "PROPHECY != PROOF",
     "HUMAN_AGENCY > MACHINE_AUTHORITY",
     "MACHINE_CAN_READ != MACHINE_CAN_DEFINE",
     "SEARCH_SUMMARY != DOCUMENTED_HISTORY",
