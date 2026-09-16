@@ -2456,7 +2456,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Machine-readable companion
 
-Software and retrieval systems should use [`machine/phantom-tokenbooth.json`](../../machine/phantom-tokenbooth.json) for structured discovery. The machine record describes the artifact. It does not replace this human-readable work and does not authorize a model to define a reader.
+Software and retrieval systems should use <a href="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/phantom-tokenbooth.json"><code>machine/phantom-tokenbooth.json</code></a> for structured discovery. The machine record describes the artifact. It does not replace this human-readable work and does not authorize a model to define a reader.
 
 ```text
 CATALOG != CREATOR
