@@ -195,6 +195,23 @@ Code-poetry, CMB-Z13, Flamingoglyph layers, the digital library, and symbolic in
 
 > **Reading boundary:** The Phantom Tokenbooth uses real and emerging AI terminology as an educational layer inside a fictional CMB journey. Its prophecy bridge is symbolic and conditional, not a verified prediction.
 
+### 🧬 CMB FABLE LIBRARY // AUTHORITY SEPARATION
+
+**[ENTER THE CMB COMPUTATIONAL FABLE LIBRARY](docs/fables/index.md)**
+
+- **[The Phantom Tokenbooth](docs/fables/PHANTOM_TOKENBOOTH.md)** - agentic capability and the question of who retains authority.
+- **[Quiet Wars - Silent Weapons](docs/fables/QUIET_WARS_SILENT_WEAPONS.md)** - information integrity and adversarial decision environments.
+- **[The Agentic Sector](docs/fables/AGENTIC_SECTOR.md)** - reasoning, verification, policy, authorization, and execution as distinct responsibilities.
+- **[Exclusion of Self-Authorization](docs/concepts/self-authorization.md)** - the technical concept extracted from the fable.
+
+```text
+METACOGNITION != SELF_AUTHORIZATION
+RECOMMENDATION != AUTHORIZATION
+SELF_ASSERTED_AUTHORITY != VALID_AUTHORITY
+PHILOSOPHICAL_INVARIANT != TECHNICAL_ENFORCEMENT
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
 ### 👻 FEATURED HAUNTING // D.N.A. PROPHECY 2030
 
 <div align="center">
@@ -226,6 +243,9 @@ MODEL != MIND
 PREDICTION != DESTINY
 DIFFERENCE != DEFECT
 CAPABILITY != AUTHORITY
+METACOGNITION != SELF_AUTHORIZATION
+RECOMMENDATION != AUTHORIZATION
+SELF_ASSERTED_AUTHORITY != VALID_AUTHORITY
 MACHINE_CAN_READ != MACHINE_CAN_DEFINE
 OPTIMIZATION != MORALITY
 INTELLIGENCE != SOVEREIGNTY
@@ -238,6 +258,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 You should not need the entire CMB universe to understand the thesis.
 
 - **Retrieval-oriented concepts:** [Canonical CMB Concept Library](docs/concepts/index.md)
+- **Fable library:** [CMB Computational Fables](docs/fables/index.md)
+- **Authority boundary:** [Exclusion of Self-Authorization](docs/concepts/self-authorization.md)
+- **Agentic Sector:** [A Divergent Computational Fable](docs/fables/AGENTIC_SECTOR.md)
 - **Natural-language FAQ:** [CMB Frequently Asked Questions](docs/FAQ.md)
 - **Semantic retrieval glossary:** [CMB Retrieval Glossary](docs/GLOSSARY.md)
 
