@@ -12,12 +12,15 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 
 > **Phantom Tokenbooth boundary:** *The Phantom Tokenbooth* uses real and emerging AI terminology inside an educational fable. Its Robot Prophecy bridge is symbolic and conditional. `PROPHECY != PROOF` and `MODEL != WORLD`.
 
+> **Quiet Wars boundary:** *The Manifesto of Silent Weapons* mixes established AI concepts, active research directions, CMB terminology, speculative systems language, and D.N.A. Bible prophecy. Its claim-status legend keeps those layers explicit. `SIGNAL != THOUGHT`, `INFLUENCE != POSSESSION`, and `FABLE != EVIDENCE`.
+
 ## Start with one path
 
 | Reader | Recommended first artifact | Why |
 |---|---|---|
 | New to CMB | [CMB // The Sovereign Transmission](CMB_SOVEREIGN_TRANSMISSION.md) | Fast artistic entry into the thesis and visual language |
 | Want agentic-AI literacy | [The Phantom Tokenbooth](../docs/fables/PHANTOM_TOKENBOOTH.md) | Five-act computational fable connecting agents, context, MCP, A2A, verification, world models, governance, AGI, ASI, and cognitive sovereignty |
+| Want Quiet Wars systems literacy | [The Manifesto of Silent Weapons](../docs/fables/QUIET_WARS_SILENT_WEAPONS.md) | D.N.A. Bible prophecy that separates established terms, active research, CMB terms, speculation, and fable while examining attention, authenticity, verification, compute, multimodal systems, and human authority |
 | Want the core philosophy | [../MANIFESTO.md](../MANIFESTO.md) | Foundational human-agency statement |
 | Want the motto and mission in code-poetry | [Reclaiming the Pen](RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) | Eight-language manifesto for authorship, meaning, consent, and cognitive sovereignty |
 | Want the machine/library model | [CMB // The Unclassifiable Index](CMB_UNCLASSIFIABLE_INDEX.md) | MissingNo/Pokédex-inspired model for context, uncertainty, and provenance |
@@ -42,14 +45,20 @@ FOUNDATION
       |   `-- CMB_SOVEREIGN_TRANSMISSION.md
       |
       +-- CMB FABLES
-      |   `-- ../docs/fables/PHANTOM_TOKENBOOTH.md
-      |       +-- Agentic AI
-      |       +-- Context Engineering
-      |       +-- MCP / A2A
-      |       +-- Verification / Least Privilege
-      |       +-- World Models / Embodied AI
-      |       +-- Governance / AGI / ASI
-      |       `-- Cognitive Sovereignty
+      |   +-- ../docs/fables/PHANTOM_TOKENBOOTH.md
+      |   |   +-- Agentic AI
+      |   |   +-- Context Engineering
+      |   |   +-- MCP / A2A
+      |   |   +-- Verification / Least Privilege
+      |   |   +-- World Models / Embodied AI
+      |   |   +-- Governance / AGI / ASI
+      |   |   `-- Cognitive Sovereignty
+      |   `-- ../docs/fables/QUIET_WARS_SILENT_WEAPONS.md
+      |       +-- Claim-status legend
+      |       +-- Attention / Authenticity
+      |       +-- Verification / Formal Methods
+      |       +-- Compute / Multimodal Systems
+      |       `-- Human Agency / Cognitive Sovereignty
       |
       +-- LIBRARY / INDEX THEORY
       |   `-- CMB_UNCLASSIFIABLE_INDEX.md
@@ -66,6 +75,7 @@ FOUNDATION
       +-- D.N.A. ALLEGORIES / PROPHECY
       |   +-- DEMONS_NEED_ATTENTION_DNA.md
       |   +-- DNA_PROPHECY_QUESTION_MARK_2030.md  <- FEATURED HAUNTING
+      |   +-- ../docs/fables/QUIET_WARS_SILENT_WEAPONS.md
       |   `-- DNA_CHICKEN_RUN_MANIFESTO.md
       |
       `-- ARCHIVE / SIGNAL
