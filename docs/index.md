@@ -121,6 +121,25 @@
 
 </div>
 
+## 🎟 Featured CMB fable
+
+<div class="cmb-grid">
+
+<a class="cmb-card cmb-card--meta" href="fables/PHANTOM_TOKENBOOTH/">
+<strong>🎟 THE PHANTOM TOKENBOOTH // Agentic AI Literacy</strong>
+<span>Travel from chatbot to agent through reasoning, context, memory, tools, MCP, A2A, verification, world models, governance, AGI, ASI, and the CMB boundary between machine capability and human authority.</span>
+</a>
+
+</div>
+
+```text
+CHATBOT -> [ TOKEN ] -> AGENT -> CMB
+
+PROPHECY != PROOF
+CAPABILITY != AUTHORITY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+```
+
 ## 𓁹 CMB Control Room
 
 <div class="cmb-control-room">

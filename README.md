@@ -175,6 +175,26 @@ Evidence boundaries, prior art, dissertation, formal semantics, and external rev
 **♃ [EXPLORE // Experience CMB](manifestos/CMB_SOVEREIGN_TRANSMISSION.md)**  
 Code-poetry, CMB-Z13, Flamingoglyph layers, the digital library, and symbolic interfaces.
 
+### 🎟 FEATURED CMB FABLE // THE PHANTOM TOKENBOOTH
+
+<div align="center">
+
+**CHATBOT → [ TOKEN ] → AGENT**
+
+### [ENTER THE PHANTOM TOKENBOOTH](docs/fables/PHANTOM_TOKENBOOTH.md)
+
+*A computational fable that teaches the modern agentic AI stack through story, systems architecture, humor, verification, and CMB cognitive sovereignty.*
+
+`AGENTS` · `CONTEXT` · `MEMORY` · `TOOLS` · `MCP` · `A2A` · `VERIFICATION` · `WORLD MODELS` · `GOVERNANCE` · `AGI / ASI`
+
+**WHO RETAINS AUTHORITY?**
+
+`PROPHECY != PROOF` · `CAPABILITY != AUTHORITY` · `HUMAN_AGENCY > MACHINE_AUTHORITY`
+
+</div>
+
+> **Reading boundary:** The Phantom Tokenbooth uses real and emerging AI terminology as an educational layer inside a fictional CMB journey. Its prophecy bridge is symbolic and conditional, not a verified prediction.
+
 ### 👻 FEATURED HAUNTING // D.N.A. PROPHECY 2030
 
 <div align="center">

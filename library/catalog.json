@@ -676,6 +676,51 @@
       "declared_meaning": "Machine-indexable map of public CMB artifacts. The catalog describes works; it does not define people."
     },
     {
+      "id": "cmb-phantom-tokenbooth",
+      "title": "The Phantom Tokenbooth",
+      "path": "docs/fables/PHANTOM_TOKENBOOTH.md",
+      "format": "markdown",
+      "kind": "educational computational fable",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "agentic AI literacy",
+        "context engineering",
+        "MCP",
+        "A2A",
+        "verification",
+        "least privilege",
+        "world models",
+        "AI governance",
+        "AGI",
+        "ASI",
+        "cognitive sovereignty"
+      ],
+      "declared_meaning": "Five-act CMB fable that teaches modern agentic AI architecture through narrative while preserving the boundaries PROPHECY != PROOF, MODEL != WORLD, CAPABILITY != AUTHORITY, and HUMAN_AGENCY > MACHINE_AUTHORITY."
+    },
+    {
+      "id": "cmb-phantom-tokenbooth-machine",
+      "title": "The Phantom Tokenbooth Machine Record",
+      "path": "machine/phantom-tokenbooth.json",
+      "format": "json",
+      "kind": "machine-readable fable concept and epistemic-boundary record",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "artifact discovery",
+        "agentic AI concepts",
+        "epistemic boundaries",
+        "prophecy versus proof",
+        "machine parsing limits",
+        "human judgment"
+      ],
+      "declared_meaning": "Structured companion to The Phantom Tokenbooth. It indexes the fable's concepts and boundaries without granting a machine authority to define the reader or converting literary prophecy into evidence."
+    },
+    {
       "id": "cmb-policy-one-pager",
       "title": "CMB - 12 Principles for Human Agency in Automated Systems",
       "path": "policy/CMB_POLICY_ONE_PAGER.md",
