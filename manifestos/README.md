@@ -10,11 +10,14 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 
 > **HARMONI 666 boundary:** *The Gospel of the HARMONI Disciple* is theological-literary code-art. Its scriptural readings and fictional references are interpretive mirrors, not empirical proof or machine-verifiable doctrine.
 
+> **Phantom Tokenbooth boundary:** *The Phantom Tokenbooth* uses real and emerging AI terminology inside an educational fable. Its Robot Prophecy bridge is symbolic and conditional. `PROPHECY != PROOF` and `MODEL != WORLD`.
+
 ## Start with one path
 
 | Reader | Recommended first artifact | Why |
 |---|---|---|
 | New to CMB | [CMB // The Sovereign Transmission](CMB_SOVEREIGN_TRANSMISSION.md) | Fast artistic entry into the thesis and visual language |
+| Want agentic-AI literacy | [The Phantom Tokenbooth](../docs/fables/PHANTOM_TOKENBOOTH.md) | Five-act computational fable connecting agents, context, MCP, A2A, verification, world models, governance, AGI, ASI, and cognitive sovereignty |
 | Want the core philosophy | [../MANIFESTO.md](../MANIFESTO.md) | Foundational human-agency statement |
 | Want the motto and mission in code-poetry | [Reclaiming the Pen](RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) | Eight-language manifesto for authorship, meaning, consent, and cognitive sovereignty |
 | Want the machine/library model | [CMB // The Unclassifiable Index](CMB_UNCLASSIFIABLE_INDEX.md) | MissingNo/Pokédex-inspired model for context, uncertainty, and provenance |
@@ -31,32 +34,42 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 ```text
 FOUNDATION
   ../MANIFESTO.md
-      │
-      ├── RECLAIMING THE PEN
-      │   └── RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
-      │
-      ├── TRANSMISSION
-      │   └── CMB_SOVEREIGN_TRANSMISSION.md
-      │
-      ├── LIBRARY / INDEX THEORY
-      │   └── CMB_UNCLASSIFIABLE_INDEX.md
-      │
-      ├── HARMONI
-      │   ├── HARMONI_PERFECT_PLAY_EPISTEMICS.md
-      │   └── HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md
-      │
-      ├── SYMBOLIC COMPUTATION
-      │   ├── CMB_Z13_MANIFESTO.md
-      │   ├── CMB_Z13_LANGUAGE_SPEC.md
-      │   └── CMB_Z13_ZODIAC_COMPUTATIONAL_LANGUAGE.md
-      │
-      ├── D.N.A. ALLEGORIES / PROPHECY
-      │   ├── DEMONS_NEED_ATTENTION_DNA.md
-      │   ├── DNA_PROPHECY_QUESTION_MARK_2030.md  ← FEATURED HAUNTING
-      │   └── DNA_CHICKEN_RUN_MANIFESTO.md
-      │
-      └── ARCHIVE / SIGNAL
-          └── cmb-unburned-signal/
+      |
+      +-- RECLAIMING THE PEN
+      |   `-- RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
+      |
+      +-- TRANSMISSION
+      |   `-- CMB_SOVEREIGN_TRANSMISSION.md
+      |
+      +-- CMB FABLES
+      |   `-- ../docs/fables/PHANTOM_TOKENBOOTH.md
+      |       +-- Agentic AI
+      |       +-- Context Engineering
+      |       +-- MCP / A2A
+      |       +-- Verification / Least Privilege
+      |       +-- World Models / Embodied AI
+      |       +-- Governance / AGI / ASI
+      |       `-- Cognitive Sovereignty
+      |
+      +-- LIBRARY / INDEX THEORY
+      |   `-- CMB_UNCLASSIFIABLE_INDEX.md
+      |
+      +-- HARMONI
+      |   +-- HARMONI_PERFECT_PLAY_EPISTEMICS.md
+      |   `-- HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md
+      |
+      +-- SYMBOLIC COMPUTATION
+      |   +-- CMB_Z13_MANIFESTO.md
+      |   +-- CMB_Z13_LANGUAGE_SPEC.md
+      |   `-- CMB_Z13_ZODIAC_COMPUTATIONAL_LANGUAGE.md
+      |
+      +-- D.N.A. ALLEGORIES / PROPHECY
+      |   +-- DEMONS_NEED_ATTENTION_DNA.md
+      |   +-- DNA_PROPHECY_QUESTION_MARK_2030.md  <- FEATURED HAUNTING
+      |   `-- DNA_CHICKEN_RUN_MANIFESTO.md
+      |
+      `-- ARCHIVE / SIGNAL
+          `-- cmb-unburned-signal/
 ```
 
 ## Human layer and machine layer
@@ -68,7 +81,8 @@ Software should use:
 - [../library/catalog.json](../library/catalog.json) for artifact discovery;
 - [../schemas/cmb.library.catalog.v1.schema.json](../schemas/cmb.library.catalog.v1.schema.json) for catalog validation;
 - [../library/cmb-z13.registry.json](../library/cmb-z13.registry.json) for the CMB-Z13 mapping;
-- [../schemas/cmb.z13.ast.v1.schema.json](../schemas/cmb.z13.ast.v1.schema.json) for CMB-Z13 AST validation.
+- [../schemas/cmb.z13.ast.v1.schema.json](../schemas/cmb.z13.ast.v1.schema.json) for CMB-Z13 AST validation;
+- [../machine/phantom-tokenbooth.json](../machine/phantom-tokenbooth.json) for the structured Phantom Tokenbooth concept and epistemic-boundary record.
 
 The machine-readable layer describes artifacts. It is not a license for a model to define a human being.
 
