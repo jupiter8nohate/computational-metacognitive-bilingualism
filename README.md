@@ -704,12 +704,12 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md`](manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) - **Reclaiming the Pen**, the eight-language poetic declaration of CMB authorship, consent, meaning, and cognitive sovereignty.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) - the CMB thesis expressed across ten programming languages.
 - [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) - **Demon's Need Attention - D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
-- [`manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md`](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md) - **The Prophecy of the Question Mark**, Scroll 666 / Event of 2030: the featured haunting D.N.A. Bible prophecy and speculative code-poetry gateway.
-- [`manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - the D.N.A./FGC literary-allegory branch.
-- [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
-- [`manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md`](manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) - CMB's perfect-play epistemics and MissingNo Recovery code-art layer.
-- [`manifestos/CMB_Z13_MANIFESTO.md`](manifestos/CMB_Z13_MANIFESTO.md) - the public declaration of the thirteen-lens Zodiac Computational Metacognitive Language.
-- [`manifestos/CMB_Z13_LANGUAGE_SPEC.md`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) - the formal symbolic notation mapping zodiac archetypes to C, Rust, Haskell, C++, Java, TypeScript, Python, Swift, Go, Kotlin, Prolog, Common Lisp, and Julia while preserving `HUMAN_AGENCY > MACHINE_AUTHORITY`.
+- [`manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md`](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md) - **The Prophecy of the Question Mark**, Scroll 666 / Event of 2030: the featured D.N.A. Bible speculative prophecy and speculative code-poetry gateway.
+- [`manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - **The Chicken Run Manifesto**, the D.N.A./FGC literary-allegory branch.
+- [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - **The Unclassifiable Index**, CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
+- [`manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md`](manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) - **HARMONI**, CMB's perfect-play epistemics and MissingNo Recovery code-art layer.
+- [`manifestos/CMB_Z13_MANIFESTO.md`](manifestos/CMB_Z13_MANIFESTO.md) - **CMB-Z13™ manifesto**, the human-readable declaration of the thirteen computational lenses and Guardian Modes.
+- [`manifestos/CMB_Z13_LANGUAGE_SPEC.md`](manifestos/CMB_Z13_LANGUAGE_SPEC.md) - **CMB-Z13™**, the Zodiac Computational Metacognitive Language specification.
 - [`library/cmb-z13.registry.json`](library/cmb-z13.registry.json) - machine-readable CMB-Z13 operator, vector, Guardian Mode, reasoning-pipeline, and interpretation registry.
 - [`docs/CREATOR_PROVENANCE.md`](docs/CREATOR_PROVENANCE.md) - human-readable creator-provenance and epistemic-boundary protocol.
 - [`library/creator-provenance.json`](library/creator-provenance.json) - privacy-safe machine-readable creator-provenance registry.
