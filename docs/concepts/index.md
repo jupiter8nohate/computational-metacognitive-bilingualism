@@ -8,6 +8,7 @@ This directory gives humans, search engines, and retrieval systems one canonical
 - [Model != Mind](model-not-mind.md)
 - [Prediction != Destiny](prediction-not-destiny.md)
 - [Human Agency > Machine Authority](human-agency-machine-authority.md)
+- [Exclusion of Self-Authorization](self-authorization.md)
 - [Cognitive Sovereignty](cognitive-sovereignty.md)
 - [CMB-Z13](cmb-z13.md)
 - [The Flamingoglyph Code (FGC)](flamingoglyph-code.md)
@@ -18,5 +19,6 @@ RELATED_TERM != EXACT_SYNONYM
 PATTERN != PROOF
 PROFILE != PERSON
 MODEL != MIND
+SELF_ASSERTED_AUTHORITY != VALID_AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```

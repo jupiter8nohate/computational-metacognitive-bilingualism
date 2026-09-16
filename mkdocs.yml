@@ -8,8 +8,10 @@ theme:
 nav:
   - Home: index.md
   - CMB Fables:
+      - Fable Library: fables/index.md
       - The Phantom Tokenbooth: fables/PHANTOM_TOKENBOOTH.md
       - Quiet Wars - Silent Weapons: fables/QUIET_WARS_SILENT_WEAPONS.md
+      - The Agentic Sector: fables/AGENTIC_SECTOR.md
   - The Shadow Is Not the Source: THE_SHADOW_IS_NOT_THE_SOURCE.md
   - Lived experience testimony: lived-experience.md
   - System status: generated/CMB_SYSTEM_STATUS.md
@@ -25,6 +27,7 @@ nav:
       - Model != Mind: concepts/model-not-mind.md
       - Prediction != Destiny: concepts/prediction-not-destiny.md
       - Human Agency > Machine Authority: concepts/human-agency-machine-authority.md
+      - Exclusion of Self-Authorization: concepts/self-authorization.md
       - Cognitive Sovereignty: concepts/cognitive-sovereignty.md
       - CMB-Z13: concepts/cmb-z13.md
       - Flamingoglyph Code: concepts/flamingoglyph-code.md
