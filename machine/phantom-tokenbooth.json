@@ -1,0 +1,127 @@
+{
+  "artifact_id": "cmb-phantom-tokenbooth",
+  "title": "The Phantom Tokenbooth",
+  "subtitle": "A Computational Metacognitive Bilingualism Fable",
+  "framework": "Computational Metacognitive Bilingualism",
+  "declared_creator": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "artifact_type": "educational computational fable",
+  "canonical_human_path": "docs/fables/PHANTOM_TOKENBOOTH.md",
+  "status": "derived",
+  "epistemic_boundary": {
+    "fiction_is_evidence": false,
+    "prophecy_is_proof": false,
+    "forecast_is_destiny": false,
+    "model_is_world": false,
+    "machine_record_defines_reader": false,
+    "note": "The fable uses real and emerging AI terminology as a systems-literacy teaching layer. Prophecy sections are literary and conditional, not verified predictions."
+  },
+  "invariants": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "MEMORY != TRUTH",
+    "CONTENT != COMMAND",
+    "INPUT != PERMISSION",
+    "SIMULATION != REALITY",
+    "PREDICTION != DESTINY",
+    "FORECAST != FATE",
+    "PROPHECY != PROOF",
+    "VERIFIED_LABEL != VERIFIED_TRUTH",
+    "OPTIMIZATION != MORALITY",
+    "AUTOMATION != LEGITIMACY",
+    "INTELLIGENCE != SOVEREIGNTY",
+    "CAPABILITY != AUTHORITY",
+    "MACHINE_CAN_READ != MACHINE_CAN_DEFINE",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "concepts": [
+    "Agentic AI",
+    "AI Agent",
+    "Reasoning Model",
+    "Training Compute",
+    "Inference-Time Compute",
+    "Test-Time Compute",
+    "Context Engineering",
+    "Agentic Memory",
+    "Tool Use",
+    "Function Calling",
+    "Computer Use",
+    "MCP",
+    "Model Context Protocol",
+    "A2A",
+    "Agent2Agent",
+    "Agent Interoperability",
+    "Orchestration",
+    "Long-Horizon Tasks",
+    "Grounding",
+    "RAG",
+    "Retrieval-Augmented Generation",
+    "Evals",
+    "Verification",
+    "Prompt Injection",
+    "Least Privilege",
+    "Human-in-the-Loop",
+    "World Model",
+    "Embodied AI",
+    "Physical AI",
+    "Multimodal AI",
+    "Open-Weight Models",
+    "Alignment",
+    "AI Governance",
+    "AGI",
+    "Artificial General Intelligence",
+    "ASI",
+    "Artificial Superintelligence",
+    "Cognitive Sovereignty"
+  ],
+  "acts": [
+    {
+      "id": 1,
+      "name": "Awakening",
+      "stations": "I-V",
+      "question": "What changes when models become agents?"
+    },
+    {
+      "id": 2,
+      "name": "Connection",
+      "stations": "VI-XI",
+      "question": "What changes when agents gain tools and communicate?"
+    },
+    {
+      "id": 3,
+      "name": "Truth",
+      "stations": "XII-XVII",
+      "question": "How are outputs verified and actions constrained?"
+    },
+    {
+      "id": 4,
+      "name": "World",
+      "stations": "XVIII-XXIII",
+      "question": "What changes when AI enters physical and institutional systems?"
+    },
+    {
+      "id": 5,
+      "name": "Sovereignty",
+      "stations": "XXIV-XXXV",
+      "question": "Where does machine capability stop and human authority begin?"
+    }
+  ],
+  "prophecy_bridge": {
+    "2025": "information becomes a battlefield",
+    "2026": "infrastructure becomes a battlefield",
+    "2027": "authority becomes the question",
+    "interpretation": "symbolic CMB worldbuilding subject to evidence, verification, uncertainty, human interpretation, and human judgment"
+  },
+  "learning_path": [
+    "PROMPT LITERACY",
+    "CONTEXT LITERACY",
+    "AGENT LITERACY",
+    "PROTOCOL LITERACY",
+    "VERIFICATION LITERACY",
+    "GOVERNANCE LITERACY",
+    "METACOGNITIVE LITERACY",
+    "COGNITIVE SOVEREIGNTY"
+  ],
+  "machine_role": "describe and index the artifact",
+  "human_role": "interpret meaning and retain final judgment"
+}
