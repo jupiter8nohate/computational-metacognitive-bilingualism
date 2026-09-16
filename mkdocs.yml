@@ -43,6 +43,7 @@ nav:
   - FAQ: FAQ.md
   - Retrieval glossary: GLOSSARY.md
   - Search & AI discovery: SEARCH_DISCOVERY.md
+  - Privacy & analytics: PRIVACY_AND_ANALYTICS.md
   - Interactive playground: PLAYGROUND.md
   - CMB-EDU Kids: CMB_EDU_KIDS.md
   - Agent operating model: AGENT_OPERATING_MODEL.md
@@ -99,3 +100,7 @@ extra_css:
   - stylesheets/lived-experience.css
   - stylesheets/shadow-source.css
   - stylesheets/phantom-tokenbooth.css
+
+extra_javascript:
+  - javascripts/cmb-analytics-config.js
+  - javascripts/cmb-analytics.js
