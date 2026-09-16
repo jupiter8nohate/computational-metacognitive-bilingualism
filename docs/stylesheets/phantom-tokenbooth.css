@@ -1,0 +1,112 @@
+.phantom-tokenbooth-hero {
+  margin: 1.5rem 0 2rem;
+  padding: 2.25rem 1.5rem;
+  border: 1px solid rgba(190, 72, 255, 0.55);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top, rgba(190, 72, 255, 0.14), transparent 48%),
+    linear-gradient(180deg, rgba(8, 8, 16, 0.98), rgba(18, 13, 25, 0.96));
+  box-shadow: 0 0 34px rgba(190, 72, 255, 0.12);
+  text-align: center;
+}
+
+.phantom-tokenbooth-hero h1 {
+  margin: 0.4rem 0;
+  letter-spacing: 0.08em;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.05;
+}
+
+.phantom-tokenbooth-kicker,
+.phantom-tokenbooth-road,
+.phantom-token-number {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.phantom-tokenbooth-kicker {
+  opacity: 0.78;
+}
+
+.phantom-tokenbooth-sigil {
+  font-size: 1.5rem;
+}
+
+.phantom-tokenbooth-subtitle {
+  font-size: 1.05rem;
+  opacity: 0.84;
+}
+
+.phantom-tokenbooth-road {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.phantom-tokenbooth-boundary {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid #e6b800;
+  background: rgba(230, 184, 0, 0.08);
+}
+
+.phantom-token-card {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.4rem 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(81, 200, 255, 0.42);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(50, 96, 140, 0.12), rgba(132, 71, 168, 0.10));
+}
+
+.phantom-token-card-danger {
+  border-color: rgba(255, 86, 86, 0.48);
+  background: linear-gradient(135deg, rgba(120, 20, 20, 0.14), rgba(74, 22, 92, 0.10));
+}
+
+.phantom-token-number {
+  font-size: 0.78rem;
+  opacity: 0.68;
+}
+
+.phantom-token-card strong {
+  font-size: 1.08rem;
+}
+
+.phantom-token-card code {
+  white-space: normal;
+}
+
+.phantom-tokenbooth-final-gate {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.18);
+  text-align: center;
+  line-height: 1.8;
+}
+
+.phantom-tokenbooth-closing {
+  margin: 2rem 0 0;
+  padding: 1.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 720px) {
+  .phantom-tokenbooth-hero {
+    padding: 1.6rem 1rem;
+  }
+
+  .phantom-tokenbooth-road {
+    font-size: 0.78rem;
+  }
+}

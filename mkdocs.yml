@@ -7,6 +7,8 @@ theme:
   name: readthedocs
 nav:
   - Home: index.md
+  - CMB Fables:
+      - The Phantom Tokenbooth: fables/PHANTOM_TOKENBOOTH.md
   - The Shadow Is Not the Source: THE_SHADOW_IS_NOT_THE_SOURCE.md
   - Lived experience testimony: lived-experience.md
   - System status: generated/CMB_SYSTEM_STATUS.md
@@ -92,3 +94,4 @@ extra_css:
   - stylesheets/accessibility.css
   - stylesheets/lived-experience.css
   - stylesheets/shadow-source.css
+  - stylesheets/phantom-tokenbooth.css
