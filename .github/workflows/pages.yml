@@ -96,6 +96,10 @@ jobs:
           urls = [
               f"{site}/",
               f"{site}/sitemap.xml",
+              f"{site}/fables/",
+              f"{site}/fables/PHANTOM_TOKENBOOTH/",
+              f"{site}/fables/QUIET_WARS_SILENT_WEAPONS/",
+              f"{site}/fables/AGENTIC_SECTOR/",
               f"{site}/SEARCH_FOR_TRUTH/",
               f"{site}/DARK_FEDERALISM_VISUAL_SYSTEM/",
               f"{site}/DEVELOPERS/",
@@ -123,6 +127,7 @@ jobs:
               f"{site}/concepts/model-not-mind/",
               f"{site}/concepts/prediction-not-destiny/",
               f"{site}/concepts/human-agency-machine-authority/",
+              f"{site}/concepts/self-authorization/",
               f"{site}/concepts/cognitive-sovereignty/",
               f"{site}/concepts/cmb-z13/",
               f"{site}/concepts/flamingoglyph-code/",
