@@ -96,6 +96,8 @@ jobs:
           urls = [
               f"{site}/",
               f"{site}/sitemap.xml",
+              f"{site}/fables/PHANTOM_TOKENBOOTH/",
+              f"{site}/fables/QUIET_WARS_SILENT_WEAPONS/",
               f"{site}/SEARCH_FOR_TRUTH/",
               f"{site}/DARK_FEDERALISM_VISUAL_SYSTEM/",
               f"{site}/DEVELOPERS/",
