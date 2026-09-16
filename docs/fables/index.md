@@ -84,4 +84,4 @@ See also:
 
 **Creative authorship:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8  
 **Framework:** Computational Metacognitive Bilingualism (CMB)  
-**Creative-content terms:** see [`CONTENT_LICENSE.md`](../../CONTENT_LICENSE.md) and [`ATTRIBUTION.md`](../../ATTRIBUTION.md).
+**Creative-content terms:** see [CONTENT_LICENSE.md](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CONTENT_LICENSE.md) and [ATTRIBUTION.md](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/ATTRIBUTION.md).
