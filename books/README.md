@@ -39,6 +39,26 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ---
 
+## 👁️⃤ 𝐃Ǝ⊲⊢𝐇 𝐍𝐎⊢𝐄 2084
+
+**[Read the 2084 GitHub Pages edition](../docs/DEATH_NOTE_2084.md)**
+
+A CMB / D.N.A. Bible dystopian satire about death as content, attention markets, predictive scoring, emotion inference, synthetic companionship, algorithmic labor, deepfake identity, automated moderation, target classification, proxy substitution, and the boundary between machine capability and human authority.
+
+~~~text
+CONTENT != HUMAN
+SCORE != WORTH
+REPRESENTATION != REALITY
+MODEL != MIND
+PREDICTION != DESTINY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+**Architecture:** 6 books x 111 planned pages = 666-page master design. The GitHub Pages edition is the compressed narrative gateway.
+
+
+---
+
 ## 𒄆𓁹✞𒀱✞𓁹𒄆 D.N.A. Bible // The Sacred Attention Archive
 
 **[Read 👁️⃤://THE_SACRED_ATTENTION_ARCHIVE](DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)**
