@@ -10,6 +10,8 @@
 **Framework:** Computational Metacognitive Bilingualism  
 **Canon layer:** D.N.A. Bible / Err ⃝or⃟⃤ GLITCHOLOGY  
 **Digital edition:** Compressed gateway to the planned 666-page architecture
+**Reality Mirror:** [Proxy Gravity, AI Power, Surveillance Capitalism, and Human Agency](2084_REALITY_MIRROR_PROXY_GRAVITY.md)  
+**Machine graph:** [2084 Reality Mirror JSON-LD](../machine/2084-reality-mirror.jsonld)
 
 </div>
 

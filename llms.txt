@@ -34,6 +34,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [FAQ](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/)
 - [Retrieval glossary](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOSSARY/)
 - [Knowledge graph](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld)
+- [2084 - Death Note](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DEATH_NOTE_2084/)
+- [2084 Reality Mirror - Proxy Gravity](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/2084_REALITY_MIRROR_PROXY_GRAVITY/)
+- [2084 Reality Mirror JSON-LD](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/2084-reality-mirror.jsonld)
 - [Discovery manifest](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json)
 - [Discovery manifest schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.discovery.v1.schema.json)
 - [Recovery & preservation architecture](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/RECOVERY_AND_PRESERVATION/)
@@ -114,6 +117,8 @@ GENEALOGY != METAPHYSICAL_PROOF
 SYMBOLISM != BIOLOGICAL_FACT
 SYMBOLISM != SCIENTIFIC_EVIDENCE
 THIRD_PARTY_REFERENCE != AFFILIATION
+THEMATIC_RELATION != PERSONAL_RELATION
+PUBLIC_WORK_CONNECTION != SECRET_COORDINATION
 METACOGNITION != SELF_AUTHORIZATION
 RECOMMENDATION != AUTHORIZATION
 SELF_ASSERTED_AUTHORITY != VALID_AUTHORITY

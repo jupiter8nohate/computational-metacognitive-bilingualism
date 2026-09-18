@@ -1,0 +1,258 @@
+{
+  "@context": {
+    "name": "https://schema.org/name",
+    "description": "https://schema.org/description",
+    "url": "https://schema.org/url",
+    "Person": "https://schema.org/Person",
+    "Organization": "https://schema.org/Organization",
+    "CreativeWork": "https://schema.org/CreativeWork",
+    "SoftwareApplication": "https://schema.org/SoftwareApplication",
+    "creator": {
+      "@id": "https://schema.org/creator",
+      "@type": "@id"
+    },
+    "author": {
+      "@id": "https://schema.org/author",
+      "@type": "@id"
+    },
+    "about": {
+      "@id": "https://schema.org/about",
+      "@type": "@id"
+    },
+    "associatedWithPublicWork": {
+      "@id": "https://jupiter8nohate.github.io/cmb/vocab/associatedWithPublicWork",
+      "@type": "@id"
+    },
+    "thematicallyReferences": {
+      "@id": "https://jupiter8nohate.github.io/cmb/vocab/thematicallyReferences",
+      "@type": "@id"
+    },
+    "conceptuallyExamines": {
+      "@id": "https://jupiter8nohate.github.io/cmb/vocab/conceptuallyExamines",
+      "@type": "@id"
+    },
+    "interpretationBoundary": "https://jupiter8nohate.github.io/cmb/vocab/interpretationBoundary"
+  },
+  "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/2084-reality-mirror.jsonld",
+  "@type": "CreativeWork",
+  "name": "2084 Reality Mirror Knowledge Graph",
+  "description": "Machine-readable public-work and thematic graph for the 2084 Reality Mirror. It maps ideas, systems, public roles, scholarship, and CMB concepts without asserting secret coordination, endorsement, guilt, or personal affiliation.",
+  "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/2084_REALITY_MIRROR_PROXY_GRAVITY/",
+  "interpretationBoundary": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "THIRD_PARTY_REFERENCE != AFFILIATION",
+    "THEMATIC_RELATION != PERSONAL_RELATION",
+    "PUBLIC_WORK_CONNECTION != SECRET_COORDINATION",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "@graph": [
+    {
+      "@id": "urn:cmb:person:jupiter-hudson",
+      "@type": "Person",
+      "name": "Jupiter Hudson",
+      "description": "Declared originator of Computational Metacognitive Bilingualism and authorial persona associated with 2084, D.N.A. Bible, and Err ⃝or⃟⃤ GLITCHOLOGY."
+    },
+    {
+      "@id": "urn:cmb:person:sam-altman",
+      "@type": "Person",
+      "name": "Sam Altman",
+      "associatedWithPublicWork": "urn:cmb:org:openai"
+    },
+    {
+      "@id": "urn:cmb:person:alex-karp",
+      "@type": "Person",
+      "name": "Alex Karp",
+      "associatedWithPublicWork": "urn:cmb:org:palantir"
+    },
+    {
+      "@id": "urn:cmb:person:shou-zi-chew",
+      "@type": "Person",
+      "name": "Shou Zi Chew",
+      "associatedWithPublicWork": "urn:cmb:org:tiktok"
+    },
+    {
+      "@id": "urn:cmb:person:eric-schmidt",
+      "@type": "Person",
+      "name": "Eric Schmidt",
+      "associatedWithPublicWork": "urn:cmb:concept:technology-national-security-ai"
+    },
+    {
+      "@id": "urn:cmb:person:rana-el-kaliouby",
+      "@type": "Person",
+      "name": "Rana el Kaliouby",
+      "associatedWithPublicWork": "urn:cmb:concept:affective-computing"
+    },
+    {
+      "@id": "urn:cmb:person:shoshana-zuboff",
+      "@type": "Person",
+      "name": "Shoshana Zuboff",
+      "associatedWithPublicWork": "urn:cmb:work:age-of-surveillance-capitalism"
+    },
+    {
+      "@id": "urn:cmb:person:cathy-oneil",
+      "@type": "Person",
+      "name": "Cathy O'Neil",
+      "associatedWithPublicWork": "urn:cmb:work:weapons-of-math-destruction"
+    },
+    {
+      "@id": "urn:cmb:person:joy-buolamwini",
+      "@type": "Person",
+      "name": "Joy Buolamwini",
+      "associatedWithPublicWork": "urn:cmb:concept:algorithmic-justice"
+    },
+    {
+      "@id": "urn:cmb:person:timnit-gebru",
+      "@type": "Person",
+      "name": "Timnit Gebru",
+      "associatedWithPublicWork": "urn:cmb:concept:dataset-and-model-accountability"
+    },
+    {
+      "@id": "urn:cmb:person:meredith-broussard",
+      "@type": "Person",
+      "name": "Meredith Broussard",
+      "associatedWithPublicWork": "urn:cmb:concept:technochauvinism"
+    },
+    {
+      "@id": "urn:cmb:org:openai",
+      "@type": "Organization",
+      "name": "OpenAI"
+    },
+    {
+      "@id": "urn:cmb:org:palantir",
+      "@type": "Organization",
+      "name": "Palantir Technologies"
+    },
+    {
+      "@id": "urn:cmb:org:tiktok",
+      "@type": "Organization",
+      "name": "TikTok"
+    },
+    {
+      "@id": "urn:cmb:work:2084",
+      "@type": "CreativeWork",
+      "name": "Death Note 2084",
+      "creator": "urn:cmb:person:jupiter-hudson",
+      "conceptuallyExamines": [
+        "urn:cmb:concept:proxy-gravity",
+        "urn:cmb:concept:backtrace",
+        "urn:cmb:concept:sacred-remainder"
+      ]
+    },
+    {
+      "@id": "urn:cmb:framework:cmb",
+      "@type": "CreativeWork",
+      "name": "Computational Metacognitive Bilingualism",
+      "creator": "urn:cmb:person:jupiter-hudson"
+    },
+    {
+      "@id": "urn:cmb:work:age-of-surveillance-capitalism",
+      "@type": "CreativeWork",
+      "name": "The Age of Surveillance Capitalism",
+      "author": "urn:cmb:person:shoshana-zuboff"
+    },
+    {
+      "@id": "urn:cmb:work:weapons-of-math-destruction",
+      "@type": "CreativeWork",
+      "name": "Weapons of Math Destruction",
+      "author": "urn:cmb:person:cathy-oneil"
+    },
+    {
+      "@id": "urn:cmb:concept:algorithmic-justice",
+      "@type": "CreativeWork",
+      "name": "Algorithmic justice and facial-analysis accountability"
+    },
+    {
+      "@id": "urn:cmb:concept:dataset-and-model-accountability",
+      "@type": "CreativeWork",
+      "name": "Dataset and large-model accountability"
+    },
+    {
+      "@id": "urn:cmb:concept:technochauvinism",
+      "@type": "CreativeWork",
+      "name": "Technochauvinism"
+    },
+    {
+      "@id": "urn:cmb:concept:affective-computing",
+      "@type": "CreativeWork",
+      "name": "Affective computing"
+    },
+    {
+      "@id": "urn:cmb:concept:technology-national-security-ai",
+      "@type": "CreativeWork",
+      "name": "Technology, national security, and AI policy"
+    },
+    {
+      "@id": "urn:cmb:system:project-maven",
+      "@type": "SoftwareApplication",
+      "name": "Project Maven / Maven Smart System"
+    },
+    {
+      "@id": "urn:cmb:system:lavender",
+      "@type": "SoftwareApplication",
+      "name": "Lavender",
+      "description": "Reported machine-assisted military intelligence ranking system. Public claims about its operation remain source-dependent and contested."
+    },
+    {
+      "@id": "urn:cmb:system:habsora",
+      "@type": "SoftwareApplication",
+      "name": "Habsora / The Gospel"
+    },
+    {
+      "@id": "urn:cmb:system:nsa-skynet",
+      "@type": "SoftwareApplication",
+      "name": "NSA SKYNET"
+    },
+    {
+      "@id": "urn:cmb:concept:proxy-gravity",
+      "@type": "CreativeWork",
+      "name": "Proxy Gravity",
+      "description": "CMB concept describing increasing practical authority of representations when multiple institutions defer to model outputs."
+    },
+    {
+      "@id": "urn:cmb:concept:backtrace",
+      "@type": "CreativeWork",
+      "name": "BACKTRACE",
+      "description": "CMB auditing mnemonic that traces a consequential decision backward through recommendation, score, model, features, data, measurement, assumptions, incentives, and authority."
+    },
+    {
+      "@id": "urn:cmb:concept:sacred-remainder",
+      "@type": "CreativeWork",
+      "name": "Sacred Remainder",
+      "description": "Literary and philosophical name for context, meaning, experience, possibility, and self-definition not captured by a particular representation. It is not a fixed measurable percentage or mathematical theorem."
+    },
+    {
+      "@id": "urn:cmb:work:reality-mirror",
+      "@type": "CreativeWork",
+      "name": "2084 Reality Mirror",
+      "creator": "urn:cmb:person:jupiter-hudson",
+      "about": [
+        "urn:cmb:person:sam-altman",
+        "urn:cmb:person:alex-karp",
+        "urn:cmb:person:shou-zi-chew",
+        "urn:cmb:person:eric-schmidt",
+        "urn:cmb:person:rana-el-kaliouby",
+        "urn:cmb:person:shoshana-zuboff",
+        "urn:cmb:person:cathy-oneil",
+        "urn:cmb:person:joy-buolamwini",
+        "urn:cmb:person:timnit-gebru",
+        "urn:cmb:person:meredith-broussard",
+        "urn:cmb:system:project-maven",
+        "urn:cmb:system:lavender",
+        "urn:cmb:system:habsora",
+        "urn:cmb:system:nsa-skynet",
+        "urn:cmb:concept:proxy-gravity",
+        "urn:cmb:concept:backtrace",
+        "urn:cmb:concept:sacred-remainder"
+      ],
+      "thematicallyReferences": [
+        "urn:cmb:framework:cmb",
+        "urn:cmb:work:2084",
+        "urn:cmb:work:age-of-surveillance-capitalism",
+        "urn:cmb:work:weapons-of-math-destruction"
+      ]
+    }
+  ]
+}
