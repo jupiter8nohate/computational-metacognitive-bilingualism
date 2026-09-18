@@ -1042,6 +1042,50 @@
         "accessible computational literacy"
       ],
       "declared_meaning": "Public manifesto for CMB-Z13, defining thirteen zodiac-inspired software-language lenses plus the Guardian Modes teaching layer while preserving human authority and rejecting deterministic classification."
+    },
+    {
+      "id": "cmb-2084-reality-mirror",
+      "title": "2084 Reality Mirror - Proxy Gravity, AI Power, Surveillance Capitalism, and Human Agency",
+      "path": "docs/2084_REALITY_MIRROR_PROXY_GRAVITY.md",
+      "format": "markdown",
+      "kind": "literary testimonial and conceptual responsibility map",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "2084",
+        "Proxy Gravity",
+        "BACKTRACE",
+        "Sacred Remainder",
+        "surveillance capitalism",
+        "algorithmic accountability",
+        "human agency",
+        "machine authority",
+        "responsibility map"
+      ],
+      "declared_meaning": "Human-readable 2084 testimonial connecting named public work, scholarship, technologies, and CMB concepts through explicitly bounded thematic relationships. It is not a conspiracy map and does not assert secret coordination, endorsement, guilt, or personal affiliation."
+    },
+    {
+      "id": "cmb-2084-reality-mirror-jsonld",
+      "title": "2084 Reality Mirror Knowledge Graph",
+      "path": "machine/2084-reality-mirror.jsonld",
+      "format": "jsonld",
+      "kind": "machine-readable public-work and thematic knowledge graph",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON-LD",
+        "knowledge graph",
+        "2084",
+        "Proxy Gravity",
+        "public work",
+        "thematic relationships",
+        "interpretation boundaries"
+      ],
+      "declared_meaning": "Machine-readable graph of public-work and thematic relationships for the 2084 Reality Mirror. THEMATIC_RELATION != PERSONAL_RELATION and PUBLIC_WORK_CONNECTION != SECRET_COORDINATION."
     }
   ]
 }
