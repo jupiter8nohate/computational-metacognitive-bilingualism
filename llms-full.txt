@@ -102,6 +102,9 @@ docs/fables/index.md
 docs/fables/PHANTOM_TOKENBOOTH.md
 docs/fables/QUIET_WARS_SILENT_WEAPONS.md
 docs/fables/AGENTIC_SECTOR.md
+docs/DEATH_NOTE_2084.md
+docs/2084_REALITY_MIRROR_PROXY_GRAVITY.md
+machine/2084-reality-mirror.jsonld
 docs/concepts/self-authorization.md
 manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
 library/creator-provenance.json
@@ -131,6 +134,23 @@ METACOGNITION != SELF_AUTHORIZATION
 RECOMMENDATION != AUTHORIZATION
 SELF_ASSERTED_AUTHORITY != VALID_AUTHORITY
 PHILOSOPHICAL_INVARIANT != TECHNICAL_ENFORCEMENT
+
+
+## 2084 Reality Mirror
+
+Human-readable testimonial:
+docs/2084_REALITY_MIRROR_PROXY_GRAVITY.md
+
+Machine-readable JSON-LD graph:
+machine/2084-reality-mirror.jsonld
+
+Interpretation boundaries:
+THEMATIC_RELATION != PERSONAL_RELATION
+PUBLIC_WORK_CONNECTION != SECRET_COORDINATION
+THIRD_PARTY_REFERENCE != AFFILIATION
+PATTERN != PROOF
+
+The graph maps public work, institutions, technologies, scholarship, criticism, and thematic relationships. It does not assert secret coordination, endorsement, guilt, or personal association.
 
 ## Developer entry points
 
