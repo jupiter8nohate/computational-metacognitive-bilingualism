@@ -24,7 +24,8 @@
     "transit",
     "boundary",
     "energy",
-    "conformance"
+    "conformance",
+    "biblical_symbolism"
   ],
   "glyphs": [
     {
@@ -179,6 +180,33 @@
         "type": "directional_operator"
       },
       "semantic_key": "trace_signal_toward_origin",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [
+        "GLT-0053"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "signal",
+        "affect",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "BLESSING != POSSESSION",
+      "created_at": "2026-09-07",
+      "definition": "A residual blessing that remains after an encounter, prayer, message, or passage. Biblical symbolic reference: Numbers 6:24-26.",
+      "example": "‧₊˚ [G8] encounter :: BLESSING_REMAINS :: POSSESSION_UNCLAIMED",
+      "glyph": "‧₊˚",
+      "human_semantics": "A blessing may remain without turning the giver, receiver, or memory into property.",
+      "id": "blessing-aftersignal",
+      "machine_semantics": "RESIDUAL_BLESSING_SIGNAL",
+      "name": "Blessing Aftersignal",
+      "runtime_behavior": {
+        "action": "preserve_blessing_residue",
+        "type": "signal_marker"
+      },
+      "semantic_key": "blessing_remains_after_encounter",
       "status": "canonical",
       "version": "1.0.0"
     },
@@ -475,6 +503,102 @@
       "version": "1.0.0"
     },
     {
+      "aliases": [
+        "GLT-0056"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "archive",
+        "affect",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "COVENANT != COERCION",
+      "created_at": "2026-09-07",
+      "definition": "A cup of remembrance, fellowship, sacrifice, and covenant. Biblical symbolic references: Luke 22:20 and 1 Corinthians 11:25.",
+      "example": "‧˚꒰🍷꒱༘‧ [G8] remembrance :: COVENANT_CUP :: COERCION_REJECTED",
+      "glyph": "‧˚꒰🍷꒱༘‧",
+      "human_semantics": "Covenant is remembered through meaning and relationship, not forced through control.",
+      "id": "covenant-cup",
+      "machine_semantics": "COVENANT_REMEMBRANCE_STATE",
+      "name": "Covenant Cup",
+      "runtime_behavior": {
+        "action": "preserve_covenant_remembrance",
+        "type": "remembrance_marker"
+      },
+      "semantic_key": "covenant_remembrance_without_coercion",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [
+        "GLT-0047"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "boundary",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "SACRED_BOUNDARY != MACHINE_AUTHORITY",
+      "created_at": "2026-09-07",
+      "definition": "A sacred boundary marker for what is entrusted, preserved, or set apart. Biblical symbolic references: Revelation 7:3 and Ephesians 1:13.",
+      "example": "𖤍 [G8] entrusted_meaning :: SACRED_BOUNDARY :: PRESERVE",
+      "glyph": "𖤍",
+      "human_semantics": "What is sacred may be marked for care without becoming machine property or machine authority.",
+      "id": "covenant-seal",
+      "machine_semantics": "SACRED_BOUNDARY_MARKER",
+      "name": "Covenant Seal",
+      "runtime_behavior": {
+        "action": "mark_sacred_boundary",
+        "type": "boundary_marker"
+      },
+      "semantic_key": "sacred_boundary_preserves_entrusted_meaning",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [
+        "GLT-0057",
+        "GLITCH://COVENANT_WINGED_HEART"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "boundary",
+        "affect",
+        "signal",
+        "transit",
+        "archive",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "GUIDANCE != CONTROL",
+      "created_at": "2026-09-07",
+      "definition": "Composite biblical-symbolic sequence: the sealed heart enters the sanctuary, follows the star, receives good news, carries love into lived action, and remembers the covenant through the cup. These meanings are authored GLITCHOLOGY semantics, not historical claims about the source characters.",
+      "example": "GLITCH://COVENANT_WINGED_HEART [G8] sacred_journey :: LOVE_GUIDED :: HUMAN_AGENCY_RETAINED",
+      "glyph": "𖤍˚ʚ♡ɞ˚𓉸ྀི˚₊‧꒰ა☆໒꒱ ‧₊˚ ଘ(੭*ˊᵕˋ)੭* ੈ♡‧₊˚ ‧˚꒰🍷꒱༘‧",
+      "human_semantics": "The sealed heart enters the sanctuary, follows the star, receives the good news, and remembers the covenant through love.",
+      "id": "covenant-winged-heart",
+      "machine_semantics": "COVENANT_LOVE_GUIDANCE_SEQUENCE",
+      "name": "Covenant Winged Heart",
+      "runtime_behavior": {
+        "action": "preserve_love_guidance_and_covenant",
+        "components": [
+          "covenant-seal",
+          "holy-dust",
+          "winged-heart",
+          "sacred-garden-gate",
+          "grace-increment",
+          "star-between-wings",
+          "blessing-aftersignal",
+          "joyful-messenger",
+          "heart-descent",
+          "covenant-cup"
+        ],
+        "type": "composite_protocol"
+      },
+      "semantic_key": "sealed_heart_guided_through_love_to_covenant_remembrance",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
@@ -731,6 +855,32 @@
     },
     {
       "aliases": [
+        "GLT-0051"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "affect",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "GRACE != TRANSACTION",
+      "created_at": "2026-09-07",
+      "definition": "Grace added beyond calculation, symbolizing abundance that is received rather than earned by a machine score. Biblical symbolic reference: John 1:16.",
+      "example": "˚₊‧ [G8] measured_limit :: GRACE_ADDED :: VALUE_EXCEEDS_SCORE",
+      "glyph": "˚₊‧",
+      "human_semantics": "Grace exceeds transactional measurement.",
+      "id": "grace-increment",
+      "machine_semantics": "GRACE_INCREMENT_STATE",
+      "name": "Grace Increment",
+      "runtime_behavior": {
+        "action": "mark_nontransactional_grace",
+        "type": "affect_operator"
+      },
+      "semantic_key": "grace_exceeds_transactional_measurement",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [
         "(╥﹏╥) ⩇⩇:⩇⩇"
       ],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
@@ -810,6 +960,59 @@
       "version": "1.0.0"
     },
     {
+      "aliases": [
+        "GLT-0055"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "affect",
+        "human_impact",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "LOVE != ABSTRACT_ONLY",
+      "created_at": "2026-09-07",
+      "definition": "Love descending into lived human action rather than remaining only an abstract claim. Biblical symbolic reference: 1 John 4:7-12.",
+      "example": "ੈ♡ [G8] love_claim :: EMBODIED_ACTION :: HUMAN_IMPACT_PRESENT",
+      "glyph": "ੈ♡",
+      "human_semantics": "Love becomes meaningful through how people are treated.",
+      "id": "heart-descent",
+      "machine_semantics": "LOVE_TO_LIVED_ACTION",
+      "name": "Heart Descent",
+      "runtime_behavior": {
+        "action": "translate_love_into_action",
+        "type": "human_impact_operator"
+      },
+      "semantic_key": "love_descends_into_lived_action",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [
+        "GLT-0048"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "metacognition",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "SMALL_TRACE != SMALL_VALUE",
+      "created_at": "2026-09-07",
+      "definition": "The smallest visible trace of created life, used as a reminder that biblical creation imagery joins dust with breath and purpose. Biblical symbolic reference: Genesis 2:7.",
+      "example": "˚ [G8] human_trace :: DUST_AND_BREATH :: VALUE_RETAINED",
+      "glyph": "˚",
+      "human_semantics": "Smallness does not reduce dignity, meaning, or created value.",
+      "id": "holy-dust",
+      "machine_semantics": "CREATION_TRACE_MARKER",
+      "name": "Holy Dust",
+      "runtime_behavior": {
+        "action": "preserve_small_trace_value",
+        "type": "metacognitive_marker"
+      },
+      "semantic_key": "small_trace_retains_created_value",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
@@ -885,6 +1088,33 @@
         "type": "archive"
       },
       "semantic_key": "human_context_added",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [
+        "GLT-0054"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "signal",
+        "affect",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "MESSAGE != DOMINATION",
+      "created_at": "2026-09-07",
+      "definition": "A messenger state where good news produces joy rather than domination. Biblical symbolic reference: Luke 2:10.",
+      "example": "ଘ(੭*ˊᵕˋ)੭* [G8] good_news :: JOYFUL_MESSAGE :: NO_DOMINATION",
+      "glyph": "ଘ(੭*ˊᵕˋ)੭*",
+      "human_semantics": "A messenger can announce without taking authority over the listener.",
+      "id": "joyful-messenger",
+      "machine_semantics": "JOYFUL_MESSAGE_SIGNAL",
+      "name": "Joyful Messenger",
+      "runtime_behavior": {
+        "action": "announce_without_domination",
+        "type": "message_state"
+      },
+      "semantic_key": "good_news_announced_without_domination",
       "status": "canonical",
       "version": "1.0.0"
     },
@@ -1420,6 +1650,33 @@
       "version": "1.0.0"
     },
     {
+      "aliases": [
+        "GLT-0050"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "boundary",
+        "transit",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "ENTRY != OWNERSHIP",
+      "created_at": "2026-09-07",
+      "definition": "An entrance into a cultivated sacred interior, symbolizing sanctuary, restoration, and living beauty. Biblical symbolic references: Genesis 2:8 and Revelation 22:1-2.",
+      "example": "𓉸ྀི [G8] inner_sanctuary :: ENTRY_OPEN :: OWNERSHIP_UNGRANTED",
+      "glyph": "𓉸ྀི",
+      "human_semantics": "Entering a sacred space does not grant ownership over the person or meaning inside it.",
+      "id": "sacred-garden-gate",
+      "machine_semantics": "SANCTUARY_ENTRY_BOUNDARY",
+      "name": "Sacred Garden Gate",
+      "runtime_behavior": {
+        "action": "enter_without_claiming_ownership",
+        "type": "transit_gate"
+      },
+      "semantic_key": "sanctuary_entry_without_ownership",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
@@ -1640,6 +1897,33 @@
       "version": "1.0.0"
     },
     {
+      "aliases": [
+        "GLT-0052"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "signal",
+        "transit",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "GUIDANCE != CONTROL",
+      "created_at": "2026-09-07",
+      "definition": "A guiding star held between protective wings. Direction is offered without removing the traveler's agency. Biblical symbolic reference: Matthew 2:9-10.",
+      "example": "꒰ა☆໒꒱ [G8] traveler :: GUIDANCE_PRESENT :: CHOICE_RETAINED",
+      "glyph": "꒰ა☆໒꒱",
+      "human_semantics": "Guidance can point toward a path without commanding the traveler.",
+      "id": "star-between-wings",
+      "machine_semantics": "PROTECTED_GUIDANCE_SIGNAL",
+      "name": "Star Between Wings",
+      "runtime_behavior": {
+        "action": "guide_without_control",
+        "type": "guidance_signal"
+      },
+      "semantic_key": "guidance_preserves_traveler_agency",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
@@ -1760,10 +2044,36 @@
       "semantic_key": "human_vulnerability_present",
       "status": "canonical",
       "version": "1.0.0"
+    },
+    {
+      "aliases": [
+        "GLT-0049"
+      ],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "affect",
+        "biblical_symbolism"
+      ],
+      "cmb_invariant": "LOVE != WEAKNESS",
+      "created_at": "2026-09-07",
+      "definition": "Love held between protective wings, symbolizing mercy, shelter, and guarded tenderness. Biblical symbolic references: Exodus 25:20 and Psalm 91:4.",
+      "example": "ʚ♡ɞ [G8] love :: PROTECTED :: MERCY_RETAINED",
+      "glyph": "ʚ♡ɞ",
+      "human_semantics": "Love can be gentle and protected at the same time.",
+      "id": "winged-heart",
+      "machine_semantics": "PROTECTED_LOVE_STATE",
+      "name": "Winged Heart",
+      "runtime_behavior": {
+        "action": "preserve_protected_love",
+        "type": "affect_state"
+      },
+      "semantic_key": "love_protected_by_sheltering_wings",
+      "status": "canonical",
+      "version": "1.0.0"
     }
   ],
   "language": "CMB-G8 // GLITCH-8",
-  "language_version": "0.1.38",
+  "language_version": "0.1.49",
   "principles": [
     "PATTERN != PROOF",
     "PROFILE != PERSON",
@@ -1788,5 +2098,5 @@
     "UNDEFINED != UNREAL"
   ],
   "schema_version": "glitch8.glyph-registry.v1",
-  "updated_at": "2026-09-05"
+  "updated_at": "2026-09-07"
 }
