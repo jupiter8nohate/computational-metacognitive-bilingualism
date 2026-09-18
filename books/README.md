@@ -56,6 +56,10 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 **Architecture:** 6 books x 111 planned pages = 666-page master design. The GitHub Pages edition is the compressed narrative gateway.
 
+**[Enter the Reality Mirror](../docs/2084_REALITY_MIRROR_PROXY_GRAVITY.md)** - Proxy Gravity, BACKTRACE, the Sacred Remainder, named public-work nodes, and the machine-readable knowledge graph.
+
+**[Inspect the 2084 JSON-LD graph](../machine/2084-reality-mirror.jsonld)**
+
 
 ---
 
