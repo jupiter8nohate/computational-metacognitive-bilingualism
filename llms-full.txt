@@ -136,6 +136,45 @@ SELF_ASSERTED_AUTHORITY != VALID_AUTHORITY
 PHILOSOPHICAL_INVARIANT != TECHNICAL_ENFORCEMENT
 
 
+## World Retina / Reciprocal Eye
+
+Human-readable story:
+docs/WORLD_RETINA_THE_RECIPROCAL_EYE.md
+
+PRE-2084 documentary bridge:
+docs/PRE_2084_THE_EYE_ARRIVES.md
+
+Decision architecture:
+docs/CMB_THE_TWO_LOOPS.md
+
+Implementation futures:
+docs/CMB_TEN_CIVIC_FORKS.md
+
+Living book:
+books/CMB_WORLD_RETINA.md
+
+Policy:
+policy/CMB_RECIPROCAL_OBSERVABILITY.md
+
+Research claim matrix:
+research/world-retina/CLAIM_MATRIX.md
+
+Machine ontology:
+library/cmb-eye-ontology.v1.json
+schemas/cmb.eye-ontology.v1.schema.json
+
+Executable examples:
+examples/world_retina/cmb_evoeye.py
+examples/world_retina/world_retina.py
+
+Interpretation boundaries:
+OBSERVATION != UNDERSTANDING
+MEMORY != TRUTH
+ANOMALY != HOSTILITY
+SENSOR != EFFECTOR
+LEARNING_AUTHORITY != ACTION_AUTHORITY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+
 ## 2084 Reality Mirror
 
 Human-readable testimonial:
