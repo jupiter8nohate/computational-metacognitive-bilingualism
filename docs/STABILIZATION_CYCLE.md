@@ -113,10 +113,10 @@ surfaces visible in code review.
 Before `v1.5.0-rc1`:
 
 - [x] README and CHANGELOG accurately describe the post-v1.4.1 delta.
-- [ ] Python 3.10–3.13 CI is green.
-- [ ] canonical receipt verification is green.
-- [ ] CodeQL and dependency review are green.
-- [ ] Recovery audit is green.
+- [x] Python 3.10–3.13 CI is green.
+- [x] canonical receipt verification is green.
+- [x] CodeQL and dependency review are green.
+- [x] Recovery audit is green.
 - [x] TypeScript and Rust adapter dependency graphs are locked reproducibly.
 - [x] no new top-level package or installed CLI has been added since the freeze line.
 - [x] open expansion PRs are held or explicitly deferred.
@@ -128,6 +128,27 @@ Before final `v1.5.0`:
 - [ ] the exact reviewed commit is tagged and signed;
 - [ ] release assets, checksums, receipt, Sigstore bundles, and attestations are verified;
 - [ ] external archival metadata is updated only after public DOI/archive verification.
+
+## v1.5.0-rc.1 readiness evidence
+
+The post-World-Retina main commit `a4a5ba3a987afbda5d119ba6188aa4a47d8dc7f4` completed the repository-side gates required before preparing the release candidate:
+
+- Python 3.10, 3.11, 3.12, and 3.13 CI passed;
+- canonical receipt generation and verification passed;
+- Recovery audit passed across the supported Python matrix;
+- Documentation passed;
+- CMB Sovereignty Gate passed;
+- CodeQL passed;
+- dependency review passed on the protected PR head before merge;
+- OpenSSF Scorecard passed;
+- GitHub Pages publication passed.
+
+These results establish repository-side readiness for an RC candidate. They do not satisfy the independent-review requirement for final `v1.5.0`.
+
+~~~text
+RC_READY != FINAL_RELEASE_VALIDATED
+GREEN_CI != INDEPENDENT_AUDIT
+~~~
 
 ## Known stabilization gaps
 
