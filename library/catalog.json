@@ -1086,6 +1086,83 @@
         "interpretation boundaries"
       ],
       "declared_meaning": "Machine-readable graph of public-work and thematic relationships for the 2084 Reality Mirror. THEMATIC_RELATION != PERSONAL_RELATION and PUBLIC_WORK_CONNECTION != SECRET_COORDINATION."
+    },
+    {
+      "id": "cmb-world-retina-book",
+      "title": "CMB // World Retina - The Reciprocal Eye",
+      "path": "books/CMB_WORLD_RETINA.md",
+      "format": "markdown",
+      "kind": "living book and surveillance-architecture critique",
+      "status": "draft",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "World Retina",
+        "Reciprocal Eye",
+        "evolved perception",
+        "computer vision",
+        "surveillance",
+        "consent",
+        "mythological symbolism",
+        "human agency"
+      ],
+      "declared_meaning": "Conversation-derived living book separating symbolism, sensing, world models, anomaly detection, bounded learning, military analogies, consent, and Reciprocal Observability. Religious mappings are interpretive, not claims of doctrinal identity or ancient prediction of AI."
+    },
+    {
+      "id": "cmb-eye-ontology-v1",
+      "title": "CMB Eye Ontology v1",
+      "path": "library/cmb-eye-ontology.v1.json",
+      "format": "json",
+      "kind": "machine-readable symbolic and architectural registry",
+      "status": "draft",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "eye ontology",
+        "World Retina",
+        "symbolic mapping",
+        "architectural layers",
+        "GLITCH://RECIPROCAL_WITNESS_RING"
+      ],
+      "declared_meaning": "Machine-readable companion to World Retina with ten bounded architectural roles and explicit rules that metaphor is not empirical evidence and symbolic similarity is not historical identity."
+    },
+    {
+      "id": "cmb-eye-ontology-schema-v1",
+      "title": "CMB Eye Ontology v1 Schema",
+      "path": "schemas/cmb.eye-ontology.v1.schema.json",
+      "format": "json schema",
+      "kind": "strict machine-readable validation contract",
+      "status": "draft",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "semantic drift prevention",
+        "interpretation boundaries"
+      ],
+      "declared_meaning": "Validation contract preserving the World Retina layer count, CMB interpretation boundaries, and GLITCH://RECIPROCAL_WITNESS_RING semantics."
+    },
+    {
+      "id": "cmb-reciprocal-observability",
+      "title": "CMB Reciprocal Observability",
+      "path": "policy/CMB_RECIPROCAL_OBSERVABILITY.md",
+      "format": "markdown",
+      "kind": "proposed surveillance and observability policy",
+      "status": "draft",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "reciprocal observability",
+        "inspectability",
+        "contestability",
+        "purpose limitation",
+        "human authority"
+      ],
+      "declared_meaning": "Proposes that systems observing humans or institutions expose purpose, provenance, inference, uncertainty, retention, and appeal paths while keeping observation separate from action authority."
     }
   ]
 }
