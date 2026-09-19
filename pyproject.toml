@@ -62,8 +62,9 @@ cmbc = "cmb_policy.runtime_cli:main"
 glitch8 = "cmb_glitch8.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
+Homepage = "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
 Repository = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism"
+Documentation = "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
 Issues = "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues"
 
 [tool.setuptools]
