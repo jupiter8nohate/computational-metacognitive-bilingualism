@@ -1230,6 +1230,29 @@
         "open governance"
       ],
       "declared_meaning": "Ten bounded implementation directions derived from World Retina, explicitly separating speculative futures from deployed systems and preserving human authority, privacy, provenance, recovery, and contestability."
+    },
+    {
+      "id": "cmb-two-loops",
+      "title": "CMB // The Two Loops",
+      "path": "docs/CMB_THE_TWO_LOOPS.md",
+      "format": "markdown",
+      "kind": "normative decision architecture",
+      "status": "draft",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "Autocratic Loop",
+        "Sovereign Loop",
+        "Reciprocal Eye",
+        "visible purpose",
+        "meaningful consent",
+        "traceable provenance",
+        "exposed uncertainty",
+        "human appeal",
+        "bounded authority"
+      ],
+      "declared_meaning": "Formal contrast between an ambient-surveillance path toward 2084 and a Reciprocal Eye path built around purpose, consent, provenance, uncertainty, appeal, and bounded machine authority."
     }
   ]
 }
