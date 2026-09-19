@@ -1,8 +1,9 @@
 # CMB v1.5 Release Candidate Brief
 
-**Status:** RC RECONCILIATION IN PROGRESS  
+**Status:** FROZEN REVIEW CANDIDATE  
 **Latest published signed release:** `v1.4.1`  
-**Candidate prep branch:** `release/v1.5.0-rc.1-prep`  
+**Frozen candidate commit:** `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5`  
+**Immutable review branch:** `review/v1.5.0-rc.1-e725bb6`  
 **Candidate source/tool version:** `1.5.0-rc.1`  
 **Candidate tag:** `v1.5.0-rc.1`  
 **Final target:** `v1.5.0`
@@ -67,7 +68,7 @@ educational experiment, or research subsystem.
 
 Before tagging `v1.5.0-rc.1`:
 
-- [ ] stabilization PR is merged into `main`;
+- [x] stabilization / RC reconciliation PR is merged into `main`;
 - [x] package/tool/citation versions are synchronized to the SemVer release-candidate version;
 - [x] Python 3.10–3.13 CI passes;
 - [x] canonical receipt generation passes;
@@ -80,11 +81,21 @@ Before tagging `v1.5.0-rc.1`:
 
 ## Review-target repin
 
-The current issue #63 review target predates the World Retina publication merge and is therefore stale for the complete v1.5 candidate tree. After this reconciliation PR merges, create a new immutable review branch at the exact resulting commit and update issue #63 before requesting independent review.
+Issue #63 is repinned to the frozen candidate commit `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5` and immutable branch `review/v1.5.0-rc.1-e725bb6`. The prior review target is superseded. Any later `main` documentation or maintenance commits are outside this candidate unless a new candidate is deliberately cut.
 
 ~~~text
 OLD_REVIEW_TARGET != CURRENT_CANDIDATE_TREE
 EXACT_COMMIT > MOVING_TARGET
+~~~
+
+## RC publication state
+
+The candidate tree is frozen and independently addressable by exact commit and review branch. The signed GitHub release is still pending creation of tag `v1.5.0-rc.1` at exactly `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5`. Issue #138 tracks that tag-only action.
+
+~~~text
+TAG_COMMIT == REVIEW_COMMIT
+MAIN_AFTER_CANDIDATE != CANDIDATE_BYTES
+RC != FINAL_RELEASE
 ~~~
 
 ## Final v1.5.0 gate
