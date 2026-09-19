@@ -23,6 +23,23 @@ The repository publishes a public documentation origin designed for human reader
 - Go runtime source: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/main.go
 - Python mirror source: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/mirror.py
 
+## World Retina discovery surfaces
+
+- World Retina story: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/WORLD_RETINA_THE_RECIPROCAL_EYE/
+- PRE-2084 - The Eye Arrives: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/PRE_2084_THE_EYE_ARRIVES/
+- The Two Loops: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_THE_TWO_LOOPS/
+- Ten Civic Forks: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_TEN_CIVIC_FORKS/
+- World Retina gateway: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/world-retina/
+- Living-book source: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/books/CMB_WORLD_RETINA.md
+- Reciprocal Observability policy: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/policy/CMB_RECIPROCAL_OBSERVABILITY.md
+- Claim matrix: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/world-retina/CLAIM_MATRIX.md
+- EvoEye source: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/world_retina/cmb_evoeye.py
+- World Retina source: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/world_retina/world_retina.py
+- Eye ontology: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/cmb-eye-ontology.v1.json
+- Eye ontology schema: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.eye-ontology.v1.schema.json
+
+These paths are public discovery surfaces. Publication and sitemap inclusion make them crawlable; they do not guarantee Google indexing or ranking.
+
 ## Robots scope caveat
 
 The project publishes a permissive `robots.txt` inside its GitHub Pages project path. Under the standard Robots Exclusion Protocol, crawlers normally consult the host-root file at `https://jupiter8nohate.github.io/robots.txt`. A project-subpath robots file is therefore an explicit discovery signal, but it cannot override host-level crawler policy or force a third-party bot to crawl, index, train on, or retrieve the project.
