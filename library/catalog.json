@@ -1163,6 +1163,27 @@
         "human authority"
       ],
       "declared_meaning": "Proposes that systems observing humans or institutions expose purpose, provenance, inference, uncertainty, retention, and appeal paths while keeping observation separate from action authority."
+    },
+    {
+      "id": "cmb-world-retina-story",
+      "title": "CMB // World Retina - The Reciprocal Eye Original Story",
+      "path": "docs/WORLD_RETINA_THE_RECIPROCAL_EYE.md",
+      "format": "markdown",
+      "kind": "original speculative fiction and code-poetry",
+      "status": "draft",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "World Retina",
+        "Reciprocal Eye",
+        "57 chapters",
+        "speculative fiction",
+        "code poetry",
+        "surveillance critique",
+        "human agency"
+      ],
+      "declared_meaning": "Original 57-chapter CMB narrative that turns the historical and computational genealogy of the Eye into a fictional journey from protective observation through algorithmic surveillance to Reciprocal Observability."
     }
   ]
 }
