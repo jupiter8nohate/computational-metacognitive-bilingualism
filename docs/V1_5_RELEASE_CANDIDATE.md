@@ -1,8 +1,8 @@
 # CMB v1.5 Release Candidate Brief
 
-**Status:** CANDIDATE BRANCH  
+**Status:** RC RECONCILIATION IN PROGRESS  
 **Latest published signed release:** `v1.4.1`  
-**Candidate branch:** `release/v1.5.0rc1`  
+**Candidate prep branch:** `release/v1.5.0-rc.1-prep`  
 **Candidate source/tool version:** `1.5.0-rc.1`  
 **Candidate tag:** `v1.5.0-rc.1`  
 **Final target:** `v1.5.0`
@@ -36,7 +36,9 @@ The candidate includes, among other already-implemented work:
 - GLITCH-3D-1 spatial semantics and runtime;
 - machine discovery and documentation hardening;
 - explicit v1.5 stabilization/scope controls;
-- committed npm and Cargo lockfiles with locked CI/release installation.
+- committed npm and Cargo lockfiles with locked CI/release installation;
+- the World Retina / Reciprocal Eye publication set, including the 57-chapter story, PRE-2084 bridge, Two Loops, Ten Civic Forks, public policy/research surfaces, machine ontology/schema, and bounded example programs;
+- canonical GitHub Pages discovery for World Retina through sitemap, robots policy, machine/LLM discovery surfaces, public gateway URLs, and deployment-time IndexNow notification.
 
 This list is a release narrative, not a claim that every experimental subsystem
 has become a stable public compatibility promise.
@@ -66,15 +68,24 @@ educational experiment, or research subsystem.
 Before tagging `v1.5.0-rc.1`:
 
 - [ ] stabilization PR is merged into `main`;
-- [ ] package/tool/citation versions are synchronized to the SemVer release-candidate version;
-- [ ] Python 3.10–3.13 CI passes;
-- [ ] canonical receipt generation passes;
-- [ ] CodeQL and dependency review pass;
-- [ ] TypeScript uses the committed npm lock through `npm ci`;
-- [ ] Rust uses the committed Cargo lock through `--locked`;
+- [x] package/tool/citation versions are synchronized to the SemVer release-candidate version;
+- [x] Python 3.10–3.13 CI passes;
+- [x] canonical receipt generation passes;
+- [x] CodeQL and dependency review pass;
+- [x] TypeScript uses the committed npm lock through `npm ci`;
+- [x] Rust uses the committed Cargo lock through `--locked`;
 - [ ] Go and GLT-8101 conformance pass;
-- [ ] Recovery audit passes;
-- [ ] README, CHANGELOG, SECURITY, and RELEASE surfaces agree on maturity.
+- [x] Recovery audit passes;
+- [x] README, CHANGELOG, SECURITY, and RELEASE surfaces agree on maturity after this reconciliation PR.
+
+## Review-target repin
+
+The current issue #63 review target predates the World Retina publication merge and is therefore stale for the complete v1.5 candidate tree. After this reconciliation PR merges, create a new immutable review branch at the exact resulting commit and update issue #63 before requesting independent review.
+
+~~~text
+OLD_REVIEW_TARGET != CURRENT_CANDIDATE_TREE
+EXACT_COMMIT > MOVING_TARGET
+~~~
 
 ## Final v1.5.0 gate
 
