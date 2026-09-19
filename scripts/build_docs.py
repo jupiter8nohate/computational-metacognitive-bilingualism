@@ -22,8 +22,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
 PUBLIC_DIRECTORIES = (
     "assets", "agents", "datasets", "extensions", "library", "machine", "schemas", "spec",
-    "conformance/glitch-ir", "research/case-studies",
-    "examples/polyglot/jupiter_glitchology_runtime",
+    "books", "policy", "archive/conversations",
+    "conformance/glitch-ir", "research/case-studies", "research/world-retina",
+    "examples/world_retina", "examples/polyglot/jupiter_glitchology_runtime",
     "examples/polyglot/glitchology_registry_3d_runtime",
 )
 PUBLIC_FILES = ("AGENTS.md", "llms.txt", "llms-full.txt", "CITATION.cff", "CITATION.bib")
@@ -57,6 +58,14 @@ REQUIRED_PUBLIC_PATHS = (
     "schemas/cmb.recovery-map.v1.schema.json",
     "schemas/cmb.canonical-corpus-manifest.v1.schema.json",
     "schemas/cmb.canonical-corpus-record.v1.schema.json",
+    "books/CMB_WORLD_RETINA.md",
+    "policy/CMB_RECIPROCAL_OBSERVABILITY.md",
+    "research/world-retina/CLAIM_MATRIX.md",
+    "examples/world_retina/cmb_evoeye.py",
+    "examples/world_retina/world_retina.py",
+    "archive/conversations/2026-09-19-world-retina-origin.md",
+    "library/cmb-eye-ontology.v1.json",
+    "schemas/cmb.eye-ontology.v1.schema.json",
     "examples/polyglot/jupiter_glitchology_runtime/README.md",
     "examples/polyglot/jupiter_glitchology_runtime/main.go",
     "examples/polyglot/jupiter_glitchology_runtime/mirror.py",
