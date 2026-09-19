@@ -1206,6 +1206,30 @@
         "human agency"
       ],
       "declared_meaning": "Evidence-tagged documentary prequel connecting documented 2026 visual-computing and wearable-AI developments to the fictional 2084 cycle without presenting trend extrapolation as prophecy or certainty."
+    },
+    {
+      "id": "cmb-ten-civic-forks",
+      "title": "CMB // Ten Civic Forks",
+      "path": "docs/CMB_TEN_CIVIC_FORKS.md",
+      "format": "markdown",
+      "kind": "speculative implementation roadmap",
+      "status": "draft",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "glitch-first engineering",
+        "counter-surveillance",
+        "cryptographic provenance",
+        "constitutional safety gates",
+        "community digital twins",
+        "anti-profiling",
+        "mythology architecture",
+        "alert fatigue",
+        "smart eyewear privacy",
+        "open governance"
+      ],
+      "declared_meaning": "Ten bounded implementation directions derived from World Retina, explicitly separating speculative futures from deployed systems and preserving human authority, privacy, provenance, recovery, and contestability."
     }
   ]
 }
