@@ -6,17 +6,17 @@ World Retina is the CMB research-and-literary architecture for tracing the eye f
 
 ## Read
 
-- [World Retina: The Reciprocal Eye](../../books/CMB_WORLD_RETINA.md)
-- [Reciprocal Observability policy](../../policy/CMB_RECIPROCAL_OBSERVABILITY.md)
-- [Claim matrix](../../research/world-retina/CLAIM_MATRIX.md)
-- [Eye ontology registry](../../library/cmb-eye-ontology.v1.json)
-- [Eye ontology schema](../../schemas/cmb.eye-ontology.v1.schema.json)
-- [Conversation-origin notes](../../archive/conversations/2026-09-19-world-retina-origin.md)
+- [World Retina: The Reciprocal Eye](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/books/CMB_WORLD_RETINA.md)
+- [Reciprocal Observability policy](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/policy/CMB_RECIPROCAL_OBSERVABILITY.md)
+- [Claim matrix](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/research/world-retina/CLAIM_MATRIX.md)
+- [Eye ontology registry](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/library/cmb-eye-ontology.v1.json)
+- [Eye ontology schema](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/schemas/cmb.eye-ontology.v1.schema.json)
+- [Conversation-origin notes](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/archive/conversations/2026-09-19-world-retina-origin.md)
 
 ## Run
 
-- [EvoEye experiment](../../examples/world_retina/cmb_evoeye.py)
-- [World Retina experiment](../../examples/world_retina/world_retina.py)
+- [EvoEye experiment](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/examples/world_retina/cmb_evoeye.py)
+- [World Retina experiment](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/examples/world_retina/world_retina.py)
 
 ## Core topology
 
