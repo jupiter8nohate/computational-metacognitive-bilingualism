@@ -1184,6 +1184,28 @@
         "human agency"
       ],
       "declared_meaning": "Original 57-chapter CMB narrative that turns the historical and computational genealogy of the Eye into a fictional journey from protective observation through algorithmic surveillance to Reciprocal Observability."
+    },
+    {
+      "id": "cmb-pre-2084-eye-arrives",
+      "title": "PRE-2084 // The Eye Arrives",
+      "path": "docs/PRE_2084_THE_EYE_ARRIVES.md",
+      "format": "markdown",
+      "kind": "documentary speculative prequel",
+      "status": "draft",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "Pre-2084",
+        "World Retina",
+        "smart glasses",
+        "visual intelligence",
+        "reciprocal observability",
+        "surveillance critique",
+        "technology forecasting",
+        "human agency"
+      ],
+      "declared_meaning": "Evidence-tagged documentary prequel connecting documented 2026 visual-computing and wearable-AI developments to the fictional 2084 cycle without presenting trend extrapolation as prophecy or certainty."
     }
   ]
 }
