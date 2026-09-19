@@ -54,7 +54,7 @@ explicitly reviewed as a freeze-boundary exception.
 
 **Stabilization contract:** [CMB v1.5 Stabilization Cycle](docs/STABILIZATION_CYCLE.md)
 **Release-candidate handoff:** [CMB v1.5 Release Candidate Brief](docs/V1_5_RELEASE_CANDIDATE.md)  
-**Candidate version:** `1.5.0-rc.1` — exact review commit/branch will be repinned in issue #63 after RC reconciliation; not yet a published release.  
+**Frozen candidate:** `1.5.0-rc.1` at `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5` on `review/v1.5.0-rc.1-e725bb6`; signed RC tag is still pending.  
 **Tracked gates:** [dependency reproducibility #62](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/62) · [independent review #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) · [Zenodo/DOI #44](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/44)
 
 ```text
@@ -70,7 +70,7 @@ This repository separates the published baseline, the current release candidate,
 | Surface | Current state | Meaning |
 | --- | --- | --- |
 | Published signed baseline | `v1.4.1` | Last published signed release |
-| Development target | `1.5.0-rc.1` | Release candidate, not the final v1.5.0 claim |
+| Frozen RC candidate | `1.5.0-rc.1` @ `e725bb6a` | Exact review object; later `main` commits are not part of this candidate |
 | Independent technical review | **Pending** | Self-tests and CI are not external validation |
 | Default-branch governance | **Active ruleset** | Pull request, linear-history, review-thread, and required-check gates protect `main` |
 | External archive / DOI | **Pending public verification** | Citation metadata must not claim a DOI until the record resolves publicly |
