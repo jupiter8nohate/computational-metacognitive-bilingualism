@@ -54,7 +54,7 @@ explicitly reviewed as a freeze-boundary exception.
 
 **Stabilization contract:** [CMB v1.5 Stabilization Cycle](docs/STABILIZATION_CYCLE.md)
 **Release-candidate handoff:** [CMB v1.5 Release Candidate Brief](docs/V1_5_RELEASE_CANDIDATE.md)  
-**Candidate branch/version:** `release/v1.5.0rc1` / `1.5.0-rc.1` — not yet a published release.  
+**Candidate version:** `1.5.0-rc.1` — exact review commit/branch will be repinned in issue #63 after RC reconciliation; not yet a published release.  
 **Tracked gates:** [dependency reproducibility #62](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/62) · [independent review #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) · [Zenodo/DOI #44](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/44)
 
 ```text
@@ -150,6 +150,9 @@ Code-poetry, D.N.A., FGC, HARMONI, MissingNo, and symbolic work.
 
 **📖 [BOOK SHELF // Err⃝or⃟⃤GLITCHOLOGY](books/README.md)**  
 Long-form CMB books and experimental language volumes, beginning with [𒄆𓁹✞𒀱✞𓁹𒄆 Err⃝or⃟⃤GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md).
+
+**𓁹 [WORLD RETINA // THE RECIPROCAL EYE](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/world-retina/)**  
+The public gateway connecting the 57-chapter story, PRE-2084, the Two Loops, Ten Civic Forks, Reciprocal Observability policy, claim matrix, ontology, and bounded executable experiments.
 
 **⚖ [CIVIC CHAMBER // POLICY](policy/CMB_POLICY_ONE_PAGER.md)**  
 Human agency, consent, accountability, and institutional boundaries.
