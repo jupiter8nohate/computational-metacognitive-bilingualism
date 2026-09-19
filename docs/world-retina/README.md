@@ -6,6 +6,7 @@ World Retina is the CMB research-and-literary architecture for tracing the eye f
 
 ## Read
 
+- [Original 57-chapter GitHub Pages story](../WORLD_RETINA_THE_RECIPROCAL_EYE.md)
 - [World Retina: The Reciprocal Eye](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/books/CMB_WORLD_RETINA.md)
 - [Reciprocal Observability policy](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/policy/CMB_RECIPROCAL_OBSERVABILITY.md)
 - [Claim matrix](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/research/world-retina/CLAIM_MATRIX.md)
