@@ -1086,6 +1086,173 @@
         "interpretation boundaries"
       ],
       "declared_meaning": "Machine-readable graph of public-work and thematic relationships for the 2084 Reality Mirror. THEMATIC_RELATION != PERSONAL_RELATION and PUBLIC_WORK_CONNECTION != SECRET_COORDINATION."
+    },
+    {
+      "id": "cmb-world-retina-book",
+      "title": "CMB // World Retina - The Reciprocal Eye",
+      "path": "books/CMB_WORLD_RETINA.md",
+      "format": "markdown",
+      "kind": "living book and surveillance-architecture critique",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "World Retina",
+        "Reciprocal Eye",
+        "evolved perception",
+        "computer vision",
+        "surveillance",
+        "consent",
+        "mythological symbolism",
+        "human agency"
+      ],
+      "declared_meaning": "Conversation-derived living book separating symbolism, sensing, world models, anomaly detection, bounded learning, military analogies, consent, and Reciprocal Observability. Religious mappings are interpretive, not claims of doctrinal identity or ancient prediction of AI."
+    },
+    {
+      "id": "cmb-eye-ontology-v1",
+      "title": "CMB Eye Ontology v1",
+      "path": "library/cmb-eye-ontology.v1.json",
+      "format": "json",
+      "kind": "machine-readable symbolic and architectural registry",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "eye ontology",
+        "World Retina",
+        "symbolic mapping",
+        "architectural layers",
+        "GLITCH://RECIPROCAL_WITNESS_RING"
+      ],
+      "declared_meaning": "Machine-readable companion to World Retina with ten bounded architectural roles and explicit rules that metaphor is not empirical evidence and symbolic similarity is not historical identity."
+    },
+    {
+      "id": "cmb-eye-ontology-schema-v1",
+      "title": "CMB Eye Ontology v1 Schema",
+      "path": "schemas/cmb.eye-ontology.v1.schema.json",
+      "format": "json schema",
+      "kind": "strict machine-readable validation contract",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "JSON Schema",
+        "semantic drift prevention",
+        "interpretation boundaries"
+      ],
+      "declared_meaning": "Validation contract preserving the World Retina layer count, CMB interpretation boundaries, and GLITCH://RECIPROCAL_WITNESS_RING semantics."
+    },
+    {
+      "id": "cmb-reciprocal-observability",
+      "title": "CMB Reciprocal Observability",
+      "path": "policy/CMB_RECIPROCAL_OBSERVABILITY.md",
+      "format": "markdown",
+      "kind": "proposed surveillance and observability policy",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "reciprocal observability",
+        "inspectability",
+        "contestability",
+        "purpose limitation",
+        "human authority"
+      ],
+      "declared_meaning": "Proposes that systems observing humans or institutions expose purpose, provenance, inference, uncertainty, retention, and appeal paths while keeping observation separate from action authority."
+    },
+    {
+      "id": "cmb-world-retina-story",
+      "title": "CMB // World Retina - The Reciprocal Eye Original Story",
+      "path": "docs/WORLD_RETINA_THE_RECIPROCAL_EYE.md",
+      "format": "markdown",
+      "kind": "original speculative fiction and code-poetry",
+      "status": "open",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "World Retina",
+        "Reciprocal Eye",
+        "57 chapters",
+        "speculative fiction",
+        "code poetry",
+        "surveillance critique",
+        "human agency"
+      ],
+      "declared_meaning": "Original 57-chapter CMB narrative that turns the historical and computational genealogy of the Eye into a fictional journey from protective observation through algorithmic surveillance to Reciprocal Observability."
+    },
+    {
+      "id": "cmb-pre-2084-eye-arrives",
+      "title": "PRE-2084 // The Eye Arrives",
+      "path": "docs/PRE_2084_THE_EYE_ARRIVES.md",
+      "format": "markdown",
+      "kind": "documentary speculative prequel",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "Pre-2084",
+        "World Retina",
+        "smart glasses",
+        "visual intelligence",
+        "reciprocal observability",
+        "surveillance critique",
+        "technology forecasting",
+        "human agency"
+      ],
+      "declared_meaning": "Evidence-tagged documentary prequel connecting documented 2026 visual-computing and wearable-AI developments to the fictional 2084 cycle without presenting trend extrapolation as prophecy or certainty."
+    },
+    {
+      "id": "cmb-ten-civic-forks",
+      "title": "CMB // Ten Civic Forks",
+      "path": "docs/CMB_TEN_CIVIC_FORKS.md",
+      "format": "markdown",
+      "kind": "speculative implementation roadmap",
+      "status": "planned",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "glitch-first engineering",
+        "counter-surveillance",
+        "cryptographic provenance",
+        "constitutional safety gates",
+        "community digital twins",
+        "anti-profiling",
+        "mythology architecture",
+        "alert fatigue",
+        "smart eyewear privacy",
+        "open governance"
+      ],
+      "declared_meaning": "Ten bounded implementation directions derived from World Retina, explicitly separating speculative futures from deployed systems and preserving human authority, privacy, provenance, recovery, and contestability."
+    },
+    {
+      "id": "cmb-two-loops",
+      "title": "CMB // The Two Loops",
+      "path": "docs/CMB_THE_TWO_LOOPS.md",
+      "format": "markdown",
+      "kind": "normative decision architecture",
+      "status": "derived",
+      "provenance_scope": "repository_artifact",
+      "human_readable": true,
+      "machine_indexable": true,
+      "concepts": [
+        "Autocratic Loop",
+        "Sovereign Loop",
+        "Reciprocal Eye",
+        "visible purpose",
+        "meaningful consent",
+        "traceable provenance",
+        "exposed uncertainty",
+        "human appeal",
+        "bounded authority"
+      ],
+      "declared_meaning": "Formal contrast between an ambient-surveillance path toward 2084 and a Reciprocal Eye path built around purpose, consent, provenance, uncertainty, appeal, and bounded machine authority."
     }
   ]
 }

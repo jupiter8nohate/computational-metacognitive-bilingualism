@@ -1,0 +1,201 @@
+{
+  "schema_version": "cmb.eye-ontology.v1",
+  "framework": "Computational Metacognitive Bilingualism",
+  "status": "deferred_expansion_draft",
+  "declared_originator": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson",
+  "interpretation_policy": {
+    "symbolic_mapping_is_historical_identity": false,
+    "religious_symbol_is_software_component": false,
+    "metaphor_is_empirical_evidence": false,
+    "human_self_definition_has_priority": true
+  },
+  "invariants": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "OBSERVATION != UNDERSTANDING",
+    "MEMORY != TRUTH",
+    "ANOMALY != HOSTILITY",
+    "SENSOR != EFFECTOR",
+    "LEARNING_AUTHORITY != ACTION_AUTHORITY",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "architectural_layers": [
+    {
+      "id": "WR-01",
+      "name": "Speculoos",
+      "role": "orbital_observation",
+      "class": "sensor",
+      "authority": "observe_only"
+    },
+    {
+      "id": "WR-02",
+      "name": "Microstis",
+      "role": "local_observation",
+      "class": "sensor",
+      "authority": "observe_only"
+    },
+    {
+      "id": "WR-03",
+      "name": "Chronos-Delta",
+      "role": "temporal_change_detection",
+      "class": "analysis",
+      "authority": "infer_change"
+    },
+    {
+      "id": "WR-04",
+      "name": "Syn-Aethel",
+      "role": "human_signal_gateway",
+      "class": "consent_boundary",
+      "authority": "consent_required"
+    },
+    {
+      "id": "WR-05",
+      "name": "Tessarion",
+      "role": "spatiotemporal_world_model",
+      "class": "representation",
+      "authority": "model_only"
+    },
+    {
+      "id": "WR-06",
+      "name": "Prometheus-AI",
+      "role": "attention_allocation",
+      "class": "cognition",
+      "authority": "prioritize_only"
+    },
+    {
+      "id": "WR-07",
+      "name": "Mnemosyne-Net",
+      "role": "world_memory",
+      "class": "storage",
+      "authority": "preserve_evidence"
+    },
+    {
+      "id": "WR-08",
+      "name": "Anomalia",
+      "role": "residual_detection",
+      "class": "cognition",
+      "authority": "flag_only"
+    },
+    {
+      "id": "WR-09",
+      "name": "Axiom",
+      "role": "hypothesis_testing",
+      "class": "reasoning",
+      "authority": "test_only"
+    },
+    {
+      "id": "WR-10",
+      "name": "Gnosis-V2",
+      "role": "bounded_learning",
+      "class": "learning",
+      "authority": "candidate_model_update_only"
+    }
+  ],
+  "symbolic_entries": [
+    {
+      "id": "EYE-PROVIDENCE",
+      "name": "Eye of Providence",
+      "tradition": "Christian and later cultural/fraternal contexts",
+      "class": "divine_observation",
+      "cmb_operator": "ACCOUNTABLE_WITNESS",
+      "living_tradition": true,
+      "interpretive_only": true
+    },
+    {
+      "id": "EYE-THIEN-NHAN",
+      "name": "Thiên Nhãn",
+      "tradition": "Cao Dai",
+      "class": "living_religious_symbol",
+      "cmb_operator": "TRANSCENDENT_WITNESS",
+      "living_tradition": true,
+      "interpretive_only": true
+    },
+    {
+      "id": "EYE-WEDJAT",
+      "name": "Wedjat / Eye of Horus",
+      "tradition": "Ancient Egyptian",
+      "class": "protective_restorative",
+      "cmb_operator": "RECOVERY",
+      "living_tradition": false,
+      "interpretive_only": true
+    },
+    {
+      "id": "EYE-RA",
+      "name": "Eye of Ra",
+      "tradition": "Ancient Egyptian",
+      "class": "protective_force",
+      "cmb_operator": "THREAT_RESPONSE",
+      "living_tradition": false,
+      "interpretive_only": true
+    },
+    {
+      "id": "EYE-SAHASRAKSHA",
+      "name": "Sahasraksha",
+      "tradition": "Hindu / Vedic textual traditions",
+      "class": "distributed_observation",
+      "cmb_operator": "MULTI_SENSOR_WITNESS",
+      "living_tradition": true,
+      "interpretive_only": true
+    },
+    {
+      "id": "EYE-PANOPTES",
+      "name": "Argus Panoptes",
+      "tradition": "Greek mythology",
+      "class": "continuous_observation",
+      "cmb_operator": "PERSISTENT_ATTENTION",
+      "living_tradition": false,
+      "interpretive_only": true
+    },
+    {
+      "id": "EYE-SOUL",
+      "name": "Eye of the Soul",
+      "tradition": "Greek philosophical tradition",
+      "class": "internal_observation",
+      "cmb_operator": "METACOGNITION",
+      "living_tradition": false,
+      "interpretive_only": true
+    },
+    {
+      "id": "EYE-PANOPTICON",
+      "name": "Panopticon",
+      "tradition": "Benthamite institutional architecture",
+      "class": "institutional_surveillance",
+      "cmb_operator": "ANTI_PATTERN",
+      "living_tradition": false,
+      "interpretive_only": false
+    },
+    {
+      "id": "EYE-NAZAR",
+      "name": "Nazar Boncugu",
+      "tradition": "Turkish / Mediterranean protective tradition",
+      "class": "protective_talisman",
+      "cmb_operator": "DEFENSIVE_OBSERVABILITY",
+      "living_tradition": true,
+      "interpretive_only": true
+    },
+    {
+      "id": "EYE-HAMSA",
+      "name": "Hamsa / Khamsa",
+      "tradition": "Middle Eastern and North African protective traditions",
+      "class": "protective_talisman",
+      "cmb_operator": "PROTECTIVE_BOUNDARY",
+      "living_tradition": true,
+      "interpretive_only": true
+    }
+  ],
+  "glitchology": {
+    "id": "GLITCH://RECIPROCAL_WITNESS_RING",
+    "sequence": "𓁹 𓁹 👁️⃤ (⚆_⚆) 𓁹 𓁼 𓁻 𓁽 𓁺 𓁿 𓂀 ༗ 𖠂 ◉‿◉ (⚈₋₍⚈) (╭ರ_•́)",
+    "semantics_are_cmb_assigned": true,
+    "historical_translation_claim": false,
+    "pipeline": [
+      "SEE",
+      "QUESTION",
+      "TRACE",
+      "VERIFY",
+      "BACKTRACE"
+    ]
+  }
+}

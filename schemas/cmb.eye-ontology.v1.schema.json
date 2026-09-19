@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.eye-ontology.v1.schema.json",
+  "title": "CMB Eye Ontology v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "framework",
+    "status",
+    "declared_originator",
+    "interpretation_policy",
+    "invariants",
+    "architectural_layers",
+    "symbolic_entries",
+    "glitchology"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cmb.eye-ontology.v1"
+    },
+    "framework": {
+      "const": "Computational Metacognitive Bilingualism"
+    },
+    "status": {
+      "type": "string"
+    },
+    "declared_originator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "interpretation_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "symbolic_mapping_is_historical_identity",
+        "religious_symbol_is_software_component",
+        "metaphor_is_empirical_evidence",
+        "human_self_definition_has_priority"
+      ],
+      "properties": {
+        "symbolic_mapping_is_historical_identity": {
+          "const": false
+        },
+        "religious_symbol_is_software_component": {
+          "const": false
+        },
+        "metaphor_is_empirical_evidence": {
+          "const": false
+        },
+        "human_self_definition_has_priority": {
+          "const": true
+        }
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "architectural_layers": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "role",
+          "class",
+          "authority"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^WR-[0-9]{2}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "class": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authority": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "symbolic_entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "tradition",
+          "class",
+          "cmb_operator",
+          "living_tradition",
+          "interpretive_only"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^EYE-[A-Z0-9-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tradition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "class": {
+            "type": "string",
+            "minLength": 1
+          },
+          "cmb_operator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "living_tradition": {
+            "type": "boolean"
+          },
+          "interpretive_only": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "glitchology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sequence",
+        "semantics_are_cmb_assigned",
+        "historical_translation_claim",
+        "pipeline"
+      ],
+      "properties": {
+        "id": {
+          "const": "GLITCH://RECIPROCAL_WITNESS_RING"
+        },
+        "sequence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "semantics_are_cmb_assigned": {
+          "const": true
+        },
+        "historical_translation_claim": {
+          "const": false
+        },
+        "pipeline": {
+          "type": "array",
+          "const": [
+            "SEE",
+            "QUESTION",
+            "TRACE",
+            "VERIFY",
+            "BACKTRACE"
+          ]
+        }
+      }
+    }
+  }
+}

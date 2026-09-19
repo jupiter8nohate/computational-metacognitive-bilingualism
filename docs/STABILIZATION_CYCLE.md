@@ -82,6 +82,21 @@ A change that must cross the freeze boundary for correctness or security should
 state the reason explicitly in its pull request and update the stabilization
 baseline deliberately.
 
+## Scoped publication exception: World Retina
+
+On 2026-09-19, the repository owner explicitly authorized publication of the World Retina / Reciprocal Eye documentation set so it can be publicly available and crawlable through the existing GitHub Pages discovery surface.
+
+This exception is limited to documentation, policy, research notes, machine-readable ontology/schema files, and bounded example programs already contained in PR #134. It does not authorize a new top-level Python package, installed CLI command, protocol family, agent authority class, payment mechanism, settlement mechanism, or new deployment authority.
+
+The publication remains subject to the repository's existing evidence and human-agency boundaries:
+
+~~~text
+PUBLICATION_EXCEPTION != GENERAL_FREEZE_REMOVAL
+INDEXABLE != ENDORSED
+DISCOVERY != AUTHORITY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
 ## Mechanical scope guard
 
 `stabilization/scope-baseline.json` records the top-level Python package set

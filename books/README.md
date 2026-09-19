@@ -110,3 +110,22 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 The books shelf contains authored literary, philosophical, and experimental specification material. A book's presence in this directory does not by itself mean it is included in a previously signed provenance receipt or software release.
 
 BOOK_PRESENT != SIGNED_RELEASE_COVERAGE
+
+
+---
+
+## 𓁹 CMB // WORLD RETINA // THE RECIPROCAL EYE
+
+**[Read the living-book expansion draft](CMB_WORLD_RETINA.md)**
+
+A conversation-derived CMB living book tracing protective and divine eye symbolism through philosophy, panopticism, computer vision, evolved artificial perception, planetary sensing, and Reciprocal Observability.
+
+~~~text
+OBSERVATION != UNDERSTANDING
+ANOMALY != HOSTILITY
+SENSOR != EFFECTOR
+LEARNING != AUTHORITY
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+**Stabilization status:** deferred expansion. This work is intentionally held outside the v1.5 release candidate unless the freeze boundary is explicitly reviewed and changed.

@@ -13,6 +13,11 @@ on:
       - "library/**"
       - "schemas/**"
       - "research/case-studies/**"
+      - "research/world-retina/**"
+      - "books/**"
+      - "policy/**"
+      - "archive/conversations/**"
+      - "examples/world_retina/**"
       - "examples/polyglot/jupiter_glitchology_runtime/**"
       - "spec/**"
       - "src/cmb_machine/**"
@@ -144,6 +149,19 @@ jobs:
               f"{site}/agents/agent-card.json",
               f"{site}/agents/registry.json",
               f"{site}/schemas/cmb.discovery.v1.schema.json",
+              f"{site}/WORLD_RETINA_THE_RECIPROCAL_EYE/",
+              f"{site}/PRE_2084_THE_EYE_ARRIVES/",
+              f"{site}/CMB_THE_TWO_LOOPS/",
+              f"{site}/CMB_TEN_CIVIC_FORKS/",
+              f"{site}/world-retina/",
+              f"{site}/books/CMB_WORLD_RETINA.md",
+              f"{site}/policy/CMB_RECIPROCAL_OBSERVABILITY.md",
+              f"{site}/research/world-retina/CLAIM_MATRIX.md",
+              f"{site}/examples/world_retina/cmb_evoeye.py",
+              f"{site}/examples/world_retina/world_retina.py",
+              f"{site}/archive/conversations/2026-09-19-world-retina-origin.md",
+              f"{site}/library/cmb-eye-ontology.v1.json",
+              f"{site}/schemas/cmb.eye-ontology.v1.schema.json",
           ]
           payload = {
               "host": "jupiter8nohate.github.io",
