@@ -1,23 +1,29 @@
 # CMB // World Retina
 
-**Status:** deferred expansion draft during v1.5 stabilization.
+**Status:** public publication surface under the scoped v1.5 World Retina exception.
 
-World Retina is the CMB research-and-literary architecture for tracing the eye from protective and religious symbolism through philosophy, panopticism, computer vision, evolved perception, planetary sensing, and reciprocal observability.
+World Retina is the CMB research-and-literary architecture for tracing the eye from protective and religious symbolism through philosophy, panopticism, computer vision, evolved perception, planetary sensing, and Reciprocal Observability.
 
-## Read
+## Start here
 
-- [Original 57-chapter GitHub Pages story](../WORLD_RETINA_THE_RECIPROCAL_EYE.md)
-- [World Retina: The Reciprocal Eye](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/books/CMB_WORLD_RETINA.md)
-- [Reciprocal Observability policy](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/policy/CMB_RECIPROCAL_OBSERVABILITY.md)
-- [Claim matrix](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/research/world-retina/CLAIM_MATRIX.md)
-- [Eye ontology registry](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/library/cmb-eye-ontology.v1.json)
-- [Eye ontology schema](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/schemas/cmb.eye-ontology.v1.schema.json)
-- [Conversation-origin notes](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/archive/conversations/2026-09-19-world-retina-origin.md)
+- [The Reciprocal Eye - original 57-chapter story](../WORLD_RETINA_THE_RECIPROCAL_EYE.md)
+- [PRE-2084 - The Eye Arrives](../PRE_2084_THE_EYE_ARRIVES.md)
+- [The Two Loops - Autocratic vs Sovereign](../CMB_THE_TWO_LOOPS.md)
+- [Ten Civic Forks](../CMB_TEN_CIVIC_FORKS.md)
 
-## Run
+## Research and architecture
 
-- [EvoEye experiment](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/examples/world_retina/cmb_evoeye.py)
-- [World Retina experiment](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/feature/cmb-world-retina/examples/world_retina/world_retina.py)
+- [World Retina living-book source](../books/CMB_WORLD_RETINA.md)
+- [Reciprocal Observability policy](../policy/CMB_RECIPROCAL_OBSERVABILITY.md)
+- [World Retina claim matrix](../research/world-retina/CLAIM_MATRIX.md)
+- [Eye ontology registry](../library/cmb-eye-ontology.v1.json)
+- [Eye ontology schema](../schemas/cmb.eye-ontology.v1.schema.json)
+- [Curated conversation-origin notes](../archive/conversations/2026-09-19-world-retina-origin.md)
+
+## Executable examples
+
+- [EvoEye experiment](../examples/world_retina/cmb_evoeye.py)
+- [World Retina experiment](../examples/world_retina/world_retina.py)
 
 ## Core topology
 
@@ -46,4 +52,4 @@ LEARNING != AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
 
-This branch intentionally adds no top-level Python package, installed CLI, authority class, or deployment target.
+The published bundle adds no top-level Python package, installed CLI, authority class, payment mechanism, or deployment authority. Publication makes these materials crawlable and linkable; it does not guarantee search-engine indexing, ranking, endorsement, or adoption.
