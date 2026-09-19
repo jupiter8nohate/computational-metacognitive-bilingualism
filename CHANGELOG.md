@@ -37,6 +37,9 @@ All notable changes to the CMB provenance tool are documented here.
 - Added GLITCH-3D-1 spatial semantics, parser/AST, schema, machine discovery metadata, provenance/authority validation, and canonical example.
 - Added bounded CMB Steward agents for scheduled Recovery, GLT-8101 conformance, registry synchronization, documentation verification, and draft-PR-only repair proposals.
 - Added reproducible TypeScript and Rust adapter dependency locks; TypeScript automation uses `npm ci` and Rust conformance/release gates enforce `--locked`.
+- Added the **World Retina / Reciprocal Eye** publication set: a 57-chapter narrative, PRE-2084 documentary bridge, Autocratic vs Sovereign Loops, Ten Civic Forks, machine-readable eye ontology/schema, Reciprocal Observability policy, claim matrix, bounded EvoEye/World Retina examples, and curated origin notes.
+- Published the World Retina surfaces through the canonical GitHub Pages bundle with sitemap, robots policy, LLM discovery maps, machine catalog registration, canonical public URLs, and successful deployment-time IndexNow notification.
+- Recorded a scoped v1.5 stabilization exception for publication only; no new top-level Python package, installed CLI, protocol family, authority class, payment mechanism, or deployment authority was introduced.
 
 ### Fixed
 
