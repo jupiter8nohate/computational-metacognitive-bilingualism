@@ -13,17 +13,17 @@ World Retina is the CMB research-and-literary architecture for tracing the eye f
 
 ## Research and architecture
 
-- [World Retina living-book source](../books/CMB_WORLD_RETINA.md)
-- [Reciprocal Observability policy](../policy/CMB_RECIPROCAL_OBSERVABILITY.md)
-- [World Retina claim matrix](../research/world-retina/CLAIM_MATRIX.md)
-- [Eye ontology registry](../library/cmb-eye-ontology.v1.json)
-- [Eye ontology schema](../schemas/cmb.eye-ontology.v1.schema.json)
-- [Curated conversation-origin notes](../archive/conversations/2026-09-19-world-retina-origin.md)
+- [World Retina living-book source](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/books/CMB_WORLD_RETINA.md)
+- [Reciprocal Observability policy](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/policy/CMB_RECIPROCAL_OBSERVABILITY.md)
+- [World Retina claim matrix](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/world-retina/CLAIM_MATRIX.md)
+- [Eye ontology registry](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/cmb-eye-ontology.v1.json)
+- [Eye ontology schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.eye-ontology.v1.schema.json)
+- [Curated conversation-origin notes](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/archive/conversations/2026-09-19-world-retina-origin.md)
 
 ## Executable examples
 
-- [EvoEye experiment](../examples/world_retina/cmb_evoeye.py)
-- [World Retina experiment](../examples/world_retina/world_retina.py)
+- [EvoEye experiment](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/world_retina/cmb_evoeye.py)
+- [World Retina experiment](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/world_retina/world_retina.py)
 
 ## Core topology
 
