@@ -150,6 +150,25 @@ RC_READY != FINAL_RELEASE_VALIDATED
 GREEN_CI != INDEPENDENT_AUDIT
 ~~~
 
+## Frozen v1.5.0-rc.1 review object
+
+The release-candidate review object is frozen at:
+
+~~~text
+COMMIT = e725bb6a819a8c48ed16558d88c58e17cbf9b3d5
+REVIEW_BRANCH = review/v1.5.0-rc.1-e725bb6
+VERSION = 1.5.0-rc.1
+TAG = v1.5.0-rc.1 (pending creation)
+~~~
+
+Issue #63 is repinned to this exact commit. Issue #138 tracks creation of the tag at the same commit. Later `main` documentation or maintenance commits do not silently change the candidate bytes.
+
+~~~text
+EXACT_COMMIT > MOVING_TARGET
+TAG_COMMIT == REVIEW_COMMIT
+MAIN_AFTER_CANDIDATE != CANDIDATE_BYTES
+~~~
+
 ## Known stabilization gaps
 
 1. **Resolved:** the TypeScript adapter now commits `package-lock.json`, and
