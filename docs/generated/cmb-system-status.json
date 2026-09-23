@@ -1,14 +1,321 @@
 {
-  "schema_version": "cmb.steward-status.v1",
-  "overall_ok": null,
-  "roles": [],
-  "checks": [],
-  "evidence_packets": [],
   "boundaries": [
     "GENERATED != VERIFIED",
     "SELF_REVIEW != INDEPENDENT_REVIEW",
     "CAPABILITY != AUTHORITY",
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
   ],
-  "external_gate_note": "Initial neutral record. The bounded Steward replaces this with repository-side audit results; external review, DOI/archive state, and GitHub platform settings remain separate evidence gates."
+  "checks": [
+    {
+      "name": "pytest",
+      "ok": true,
+      "role": "RECOVERY"
+    },
+    {
+      "name": "GLT-8101 conformance",
+      "ok": true,
+      "role": "GLITCH_IR_CONFORMANCE"
+    },
+    {
+      "name": "registry regeneration",
+      "ok": true,
+      "role": "REGISTRY_SYNC"
+    },
+    {
+      "name": "diff check",
+      "ok": true,
+      "role": "RECOVERY"
+    },
+    {
+      "name": "glitch8_semantic_consistency",
+      "ok": true,
+      "role": "CANON"
+    },
+    {
+      "name": "front_door_accessibility",
+      "ok": true,
+      "role": "ACCESSIBILITY"
+    },
+    {
+      "name": "release_readiness_declarations",
+      "ok": true,
+      "role": "RELEASE"
+    },
+    {
+      "name": "documentation_catalog_integrity",
+      "ok": true,
+      "role": "LIBRARIAN"
+    },
+    {
+      "name": "canonical_registry_backtrace",
+      "ok": true,
+      "role": "ARCHAEOLOGIST"
+    },
+    {
+      "name": "machine_discovery_contract",
+      "ok": true,
+      "role": "DISCOVERY"
+    },
+    {
+      "name": "repository_security_surface",
+      "ok": true,
+      "role": "SECURITY"
+    },
+    {
+      "name": "digital_nervous_immune_integrity",
+      "ok": true,
+      "role": "DNIS"
+    },
+    {
+      "name": "stockfish_review_council_integrity",
+      "ok": true,
+      "role": "REVIEW_COUNCIL"
+    },
+    {
+      "name": "agent_evidence_packet_review",
+      "ok": true,
+      "role": "REVIEWER"
+    }
+  ],
+  "evidence_packets": [
+    {
+      "agent": "CANON",
+      "authority": "read_only",
+      "confidence": 1.0,
+      "evidence": [
+        "src/cmb_glitch8/glyphs.v1.json",
+        "library/glitch8.glyphs.v1.json",
+        "books/GLITCH8_GLYPH_REFERENCE.md"
+      ],
+      "observed": {
+        "duplicate_ids": [],
+        "glyph_count": 66,
+        "mirror_matches": true,
+        "missing_reference_names": [],
+        "missing_required_fields": []
+      },
+      "recommended_action": "No canon repair required.",
+      "severity": "info",
+      "task": "glitch8_semantic_consistency"
+    },
+    {
+      "agent": "ACCESSIBILITY",
+      "authority": "read_only",
+      "confidence": 0.95,
+      "evidence": [
+        "docs/index.md",
+        "README.md",
+        "docs/SEARCH_FOR_TRUTH.md",
+        "docs/stylesheets/tokens.css",
+        "docs/stylesheets/components.css",
+        "docs/stylesheets/accessibility.css",
+        "docs/stylesheets/cmb.css"
+      ],
+      "observed": {
+        "alt_issues_by_file": {
+          "README.md": 0,
+          "docs/SEARCH_FOR_TRUTH.md": 0,
+          "docs/index.md": 0
+        },
+        "focus_visible": true,
+        "prefers_contrast": true,
+        "prefers_reduced_motion": true
+      },
+      "recommended_action": "No blocking accessibility defect detected in the primary entry surfaces.",
+      "severity": "info",
+      "task": "front_door_accessibility"
+    },
+    {
+      "agent": "RELEASE",
+      "authority": "read_only",
+      "confidence": 0.98,
+      "evidence": [
+        "pyproject.toml",
+        "RELEASE.md",
+        "docs/STABILIZATION_CYCLE.md",
+        "docs/EXTERNAL_REVIEW.md",
+        "docs/REPOSITORY_SETTINGS.md"
+      ],
+      "observed": {
+        "branch_protection_boundary_present": true,
+        "external_gates_authoritatively_checked": false,
+        "final_release_review_gate_present": true,
+        "independent_review_boundary_present": true,
+        "package_version": "1.5.0-rc.1",
+        "v1_5_candidate_declared": true
+      },
+      "recommended_action": "Repository release declarations are internally coherent; external review, DOI, and platform settings remain separate gates.",
+      "severity": "info",
+      "task": "release_readiness_declarations"
+    },
+    {
+      "agent": "LIBRARIAN",
+      "authority": "read_only",
+      "confidence": 1.0,
+      "evidence": [
+        "mkdocs.yml",
+        "docs/"
+      ],
+      "observed": {
+        "docs_markdown_count": 67,
+        "missing_nav_targets": [],
+        "nav_target_count": 0
+      },
+      "recommended_action": "MkDocs navigation targets resolve.",
+      "severity": "info",
+      "task": "documentation_catalog_integrity"
+    },
+    {
+      "agent": "ARCHAEOLOGIST",
+      "authority": "read_only",
+      "confidence": 1.0,
+      "evidence": [
+        "src/cmb_glitch8/glyphs.v1.json",
+        ".git history"
+      ],
+      "observed": {
+        "claim_scope": "repository_history_only",
+        "commit_count": 7,
+        "first_commit": "817cc22a1a9b92829f26a3a05be1536e88e98919",
+        "latest_commit": "a42a9f83193db50fffed111b0d76ac3413f5ce3e",
+        "path": "src/cmb_glitch8/glyphs.v1.json"
+      },
+      "recommended_action": "Repository provenance backtrace is available.",
+      "severity": "info",
+      "task": "canonical_registry_backtrace"
+    },
+    {
+      "agent": "DISCOVERY",
+      "authority": "read_only",
+      "confidence": 1.0,
+      "evidence": [
+        "machine/discovery-manifest.json",
+        "llms.txt",
+        "llms-full.txt"
+      ],
+      "observed": {
+        "llm_entry_point_count": 2,
+        "missing_required_keys": []
+      },
+      "recommended_action": "Machine discovery contract contains the required public entry points.",
+      "severity": "info",
+      "task": "machine_discovery_contract"
+    },
+    {
+      "agent": "SECURITY",
+      "authority": "read_only",
+      "confidence": 1.0,
+      "evidence": [
+        "SECURITY.md",
+        ".github/dependabot.yml",
+        ".github/workflows/codeql.yml",
+        ".github/workflows/dependency-review.yml",
+        ".github/workflows/scorecard.yml",
+        ".github/workflows/"
+      ],
+      "observed": {
+        "dependency_review_fail_closed": true,
+        "missing_repository_controls": [],
+        "platform_security_settings_checked": false,
+        "unpinned_workflow_actions": []
+      },
+      "recommended_action": "Repository-side security controls are present, dependency review fails closed, and external actions are SHA-pinned.",
+      "severity": "info",
+      "task": "repository_security_surface"
+    },
+    {
+      "agent": "DNIS",
+      "authority": "read_only",
+      "confidence": 1.0,
+      "evidence": [
+        "agents/immune-cell-registry.json",
+        "src/cmb_agents/immune_system.py"
+      ],
+      "observed": {
+        "declared_cell_count": 14,
+        "digital_dna_digest": "sha256:aa0ca909fefa3f3ebd33404e4d016c95a7be9e957cbfc71aaff0090ab796b619",
+        "digital_dna_matches_runtime": true,
+        "missing_required_cells": [],
+        "protocol_ok": true
+      },
+      "recommended_action": "DNIS registry and runtime Digital DNA are aligned.",
+      "severity": "info",
+      "task": "digital_nervous_immune_integrity"
+    },
+    {
+      "agent": "REVIEW_COUNCIL",
+      "authority": "read_only",
+      "confidence": 1.0,
+      "evidence": [
+        "agents/review-council-registry.json",
+        ".github/workflows/cmb-stockfish-review.yml",
+        "src/cmb_agents/review_council.py"
+      ],
+      "observed": {
+        "contents_read_only": true,
+        "declared_agent_count": 8,
+        "deterministic_verdict_gate": true,
+        "merge_authority_disabled": true,
+        "missing_required_agents": [],
+        "protocol_ok": true,
+        "release_authority_disabled": true,
+        "workflow_present": true
+      },
+      "recommended_action": "CMB-SRC-1 registry, workflow, deterministic gate, and authority boundaries are aligned.",
+      "severity": "info",
+      "task": "stockfish_review_council_integrity"
+    },
+    {
+      "agent": "REVIEWER",
+      "authority": "read_only",
+      "confidence": 1.0,
+      "evidence": [
+        "structured evidence packets"
+      ],
+      "observed": {
+        "audits_reviewed": [
+          "CANON",
+          "ACCESSIBILITY",
+          "RELEASE",
+          "LIBRARIAN",
+          "ARCHAEOLOGIST",
+          "DISCOVERY",
+          "SECURITY",
+          "DNIS",
+          "REVIEW_COUNCIL"
+        ],
+        "external_self_certification_packets": [],
+        "failing_specialists": [],
+        "unsafe_authority_packets": []
+      },
+      "recommended_action": "Specialist agents remain within read-only/propose-only authority.",
+      "severity": "info",
+      "task": "agent_evidence_packet_review"
+    }
+  ],
+  "external_gate_note": "This status reflects repository-side checks only. GitHub platform settings, independent review, and DOI/archive state require their own evidence.",
+  "overall_ok": true,
+  "roles": [
+    "RECOVERY",
+    "GLITCH_IR_CONFORMANCE",
+    "REGISTRY_SYNC",
+    "DOCUMENTATION",
+    "CANON",
+    "ACCESSIBILITY",
+    "RELEASE",
+    "LIBRARIAN",
+    "ARCHAEOLOGIST",
+    "DISCOVERY",
+    "SECURITY",
+    "DNIS",
+    "REVIEW_COUNCIL",
+    "POSITION",
+    "TACTICIAN",
+    "STRATEGIST",
+    "RED_TEAM",
+    "REVIEWER",
+    "AUTONOMY_ARBITER",
+    "STEWARD"
+  ],
+  "schema_version": "cmb.steward-status.v1"
 }
