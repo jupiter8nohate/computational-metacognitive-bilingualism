@@ -125,5 +125,20 @@
       "ACT"
     ],
     "interpretation_boundary": "GDELT_DISCOVERY != INDEPENDENT_CONFIRMATION"
+  },
+  "epistemic_radar": {
+    "protocol": "cmb.epistemic-radar.v1",
+    "human_page": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_EPISTEMIC_RADAR/",
+    "snapshot": "machine/cmb-epistemic-radar.json",
+    "config": "machine/cmb-epistemic-radar-config.json",
+    "schema": "schemas/cmb.epistemic-radar.v1.schema.json",
+    "underlying_watch": "machine/global-ai-watch.json",
+    "watch_config": "machine/global-ai-watch-config.json",
+    "boundaries": [
+      "PATTERN != PROOF",
+      "DISCREPANCY_FLAG != CONTRADICTION_PROOF",
+      "EMERGING_TERM != NEW_TECHNOLOGY_PROOF",
+      "HUMAN_AGENCY > MACHINE_AUTHORITY"
+    ]
   }
 }
