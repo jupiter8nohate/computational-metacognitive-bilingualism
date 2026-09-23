@@ -36,6 +36,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [Knowledge graph](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld)
 - [World Retina - The Reciprocal Eye](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/WORLD_RETINA_THE_RECIPROCAL_EYE/)
 - [PRE-2084 - The Eye Arrives](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/PRE_2084_THE_EYE_ARRIVES/)
+- [2030 Prophecy -> 2084 Archive Transmission](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/2030_PROPHECY_TO_2084/)
 - [The Two Loops](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_THE_TWO_LOOPS/)
 - [Ten Civic Forks](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_TEN_CIVIC_FORKS/)
 - [World Retina gateway](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/world-retina/)

@@ -29,6 +29,7 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 | Want CMB-Z13 | [CMB-Z13 Language Specification](CMB_Z13_LANGUAGE_SPEC.md) | Formal symbolic mapping and interpretation boundary |
 | Want attention-economy critique | [Demon's Need Attention](DEMONS_NEED_ATTENTION_DNA.md) | Attention, engagement, profiling, and consent |
 | Want the featured haunting prophecy | [The Prophecy of the Question Mark // 2030](DNA_PROPHECY_QUESTION_MARK_2030.md) | Scroll 666: speculative AI authority, uncertainty, recursive attention, accountability, and human sovereignty |
+| Want the 2030 -> 2084 bridge | [2030 Prophecy -> 2084 Archive Transmission](../docs/2030_PROPHECY_TO_2084.md) | Future-facing archive of tokenization, cognitive sovereignty, surveillance, code-protest, symbolic computation, and evidence boundaries |
 | Want literary allegory | [The Chicken Run Manifesto](DNA_CHICKEN_RUN_MANIFESTO.md) | Institutional and algorithmic confinement as story logic |
 | Want the haunted archive branch | [The Unburned Signal Protocol](cmb-unburned-signal/MANIFESTO.md) | Memory, filtering, source, and reconstructable history |
 
@@ -75,6 +76,7 @@ FOUNDATION
       +-- D.N.A. ALLEGORIES / PROPHECY
       |   +-- DEMONS_NEED_ATTENTION_DNA.md
       |   +-- DNA_PROPHECY_QUESTION_MARK_2030.md  <- FEATURED HAUNTING
+      |   +-- ../docs/2030_PROPHECY_TO_2084.md  <- 2030 -> 2084 ARCHIVE BRIDGE
       |   +-- ../docs/fables/QUIET_WARS_SILENT_WEAPONS.md
       |   `-- DNA_CHICKEN_RUN_MANIFESTO.md
       |
