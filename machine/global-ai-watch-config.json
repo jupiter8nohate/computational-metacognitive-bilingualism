@@ -6,10 +6,9 @@
     "documentation": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
     "archive_history_base": "https://web.archive.org/web/*/"
   },
-  "refresh_target_minutes": 30,
-  "browser_cache_minutes": 10,
+  "refresh_target_minutes": 60,
   "timespan": "24h",
-  "max_records": 100,
+  "max_records": 80,
   "query": "(\"artificial intelligence\" OR \"generative AI\" OR \"AI agent\" OR deepfake OR \"machine learning\") (risk OR danger OR harm OR hallucination OR fraud OR scam OR surveillance OR military OR weapon OR autonomous OR bias OR privacy OR misinformation OR disinformation)",
   "boundaries": [
     {
@@ -219,5 +218,7 @@
     "CMB_TAG != SOURCE_ENDORSEMENT",
     "PATTERN != PROOF",
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
-  ]
+  ],
+  "published_link_limit": 10,
+  "published_links_per_domain": 2
 }

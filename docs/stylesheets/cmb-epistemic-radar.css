@@ -1,0 +1,206 @@
+.cmb-radar-hero,
+.cmb-watch-hero {
+  border: 1px solid #31463f;
+  border-radius: 14px;
+  padding: 1.2rem;
+  background: linear-gradient(145deg, #07100d, #0d1714);
+  margin-bottom: 1.5rem;
+}
+
+.cmb-radar-status,
+.cmb-watch-status {
+  border-left: 4px solid #8fffc4;
+  background: #08110e;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.cmb-watch-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.cmb-watch-metrics > div {
+  border: 1px solid #31463f;
+  border-radius: 10px;
+  padding: 0.9rem;
+  background: #0a1310;
+}
+
+.cmb-watch-metrics strong {
+  display: block;
+  font-size: 1.55rem;
+}
+
+.cmb-watch-metrics span {
+  display: block;
+  opacity: 0.78;
+  font-size: 0.86rem;
+}
+
+.cmb-watch-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: end;
+  padding: 1rem;
+  border: 1px solid #31463f;
+  border-radius: 10px;
+  margin: 1rem 0;
+  background: #08110e;
+}
+
+.cmb-watch-controls label {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 160px;
+  flex: 1 1 180px;
+}
+
+.cmb-watch-controls input,
+.cmb-watch-controls select,
+.cmb-watch-controls button {
+  width: 100%;
+  min-height: 2.6rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #46635a;
+  border-radius: 8px;
+  background: #0d1814;
+  color: inherit;
+}
+
+.cmb-watch-controls button {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.cmb-news-grid,
+.cmb-radar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.cmb-news-card,
+.cmb-radar-card {
+  border: 1px solid #31463f;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #09120f;
+  overflow-wrap: anywhere;
+}
+
+.cmb-news-card[hidden] {
+  display: none;
+}
+
+.cmb-news-card h3,
+.cmb-radar-card h3 {
+  margin-top: 0.45rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.cmb-news-card__signal {
+  color: #8fffc4;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cmb-news-card__meta,
+.cmb-news-card__cluster {
+  opacity: 0.75;
+  font-size: 0.78rem;
+  margin: 0.5rem 0;
+}
+
+.cmb-news-card__invariant {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  border-left: 3px solid #d9c878;
+  padding-left: 0.65rem;
+  margin: 0.65rem 0;
+}
+
+.cmb-news-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.cmb-news-card__actions a {
+  font-size: 0.82rem;
+}
+
+.cmb-radar-signals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.75rem;
+}
+
+.cmb-radar-signal {
+  display: grid;
+  gap: 0.3rem;
+  border: 1px solid #31463f;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: #0a1310;
+}
+
+.cmb-radar-signal span {
+  opacity: 0.75;
+  font-size: 0.78rem;
+}
+
+.cmb-radar-signal code {
+  width: fit-content;
+}
+
+.cmb-radar-vocab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cmb-radar-vocab {
+  border: 1px solid #46635a;
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  background: #0a1310;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.cmb-radar-vocab small {
+  opacity: 0.68;
+}
+
+.cmb-watch-empty,
+.cmb-watch-method-note {
+  border: 1px dashed #46635a;
+  border-radius: 10px;
+  padding: 0.9rem;
+  opacity: 0.86;
+}
+
+.cmb-radar-card details {
+  margin-top: 0.7rem;
+}
+
+.cmb-radar-card summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .cmb-news-grid,
+  .cmb-radar-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

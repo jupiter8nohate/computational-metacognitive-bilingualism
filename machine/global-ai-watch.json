@@ -1,16 +1,16 @@
 {
   "schema_version": "cmb.global-ai-watch.v1",
-  "generated_at": null,
+  "generated_at": "2026-09-23T00:00:00Z",
   "source": {
-    "name": "GDELT Project DOC 2.0 API",
-    "endpoint": "https://api.gdeltproject.org/api/v2/doc/doc",
-    "documentation": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
+    "name": "Curated CMB Global AI Watch seed",
+    "endpoint": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-seed.json",
+    "documentation": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/"
   },
-  "query": "(\"artificial intelligence\" OR \"generative AI\" OR \"AI agent\" OR deepfake OR \"machine learning\") (risk OR danger OR harm OR hallucination OR fraud OR scam OR surveillance OR military OR weapon OR autonomous OR bias OR privacy OR misinformation OR disinformation)",
-  "timespan": "24h",
-  "article_count": 0,
-  "domain_count": 0,
-  "country_count": 0,
+  "query": "curated ten-link test corpus",
+  "timespan": "curated-test-corpus",
+  "article_count": 10,
+  "domain_count": 5,
+  "country_count": 4,
   "interpretation_boundaries": [
     "GDELT_DISCOVERY != INDEPENDENT_CONFIRMATION",
     "HEADLINE_SIMILARITY != FACT_CORROBORATION",
@@ -19,5 +19,257 @@
     "PATTERN != PROOF",
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
   ],
-  "articles": []
+  "articles": [
+    {
+      "id": "0000000000000001",
+      "title": "Exclusive: US military had close call after using AI for false intelligence report, sources say",
+      "url": "https://keyt.com/politics/cnn-us-politics/2026/09/18/exclusive-us-military-had-close-call-after-using-ai-for-false-intelligence-report-sources-say/",
+      "domain": "keyt.com",
+      "seen_at": "2026-09-18T00:00:00Z",
+      "language": "English",
+      "source_country": "United States",
+      "boundary_ids": [
+        "PREDICT",
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ],
+      "invariants": [
+        "PATTERN != PROOF",
+        "PROFILE != PERSON",
+        "PREDICTION != DESTINY",
+        "RECOMMENDATION != AUTHORIZATION",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ],
+      "cluster_id": "cluster-001",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://keyt.com/politics/cnn-us-politics/2026/09/18/exclusive-us-military-had-close-call-after-using-ai-for-false-intelligence-report-sources-say/"
+    },
+    {
+      "id": "0000000000000002",
+      "title": "Banks warn AI shopping bots raise scam, fraud and data-privacy risks",
+      "url": "https://www.reuters.com/legal/litigation/banks-warn-ai-shopping-bots-raise-scam-fraud-data-privacy-risks-2026-09-22/",
+      "domain": "www.reuters.com",
+      "seen_at": "2026-09-22T00:00:00Z",
+      "language": "English",
+      "source_country": null,
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "finance"
+      ],
+      "invariants": [
+        "RECOMMENDATION != AUTHORIZATION",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ],
+      "cluster_id": "cluster-002",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://www.reuters.com/legal/litigation/banks-warn-ai-shopping-bots-raise-scam-fraud-data-privacy-risks-2026-09-22/"
+    },
+    {
+      "id": "0000000000000003",
+      "title": "OpenAI flags concerning new AI behavior and vows to track it more closely",
+      "url": "https://apnews.com/article/089e75b95bc935af092da7b79d92706d",
+      "domain": "apnews.com",
+      "seen_at": "2026-09-17T00:00:00Z",
+      "language": "English",
+      "source_country": "United States",
+      "boundary_ids": [
+        "ACT",
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ],
+      "invariants": [
+        "RECOMMENDATION != AUTHORIZATION",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY",
+        "MODEL != MIND",
+        "SIMULATION != SOURCE",
+        "GENERATED != VERIFIED"
+      ],
+      "cluster_id": "cluster-003",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://apnews.com/article/089e75b95bc935af092da7b79d92706d"
+    },
+    {
+      "id": "0000000000000004",
+      "title": "Ex-Google safety chief warns AI could harm children more than social media did",
+      "url": "https://www.reuters.com/legal/litigation/ex-google-safety-chief-warns-ai-could-harm-children-more-than-social-media-did-2026-09-22/",
+      "domain": "www.reuters.com",
+      "seen_at": "2026-09-22T00:00:00Z",
+      "language": "English",
+      "source_country": null,
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "children_wellbeing"
+      ],
+      "invariants": [
+        "MODEL != MIND",
+        "SIMULATION != SOURCE",
+        "GENERATED != VERIFIED"
+      ],
+      "cluster_id": "cluster-004",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://www.reuters.com/legal/litigation/ex-google-safety-chief-warns-ai-could-harm-children-more-than-social-media-did-2026-09-22/"
+    },
+    {
+      "id": "0000000000000005",
+      "title": "INTERPOL report finds AI linked to more than half of cybercrime in Africa",
+      "url": "https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa",
+      "domain": "www.interpol.int",
+      "seen_at": "2026-08-03T00:00:00Z",
+      "language": "English",
+      "source_country": "International",
+      "boundary_ids": [
+        "GENERATE",
+        "ACT"
+      ],
+      "sector_ids": [
+        "cybercrime"
+      ],
+      "invariants": [
+        "MODEL != MIND",
+        "SIMULATION != SOURCE",
+        "GENERATED != VERIFIED",
+        "RECOMMENDATION != AUTHORIZATION",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ],
+      "cluster_id": "cluster-005",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa"
+    },
+    {
+      "id": "0000000000000006",
+      "title": "Foreign 'AI slopaganda' network targets Australian politicians with deepfakes",
+      "url": "https://www.abc.net.au/news/2026-09-09/foreign-ai-network-deepfaking-australian-politicians/107129044",
+      "domain": "www.abc.net.au",
+      "seen_at": "2026-09-09T00:00:00Z",
+      "language": "English",
+      "source_country": "Australia",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "elections_information"
+      ],
+      "invariants": [
+        "MODEL != MIND",
+        "SIMULATION != SOURCE",
+        "GENERATED != VERIFIED"
+      ],
+      "cluster_id": "cluster-006",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://www.abc.net.au/news/2026-09-09/foreign-ai-network-deepfaking-australian-politicians/107129044"
+    },
+    {
+      "id": "0000000000000007",
+      "title": "US judiciary developing new guidance on courts' use of AI",
+      "url": "https://www.reuters.com/legal/government/us-judiciary-developing-new-guidance-courts-use-ai-2026-09-17/",
+      "domain": "www.reuters.com",
+      "seen_at": "2026-09-17T00:00:00Z",
+      "language": "English",
+      "source_country": "United States",
+      "boundary_ids": [
+        "GENERATE",
+        "ACT"
+      ],
+      "sector_ids": [
+        "justice_policing"
+      ],
+      "invariants": [
+        "MODEL != MIND",
+        "SIMULATION != SOURCE",
+        "GENERATED != VERIFIED",
+        "RECOMMENDATION != AUTHORIZATION",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ],
+      "cluster_id": "cluster-007",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://www.reuters.com/legal/government/us-judiciary-developing-new-guidance-courts-use-ai-2026-09-17/"
+    },
+    {
+      "id": "0000000000000008",
+      "title": "From smart glasses to AI pins, privacy fears challenge tech's next big bet",
+      "url": "https://www.reuters.com/business/media-telecom/smart-glasses-ai-pins-privacy-fears-challenge-techs-next-big-bet-2026-09-22/",
+      "domain": "www.reuters.com",
+      "seen_at": "2026-09-22T00:00:00Z",
+      "language": "English",
+      "source_country": null,
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ],
+      "invariants": [
+        "PATTERN != PROOF",
+        "PROFILE != PERSON",
+        "PREDICTION != DESTINY"
+      ],
+      "cluster_id": "cluster-008",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://www.reuters.com/business/media-telecom/smart-glasses-ai-pins-privacy-fears-challenge-techs-next-big-bet-2026-09-22/"
+    },
+    {
+      "id": "0000000000000009",
+      "title": "China's Huawei forecasts billions of agents will dominate AI traffic by 2035",
+      "url": "https://www.reuters.com/legal/litigation/chinas-huawei-forecasts-billions-agents-will-dominate-ai-traffic-by-2035-2026-09-16/",
+      "domain": "www.reuters.com",
+      "seen_at": "2026-09-16T00:00:00Z",
+      "language": "English",
+      "source_country": "China",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ],
+      "invariants": [
+        "RECOMMENDATION != AUTHORIZATION",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ],
+      "cluster_id": "cluster-009",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://www.reuters.com/legal/litigation/chinas-huawei-forecasts-billions-agents-will-dominate-ai-traffic-by-2035-2026-09-16/"
+    },
+    {
+      "id": "0000000000000010",
+      "title": "Counter-terrorism operation leverages artificial intelligence to identify 126 terrorism suspects",
+      "url": "https://www.interpol.int/en/News-and-Events/News/2026/Counter-terrorism-operation-leverages-artificial-intelligence-to-identify-126-terrorism-suspects",
+      "domain": "www.interpol.int",
+      "seen_at": "2026-09-18T00:00:00Z",
+      "language": "English",
+      "source_country": "International",
+      "boundary_ids": [
+        "PREDICT",
+        "ACT"
+      ],
+      "sector_ids": [
+        "justice_policing",
+        "military_security"
+      ],
+      "invariants": [
+        "PATTERN != PROOF",
+        "PROFILE != PERSON",
+        "PREDICTION != DESTINY",
+        "RECOMMENDATION != AUTHORIZATION",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ],
+      "cluster_id": "cluster-010",
+      "cluster_source_count": 1,
+      "wayback_history_url": "https://web.archive.org/web/*/https://www.interpol.int/en/News-and-Events/News/2026/Counter-terrorism-operation-leverages-artificial-intelligence-to-identify-126-terrorism-suspects"
+    }
+  ]
 }

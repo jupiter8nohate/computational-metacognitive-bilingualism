@@ -250,6 +250,41 @@ def normalize_articles(payload: dict[str, Any], config: dict[str, Any]) -> list[
     return articles
 
 
+
+def select_published_links(
+    articles: list[dict[str, Any]],
+    config: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Select a small, diverse link ledger from the analyzed metadata sample."""
+    limit = max(1, int(config.get("published_link_limit", 24)))
+    per_domain = max(1, int(config.get("published_links_per_domain", 2)))
+    domain_counts: dict[str, int] = {}
+    selected: list[dict[str, Any]] = []
+
+    ranked = sorted(
+        articles,
+        key=lambda item: (
+            len(item["boundary_ids"]),
+            item["cluster_source_count"],
+            len(item["sector_ids"]),
+            item["seen_at"] or "",
+        ),
+        reverse=True,
+    )
+
+    for article in ranked:
+        domain = article["domain"]
+        if domain_counts.get(domain, 0) >= per_domain:
+            continue
+        selected.append(article)
+        domain_counts[domain] = domain_counts.get(domain, 0) + 1
+        if len(selected) >= limit:
+            break
+
+    selected.sort(key=lambda item: item["seen_at"] or "", reverse=True)
+    return selected
+
+
 def gdelt_url(config: dict[str, Any]) -> str:
     params = {
         "query": config["query"],
@@ -327,145 +362,52 @@ def human_seen(value: str | None) -> str:
 
 
 def render_cards(articles: list[dict[str, Any]], config: dict[str, Any]) -> str:
+    """Render only outbound news links and minimal CMB metadata."""
     if not articles:
-        return (
-            '<div class="cmb-watch-empty">No classified stories are stored in this '
-            "snapshot. The browser will attempt a live GDELT refresh.</div>"
-        )
+        return '<p class="cmb-watch-empty">No relevant links matched this snapshot.</p>'
 
     boundary_labels = {
         str(item["id"]): str(item["label"]) for item in config.get("boundaries", [])
     }
-    sector_labels = {
-        str(item["id"]): str(item["label"]) for item in config.get("sectors", [])
-    }
-    sector_labels["general"] = "General"
+    rows: list[str] = []
 
-    cards: list[str] = []
     for article in articles:
         title = html.escape(article["title"])
         url = html.escape(article["url"], quote=True)
-        wayback = html.escape(article["wayback_history_url"], quote=True)
         domain = html.escape(article["domain"])
-        country = html.escape(article["source_country"] or "Unknown")
-        language = html.escape(article["language"] or "Unknown")
-        boundaries = " ".join(article["boundary_ids"])
-        sectors = " ".join(article["sector_ids"])
         boundary_text = " + ".join(
             boundary_labels.get(item, item) for item in article["boundary_ids"]
         )
-        sector_text = " + ".join(
-            sector_labels.get(item, item) for item in article["sector_ids"]
+        seen = human_seen(article["seen_at"])
+        rows.append(
+            "<li>"
+            f'<a href="{url}" rel="noopener noreferrer">{title}</a>'
+            f' <small>{domain} · {html.escape(seen)} · {html.escape(boundary_text)}</small>'
+            "</li>"
         )
-        invariants = " | ".join(article["invariants"])
-        cluster_note = (
-            f"Headline-similarity cluster: {article['cluster_source_count']} source domains"
-            if article["cluster_source_count"] > 1
-            else "Headline-similarity cluster: single source domain"
-        )
-        cards.append(
-            "\n".join(
-                [
-                    (
-                        f'<article class="cmb-news-card" data-boundaries="{html.escape(boundaries, quote=True)}" '
-                        f'data-sectors="{html.escape(sectors, quote=True)}" '
-                        f'data-country="{country}" data-domain="{html.escape(article["domain"], quote=True)}">'
-                    ),
-                    f'<div class="cmb-news-card__signal">{html.escape(boundary_text)} // {html.escape(sector_text)}</div>',
-                    f"<h3>{title}</h3>",
-                    (
-                        '<div class="cmb-news-card__meta">'
-                        f"{domain} · {country} · {language} · {human_seen(article['seen_at'])}"
-                        "</div>"
-                    ),
-                    f'<div class="cmb-news-card__invariant">{html.escape(invariants)}</div>',
-                    f'<div class="cmb-news-card__cluster">{html.escape(cluster_note)}</div>',
-                    '<div class="cmb-news-card__actions">',
-                    f'<a href="{url}" rel="noopener noreferrer">Open original source</a>',
-                    f'<a href="{wayback}" rel="noopener noreferrer">Wayback history</a>',
-                    "</div>",
-                    "</article>",
-                ]
-            )
-        )
-    return "\n".join(cards)
 
+    return '<ul class="cmb-news-links">\n' + "\n".join(rows) + "\n</ul>"
 
 def render_generated_block(data: dict[str, Any], config: dict[str, Any]) -> str:
     articles = data["articles"]
-    boundary_counts = {
-        boundary["id"]: sum(
-            1 for article in articles if boundary["id"] in article["boundary_ids"]
-        )
-        for boundary in config.get("boundaries", [])
-    }
-    cluster_count = len({article["cluster_id"] for article in articles})
     generated = human_seen(data["generated_at"])
-
-    metrics = "\n".join(
-        [
-            '<div class="cmb-watch-metrics">',
-            f'<div><strong>{data["article_count"]}</strong><span>classified stories</span></div>',
-            f'<div><strong>{data["domain_count"]}</strong><span>source domains</span></div>',
-            f'<div><strong>{data["country_count"]}</strong><span>source countries</span></div>',
-            f'<div><strong>{cluster_count}</strong><span>headline clusters</span></div>',
-            "</div>",
-        ]
-    )
-    boundary_summary = " · ".join(
-        f"{item['id']}={boundary_counts.get(item['id'], 0)}"
-        for item in config.get("boundaries", [])
-    )
-
     return "\n\n".join(
         [
-            f'<div id="cmb-watch-status" class="cmb-watch-status">STATIC SNAPSHOT // {generated} // browser live refresh enabled</div>',
-            metrics,
             (
-                '<p class="cmb-watch-boundary-counts"><strong>Boundary sample:</strong> '
-                + html.escape(boundary_summary)
-                + "</p>"
+                '<div id="cmb-watch-status" class="cmb-watch-status">'
+                f"LINK LEDGER // {generated} // {len(articles)} outbound sources"
+                "</div>"
             ),
-            """<div class="cmb-watch-controls">
-<label>Search <input id="cmb-watch-search" type="search" placeholder="keyword, outlet, country"></label>
-<label>Boundary
-<select id="cmb-watch-boundary">
-<option value="">All</option>
-<option value="PREDICT">Predict</option>
-<option value="GENERATE">Generate</option>
-<option value="ACT">Act</option>
-</select>
-</label>
-<label>Sector
-<select id="cmb-watch-sector">
-<option value="">All</option>
-<option value="military_security">Military / Security</option>
-<option value="elections_information">Elections / Information</option>
-<option value="cybercrime">Cybercrime</option>
-<option value="finance">Finance</option>
-<option value="justice_policing">Justice / Policing</option>
-<option value="children_wellbeing">Children / Wellbeing</option>
-<option value="workplace_civil_rights">Workplace / Civil Rights</option>
-<option value="privacy_surveillance">Privacy / Surveillance</option>
-<option value="healthcare">Healthcare</option>
-<option value="general">General</option>
-</select>
-</label>
-<button id="cmb-watch-refresh" type="button">Refresh from GDELT</button>
-</div>""",
-            '<div id="cmb-news-grid" class="cmb-news-grid">\n'
-            + render_cards(articles, config)
-            + "\n</div>",
+            render_cards(articles, config),
             (
                 '<p class="cmb-watch-method-note">'
-                "<strong>Method boundary:</strong> source clustering compares headline words only. "
-                "It is a discovery aid, not independent factual corroboration. "
-                "Open the original reporting and verify consequential claims before relying on them."
+                "<strong>Publication rule:</strong> the analysis step may inspect a larger "
+                "metadata sample in memory, but this page publishes only a bounded set of "
+                "source links. No article body, image, excerpt, or copied archive is stored."
                 "</p>"
             ),
         ]
     )
-
 
 def replace_generated_section(document: str, generated: str) -> str:
     if START_MARKER not in document or END_MARKER not in document:
@@ -521,7 +463,8 @@ def main() -> int:
                 return 0
             raise
         articles = normalize_articles(payload, config)
-        data = snapshot(config, articles)
+        published_links = select_published_links(articles, config)
+        data = snapshot(config, published_links)
         document = args.output_doc.read_text(encoding="utf-8")
         updated_document = replace_generated_section(
             document, render_generated_block(data, config)
@@ -534,7 +477,7 @@ def main() -> int:
 
     print(
         "Global AI Watch refreshed: "
-        f"{data['article_count']} stories, "
+        f"{data['article_count']} published links, "
         f"{data['domain_count']} domains, "
         f"{data['country_count']} source countries."
     )
