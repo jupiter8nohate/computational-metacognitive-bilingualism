@@ -18,6 +18,9 @@ The repository publishes a public documentation origin designed for human reader
 - Concept library: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/
 - FAQ: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/FAQ/
 - Case studies: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/
+- Global AI Watch: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/
+- Global AI Watch JSON: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch.json
+- Global AI Watch rules: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-config.json
 - Structured case-study evidence: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json
 - Jupiter polyglot runtime: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_POLYGLOT_RUNTIME/
 - Go runtime source: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/examples/polyglot/jupiter_glitchology_runtime/main.go
