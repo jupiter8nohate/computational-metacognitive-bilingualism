@@ -4,7 +4,7 @@
   "subtitle": "Pattern, Discrepancy & Emerging Technology Observatory",
   "baseline_timespan": "7d",
   "current_timespan": "24h",
-  "max_records": 250,
+  "max_records": 120,
   "technology_signals": [
     {
       "id": "ai_agents",
@@ -293,5 +293,8 @@
     "NEWS_REPORT != VERIFIED_FACT",
     "CMB_INTERPRETATION != SOURCE_ENDORSEMENT",
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
-  ]
+  ],
+  "published_cluster_limit": 8,
+  "published_signal_limit": 8,
+  "published_vocabulary_limit": 10
 }
