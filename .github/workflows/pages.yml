@@ -77,7 +77,6 @@ jobs:
         run: python scripts/update_global_ai_watch.py --allow-stale
 
       - name: Build CMB Epistemic Radar
-        continue-on-error: true
         run: python scripts/build_epistemic_radar.py
 
       - name: Build and verify public documentation bundle
