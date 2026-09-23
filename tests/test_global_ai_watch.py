@@ -207,3 +207,22 @@ def test_link_ledger_renders_links_without_article_body_or_archive_copy() -> Non
     assert 'href="https://example.com/story"' in rendered
     assert "Wayback" not in rendered
     assert "<article" not in rendered
+
+
+
+def test_curated_seed_is_exactly_ten_links_only() -> None:
+    seed = json.loads(
+        (ROOT / "machine/global-ai-watch-seed.json").read_text(encoding="utf-8")
+    )
+
+    assert seed["schema_version"] == "cmb.news-link-seed.v1"
+    assert len(seed["links"]) == 10
+
+    required = {"title", "source", "date", "url", "cmb", "topics"}
+    forbidden = {"body", "article_body", "excerpt", "summary", "image", "html"}
+
+    for item in seed["links"]:
+        assert set(item) == required
+        assert not forbidden.intersection(item)
+        assert item["url"].startswith("https://")
+        assert item["cmb"]
