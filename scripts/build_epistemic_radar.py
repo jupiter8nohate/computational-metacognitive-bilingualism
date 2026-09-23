@@ -395,8 +395,8 @@ def title_for_cluster(
     return cluster["id"]
 
 
-def render_signal_chips(signals: list[dict[str, Any]]) -> str:
-    visible = [item for item in signals if item["status"] != "not_observed"][:12]
+def render_signal_chips(signals: list[dict[str, Any]], limit: int = 8) -> str:
+    visible = [item for item in signals if item["status"] != "not_observed"][:limit]
     if not visible:
         return '<div class="cmb-watch-empty">No configured technology families were observed in this sample.</div>'
 
@@ -413,11 +413,11 @@ def render_signal_chips(signals: list[dict[str, Any]]) -> str:
     return '<div class="cmb-radar-signals">' + "".join(rows) + "</div>"
 
 
-def render_vocab(items: list[dict[str, Any]]) -> str:
+def render_vocab(items: list[dict[str, Any]], limit: int = 10) -> str:
     if not items:
         return '<p>No concentrated vocabulary candidates met the current threshold.</p>'
     chips = []
-    for item in items[:15]:
+    for item in items[:limit]:
         chips.append(
             '<span class="cmb-radar-vocab">'
             + html.escape(item["term"])
@@ -430,6 +430,7 @@ def render_vocab(items: list[dict[str, Any]]) -> str:
 def render_clusters(
     clusters: list[dict[str, Any]],
     current: list[dict[str, Any]],
+    limit: int = 8,
 ) -> str:
     article_lookup = {item["id"]: item for item in current}
     interesting = [
@@ -438,7 +439,7 @@ def render_clusters(
         or cluster["high_consequence_terms"]
         or "prediction_to_action_chain" in cluster["attention_flags"]
         or "generation_to_action_chain" in cluster["attention_flags"]
-    ][:12]
+    ][:limit]
 
     if not interesting:
         return '<div class="cmb-watch-empty">No clusters met the current review-prompt threshold.</div>'
@@ -493,6 +494,7 @@ def render_clusters(
 def render_generated(
     snapshot: dict[str, Any],
     current: list[dict[str, Any]],
+    radar_config: dict[str, Any],
 ) -> str:
     summary = snapshot["summary"]
     generated = snapshot["generated_at"].replace("T", " ").replace("Z", " UTC")
@@ -518,16 +520,16 @@ def render_generated(
                     "</div>",
                 ]
             ),
-            "### Technology signals\n\n" + render_signal_chips(snapshot["technology_signals"]),
+            "### Technology signals\n\n" + render_signal_chips(snapshot["technology_signals"], int(radar_config.get("published_signal_limit", 8))),
             (
                 "### Emerging vocabulary candidates\n\n"
-                + render_vocab(snapshot["emerging_vocabulary"])
+                + render_vocab(snapshot["emerging_vocabulary"], int(radar_config.get("published_vocabulary_limit", 10)))
                 + "\n\n"
                 "<p class=\"cmb-watch-method-note\">"
                 "These are concentration signals in finite GDELT samples, not proof that a term is new, important, or technically novel."
                 "</p>"
             ),
-            "### Human-review clusters\n\n" + render_clusters(snapshot["clusters"], current),
+            "### Human-review clusters\n\n" + render_clusters(snapshot["clusters"], current, int(radar_config.get("published_cluster_limit", 8))),
         ]
     )
 
@@ -588,7 +590,7 @@ def main() -> int:
         )
         snapshot = build_snapshot(current, baseline, watch_config, radar_config)
         document = args.output_doc.read_text(encoding="utf-8")
-        updated = replace_generated(document, render_generated(snapshot, current))
+        updated = replace_generated(document, render_generated(snapshot, current, radar_config))
         write_atomic(
             args.output_json,
             json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n",
