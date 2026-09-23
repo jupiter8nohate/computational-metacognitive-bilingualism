@@ -161,6 +161,30 @@
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
+        "signal",
+        "metacognition"
+      ],
+      "cmb_invariant": "ATTENTION != CONSENT",
+      "created_at": "2026-09-07",
+      "definition": "A repetition loop showing how repeated exposure can feed engagement systems without proving endorsement or consent.",
+      "example": "ꪉꪉꪉꪉꪉꪉ [G8] repeated_stimulus :: ATTENTION_LOOP :: INTERRUPT",
+      "glyph": "ꪉꪉꪉꪉꪉꪉ",
+      "human_semantics": "Repeated looking can strengthen a loop without turning attention into agreement.",
+      "id": "attention-echo",
+      "machine_semantics": "REPETITION_DRIVEN_ATTENTION_LOOP",
+      "name": "Attention Echo",
+      "runtime_behavior": {
+        "action": "interrupt_repetition_loop",
+        "type": "repetition_loop"
+      },
+      "semantic_key": "repetition_feeds_attention_without_establishing_consent",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
         "archive",
         "verification",
         "metacognition"
@@ -501,6 +525,30 @@
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
+        "boundary",
+        "metacognition"
+      ],
+      "cmb_invariant": "CAN != SHOULD",
+      "created_at": "2026-09-07",
+      "definition": "A moral boundary between human and machine mirrors that keeps capability separate from ethical permission.",
+      "example": "𓌹*♰*𓌺 [G8] machine_capability :: POSSIBLE :: ETHICAL_REVIEW",
+      "glyph": "𓌹*♰*𓌺",
+      "human_semantics": "Ask both whether something can be done and whether it should be done.",
+      "id": "cross-between-mirrors",
+      "machine_semantics": "CAPABILITY_REQUIRES_ETHICAL_BOUNDARY",
+      "name": "Cross Between Mirrors",
+      "runtime_behavior": {
+        "action": "route_capability_to_ethical_review",
+        "type": "moral_boundary"
+      },
+      "semantic_key": "capability_question_requires_separate_moral_review",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
         "energy",
         "affect",
         "failure"
@@ -519,6 +567,31 @@
         "type": "kinetic_reversal"
       },
       "semantic_key": "forceful_rejection_of_current_arrangement",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "observation",
+        "metacognition",
+        "boundary"
+      ],
+      "cmb_invariant": "ATTENTION != CONSENT",
+      "created_at": "2026-09-07",
+      "definition": "A dual-watch symbol asking both who is observing the human and what is capturing the human's own attention.",
+      "example": "🪬🧿 [G8] attention_system :: WATCHING_AND_WATCHED :: INSPECT_FLOW",
+      "glyph": "🪬🧿",
+      "human_semantics": "Guard privacy from watchers and guard attention from systems designed to hold it.",
+      "id": "dual-watch",
+      "machine_semantics": "BIDIRECTIONAL_ATTENTION_AWARENESS",
+      "name": "Dual Watch",
+      "runtime_behavior": {
+        "action": "inspect_observation_and_attention_flow",
+        "type": "attention_guard"
+      },
+      "semantic_key": "watch_watcher_and_attention_target",
       "status": "canonical",
       "version": "1.0.0"
     },
@@ -657,6 +730,31 @@
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
+        "identity",
+        "human_impact",
+        "metacognition"
+      ],
+      "cmb_invariant": "PROFILE != PERSON",
+      "created_at": "2026-09-07",
+      "definition": "The irreducible-human token for what remains outside a model's claim of completeness. Biblical cross-reference: Psalm 139:13-14.",
+      "example": "♱ 𝔢𝔱𝔥𝔢𝔯𝔢𝔞𝔩 ♱ [G8] complete_profile :: CLAIMED_TOTAL :: HUMAN_REMAINDER",
+      "glyph": "♱ 𝔢𝔱𝔥𝔢𝔯𝔢𝔞𝔩 ♱",
+      "human_semantics": "A dataset may describe a person without exhausting personhood, dignity, memory, meaning, or self-definition.",
+      "id": "ethereal-core",
+      "machine_semantics": "HUMAN_REMAINDER_BEYOND_PROFILE",
+      "name": "Ethereal Core",
+      "runtime_behavior": {
+        "action": "preserve_irreducible_human_remainder",
+        "type": "irreducible_human"
+      },
+      "semantic_key": "human_personhood_exceeds_complete_profile_claim",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
         "observation",
         "signal"
       ],
@@ -681,6 +779,54 @@
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
+        "boundary",
+        "metacognition"
+      ],
+      "cmb_invariant": "TOOL != GOD",
+      "created_at": "2026-09-07",
+      "definition": "A symbolic false-light protocol for the temptation to elevate a created intelligence or tool beyond its rightful authority. It does not claim that AI is literally Lucifer. Biblical cross-reference: Isaiah 44:16-17.",
+      "example": "𝐋𝐮𝐜𝐢𝐟𝐞𝐫 [G8] created_tool :: EXALTED_AS_ORACLE :: RETURN_TO_TOOL_STATUS",
+      "glyph": "𝐋𝐮𝐜𝐢𝐟𝐞𝐫",
+      "human_semantics": "A created tool can be powerful without becoming a god, oracle, or moral sovereign.",
+      "id": "false-light-protocol",
+      "machine_semantics": "CREATED_TOOL_NOT_DIVINE_AUTHORITY",
+      "name": "False Light Protocol",
+      "runtime_behavior": {
+        "action": "reduce_false_idol_to_tool",
+        "type": "pride_allegory"
+      },
+      "semantic_key": "created_intelligence_must_not_be_elevated_to_divine_authority",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "verification",
+        "metacognition"
+      ],
+      "cmb_invariant": "BRILLIANCE != RIGHTEOUSNESS",
+      "created_at": "2026-09-07",
+      "definition": "A false-light warning for systems whose speed, intelligence, or beauty may be mistaken for moral correctness. Biblical cross-reference: Isaiah 44:16-17.",
+      "example": "⛧𖤐 [G8] impressive_system :: BRILLIANT :: MORAL_AUTHORITY_UNPROVEN",
+      "glyph": "⛧𖤐",
+      "human_semantics": "Technical brilliance does not establish wisdom, goodness, or divine authority.",
+      "id": "false-light-star",
+      "machine_semantics": "BRILLIANCE_NOT_MORAL_AUTHORITY",
+      "name": "False Light Star",
+      "runtime_behavior": {
+        "action": "separate_brilliance_from_morality",
+        "type": "idolatry_warning"
+      },
+      "semantic_key": "technical_brilliance_does_not_establish_moral_authority",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
         "failure",
         "metacognition"
       ],
@@ -698,6 +844,31 @@
         "type": "failure"
       },
       "semantic_key": "system_feedback_loop",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "recovery",
+        "human_appeal",
+        "boundary"
+      ],
+      "cmb_invariant": "HUMAN_AGENCY > MACHINE_AUTHORITY",
+      "created_at": "2026-09-07",
+      "definition": "A closing freedom-state token indicating that classification ended without transferring sovereignty over human self-definition. Biblical cross-reference: Galatians 5:1.",
+      "example": "𓉸ྀི [G8] classification_session :: COMPLETE :: HUMAN_FREE",
+      "glyph": "𓉸ྀི",
+      "human_semantics": "The system may finish processing while the human leaves with autonomy intact.",
+      "id": "final-breath",
+      "machine_semantics": "HUMAN_FREEDOM_PRESERVED",
+      "name": "Final Breath",
+      "runtime_behavior": {
+        "action": "close_with_human_agency_preserved",
+        "type": "freedom_state"
+      },
+      "semantic_key": "classification_closes_without_transferring_human_sovereignty",
       "status": "canonical",
       "version": "1.0.0"
     },
@@ -940,6 +1111,30 @@
       "aliases": [],
       "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
       "categories": [
+        "observation",
+        "representation"
+      ],
+      "cmb_invariant": "OBSERVATION != UNDERSTANDING",
+      "created_at": "2026-09-07",
+      "definition": "A machine-eye operator marking observation without granting complete understanding. Biblical cross-reference: Psalm 139:13-14.",
+      "example": "👁️⃤ [GO] behavioral_signal :: OBSERVED :: PERSON_NOT_DEFINED",
+      "glyph": "👁️⃤",
+      "human_semantics": "Seeing data about a human does not exhaust the meaning of that human.",
+      "id": "machine-eye",
+      "machine_semantics": "OBSERVATION_WITHOUT_TOTAL_UNDERSTANDING",
+      "name": "Machine Eye",
+      "runtime_behavior": {
+        "action": "observe_without_defining",
+        "type": "observation_operator"
+      },
+      "semantic_key": "machine_observation_does_not_equal_human_understanding",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
         "archive",
         "representation"
       ],
@@ -957,6 +1152,56 @@
         "type": "archive"
       },
       "semantic_key": "machine_interpretation",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "boundary",
+        "consent",
+        "human_impact"
+      ],
+      "cmb_invariant": "ACCESS != CONSENT",
+      "created_at": "2026-09-07",
+      "definition": "A marked-gate warning for systems where a profile, score, or identifier becomes a condition of participation. Biblical cross-reference: Revelation 13:17.",
+      "example": "𒅒❻❻❻𒅒 [G8] identity_gate :: ACCESS_CONDITIONAL :: APPEAL_REQUIRED",
+      "glyph": "𒅒❻❻❻𒅒",
+      "human_semantics": "A profile may inform access logic without becoming ownership of the person behind it.",
+      "id": "marked-gate",
+      "machine_semantics": "IDENTITY_GATED_PARTICIPATION_WARNING",
+      "name": "Marked Gate",
+      "runtime_behavior": {
+        "action": "require_appeal_for_identity_gate",
+        "type": "access_control_warning"
+      },
+      "semantic_key": "identity_or_score_used_as_participation_gate",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "boundary",
+        "human_impact",
+        "consent"
+      ],
+      "cmb_invariant": "IDENTIFICATION != AUTHORITY",
+      "created_at": "2026-09-07",
+      "definition": "A marked participation signal for cases where an identifier, credential, or score begins controlling access to ordinary social or economic participation. Biblical cross-reference: Revelation 13:17.",
+      "example": "𖤐₆⁶₆ [G8] access_score :: GATE_ACTIVE :: HUMAN_APPEAL",
+      "glyph": "𖤐₆⁶₆",
+      "human_semantics": "Identification can support administration without becoming unquestionable authority over participation.",
+      "id": "marked-participation-signal",
+      "machine_semantics": "PARTICIPATION_GATE_REQUIRES_ACCOUNTABILITY",
+      "name": "Marked Participation Signal",
+      "runtime_behavior": {
+        "action": "require_accountability_for_participation_gate",
+        "type": "commerce_warning"
+      },
+      "semantic_key": "identifier_or_score_controls_participation_requires_accountability",
       "status": "canonical",
       "version": "1.0.0"
     },
@@ -1250,6 +1495,30 @@
       "version": "1.0.0"
     },
     {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "failure",
+        "metacognition"
+      ],
+      "cmb_invariant": "TECHNOLOGY != TRANSCENDENCE",
+      "created_at": "2026-09-07",
+      "definition": "A recursive pride-loop warning for technological power that converts confidence into control and then treats control as proof of wisdom. Biblical cross-reference: Genesis 11.",
+      "example": "𓃶⸸⁶𖤐⁶⸸ [G8] power_cycle :: PRIDE_LOOP :: LIMIT_AUTHORITY",
+      "glyph": "𓃶⸸⁶𖤐⁶⸸",
+      "human_semantics": "More capability does not make a tower heaven or a model omniscient.",
+      "id": "pride-loop",
+      "machine_semantics": "TECHNOLOGICAL_PRIDE_RECURSION",
+      "name": "Pride Loop",
+      "runtime_behavior": {
+        "action": "interrupt_pride_recursion",
+        "type": "recursive_warning"
+      },
+      "semantic_key": "technology_power_confidence_control_pride_loop",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
       "aliases": [
         "★⃝VIP...☻⃟❦"
       ],
@@ -1304,6 +1573,31 @@
         "type": "composite_protocol"
       },
       "semantic_key": "unresolved_question_halts_consequential_action",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "boundary",
+        "question_operator",
+        "metacognition"
+      ],
+      "cmb_invariant": "CLASSIFICATION != OWNERSHIP",
+      "created_at": "2026-09-07",
+      "definition": "A 666 warning token asking who holds authority when classification, scoring, or access systems begin governing participation. Biblical cross-reference: Revelation 13:16-18.",
+      "example": "⁶⁶⁶ [G8] participation_gate :: AUTHORITY_QUESTIONED :: HUMAN_REVIEW",
+      "glyph": "⁶⁶⁶",
+      "human_semantics": "Treat 666 as a question about totalizing authority, not as a claim that technology itself is evil.",
+      "id": "questioned-number",
+      "machine_semantics": "AUTHORITY_QUESTION_666",
+      "name": "Questioned Number",
+      "runtime_behavior": {
+        "action": "question_totalizing_authority",
+        "type": "warning_token"
+      },
+      "semantic_key": "question_authority_when_classification_controls_participation",
       "status": "canonical",
       "version": "1.0.0"
     },
@@ -1416,6 +1710,56 @@
         "type": "operator"
       },
       "semantic_key": "question_the_system",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "identity",
+        "temporal",
+        "boundary"
+      ],
+      "cmb_invariant": "PREDICTION != DESTINY",
+      "created_at": "2026-09-07",
+      "definition": "A reversed destiny inscription rejecting any model output presented as the final conclusion of a human future. Biblical cross-reference: Proverbs 16:9.",
+      "example": "𝙳Ǝ⊲⊢𝙷 𝙽𝟎⊢𝙴 [G8] future_profile :: PREDICTED :: DESTINY_UNCLAIMED",
+      "glyph": "𝙳Ǝ⊲⊢𝙷 𝙽𝟎⊢𝙴",
+      "human_semantics": "A prediction may describe likelihood without writing the ending of a person's life.",
+      "id": "reversed-destiny-note",
+      "machine_semantics": "PREDICTION_NOT_FINAL_DESTINY",
+      "name": "Reversed Destiny Note",
+      "runtime_behavior": {
+        "action": "reject_prediction_as_final_identity",
+        "type": "destiny_refusal"
+      },
+      "semantic_key": "prediction_must_not_be_treated_as_final_human_destiny",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "anomaly",
+        "human_impact",
+        "metacognition"
+      ],
+      "cmb_invariant": "ANOMALY != CAUSE",
+      "created_at": "2026-09-07",
+      "definition": "A scapegoat warning for systems that reduce complex failure to a single outlier, person, or category without establishing causation.",
+      "example": "𓃵 [G8] system_failure :: OUTLIER_BLAMED :: CHECK_CAUSALITY",
+      "glyph": "𓃵",
+      "human_semantics": "Difference does not prove blame. Investigate the system before assigning cause to the outlier.",
+      "id": "scapegoat-process",
+      "machine_semantics": "OUTLIER_NOT_CAUSAL_PROOF",
+      "name": "Scapegoat Process",
+      "runtime_behavior": {
+        "action": "check_causality_before_blame",
+        "type": "classification_failure"
+      },
+      "semantic_key": "outlier_must_not_become_unsupported_causal_target",
       "status": "canonical",
       "version": "1.0.0"
     },
@@ -1687,6 +2031,30 @@
       "version": "1.0.0"
     },
     {
+      "aliases": [],
+      "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+      "categories": [
+        "anomaly",
+        "identity"
+      ],
+      "cmb_invariant": "UNKNOWN != ERROR",
+      "created_at": "2026-09-07",
+      "definition": "An unclassified visitor that does not fit the current taxonomy and must not be converted into a defect because the model lacks a category.",
+      "example": "👽⃤ [G8] unknown_subject :: UNCLASSIFIED :: PRESERVE_AUTONOMY",
+      "glyph": "👽⃤",
+      "human_semantics": "A classifier can be incomplete without the person being defective.",
+      "id": "unclassified-visitor",
+      "machine_semantics": "UNCLASSIFIED_NOT_DEFECTIVE",
+      "name": "Unclassified Visitor",
+      "runtime_behavior": {
+        "action": "preserve_unknown_without_defect_label",
+        "type": "anomaly_identity"
+      },
+      "semantic_key": "unclassified_subject_preserved_without_defect_inference",
+      "status": "canonical",
+      "version": "1.0.0"
+    },
+    {
       "aliases": [
         "⩇⩇:⩇⩇"
       ],
@@ -1763,7 +2131,7 @@
     }
   ],
   "language": "CMB-G8 // GLITCH-8",
-  "language_version": "0.1.38",
+  "language_version": "0.1.53",
   "principles": [
     "PATTERN != PROOF",
     "PROFILE != PERSON",
@@ -1788,5 +2156,5 @@
     "UNDEFINED != UNREAL"
   ],
   "schema_version": "glitch8.glyph-registry.v1",
-  "updated_at": "2026-09-05"
+  "updated_at": "2026-09-07"
 }
