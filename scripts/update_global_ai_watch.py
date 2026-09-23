@@ -500,11 +500,26 @@ def main() -> int:
         type=Path,
         help="Read a saved GDELT JSON response instead of using the network.",
     )
+    parser.add_argument(
+        "--allow-stale",
+        action="store_true",
+        help="Preserve the checked-in snapshot when the external GDELT fetch is unavailable.",
+    )
     args = parser.parse_args()
 
     try:
         config = load_json(args.config)
-        payload = load_json(args.fixture) if args.fixture else fetch_gdelt(config)
+        try:
+            payload = load_json(args.fixture) if args.fixture else fetch_gdelt(config)
+        except WatchError as exc:
+            if args.allow_stale and args.fixture is None:
+                print(
+                    "Global AI Watch refresh unavailable; preserving the existing "
+                    f"snapshot: {exc}",
+                    file=sys.stderr,
+                )
+                return 0
+            raise
         articles = normalize_articles(payload, config)
         data = snapshot(config, articles)
         document = args.output_doc.read_text(encoding="utf-8")
