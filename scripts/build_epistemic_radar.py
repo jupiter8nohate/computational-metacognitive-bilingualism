@@ -35,6 +35,7 @@ WATCH_CONFIG = ROOT / "machine/global-ai-watch-config.json"
 RADAR_CONFIG = ROOT / "machine/cmb-epistemic-radar-config.json"
 DEFAULT_OUTPUT_JSON = ROOT / "machine/cmb-epistemic-radar.json"
 DEFAULT_OUTPUT_DOC = ROOT / "docs/CMB_EPISTEMIC_RADAR.md"
+DEFAULT_FALLBACK_SNAPSHOT = ROOT / "machine/global-ai-watch.json"
 START_MARKER = "<!-- CMB_EPISTEMIC_RADAR_GENERATED_START -->"
 END_MARKER = "<!-- CMB_EPISTEMIC_RADAR_GENERATED_END -->"
 
@@ -554,6 +555,40 @@ def replace_generated(document: str, generated: str) -> str:
     )
 
 
+
+def load_fallback_articles(path: Path) -> list[dict[str, Any]]:
+    """Load the checked-in normalized news snapshot without network access."""
+    payload = load_json(path)
+    articles = payload.get("articles")
+    if not isinstance(articles, list):
+        raise WatchError(f"Fallback snapshot {path} does not contain an articles array")
+
+    normalized: list[dict[str, Any]] = []
+    for item in articles:
+        if not isinstance(item, dict):
+            continue
+        title = item.get("title")
+        url = item.get("url")
+        domain = item.get("domain")
+        boundary_ids = item.get("boundary_ids")
+        sector_ids = item.get("sector_ids")
+        if not isinstance(title, str) or not title.strip():
+            continue
+        if not isinstance(url, str) or not url.startswith(("http://", "https://")):
+            continue
+        if not isinstance(domain, str) or not domain.strip():
+            continue
+        if not isinstance(boundary_ids, list) or not boundary_ids:
+            continue
+        if not isinstance(sector_ids, list) or not sector_ids:
+            continue
+        normalized.append(dict(item))
+
+    if not normalized:
+        raise WatchError(f"Fallback snapshot {path} contains no usable articles")
+    return normalized
+
+
 def fetch_sample(
     watch_config: dict[str, Any],
     timespan: str,
@@ -575,23 +610,54 @@ def main() -> int:
     parser.add_argument("--output-doc", type=Path, default=DEFAULT_OUTPUT_DOC)
     parser.add_argument("--current-fixture", type=Path)
     parser.add_argument("--baseline-fixture", type=Path)
+    parser.add_argument("--fallback-snapshot", type=Path, default=DEFAULT_FALLBACK_SNAPSHOT)
+    parser.add_argument(
+        "--allow-stale",
+        action="store_true",
+        help="Use the checked-in Global AI Watch snapshot if GDELT is unavailable.",
+    )
     args = parser.parse_args()
 
     try:
         watch_config = load_json(args.watch_config)
         radar_config = load_json(args.radar_config)
-        current = fetch_sample(
-            watch_config,
-            str(radar_config["current_timespan"]),
-            int(radar_config["max_records"]),
-            args.current_fixture,
-        )
-        baseline = fetch_sample(
-            watch_config,
-            str(radar_config["baseline_timespan"]),
-            int(radar_config["max_records"]),
-            args.baseline_fixture,
-        )
+        try:
+            current = fetch_sample(
+                watch_config,
+                str(radar_config["current_timespan"]),
+                int(radar_config["max_records"]),
+                args.current_fixture,
+            )
+            baseline = fetch_sample(
+                watch_config,
+                str(radar_config["baseline_timespan"]),
+                int(radar_config["max_records"]),
+                args.baseline_fixture,
+            )
+        except WatchError as exc:
+            if (
+                not args.allow_stale
+                or args.current_fixture is not None
+                or args.baseline_fixture is not None
+            ):
+                raise
+            current = load_fallback_articles(args.fallback_snapshot)
+            baseline = list(current)
+            radar_config = dict(radar_config)
+            radar_config["current_timespan"] = "checked-in-snapshot"
+            radar_config["baseline_timespan"] = "checked-in-snapshot"
+            watch_config = deepcopy(watch_config)
+            watch_config["source"] = dict(watch_config["source"])
+            watch_config["source"]["name"] = "Checked-in Global AI Watch snapshot"
+            watch_config["source"]["endpoint"] = (
+                "https://jupiter8nohate.github.io/"
+                "computational-metacognitive-bilingualism/machine/global-ai-watch.json"
+            )
+            print(
+                "Epistemic Radar live refresh unavailable; using checked-in "
+                f"Global AI Watch snapshot: {exc}",
+                file=sys.stderr,
+            )
         snapshot = build_snapshot(current, baseline, watch_config, radar_config)
         document = args.output_doc.read_text(encoding="utf-8")
         updated = replace_generated(document, render_generated(snapshot, current, radar_config))
