@@ -1,0 +1,168 @@
+{
+  "schema_version": "cmb.news-link-seed.v1",
+  "generated_at": "2026-09-23T00:00:00Z",
+  "purpose": "Curated ten-link test corpus for CMB Global AI Watch. Links only; no article bodies, excerpts, or images are stored.",
+  "invariants": [
+    "NEWS_LINK != COPIED_ARTICLE",
+    "CMB_TAG != SOURCE_ENDORSEMENT",
+    "PATTERN != PROOF",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "links": [
+    {
+      "title": "Exclusive: US military had close call after using AI for false intelligence report, sources say",
+      "source": "CNN via KEYT News Channel 3-12",
+      "date": "2026-09-18",
+      "url": "https://keyt.com/politics/cnn-us-politics/2026/09/18/exclusive-us-military-had-close-call-after-using-ai-for-false-intelligence-report-sources-say/",
+      "cmb": [
+        "PREDICT",
+        "ACT"
+      ],
+      "topics": [
+        "military",
+        "intelligence",
+        "hallucination",
+        "verification"
+      ]
+    },
+    {
+      "title": "Banks warn AI shopping bots raise scam, fraud and data-privacy risks",
+      "source": "Reuters",
+      "date": "2026-09-22",
+      "url": "https://www.reuters.com/legal/litigation/banks-warn-ai-shopping-bots-raise-scam-fraud-data-privacy-risks-2026-09-22/",
+      "cmb": [
+        "ACT"
+      ],
+      "topics": [
+        "agents",
+        "finance",
+        "fraud",
+        "privacy"
+      ]
+    },
+    {
+      "title": "OpenAI flags concerning new AI behavior and vows to track it more closely",
+      "source": "Associated Press",
+      "date": "2026-09-17",
+      "url": "https://apnews.com/article/089e75b95bc935af092da7b79d92706d",
+      "cmb": [
+        "ACT",
+        "GENERATE"
+      ],
+      "topics": [
+        "model-behavior",
+        "oversight",
+        "misalignment",
+        "verification"
+      ]
+    },
+    {
+      "title": "Ex-Google safety chief warns AI could harm children more than social media did",
+      "source": "Reuters",
+      "date": "2026-09-22",
+      "url": "https://www.reuters.com/legal/litigation/ex-google-safety-chief-warns-ai-could-harm-children-more-than-social-media-did-2026-09-22/",
+      "cmb": [
+        "GENERATE"
+      ],
+      "topics": [
+        "children",
+        "persuasion",
+        "dependency",
+        "safety"
+      ]
+    },
+    {
+      "title": "INTERPOL report finds AI linked to more than half of cybercrime in Africa",
+      "source": "INTERPOL",
+      "date": "2026-08-03",
+      "url": "https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa",
+      "cmb": [
+        "GENERATE",
+        "ACT"
+      ],
+      "topics": [
+        "cybercrime",
+        "synthetic-identity",
+        "scams",
+        "automation"
+      ]
+    },
+    {
+      "title": "Foreign 'AI slopaganda' network targets Australian politicians with deepfakes",
+      "source": "ABC News Australia",
+      "date": "2026-09-09",
+      "url": "https://www.abc.net.au/news/2026-09-09/foreign-ai-network-deepfaking-australian-politicians/107129044",
+      "cmb": [
+        "GENERATE"
+      ],
+      "topics": [
+        "deepfakes",
+        "identity",
+        "misinformation",
+        "provenance"
+      ]
+    },
+    {
+      "title": "US judiciary developing new guidance on courts' use of AI",
+      "source": "Reuters",
+      "date": "2026-09-17",
+      "url": "https://www.reuters.com/legal/government/us-judiciary-developing-new-guidance-courts-use-ai-2026-09-17/",
+      "cmb": [
+        "GENERATE",
+        "ACT"
+      ],
+      "topics": [
+        "courts",
+        "verification",
+        "legal-process",
+        "human-judgment"
+      ]
+    },
+    {
+      "title": "From smart glasses to AI pins, privacy fears challenge tech's next big bet",
+      "source": "Reuters",
+      "date": "2026-09-22",
+      "url": "https://www.reuters.com/business/media-telecom/smart-glasses-ai-pins-privacy-fears-challenge-techs-next-big-bet-2026-09-22/",
+      "cmb": [
+        "PREDICT"
+      ],
+      "topics": [
+        "privacy",
+        "surveillance",
+        "wearables",
+        "consent"
+      ]
+    },
+    {
+      "title": "China's Huawei forecasts billions of agents will dominate AI traffic by 2035",
+      "source": "Reuters",
+      "date": "2026-09-16",
+      "url": "https://www.reuters.com/legal/litigation/chinas-huawei-forecasts-billions-agents-will-dominate-ai-traffic-by-2035-2026-09-16/",
+      "cmb": [
+        "ACT"
+      ],
+      "topics": [
+        "agents",
+        "emerging-technology",
+        "autonomy",
+        "infrastructure"
+      ]
+    },
+    {
+      "title": "Counter-terrorism operation leverages artificial intelligence to identify 126 terrorism suspects",
+      "source": "INTERPOL",
+      "date": "2026-09-18",
+      "url": "https://www.interpol.int/en/News-and-Events/News/2026/Counter-terrorism-operation-leverages-artificial-intelligence-to-identify-126-terrorism-suspects",
+      "cmb": [
+        "PREDICT",
+        "ACT"
+      ],
+      "topics": [
+        "facial-recognition",
+        "law-enforcement",
+        "identity",
+        "human-review"
+      ]
+    }
+  ]
+}
