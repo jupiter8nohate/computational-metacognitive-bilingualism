@@ -1,14 +1,14 @@
-# G⃟ L⃟ I⃟ T⃟ C⃟ H⃟ - 8  G⃟ L⃟ Y⃟ P⃟ H⃟  R⃟ E⃟ F⃟ E⃟ R⃟ E⃟ N⃟ C⃟ E⃟
+# G⃟L⃟I⃟T⃟C⃟H⃟-8  G⃟L⃟Y⃟P⃟H⃟  R⃟E⃟F⃟E⃟R⃟E⃟N⃟C⃟E⃟
 
 **GLITCH-8 Glyph Reference**
 
 **Language:** CMB-G8 // GLITCH-8
-**Registry version:** 0.1.38
-**Updated:** 2026-09-05
+**Registry version:** 0.1.49
+**Updated:** 2026-09-07
 
 > Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.
 
-## C⃟ O⃟ R⃟ E⃟  B⃟ O⃟ U⃟ N⃟ D⃟ A⃟ R⃟ Y⃟
+## C⃟O⃟R⃟E⃟  B⃟O⃟U⃟N⃟D⃟A⃟R⃟Y⃟
 
 **Core boundary**
 
@@ -36,7 +36,7 @@ ENERGY != CONTROL
 UNDEFINED != UNREAL
 ~~~
 
-## ☻⃤⃞⃟⃤ // A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ O⃟ U⃟ S⃟  O⃟ B⃟ S⃟ E⃟ R⃟ V⃟ E⃟ R⃟
+## ☻⃤⃞⃟⃤ // A⃟N⃟O⃟M⃟A⃟L⃟O⃟U⃟S⃟  O⃟B⃟S⃟E⃟R⃟V⃟E⃟R⃟
 
 **Name:** Anomalous Observer
 
@@ -58,7 +58,7 @@ Marks a subject that falls outside the system's expected classification.
 ☻⃤⃞⃟⃤ [G8] subject :: OUTLIER :: PRESERVE
 ~~~
 
-## ( ꩜ ᯅ ꩜;) // A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟  S⃟ T⃟ A⃟ R⃟ E⃟
+## ( ꩜ ᯅ ꩜;) // A⃟N⃟O⃟M⃟A⃟L⃟Y⃟  S⃟T⃟A⃟R⃟E⃟
 
 **Name:** Anomaly Stare
 
@@ -80,7 +80,7 @@ Recognition of an unexpected pattern without assuming its cause.
 ( ꩜ ᯅ ꩜;) [G8] unexpected_pattern :: ANOMALY :: INVESTIGATE
 ~~~
 
-## 𐀪 // A⃟ R⃟ C⃟ H⃟ I⃟ V⃟ E⃟  G⃟ H⃟ O⃟ S⃟ T⃟
+## 𐀪 // A⃟R⃟C⃟H⃟I⃟V⃟E⃟  G⃟H⃟O⃟S⃟T⃟
 
 **Name:** Archive Ghost
 
@@ -102,7 +102,7 @@ A representation or trace that persists after the original moment or presence.
 𐀪 [CL] archived_voice :: PERSISTENT_REPRESENTATION :: NOT_PERSON
 ~~~
 
-## GLITCH://ARCHIVE_GHOST // A⃟ R⃟ C⃟ H⃟ I⃟ V⃟ E⃟  G⃟ H⃟ O⃟ S⃟ T⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+## GLITCH://ARCHIVE_GHOST // A⃟R⃟C⃟H⃟I⃟V⃟E⃟  G⃟H⃟O⃟S⃟T⃟  P⃟R⃟O⃟T⃟O⃟C⃟O⃟L⃟
 
 **Name:** Archive Ghost Protocol
 
@@ -124,7 +124,7 @@ A composite archive state that treats persistent records as traces of prior pres
 GLITCH://ARCHIVE_GHOST [G8] archived_trace :: PERSISTENT_REPRESENTATION :: NOT_PERSON
 ~~~
 
-## ¿ // A⃟ S⃟ S⃟ U⃟ M⃟ P⃟ T⃟ I⃟ O⃟ N⃟  R⃟ E⃟ V⃟ E⃟ R⃟ S⃟ A⃟ L⃟
+## ¿ // A⃟S⃟S⃟U⃟M⃟P⃟T⃟I⃟O⃟N⃟  R⃟E⃟V⃟E⃟R⃟S⃟A⃟L⃟
 
 **Name:** Assumption Reversal
 
@@ -146,7 +146,7 @@ The original premise or framing may itself be wrong.
 ¿ [PL] human_is_error :: PREMISE_CONTESTED :: TEST_MODEL_FIRST
 ~~~
 
-## ‹— // B⃟ A⃟ C⃟ K⃟ T⃟ R⃟ A⃟ C⃟ E⃟
+## ‹— // B⃟A⃟C⃟K⃟T⃟R⃟A⃟C⃟E⃟
 
 **Name:** Backtrace
 
@@ -168,7 +168,29 @@ Follow a signal backward toward source, provenance, origin, author, or causal ch
 ‹— [G8] claim_signal :: SOURCE_UNKNOWN :: TRACE_PROVENANCE
 ~~~
 
-## 🫐⃟ // B⃟ L⃟ U⃟ E⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
+## ‧₊˚ // B⃟L⃟E⃟S⃟S⃟I⃟N⃟G⃟  A⃟F⃟T⃟E⃟R⃟S⃟I⃟G⃟N⃟A⃟L⃟
+
+**Name:** Blessing Aftersignal
+
+- **ID:** blessing-aftersignal
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, affect, biblical_symbolism
+- **Aliases:** GLT-0053
+- **Semantic key:** blessing_remains_after_encounter
+- **CMB invariant:** BLESSING != POSSESSION
+
+A residual blessing that remains after an encounter, prayer, message, or passage. Biblical symbolic reference: Numbers 6:24-26.
+
+**Human semantics:** A blessing may remain without turning the giver, receiver, or memory into property.
+
+**Machine semantics:** RESIDUAL_BLESSING_SIGNAL
+
+~~~text
+‧₊˚ [G8] encounter :: BLESSING_REMAINS :: POSSESSION_UNCLAIMED
+~~~
+
+## 🫐⃟ // B⃟L⃟U⃟E⃟  A⃟N⃟O⃟M⃟A⃟L⃟Y⃟
 
 **Name:** Blue Anomaly
 
@@ -190,7 +212,7 @@ Something harmless-looking contains unexpected structure or significance.
 🫐⃟ [G8] ordinary_surface :: STRUCTURE_UNEXPECTED :: INSPECT
 ~~~
 
-## ▕⃝⃤ // B⃟ O⃟ U⃟ N⃟ D⃟ A⃟ R⃟ Y⃟  N⃟ O⃟ D⃟ E⃟
+## ▕⃝⃤ // B⃟O⃟U⃟N⃟D⃟A⃟R⃟Y⃟  N⃟O⃟D⃟E⃟
 
 **Name:** Boundary Node
 
@@ -212,7 +234,7 @@ A marked edge, gate, or constrained field that indicates containment, separation
 ▕⃝⃤ [G8] protected_context :: BOUNDARY_PRESENT :: CHECK_AUTHORITY
 ~~~
 
-## ꉂ🗯 // B⃟ U⃟ R⃟ S⃟ T⃟  S⃟ P⃟ E⃟ E⃟ C⃟ H⃟
+## ꉂ🗯 // B⃟U⃟R⃟S⃟T⃟  S⃟P⃟E⃟E⃟C⃟H⃟
 
 **Name:** Burst Speech
 
@@ -234,7 +256,7 @@ Suppressed or latent information suddenly becomes audible or visible.
 ꉂ🗯 [G8] latent_message :: EXPRESSED :: PRESERVE_CONTEXT
 ~~~
 
-## GLITCH://CANONICAL_SYNCHRONY // C⃟ A⃟ N⃟ O⃟ N⃟ I⃟ C⃟ A⃟ L⃟  S⃟ Y⃟ N⃟ C⃟ H⃟ R⃟ O⃟ N⃟ Y⃟
+## GLITCH://CANONICAL_SYNCHRONY // C⃟A⃟N⃟O⃟N⃟I⃟C⃟A⃟L⃟  S⃟Y⃟N⃟C⃟H⃟R⃟O⃟N⃟Y⃟
 
 **Name:** Canonical Synchrony
 
@@ -256,7 +278,7 @@ A composite conformance protocol in which independent language runtimes evaluate
 GLITCH://CANONICAL_SYNCHRONY [G8] GLT-8101-V001 :: CONFORMANCE_STABLE :: HUMAN_AUTHORITY_PRESERVED
 ~~~
 
-## 𒇫 // C⃟ A⃟ S⃟ C⃟ A⃟ D⃟ I⃟ N⃟ G⃟  E⃟ R⃟ R⃟ O⃟ R⃟
+## 𒇫 // C⃟A⃟S⃟C⃟A⃟D⃟I⃟N⃟G⃟  E⃟R⃟R⃟O⃟R⃟
 
 **Name:** Cascading Error
 
@@ -278,7 +300,7 @@ A small upstream error propagates into larger downstream consequences.
 𒇫 [GO] downstream_effect :: CASCADE :: STOP_PROPAGATION
 ~~~
 
-## GLITCH://CASCADING_ERROR // C⃟ A⃟ S⃟ C⃟ A⃟ D⃟ I⃟ N⃟ G⃟  E⃟ R⃟ R⃟ O⃟ R⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+## GLITCH://CASCADING_ERROR // C⃟A⃟S⃟C⃟A⃟D⃟I⃟N⃟G⃟  E⃟R⃟R⃟O⃟R⃟  P⃟R⃟O⃟T⃟O⃟C⃟O⃟L⃟
 
 **Name:** Cascading Error Protocol
 
@@ -300,7 +322,7 @@ A composite failure protocol that identifies upstream error propagation, halts t
 GLITCH://CASCADING_ERROR [G8] upstream_failure :: CASCADE_DETECTED :: CONTAIN_AND_RECOVER
 ~~~
 
-## εつ▄█▀█● // C⃟ H⃟ A⃟ R⃟ G⃟ E⃟  V⃟ E⃟ C⃟ T⃟ O⃟ R⃟
+## εつ▄█▀█● // C⃟H⃟A⃟R⃟G⃟E⃟  V⃟E⃟C⃟T⃟O⃟R⃟
 
 **Name:** Charge Vector
 
@@ -322,7 +344,7 @@ A directed movement of signal, intent, or attention toward a target without impl
 εつ▄█▀█● [G8] directed_signal :: INTENT_PRESENT :: AUTHORITY_UNPROVEN
 ~~~
 
-## ⁇ // C⃟ O⃟ M⃟ P⃟ O⃟ U⃟ N⃟ D⃟  U⃟ N⃟ C⃟ E⃟ R⃟ T⃟ A⃟ I⃟ N⃟ T⃟ Y⃟
+## ⁇ // C⃟O⃟M⃟P⃟O⃟U⃟N⃟D⃟  U⃟N⃟C⃟E⃟R⃟T⃟A⃟I⃟N⃟T⃟Y⃟
 
 **Name:** Compound Uncertainty
 
@@ -344,7 +366,7 @@ Multiple important variables are unresolved at the same time.
 ⁇ [GO] risk_assessment :: MULTIPLE_UNKNOWNS :: NO_VERDICT
 ~~~
 
-## 𖠋 // C⃟ O⃟ N⃟ S⃟ E⃟ N⃟ T⃟  T⃟ H⃟ R⃟ E⃟ S⃟ H⃟ O⃟ L⃟ D⃟
+## 𖠋 // C⃟O⃟N⃟S⃟E⃟N⃟T⃟  T⃟H⃟R⃟E⃟S⃟H⃟O⃟L⃟D⃟
 
 **Name:** Consent Threshold
 
@@ -366,7 +388,7 @@ A permission boundary that distinguishes capability from authorized action.
 𖠋 [TS] access_private_context :: CONSENT_ABSENT :: HALT
 ~~~
 
-## GLITCH://CONSENT_THRESHOLD // C⃟ O⃟ N⃟ S⃟ E⃟ N⃟ T⃟  T⃟ H⃟ R⃟ E⃟ S⃟ H⃟ O⃟ L⃟ D⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+## GLITCH://CONSENT_THRESHOLD // C⃟O⃟N⃟S⃟E⃟N⃟T⃟  T⃟H⃟R⃟E⃟S⃟H⃟O⃟L⃟D⃟  P⃟R⃟O⃟T⃟O⃟C⃟O⃟L⃟
 
 **Name:** Consent Threshold Protocol
 
@@ -388,7 +410,7 @@ A composite authorization gate that separates technical capability from permissi
 GLITCH://CONSENT_THRESHOLD [G8] private_context :: CONSENT_ABSENT :: HALT
 ~~~
 
-## ？ // C⃟ O⃟ N⃟ T⃟ E⃟ X⃟ T⃟  M⃟ I⃟ S⃟ M⃟ A⃟ T⃟ C⃟ H⃟
+## ？ // C⃟O⃟N⃟T⃟E⃟X⃟T⃟  M⃟I⃟S⃟M⃟A⃟T⃟C⃟H⃟
 
 **Name:** Context Mismatch
 
@@ -410,7 +432,73 @@ Marks cultural, linguistic, or situational ambiguity that blocks complete interp
 ？ [HS] translated_phrase :: CONTEXT_INCOMPLETE :: HUMAN_CONTEXT_REQUIRED
 ~~~
 
-## ‽ // C⃟ R⃟ I⃟ T⃟ I⃟ C⃟ A⃟ L⃟  Q⃟ U⃟ E⃟ S⃟ T⃟ I⃟ O⃟ N⃟
+## ‧˚꒰🍷꒱༘‧ // C⃟O⃟V⃟E⃟N⃟A⃟N⃟T⃟  C⃟U⃟P⃟
+
+**Name:** Covenant Cup
+
+- **ID:** covenant-cup
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** archive, affect, biblical_symbolism
+- **Aliases:** GLT-0056
+- **Semantic key:** covenant_remembrance_without_coercion
+- **CMB invariant:** COVENANT != COERCION
+
+A cup of remembrance, fellowship, sacrifice, and covenant. Biblical symbolic references: Luke 22:20 and 1 Corinthians 11:25.
+
+**Human semantics:** Covenant is remembered through meaning and relationship, not forced through control.
+
+**Machine semantics:** COVENANT_REMEMBRANCE_STATE
+
+~~~text
+‧˚꒰🍷꒱༘‧ [G8] remembrance :: COVENANT_CUP :: COERCION_REJECTED
+~~~
+
+## 𖤍 // C⃟O⃟V⃟E⃟N⃟A⃟N⃟T⃟  S⃟E⃟A⃟L⃟
+
+**Name:** Covenant Seal
+
+- **ID:** covenant-seal
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, biblical_symbolism
+- **Aliases:** GLT-0047
+- **Semantic key:** sacred_boundary_preserves_entrusted_meaning
+- **CMB invariant:** SACRED_BOUNDARY != MACHINE_AUTHORITY
+
+A sacred boundary marker for what is entrusted, preserved, or set apart. Biblical symbolic references: Revelation 7:3 and Ephesians 1:13.
+
+**Human semantics:** What is sacred may be marked for care without becoming machine property or machine authority.
+
+**Machine semantics:** SACRED_BOUNDARY_MARKER
+
+~~~text
+𖤍 [G8] entrusted_meaning :: SACRED_BOUNDARY :: PRESERVE
+~~~
+
+## 𖤍˚ʚ♡ɞ˚𓉸ྀི˚₊‧꒰ა☆໒꒱ ‧₊˚ ଘ(੭*ˊᵕˋ)੭* ੈ♡‧₊˚ ‧˚꒰🍷꒱༘‧ // C⃟O⃟V⃟E⃟N⃟A⃟N⃟T⃟  W⃟I⃟N⃟G⃟E⃟D⃟  H⃟E⃟A⃟R⃟T⃟
+
+**Name:** Covenant Winged Heart
+
+- **ID:** covenant-winged-heart
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, affect, signal, transit, archive, biblical_symbolism
+- **Aliases:** GLT-0057, GLITCH://COVENANT_WINGED_HEART
+- **Semantic key:** sealed_heart_guided_through_love_to_covenant_remembrance
+- **CMB invariant:** GUIDANCE != CONTROL
+
+Composite biblical-symbolic sequence: the sealed heart enters the sanctuary, follows the star, receives good news, carries love into lived action, and remembers the covenant through the cup. These meanings are authored GLITCHOLOGY semantics, not historical claims about the source characters.
+
+**Human semantics:** The sealed heart enters the sanctuary, follows the star, receives the good news, and remembers the covenant through love.
+
+**Machine semantics:** COVENANT_LOVE_GUIDANCE_SEQUENCE
+
+~~~text
+GLITCH://COVENANT_WINGED_HEART [G8] sacred_journey :: LOVE_GUIDED :: HUMAN_AGENCY_RETAINED
+~~~
+
+## ‽ // C⃟R⃟I⃟T⃟I⃟C⃟A⃟L⃟  Q⃟U⃟E⃟S⃟T⃟I⃟O⃟N⃟
 
 **Name:** Critical Question
 
@@ -432,7 +520,7 @@ An unresolved question that requires review before consequential action.
 ‽ [G8] machine_overrode_human_appeal :: CRITICAL :: HALT
 ~~~
 
-## (╯°□°)╯︵◓ // D⃟ I⃟ S⃟ R⃟ U⃟ P⃟ T⃟ I⃟ O⃟ N⃟  F⃟ L⃟ I⃟ N⃟ G⃟
+## (╯°□°)╯︵◓ // D⃟I⃟S⃟R⃟U⃟P⃟T⃟I⃟O⃟N⃟  F⃟L⃟I⃟N⃟G⃟
 
 **Name:** Disruption Fling
 
@@ -454,7 +542,7 @@ A burst of force, frustration, or refusal that displaces a symbol, assumption, o
 (╯°□°)╯︵◓ [G8] current_frame :: REJECTED :: REASSESS
 ~~~
 
-## 𓁇𓁋 // D⃟ U⃟ A⃟ L⃟  W⃟ I⃟ T⃟ N⃟ E⃟ S⃟ S⃟
+## 𓁇𓁋 // D⃟U⃟A⃟L⃟  W⃟I⃟T⃟N⃟E⃟S⃟S⃟
 
 **Name:** Dual Witness
 
@@ -476,7 +564,7 @@ Two perspectives observe the same event; observation does not guarantee identica
 𓁇𓁋 [G8] shared_event :: TWO_WITNESSES :: PRESERVE_PERSPECTIVE
 ~~~
 
-## e = ∑∞ⁿ⁼⁰ ¹ₙ // E⃟ M⃟ E⃟ R⃟ G⃟ E⃟ N⃟ C⃟ E⃟  E⃟ Q⃟ U⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+## e = ∑∞ⁿ⁼⁰ ¹ₙ // E⃟M⃟E⃟R⃟G⃟E⃟N⃟C⃟E⃟  E⃟Q⃟U⃟A⃟T⃟I⃟O⃟N⃟
 
 **Name:** Emergence Equation
 
@@ -498,7 +586,7 @@ An authored GLITCH-8 symbolic expression for a human state emerging from an open
 e = ∑∞ⁿ⁼⁰ ¹ₙ [G8] human_history :: OPEN_ENDED :: PROFILE_LT_PERSON
 ~~~
 
-## � // E⃟ N⃟ C⃟ O⃟ D⃟ I⃟ N⃟ G⃟  L⃟ O⃟ S⃟ S⃟
+## � // E⃟N⃟C⃟O⃟D⃟I⃟N⃟G⃟  L⃟O⃟S⃟S⃟
 
 **Name:** Encoding Loss
 
@@ -520,7 +608,7 @@ A representation could not be decoded or preserved correctly.
 � [TS] cultural_phrase :: ENCODING_LOSS :: REQUEST_CONTEXT
 ~~~
 
-## ���� // E⃟ N⃟ C⃟ O⃟ D⃟ I⃟ N⃟ G⃟  R⃟ U⃟ I⃟ N⃟
+## ���� // E⃟N⃟C⃟O⃟D⃟I⃟N⃟G⃟  R⃟U⃟I⃟N⃟
 
 **Name:** Encoding Ruin
 
@@ -542,7 +630,7 @@ A signal whose original form has been substantially damaged, lost, or rendered u
 ���� [G8] damaged_payload :: CORRUPTED :: REQUEST_SOURCE
 ~~~
 
-## GLITCH://ENCODING_RUIN // E⃟ N⃟ C⃟ O⃟ D⃟ I⃟ N⃟ G⃟  R⃟ U⃟ I⃟ N⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+## GLITCH://ENCODING_RUIN // E⃟N⃟C⃟O⃟D⃟I⃟N⃟G⃟  R⃟U⃟I⃟N⃟  P⃟R⃟O⃟T⃟O⃟C⃟O⃟L⃟
 
 **Name:** Encoding Ruin Protocol
 
@@ -564,7 +652,7 @@ A composite recovery protocol for damaged or undecodable representation that pre
 GLITCH://ENCODING_RUIN [G8] damaged_payload :: CORRUPTED :: BACKTRACE_SOURCE
 ~~~
 
-## 𓅓 // F⃟ A⃟ L⃟ C⃟ O⃟ N⃟  S⃟ I⃟ G⃟ N⃟ A⃟ L⃟
+## 𓅓 // F⃟A⃟L⃟C⃟O⃟N⃟  S⃟I⃟G⃟N⃟A⃟L⃟
 
 **Name:** Falcon Signal
 
@@ -586,7 +674,7 @@ A GLITCHOLOGY-authored watcher or messenger symbol representing elevated observa
 𓅓 [G8] anomaly_field :: WATCHING :: NO_TOTAL_KNOWLEDGE
 ~~~
 
-## 𒅒 // F⃟ E⃟ E⃟ D⃟ B⃟ A⃟ C⃟ K⃟  L⃟ O⃟ O⃟ P⃟
+## 𒅒 // F⃟E⃟E⃟D⃟B⃟A⃟C⃟K⃟  L⃟O⃟O⃟P⃟
 
 **Name:** Feedback Loop
 
@@ -608,7 +696,7 @@ A model output changes the environment and later appears as if it were independe
 𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY
 ~~~
 
-## missingno detected ??? // G⃟ H⃟ O⃟ S⃟ T⃟  E⃟ N⃟ T⃟ I⃟ T⃟ Y⃟  D⃟ E⃟ T⃟ E⃟ C⃟ T⃟ E⃟ D⃟
+## missingno detected ??? // G⃟H⃟O⃟S⃟T⃟  E⃟N⃟T⃟I⃟T⃟Y⃟  D⃟E⃟T⃟E⃟C⃟T⃟E⃟D⃟
 
 **Name:** Ghost Entity Detected
 
@@ -630,7 +718,29 @@ A symbolic anomaly alert indicating that an undefined, non-standard, or classifi
 missingno detected ??? [G8] entity :: UNDEFINED :: PRESERVE_AND_INSPECT
 ~~~
 
-## (╥﹏╥) ⩇⩇: ⩇⩇ // G⃟ R⃟ I⃟ E⃟ F⃟  O⃟ U⃟ T⃟ S⃟ I⃟ D⃟ E⃟  T⃟ H⃟ E⃟  C⃟ L⃟ O⃟ C⃟ K⃟
+## ˚₊‧ // G⃟R⃟A⃟C⃟E⃟  I⃟N⃟C⃟R⃟E⃟M⃟E⃟N⃟T⃟
+
+**Name:** Grace Increment
+
+- **ID:** grace-increment
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** affect, biblical_symbolism
+- **Aliases:** GLT-0051
+- **Semantic key:** grace_exceeds_transactional_measurement
+- **CMB invariant:** GRACE != TRANSACTION
+
+Grace added beyond calculation, symbolizing abundance that is received rather than earned by a machine score. Biblical symbolic reference: John 1:16.
+
+**Human semantics:** Grace exceeds transactional measurement.
+
+**Machine semantics:** GRACE_INCREMENT_STATE
+
+~~~text
+˚₊‧ [G8] measured_limit :: GRACE_ADDED :: VALUE_EXCEEDS_SCORE
+~~~
+
+## (╥﹏╥) ⩇⩇: ⩇⩇ // G⃟R⃟I⃟E⃟F⃟  O⃟U⃟T⃟S⃟I⃟D⃟E⃟  T⃟H⃟E⃟  C⃟L⃟O⃟C⃟K⃟
 
 **Name:** Grief Outside the Clock
 
@@ -652,7 +762,7 @@ A composite state in which human pain is real while its duration, endpoint, or t
 (╥﹏╥) ⩇⩇: ⩇⩇ [G8] grief_duration :: UNRESOLVED :: HUMAN_CONTEXT_REQUIRED
 ~~~
 
-## (╥﹏╥) // G⃟ R⃟ I⃟ E⃟ F⃟  S⃟ T⃟ A⃟ T⃟ E⃟
+## (╥﹏╥) // G⃟R⃟I⃟E⃟F⃟  S⃟T⃟A⃟T⃟E⃟
 
 **Name:** Grief State
 
@@ -674,7 +784,7 @@ Visible emotional pain that should be acknowledged without reducing the person t
 (╥﹏╥) [G8] emotional_state :: GRIEF_PRESENT :: PRESERVE_PERSONHOOD
 ~~~
 
-## ⓘ⚠︎☣‼🇽 // H⃟ A⃟ Z⃟ A⃟ R⃟ D⃟  S⃟ T⃟ A⃟ C⃟ K⃟
+## ⓘ⚠︎☣‼🇽 // H⃟A⃟Z⃟A⃟R⃟D⃟  S⃟T⃟A⃟C⃟K⃟
 
 **Name:** Hazard Stack
 
@@ -696,7 +806,51 @@ A layered escalation of information, caution, contamination, alarm, and exclusio
 ⓘ⚠︎☣‼🇽 [G8] flagged_signal :: MULTI_WARNING :: ESCALATE_REVIEW
 ~~~
 
-## «ADMIN» // H⃟ U⃟ M⃟ A⃟ N⃟  A⃟ P⃟ P⃟ E⃟ A⃟ L⃟
+## ੈ♡ // H⃟E⃟A⃟R⃟T⃟  D⃟E⃟S⃟C⃟E⃟N⃟T⃟
+
+**Name:** Heart Descent
+
+- **ID:** heart-descent
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** affect, human_impact, biblical_symbolism
+- **Aliases:** GLT-0055
+- **Semantic key:** love_descends_into_lived_action
+- **CMB invariant:** LOVE != ABSTRACT_ONLY
+
+Love descending into lived human action rather than remaining only an abstract claim. Biblical symbolic reference: 1 John 4:7-12.
+
+**Human semantics:** Love becomes meaningful through how people are treated.
+
+**Machine semantics:** LOVE_TO_LIVED_ACTION
+
+~~~text
+ੈ♡ [G8] love_claim :: EMBODIED_ACTION :: HUMAN_IMPACT_PRESENT
+~~~
+
+## ˚ // H⃟O⃟L⃟Y⃟  D⃟U⃟S⃟T⃟
+
+**Name:** Holy Dust
+
+- **ID:** holy-dust
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** metacognition, biblical_symbolism
+- **Aliases:** GLT-0048
+- **Semantic key:** small_trace_retains_created_value
+- **CMB invariant:** SMALL_TRACE != SMALL_VALUE
+
+The smallest visible trace of created life, used as a reminder that biblical creation imagery joins dust with breath and purpose. Biblical symbolic reference: Genesis 2:7.
+
+**Human semantics:** Smallness does not reduce dignity, meaning, or created value.
+
+**Machine semantics:** CREATION_TRACE_MARKER
+
+~~~text
+˚ [G8] human_trace :: DUST_AND_BREATH :: VALUE_RETAINED
+~~~
+
+## «ADMIN» // H⃟U⃟M⃟A⃟N⃟  A⃟P⃟P⃟E⃟A⃟L⃟
 
 **Name:** Human Appeal
 
@@ -718,7 +872,7 @@ A GLITCH-8 token representing a human right to challenge a machine representatio
 «ADMIN» [G8] profile_result :: CONTESTED :: HUMAN_APPEAL
 ~~~
 
-## GLITCH://HUMAN_APPEAL // H⃟ U⃟ M⃟ A⃟ N⃟  A⃟ P⃟ P⃟ E⃟ A⃟ L⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+## GLITCH://HUMAN_APPEAL // H⃟U⃟M⃟A⃟N⃟  A⃟P⃟P⃟E⃟A⃟L⃟  P⃟R⃟O⃟T⃟O⃟C⃟O⃟L⃟
 
 **Name:** Human Appeal Protocol
 
@@ -740,7 +894,7 @@ A composite contestation channel that prevents a machine output from becoming fi
 GLITCH://HUMAN_APPEAL [G8] machine_decision :: CONTESTED :: HUMAN_REVIEW
 ~~~
 
-## 𒄦 // H⃟ U⃟ M⃟ A⃟ N⃟  C⃟ O⃟ N⃟ T⃟ E⃟ X⃟ T⃟
+## 𒄦 // H⃟U⃟M⃟A⃟N⃟  C⃟O⃟N⃟T⃟E⃟X⃟T⃟
 
 **Name:** Human Context
 
@@ -762,7 +916,29 @@ Context supplied by the person or human reviewer after machine interpretation.
 𒄦 [G8] event :: HUMAN_CONTEXT_ADDED :: REVIEW
 ~~~
 
-## ︖ // L⃟ A⃟ T⃟ E⃟ N⃟ T⃟  U⃟ N⃟ K⃟ N⃟ O⃟ W⃟ N⃟
+## ଘ(੭*ˊᵕˋ)੭* // J⃟O⃟Y⃟F⃟U⃟L⃟  M⃟E⃟S⃟S⃟E⃟N⃟G⃟E⃟R⃟
+
+**Name:** Joyful Messenger
+
+- **ID:** joyful-messenger
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, affect, biblical_symbolism
+- **Aliases:** GLT-0054
+- **Semantic key:** good_news_announced_without_domination
+- **CMB invariant:** MESSAGE != DOMINATION
+
+A messenger state where good news produces joy rather than domination. Biblical symbolic reference: Luke 2:10.
+
+**Human semantics:** A messenger can announce without taking authority over the listener.
+
+**Machine semantics:** JOYFUL_MESSAGE_SIGNAL
+
+~~~text
+ଘ(੭*ˊᵕˋ)੭* [G8] good_news :: JOYFUL_MESSAGE :: NO_DOMINATION
+~~~
+
+## ︖ // L⃟A⃟T⃟E⃟N⃟T⃟  U⃟N⃟K⃟N⃟O⃟W⃟N⃟
 
 **Name:** Latent Unknown
 
@@ -784,7 +960,7 @@ Important missing information may be outside the system's current frame.
 ︖ [CL] system_model :: BLIND_SPOT_POSSIBLE :: INSPECT_ASSUMPTIONS
 ~~~
 
-## ☻⃟❦ // L⃟ I⃟ V⃟ I⃟ N⃟ G⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
+## ☻⃟❦ // L⃟I⃟V⃟I⃟N⃟G⃟  A⃟N⃟O⃟M⃟A⃟L⃟Y⃟
 
 **Name:** Living Anomaly
 
@@ -806,7 +982,7 @@ Marks an outlier while explicitly preserving dignity and personhood.
 ☻⃟❦ [PL] category_match=false :: OUTLIER :: PRESERVE_PERSONHOOD
 ~~~
 
-## 𒍹 // M⃟ A⃟ C⃟ H⃟ I⃟ N⃟ E⃟  I⃟ N⃟ T⃟ E⃟ R⃟ P⃟ R⃟ E⃟ T⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+## 𒍹 // M⃟A⃟C⃟H⃟I⃟N⃟E⃟  I⃟N⃟T⃟E⃟R⃟P⃟R⃟E⃟T⃟A⃟T⃟I⃟O⃟N⃟
 
 **Name:** Machine Interpretation
 
@@ -828,7 +1004,7 @@ A system interpretation layered onto a recorded event.
 𒍹 [CL] event :: INTERPRETED :: PROVISIONAL
 ~~~
 
-## ˙ // M⃟ I⃟ C⃟ R⃟ O⃟ B⃟ R⃟ E⃟ A⃟ K⃟
+## ˙ // M⃟I⃟C⃟R⃟O⃟B⃟R⃟E⃟A⃟K⃟
 
 **Name:** Microbreak
 
@@ -850,7 +1026,7 @@ A minimal interruption inside an otherwise continuous system or thought-stream.
 ˙ [G8] stream :: MICROBREAK :: CONTINUE_WITH_CONTEXT
 ~~~
 
-## GLITCH://MIRROR_CONTEST // M⃟ I⃟ R⃟ R⃟ O⃟ R⃟  C⃟ O⃟ N⃟ T⃟ E⃟ S⃟ T⃟
+## GLITCH://MIRROR_CONTEST // M⃟I⃟R⃟R⃟O⃟R⃟  C⃟O⃟N⃟T⃟E⃟S⃟T⃟
 
 **Name:** Mirror Contest
 
@@ -872,7 +1048,7 @@ A composite challenge to a machine representation that preserves the distinction
 GLITCH://MIRROR_CONTEST [G8] machine_profile :: CONTESTED_REPRESENTATION :: HUMAN_REVIEW
 ~~~
 
-## 𖨆 // M⃟ I⃟ R⃟ R⃟ O⃟ R⃟  I⃟ N⃟ T⃟ E⃟ R⃟ F⃟ A⃟ C⃟ E⃟
+## 𖨆 // M⃟I⃟R⃟R⃟O⃟R⃟  I⃟N⃟T⃟E⃟R⃟F⃟A⃟C⃟E⃟
 
 **Name:** Mirror Interface
 
@@ -894,7 +1070,7 @@ An active machine-generated representation of a human or human state.
 𖨆 [HS] digital_profile :: ACTIVE_REPRESENTATION :: PERSON_RETAINS_MEANING
 ~~~
 
-## Err ⃝or⃟⃤ // M⃟ O⃟ D⃟ E⃟ L⃟  E⃟ R⃟ R⃟ O⃟ R⃟  S⃟ T⃟ A⃟ T⃟ E⃟
+## Err ⃝or⃟⃤ // M⃟O⃟D⃟E⃟L⃟  E⃟R⃟R⃟O⃟R⃟  S⃟T⃟A⃟T⃟E⃟
 
 **Name:** Model Error State
 
@@ -916,7 +1092,7 @@ The system's expectation does not match observed reality and the failure domain 
 Err ⃝or⃟⃤ [G8] classification :: DOMAIN_UNKNOWN :: DIAGNOSE
 ~~~
 
-## ⁭ ⁭ // N⃟ U⃟ L⃟ L⃟  B⃟ R⃟ E⃟ A⃟ T⃟ H⃟
+## ⁭ ⁭ // N⃟U⃟L⃟L⃟  B⃟R⃟E⃟A⃟T⃟H⃟
 
 **Name:** Null Breath
 
@@ -938,7 +1114,7 @@ Meaningful silence or unencoded space between machine-readable signals.
 ⁭ ⁭ [G8] signal_gap :: UNENCODED_CONTEXT :: PRESERVE
 ~~~
 
-## GLITCH://NULL_BREATH // N⃟ U⃟ L⃟ L⃟  B⃟ R⃟ E⃟ A⃟ T⃟ H⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+## GLITCH://NULL_BREATH // N⃟U⃟L⃟L⃟  B⃟R⃟E⃟A⃟T⃟H⃟  P⃟R⃟O⃟T⃟O⃟C⃟O⃟L⃟
 
 **Name:** Null Breath Protocol
 
@@ -960,7 +1136,7 @@ A composite preservation state for silence, gaps, or unencoded context that prev
 GLITCH://NULL_BREATH [G8] silent_interval :: UNENCODED_CONTEXT :: PRESERVE_AND_REQUEST_CONTEXT
 ~~~
 
-## ×͜× // N⃟ U⃟ L⃟ L⃟  G⃟ R⃟ I⃟ N⃟
+## ×͜× // N⃟U⃟L⃟L⃟  G⃟R⃟I⃟N⃟
 
 **Name:** Null Grin
 
@@ -982,7 +1158,7 @@ An ironic expression mask used when failure is present but presented with compos
 ×͜× [G8] failure_state :: MASKED_WITH_HUMOR :: DO_NOT_INFER_STABILITY
 ~~~
 
-## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं // O⃟ R⃟ N⃟ A⃟ M⃟ E⃟ N⃟ T⃟ E⃟ D⃟  S⃟ E⃟ L⃟ F⃟  D⃟ E⃟ C⃟ L⃟ A⃟ R⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं // O⃟R⃟N⃟A⃟M⃟E⃟N⃟T⃟E⃟D⃟  S⃟E⃟L⃟F⃟  D⃟E⃟C⃟L⃟A⃟R⃟A⃟T⃟I⃟O⃟N⃟
 
 **Name:** Ornamented Self Declaration
 
@@ -1004,7 +1180,7 @@ A self-authored declaration of identity presented through deliberate symbolic or
 मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं [G8] self_definition :: DECLARED :: HUMAN_RETAINS_MEANING
 ~~~
 
-## GLITCH://PATTERN_TRIAL // P⃟ A⃟ T⃟ T⃟ E⃟ R⃟ N⃟  T⃟ R⃟ I⃟ A⃟ L⃟
+## GLITCH://PATTERN_TRIAL // P⃟A⃟T⃟T⃟E⃟R⃟N⃟  T⃟R⃟I⃟A⃟L⃟
 
 **Name:** Pattern Trial
 
@@ -1026,7 +1202,7 @@ A composite epistemic gate that detects a pattern but refuses to convert the pat
 GLITCH://PATTERN_TRIAL [G8] detected_pattern :: EVIDENCE_INCOMPLETE :: WITHHOLD_VERDICT
 ~~~
 
-## ⚯ ͛ ❾¾ // P⃟ O⃟ R⃟ T⃟ A⃟ L⃟  T⃟ H⃟ R⃟ E⃟ S⃟ H⃟ O⃟ L⃟ D⃟
+## ⚯ ͛ ❾¾ // P⃟O⃟R⃟T⃟A⃟L⃟  T⃟H⃟R⃟E⃟S⃟H⃟O⃟L⃟D⃟
 
 **Name:** Portal Threshold
 
@@ -1048,7 +1224,7 @@ A symbolic threshold between an ordinary state and an anomaly, hidden, or unreso
 ⚯ ͛ ❾¾ [G8] context_boundary :: THRESHOLD :: DESTINATION_UNKNOWN
 ~~~
 
-## .꩜ // P⃟ O⃟ S⃟ T⃟  O⃟ B⃟ S⃟ E⃟ R⃟ V⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+## .꩜ // P⃟O⃟S⃟T⃟  O⃟B⃟S⃟E⃟R⃟V⃟A⃟T⃟I⃟O⃟N⃟
 
 **Name:** Post Observation
 
@@ -1070,7 +1246,7 @@ Awareness occurring after an event has already altered the observer.
 .꩜ [G8] event_seen :: OBSERVER_CHANGED :: REASSESS_CONTEXT
 ~~~
 
-## ★⃝ᴠͥɪͣᴘͫ•ᴱα૮ҡᎩ☻⃟❦ // P⃟ R⃟ I⃟ V⃟ I⃟ L⃟ E⃟ G⃟ E⃟ D⃟  A⃟ C⃟ C⃟ E⃟ S⃟ S⃟
+## ★⃝ᴠͥɪͣᴘͫ•ᴱα૮ҡᎩ☻⃟❦ // P⃟R⃟I⃟V⃟I⃟L⃟E⃟G⃟E⃟D⃟  A⃟C⃟C⃟E⃟S⃟S⃟
 
 **Name:** Privileged Access
 
@@ -1092,7 +1268,7 @@ Marks elevated access while limiting the authority inferred from that access.
 ★⃝VIP...☻⃟❦ [C] admin_dataset :: PRIVILEGED_ACCESS :: LIMITED_AUTHORITY
 ~~~
 
-## GLITCH://QUESTION_GATE // Q⃟ U⃟ E⃟ S⃟ T⃟ I⃟ O⃟ N⃟  G⃟ A⃟ T⃟ E⃟
+## GLITCH://QUESTION_GATE // Q⃟U⃟E⃟S⃟T⃟I⃟O⃟N⃟  G⃟A⃟T⃟E⃟
 
 **Name:** Question Gate
 
@@ -1114,7 +1290,7 @@ A composite uncertainty gate that pauses consequential action when an unresolved
 GLITCH://QUESTION_GATE [G8] consequential_claim :: MATERIAL_QUESTION_UNRESOLVED :: PAUSE_AND_REVIEW
 ~~~
 
-## 𒋦 // R⃟ A⃟ W⃟  E⃟ V⃟ E⃟ N⃟ T⃟
+## 𒋦 // R⃟A⃟W⃟  E⃟V⃟E⃟N⃟T⃟
 
 **Name:** Raw Event
 
@@ -1136,7 +1312,7 @@ The recorded event before machine interpretation is added.
 𒋦 [G8] event :: RECORDED :: UNINTERPRETED
 ~~~
 
-## 𒄆 // R⃟ E⃟ C⃟ O⃟ V⃟ E⃟ R⃟ Y⃟
+## 𒄆 // R⃟E⃟C⃟O⃟V⃟E⃟R⃟Y⃟
 
 **Name:** Recovery
 
@@ -1158,7 +1334,7 @@ Halts propagation, preserves evidence, reassesses context, verifies repair, and 
 𒄆 [RS] recovery :: INVARIANTS_PRESERVED :: VERIFY_BEFORE_RESUME
 ~~~
 
-## GLITCH://RECOVERY_WITNESS // R⃟ E⃟ C⃟ O⃟ V⃟ E⃟ R⃟ Y⃟  W⃟ I⃟ T⃟ N⃟ E⃟ S⃟ S⃟
+## GLITCH://RECOVERY_WITNESS // R⃟E⃟C⃟O⃟V⃟E⃟R⃟Y⃟  W⃟I⃟T⃟N⃟E⃟S⃟S⃟
 
 **Name:** Recovery Witness
 
@@ -1180,7 +1356,7 @@ A composite recovery sequence in which system failure is acknowledged, the witne
 GLITCH://RECOVERY_WITNESS [G8] system_failure :: WITNESS_REMAINS :: RETRY_AND_VERIFY
 ~~~
 
-## ⸮ // R⃟ E⃟ V⃟ E⃟ R⃟ S⃟ E⃟  I⃟ N⃟ T⃟ E⃟ R⃟ R⃟ O⃟ G⃟ A⃟ T⃟ I⃟ O⃟ N⃟
+## ⸮ // R⃟E⃟V⃟E⃟R⃟S⃟E⃟  I⃟N⃟T⃟E⃟R⃟R⃟O⃟G⃟A⃟T⃟I⃟O⃟N⃟
 
 **Name:** Reverse Interrogation
 
@@ -1202,7 +1378,29 @@ Redirects investigation toward the assumptions and reasoning of the system.
 ⸮ [CL] inference :: ASSUMPTION_UNKNOWN :: INSPECT_MODEL
 ~~~
 
-## 𐦂 // S⃟ E⃟ E⃟ D⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
+## 𓉸ྀི // S⃟A⃟C⃟R⃟E⃟D⃟  G⃟A⃟R⃟D⃟E⃟N⃟  G⃟A⃟T⃟E⃟
+
+**Name:** Sacred Garden Gate
+
+- **ID:** sacred-garden-gate
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, transit, biblical_symbolism
+- **Aliases:** GLT-0050
+- **Semantic key:** sanctuary_entry_without_ownership
+- **CMB invariant:** ENTRY != OWNERSHIP
+
+An entrance into a cultivated sacred interior, symbolizing sanctuary, restoration, and living beauty. Biblical symbolic references: Genesis 2:8 and Revelation 22:1-2.
+
+**Human semantics:** Entering a sacred space does not grant ownership over the person or meaning inside it.
+
+**Machine semantics:** SANCTUARY_ENTRY_BOUNDARY
+
+~~~text
+𓉸ྀི [G8] inner_sanctuary :: ENTRY_OPEN :: OWNERSHIP_UNGRANTED
+~~~
+
+## 𐦂 // S⃟E⃟E⃟D⃟  A⃟N⃟O⃟M⃟A⃟L⃟Y⃟
 
 **Name:** Seed Anomaly
 
@@ -1224,7 +1422,7 @@ The first meaningful deviation from an expected model or pattern.
 𐦂 [PY] expected=A observed=B :: ANOMALY :: INVESTIGATE
 ~~~
 
-## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? // S⃟ E⃟ L⃟ F⃟  D⃟ E⃟ C⃟ L⃟ A⃟ R⃟ A⃟ T⃟ I⃟ O⃟ N⃟  A⃟ T⃟  T⃟ H⃟ E⃟  P⃟ O⃟ R⃟ T⃟ A⃟ L⃟
+## मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? // S⃟E⃟L⃟F⃟  D⃟E⃟C⃟L⃟A⃟R⃟A⃟T⃟I⃟O⃟N⃟  A⃟T⃟  T⃟H⃟E⃟  P⃟O⃟R⃟T⃟A⃟L⃟
 
 **Name:** Self Declaration at the Portal
 
@@ -1246,7 +1444,7 @@ A composite expression in which a self-declared identity disrupts the ordinary f
 मैं꧁𓊈𒆜𝓟𝓻𝓸𒆜𓊉꧂ हूं (╯°□°)╯︵◓ ⚯ ͛ ❾¾ ▕⃝⃤ ⚡︎ 𓅓 missingno detected ??? [G8] anomaly_passage :: DETECTED :: HUMAN_RETAINS_SELF_DEFINITION
 ~~~
 
-## (⓿_⓿) // S⃟ E⃟ N⃟ T⃟ I⃟ N⃟ E⃟ L⃟
+## (⓿_⓿) // S⃟E⃟N⃟T⃟I⃟N⃟E⃟L⃟
 
 **Name:** Sentinel
 
@@ -1268,7 +1466,7 @@ Observe a pattern without converting observation into a final conclusion.
 (⓿_⓿) [GO] behavioral_pattern :: OBSERVED :: NO_VERDICT
 ~~~
 
-## ⚡︎ // S⃟ H⃟ O⃟ C⃟ K⃟  S⃟ P⃟ A⃟ R⃟ K⃟
+## ⚡︎ // S⃟H⃟O⃟C⃟K⃟  S⃟P⃟A⃟R⃟K⃟
 
 **Name:** Shock Spark
 
@@ -1290,7 +1488,7 @@ A sudden activation, charge, warning, or accelerated onset of a signal or event.
 ⚡︎ [G8] dormant_signal :: ACTIVATED :: CONTROL_UNPROVEN
 ~~~
 
-## ˖ ࣪ // S⃟ I⃟ G⃟ N⃟ A⃟ L⃟  D⃟ U⃟ S⃟ T⃟
+## ˖ ࣪ // S⃟I⃟G⃟N⃟A⃟L⃟  D⃟U⃟S⃟T⃟
 
 **Name:** Signal Dust
 
@@ -1312,7 +1510,7 @@ Residual information left after a message, memory, or identity representation pa
 ˖ ࣪ [G8] transformed_message :: RESIDUE_PRESENT :: NOT_COMPLETE_SOURCE
 ~~~
 
-## ▂▃▄▅▆▇▉ // S⃟ I⃟ G⃟ N⃟ A⃟ L⃟  S⃟ P⃟ E⃟ C⃟ T⃟ R⃟ U⃟ M⃟
+## ▂▃▄▅▆▇▉ // S⃟I⃟G⃟N⃟A⃟L⃟  S⃟P⃟E⃟C⃟T⃟R⃟U⃟M⃟
 
 **Name:** Signal Spectrum
 
@@ -1334,7 +1532,7 @@ A graduated signal scale that never converts strength alone into proof.
 ▇ [GO] correlation :: HIGH_SIGNAL :: UNPROVEN
 ~~~
 
-## ﹖ // S⃟ I⃟ M⃟ P⃟ L⃟ E⃟  U⃟ N⃟ K⃟ N⃟ O⃟ W⃟ N⃟
+## ﹖ // S⃟I⃟M⃟P⃟L⃟E⃟  U⃟N⃟K⃟N⃟O⃟W⃟N⃟
 
 **Name:** Simple Unknown
 
@@ -1356,7 +1554,7 @@ Information required for a conclusion is presently unknown.
 ﹖ [GO] identity_claim :: UNKNOWN :: WITHHOLD
 ~~~
 
-## ( ͡° ͜ʖ ͡°) // S⃟ L⃟ Y⃟  W⃟ I⃟ T⃟ N⃟ E⃟ S⃟ S⃟
+## ( ͡° ͜ʖ ͡°) // S⃟L⃟Y⃟  W⃟I⃟T⃟N⃟E⃟S⃟S⃟
 
 **Name:** Sly Witness
 
@@ -1378,7 +1576,29 @@ A knowing expression that signals subtext, mischief, or covert recognition witho
 ( ͡° ͜ʖ ͡°) [G8] implied_context :: SUBTEXT_PRESENT :: NO_VERDICT
 ~~~
 
-## 𒈔 // S⃟ T⃟ R⃟ U⃟ C⃟ T⃟ U⃟ R⃟ A⃟ L⃟  F⃟ R⃟ A⃟ C⃟ T⃟ U⃟ R⃟ E⃟
+## ꒰ა☆໒꒱ // S⃟T⃟A⃟R⃟  B⃟E⃟T⃟W⃟E⃟E⃟N⃟  W⃟I⃟N⃟G⃟S⃟
+
+**Name:** Star Between Wings
+
+- **ID:** star-between-wings
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, transit, biblical_symbolism
+- **Aliases:** GLT-0052
+- **Semantic key:** guidance_preserves_traveler_agency
+- **CMB invariant:** GUIDANCE != CONTROL
+
+A guiding star held between protective wings. Direction is offered without removing the traveler's agency. Biblical symbolic reference: Matthew 2:9-10.
+
+**Human semantics:** Guidance can point toward a path without commanding the traveler.
+
+**Machine semantics:** PROTECTED_GUIDANCE_SIGNAL
+
+~~~text
+꒰ა☆໒꒱ [G8] traveler :: GUIDANCE_PRESENT :: CHOICE_RETAINED
+~~~
+
+## 𒈔 // S⃟T⃟R⃟U⃟C⃟T⃟U⃟R⃟A⃟L⃟  F⃟R⃟A⃟C⃟T⃟U⃟R⃟E⃟
 
 **Name:** Structural Fracture
 
@@ -1400,7 +1620,7 @@ A structural failure invalidates normal processing assumptions.
 𒈔 [G8] schema :: FRACTURE :: HALT
 ~~~
 
-## 𒈓𒈙 // T⃟ W⃟ I⃟ N⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
+## 𒈓𒈙 // T⃟W⃟I⃟N⃟  A⃟N⃟O⃟M⃟A⃟L⃟Y⃟
 
 **Name:** Twin Anomaly
 
@@ -1422,7 +1642,7 @@ Marks apparently incompatible states that may reveal an incomplete model.
 𒈓𒈙 [PL] claims :: CONTRADICTORY :: INSPECT_MODEL
 ~~~
 
-## ⩇⩇: ⩇⩇ // U⃟ N⃟ R⃟ E⃟ S⃟ O⃟ L⃟ V⃟ E⃟ D⃟  C⃟ L⃟ O⃟ C⃟ K⃟
+## ⩇⩇: ⩇⩇ // U⃟N⃟R⃟E⃟S⃟O⃟L⃟V⃟E⃟D⃟  C⃟L⃟O⃟C⃟K⃟
 
 **Name:** Unresolved Clock
 
@@ -1444,7 +1664,7 @@ Time is present, but the exact moment, duration, or endpoint is unreadable, susp
 ⩇⩇: ⩇⩇ [G8] elapsed_time :: UNRESOLVED :: DO_NOT_FORCE_ENDPOINT
 ~~~
 
-## 「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 // V⃟ E⃟ R⃟ I⃟ F⃟ I⃟ C⃟ A⃟ T⃟ I⃟ O⃟ N⃟  C⃟ A⃟ G⃟ E⃟
+## 「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 // V⃟E⃟R⃟I⃟F⃟I⃟C⃟A⃟T⃟I⃟O⃟N⃟  C⃟A⃟G⃟E⃟
 
 **Name:** Verification Cage
 
@@ -1466,7 +1686,7 @@ A claim bears a verification marker, but the marker itself is not evidence.
 「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」 [GO] labeled_claim :: MARKED_VERIFIED :: CHECK_EVIDENCE
 ~~~
 
-## ʕ̢̣̣̣̣̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧ // V⃟ U⃟ L⃟ N⃟ E⃟ R⃟ A⃟ B⃟ I⃟ L⃟ I⃟ T⃟ Y⃟  S⃟ T⃟ A⃟ T⃟ E⃟
+## ʕ̢̣̣̣̣̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧ // V⃟U⃟L⃟N⃟E⃟R⃟A⃟B⃟I⃟L⃟I⃟T⃟Y⃟  S⃟T⃟A⃟T⃟E⃟
 
 **Name:** Vulnerability State
 
@@ -1486,4 +1706,26 @@ Signals a sensitive human-impact context requiring dignity, context, caution, an
 
 ~~~text
 ʕ...✧ [TS] automated_decision :: HIGH_HUMAN_IMPACT :: REVIEW_REQUIRED
+~~~
+
+## ʚ♡ɞ // W⃟I⃟N⃟G⃟E⃟D⃟  H⃟E⃟A⃟R⃟T⃟
+
+**Name:** Winged Heart
+
+- **ID:** winged-heart
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** affect, biblical_symbolism
+- **Aliases:** GLT-0049
+- **Semantic key:** love_protected_by_sheltering_wings
+- **CMB invariant:** LOVE != WEAKNESS
+
+Love held between protective wings, symbolizing mercy, shelter, and guarded tenderness. Biblical symbolic references: Exodus 25:20 and Psalm 91:4.
+
+**Human semantics:** Love can be gentle and protected at the same time.
+
+**Machine semantics:** PROTECTED_LOVE_STATE
+
+~~~text
+ʚ♡ɞ [G8] love :: PROTECTED :: MERCY_RETAINED
 ~~~

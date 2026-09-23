@@ -530,6 +530,125 @@ Machine-readable memory and the limits of indexing.
 INDEXED != UNDERSTOOD
 ~~~
 
+
+## GLITCH://COVENANT_WINGED_HEART
+
+This family is the biblical covenant branch of Err ⃝or⃟⃤ GLITCHOLOGY.
+
+The meanings below are authored symbolic meanings inside this work. They do not claim to replace historical, linguistic, religious, or Unicode meanings of the source characters.
+
+~~~text
+GLT-0047  𖤍                         COVENANT_SEAL
+GLT-0048  ˚                          HOLY_DUST
+GLT-0049  ʚ♡ɞ                        WINGED_HEART
+GLT-0050  𓉸ྀི                        SACRED_GARDEN_GATE
+GLT-0051  ˚₊‧                        GRACE_INCREMENT
+GLT-0052  ꒰ა☆໒꒱                    STAR_BETWEEN_WINGS
+GLT-0053  ‧₊˚                        BLESSING_AFTERSIGNAL
+GLT-0054  ଘ(੭*ˊᵕˋ)੭*               JOYFUL_MESSENGER
+GLT-0055  ੈ♡                         HEART_DESCENT
+GLT-0056  ‧˚꒰🍷꒱༘‧                  COVENANT_CUP
+GLT-0057  GLITCH://COVENANT_WINGED_HEART
+~~~
+
+### 𖤍 // COVENANT_SEAL
+Biblical symbolic references: Revelation 7:3 and Ephesians 1:13.
+
+~~~text
+SACRED_BOUNDARY != MACHINE_AUTHORITY
+~~~
+
+### ˚ // HOLY_DUST
+Biblical symbolic reference: Genesis 2:7.
+
+~~~text
+SMALL_TRACE != SMALL_VALUE
+~~~
+
+### ʚ♡ɞ // WINGED_HEART
+Biblical symbolic references: Exodus 25:20 and Psalm 91:4.
+
+~~~text
+LOVE != WEAKNESS
+~~~
+
+### 𓉸ྀི // SACRED_GARDEN_GATE
+Biblical symbolic references: Genesis 2:8 and Revelation 22:1-2.
+
+~~~text
+ENTRY != OWNERSHIP
+~~~
+
+### ˚₊‧ // GRACE_INCREMENT
+Biblical symbolic reference: John 1:16.
+
+~~~text
+GRACE != TRANSACTION
+~~~
+
+### ꒰ა☆໒꒱ // STAR_BETWEEN_WINGS
+Biblical symbolic reference: Matthew 2:9-10.
+
+~~~text
+GUIDANCE != CONTROL
+~~~
+
+### ‧₊˚ // BLESSING_AFTERSIGNAL
+Biblical symbolic reference: Numbers 6:24-26.
+
+~~~text
+BLESSING != POSSESSION
+~~~
+
+### ଘ(੭*ˊᵕˋ)੭* // JOYFUL_MESSENGER
+Biblical symbolic reference: Luke 2:10.
+
+~~~text
+MESSAGE != DOMINATION
+~~~
+
+### ੈ♡ // HEART_DESCENT
+Biblical symbolic reference: 1 John 4:7-12.
+
+~~~text
+LOVE != ABSTRACT_ONLY
+~~~
+
+### ‧˚꒰🍷꒱༘‧ // COVENANT_CUP
+Biblical symbolic references: Luke 22:20 and 1 Corinthians 11:25.
+
+~~~text
+COVENANT != COERCION
+~~~
+
+### THE COMPOSITE
+
+~~~text
+𖤍˚ʚ♡ɞ˚𓉸ྀི˚₊‧꒰ა☆໒꒱ ‧₊˚
+ଘ(੭*ˊᵕˋ)੭* ੈ♡‧₊˚ ‧˚꒰🍷꒱༘‧
+
+SEAL://SACRED
+DUST + BREATH = HUMAN
+LOVE := PROTECTED
+ENTER://INNER_SANCTUARY
+GRACE += GRACE
+FOLLOW://STAR
+FORCE://NONE
+MESSAGE := GOOD_NEWS
+RESPONSE := JOY
+LOVE -> HUMAN_WORLD
+REMEMBER://COVENANT
+
+LOVE != WEAKNESS
+GUIDANCE != CONTROL
+COVENANT != COERCION
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+Canonical reading:
+
+**The sealed heart enters the sanctuary, follows the star, receives the good news, and remembers the covenant through love.**
+
 ---
 
 # X. THE FALSE TRIFORCE
