@@ -23,7 +23,9 @@ on:
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
+      - "scripts/update_global_ai_watch.py"
       - "tests/test_site_integrity.py"
+      - "tests/test_global_ai_watch.py"
       - "mkdocs.yml"
       - "pyproject.toml"
       - "AGENTS.md"
@@ -35,6 +37,8 @@ on:
       - "robots.txt"
       - ".github/workflows/docs.yml"
       - ".github/workflows/pages.yml"
+  schedule:
+    - cron: "17,47 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -66,6 +70,9 @@ jobs:
 
       - name: Install documentation dependencies
         run: python -m pip install --upgrade pip ".[docs]"
+
+      - name: Refresh Global AI Watch snapshot
+        run: python scripts/update_global_ai_watch.py --allow-stale
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
@@ -109,6 +116,10 @@ jobs:
               f"{site}/DARK_FEDERALISM_VISUAL_SYSTEM/",
               f"{site}/DEVELOPERS/",
               f"{site}/RESEARCHERS/",
+              f"{site}/GLOBAL_AI_WATCH/",
+              f"{site}/machine/global-ai-watch.json",
+              f"{site}/machine/global-ai-watch-config.json",
+              f"{site}/schemas/cmb.global-ai-watch.v1.schema.json",
               f"{site}/library/catalog.json",
               f"{site}/machine/generated/manifest.json",
               f"{site}/llms.txt",

@@ -1,0 +1,223 @@
+{
+  "schema_version": "cmb.global-ai-watch-config.v1",
+  "source": {
+    "name": "GDELT Project DOC 2.0 API",
+    "endpoint": "https://api.gdeltproject.org/api/v2/doc/doc",
+    "documentation": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+    "archive_history_base": "https://web.archive.org/web/*/"
+  },
+  "refresh_target_minutes": 30,
+  "browser_cache_minutes": 10,
+  "timespan": "24h",
+  "max_records": 100,
+  "query": "(\"artificial intelligence\" OR \"generative AI\" OR \"AI agent\" OR deepfake OR \"machine learning\") (risk OR danger OR harm OR hallucination OR fraud OR scam OR surveillance OR military OR weapon OR autonomous OR bias OR privacy OR misinformation OR disinformation)",
+  "boundaries": [
+    {
+      "id": "PREDICT",
+      "label": "Predict",
+      "terms": [
+        "predict",
+        "predictive",
+        "prediction",
+        "profile",
+        "profiling",
+        "scoring",
+        "surveillance",
+        "facial recognition",
+        "identification",
+        "intelligence report",
+        "classify",
+        "classification",
+        "screening",
+        "targeting",
+        "risk score",
+        "algorithmic decision"
+      ],
+      "invariants": [
+        "PATTERN != PROOF",
+        "PROFILE != PERSON",
+        "PREDICTION != DESTINY"
+      ]
+    },
+    {
+      "id": "GENERATE",
+      "label": "Generate",
+      "terms": [
+        "deepfake",
+        "synthetic",
+        "generated",
+        "generative",
+        "hallucination",
+        "hallucinate",
+        "fake image",
+        "fake voice",
+        "misinformation",
+        "disinformation",
+        "impersonation",
+        "chatbot"
+      ],
+      "invariants": [
+        "MODEL != MIND",
+        "SIMULATION != SOURCE",
+        "GENERATED != VERIFIED"
+      ]
+    },
+    {
+      "id": "ACT",
+      "label": "Act",
+      "terms": [
+        "agent",
+        "agentic",
+        "autonomous",
+        "automation",
+        "cyberattack",
+        "cyber attack",
+        "malware",
+        "ransomware",
+        "transaction",
+        "payment",
+        "weapon",
+        "drone",
+        "military",
+        "intercept",
+        "execute",
+        "execution",
+        "tool use",
+        "robot",
+        "self-driving"
+      ],
+      "invariants": [
+        "RECOMMENDATION != AUTHORIZATION",
+        "CAPABILITY != AUTHORITY",
+        "HUMAN_AGENCY > MACHINE_AUTHORITY"
+      ]
+    }
+  ],
+  "sectors": [
+    {
+      "id": "military_security",
+      "label": "Military / Security",
+      "terms": [
+        "military",
+        "defense",
+        "intelligence",
+        "weapon",
+        "war",
+        "nuclear",
+        "drone",
+        "security"
+      ]
+    },
+    {
+      "id": "elections_information",
+      "label": "Elections / Information",
+      "terms": [
+        "election",
+        "candidate",
+        "politician",
+        "deepfake",
+        "misinformation",
+        "disinformation",
+        "propaganda"
+      ]
+    },
+    {
+      "id": "cybercrime",
+      "label": "Cybercrime",
+      "terms": [
+        "cyber",
+        "malware",
+        "ransomware",
+        "scam",
+        "fraud",
+        "phishing",
+        "hack"
+      ]
+    },
+    {
+      "id": "finance",
+      "label": "Finance",
+      "terms": [
+        "bank",
+        "payment",
+        "transaction",
+        "financial",
+        "credit",
+        "loan",
+        "insurance",
+        "trading"
+      ]
+    },
+    {
+      "id": "justice_policing",
+      "label": "Justice / Policing",
+      "terms": [
+        "court",
+        "judge",
+        "lawyer",
+        "police",
+        "policing",
+        "law enforcement",
+        "facial recognition",
+        "prison"
+      ]
+    },
+    {
+      "id": "children_wellbeing",
+      "label": "Children / Wellbeing",
+      "terms": [
+        "child",
+        "children",
+        "teen",
+        "youth",
+        "school",
+        "mental health"
+      ]
+    },
+    {
+      "id": "workplace_civil_rights",
+      "label": "Workplace / Civil Rights",
+      "terms": [
+        "hiring",
+        "employment",
+        "workplace",
+        "bias",
+        "discrimination",
+        "civil rights",
+        "layoff"
+      ]
+    },
+    {
+      "id": "privacy_surveillance",
+      "label": "Privacy / Surveillance",
+      "terms": [
+        "privacy",
+        "surveillance",
+        "biometric",
+        "facial recognition",
+        "tracking",
+        "location data"
+      ]
+    },
+    {
+      "id": "healthcare",
+      "label": "Healthcare",
+      "terms": [
+        "health",
+        "medical",
+        "hospital",
+        "diagnosis",
+        "patient",
+        "clinical"
+      ]
+    }
+  ],
+  "interpretation_boundaries": [
+    "GDELT_DISCOVERY != INDEPENDENT_CONFIRMATION",
+    "HEADLINE_SIMILARITY != FACT_CORROBORATION",
+    "NEWS_REPORT != PROOF_OF_CMB",
+    "CMB_TAG != SOURCE_ENDORSEMENT",
+    "PATTERN != PROOF",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}

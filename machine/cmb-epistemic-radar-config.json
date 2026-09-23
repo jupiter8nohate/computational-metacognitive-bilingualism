@@ -1,0 +1,297 @@
+{
+  "schema_version": "cmb.epistemic-radar-config.v1",
+  "name": "CMB Epistemic Radar",
+  "subtitle": "Pattern, Discrepancy & Emerging Technology Observatory",
+  "baseline_timespan": "7d",
+  "current_timespan": "24h",
+  "max_records": 250,
+  "technology_signals": [
+    {
+      "id": "ai_agents",
+      "label": "AI agents / agentic systems",
+      "terms": [
+        "ai agent",
+        "agentic",
+        "autonomous agent",
+        "computer use",
+        "tool use"
+      ]
+    },
+    {
+      "id": "reasoning_models",
+      "label": "Reasoning models",
+      "terms": [
+        "reasoning model",
+        "reasoning ai",
+        "chain of thought",
+        "test-time compute",
+        "inference-time compute"
+      ]
+    },
+    {
+      "id": "multimodal",
+      "label": "Multimodal AI",
+      "terms": [
+        "multimodal",
+        "vision-language",
+        "vision language",
+        "audio model",
+        "video model"
+      ]
+    },
+    {
+      "id": "world_models",
+      "label": "World models / simulation",
+      "terms": [
+        "world model",
+        "world-model",
+        "simulation model"
+      ]
+    },
+    {
+      "id": "embodied_ai",
+      "label": "Embodied AI / robotics",
+      "terms": [
+        "humanoid",
+        "robot",
+        "robotics",
+        "embodied ai",
+        "physical ai"
+      ]
+    },
+    {
+      "id": "synthetic_media",
+      "label": "Synthetic media / deepfakes",
+      "terms": [
+        "deepfake",
+        "synthetic media",
+        "voice clone",
+        "voice cloning",
+        "ai-generated image",
+        "ai generated image"
+      ]
+    },
+    {
+      "id": "ai_cyber",
+      "label": "AI-enabled cyber operations",
+      "terms": [
+        "ai cyber",
+        "ai-powered cyber",
+        "ai powered cyber",
+        "malware",
+        "phishing",
+        "ransomware",
+        "vulnerability"
+      ]
+    },
+    {
+      "id": "ai_chips",
+      "label": "AI chips / compute infrastructure",
+      "terms": [
+        "ai chip",
+        "gpu",
+        "accelerator",
+        "data center",
+        "datacenter",
+        "inference chip"
+      ]
+    },
+    {
+      "id": "ai_science",
+      "label": "AI for science / medicine",
+      "terms": [
+        "drug discovery",
+        "protein",
+        "scientific ai",
+        "medical ai",
+        "diagnostic ai"
+      ]
+    },
+    {
+      "id": "model_context_protocol",
+      "label": "Model Context Protocol / tool interoperability",
+      "terms": [
+        "model context protocol",
+        "mcp server",
+        "mcp tool"
+      ]
+    },
+    {
+      "id": "agent_to_agent",
+      "label": "Agent-to-agent interoperability",
+      "terms": [
+        "agent2agent",
+        "agent-to-agent",
+        "a2a protocol"
+      ]
+    },
+    {
+      "id": "biological_computing",
+      "label": "Biological / organoid computing",
+      "terms": [
+        "organoid intelligence",
+        "brain organoid",
+        "biological computing",
+        "living neuron",
+        "biocomputing"
+      ]
+    }
+  ],
+  "contradiction_axes": [
+    {
+      "id": "launch_status",
+      "left": [
+        "launch",
+        "launched",
+        "release",
+        "released",
+        "deploy",
+        "deployed"
+      ],
+      "right": [
+        "delay",
+        "delayed",
+        "cancel",
+        "cancelled",
+        "canceled",
+        "halt",
+        "halted",
+        "suspend",
+        "suspended"
+      ]
+    },
+    {
+      "id": "permission_status",
+      "left": [
+        "approve",
+        "approved",
+        "allow",
+        "allowed",
+        "authorize",
+        "authorized"
+      ],
+      "right": [
+        "ban",
+        "banned",
+        "block",
+        "blocked",
+        "prohibit",
+        "prohibited",
+        "restrict",
+        "restricted"
+      ]
+    },
+    {
+      "id": "safety_status",
+      "left": [
+        "safe",
+        "safer",
+        "secure",
+        "secured"
+      ],
+      "right": [
+        "unsafe",
+        "danger",
+        "dangerous",
+        "risk",
+        "risky",
+        "harm",
+        "harmful"
+      ]
+    },
+    {
+      "id": "accuracy_status",
+      "left": [
+        "accurate",
+        "verified",
+        "correct"
+      ],
+      "right": [
+        "inaccurate",
+        "false",
+        "faulty",
+        "error",
+        "errors",
+        "hallucination",
+        "hallucinated"
+      ]
+    },
+    {
+      "id": "trend_direction",
+      "left": [
+        "increase",
+        "increased",
+        "rising",
+        "rise",
+        "surge",
+        "surged",
+        "growth"
+      ],
+      "right": [
+        "decrease",
+        "decreased",
+        "fall",
+        "fell",
+        "decline",
+        "declined",
+        "drop",
+        "dropped"
+      ]
+    }
+  ],
+  "high_consequence_terms": [
+    "nuclear",
+    "weapon",
+    "weapons",
+    "military",
+    "war",
+    "missile",
+    "drone",
+    "critical infrastructure",
+    "hospital",
+    "medical",
+    "diagnosis",
+    "police",
+    "law enforcement",
+    "court",
+    "judge",
+    "prison",
+    "election",
+    "voting",
+    "bank",
+    "payment",
+    "transaction",
+    "child",
+    "children",
+    "school"
+  ],
+  "lessons": {
+    "PREDICT": {
+      "question": "What evidence produced this prediction, classification, profile, or score?",
+      "check": "Look for source data, uncertainty, false-positive rates, appeal rights, and whether a human independently verified the inference.",
+      "invariant": "PATTERN != PROOF"
+    },
+    "GENERATE": {
+      "question": "Can the generated text, image, audio, or claim be traced back to an authentic source?",
+      "check": "Check provenance, direct quotations, original media, disclosure, and whether synthetic output is being mistaken for evidence.",
+      "invariant": "SIMULATION != SOURCE"
+    },
+    "ACT": {
+      "question": "Who authorized the machine-influenced action, and can a human stop or reverse it?",
+      "check": "Look for scoped permission, audit logs, human override, reversibility, and consequences if the system is wrong.",
+      "invariant": "CAPABILITY != AUTHORITY"
+    }
+  },
+  "epistemic_boundaries": [
+    "PATTERN != PROOF",
+    "PROFILE != PERSON",
+    "MODEL != MIND",
+    "PREDICTION != DESTINY",
+    "HEADLINE_SIMILARITY != FACT_CORROBORATION",
+    "DISCREPANCY_FLAG != CONTRADICTION_PROOF",
+    "EMERGING_TERM != NEW_TECHNOLOGY_PROOF",
+    "NEWS_REPORT != VERIFIED_FACT",
+    "CMB_INTERPRETATION != SOURCE_ENDORSEMENT",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ]
+}

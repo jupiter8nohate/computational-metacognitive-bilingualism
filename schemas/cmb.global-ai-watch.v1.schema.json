@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.global-ai-watch.v1.schema.json",
+  "title": "CMB Global AI Watch v1",
+  "description": "Machine-readable snapshot of public news links discovered through GDELT and classified through explicit CMB boundary rules.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "source",
+    "query",
+    "timespan",
+    "article_count",
+    "domain_count",
+    "country_count",
+    "interpretation_boundaries",
+    "articles"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cmb.global-ai-watch.v1"
+    },
+    "generated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "endpoint",
+        "documentation"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "endpoint": {
+          "type": "string",
+          "format": "uri"
+        },
+        "documentation": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "query": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timespan": {
+      "type": "string",
+      "minLength": 1
+    },
+    "article_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "domain_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "country_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "interpretation_boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "articles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "url",
+          "domain",
+          "seen_at",
+          "language",
+          "source_country",
+          "boundary_ids",
+          "sector_ids",
+          "invariants",
+          "cluster_id",
+          "cluster_source_count",
+          "wayback_history_url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{16}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "domain": {
+            "type": "string",
+            "minLength": 1
+          },
+          "seen_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "language": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_country": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "boundary_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "PREDICT",
+                "GENERATE",
+                "ACT"
+              ]
+            }
+          },
+          "sector_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "invariants": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "cluster_id": {
+            "type": "string",
+            "pattern": "^cluster-[0-9]{3,}$"
+          },
+          "cluster_source_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "wayback_history_url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}

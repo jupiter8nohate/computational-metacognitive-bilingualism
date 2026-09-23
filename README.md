@@ -271,6 +271,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Conceptual front door:** [CMB: Three Dimensions of Distinction](docs/CMB_DISTINCTION.md)
 - **Research position:** [CMB Research Position](docs/CMB_RESEARCH_POSITION.md)
 - **Research case studies:** [CMB Case Studies](docs/CASE_STUDIES.md)
+- **Live evidence monitoring:** [CMB Global AI Watch](docs/GLOBAL_AI_WATCH.md) - GDELT-powered current-news discovery mapped to PREDICT / GENERATE / ACT with direct publisher and Wayback links.
 - **Creator provenance:** [CMB Creator Provenance Protocol](docs/CREATOR_PROVENANCE.md)
 - **Research backbone:** [CMB Cognitive Sovereignty Dissertation](docs/dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md)
 - **Formal semantics:** [Chapter 31 - Formal CMB Semantics](docs/dissertation/31_FORMAL_SEMANTICS.md)
