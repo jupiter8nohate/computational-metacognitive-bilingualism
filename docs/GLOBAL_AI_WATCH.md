@@ -54,11 +54,22 @@ The deployment scans a bounded GDELT metadata sample, applies CMB classification
 
 <!-- CMB_GLOBAL_AI_WATCH_GENERATED_START -->
 
-<div id="cmb-watch-status" class="cmb-watch-status">SEED LINK LEDGER // awaiting scheduled metadata refresh</div>
+<div id="cmb-watch-status" class="cmb-watch-status">CURATED TEST LEDGER // 10 verified outbound links // no article bodies stored</div>
 
 <ul class="cmb-news-links">
-<li>No links published yet.</li>
+<li><a href="https://keyt.com/politics/cnn-us-politics/2026/09/18/exclusive-us-military-had-close-call-after-using-ai-for-false-intelligence-report-sources-say/" rel="noopener noreferrer">Exclusive: US military had close call after using AI for false intelligence report, sources say</a> <small>CNN via KEYT News Channel 3-12 · 2026-09-18 · PREDICT + ACT</small></li>
+<li><a href="https://www.reuters.com/legal/litigation/banks-warn-ai-shopping-bots-raise-scam-fraud-data-privacy-risks-2026-09-22/" rel="noopener noreferrer">Banks warn AI shopping bots raise scam, fraud and data-privacy risks</a> <small>Reuters · 2026-09-22 · ACT</small></li>
+<li><a href="https://apnews.com/article/089e75b95bc935af092da7b79d92706d" rel="noopener noreferrer">OpenAI flags concerning new AI behavior and vows to track it more closely</a> <small>Associated Press · 2026-09-17 · ACT + GENERATE</small></li>
+<li><a href="https://www.reuters.com/legal/litigation/ex-google-safety-chief-warns-ai-could-harm-children-more-than-social-media-did-2026-09-22/" rel="noopener noreferrer">Ex-Google safety chief warns AI could harm children more than social media did</a> <small>Reuters · 2026-09-22 · GENERATE</small></li>
+<li><a href="https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa" rel="noopener noreferrer">INTERPOL report finds AI linked to more than half of cybercrime in Africa</a> <small>INTERPOL · 2026-08-03 · GENERATE + ACT</small></li>
+<li><a href="https://www.abc.net.au/news/2026-09-09/foreign-ai-network-deepfaking-australian-politicians/107129044" rel="noopener noreferrer">Foreign 'AI slopaganda' network targets Australian politicians with deepfakes</a> <small>ABC News Australia · 2026-09-09 · GENERATE</small></li>
+<li><a href="https://www.reuters.com/legal/government/us-judiciary-developing-new-guidance-courts-use-ai-2026-09-17/" rel="noopener noreferrer">US judiciary developing new guidance on courts' use of AI</a> <small>Reuters · 2026-09-17 · GENERATE + ACT</small></li>
+<li><a href="https://www.reuters.com/business/media-telecom/smart-glasses-ai-pins-privacy-fears-challenge-techs-next-big-bet-2026-09-22/" rel="noopener noreferrer">From smart glasses to AI pins, privacy fears challenge tech's next big bet</a> <small>Reuters · 2026-09-22 · PREDICT</small></li>
+<li><a href="https://www.reuters.com/legal/litigation/chinas-huawei-forecasts-billions-agents-will-dominate-ai-traffic-by-2035-2026-09-16/" rel="noopener noreferrer">China's Huawei forecasts billions of agents will dominate AI traffic by 2035</a> <small>Reuters · 2026-09-16 · ACT</small></li>
+<li><a href="https://www.interpol.int/en/News-and-Events/News/2026/Counter-terrorism-operation-leverages-artificial-intelligence-to-identify-126-terrorism-suspects" rel="noopener noreferrer">Counter-terrorism operation leverages artificial intelligence to identify 126 terrorism suspects</a> <small>INTERPOL · 2026-09-18 · PREDICT + ACT</small></li>
 </ul>
+
+<p class="cmb-watch-method-note"><strong>Seed rule:</strong> these ten links exercise distinct CMB boundaries. Scheduled refreshes may rotate the public ledger, but the publication budget remains ten links.</p>
 
 <!-- CMB_GLOBAL_AI_WATCH_GENERATED_END -->
 
