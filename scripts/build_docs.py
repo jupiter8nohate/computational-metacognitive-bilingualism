@@ -44,6 +44,7 @@ REQUIRED_PUBLIC_PATHS = (
     "schemas/cmb.epistemic-radar.v1.schema.json",
     "machine/global-ai-watch-config.json",
     "machine/global-ai-watch.json",
+    "machine/global-ai-watch-seed.json",
     "machine/cmb-epistemic-radar-config.json",
     "machine/cmb-epistemic-radar.json",
     "machine/index.json",
