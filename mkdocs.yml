@@ -87,6 +87,8 @@ nav:
       - Ethics and agency: research/cmb-organoid-silicon/07-ethics-and-agency.md
       - Limitations: research/cmb-organoid-silicon/08-limitations.md
       - Reproduce: research/cmb-organoid-silicon/09-reproduction.md
+  - CMB Epistemic Radar: CMB_EPISTEMIC_RADAR.md
+  - Global AI Watch: GLOBAL_AI_WATCH.md
   - Case studies: CASE_STUDIES.md
   - CMB distinction: CMB_DISTINCTION.md
   - CMB research position: CMB_RESEARCH_POSITION.md
@@ -110,9 +112,11 @@ extra_css:
   - stylesheets/lived-experience.css
   - stylesheets/shadow-source.css
   - stylesheets/phantom-tokenbooth.css
+  - stylesheets/cmb-epistemic-radar.css
   - stylesheets/global-ai-watch.css
 
 extra_javascript:
   - javascripts/cmb-analytics-config.js
   - javascripts/cmb-analytics.js
+  - javascripts/cmb-epistemic-radar.js
   - javascripts/global-ai-watch.js
