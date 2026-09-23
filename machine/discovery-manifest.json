@@ -49,7 +49,10 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/2084-reality-mirror.jsonld",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-config.json",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.global-ai-watch.v1.schema.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.global-ai-watch.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/cmb-epistemic-radar.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/cmb-epistemic-radar-config.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.epistemic-radar.v1.schema.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
@@ -74,7 +77,8 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/generated/CMB_SYSTEM_STATUS/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DEATH_NOTE_2084/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/2084_REALITY_MIRROR_PROXY_GRAVITY/",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_EPISTEMIC_RADAR/"
   ],
   "concept_pages": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/",
@@ -123,13 +127,17 @@
     "GDELT_DISCOVERY != INDEPENDENT_CONFIRMATION",
     "HEADLINE_SIMILARITY != FACT_CORROBORATION",
     "CMB_TAG != SOURCE_ENDORSEMENT",
-    "NEWS_REPORT != VERIFIED_FACT"
+    "NEWS_REPORT != VERIFIED_FACT",
+    "DISCREPANCY_FLAG != CONTRADICTION_PROOF",
+    "EMERGING_TERM != NEW_TECHNOLOGY_PROOF",
+    "CMB_INTERPRETATION != SOURCE_ENDORSEMENT"
   ],
   "research_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CASE_STUDIES/",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.case-study.v1.schema.json",
     "https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.md",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/CMB_EPISTEMIC_RADAR/"
   ]
 }
