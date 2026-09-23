@@ -41,60 +41,24 @@ It is **not** a replacement for GDELT, Dataminr, Meltwater, Nexis, the Internet 
 | Capability | CMB implementation | Boundary |
 | --- | --- | --- |
 | Global discovery | GDELT DOC 2.0 article metadata | <code>DISCOVERY != CONFIRMATION</code> |
-| Rapid refresh | Browser live query plus scheduled Pages refresh | <code>FRESH != VERIFIED</code> |
+| Bounded refresh | Scheduled metadata scan; static outbound links only | <code>FRESH != VERIFIED</code> |
 | Story grouping | Deterministic headline-similarity clusters | <code>HEADLINE_SIMILARITY != FACT_CORROBORATION</code> |
-| Monitoring filters | Boundary, sector, keyword, source, and country filters | <code>FILTER != FINDING</code> |
-| Archive lookup | Direct Wayback Machine history link for every source URL | <code>ARCHIVED != TRUE</code> |
+| Publication budget | At most a small, diverse set of links per build | <code>MORE_DATA != MORE_TRUTH</code> |
 | CMB mapping | Explicit keyword rules map stories to PREDICT / GENERATE / ACT | <code>CMB_TAG != SOURCE_ENDORSEMENT</code> |
 | Machine access | Public JSON snapshot and JSON Schema | <code>STRUCTURED != PROVEN</code> |
 | Source preservation | Original publisher URL is always retained | <code>SUMMARY != SOURCE</code> |
 
-## Live evidence surface
+## Current link ledger
 
-The static cards below are generated during deployment. When JavaScript is available, the browser also attempts a newer GDELT query and replaces the cards with the latest classified results. The browser cache is intentionally short.
+The deployment scans a bounded GDELT metadata sample, applies CMB classification and deduplication in memory, then publishes only a small set of outbound links. The browser does not fetch GDELT directly and the repository does not store article bodies, excerpts, images, or mirrored copies.
 
 <!-- CMB_GLOBAL_AI_WATCH_GENERATED_START -->
 
-<div id="cmb-watch-status" class="cmb-watch-status">SEED SNAPSHOT // waiting for first GDELT refresh</div>
+<div id="cmb-watch-status" class="cmb-watch-status">SEED LINK LEDGER // awaiting scheduled metadata refresh</div>
 
-<div class="cmb-watch-metrics">
-<div><strong>0</strong><span>classified stories</span></div>
-<div><strong>0</strong><span>source domains</span></div>
-<div><strong>0</strong><span>source countries</span></div>
-<div><strong>0</strong><span>headline clusters</span></div>
-</div>
-
-<div class="cmb-watch-controls">
-<label>Search <input id="cmb-watch-search" type="search" placeholder="keyword, outlet, country"></label>
-<label>Boundary
-<select id="cmb-watch-boundary">
-<option value="">All</option>
-<option value="PREDICT">Predict</option>
-<option value="GENERATE">Generate</option>
-<option value="ACT">Act</option>
-</select>
-</label>
-<label>Sector
-<select id="cmb-watch-sector">
-<option value="">All</option>
-<option value="military_security">Military / Security</option>
-<option value="elections_information">Elections / Information</option>
-<option value="cybercrime">Cybercrime</option>
-<option value="finance">Finance</option>
-<option value="justice_policing">Justice / Policing</option>
-<option value="children_wellbeing">Children / Wellbeing</option>
-<option value="workplace_civil_rights">Workplace / Civil Rights</option>
-<option value="privacy_surveillance">Privacy / Surveillance</option>
-<option value="healthcare">Healthcare</option>
-<option value="general">General</option>
-</select>
-</label>
-<button id="cmb-watch-refresh" type="button">Refresh from GDELT</button>
-</div>
-
-<div id="cmb-news-grid" class="cmb-news-grid">
-<div class="cmb-watch-empty">The deployment collector or browser live query will populate current stories from GDELT.</div>
-</div>
+<ul class="cmb-news-links">
+<li>No links published yet.</li>
+</ul>
 
 <!-- CMB_GLOBAL_AI_WATCH_GENERATED_END -->
 
@@ -181,7 +145,7 @@ DISCOVER
 
 ## Refresh model
 
-The canonical GitHub Pages deployment attempts a fresh GDELT snapshot on every documentation deployment and on a scheduled cadence. GitHub Actions scheduling is best-effort, so the target interval is not a real-time guarantee. In the browser, a user can request a fresh GDELT view without waiting for the next deployment.
+The canonical GitHub Pages deployment scans a bounded metadata sample during documentation deployment and on an hourly schedule. GitHub Actions scheduling is best-effort, so the interval is not a real-time guarantee. Only the selected outbound links are published; the larger analysis sample is discarded after the build.
 
 The underlying GDELT datasets update on their own cadence. CMB Global AI Watch does not control GDELT availability, indexing coverage, source selection, translation, or upstream corrections.
 
