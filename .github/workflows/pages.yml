@@ -25,7 +25,6 @@ on:
       - "scripts/build_docs.py"
       - "scripts/update_global_ai_watch.py"
       - "scripts/build_epistemic_radar.py"
-      - "scripts/update_global_ai_watch.py"
       - "tests/test_site_integrity.py"
       - "tests/test_global_ai_watch.py"
       - "mkdocs.yml"
@@ -41,8 +40,6 @@ on:
       - ".github/workflows/pages.yml"
   schedule:
     - cron: "17,47 * * * *"
-  schedule:
-    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -77,10 +74,6 @@ jobs:
 
       - name: Refresh Global AI Watch snapshot
         run: python scripts/update_global_ai_watch.py --allow-stale
-
-      - name: Refresh Global AI Watch
-        continue-on-error: true
-        run: python scripts/update_global_ai_watch.py
 
       - name: Build CMB Epistemic Radar
         continue-on-error: true
@@ -128,10 +121,6 @@ jobs:
               f"{site}/DARK_FEDERALISM_VISUAL_SYSTEM/",
               f"{site}/DEVELOPERS/",
               f"{site}/RESEARCHERS/",
-              f"{site}/GLOBAL_AI_WATCH/",
-              f"{site}/machine/global-ai-watch.json",
-              f"{site}/machine/global-ai-watch-config.json",
-              f"{site}/schemas/cmb.global-ai-watch.v1.schema.json",
               f"{site}/library/catalog.json",
               f"{site}/machine/generated/manifest.json",
               f"{site}/llms.txt",
