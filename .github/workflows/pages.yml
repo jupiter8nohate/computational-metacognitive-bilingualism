@@ -27,6 +27,7 @@ on:
       - "scripts/build_epistemic_radar.py"
       - "tests/test_site_integrity.py"
       - "tests/test_global_ai_watch.py"
+      - "tests/test_epistemic_radar.py"
       - "mkdocs.yml"
       - "pyproject.toml"
       - "AGENTS.md"
