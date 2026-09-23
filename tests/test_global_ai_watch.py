@@ -147,3 +147,63 @@ def test_generated_section_replacement_preserves_authored_text() -> None:
     assert "new snapshot" in updated
     assert "old" not in updated
     assert updated.rstrip().endswith("After")
+
+
+
+def test_published_link_ledger_is_bounded_and_source_diverse() -> None:
+    select_published_links = WATCH["select_published_links"]
+    config = dict(CONFIG)
+    config["published_link_limit"] = 3
+    config["published_links_per_domain"] = 1
+
+    articles = []
+    for index, domain in enumerate(
+        ["one.example", "one.example", "two.example", "three.example", "four.example"]
+    ):
+        articles.append(
+            {
+                "id": f"{index:016x}",
+                "title": f"AI autonomous system report {index}",
+                "url": f"https://{domain}/story-{index}",
+                "domain": domain,
+                "seen_at": f"2026-09-23T01:0{index}:00Z",
+                "language": "English",
+                "source_country": "United States",
+                "boundary_ids": ["ACT"],
+                "sector_ids": ["general"],
+                "invariants": ["CAPABILITY != AUTHORITY"],
+                "cluster_id": f"cluster-{index:03d}",
+                "cluster_source_count": 1,
+                "wayback_history_url": f"https://web.archive.org/web/*/https://{domain}/story-{index}",
+            }
+        )
+
+    published = select_published_links(articles, config)
+
+    assert len(published) == 3
+    assert len({item["domain"] for item in published}) == 3
+
+
+def test_link_ledger_renders_links_without_article_body_or_archive_copy() -> None:
+    render_cards = WATCH["render_cards"]
+    article = {
+        "id": "a" * 16,
+        "title": "AI safety report",
+        "url": "https://example.com/story",
+        "domain": "example.com",
+        "seen_at": "2026-09-23T01:02:03Z",
+        "language": "English",
+        "source_country": "United States",
+        "boundary_ids": ["ACT"],
+        "sector_ids": ["general"],
+        "invariants": ["CAPABILITY != AUTHORITY"],
+        "cluster_id": "cluster-001",
+        "cluster_source_count": 1,
+        "wayback_history_url": "https://web.archive.org/web/*/https://example.com/story",
+    }
+
+    rendered = render_cards([article], CONFIG)
+
+    assert 'href="https://example.com/story"' in rendered
+    assert "Wayback" not in rendered
+    assert "<article" not in rendered
