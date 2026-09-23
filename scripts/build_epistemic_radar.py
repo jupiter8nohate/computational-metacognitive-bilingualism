@@ -350,6 +350,10 @@ def build_snapshot(
     radar_config: dict[str, Any],
 ) -> dict[str, Any]:
     clusters = build_clusters(current, radar_config)
+    published_cluster_limit = max(
+        1, int(radar_config.get("published_cluster_limit", 8))
+    )
+    published_clusters = clusters[:published_cluster_limit]
     signals = technology_signals(current, baseline, radar_config)
     observed_signals = [
         item for item in signals if item["status"] != "not_observed"
@@ -380,7 +384,7 @@ def build_snapshot(
         "boundary_counts": boundary_counts(current),
         "technology_signals": signals,
         "emerging_vocabulary": emerging_vocabulary(current, baseline),
-        "clusters": clusters,
+        "clusters": published_clusters,
     }
 
 
