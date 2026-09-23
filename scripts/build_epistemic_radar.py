@@ -643,6 +643,16 @@ def main() -> int:
                 raise
             current = load_fallback_articles(args.fallback_snapshot)
             baseline = list(current)
+            radar_config = dict(radar_config)
+            radar_config["current_timespan"] = "checked-in-snapshot"
+            radar_config["baseline_timespan"] = "checked-in-snapshot"
+            watch_config = deepcopy(watch_config)
+            watch_config["source"] = dict(watch_config["source"])
+            watch_config["source"]["name"] = "Checked-in Global AI Watch snapshot"
+            watch_config["source"]["endpoint"] = (
+                "https://jupiter8nohate.github.io/"
+                "computational-metacognitive-bilingualism/machine/global-ai-watch.json"
+            )
             print(
                 "Epistemic Radar live refresh unavailable; using checked-in "
                 f"Global AI Watch snapshot: {exc}",
