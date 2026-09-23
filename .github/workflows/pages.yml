@@ -24,6 +24,8 @@ on:
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
       - "scripts/update_global_ai_watch.py"
+      - "scripts/build_epistemic_radar.py"
+      - "scripts/update_global_ai_watch.py"
       - "tests/test_site_integrity.py"
       - "tests/test_global_ai_watch.py"
       - "mkdocs.yml"
@@ -39,6 +41,8 @@ on:
       - ".github/workflows/pages.yml"
   schedule:
     - cron: "17,47 * * * *"
+  schedule:
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -73,6 +77,14 @@ jobs:
 
       - name: Refresh Global AI Watch snapshot
         run: python scripts/update_global_ai_watch.py --allow-stale
+
+      - name: Refresh Global AI Watch
+        continue-on-error: true
+        run: python scripts/update_global_ai_watch.py
+
+      - name: Build CMB Epistemic Radar
+        continue-on-error: true
+        run: python scripts/build_epistemic_radar.py
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
@@ -134,6 +146,14 @@ jobs:
               f"{site}/examples/polyglot/jupiter_glitchology_runtime/mirror.py",
               f"{site}/library/cmb-conversation-atlas.v1.json",
               f"{site}/schemas/cmb.conversation-atlas.v1.schema.json",
+              f"{site}/CMB_EPISTEMIC_RADAR/",
+              f"{site}/GLOBAL_AI_WATCH/",
+              f"{site}/machine/cmb-epistemic-radar.json",
+              f"{site}/machine/global-ai-watch.json",
+              f"{site}/machine/cmb-epistemic-radar-config.json",
+              f"{site}/machine/global-ai-watch-config.json",
+              f"{site}/schemas/cmb.epistemic-radar.v1.schema.json",
+              f"{site}/schemas/cmb.global-ai-watch.v1.schema.json",
               f"{site}/CASE_STUDIES/",
               f"{site}/research/case-studies/2026-09-04_GOOGLE_GENERATIVE_MISCLASSIFICATION.json",
               f"{site}/concepts/",
