@@ -124,7 +124,9 @@
       "GENERATE",
       "ACT"
     ],
-    "interpretation_boundary": "GDELT_DISCOVERY != INDEPENDENT_CONFIRMATION"
+    "interpretation_boundary": "GDELT_DISCOVERY != INDEPENDENT_CONFIRMATION",
+    "seed": "machine/global-ai-watch-seed.json",
+    "publication_budget": 10
   },
   "epistemic_radar": {
     "protocol": "cmb.epistemic-radar.v1",
