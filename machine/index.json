@@ -111,5 +111,19 @@
     "reference_program": "examples/polyglot/glitchology_registry_3d_runtime/GLITCH_3D_SOURCE_FRACTURE.g3d",
     "cli": "glitch8 3d",
     "boundary": "3D_APPEARANCE != AUTOMATIC_EXECUTION"
+  },
+  "global_ai_watch": {
+    "status": "experimental-research",
+    "human_page": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/",
+    "snapshot": "machine/global-ai-watch.json",
+    "config": "machine/global-ai-watch-config.json",
+    "schema": "schemas/cmb.global-ai-watch.v1.schema.json",
+    "source": "GDELT Project DOC 2.0 API",
+    "boundaries": [
+      "PREDICT",
+      "GENERATE",
+      "ACT"
+    ],
+    "interpretation_boundary": "GDELT_DISCOVERY != INDEPENDENT_CONFIRMATION"
   }
 }
