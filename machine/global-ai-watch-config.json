@@ -219,6 +219,6 @@
     "PATTERN != PROOF",
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
   ],
-  "published_link_limit": 24,
+  "published_link_limit": 10,
   "published_links_per_domain": 2
 }
