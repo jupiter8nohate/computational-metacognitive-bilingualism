@@ -77,7 +77,7 @@ jobs:
         run: python scripts/update_global_ai_watch.py --allow-stale
 
       - name: Build CMB Epistemic Radar
-        run: python scripts/build_epistemic_radar.py
+        run: python scripts/build_epistemic_radar.py --allow-stale
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py

@@ -188,3 +188,16 @@ def test_radar_rendering_escapes_untrusted_headline_html() -> None:
 
     assert "<img src=x" not in rendered
     assert "&lt;img src=x onerror=alert(1)&gt;" in rendered
+
+
+
+def test_checked_in_snapshot_is_valid_radar_fallback() -> None:
+    load_fallback_articles = RADAR["load_fallback_articles"]
+
+    articles = load_fallback_articles(ROOT / "machine/global-ai-watch.json")
+
+    assert len(articles) == 10
+    assert all(item["title"] for item in articles)
+    assert all(item["url"].startswith("https://") for item in articles)
+    assert all(item["boundary_ids"] for item in articles)
+    assert all(item["sector_ids"] for item in articles)
