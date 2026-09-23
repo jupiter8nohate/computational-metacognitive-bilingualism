@@ -117,4 +117,3 @@ extra_css:
 extra_javascript:
   - javascripts/cmb-analytics-config.js
   - javascripts/cmb-analytics.js
-  - javascripts/global-ai-watch.js
