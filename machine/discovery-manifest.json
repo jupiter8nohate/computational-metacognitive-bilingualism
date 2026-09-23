@@ -52,7 +52,8 @@
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.global-ai-watch.v1.schema.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/cmb-epistemic-radar.json",
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/cmb-epistemic-radar-config.json",
-    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.epistemic-radar.v1.schema.json"
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.epistemic-radar.v1.schema.json",
+    "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-seed.json"
   ],
   "human_entry_points": [
     "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
