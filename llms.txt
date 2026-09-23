@@ -271,3 +271,10 @@ GRAPH == MACHINE_SEMANTICS
 3D_APPEARANCE != AUTOMATIC_EXECUTION
 GRAPH_DIGEST != REAL_WORLD_TRUTH
 HUMAN_AGENCY > MACHINE_AUTHORITY
+
+## Current evidence monitoring
+
+- [CMB Global AI Watch](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/)
+- [Global AI Watch JSON](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch.json)
+- [Global AI Watch rules](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-config.json)
+- Boundary: `GDELT_DISCOVERY != INDEPENDENT_CONFIRMATION`; `HEADLINE_SIMILARITY != FACT_CORROBORATION`.
