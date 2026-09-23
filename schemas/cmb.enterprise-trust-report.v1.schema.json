@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.enterprise-trust-report.v1.schema.json",
+  "title": "CMB Enterprise Trust Report v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "decision",
+    "artifact_integrity",
+    "release_provenance",
+    "enterprise_authority",
+    "boundaries",
+    "invariants"
+  ],
+  "properties": {
+    "schema": {"const": "cmb.enterprise-trust-report.v1"},
+    "decision": {"enum": ["ALLOW", "DENY", "HUMAN_REVIEW"]},
+    "artifact_integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "manifest_sha256", "checked_paths", "failures"],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL"]},
+        "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "checked_paths": {"type": "array", "items": {"type": "string"}},
+        "failures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "code", "message"],
+            "properties": {
+              "path": {"type": ["string", "null"]},
+              "code": {"type": "string"},
+              "message": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "release_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "git_commit_checked", "git_commit_matches", "failures"],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL", "NOT_CHECKED"]},
+        "git_commit_checked": {"type": "boolean"},
+        "git_commit_matches": {"type": ["boolean", "null"]},
+        "failures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "code", "message"],
+            "properties": {
+              "path": {"type": ["string", "null"]},
+              "code": {"type": "string"},
+              "message": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "enterprise_authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "required", "key_fingerprint", "failures"],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL", "NOT_CHECKED", "UNPINNED"]},
+        "required": {"type": "boolean"},
+        "key_fingerprint": {
+          "type": ["string", "null"],
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "failures": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signature_proves_authorship",
+        "hash_proves_ownership",
+        "report_is_legal_compliance",
+        "creator_provenance_is_enterprise_admin"
+      ],
+      "properties": {
+        "signature_proves_authorship": {"const": false},
+        "hash_proves_ownership": {"const": false},
+        "report_is_legal_compliance": {"const": false},
+        "creator_provenance_is_enterprise_admin": {"const": false}
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "minItems": 4,
+      "items": {"type": "string"}
+    }
+  }
+}
