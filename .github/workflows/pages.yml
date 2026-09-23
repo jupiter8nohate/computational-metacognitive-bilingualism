@@ -24,8 +24,10 @@ on:
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
       - "scripts/update_global_ai_watch.py"
+      - "scripts/build_epistemic_radar.py"
       - "tests/test_site_integrity.py"
       - "tests/test_global_ai_watch.py"
+      - "tests/test_epistemic_radar.py"
       - "mkdocs.yml"
       - "pyproject.toml"
       - "AGENTS.md"
@@ -74,6 +76,10 @@ jobs:
       - name: Refresh Global AI Watch snapshot
         run: python scripts/update_global_ai_watch.py --allow-stale
 
+      - name: Build CMB Epistemic Radar
+        continue-on-error: true
+        run: python scripts/build_epistemic_radar.py
+
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
 
@@ -116,6 +122,10 @@ jobs:
               f"{site}/DARK_FEDERALISM_VISUAL_SYSTEM/",
               f"{site}/DEVELOPERS/",
               f"{site}/RESEARCHERS/",
+              f"{site}/CMB_EPISTEMIC_RADAR/",
+              f"{site}/machine/cmb-epistemic-radar.json",
+              f"{site}/machine/cmb-epistemic-radar-config.json",
+              f"{site}/schemas/cmb.epistemic-radar.v1.schema.json",
               f"{site}/GLOBAL_AI_WATCH/",
               f"{site}/machine/global-ai-watch.json",
               f"{site}/machine/global-ai-watch-config.json",
