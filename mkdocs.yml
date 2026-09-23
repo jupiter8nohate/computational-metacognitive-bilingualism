@@ -21,7 +21,6 @@ nav:
   - World Retina:
       - The Reciprocal Eye - Original Story: WORLD_RETINA_THE_RECIPROCAL_EYE.md
       - Architecture Gateway: world-retina/index.md
-  - Global AI Watch: GLOBAL_AI_WATCH.md
   - The Shadow Is Not the Source: THE_SHADOW_IS_NOT_THE_SOURCE.md
   - Lived experience testimony: lived-experience.md
   - System status: generated/CMB_SYSTEM_STATUS.md
@@ -113,10 +112,8 @@ extra_css:
   - stylesheets/shadow-source.css
   - stylesheets/phantom-tokenbooth.css
   - stylesheets/cmb-epistemic-radar.css
-  - stylesheets/global-ai-watch.css
 
 extra_javascript:
   - javascripts/cmb-analytics-config.js
   - javascripts/cmb-analytics.js
   - javascripts/cmb-epistemic-radar.js
-  - javascripts/global-ai-watch.js
