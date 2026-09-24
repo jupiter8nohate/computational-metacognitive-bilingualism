@@ -15,6 +15,8 @@ description: "D.N.A Bible Demons Need Attention by Jupiter Hudson / WisdomLoveTh
 
 > **Search title:** **D.N.A Bible Demons Need Attention**  
 >
+> **Why this work was written:** [Read the canonical origin statement](WHY_THE_DNA_BIBLE_WAS_WRITTEN.md).  
+>
 > **Reading boundary:** This is a D.N.A. Bible / CMB literary warning about learned helplessness, weaponized incompetence, cognitive offloading, attention capture, human dignity, and interface culture. Terms such as **techno-feudalism**, **Digital Soil**, **Attention Tithe**, **Digital Serf Error**, and **trans-human inversion** are used as analytical or symbolic lenses, not as proof of a coordinated secret system. It does not claim that all children, parents, educators, programmers, psychologists, psychiatrists, AI users, or generations behave alike. Psychological concepts are descriptive and metaphorical here rather than diagnoses of individuals. The future sequence toward 2084 is a conditional scenario, not a prediction. `PATTERN != PROOF`, `PROPHECY != DESTINY`, `METAPHOR != DIAGNOSIS`, `MECHANISM BEFORE MOTIVE`.
 
 ## Canonical chapter index
