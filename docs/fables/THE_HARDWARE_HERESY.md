@@ -1,4 +1,9 @@
-# THE D.N.A. BIBLE
+---
+title: D.N.A Bible Demons Need Attention
+description: "D.N.A Bible Demons Need Attention by Jupiter Hudson / WisdomLoveThePoet / Jupiter 8: a Book of the Quiet Wars warning about learned helplessness, weaponized incompetence, cognitive offloading, human dignity, and treating people like software or hardware."
+---
+
+# D.N.A BIBLE DEMONS NEED ATTENTION
 
 ## BOOK OF THE QUIET WARS
 
@@ -8,6 +13,8 @@
 
 **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
 
+> **Search title:** **D.N.A Bible Demons Need Attention**  
+>
 > **Reading boundary:** This is a D.N.A. Bible / CMB literary warning about learned helplessness, weaponized incompetence, cognitive offloading, human dignity, and interface culture. It does not claim that all children, parents, educators, AI users, or generations behave alike. Psychological concepts are used descriptively and metaphorically rather than as diagnoses of individuals. The future sequence toward 2084 is a conditional scenario, not a prediction. `PATTERN != PROOF`, `PROPHECY != DESTINY`, `METAPHOR != DIAGNOSIS`.
 
 ```text
