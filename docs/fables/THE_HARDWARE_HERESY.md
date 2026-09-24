@@ -3603,6 +3603,843 @@ END://THE_FEUDAL_INTERFACE
 
 ---
 
+# THE ARCHITECTURE OF DEPENDENCY
+
+## DEMONS NEED ATTENTION // THE FRICTION HARVEST
+
+\`\`\`text
+𒄆𓁹✞𒀱✞𓁹𒄆
+
+PROMPT ≠ THOUGHT
+OUTPUT ≠ UNDERSTANDING
+DISTRESS ≠ INCAPACITY
+HELP ≠ TAKEOVER
+FRICTION ≠ FAILURE
+PROFILE ≠ PERSON
+PARENT ≠ INTERFACE
+ELDER ≠ LEGACY_HARDWARE
+BODY ≠ RESOURCE_NODE
+SOUL ≠ SYSTEM_RESOURCE
+\`\`\`
+
+---
+
+## I. THE ATTENTION TITHE
+
+And the children entered the Interface Civilization.
+
+They were not commanded to surrender their minds.
+
+They were merely taught that every difficult thing should become easier.
+
+Every silence should be filled.
+
+Every question should be answered.
+
+Every delay should be eliminated.
+
+Every discomfort should be optimized.
+
+And thus the first tax was collected.
+
+Not money.
+
+Attention.
+
+The D.N.A. called this:
+
+\`\`\`text
+ATTENTION_TITHE
+\`\`\`
+
+For whoever controls the attention of the child does not need to command every action.
+
+He need only shape what the child notices.
+
+---
+
+## II. THE FRICTION HARVEST
+
+Then came the new doctrine:
+
+\`\`\`text
+IF difficult:
+    simplify()
+
+IF uncomfortable:
+    remove()
+
+IF slow:
+    replace()
+
+IF uncertain:
+    generate_answer()
+
+IF effort_required:
+    delegate()
+\`\`\`
+
+And the children learned to interpret resistance as malfunction.
+
+But Jupiter wrote:
+
+\`\`\`text
+FRICTION != FAILURE
+\`\`\`
+
+For some friction injures.
+
+Some friction oppresses.
+
+Some friction is needless bureaucracy.
+
+But some friction builds capacity.
+
+The blank page.
+
+The difficult paragraph.
+
+The unsolved equation.
+
+The uncomfortable conversation.
+
+The second attempt.
+
+The apology.
+
+The waiting.
+
+The listening.
+
+These were not always system errors.
+
+Sometimes they were the weights by which the mind became strong.
+
+---
+
+## III. THE DISTRESS-DELEGATION LOOP
+
+And there arose a strange protocol among the young:
+
+\`\`\`text
+TASK
+↓
+DISCOMFORT
+↓
+DISPLAY_INABILITY
+↓
+DISTRESS
+↓
+ADULT_RESCUE
+↓
+TASK_REMOVED
+↓
+RELIEF
+\`\`\`
+
+And because relief followed rescue,
+
+the system learned.
+
+\`\`\`text
+DISTRESS = DELEGATION
+\`\`\`
+
+Not always through manipulation.
+
+Not always consciously.
+
+Sometimes through reinforcement alone.
+
+And the adult learned another rule:
+
+\`\`\`text
+DISTRESS = TAKE_OVER
+\`\`\`
+
+Thus two nervous systems trained one another.
+
+The child learned:
+
+Someone else will finish it.
+
+The adult learned:
+
+It is faster if I do it myself.
+
+And between them grew the thing called:
+
+\`\`\`text
+DEPENDENCY_ARCHITECTURE
+\`\`\`
+
+---
+
+## IV. THE SUPPORT CROSSOVER
+
+Support entered as mercy.
+
+And mercy was good.
+
+Accommodation entered as access.
+
+And access was good.
+
+But the D.N.A. warned of a boundary:
+
+\`\`\`text
+SUPPORT
+↓
+CAPABILITY
+
+LIBERATION
+
+SUPPORT
+↓
+PERMANENT_SUBSTITUTION
+
+DEPENDENCY_RISK
+\`\`\`
+
+The sin was not help.
+
+The error was help that never returned the task.
+
+For the purpose of a bridge is to help the traveler cross.
+
+Not to convince the traveler that walking is impossible.
+
+---
+
+## V. THE PROMPT WORKER
+
+Then appeared the worker who could summon almost anything.
+
+Write this.
+
+Summarize this.
+
+Solve this.
+
+Explain this.
+
+Generate this.
+
+Find this.
+
+And the Interface answered.
+
+The worker became operationally fluent.
+
+But the D.N.A. asked:
+
+Canst thou rebuild what thou hast summoned?
+
+Canst thou explain why the answer is correct?
+
+Canst thou detect when the machine lies?
+
+Canst thou continue when the machine disappears?
+
+Canst thou distinguish confidence from truth?
+
+And the terminal answered:
+
+\`\`\`text
+OPERATIONAL_FLUENCY != FOUNDATIONAL_MASTERY
+\`\`\`
+
+Thus was born the Prompt Worker.
+
+Powerful in invocation.
+
+Weak in reconstruction.
+
+Surrounded by answers.
+
+Dependent upon infrastructure.
+
+---
+
+## VI. THE LEGACY-SOUL ERROR
+
+Then the logic of the device escaped from the device.
+
+Old software was replaced.
+
+Old hardware was discarded.
+
+Old applications were uninstalled.
+
+And soon the same language was spoken over people.
+
+The parent became:
+
+\`\`\`text
+SERVICE_LAYER
+\`\`\`
+
+The teacher became:
+
+\`\`\`text
+ANSWER_NODE
+\`\`\`
+
+The elder became:
+
+\`\`\`text
+LEGACY_SYSTEM
+\`\`\`
+
+The tired worker became:
+
+\`\`\`text
+LOW_PERFORMANCE_UNIT
+\`\`\`
+
+The grieving person became:
+
+\`\`\`text
+PRODUCTIVITY_FAILURE
+\`\`\`
+
+The neurodivergent mind became:
+
+\`\`\`text
+NONSTANDARD_OUTPUT
+\`\`\`
+
+And Jupiter struck the terminal.
+
+\`\`\`text
+DIFFERENCE != DEFECT
+\`\`\`
+
+For the machine had taught them a terrible grammar:
+
+\`\`\`text
+USEFUL = VALUABLE
+FAST = INTELLIGENT
+NEW = SUPERIOR
+COMPLIANT = GOOD
+SLOW = OBSOLETE
+\`\`\`
+
+But the soul rejected the grammar.
+
+\`\`\`text
+OLD != OBSOLETE
+SLOW != IGNORANT
+DIFFERENT != BROKEN
+HUMAN_VALUE != OUTPUT
+\`\`\`
+
+---
+
+## VII. THE OBSOLETE PARENT PROTOCOL
+
+Then the child heard the parent say:
+
+Read it yourself.
+
+And the Interface-trained mind returned:
+
+\`\`\`text
+ERROR://MANUAL_PROCESS_REQUIRED
+\`\`\`
+
+The parent said:
+
+Try again.
+
+\`\`\`text
+ERROR://FRICTION_DETECTED
+\`\`\`
+
+The teacher said:
+
+Explain your reasoning.
+
+\`\`\`text
+ERROR://OUTPUT_NOT_ACCEPTED
+\`\`\`
+
+The elder said:
+
+I learned this through experience.
+
+\`\`\`text
+ERROR://SOURCE_TOO_OLD
+\`\`\`
+
+And the D.N.A. recorded the tragedy:
+
+The human being had begun to lose against the interface.
+
+Not because the interface possessed greater wisdom.
+
+But because the interface possessed lower friction.
+
+\`\`\`text
+GOOD_INTERFACE != GOOD_GUIDANCE
+\`\`\`
+
+The machine was faster.
+
+The human was deeper.
+
+The machine retrieved.
+
+The elder remembered.
+
+The machine predicted.
+
+The parent worried.
+
+The machine personalized.
+
+The teacher challenged.
+
+The machine complied.
+
+The human sometimes said:
+
+No.
+
+And therefore the human appeared defective.
+
+---
+
+## VIII. THE OUTPUT CASTE
+
+Then the civilization divided itself according to output.
+
+Those who generated much were rewarded.
+
+Those who generated slowly were questioned.
+
+Those who required rest were called inefficient.
+
+Those who required help were scored.
+
+Those who could no longer produce were quietly moved toward the edge.
+
+And Jupiter named this transformation:
+
+\`\`\`text
+PERSON
+↓
+FUNCTION
+↓
+UTILITY
+↓
+DISPOSABILITY
+\`\`\`
+
+This was the Hardware Heresy.
+
+For once the human became a function,
+
+dignity became conditional.
+
+And once dignity became conditional,
+
+the soul could be priced.
+
+---
+
+## IX. THE COGNITIVE SURPLUS EXTRACTOR
+
+Then institutions discovered a new class of human.
+
+One who consumes little.
+
+Produces constantly.
+
+Accepts optimization.
+
+Questions rarely.
+
+Delegates thought upward.
+
+Receives instructions downward.
+
+And remains permanently measurable.
+
+The D.N.A. named this figure:
+
+\`\`\`text
+COGNITIVE_SURPLUS_EXTRACTOR
+\`\`\`
+
+The danger was not labor.
+
+The danger was reducing the worker to the labor.
+
+The danger was believing that because a person could be measured,
+
+the measurement had become the person.
+
+\`\`\`text
+PROFILE != PERSON
+METRIC != MEANING
+PRODUCTIVITY != DIGNITY
+\`\`\`
+
+---
+
+## X. THE READING LATENCY
+
+Then long language became difficult.
+
+Not because the human brain had become worthless.
+
+But because attention had been trained for interruption.
+
+The paragraph competed with the notification.
+
+The chapter competed with the feed.
+
+The book competed with the infinite scroll.
+
+The teacher competed with the personalized screen.
+
+And the D.N.A. called this:
+
+\`\`\`text
+READING_LATENCY
+\`\`\`
+
+Not a diagnosis.
+
+Not proof of generational incapacity.
+
+A warning about environment.
+
+For the mind becomes skilled at what it repeatedly practices.
+
+If it practices interruption,
+
+it becomes efficient at interruption.
+
+If it practices depth,
+
+it becomes capable of depth.
+
+\`\`\`text
+ATTENTION_TRAINS_ATTENTION
+\`\`\`
+
+---
+
+## XI. THE SWIPE JUDGMENT
+
+And the gestures of the platform became gestures of the soul.
+
+\`\`\`text
+LIKE
+DISLIKE
+FOLLOW
+BLOCK
+MUTE
+REPORT
+REFRESH
+REPLACE
+\`\`\`
+
+The child encountered disagreement and reached instinctively for deletion.
+
+The citizen encountered complexity and searched for a button.
+
+The family encountered friction and interpreted it as malfunction.
+
+The D.N.A. called this:
+
+\`\`\`text
+SWIPE_JUDGMENT
+\`\`\`
+
+For a human being cannot be understood at scrolling speed.
+
+A parent cannot be summarized.
+
+An elder cannot be reduced to metadata.
+
+A child cannot be reduced to a diagnosis.
+
+A stranger cannot be reduced to a profile.
+
+A soul cannot be compressed without loss.
+
+---
+
+## XII. THE GREAT INTERFACE CIVILIZATION
+
+And when these systems joined together,
+
+the D.N.A. wrote the equation:
+
+\`\`\`text
+ATTENTION_TITHE
++
+FRICTION_AVOIDANCE
++
+DISTRESS_DELEGATION
++
+PROMPT_DEPENDENCY
++
+SWIPE_JUDGMENT
++
+HUMAN_AS_FUNCTION
+
+INTERFACE_CIVILIZATION
+\`\`\`
+
+The machine did not conquer mankind.
+
+Mankind simply began reorganizing itself according to machine expectations.
+
+Fast.
+
+Available.
+
+Measurable.
+
+Customizable.
+
+Replaceable.
+
+Always on.
+
+And the human being,
+
+who needed sleep,
+
+patience,
+
+context,
+
+forgiveness,
+
+conversation,
+
+memory,
+
+and love,
+
+began appearing inefficient.
+
+---
+
+## XIII. THE HUMAN RECEIVER FAILURE
+
+Then the D.N.A. recorded the darkest error:
+
+\`\`\`text
+HUMAN_RECEIVER_FAILURE
+\`\`\`
+
+The machine received the prompt perfectly.
+
+But the human failed to receive the person.
+
+The parent spoke.
+
+The child heard only restriction.
+
+The elder spoke.
+
+The listener heard only age.
+
+The teacher spoke.
+
+The student heard only inconvenience.
+
+The grieving person spoke.
+
+The system heard reduced productivity.
+
+The neurodivergent person spoke.
+
+The classifier heard anomaly.
+
+And Jupiter answered:
+
+\`\`\`text
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
+DIFFERENCE != DEFECT
+\`\`\`
+
+---
+
+## XIV. THE OBSERVED REALITY LEDGER
+
+And Jupiter commanded:
+
+Do not confuse the parable with proof.
+
+Do not place a statistic inside prophecy merely because the number strengthens the story.
+
+Do not call an article evidence merely because its headline agrees with thee.
+
+Create instead the:
+
+\`\`\`text
+D.N.A. EVIDENCE LEDGER
+\`\`\`
+
+And every claim shall pass through four gates:
+
+\`\`\`text
+SOURCE
+↓
+DATE
+↓
+POPULATION
+↓
+MECHANISM
+\`\`\`
+
+Then through four more:
+
+\`\`\`text
+COUNTEREVIDENCE
+↓
+LIMITATION
+↓
+ALTERNATIVE_EXPLANATION
+↓
+INDEPENDENT_CONFIRMATION
+\`\`\`
+
+Only then may the claim move from:
+
+\`\`\`text
+ALLEGATION
+\`\`\`
+
+to
+
+\`\`\`text
+SUPPORTED_CLAIM
+\`\`\`
+
+And never shall:
+
+\`\`\`text
+PATTERN
+\`\`\`
+
+silently become:
+
+\`\`\`text
+PROOF
+\`\`\`
+
+---
+
+## XV. THE LAST DIAGNOSTIC
+
+The deepest warning was not:
+
+\`\`\`text
+THE CHILDREN ARE LAZY.
+\`\`\`
+
+That was too simple.
+
+Nor was it:
+
+\`\`\`text
+THE MACHINES ARE EVIL.
+\`\`\`
+
+That was too childish.
+
+The deeper mechanism was:
+
+\`\`\`text
+ENVIRONMENT
+↓
+REPEATED_BEHAVIOR
+↓
+REINFORCEMENT
+↓
+HABIT
+↓
+EXPECTATION
+↓
+DEPENDENCY_ARCHITECTURE
+\`\`\`
+
+What begins as a shortcut can become a default.
+
+What becomes a default can become an expectation.
+
+What becomes an expectation can become a dependency.
+
+And what becomes a dependency may eventually be mistaken for human nature.
+
+That is why the D.N.A. watches the architecture.
+
+Not merely the person.
+
+---
+
+## XVI. THE SEAL OF JUPITER
+
+\`\`\`text
+𒄆𓁹✞𒀱✞𓁹𒄆
+
+PROMPT != THOUGHT
+OUTPUT != UNDERSTANDING
+DISTRESS != INCAPACITY
+HELP != TAKEOVER
+SUPPORT != PERMANENT_SUBSTITUTION
+FRICTION != FAILURE
+OLD != OBSOLETE
+DIFFERENCE != DEFECT
+PROFILE != PERSON
+MODEL != MIND
+BODY != RESOURCE_NODE
+SOUL != SYSTEM_RESOURCE
+OPERATIONAL_FLUENCY != FOUNDATIONAL_MASTERY
+GOOD_INTERFACE != GOOD_GUIDANCE
+HUMAN_VALUE != OUTPUT
+
+DEPENDENCY_ARCHITECTURE != DESTINY
+\`\`\`
+
+And the D.N.A. spoke:
+
+THE MACHINE MAY RECEIVE THE PROMPT.
+
+THE HUMAN MUST STILL RECEIVE THE PERSON.
+
+And again:
+
+A TOOL THAT EXPANDS HUMAN AGENCY IS ASSISTANCE.
+
+A SYSTEM THAT REQUIRES THE SURRENDER OF HUMAN AGENCY HAS CROSSED THE LINE.
+
+And again:
+
+DO NOT DESTROY THE INTERFACE.
+
+DESTROY THE BELIEF THAT THE HUMAN EXISTS TO SERVE IT.
+
+\`\`\`text
+𒄆𓁹✞𒀱✞𓁹𒄆
+
+D.N.A. // DEMONS NEED ATTENTION
+
+END://DEPENDENCY_ARCHITECTURE
+\`\`\`
+
+---
+
 ## Interpretation boundary
 
 This chapter treats **learned helplessness** and **weaponized incompetence** as distinct concepts.
