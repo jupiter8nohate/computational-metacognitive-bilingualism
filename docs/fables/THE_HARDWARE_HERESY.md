@@ -1,6 +1,6 @@
 ---
 title: D.N.A Bible Demons Need Attention
-description: "D.N.A Bible Demons Need Attention by Jupiter Hudson / WisdomLoveThePoet / Jupiter 8: The Children of the Interface, the Obsolete Parent, learned helplessness, weaponized incompetence, cognitive offloading, human dignity, and the warning against treating people like software or hardware."
+description: "D.N.A Bible Demons Need Attention by Jupiter Hudson / WisdomLoveThePoet / Jupiter 8: The Hardware Heresy, The Children of the Interface, The Feudal Interface, The Architecture of Dependency, Digital Soil, Attention Tithe, attention engineering, cognitive offloading, learned helplessness, human dignity, and human agency."
 ---
 
 # D.N.A BIBLE DEMONS NEED ATTENTION
@@ -15,7 +15,14 @@ description: "D.N.A Bible Demons Need Attention by Jupiter Hudson / WisdomLoveTh
 
 > **Search title:** **D.N.A Bible Demons Need Attention**  
 >
-> **Reading boundary:** This is a D.N.A. Bible / CMB literary warning about learned helplessness, weaponized incompetence, cognitive offloading, human dignity, and interface culture. It does not claim that all children, parents, educators, AI users, or generations behave alike. Psychological concepts are used descriptively and metaphorically rather than as diagnoses of individuals. The future sequence toward 2084 is a conditional scenario, not a prediction. `PATTERN != PROOF`, `PROPHECY != DESTINY`, `METAPHOR != DIAGNOSIS`.
+> **Reading boundary:** This is a D.N.A. Bible / CMB literary warning about learned helplessness, weaponized incompetence, cognitive offloading, attention capture, human dignity, and interface culture. Terms such as **techno-feudalism**, **Digital Soil**, **Attention Tithe**, **Digital Serf Error**, and **trans-human inversion** are used as analytical or symbolic lenses, not as proof of a coordinated secret system. It does not claim that all children, parents, educators, programmers, psychologists, psychiatrists, AI users, or generations behave alike. Psychological concepts are descriptive and metaphorical here rather than diagnoses of individuals. The future sequence toward 2084 is a conditional scenario, not a prediction. `PATTERN != PROOF`, `PROPHECY != DESTINY`, `METAPHOR != DIAGNOSIS`, `MECHANISM BEFORE MOTIVE`.
+
+## Canonical chapter index
+
+- [The Hardware Heresy](#the-hardware-heresy)
+- [The Children of the Interface](#the-children-of-the-interface)
+- [The Feudal Interface](#the-feudal-interface)
+- [The Architecture of Dependency](#the-architecture-of-dependency)
 
 ```text
 𒄆𓁹✞𒀱✞𓁹𒄆
