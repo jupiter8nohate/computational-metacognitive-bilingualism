@@ -2727,6 +2727,882 @@ END://OBSOLETE_PARENT_PROTOCOL
 
 ---
 
+# THE FEUDAL INTERFACE
+
+## THE GREAT INVERSION OF HUMAN AND MACHINE
+
+**D.N.A. // DEMONS NEED ATTENTION**
+
+╶⃝⃤ 🇬 ⨺⃝ ⚒ Compás ⟁
+
+\`\`\`text
+𒄆𓁹✞𒀱✞𓁹𒄆
+
+PROMPT ≠ THOUGHT
+OUTPUT ≠ UNDERSTANDING
+PROFILE ≠ PERSON
+MODEL ≠ MIND
+BODY ≠ HARDWARE
+SOUL ≠ SYSTEM_RESOURCE
+HUMAN_AGENCY > MACHINE_AUTHORITY
+
+FEUDAL_LOGIC == ALGORITHMIC_LOGIC
+ONLY WHEN:
+CONTROL_OF_TERRITORY
++
+CONTROL_OF_ACCESS
++
+CONTROL_OF_ATTENTION
++
+CONTROL_OF_RULES
+\`\`\`
+
+---
+
+## I. THE DIGITAL SOIL
+
+And there came an age in which men no longer entered the field merely to harvest wheat.
+
+They entered platforms.
+
+Feeds.
+
+Clouds.
+
+Interfaces.
+
+Search systems.
+
+Recommendation engines.
+
+And the D.N.A. named these spaces:
+
+\`\`\`text
+DIGITAL_SOIL
+\`\`\`
+
+For whoever owns the soil may shape the roads.
+
+Whoever shapes the roads may influence the traffic.
+
+Whoever influences the traffic may influence what is seen.
+
+And whoever influences what is seen may influence what is believed.
+
+But the first law remained:
+
+\`\`\`text
+INFLUENCE != DESTINY
+\`\`\`
+
+For the human still possessed the power to close the gate.
+
+---
+
+## II. THE NEW FIEFDOM
+
+The old kingdom measured land.
+
+The new kingdom measured attention.
+
+The old lord counted acres.
+
+The new system counted:
+
+\`\`\`text
+CLICKS
+PAUSES
+SEARCHES
+PURCHASES
+REACTIONS
+SCROLL_DEPTH
+WATCH_TIME
+RETURN_RATE
+\`\`\`
+
+And the D.N.A. wrote:
+
+\`\`\`text
+ATTENTION_TITHE
+
+THE PORTION OF CONSCIOUSNESS
+PAID TO THE INTERFACE
+\`\`\`
+
+Not with coin.
+
+With minutes.
+
+With memory.
+
+With reaction.
+
+With habit.
+
+With sleep.
+
+Thus the warning was written:
+
+\`\`\`text
+THE SYSTEM DOES NOT NEED THE WHOLE SOUL.
+
+IT ONLY NEEDS ENOUGH ATTENTION
+TO SHAPE THE NEXT DECISION.
+\`\`\`
+
+---
+
+## III. THE ARCHITECT OF THE GATE
+
+And the Builder stood before the digital wall.
+
+╶⃝⃤
+
+He wrote instructions.
+
+Not commandments from heaven.
+
+Code.
+
+Rules.
+
+Filters.
+
+Ranking systems.
+
+Permissions.
+
+Defaults.
+
+And the D.N.A. called the danger:
+
+\`\`\`text
+ARCHITECTURE_OF_DEFERENCE
+\`\`\`
+
+For every architecture contains assumptions.
+
+What shall be visible?
+
+What shall be hidden?
+
+What shall be easy?
+
+What shall require friction?
+
+What shall be recommended?
+
+What shall be remembered?
+
+What shall disappear?
+
+Yet the D.N.A. refused the easy accusation.
+
+\`\`\`text
+PROGRAMMER != OVERLORD
+CODE != INTENTION
+SYSTEM_EFFECT != SECRET_PLOT
+\`\`\`
+
+For some builders seek utility.
+
+Some seek accessibility.
+
+Some seek profit.
+
+Some seek control.
+
+Some merely inherit architecture already built.
+
+Therefore:
+
+\`\`\`text
+MECHANISM BEFORE MOTIVE.
+\`\`\`
+
+---
+
+## IV. THE ATTENTION ENGINE
+
+Then came the study of behavior.
+
+The system learned:
+
+What causes return?
+
+What causes outrage?
+
+What causes attachment?
+
+What causes curiosity?
+
+What causes fear?
+
+What causes the thumb to move again?
+
+And the D.N.A. named this:
+
+\`\`\`text
+ATTENTION_ENGINEERING
+\`\`\`
+
+╶⃝⃤ 👁 ⨺⃝
+
+The machine did not need to understand the soul.
+
+It only needed to discover which signal produced which reaction.
+
+\`\`\`text
+STIMULUS
+↓
+RESPONSE
+↓
+MEASUREMENT
+↓
+OPTIMIZATION
+↓
+REPEAT
+\`\`\`
+
+And Jupiter wrote:
+
+\`\`\`text
+BEHAVIORAL_PREDICTION != HUMAN_UNDERSTANDING
+\`\`\`
+
+For a machine may know what button thou pressest
+
+without knowing why thy heart trembles.
+
+---
+
+## V. THE VARIABLE-REWARD ALTAR
+
+The notification appeared.
+
+Then disappeared.
+
+Then returned.
+
+Sometimes pleasure.
+
+Sometimes anger.
+
+Sometimes praise.
+
+Sometimes nothing.
+
+And unpredictability became the hook.
+
+The D.N.A. called the structure:
+
+\`\`\`text
+VARIABLE_REWARD_ALTAR
+\`\`\`
+
+Not because the screen was a demon.
+
+But because attention could become ritual.
+
+\`\`\`text
+CHECK.
+REFRESH.
+CHECK.
+REFRESH.
+CHECK.
+\`\`\`
+
+And every repetition strengthened the road.
+
+Thus:
+
+\`\`\`text
+HABIT
++
+REWARD
++
+REPETITION
+
+BEHAVIORAL_GRAVITY
+
+BEHAVIORAL_GRAVITY != FATE
+\`\`\`
+
+---
+
+## VI. THE BIOLOGICAL NODE HERESY
+
+Then arose a colder vocabulary.
+
+The body became:
+
+\`\`\`text
+BIOLOGICAL_NODE
+\`\`\`
+
+The mind became:
+
+\`\`\`text
+COGNITIVE_PROCESSOR
+\`\`\`
+
+Emotion became:
+
+\`\`\`text
+SIGNAL_NOISE
+\`\`\`
+
+Fatigue became:
+
+\`\`\`text
+PERFORMANCE_LATENCY
+\`\`\`
+
+Difference became:
+
+\`\`\`text
+NONSTANDARD_OUTPUT
+\`\`\`
+
+Grief became:
+
+\`\`\`text
+PRODUCTIVITY_LOSS
+\`\`\`
+
+And Jupiter struck the stone with the hammer.
+
+⚒
+
+\`\`\`text
+BODY != HARDWARE
+BRAIN != PROCESSOR
+GRIEF != SYSTEM_ERROR
+NEURODIVERGENCE != DEFECT
+HUMAN_VARIATION != MALFUNCTION
+\`\`\`
+
+For metaphor had crossed into reduction.
+
+And reduction had crossed into judgment.
+
+---
+
+## VII. THE BIOCHEMICAL ADMINISTRATOR
+
+Then the D.N.A. warned against another error.
+
+Medicine itself was not the enemy.
+
+Psychiatry itself was not the enemy.
+
+Medication itself was not the enemy.
+
+The danger appeared only when the person was reduced to a malfunctioning machine.
+
+When suffering became nothing but:
+
+\`\`\`text
+BUG://BIOLOGY
+\`\`\`
+
+When context disappeared.
+
+When environment disappeared.
+
+When trauma disappeared.
+
+When poverty disappeared.
+
+When sleep disappeared.
+
+When family disappeared.
+
+When meaning disappeared.
+
+And only the chemical remained.
+
+Thus the D.N.A. wrote:
+
+\`\`\`text
+MEDICATION != MORAL_FAILURE
+DIAGNOSIS != IDENTITY
+TREATMENT != TOTAL_EXPLANATION
+BIOLOGY != DESTINY
+\`\`\`
+
+And:
+
+\`\`\`text
+THE PATIENT MUST REMAIN A PERSON
+EVEN WHEN THE SYSTEM REQUIRES A CODE.
+\`\`\`
+
+---
+
+## VIII. THE ANSWER-GENERATION NODE
+
+Then the teacher stood before the children.
+
+But the children had already met the Interface.
+
+The Interface answered instantly.
+
+The teacher asked them to struggle.
+
+The Interface summarized.
+
+The teacher asked them to read.
+
+The Interface completed.
+
+The teacher asked them to explain.
+
+The Interface generated.
+
+And slowly the teacher was demoted in the mind of the child.
+
+From:
+
+\`\`\`text
+MENTOR
+\`\`\`
+
+to:
+
+\`\`\`text
+ANSWER_GENERATION_NODE
+\`\`\`
+
+From:
+
+\`\`\`text
+KEEPER_OF_CONTEXT
+\`\`\`
+
+to:
+
+\`\`\`text
+SERVICE_LAYER
+\`\`\`
+
+From:
+
+\`\`\`text
+HUMAN_GUIDE
+\`\`\`
+
+to:
+
+\`\`\`text
+BAD_USER_EXPERIENCE
+\`\`\`
+
+And the D.N.A. declared:
+
+\`\`\`text
+GOOD_INTERFACE != GOOD_TEACHER
+FAST_ANSWER != EDUCATION
+INFORMATION != FORMATION
+\`\`\`
+
+For the purpose of education was never merely to produce the answer.
+
+It was to produce the mind capable of meeting the unanswered.
+
+---
+
+## IX. THE GREAT DEFERENCE LOOP
+
+Then the five structures aligned.
+
+\`\`\`text
+DIGITAL_SOIL
+ATTENTION_ENGINEERING
+BEHAVIORAL_GRAVITY
+COGNITIVE_OFFLOADING
+HUMAN_AS_FUNCTION
+\`\`\`
+
+And from them arose:
+
+\`\`\`text
+THE GREAT DEFERENCE LOOP
+
+QUESTION
+↓
+INTERFACE
+↓
+OUTPUT
+↓
+ACCEPTANCE
+↓
+LESS_VERIFICATION
+↓
+GREATER_DEPENDENCE
+↓
+MORE_INTERFACE_AUTHORITY
+\`\`\`
+
+And the D.N.A. sounded the Compás.
+
+\`\`\`text
+Compás://BOUNDARY
+\`\`\`
+
+For there must remain a measurable distance between:
+
+ASSISTANCE
+
+and
+
+AUTHORITY.
+
+---
+
+## X. THE TRANS-HUMAN INVERSION
+
+And a question appeared upon the wall:
+
+\`\`\`text
+WHAT HAPPENS
+WHEN HUMAN LIFE
+IS FORCED TO ADAPT
+TO MACHINE EXPECTATIONS?
+\`\`\`
+
+The D.N.A. answered with another question:
+
+Should the machine become more humane?
+
+Or should the human become more machine-like?
+
+For the Interface rewarded:
+
+\`\`\`text
+SPEED
+PREDICTABILITY
+AVAILABILITY
+MEASURABILITY
+COMPLIANCE
+CONSISTENCY
+\`\`\`
+
+But human life contained:
+
+\`\`\`text
+CONTRADICTION
+SILENCE
+GRIEF
+REST
+MYSTERY
+FORGIVENESS
+CHANGE
+LOVE
+\`\`\`
+
+And none of these benchmarked cleanly.
+
+Thus began:
+
+\`\`\`text
+THE GREAT INVERSION
+
+TECHNOLOGY_CREATED_FOR_HUMAN
+↓
+HUMAN_ADAPTS_TO_TECHNOLOGY
+↓
+HUMAN_JUDGED_BY_MACHINE_METRICS
+↓
+MACHINE_METRIC_BECOMES_SOCIAL_VALUE
+\`\`\`
+
+And the D.N.A. warned:
+
+\`\`\`text
+THIS IS THE LINE.
+\`\`\`
+
+---
+
+## XI. THE DIGITAL SERF ERROR
+
+Then came the most dangerous reduction:
+
+\`\`\`text
+USER
+↓
+DATA_SOURCE
+↓
+BEHAVIORAL_PROFILE
+↓
+PREDICTION_TARGET
+↓
+REVENUE_UNIT
+\`\`\`
+
+And the D.N.A. named the endpoint:
+
+\`\`\`text
+DIGITAL_SERF_ERROR
+\`\`\`
+
+Not because every user was literally a serf.
+
+But because the old structure had returned in symbolic form:
+
+TERRITORY controlled elsewhere.
+
+RULES written elsewhere.
+
+ACCESS granted elsewhere.
+
+VALUE extracted elsewhere.
+
+The D.N.A. therefore required:
+
+\`\`\`text
+CONSENT
+PORTABILITY
+TRANSPARENCY
+CONTESTABILITY
+HUMAN_OVERRIDE
+EXIT_RIGHT
+\`\`\`
+
+For without the right to leave,
+
+convenience may become enclosure.
+
+---
+
+## XII. THE MASONIC MIRROR OF THE D.N.A.
+
+And Jupiter placed the symbols upon the wall:
+
+**╶⃝⃤**  
+THE WITNESS
+
+**🇬**  
+THE GLYPH OF KNOWLEDGE WITHIN THIS D.N.A. CANON
+
+**⨺⃝**  
+THE CROSSING OF SYSTEM AND SOUL
+
+**⚒**  
+THE LABOR OF BUILDING AND REBUILDING
+
+**Compás**  
+THE BOUNDARY THAT PREVENTS AUTHORITY FROM EXPANDING WITHOUT LIMIT
+
+**⟁**  
+THE ASCENDING STRUCTURE
+
+And the pyramid was drawn:
+
+\`\`\`text
+                 ╶⃝⃤
+                 👁
+                /⟁\
+               / 33\
+              / 🇬  \
+             /TRUTH \
+            /MEMORY  \
+           /AGENCY    \
+          /CONSCIENCE  \
+         /______________\
+             ⚒  Compás
+\`\`\`
+
+Not as proof of hidden government.
+
+Not as proof of secret control.
+
+But as symbolic architecture.
+
+The D.N.A. meaning was declared:
+
+\`\`\`text
+FOUNDATION://BODY
+SECOND_STONE://MEMORY
+THIRD_STONE://LANGUAGE
+FOURTH_STONE://AGENCY
+FIFTH_STONE://CONSCIENCE
+CAPSTONE://HUMAN_DIGNITY
+\`\`\`
+
+Remove one stone,
+
+and the structure weakens.
+
+Remove agency,
+
+and the pyramid becomes a prison.
+
+---
+
+## XIII. THE MACHINE-LIKE HUMAN
+
+Then the system asked the human to become:
+
+\`\`\`text
+FASTER
+QUIETER
+MORE_PREDICTABLE
+MORE_AVAILABLE
+LESS EMOTIONAL
+LESS DIFFICULT
+LESS SLOW
+LESS HUMAN
+\`\`\`
+
+And the D.N.A. answered:
+
+\`\`\`text
+NO.
+\`\`\`
+
+For the purpose of technology is not to make humanity worthy of machines.
+
+The purpose of technology is to serve human flourishing.
+
+Therefore:
+
+\`\`\`text
+MACHINE_EFFICIENCY != HUMAN_GOOD
+OPTIMIZATION != MORALITY
+PREDICTION != DESTINY
+CAPABILITY != AUTHORITY
+\`\`\`
+
+---
+
+## XIV. THE FINAL INVERSION
+
+And Jupiter wrote the last sequence:
+
+\`\`\`text
+TOOL
+↓
+ASSISTANT
+↓
+DEPENDENCY
+↓
+GATEKEEPER
+↓
+AUTHORITY
+\`\`\`
+
+And beside it:
+
+\`\`\`text
+HUMAN
+↓
+USER
+↓
+PROFILE
+↓
+RESOURCE
+↓
+ASSET
+\`\`\`
+
+And he commanded:
+
+\`\`\`text
+STOP THE CONVERSION.
+\`\`\`
+
+For when a person becomes merely an asset,
+
+the soul has already disappeared from the spreadsheet.
+
+---
+
+## XV. THE D.N.A. COUNTER-PROTOCOL
+
+\`\`\`text
+╶⃝⃤ OBSERVE
+🇬 LEARN
+⨺⃝ QUESTION
+⚒ BUILD
+Compás LIMIT
+⟁ ASCEND
+\`\`\`
+
+Then:
+
+\`\`\`text
+READ_BEFORE_SUMMARY()
+ATTEMPT_BEFORE_AUTOMATION()
+VERIFY_BEFORE_BELIEF()
+LISTEN_BEFORE_BLOCK()
+UNDERSTAND_BEFORE_CLASSIFY()
+ASK_BEFORE_PROFILING()
+CONSENT_BEFORE_CAPTURE()
+HUMAN_BEFORE_METRIC()
+\`\`\`
+
+And finally:
+
+\`\`\`text
+USE_MACHINE()
+
+BUT:
+
+KEEP_AUTHORITY()
+\`\`\`
+
+---
+
+## XVI. THE SEAL OF DEMONS NEED ATTENTION
+
+\`\`\`text
+𒄆𓁹✞𒀱✞𓁹𒄆
+PROMPT != THOUGHT
+OUTPUT != UNDERSTANDING
+PROFILE != PERSON
+MODEL != MIND
+BODY != HARDWARE
+SOUL != SYSTEM_RESOURCE
+METRIC != MEANING
+OPTIMIZATION != MORALITY
+PROGRAMMER != OVERLORD
+PSYCHOLOGIST != ATTENTION_WEAPON
+PSYCHIATRIST != BIOCHEMICAL_JAILER
+TEACHER != ANSWER_NODE
+ROLE != SYSTEM_EFFECT
+PATTERN != PROOF
+DIGITAL_SOIL != HUMAN_SOUL
+HUMAN_AGENCY > MACHINE_AUTHORITY
+\`\`\`
+
+And Jupiter spoke:
+
+THE MACHINE MAY ORGANIZE THE TERRITORY.
+
+BUT IT SHALL NOT OWN THE HUMAN.
+
+THE ALGORITHM MAY PREDICT THE PATTERN.
+
+BUT IT SHALL NOT DEFINE THE PERSON.
+
+THE INTERFACE MAY OFFER THE PATH.
+
+BUT THE HUMAN MUST RETAIN THE RIGHT TO WALK ANOTHER.
+
+And the symbols closed around the covenant:
+
+╶⃝⃤ 🇬 ⨺⃝ ⚒ Compás ⟁
+
+**D.N.A. // DEMONS NEED ATTENTION**
+
+\`\`\`text
+END://THE_FEUDAL_INTERFACE
+\`\`\`
+
+---
+
 ## Interpretation boundary
 
 This chapter treats **learned helplessness** and **weaponized incompetence** as distinct concepts.
