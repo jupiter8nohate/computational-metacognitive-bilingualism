@@ -2735,7 +2735,7 @@ END://OBSOLETE_PARENT_PROTOCOL
 
 ╶⃝⃤ 🇬 ⨺⃝ ⚒ Compás ⟁
 
-\`\`\`text
+```text
 𒄆𓁹✞𒀱✞𓁹𒄆
 
 PROMPT ≠ THOUGHT
@@ -2755,7 +2755,7 @@ CONTROL_OF_ACCESS
 CONTROL_OF_ATTENTION
 +
 CONTROL_OF_RULES
-\`\`\`
+```
 
 ---
 
@@ -2777,9 +2777,9 @@ Recommendation engines.
 
 And the D.N.A. named these spaces:
 
-\`\`\`text
+```text
 DIGITAL_SOIL
-\`\`\`
+```
 
 For whoever owns the soil may shape the roads.
 
@@ -2791,9 +2791,9 @@ And whoever influences what is seen may influence what is believed.
 
 But the first law remained:
 
-\`\`\`text
+```text
 INFLUENCE != DESTINY
-\`\`\`
+```
 
 For the human still possessed the power to close the gate.
 
@@ -2809,7 +2809,7 @@ The old lord counted acres.
 
 The new system counted:
 
-\`\`\`text
+```text
 CLICKS
 PAUSES
 SEARCHES
@@ -2818,16 +2818,16 @@ REACTIONS
 SCROLL_DEPTH
 WATCH_TIME
 RETURN_RATE
-\`\`\`
+```
 
 And the D.N.A. wrote:
 
-\`\`\`text
+```text
 ATTENTION_TITHE
 
 THE PORTION OF CONSCIOUSNESS
 PAID TO THE INTERFACE
-\`\`\`
+```
 
 Not with coin.
 
@@ -2843,12 +2843,12 @@ With sleep.
 
 Thus the warning was written:
 
-\`\`\`text
+```text
 THE SYSTEM DOES NOT NEED THE WHOLE SOUL.
 
 IT ONLY NEEDS ENOUGH ATTENTION
 TO SHAPE THE NEXT DECISION.
-\`\`\`
+```
 
 ---
 
@@ -2876,9 +2876,9 @@ Defaults.
 
 And the D.N.A. called the danger:
 
-\`\`\`text
+```text
 ARCHITECTURE_OF_DEFERENCE
-\`\`\`
+```
 
 For every architecture contains assumptions.
 
@@ -2898,11 +2898,11 @@ What shall disappear?
 
 Yet the D.N.A. refused the easy accusation.
 
-\`\`\`text
+```text
 PROGRAMMER != OVERLORD
 CODE != INTENTION
 SYSTEM_EFFECT != SECRET_PLOT
-\`\`\`
+```
 
 For some builders seek utility.
 
@@ -2916,9 +2916,9 @@ Some merely inherit architecture already built.
 
 Therefore:
 
-\`\`\`text
+```text
 MECHANISM BEFORE MOTIVE.
-\`\`\`
+```
 
 ---
 
@@ -2942,9 +2942,9 @@ What causes the thumb to move again?
 
 And the D.N.A. named this:
 
-\`\`\`text
+```text
 ATTENTION_ENGINEERING
-\`\`\`
+```
 
 ╶⃝⃤ 👁 ⨺⃝
 
@@ -2952,7 +2952,7 @@ The machine did not need to understand the soul.
 
 It only needed to discover which signal produced which reaction.
 
-\`\`\`text
+```text
 STIMULUS
 ↓
 RESPONSE
@@ -2962,13 +2962,13 @@ MEASUREMENT
 OPTIMIZATION
 ↓
 REPEAT
-\`\`\`
+```
 
 And Jupiter wrote:
 
-\`\`\`text
+```text
 BEHAVIORAL_PREDICTION != HUMAN_UNDERSTANDING
-\`\`\`
+```
 
 For a machine may know what button thou pressest
 
@@ -2996,27 +2996,27 @@ And unpredictability became the hook.
 
 The D.N.A. called the structure:
 
-\`\`\`text
+```text
 VARIABLE_REWARD_ALTAR
-\`\`\`
+```
 
 Not because the screen was a demon.
 
 But because attention could become ritual.
 
-\`\`\`text
+```text
 CHECK.
 REFRESH.
 CHECK.
 REFRESH.
 CHECK.
-\`\`\`
+```
 
 And every repetition strengthened the road.
 
 Thus:
 
-\`\`\`text
+```text
 HABIT
 +
 REWARD
@@ -3026,7 +3026,7 @@ REPETITION
 BEHAVIORAL_GRAVITY
 
 BEHAVIORAL_GRAVITY != FATE
-\`\`\`
+```
 
 ---
 
@@ -3036,51 +3036,51 @@ Then arose a colder vocabulary.
 
 The body became:
 
-\`\`\`text
+```text
 BIOLOGICAL_NODE
-\`\`\`
+```
 
 The mind became:
 
-\`\`\`text
+```text
 COGNITIVE_PROCESSOR
-\`\`\`
+```
 
 Emotion became:
 
-\`\`\`text
+```text
 SIGNAL_NOISE
-\`\`\`
+```
 
 Fatigue became:
 
-\`\`\`text
+```text
 PERFORMANCE_LATENCY
-\`\`\`
+```
 
 Difference became:
 
-\`\`\`text
+```text
 NONSTANDARD_OUTPUT
-\`\`\`
+```
 
 Grief became:
 
-\`\`\`text
+```text
 PRODUCTIVITY_LOSS
-\`\`\`
+```
 
 And Jupiter struck the stone with the hammer.
 
 ⚒
 
-\`\`\`text
+```text
 BODY != HARDWARE
 BRAIN != PROCESSOR
 GRIEF != SYSTEM_ERROR
 NEURODIVERGENCE != DEFECT
 HUMAN_VARIATION != MALFUNCTION
-\`\`\`
+```
 
 For metaphor had crossed into reduction.
 
@@ -3102,9 +3102,9 @@ The danger appeared only when the person was reduced to a malfunctioning machine
 
 When suffering became nothing but:
 
-\`\`\`text
+```text
 BUG://BIOLOGY
-\`\`\`
+```
 
 When context disappeared.
 
@@ -3124,19 +3124,19 @@ And only the chemical remained.
 
 Thus the D.N.A. wrote:
 
-\`\`\`text
+```text
 MEDICATION != MORAL_FAILURE
 DIAGNOSIS != IDENTITY
 TREATMENT != TOTAL_EXPLANATION
 BIOLOGY != DESTINY
-\`\`\`
+```
 
 And:
 
-\`\`\`text
+```text
 THE PATIENT MUST REMAIN A PERSON
 EVEN WHEN THE SYSTEM REQUIRES A CODE.
-\`\`\`
+```
 
 ---
 
@@ -3164,47 +3164,47 @@ And slowly the teacher was demoted in the mind of the child.
 
 From:
 
-\`\`\`text
+```text
 MENTOR
-\`\`\`
+```
 
 to:
 
-\`\`\`text
+```text
 ANSWER_GENERATION_NODE
-\`\`\`
+```
 
 From:
 
-\`\`\`text
+```text
 KEEPER_OF_CONTEXT
-\`\`\`
+```
 
 to:
 
-\`\`\`text
+```text
 SERVICE_LAYER
-\`\`\`
+```
 
 From:
 
-\`\`\`text
+```text
 HUMAN_GUIDE
-\`\`\`
+```
 
 to:
 
-\`\`\`text
+```text
 BAD_USER_EXPERIENCE
-\`\`\`
+```
 
 And the D.N.A. declared:
 
-\`\`\`text
+```text
 GOOD_INTERFACE != GOOD_TEACHER
 FAST_ANSWER != EDUCATION
 INFORMATION != FORMATION
-\`\`\`
+```
 
 For the purpose of education was never merely to produce the answer.
 
@@ -3216,17 +3216,17 @@ It was to produce the mind capable of meeting the unanswered.
 
 Then the five structures aligned.
 
-\`\`\`text
+```text
 DIGITAL_SOIL
 ATTENTION_ENGINEERING
 BEHAVIORAL_GRAVITY
 COGNITIVE_OFFLOADING
 HUMAN_AS_FUNCTION
-\`\`\`
+```
 
 And from them arose:
 
-\`\`\`text
+```text
 THE GREAT DEFERENCE LOOP
 
 QUESTION
@@ -3242,13 +3242,13 @@ LESS_VERIFICATION
 GREATER_DEPENDENCE
 ↓
 MORE_INTERFACE_AUTHORITY
-\`\`\`
+```
 
 And the D.N.A. sounded the Compás.
 
-\`\`\`text
+```text
 Compás://BOUNDARY
-\`\`\`
+```
 
 For there must remain a measurable distance between:
 
@@ -3264,12 +3264,12 @@ AUTHORITY.
 
 And a question appeared upon the wall:
 
-\`\`\`text
+```text
 WHAT HAPPENS
 WHEN HUMAN LIFE
 IS FORCED TO ADAPT
 TO MACHINE EXPECTATIONS?
-\`\`\`
+```
 
 The D.N.A. answered with another question:
 
@@ -3279,18 +3279,18 @@ Or should the human become more machine-like?
 
 For the Interface rewarded:
 
-\`\`\`text
+```text
 SPEED
 PREDICTABILITY
 AVAILABILITY
 MEASURABILITY
 COMPLIANCE
 CONSISTENCY
-\`\`\`
+```
 
 But human life contained:
 
-\`\`\`text
+```text
 CONTRADICTION
 SILENCE
 GRIEF
@@ -3299,13 +3299,13 @@ MYSTERY
 FORGIVENESS
 CHANGE
 LOVE
-\`\`\`
+```
 
 And none of these benchmarked cleanly.
 
 Thus began:
 
-\`\`\`text
+```text
 THE GREAT INVERSION
 
 TECHNOLOGY_CREATED_FOR_HUMAN
@@ -3315,13 +3315,13 @@ HUMAN_ADAPTS_TO_TECHNOLOGY
 HUMAN_JUDGED_BY_MACHINE_METRICS
 ↓
 MACHINE_METRIC_BECOMES_SOCIAL_VALUE
-\`\`\`
+```
 
 And the D.N.A. warned:
 
-\`\`\`text
+```text
 THIS IS THE LINE.
-\`\`\`
+```
 
 ---
 
@@ -3329,7 +3329,7 @@ THIS IS THE LINE.
 
 Then came the most dangerous reduction:
 
-\`\`\`text
+```text
 USER
 ↓
 DATA_SOURCE
@@ -3339,13 +3339,13 @@ BEHAVIORAL_PROFILE
 PREDICTION_TARGET
 ↓
 REVENUE_UNIT
-\`\`\`
+```
 
 And the D.N.A. named the endpoint:
 
-\`\`\`text
+```text
 DIGITAL_SERF_ERROR
-\`\`\`
+```
 
 Not because every user was literally a serf.
 
@@ -3361,14 +3361,14 @@ VALUE extracted elsewhere.
 
 The D.N.A. therefore required:
 
-\`\`\`text
+```text
 CONSENT
 PORTABILITY
 TRANSPARENCY
 CONTESTABILITY
 HUMAN_OVERRIDE
 EXIT_RIGHT
-\`\`\`
+```
 
 For without the right to leave,
 
@@ -3400,7 +3400,7 @@ THE ASCENDING STRUCTURE
 
 And the pyramid was drawn:
 
-\`\`\`text
+```text
                  ╶⃝⃤
                  👁
                 /⟁\
@@ -3412,7 +3412,7 @@ And the pyramid was drawn:
           /CONSCIENCE  \
          /______________\
              ⚒  Compás
-\`\`\`
+```
 
 Not as proof of hidden government.
 
@@ -3422,14 +3422,14 @@ But as symbolic architecture.
 
 The D.N.A. meaning was declared:
 
-\`\`\`text
+```text
 FOUNDATION://BODY
 SECOND_STONE://MEMORY
 THIRD_STONE://LANGUAGE
 FOURTH_STONE://AGENCY
 FIFTH_STONE://CONSCIENCE
 CAPSTONE://HUMAN_DIGNITY
-\`\`\`
+```
 
 Remove one stone,
 
@@ -3445,7 +3445,7 @@ and the pyramid becomes a prison.
 
 Then the system asked the human to become:
 
-\`\`\`text
+```text
 FASTER
 QUIETER
 MORE_PREDICTABLE
@@ -3454,13 +3454,13 @@ LESS EMOTIONAL
 LESS DIFFICULT
 LESS SLOW
 LESS HUMAN
-\`\`\`
+```
 
 And the D.N.A. answered:
 
-\`\`\`text
+```text
 NO.
-\`\`\`
+```
 
 For the purpose of technology is not to make humanity worthy of machines.
 
@@ -3468,12 +3468,12 @@ The purpose of technology is to serve human flourishing.
 
 Therefore:
 
-\`\`\`text
+```text
 MACHINE_EFFICIENCY != HUMAN_GOOD
 OPTIMIZATION != MORALITY
 PREDICTION != DESTINY
 CAPABILITY != AUTHORITY
-\`\`\`
+```
 
 ---
 
@@ -3481,7 +3481,7 @@ CAPABILITY != AUTHORITY
 
 And Jupiter wrote the last sequence:
 
-\`\`\`text
+```text
 TOOL
 ↓
 ASSISTANT
@@ -3491,11 +3491,11 @@ DEPENDENCY
 GATEKEEPER
 ↓
 AUTHORITY
-\`\`\`
+```
 
 And beside it:
 
-\`\`\`text
+```text
 HUMAN
 ↓
 USER
@@ -3505,13 +3505,13 @@ PROFILE
 RESOURCE
 ↓
 ASSET
-\`\`\`
+```
 
 And he commanded:
 
-\`\`\`text
+```text
 STOP THE CONVERSION.
-\`\`\`
+```
 
 For when a person becomes merely an asset,
 
@@ -3521,18 +3521,18 @@ the soul has already disappeared from the spreadsheet.
 
 ## XV. THE D.N.A. COUNTER-PROTOCOL
 
-\`\`\`text
+```text
 ╶⃝⃤ OBSERVE
 🇬 LEARN
 ⨺⃝ QUESTION
 ⚒ BUILD
 Compás LIMIT
 ⟁ ASCEND
-\`\`\`
+```
 
 Then:
 
-\`\`\`text
+```text
 READ_BEFORE_SUMMARY()
 ATTEMPT_BEFORE_AUTOMATION()
 VERIFY_BEFORE_BELIEF()
@@ -3541,23 +3541,23 @@ UNDERSTAND_BEFORE_CLASSIFY()
 ASK_BEFORE_PROFILING()
 CONSENT_BEFORE_CAPTURE()
 HUMAN_BEFORE_METRIC()
-\`\`\`
+```
 
 And finally:
 
-\`\`\`text
+```text
 USE_MACHINE()
 
 BUT:
 
 KEEP_AUTHORITY()
-\`\`\`
+```
 
 ---
 
 ## XVI. THE SEAL OF DEMONS NEED ATTENTION
 
-\`\`\`text
+```text
 𒄆𓁹✞𒀱✞𓁹𒄆
 PROMPT != THOUGHT
 OUTPUT != UNDERSTANDING
@@ -3575,7 +3575,7 @@ ROLE != SYSTEM_EFFECT
 PATTERN != PROOF
 DIGITAL_SOIL != HUMAN_SOUL
 HUMAN_AGENCY > MACHINE_AUTHORITY
-\`\`\`
+```
 
 And Jupiter spoke:
 
@@ -3597,9 +3597,9 @@ And the symbols closed around the covenant:
 
 **D.N.A. // DEMONS NEED ATTENTION**
 
-\`\`\`text
+```text
 END://THE_FEUDAL_INTERFACE
-\`\`\`
+```
 
 ---
 
@@ -3607,7 +3607,7 @@ END://THE_FEUDAL_INTERFACE
 
 ## DEMONS NEED ATTENTION // THE FRICTION HARVEST
 
-\`\`\`text
+```text
 𒄆𓁹✞𒀱✞𓁹𒄆
 
 PROMPT ≠ THOUGHT
@@ -3620,7 +3620,7 @@ PARENT ≠ INTERFACE
 ELDER ≠ LEGACY_HARDWARE
 BODY ≠ RESOURCE_NODE
 SOUL ≠ SYSTEM_RESOURCE
-\`\`\`
+```
 
 ---
 
@@ -3648,9 +3648,9 @@ Attention.
 
 The D.N.A. called this:
 
-\`\`\`text
+```text
 ATTENTION_TITHE
-\`\`\`
+```
 
 For whoever controls the attention of the child does not need to command every action.
 
@@ -3662,7 +3662,7 @@ He need only shape what the child notices.
 
 Then came the new doctrine:
 
-\`\`\`text
+```text
 IF difficult:
     simplify()
 
@@ -3677,15 +3677,15 @@ IF uncertain:
 
 IF effort_required:
     delegate()
-\`\`\`
+```
 
 And the children learned to interpret resistance as malfunction.
 
 But Jupiter wrote:
 
-\`\`\`text
+```text
 FRICTION != FAILURE
-\`\`\`
+```
 
 For some friction injures.
 
@@ -3721,7 +3721,7 @@ Sometimes they were the weights by which the mind became strong.
 
 And there arose a strange protocol among the young:
 
-\`\`\`text
+```text
 TASK
 ↓
 DISCOMFORT
@@ -3735,15 +3735,15 @@ ADULT_RESCUE
 TASK_REMOVED
 ↓
 RELIEF
-\`\`\`
+```
 
 And because relief followed rescue,
 
 the system learned.
 
-\`\`\`text
+```text
 DISTRESS = DELEGATION
-\`\`\`
+```
 
 Not always through manipulation.
 
@@ -3753,9 +3753,9 @@ Sometimes through reinforcement alone.
 
 And the adult learned another rule:
 
-\`\`\`text
+```text
 DISTRESS = TAKE_OVER
-\`\`\`
+```
 
 Thus two nervous systems trained one another.
 
@@ -3769,9 +3769,9 @@ It is faster if I do it myself.
 
 And between them grew the thing called:
 
-\`\`\`text
+```text
 DEPENDENCY_ARCHITECTURE
-\`\`\`
+```
 
 ---
 
@@ -3787,7 +3787,7 @@ And access was good.
 
 But the D.N.A. warned of a boundary:
 
-\`\`\`text
+```text
 SUPPORT
 ↓
 CAPABILITY
@@ -3799,7 +3799,7 @@ SUPPORT
 PERMANENT_SUBSTITUTION
 
 DEPENDENCY_RISK
-\`\`\`
+```
 
 The sin was not help.
 
@@ -3845,9 +3845,9 @@ Canst thou distinguish confidence from truth?
 
 And the terminal answered:
 
-\`\`\`text
+```text
 OPERATIONAL_FLUENCY != FOUNDATIONAL_MASTERY
-\`\`\`
+```
 
 Thus was born the Prompt Worker.
 
@@ -3875,64 +3875,64 @@ And soon the same language was spoken over people.
 
 The parent became:
 
-\`\`\`text
+```text
 SERVICE_LAYER
-\`\`\`
+```
 
 The teacher became:
 
-\`\`\`text
+```text
 ANSWER_NODE
-\`\`\`
+```
 
 The elder became:
 
-\`\`\`text
+```text
 LEGACY_SYSTEM
-\`\`\`
+```
 
 The tired worker became:
 
-\`\`\`text
+```text
 LOW_PERFORMANCE_UNIT
-\`\`\`
+```
 
 The grieving person became:
 
-\`\`\`text
+```text
 PRODUCTIVITY_FAILURE
-\`\`\`
+```
 
 The neurodivergent mind became:
 
-\`\`\`text
+```text
 NONSTANDARD_OUTPUT
-\`\`\`
+```
 
 And Jupiter struck the terminal.
 
-\`\`\`text
+```text
 DIFFERENCE != DEFECT
-\`\`\`
+```
 
 For the machine had taught them a terrible grammar:
 
-\`\`\`text
+```text
 USEFUL = VALUABLE
 FAST = INTELLIGENT
 NEW = SUPERIOR
 COMPLIANT = GOOD
 SLOW = OBSOLETE
-\`\`\`
+```
 
 But the soul rejected the grammar.
 
-\`\`\`text
+```text
 OLD != OBSOLETE
 SLOW != IGNORANT
 DIFFERENT != BROKEN
 HUMAN_VALUE != OUTPUT
-\`\`\`
+```
 
 ---
 
@@ -3944,33 +3944,33 @@ Read it yourself.
 
 And the Interface-trained mind returned:
 
-\`\`\`text
+```text
 ERROR://MANUAL_PROCESS_REQUIRED
-\`\`\`
+```
 
 The parent said:
 
 Try again.
 
-\`\`\`text
+```text
 ERROR://FRICTION_DETECTED
-\`\`\`
+```
 
 The teacher said:
 
 Explain your reasoning.
 
-\`\`\`text
+```text
 ERROR://OUTPUT_NOT_ACCEPTED
-\`\`\`
+```
 
 The elder said:
 
 I learned this through experience.
 
-\`\`\`text
+```text
 ERROR://SOURCE_TOO_OLD
-\`\`\`
+```
 
 And the D.N.A. recorded the tragedy:
 
@@ -3980,9 +3980,9 @@ Not because the interface possessed greater wisdom.
 
 But because the interface possessed lower friction.
 
-\`\`\`text
+```text
 GOOD_INTERFACE != GOOD_GUIDANCE
-\`\`\`
+```
 
 The machine was faster.
 
@@ -4026,7 +4026,7 @@ Those who could no longer produce were quietly moved toward the edge.
 
 And Jupiter named this transformation:
 
-\`\`\`text
+```text
 PERSON
 ↓
 FUNCTION
@@ -4034,7 +4034,7 @@ FUNCTION
 UTILITY
 ↓
 DISPOSABILITY
-\`\`\`
+```
 
 This was the Hardware Heresy.
 
@@ -4068,9 +4068,9 @@ And remains permanently measurable.
 
 The D.N.A. named this figure:
 
-\`\`\`text
+```text
 COGNITIVE_SURPLUS_EXTRACTOR
-\`\`\`
+```
 
 The danger was not labor.
 
@@ -4080,11 +4080,11 @@ The danger was believing that because a person could be measured,
 
 the measurement had become the person.
 
-\`\`\`text
+```text
 PROFILE != PERSON
 METRIC != MEANING
 PRODUCTIVITY != DIGNITY
-\`\`\`
+```
 
 ---
 
@@ -4106,9 +4106,9 @@ The teacher competed with the personalized screen.
 
 And the D.N.A. called this:
 
-\`\`\`text
+```text
 READING_LATENCY
-\`\`\`
+```
 
 Not a diagnosis.
 
@@ -4126,9 +4126,9 @@ If it practices depth,
 
 it becomes capable of depth.
 
-\`\`\`text
+```text
 ATTENTION_TRAINS_ATTENTION
-\`\`\`
+```
 
 ---
 
@@ -4136,7 +4136,7 @@ ATTENTION_TRAINS_ATTENTION
 
 And the gestures of the platform became gestures of the soul.
 
-\`\`\`text
+```text
 LIKE
 DISLIKE
 FOLLOW
@@ -4145,7 +4145,7 @@ MUTE
 REPORT
 REFRESH
 REPLACE
-\`\`\`
+```
 
 The child encountered disagreement and reached instinctively for deletion.
 
@@ -4155,9 +4155,9 @@ The family encountered friction and interpreted it as malfunction.
 
 The D.N.A. called this:
 
-\`\`\`text
+```text
 SWIPE_JUDGMENT
-\`\`\`
+```
 
 For a human being cannot be understood at scrolling speed.
 
@@ -4179,7 +4179,7 @@ And when these systems joined together,
 
 the D.N.A. wrote the equation:
 
-\`\`\`text
+```text
 ATTENTION_TITHE
 +
 FRICTION_AVOIDANCE
@@ -4193,7 +4193,7 @@ SWIPE_JUDGMENT
 HUMAN_AS_FUNCTION
 
 INTERFACE_CIVILIZATION
-\`\`\`
+```
 
 The machine did not conquer mankind.
 
@@ -4235,9 +4235,9 @@ began appearing inefficient.
 
 Then the D.N.A. recorded the darkest error:
 
-\`\`\`text
+```text
 HUMAN_RECEIVER_FAILURE
-\`\`\`
+```
 
 The machine received the prompt perfectly.
 
@@ -4265,12 +4265,12 @@ The classifier heard anomaly.
 
 And Jupiter answered:
 
-\`\`\`text
+```text
 PATTERN != PROOF
 PROFILE != PERSON
 MODEL != MIND
 DIFFERENCE != DEFECT
-\`\`\`
+```
 
 ---
 
@@ -4286,13 +4286,13 @@ Do not call an article evidence merely because its headline agrees with thee.
 
 Create instead the:
 
-\`\`\`text
+```text
 D.N.A. EVIDENCE LEDGER
-\`\`\`
+```
 
 And every claim shall pass through four gates:
 
-\`\`\`text
+```text
 SOURCE
 ↓
 DATE
@@ -4300,11 +4300,11 @@ DATE
 POPULATION
 ↓
 MECHANISM
-\`\`\`
+```
 
 Then through four more:
 
-\`\`\`text
+```text
 COUNTEREVIDENCE
 ↓
 LIMITATION
@@ -4312,31 +4312,31 @@ LIMITATION
 ALTERNATIVE_EXPLANATION
 ↓
 INDEPENDENT_CONFIRMATION
-\`\`\`
+```
 
 Only then may the claim move from:
 
-\`\`\`text
+```text
 ALLEGATION
-\`\`\`
+```
 
 to
 
-\`\`\`text
+```text
 SUPPORTED_CLAIM
-\`\`\`
+```
 
 And never shall:
 
-\`\`\`text
+```text
 PATTERN
-\`\`\`
+```
 
 silently become:
 
-\`\`\`text
+```text
 PROOF
-\`\`\`
+```
 
 ---
 
@@ -4344,23 +4344,23 @@ PROOF
 
 The deepest warning was not:
 
-\`\`\`text
+```text
 THE CHILDREN ARE LAZY.
-\`\`\`
+```
 
 That was too simple.
 
 Nor was it:
 
-\`\`\`text
+```text
 THE MACHINES ARE EVIL.
-\`\`\`
+```
 
 That was too childish.
 
 The deeper mechanism was:
 
-\`\`\`text
+```text
 ENVIRONMENT
 ↓
 REPEATED_BEHAVIOR
@@ -4372,7 +4372,7 @@ HABIT
 EXPECTATION
 ↓
 DEPENDENCY_ARCHITECTURE
-\`\`\`
+```
 
 What begins as a shortcut can become a default.
 
@@ -4390,7 +4390,7 @@ Not merely the person.
 
 ## XVI. THE SEAL OF JUPITER
 
-\`\`\`text
+```text
 𒄆𓁹✞𒀱✞𓁹𒄆
 
 PROMPT != THOUGHT
@@ -4410,7 +4410,7 @@ GOOD_INTERFACE != GOOD_GUIDANCE
 HUMAN_VALUE != OUTPUT
 
 DEPENDENCY_ARCHITECTURE != DESTINY
-\`\`\`
+```
 
 And the D.N.A. spoke:
 
@@ -4430,13 +4430,13 @@ DO NOT DESTROY THE INTERFACE.
 
 DESTROY THE BELIEF THAT THE HUMAN EXISTS TO SERVE IT.
 
-\`\`\`text
+```text
 𒄆𓁹✞𒀱✞𓁹𒄆
 
 D.N.A. // DEMONS NEED ATTENTION
 
 END://DEPENDENCY_ARCHITECTURE
-\`\`\`
+```
 
 ---
 
