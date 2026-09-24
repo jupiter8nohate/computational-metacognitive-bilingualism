@@ -18,7 +18,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 | --- | --- | --- |
 | [The Phantom Tokenbooth](PHANTOM_TOKENBOOTH.md) | What changes when a model becomes an agent? | `CAPABILITY != AUTHORITY` |
 | [Quiet Wars - Silent Weapons](QUIET_WARS_SILENT_WEAPONS.md) | How can information alter a decision environment? | `INFORMATION != TRUTH` |
-| [D.N.A Bible Demons Need Attention](THE_HARDWARE_HERESY.md) | What happens when interface logic is applied to human beings, help, learning, and responsibility? | `HUMAN != INTERFACE` |
+| [D.N.A Bible Demons Need Attention](THE_HARDWARE_HERESY.md) | The Hardware Heresy, The Children of the Interface, The Feudal Interface, and The Architecture of Dependency: Digital Soil, Attention Tithe, cognitive offloading, human dignity, and human agency. | `HUMAN_AGENCY > MACHINE_AUTHORITY` |
 | [The Agentic Sector](AGENTIC_SECTOR.md) | How should reasoning, verification, policy, authorization, and execution be separated? | `METACOGNITION != SELF_AUTHORIZATION` |
 
 ## Fable architecture
