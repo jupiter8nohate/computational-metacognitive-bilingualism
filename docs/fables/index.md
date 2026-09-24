@@ -18,6 +18,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 | --- | --- | --- |
 | [The Phantom Tokenbooth](PHANTOM_TOKENBOOTH.md) | What changes when a model becomes an agent? | `CAPABILITY != AUTHORITY` |
 | [Quiet Wars - Silent Weapons](QUIET_WARS_SILENT_WEAPONS.md) | How can information alter a decision environment? | `INFORMATION != TRUTH` |
+| [The Hardware Heresy](THE_HARDWARE_HERESY.md) | What happens when interface logic is applied to human beings, help, learning, and responsibility? | `HUMAN != INTERFACE` |
 | [The Agentic Sector](AGENTIC_SECTOR.md) | How should reasoning, verification, policy, authorization, and execution be separated? | `METACOGNITION != SELF_AUTHORIZATION` |
 
 ## Fable architecture
@@ -30,6 +31,12 @@ AGENTIC CAPABILITY
         |
         v
 QUIET WARS
+        |
+        v
+THE HARDWARE HERESY
+        |
+        v
+HUMAN-AS-INTERFACE FAILURE
         |
         v
 ADVERSARIAL INFORMATION
