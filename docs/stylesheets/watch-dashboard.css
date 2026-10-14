@@ -1,0 +1,13 @@
+.cmb-observatory { margin: 1rem 0; }
+.cmb-observatory-metrics { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: .65rem; }
+.cmb-observatory-metrics > div, .cmb-observatory-results > article { border: 1px solid currentColor; padding: .75rem; margin-bottom: .6rem; overflow-wrap: anywhere; }
+.cmb-observatory-metrics strong { display: block; font-size: 1.15rem; overflow-wrap: anywhere; }
+.cmb-observatory-metrics span { display: block; font-size: .8rem; opacity: .82; }
+.cmb-observatory-filters { display: flex; gap: 1rem; flex-wrap: wrap; padding: 1rem 0; }
+.cmb-observatory-filters label { display: flex; flex-direction: column; gap: .25rem; flex: 1; min-width: 160px; }
+.cmb-observatory-filters select,.cmb-observatory-filters input { min-height: 2.6rem; padding: .4rem; max-width: 100%; }
+.cmb-observatory-results > article h3 { font-size: 1.05rem; margin: 0 0 .4rem; }
+.cmb-observatory-results > article small { display: block; margin-top: .5rem; }
+.cmb-observatory-chart > div { display: grid; grid-template-columns: 90px minmax(60px,1fr) 40px; gap: .4rem; align-items: center; margin: .3rem 0; font-size: .75rem; }
+.cmb-observatory-bar { min-height: .75rem; background: currentColor; opacity: .6; }
+.cmb-observatory-warning { border: 2px solid #b45309; padding: .7rem; font-weight: bold; }
