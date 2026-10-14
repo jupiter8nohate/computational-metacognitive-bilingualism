@@ -219,21 +219,39 @@
     "PATTERN != PROOF",
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
   ],
-  "published_link_limit": 10,
+  "published_link_limit": 12,
   "published_links_per_domain": 2,
   "fallback_feeds": [
     {
       "name": "BBC News Technology",
-      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "publisher_region": "Europe"
     },
     {
       "name": "TechCrunch AI",
-      "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "publisher_region": "North America"
     },
     {
       "name": "Ars Technica AI",
-      "url": "https://arstechnica.com/ai/feed/"
+      "url": "https://arstechnica.com/ai/feed/",
+      "publisher_region": "North America"
+    },
+    {
+      "name": "The Guardian AI",
+      "url": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
+      "publisher_region": "Europe"
+    },
+    {
+      "name": "South China Morning Post Technology",
+      "url": "https://www.scmp.com/rss/36/feed",
+      "publisher_region": "Asia"
+    },
+    {
+      "name": "Al Jazeera English",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "publisher_region": "Middle East"
     }
   ],
-  "fallback_max_age_hours": 120
+  "fallback_max_age_hours": 72
 }
