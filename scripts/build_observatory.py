@@ -135,6 +135,7 @@ def record_snapshot(history: dict, snapshot: dict, *, stale: bool) -> bool:
     payload = {
         "collected_at": collected_at,
         "source_name": snapshot["source"]["name"],
+        "timespan": snapshot["timespan"],
         "article_count": len(slim),
         "articles": slim,
         "previous_hash": entries[-1]["hash"] if entries else GENESIS,
