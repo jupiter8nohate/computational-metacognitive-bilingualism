@@ -49,7 +49,7 @@ def parse_time(value: str) -> datetime:
 
 
 def new_history() -> dict:
-    return {"schema_version": "cmb.watch-history.v1", "entries": []}
+    return {"schema_version": "cmb.watch-history.v1", "genesis_hash": GENESIS, "total_collections": 0, "entries": []}
 
 
 def check_history(history: dict) -> None:
@@ -58,7 +58,10 @@ def check_history(history: dict) -> None:
     records = history.get("entries")
     if not isinstance(records, list):
         raise ObservatoryError("History entries must be an array")
-    previous = GENESIS
+    previous = history.get("genesis_hash", GENESIS)
+    if (not isinstance(previous, str) or len(previous) != 64 or
+            any(ch not in "0123456789abcdef" for ch in previous)):
+        raise ObservatoryError("Invalid public history checkpoint hash")
     last_date = None
     for record in records:
         if not isinstance(record, dict):
@@ -118,8 +121,6 @@ def record_snapshot(history: dict, snapshot: dict, *, stale: bool) -> bool:
         if current <= last:
             # Replaying a previous collection must not produce a new archive claim.
             return False
-    if len(entries) >= 20000:
-        raise ObservatoryError("History exceeds capacity; archive migration required")
     slim = [
         {
             "id": article["id"],
@@ -141,6 +142,10 @@ def record_snapshot(history: dict, snapshot: dict, *, stale: bool) -> bool:
         "previous_hash": entries[-1]["hash"] if entries else GENESIS,
     }
     entries.append({**payload, "hash": digest(payload)})
+    history["total_collections"] = int(history.get("total_collections", len(entries) - 1)) + 1
+    if len(entries) > 360:
+        removed = entries.pop(0)
+        history["genesis_hash"] = removed["hash"]
     return True
 
 
@@ -184,7 +189,7 @@ def health_report(snapshot: dict, history: dict, *, stale: bool, target_minutes:
         "news_source": snapshot["source"]["name"],
         "article_count": len(snapshot["articles"]),
         "publisher_domain_count": len({a["domain"] for a in snapshot["articles"]}),
-        "archived_collections": len(history["entries"]),
+        "archived_collections": int(history.get("total_collections", len(history["entries"]))),
         "alert_required": age_minutes >= 360,
         "freshness_is_not_fact_checking": True,
     }
