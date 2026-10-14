@@ -255,6 +255,11 @@ def build_site(destination: Path) -> tuple[int, int]:
         )
         stage_public_assets(stage)
         counts = check_site(stage)
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts/check_search_discovery.py"),
+             "--site-dir", str(stage)],
+            cwd=ROOT, check=True,
+        )
         (stage / BUILD_MARKER).write_text("CMB documentation build\n", encoding="utf-8")
         # The previous local build survives until the new bundle passes validation.
         if destination.exists():
