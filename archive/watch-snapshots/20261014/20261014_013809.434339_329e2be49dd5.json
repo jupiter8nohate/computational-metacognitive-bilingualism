@@ -1,0 +1,140 @@
+{
+  "collected_at": "2026-10-14T01:38:09.434339Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 10,
+  "articles": [
+    {
+      "id": "b5ca992deee23a2d",
+      "title": "Industrial Next wants factory robots to switch tasks in minutes, not weeks",
+      "url": "https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-13T23:00:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "31cc9279f5055123",
+      "title": "Man City vs PSG: Champions League – teams, predictions, line ups",
+      "url": "https://www.aljazeera.com/sports/2026/10/13/manchester-city-psg-champions-league-haaland-torres-predictions-teams?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-13T22:17:26Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "07ce7d4bc28fcc30",
+      "title": "Surveillance video shows moment ICE vehicle strikes man in Houston",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/13/surveillance-video-shows-moment-ice-vehicle-strikes-man-in-houston?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-13T21:03:40Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "9452f98968f0cc70",
+      "title": "Disney offers $20M for Character.AI’s scandal-plagued chatbot tech",
+      "url": "https://arstechnica.com/tech-policy/2026/10/disney-offers-20m-for-character-ais-scandal-plagued-chatbot-tech/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-13T18:23:33Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "a982f604a503ccf2",
+      "title": "Laplace Intelligence red-teams robots and self-driving cars before they hit the real world",
+      "url": "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-13T17:30:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "7f3e1417d1dd4834",
+      "title": "AFL tells Sportsbet to stop using players in AI-generated content",
+      "url": "https://www.theguardian.com/australia-news/2026/oct/14/afl-tells-sportsbet-to-stop-using-players-in-ai-generated-content",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-13T14:00:06Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "c924c3d574bffae9",
+      "title": "The people who don’t want their AI chatbots to die when they do: ‘I can’t have the switch turned off’",
+      "url": "https://www.theguardian.com/technology/ng-interactive/2026/oct/13/ai-chatbot-death-plans",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-13T10:00:04Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "48ec211ad07235a1",
+      "title": "OpenAI’s GPT-6 may lead to robotics breakthrough  as soon as next year: Unitree founder",
+      "url": "https://www.scmp.com/tech/big-tech/article/3370603/openais-gpt-6-may-lead-robotics-breakthrough-soon-next-year-unitree-founder?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-12T13:30:07Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "1a1dd2abd44c6c33",
+      "title": "Amazon has over 1 million robot workers. What’s next for human employees?",
+      "url": "https://arstechnica.com/ai/2026/10/inside-amazons-robotic-arms-race-and-what-it-means-for-the-future-of-human-work/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-12T12:43:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "7464dc967e18e8c0",
+      "title": "Former HSBC executive launches wealth platform powered by team of AI agents",
+      "url": "https://www.scmp.com/business/money/wealth/article/3370565/former-hsbc-executive-launches-wealth-platform-powered-team-ai-agents?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-12T09:00:09Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "hash": "329e2be49dd5acf3cf1b4425759e44d03050909002f2b7f9c3877e398b7124f1"
+}
