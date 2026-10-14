@@ -226,3 +226,105 @@ def test_curated_seed_is_exactly_ten_links_only() -> None:
         assert not forbidden.intersection(item)
         assert item["url"].startswith("https://")
         assert item["cmb"]
+
+
+
+def test_rss_backup_collects_recent_direct_publisher_links(monkeypatch) -> None:
+    import io
+    from datetime import datetime, timedelta, timezone
+    from email.utils import format_datetime
+
+    published = format_datetime(datetime.now(timezone.utc) - timedelta(minutes=35))
+    feed_xml = (
+        "<rss><channel><item>"
+        "<title>AI agent surveillance raises privacy concerns</title>"
+        "<link>https://publisher.example/ai-story</link>"
+        f"<pubDate>{published}</pubDate>"
+        "</item></channel></rss>"
+    ).encode("utf-8")
+
+    class Response(io.BytesIO):
+        status = 200
+
+    def open_feed(request, timeout):
+        assert request.full_url == "https://publisher.example/feed.xml"
+        return Response(feed_xml)
+
+    fetch = WATCH["fetch_rss_articles"]
+    monkeypatch.setitem(fetch.__globals__, "urlopen", open_feed)
+    config = dict(CONFIG)
+    config["fallback_feeds"] = [
+        {"name": "Test AI Publisher", "url": "https://publisher.example/feed.xml"}
+    ]
+    articles, feeds = fetch(config)
+    assert feeds == config["fallback_feeds"]
+    assert len(articles) == 1
+    assert articles[0]["url"] == "https://publisher.example/ai-story"
+    assert {"PREDICT", "ACT"}.issubset(set(articles[0]["boundary_ids"]))
+
+
+def test_rss_backup_does_not_relabel_old_news_as_current(monkeypatch) -> None:
+    import io
+    from datetime import datetime, timedelta, timezone
+    from email.utils import format_datetime
+
+    old_date = format_datetime(datetime.now(timezone.utc) - timedelta(days=20))
+    content = (
+        "<rss><channel><item><title>AI agent privacy report</title>"
+        "<link>https://publisher.example/old</link>"
+        f"<pubDate>{old_date}</pubDate></item></channel></rss>"
+    ).encode("utf-8")
+
+    class Response(io.BytesIO):
+        status = 200
+
+    fetch = WATCH["fetch_rss_articles"]
+    monkeypatch.setitem(fetch.__globals__, "urlopen", lambda request, timeout: Response(content))
+    config = dict(CONFIG)
+    config["fallback_feeds"] = [
+        {"name": "Test", "url": "https://publisher.example/feed.xml"}
+    ]
+    import pytest
+
+    with pytest.raises(WATCH["WatchError"], match="No recent"):
+        fetch(config)
+
+
+def test_fallback_keeps_newer_published_snapshot(monkeypatch, tmp_path: Path) -> None:
+    import io
+    from datetime import datetime, timedelta, timezone
+
+    old_snapshot = json.loads(
+        (ROOT / "machine/global-ai-watch.json").read_text(encoding="utf-8")
+    )
+    new_snapshot = json.loads(json.dumps(old_snapshot))
+    new_snapshot["generated_at"] = (
+        datetime.now(timezone.utc) - timedelta(minutes=45)
+    ).isoformat().replace("+00:00", "Z")
+    local_path = tmp_path / "local.json"
+    local_path.write_text(json.dumps(old_snapshot), encoding="utf-8")
+
+    class Response(io.BytesIO):
+        status = 200
+
+    recover = WATCH["best_available_snapshot"]
+    monkeypatch.setitem(
+        recover.__globals__,
+        "urlopen",
+        lambda request, timeout: Response(json.dumps(new_snapshot).encode("utf-8")),
+    )
+    result = recover(local_path)
+    assert result["generated_at"] == new_snapshot["generated_at"]
+    assert result["articles"] == new_snapshot["articles"]
+
+
+def test_stale_marker_displays_last_collection_time() -> None:
+    data = json.loads(
+        (ROOT / "machine/global-ai-watch.json").read_text(encoding="utf-8")
+    )
+    result = WATCH["render_generated_block"](
+        data, CONFIG, state="STALE - LIVE SOURCES UNAVAILABLE"
+    )
+    assert "cmb-watch-stale" in result
+    assert "STALE - LIVE SOURCES UNAVAILABLE" in result
+    assert "2026-09-23" in result
