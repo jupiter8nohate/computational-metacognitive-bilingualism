@@ -79,7 +79,7 @@ def render(scroll: dict) -> str:
         "allegories inspired by news headline metadata. It is not an AI language",
         "model, independent journalism, a fact-checker, or a prophecy.",
         "",
-        "**The original D.N.A. Bible remains human-authored and protected.**",
+        "**The human-authored D.N.A. Bible remains protected.**",
         "These machine-generated reflections are noncanonical; they never",
         "rewrite the human author's work or become factual evidence.",
         "",
@@ -116,8 +116,8 @@ def render(scroll: dict) -> str:
             "",
         ])
     result.extend([
-        "[Machine-readable Codex](../machine/dna-living-codex.json)"
-        " | [Global AI Watch](../GLOBAL_AI_WATCH/)",
+        "[Machine-readable Codex](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/dna-living-codex.json)"
+        " | [Global AI Watch](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/)",
         "",
         "*The canonical human author retains authority over the D.N.A. Bible.*",
         "",
