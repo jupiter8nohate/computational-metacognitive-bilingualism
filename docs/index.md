@@ -87,7 +87,7 @@
 
 <h1 id="computational-metacognitive-bilingualism">Computational Metacognitive Bilingualism</h1>
 
-<p>CMB is a human-agency and computational-literacy framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.</p>
+<p>Created by Jupiter Hudson (WisdomLoveThePoet / Jupiter 8), Computational Metacognitive Bilingualism (CMB) is a code-poetry, AI-literacy, and digital-rights framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.</p>
 
 <div class="cmb-invariants">
 <span class="cmb-meta">PATTERN ≠ PROOF</span><br>
