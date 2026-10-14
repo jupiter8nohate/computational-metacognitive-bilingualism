@@ -540,10 +540,11 @@ def render_generated_block(
 ) -> str:
     articles = data["articles"]
     generated = human_seen(data["generated_at"])
+    status_class = "cmb-watch-status cmb-watch-stale" if state.startswith("STALE") else "cmb-watch-status"
     return "\n\n".join(
         [
             (
-                '<div id="cmb-watch-status" class="cmb-watch-status">'
+                f'<div id="cmb-watch-status" class="{status_class}">'
                 f"{html.escape(state)} // last collected {generated} // {len(articles)} outbound sources"
                 "</div>"
             ),
