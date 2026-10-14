@@ -26,7 +26,7 @@ It is not a real-time stream or an independent verification service.
 whether the claim is true. Source-country information is not assumed from a
 publisher's headquarters, and sources do not endorse CMB by appearing here.
 
-[Machine health](../machine/global-ai-watch-health.json) |
-[Public history](../machine/global-ai-watch-history.json) |
-[Source assessments](../machine/global-ai-watch-assessments.json) |
-[D.N.A. Living Codex](../DNA_LIVING_CODEX/)
+[Machine health](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-health.json) |
+[Public history](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-history.json) |
+[Source assessments](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-assessments.json) |
+[D.N.A. Living Codex](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DNA_LIVING_CODEX/)
