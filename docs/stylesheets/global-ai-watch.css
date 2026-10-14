@@ -13,6 +13,12 @@
   overflow-wrap: anywhere;
 }
 
+.cmb-watch-status.cmb-watch-stale {
+  border-color: #b45309;
+  border-width: 2px;
+  font-weight: 700;
+}
+
 .cmb-watch-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));

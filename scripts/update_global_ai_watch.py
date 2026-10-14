@@ -14,7 +14,9 @@ import json
 import re
 import sys
 import time
-from datetime import datetime, timezone
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -28,6 +30,7 @@ DEFAULT_DOC = ROOT / "docs/GLOBAL_AI_WATCH.md"
 DEFAULT_JSON = ROOT / "machine/global-ai-watch.json"
 START_MARKER = "<!-- CMB_GLOBAL_AI_WATCH_GENERATED_START -->"
 END_MARKER = "<!-- CMB_GLOBAL_AI_WATCH_GENERATED_END -->"
+PUBLIC_SNAPSHOT = "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch.json"
 USER_AGENT = (
     "CMB-Global-AI-Watch/1.0 "
     "(+https://github.com/jupiter8nohate/computational-metacognitive-bilingualism)"
@@ -326,6 +329,150 @@ def fetch_gdelt(config: dict[str, Any], *, timeout: float = 20.0, attempts: int 
     raise WatchError(f"GDELT fetch failed after {attempts} attempts: {last_error}")
 
 
+def fetch_rss_articles(
+    config: dict[str, Any], *, timeout: float = 12.0
+) -> tuple[list[dict[str, Any]], list[dict[str, str]]]:
+    """Use direct publisher RSS headlines when GDELT is rate-limited.
+
+    Only recent, source-linked metadata is retained; we never copy article bodies.
+    Every feed is optional, so a single publisher outage cannot stop the watch.
+    """
+    now = datetime.now(timezone.utc)
+    max_age = timedelta(hours=int(config.get("fallback_max_age_hours", 120)))
+    samples: list[dict[str, Any]] = []
+    active_feeds: list[dict[str, str]] = []
+    failures: list[str] = []
+
+    for feed in config.get("fallback_feeds", []):
+        name, url = str(feed["name"]), str(feed["url"])
+        if urlsplit(url).scheme != "https":
+            failures.append(f"{name}: non-HTTPS feed")
+            continue
+        request = Request(
+            url,
+            headers={
+                "Accept": "application/rss+xml, application/xml, text/xml",
+                "User-Agent": USER_AGENT,
+            },
+        )
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                if response.status != 200:
+                    raise WatchError(f"HTTP {response.status}")
+                xml_bytes = response.read(2_000_001)
+            if len(xml_bytes) > 2_000_000:
+                raise WatchError("RSS feed exceeds 2 MB")
+            document = ET.fromstring(xml_bytes)
+            candidates = document.findall("./channel/item")
+            if not candidates:
+                raise WatchError("RSS contains no channel items")
+        except (OSError, ValueError, ET.ParseError, WatchError) as exc:
+            failures.append(f"{name}: {exc}")
+            continue
+
+        valid_count = 0
+        for item in candidates:
+            title = (item.findtext("title") or "").strip()
+            link = (item.findtext("link") or "").strip()
+            raw_date = (item.findtext("pubDate") or "").strip()
+            if not title or normalized_url(link) is None or not raw_date:
+                continue
+            try:
+                published = parsedate_to_datetime(raw_date)
+            except (ValueError, TypeError, IndexError):
+                continue
+            if published.tzinfo is None:
+                published = published.replace(tzinfo=timezone.utc)
+            published = published.astimezone(timezone.utc)
+            if not (now - max_age <= published <= now + timedelta(hours=2)):
+                continue
+            samples.append(
+                {
+                    "title": title,
+                    "url": link,
+                    "domain": urlsplit(link).netloc,
+                    "seendate": published.strftime("%Y%m%dT%H%M%SZ"),
+                    "language": "English",
+                    "sourcecountry": None,
+                }
+            )
+            valid_count += 1
+        if valid_count:
+            active_feeds.append({"name": name, "url": url})
+
+    articles = normalize_articles({"articles": samples}, config)
+    if not articles:
+        raise WatchError(
+            "No recent, CMB-relevant RSS headlines available; "
+            + ("; ".join(failures) if failures else "feeds returned no matching headlines")
+        )
+    return articles, active_feeds
+
+
+def snapshot_date(data: dict[str, Any]) -> datetime | None:
+    raw = data.get("generated_at")
+    if not isinstance(raw, str):
+        return None
+    try:
+        value = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if value.tzinfo is None:
+        return None
+    return value.astimezone(timezone.utc)
+
+
+def usable_snapshot(data: dict[str, Any]) -> bool:
+    """Reject malformed or future-dated published fallback metadata."""
+    when = snapshot_date(data)
+    if (
+        data.get("schema_version") != "cmb.global-ai-watch.v1"
+        or when is None
+        or when > datetime.now(timezone.utc) + timedelta(hours=2)
+    ):
+        return False
+    articles = data.get("articles")
+    if not isinstance(articles, list) or not articles:
+        return False
+    if data.get("article_count") != len(articles):
+        return False
+    return all(
+        isinstance(article, dict)
+        and isinstance(article.get("title"), str)
+        and isinstance(article.get("url"), str)
+        and normalized_url(article["url"]) is not None
+        and isinstance(article.get("boundary_ids"), list)
+        and isinstance(article.get("domain"), str)
+        for article in articles
+    )
+
+
+def best_available_snapshot(local_path: Path, *, timeout: float = 8.0) -> dict[str, Any]:
+    """Preserve the newest valid deployed snapshot across stateless Actions runs."""
+    local = load_json(local_path)
+    selected = local if usable_snapshot(local) else None
+    try:
+        request = Request(PUBLIC_SNAPSHOT, headers={"User-Agent": USER_AGENT})
+        with urlopen(request, timeout=timeout) as response:
+            if response.status != 200:
+                raise WatchError(f"Prior snapshot returned HTTP {response.status}")
+            body = response.read(2_000_001)
+        if len(body) > 2_000_000:
+            raise WatchError("Prior snapshot is larger than 2 MB")
+        public = json.loads(body.decode("utf-8"))
+        if (
+            isinstance(public, dict)
+            and usable_snapshot(public)
+            and (selected is None or snapshot_date(public) > snapshot_date(selected))
+        ):
+            selected = public
+    except (HTTPError, URLError, TimeoutError, OSError, ValueError, WatchError):
+        pass
+    if selected is None:
+        raise WatchError("No valid previous Global AI Watch snapshot is available")
+    return selected
+
+
 def snapshot(config: dict[str, Any], articles: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "schema_version": "cmb.global-ai-watch.v1",
@@ -388,14 +535,17 @@ def render_cards(articles: list[dict[str, Any]], config: dict[str, Any]) -> str:
 
     return '<ul class="cmb-news-links">\n' + "\n".join(rows) + "\n</ul>"
 
-def render_generated_block(data: dict[str, Any], config: dict[str, Any]) -> str:
+def render_generated_block(
+    data: dict[str, Any], config: dict[str, Any], *, state: str = "LIVE"
+) -> str:
     articles = data["articles"]
     generated = human_seen(data["generated_at"])
+    status_class = "cmb-watch-status cmb-watch-stale" if state.startswith("STALE") else "cmb-watch-status"
     return "\n\n".join(
         [
             (
-                '<div id="cmb-watch-status" class="cmb-watch-status">'
-                f"LINK LEDGER // {generated} // {len(articles)} outbound sources"
+                f'<div id="cmb-watch-status" class="{status_class}">'
+                f"{html.escape(state)} // last collected {generated} // {len(articles)} outbound sources"
                 "</div>"
             ),
             render_cards(articles, config),
@@ -451,23 +601,62 @@ def main() -> int:
 
     try:
         config = load_json(args.config)
+        effective_config = config
+        state = "LIVE GDELT"
         try:
-            payload = load_json(args.fixture) if args.fixture else fetch_gdelt(config)
-        except WatchError as exc:
-            if args.allow_stale and args.fixture is None:
+            payload = load_json(args.fixture) if args.fixture else fetch_gdelt(
+                config, timeout=12.0, attempts=2
+            )
+            articles = normalize_articles(payload, config)
+            if not articles:
+                raise WatchError("GDELT returned no qualifying AI headlines")
+        except WatchError as gdelt_error:
+            if args.fixture is not None:
+                raise
+            try:
+                articles, active_feeds = fetch_rss_articles(config)
+                effective_config = dict(config)
+                effective_config["source"] = {
+                    "name": "Direct publisher RSS fallback: "
+                    + ", ".join(feed["name"] for feed in active_feeds),
+                    "endpoint": active_feeds[0]["url"],
+                    "documentation": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/GLOBAL_AI_WATCH/",
+                }
+                effective_config["query"] = "Recent publisher RSS headlines classified by explicit CMB terms"
+                effective_config["timespan"] = str(config.get("fallback_max_age_hours", 120)) + "h"
+                state = "LIVE RSS BACKUP"
                 print(
-                    "Global AI Watch refresh unavailable; preserving the existing "
-                    f"snapshot: {exc}",
+                    "Global AI Watch: GDELT unavailable; publishing direct RSS "
+                    f"headlines instead: {gdelt_error}",
+                    file=sys.stderr,
+                )
+            except WatchError as rss_error:
+                if not args.allow_stale:
+                    raise WatchError(
+                        f"GDELT and RSS failed: {gdelt_error}; {rss_error}"
+                    ) from rss_error
+                data = best_available_snapshot(args.output_json)
+                document = args.output_doc.read_text(encoding="utf-8")
+                updated_document = replace_generated_section(
+                    document,
+                    render_generated_block(
+                        data, config, state="STALE - LIVE SOURCES UNAVAILABLE"
+                    ),
+                )
+                atomic_write(args.output_json, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+                atomic_write(args.output_doc, updated_document)
+                print(
+                    "::warning::Global AI Watch publishing a clearly labeled stale "
+                    f"snapshot; GDELT: {gdelt_error}; RSS: {rss_error}",
                     file=sys.stderr,
                 )
                 return 0
-            raise
-        articles = normalize_articles(payload, config)
+
         published_links = select_published_links(articles, config)
-        data = snapshot(config, published_links)
+        data = snapshot(effective_config, published_links)
         document = args.output_doc.read_text(encoding="utf-8")
         updated_document = replace_generated_section(
-            document, render_generated_block(data, config)
+            document, render_generated_block(data, config, state=state)
         )
         atomic_write(args.output_json, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
         atomic_write(args.output_doc, updated_document)

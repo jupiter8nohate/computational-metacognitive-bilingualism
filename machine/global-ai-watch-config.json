@@ -220,5 +220,20 @@
     "HUMAN_AGENCY > MACHINE_AUTHORITY"
   ],
   "published_link_limit": 10,
-  "published_links_per_domain": 2
+  "published_links_per_domain": 2,
+  "fallback_feeds": [
+    {
+      "name": "BBC News Technology",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+    },
+    {
+      "name": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/feed/"
+    }
+  ],
+  "fallback_max_age_hours": 120
 }
