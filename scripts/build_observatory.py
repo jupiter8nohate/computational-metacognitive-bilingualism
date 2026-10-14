@@ -212,7 +212,8 @@ def main() -> int:
     try:
         snapshot = json.loads(args.watch.read_text(encoding="utf-8"))
         doc = args.watch_doc.read_text(encoding="utf-8")
-        stale = "STALE - LIVE SOURCES UNAVAILABLE" in doc
+        stale = ("STALE - LIVE SOURCES UNAVAILABLE" in doc or
+                 datetime.now(timezone.utc) - parse_time(snapshot["generated_at"]) > timedelta(hours=6))
         history = load_prior(args.prior)
         appended = record_snapshot(history, snapshot, stale=stale)
         health = health_report(
