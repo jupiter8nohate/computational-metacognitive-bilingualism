@@ -1,0 +1,13 @@
+{
+  "schema_version": "cmb.watch-health.v1",
+  "checked_at": null,
+  "last_successful_collection": null,
+  "age_minutes": null,
+  "status": "AWAITING_BUILD",
+  "news_source": "",
+  "article_count": 0,
+  "publisher_domain_count": 0,
+  "archived_collections": 0,
+  "alert_required": false,
+  "freshness_is_not_fact_checking": true
+}

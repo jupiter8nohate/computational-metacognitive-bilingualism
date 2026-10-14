@@ -36,6 +36,7 @@ RADAR_CONFIG = ROOT / "machine/cmb-epistemic-radar-config.json"
 DEFAULT_OUTPUT_JSON = ROOT / "machine/cmb-epistemic-radar.json"
 DEFAULT_OUTPUT_DOC = ROOT / "docs/CMB_EPISTEMIC_RADAR.md"
 DEFAULT_FALLBACK_SNAPSHOT = ROOT / "machine/global-ai-watch.json"
+DEFAULT_HISTORY = ROOT / "machine/global-ai-watch-history.json"
 START_MARKER = "<!-- CMB_EPISTEMIC_RADAR_GENERATED_START -->"
 END_MARKER = "<!-- CMB_EPISTEMIC_RADAR_GENERATED_END -->"
 
@@ -589,6 +590,40 @@ def load_fallback_articles(path: Path) -> list[dict[str, Any]]:
     return normalized
 
 
+def comparable_historical_baseline(
+    current_snapshot: dict[str, Any], history: dict[str, Any],
+    *, minimum_separation_hours: int = 24,
+) -> list[dict[str, Any]] | None:
+    """Compare independently collected, source-compatible windows only.
+
+    A copy of the current sample or a different feed/timespan is not a baseline.
+    """
+    from datetime import timedelta
+
+    current_time = datetime.fromisoformat(
+        current_snapshot["generated_at"].replace("Z", "+00:00")
+    )
+    current_source = current_snapshot["source"]["name"]
+    current_timespan = current_snapshot["timespan"]
+    entries = history.get("entries", [])
+    for entry in reversed(entries):
+        if (
+            entry.get("source_name") != current_source
+            or entry.get("timespan") != current_timespan
+            or entry.get("collected_at") == current_snapshot["generated_at"]
+        ):
+            continue
+        when = datetime.fromisoformat(entry["collected_at"].replace("Z", "+00:00"))
+        if when > current_time - timedelta(hours=minimum_separation_hours):
+            continue
+        if when < current_time - timedelta(days=30):
+            break
+        articles = entry.get("articles", [])
+        if articles:
+            return articles
+    return None
+
+
 def fetch_sample(
     watch_config: dict[str, Any],
     timespan: str,
@@ -611,6 +646,8 @@ def main() -> int:
     parser.add_argument("--current-fixture", type=Path)
     parser.add_argument("--baseline-fixture", type=Path)
     parser.add_argument("--fallback-snapshot", type=Path, default=DEFAULT_FALLBACK_SNAPSHOT)
+    parser.add_argument("--use-watch-snapshot", action="store_true", help="Use the single shared Watch collection rather than requery GDELT.")
+    parser.add_argument("--history", type=Path, default=DEFAULT_HISTORY)
     parser.add_argument(
         "--allow-stale",
         action="store_true",
@@ -621,46 +658,87 @@ def main() -> int:
     try:
         watch_config = load_json(args.watch_config)
         radar_config = load_json(args.radar_config)
-        try:
-            current = fetch_sample(
-                watch_config,
-                str(radar_config["current_timespan"]),
-                int(radar_config["max_records"]),
-                args.current_fixture,
-            )
-            baseline = fetch_sample(
-                watch_config,
-                str(radar_config["baseline_timespan"]),
-                int(radar_config["max_records"]),
-                args.baseline_fixture,
-            )
-        except WatchError as exc:
-            if (
-                not args.allow_stale
-                or args.current_fixture is not None
-                or args.baseline_fixture is not None
-            ):
-                raise
+        if args.use_watch_snapshot:
+            if args.current_fixture is not None or args.baseline_fixture is not None:
+                raise WatchError("Fixtures cannot be combined with --use-watch-snapshot")
+            current_snapshot = load_json(args.fallback_snapshot)
             current = load_fallback_articles(args.fallback_snapshot)
-            baseline = list(current)
+            history = load_json(args.history)
+            baseline_found = comparable_historical_baseline(current_snapshot, history)
             radar_config = dict(radar_config)
-            radar_config["current_timespan"] = "checked-in-snapshot"
-            radar_config["baseline_timespan"] = "checked-in-snapshot"
+            radar_config["current_timespan"] = str(current_snapshot["timespan"])
+            radar_config["baseline_timespan"] = (
+                str(current_snapshot["timespan"]) + " historic"
+                if baseline_found is not None else "unavailable"
+            )
             watch_config = deepcopy(watch_config)
             watch_config["source"] = dict(watch_config["source"])
-            watch_config["source"]["name"] = "Checked-in Global AI Watch snapshot"
-            watch_config["source"]["endpoint"] = (
-                "https://jupiter8nohate.github.io/"
-                "computational-metacognitive-bilingualism/machine/global-ai-watch.json"
-            )
-            print(
-                "Epistemic Radar live refresh unavailable; using checked-in "
-                f"Global AI Watch snapshot: {exc}",
-                file=sys.stderr,
-            )
+            watch_config["source"]["name"] = str(current_snapshot["source"]["name"])
+            watch_config["source"]["endpoint"] = str(current_snapshot["source"]["endpoint"])
+            baseline = baseline_found or []
+            if baseline_found is None:
+                print(
+                    "::notice::Radar historical comparison unavailable; "
+                    "there is no independent, source-compatible older collection",
+                    file=sys.stderr,
+                )
+        else:
+            try:
+                current = fetch_sample(
+                    watch_config,
+                    str(radar_config["current_timespan"]),
+                    int(radar_config["max_records"]),
+                    args.current_fixture,
+                )
+                baseline = fetch_sample(
+                    watch_config,
+                    str(radar_config["baseline_timespan"]),
+                    int(radar_config["max_records"]),
+                    args.baseline_fixture,
+                )
+            except WatchError as exc:
+                if (
+                    not args.allow_stale
+                    or args.current_fixture is not None
+                    or args.baseline_fixture is not None
+                ):
+                    raise
+                current = load_fallback_articles(args.fallback_snapshot)
+                baseline = list(current)
+                radar_config = dict(radar_config)
+                radar_config["current_timespan"] = "checked-in-snapshot"
+                radar_config["baseline_timespan"] = "checked-in-snapshot"
+                watch_config = deepcopy(watch_config)
+                watch_config["source"] = dict(watch_config["source"])
+                watch_config["source"]["name"] = "Checked-in Global AI Watch snapshot"
+                watch_config["source"]["endpoint"] = (
+                    "https://jupiter8nohate.github.io/"
+                    "computational-metacognitive-bilingualism/machine/global-ai-watch.json"
+                )
+                print(
+                    "Epistemic Radar live refresh unavailable; using checked-in "
+                    f"Global AI Watch snapshot: {exc}",
+                    file=sys.stderr,
+                )
+
         snapshot = build_snapshot(current, baseline, watch_config, radar_config)
+        if args.use_watch_snapshot and not baseline:
+            # No invented trend: classify current stories but do not advertise
+            # concentration changes without an independent historical baseline.
+            snapshot["technology_signals"] = technology_signals([], [], radar_config)
+            snapshot["emerging_vocabulary"] = []
+            snapshot["summary"]["technology_signal_count"] = 0
         document = args.output_doc.read_text(encoding="utf-8")
         updated = replace_generated(document, render_generated(snapshot, current, radar_config))
+        if args.use_watch_snapshot and not baseline:
+            updated = updated.replace(
+                "<!-- CMB_EPISTEMIC_RADAR_GENERATED_START -->",
+                "<!-- CMB_EPISTEMIC_RADAR_GENERATED_START -->\n\n"
+                '<p class="cmb-watch-empty"><strong>Historical comparison unavailable.</strong> '
+                "Current headlines are shown without trend claims until independent, "
+                "source-compatible older samples exist.</p>",
+                1,
+            )
         write_atomic(
             args.output_json,
             json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n",

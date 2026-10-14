@@ -1,0 +1,16 @@
+{
+  "schema_version": "cmb.dna-witness.v1",
+  "author": "CMB deterministic rule-based generator",
+  "canonical_author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "human_canon_untouched": true,
+  "roles": [
+    "Herald",
+    "Witness",
+    "Adversary",
+    "Scribe",
+    "Archivist",
+    "Guardian"
+  ],
+  "status": "AWAITING_BUILD",
+  "chapters": []
+}

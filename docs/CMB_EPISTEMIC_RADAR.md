@@ -64,7 +64,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Current radar
 
-The radar is regenerated from public GDELT news metadata during the GitHub Pages build. Its 24-hour sample is compared with a broader seven-day sample. Those samples are finite and should not be treated as exhaustive measurements of the world.
+The radar is regenerated from the **same bounded collection** published by Global AI Watch, without duplicating requests to GDELT. It compares against an **independently collected historical window** from the persistent watch history, only if the source and timespan match and the samples are at least 24 hours apart. Otherwise it clearly marks historical trends as unavailable. None of these samples are exhaustive measurements of world events.
 
 <!-- CMB_EPISTEMIC_RADAR_GENERATED_START -->
 
@@ -87,7 +87,7 @@ The radar is regenerated from public GDELT news metadata during the GitHub Pages
 
 The radar does **not** silently retrain a black-box model.
 
-Each build creates a new temporary baseline from a broader recent news sample, then compares today's sample against it. That allows the structure to notice changes while keeping the method inspectable.
+Each build consults the authenticated hash-linked collection history. An older, independent, source-compatible sample is required for any trend comparison; reusing the same snapshot as both the current and baseline sample would be misleading.
 
 ~~~text
 RECENT_SAMPLE
