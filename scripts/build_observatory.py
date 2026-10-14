@@ -16,6 +16,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_WATCH = ROOT / "machine/global-ai-watch.json"
@@ -150,23 +151,35 @@ def record_snapshot(history: dict, snapshot: dict, *, stale: bool) -> bool:
 
 
 def source_assessments(snapshot: dict) -> dict:
-    """Assess evidentiary handling, never a person's credibility or truthfulness."""
+    """Grade traceability, not publisher honesty, article accuracy or people.
+
+    A URL/domain match is evidence of attribution consistency only. Neither
+    this nor matching headlines is independent verification of a claim.
+    """
+    results: list[dict] = []
+    for item in snapshot["articles"]:
+        hostname = (urlsplit(item["url"]).hostname or "").lower().removeprefix("www.")
+        declared = str(item.get("domain", "")).lower().removeprefix("www.")
+        consistent = hostname == declared and bool(hostname)
+        results.append({
+            "article_id": item["id"],
+            "publisher_url": item["url"],
+            "source_domain": item["domain"],
+            "traceability_grade": (
+                "SOURCE_DOMAIN_CONSISTENT" if consistent
+                else "SOURCE_DOMAIN_MISMATCH_REVIEW_REQUIRED"
+            ),
+            "verification_status": "publisher_report_not_independently_verified",
+            "corroboration": "not_checked",
+            "source_type": "public_news_metadata",
+            "requires_human_review": True,
+            "caution": "URL traceability is not a credibility score or a fact check",
+        })
     return {
         "schema_version": "cmb.watch-assessments.v1",
         "generated_at": snapshot["generated_at"],
-        "method": "rule-based provenance checklist, not automated fact-checking",
-        "articles": [
-            {
-                "article_id": item["id"],
-                "publisher_url": item["url"],
-                "verification_status": "publisher_report_not_independently_verified",
-                "corroboration": "not_checked",
-                "source_type": "public_news_metadata",
-                "requires_human_review": True,
-                "caution": "Headline discovery and source count do not confirm the reported claim",
-            }
-            for item in snapshot["articles"]
-        ],
+        "method": "URL/domain traceability grade, not automated truth or credibility",
+        "articles": results,
     }
 
 
