@@ -25,6 +25,10 @@ on:
       - "scripts/build_docs.py"
       - "scripts/update_global_ai_watch.py"
       - "scripts/build_epistemic_radar.py"
+      - "scripts/build_observatory.py"
+      - "scripts/generate_dna_witness.py"
+      - "scripts/persist_watch_history.py"
+      - "tests/test_watch_observatory.py"
       - "tests/test_site_integrity.py"
       - "tests/test_global_ai_watch.py"
       - "tests/test_epistemic_radar.py"
@@ -44,7 +48,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -76,8 +80,19 @@ jobs:
       - name: Refresh Global AI Watch snapshot
         run: python scripts/update_global_ai_watch.py --allow-stale
 
-      - name: Build CMB Epistemic Radar
-        run: python scripts/build_epistemic_radar.py --allow-stale
+      - name: Preserve historical collections and assess sources
+        run: python scripts/build_observatory.py
+
+      - name: Build CMB Epistemic Radar from shared evidence
+        run: python scripts/build_epistemic_radar.py --use-watch-snapshot
+
+      - name: Generate noncanonical D.N.A. Living Codex
+        run: python scripts/generate_dna_witness.py
+
+      - name: Preserve archival collection in Git history
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/persist_watch_history.py
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
@@ -111,7 +126,28 @@ jobs:
           grep -Fq "<urlset" /tmp/cmb-sitemap.xml
           curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/google57d4128d590e83d8.html" -o /tmp/cmb-google-verification.html
           grep -Fq "google-site-verification: google57d4128d590e83d8.html" /tmp/cmb-google-verification.html
-          echo "Public homepage, sitemap, and Google verification file are reachable."
+          curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/machine/global-ai-watch-health.json" -o /tmp/cmb-watch-health.json
+          python - <<'PY'
+          import json
+          with open("/tmp/cmb-watch-health.json", encoding="utf-8") as source:
+              data = json.load(source)
+          assert data.get("schema_version") == "cmb.watch-health.v1"
+          print("Live Global AI Watch:", data.get("status"), data.get("last_successful_collection"))
+          PY
+          echo "Public homepage, sitemap, verification, and Watch health endpoints are reachable."
+
+      - name: Alert on Watch outage of six hours or longer
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, sys
+          with open("/tmp/cmb-watch-health.json", encoding="utf-8") as source:
+              data = json.load(source)
+          if data.get("alert_required"):
+              print("::error::Global AI Watch has not collected new metadata within six hours")
+              sys.exit(1)
+          print("Watch collection is within the six-hour outage alert threshold")
+          PY
 
       # IndexNow is not a Google indexing API. Only notify after content-related
       # deployments, not after every scheduled hourly documentation refresh.
