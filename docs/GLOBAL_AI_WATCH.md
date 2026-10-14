@@ -114,7 +114,7 @@ REAL-WORLD CONSEQUENCE
 
 ## Source and evidence rules
 
-1. **GDELT is the primary discovery layer.** When GDELT fails or provides no qualifying stories, a bounded backup reads recent RSS headlines directly from BBC News Technology, TechCrunch AI, and Ars Technica AI. The collector retains each publisher's direct URL, not copied article text.
+1. **GDELT is the primary discovery layer.** When GDELT fails or provides no qualifying stories, a bounded backup reads recent RSS headlines directly from BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, and Al Jazeera English. The collector retains each publisher's direct URL, not copied article text.
 2. **Publishers remain the evidence layer.** Readers should open the original story before relying on any factual claim.
 3. **Wayback is an archival lookup layer.** Each result includes a history link. The CMB site does not claim that an archive capture exists merely because the history link is present.
 4. **No article bodies are copied.** The watch stores headline and source metadata, not republished journalism.
@@ -128,7 +128,20 @@ CMB_INTERPRETATION != SOURCE_CLAIM
 PATTERN != PROOF
 ~~~
 
+## Observatory and protected D.N.A. Bible extension
+
+[Explore the searchable intelligence dashboard](../WATCH_DASHBOARD/) or
+[read the noncanonical D.N.A. Living Codex](../DNA_LIVING_CODEX/).
+The dashboard shows the last successful collection, archive history and
+transparent evidence checklists. Neither the machine-generated witness allegories
+nor the source-assessment checklist proves the truth of an article's claims.
+
 ## Public machine endpoints
+
+- [Historical collection ledger](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-history.json)
+- [Current health and age](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-health.json)
+- [Source assessment checklist](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-assessments.json)
+- [Living Codex machine output](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/dna-living-codex.json)
 
 - [Current machine-readable snapshot](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch.json)
 - [Watch configuration and deterministic classification rules](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-config.json)
@@ -136,7 +149,7 @@ PATTERN != PROOF
 
 ## External systems and integration boundary
 
-**Actually integrated:** [GDELT Project](https://www.gdeltproject.org/) for primary open news discovery; direct publisher RSS headlines from [BBC News Technology](https://www.bbc.co.uk/news/technology), [TechCrunch AI](https://techcrunch.com/category/artificial-intelligence/), and [Ars Technica AI](https://arstechnica.com/ai/) as independent fetch fallbacks. Publishers are not affiliated with or endorsing CMB.
+**Actually integrated:** [GDELT Project](https://www.gdeltproject.org/) for primary open discovery; bounded, direct publisher RSS headlines from BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, and Al Jazeera English as independent fetch fallbacks. Publishers are not affiliated with or endorsing CMB.
 
 **Linked for verification:** [Internet Archive Wayback Machine](https://web.archive.org/) for per-URL archive-history lookup.
 
@@ -156,7 +169,7 @@ DISCOVER
 
 ## Refresh model
 
-The canonical GitHub Pages deployment tries a bounded GDELT sample, then publisher RSS feeds when needed, during documentation deployment and on an hourly schedule. GitHub Actions scheduling is best-effort, so the interval is not a real-time guarantee. A successful RSS fallback is labeled **LIVE RSS BACKUP**. When all sources fail, the published watch is explicitly marked **STALE** with the last collected timestamp and recovers the latest valid previously published JSON snapshot whenever possible. GitHub Pages is static: the browser does not refresh data between deployments. Only the selected outbound links are published; the larger analysis sample is discarded after the build.
+The canonical GitHub Pages deployment tries a bounded GDELT sample, then publisher RSS feeds when needed, during documentation deployment and on an hourly schedule. It also preserves metadata-only collection snapshots in a hash-linked public history and in a separate Git history branch, and generates a separate, explicitly fictional D.N.A. Living Codex companion. GitHub Actions scheduling is best-effort, so the interval is not a real-time guarantee. A successful RSS fallback is labeled **LIVE RSS BACKUP**. When all sources fail, the published watch is explicitly marked **STALE** with the last collected timestamp and recovers the latest valid previously published JSON snapshot whenever possible. GitHub Pages is static: the browser does not refresh data between deployments. Only the selected outbound links are published; the larger analysis sample is discarded after the build.
 
 GDELT and publisher RSS feeds update on their own cadences. CMB Global AI Watch cannot guarantee every-hour freshness, complete news coverage, indexing, independent confirmation, or correction of upstream reporting. The checked-in September seed is a reproducible test fixture; the current published JSON can differ because refreshes happen in the deployment runner, not as source commits.
 
