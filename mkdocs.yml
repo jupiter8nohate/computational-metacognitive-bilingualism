@@ -27,6 +27,8 @@ nav:
       - Architecture Gateway: world-retina/index.md
   - CMB Epistemic Radar: CMB_EPISTEMIC_RADAR.md
   - Global AI Watch: GLOBAL_AI_WATCH.md
+  - Global AI Intelligence Dashboard: WATCH_DASHBOARD.md
+  - D.N.A. Living Codex: DNA_LIVING_CODEX.md
   - The Shadow Is Not the Source: THE_SHADOW_IS_NOT_THE_SOURCE.md
   - Lived experience testimony: lived-experience.md
   - System status: generated/CMB_SYSTEM_STATUS.md
@@ -116,8 +118,10 @@ extra_css:
   - stylesheets/shadow-source.css
   - stylesheets/phantom-tokenbooth.css
   - stylesheets/global-ai-watch.css
+  - stylesheets/watch-dashboard.css
   - stylesheets/cmb-epistemic-radar.css
 
 extra_javascript:
   - javascripts/cmb-analytics-config.js
   - javascripts/cmb-analytics.js
+  - javascripts/watch-dashboard.js
