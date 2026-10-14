@@ -130,8 +130,8 @@ PATTERN != PROOF
 
 ## Observatory and protected D.N.A. Bible extension
 
-[Explore the searchable intelligence dashboard](../WATCH_DASHBOARD/) or
-[read the noncanonical D.N.A. Living Codex](../DNA_LIVING_CODEX/).
+[Explore the searchable intelligence dashboard](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/WATCH_DASHBOARD/) or
+[read the noncanonical D.N.A. Living Codex](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/DNA_LIVING_CODEX/).
 The dashboard shows the last successful collection, archive history and
 transparent evidence checklists. Neither the machine-generated witness allegories
 nor the source-assessment checklist proves the truth of an article's claims.
