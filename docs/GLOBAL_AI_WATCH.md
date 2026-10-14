@@ -40,7 +40,7 @@ It is **not** a replacement for GDELT, Dataminr, Meltwater, Nexis, the Internet 
 
 | Capability | CMB implementation | Boundary |
 | --- | --- | --- |
-| Global discovery | GDELT DOC 2.0 article metadata | <code>DISCOVERY != CONFIRMATION</code> |
+| Global discovery | GDELT DOC 2.0 metadata, with direct publisher RSS backup | <code>DISCOVERY != CONFIRMATION</code> |
 | Bounded refresh | Scheduled metadata scan; static outbound links only | <code>FRESH != VERIFIED</code> |
 | Story grouping | Deterministic headline-similarity clusters | <code>HEADLINE_SIMILARITY != FACT_CORROBORATION</code> |
 | Publication budget | At most a small, diverse set of links per build | <code>MORE_DATA != MORE_TRUTH</code> |
@@ -50,7 +50,7 @@ It is **not** a replacement for GDELT, Dataminr, Meltwater, Nexis, the Internet 
 
 ## Current link ledger
 
-The deployment scans a bounded GDELT metadata sample, applies CMB classification and deduplication in memory, then publishes only a small set of outbound links. The browser does not fetch GDELT directly and the repository does not store article bodies, excerpts, images, or mirrored copies.
+Each deployment tries a bounded GDELT metadata sample, then direct publisher RSS feeds if GDELT is unavailable. It applies CMB classification and deduplication in memory, then publishes only a small set of outbound links. The browser does not fetch GDELT directly and the repository does not store article bodies, excerpts, images, or mirrored copies.
 
 <!-- CMB_GLOBAL_AI_WATCH_GENERATED_START -->
 
@@ -114,7 +114,7 @@ REAL-WORLD CONSEQUENCE
 
 ## Source and evidence rules
 
-1. **GDELT is the discovery layer.** The collector uses the public GDELT DOC 2.0 API and keeps the publisher URL returned by GDELT.
+1. **GDELT is the primary discovery layer.** When GDELT fails or provides no qualifying stories, a bounded backup reads recent RSS headlines directly from BBC News Technology, TechCrunch AI, and Ars Technica AI. The collector retains each publisher's direct URL, not copied article text.
 2. **Publishers remain the evidence layer.** Readers should open the original story before relying on any factual claim.
 3. **Wayback is an archival lookup layer.** Each result includes a history link. The CMB site does not claim that an archive capture exists merely because the history link is present.
 4. **No article bodies are copied.** The watch stores headline and source metadata, not republished journalism.
@@ -136,7 +136,7 @@ PATTERN != PROOF
 
 ## External systems and integration boundary
 
-**Actually integrated:** [GDELT Project](https://www.gdeltproject.org/) for open global news discovery.
+**Actually integrated:** [GDELT Project](https://www.gdeltproject.org/) for primary open news discovery; direct publisher RSS headlines from [BBC News Technology](https://www.bbc.co.uk/news/technology), [TechCrunch AI](https://techcrunch.com/category/artificial-intelligence/), and [Ars Technica AI](https://arstechnica.com/ai/) as independent fetch fallbacks. Publishers are not affiliated with or endorsing CMB.
 
 **Linked for verification:** [Internet Archive Wayback Machine](https://web.archive.org/) for per-URL archive-history lookup.
 
@@ -156,9 +156,9 @@ DISCOVER
 
 ## Refresh model
 
-The canonical GitHub Pages deployment scans a bounded metadata sample during documentation deployment and on an hourly schedule. GitHub Actions scheduling is best-effort, so the interval is not a real-time guarantee. Only the selected outbound links are published; the larger analysis sample is discarded after the build.
+The canonical GitHub Pages deployment tries a bounded GDELT sample, then publisher RSS feeds when needed, during documentation deployment and on an hourly schedule. GitHub Actions scheduling is best-effort, so the interval is not a real-time guarantee. A successful RSS fallback is labeled **LIVE RSS BACKUP**. When all sources fail, the published watch is explicitly marked **STALE** with the last collected timestamp and recovers the latest valid previously published JSON snapshot whenever possible. GitHub Pages is static: the browser does not refresh data between deployments. Only the selected outbound links are published; the larger analysis sample is discarded after the build.
 
-The underlying GDELT datasets update on their own cadence. CMB Global AI Watch does not control GDELT availability, indexing coverage, source selection, translation, or upstream corrections.
+GDELT and publisher RSS feeds update on their own cadences. CMB Global AI Watch cannot guarantee every-hour freshness, complete news coverage, indexing, independent confirmation, or correction of upstream reporting. The checked-in September seed is a reproducible test fixture; the current published JSON can differ because refreshes happen in the deployment runner, not as source commits.
 
 ~~~text
 UPDATE_INTERVAL != EVENT_TIME
