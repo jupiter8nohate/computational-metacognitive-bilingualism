@@ -43,8 +43,10 @@
       card.append(heading, textNode("p",
         item.domain + " | " + (item.seen_at || "Date unavailable") +
         " | " + item.boundary_ids.join(", ")), link);
+      const grade = assessments.articles.find((entry) => entry.article_id === item.id);
       card.append(textNode("small",
-        "Source report; independent corroboration has not been checked."));
+        "Evidence grade: " + (grade?.traceability_grade || "NOT_ASSESSED") +
+        ". Independent corroboration has not been checked."));
       list.append(card);
     }
     el("watch-count").textContent = found.length + " of " +
@@ -58,17 +60,22 @@
   ]).then(([watch, health, history, assessments]) => {
     state.watch = watch;
     state.assessments = assessments;
+    const collectedMs = Date.parse(health.last_successful_collection);
+    const elapsedMinutes = Number.isFinite(collectedMs) ?
+      Math.max(0, Math.floor((Date.now() - collectedMs) / 60000)) : Infinity;
+    const currentState = elapsedMinutes >= 360 ? "STALE" :
+      elapsedMinutes > 120 ? "DELAYED" : health.status;
     const metrics = el("watch-health-summary");
     metrics.replaceChildren(
-      summary("Collection state", health.status),
+      summary("Collection state", currentState),
       summary("Latest successful collection", health.last_successful_collection),
-      summary("Minutes since collection", health.age_minutes),
+      summary("Minutes since collection", Number.isFinite(elapsedMinutes) ? elapsedMinutes : "Unknown"),
       summary("Publisher domains", health.publisher_domain_count),
       summary("Saved collections", history.entries.length)
     );
-    if (health.status !== "CURRENT") {
+    if (currentState !== "CURRENT") {
       const warning = textNode("p", "Freshness warning: latest collection is " +
-        health.status + ". Old data is not presented as a new observation.");
+        currentState + ". Old data is not presented as a new observation.");
       warning.className = "cmb-observatory-warning";
       root.prepend(warning);
     }
