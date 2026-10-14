@@ -73,6 +73,43 @@ def archive_entry(token: str, current_sha: str, record: dict) -> bool:
     return True
 
 
+def archive_first_witness(token: str) -> bool:
+    """Preserve the latest noncanonical literary artifact in Git separately."""
+    path = ROOT / "machine/dna-living-codex.json"
+    document = json.loads(path.read_text(encoding="utf-8"))
+    if document.get("human_canon_untouched") is not True:
+        raise ValueError("Canon protection invariant was not satisfied")
+    chapters = document.get("chapters", [])
+    if not chapters:
+        return False
+    chapter = chapters[0]
+    chapter_id = chapter["id"]
+    if not chapter_id.startswith("witness-") or not all(
+        ch in "0123456789abcdef" for ch in chapter_id.removeprefix("witness-")
+    ):
+        raise ValueError("Invalid literary chapter identifier")
+    remote_path = "archive/dna-witness/" + chapter_id + ".json"
+    url = API + "/contents/" + remote_path
+    try:
+        request("GET", url + "?ref=" + BRANCH, token)
+        return False
+    except HTTPError as exc:
+        if exc.code != 404:
+            raise
+    content = json.dumps({
+        "record_type": "noncanonical_rule_based_allegory",
+        "canonical_author": document["canonical_author"],
+        "generated_by": document["author"],
+        "chapter": chapter,
+    }, indent=2, ensure_ascii=False) + "\n"
+    request("PUT", url, token, {
+        "message": "archive: preserve source-linked noncanonical D.N.A. witness",
+        "branch": BRANCH,
+        "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
+    })
+    return True
+
+
 def main() -> int:
     if os.environ.get("GITHUB_REPOSITORY") != REPOSITORY:
         print("Git archive skipped: untrusted repository context", file=sys.stderr)
@@ -94,10 +131,12 @@ def main() -> int:
         return 0
     try:
         saved = archive_entry(token, sha, record)
+        witness_saved = archive_first_witness(token)
     except (HTTPError, OSError, ValueError) as exc:
         print(f"Git history preservation failed: {exc}", file=sys.stderr)
         return 2
     print("Git collection " + ("preserved" if saved else "already present") + " on " + BRANCH)
+    print("Noncanonical witness " + ("preserved" if witness_saved else "already present or unavailable"))
     return 0
 
 
