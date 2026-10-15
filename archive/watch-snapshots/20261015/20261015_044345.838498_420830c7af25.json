@@ -1,0 +1,115 @@
+{
+  "collected_at": "2026-10-15T04:43:45.838498Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 8,
+  "articles": [
+    {
+      "id": "47d46d1066d4b90b",
+      "title": "Is your boss watching you? The rise of AI surveillance at work – podcast",
+      "url": "https://www.theguardian.com/science/audio/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-podcast",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T04:00:21Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "f2a56b50bd832f0a",
+      "title": "YouTube Music launches new labels as AI-generated music floods streaming platforms",
+      "url": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-14T18:23:46Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "5a503e3d62a8f45c",
+      "title": "Apate sends AI agents undercover to get scammed so they can gather fraud intelligence",
+      "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-14T18:00:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "165047532696352a",
+      "title": "Could AI ‘change the stakes’ in the development of bioweapons?",
+      "url": "https://www.theguardian.com/technology/2026/oct/14/could-ai-change-the-stakes-in-the-development-of-bioweapons",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-14T17:34:14Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "9452f98968f0cc70",
+      "title": "Disney offers $20M for Character.AI’s scandal-plagued chatbot tech",
+      "url": "https://arstechnica.com/tech-policy/2026/10/disney-offers-20m-for-character-ais-scandal-plagued-chatbot-tech/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-13T18:23:33Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "48ec211ad07235a1",
+      "title": "OpenAI’s GPT-6 may lead to robotics breakthrough  as soon as next year: Unitree founder",
+      "url": "https://www.scmp.com/tech/big-tech/article/3370603/openais-gpt-6-may-lead-robotics-breakthrough-soon-next-year-unitree-founder?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-12T13:30:07Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "1a1dd2abd44c6c33",
+      "title": "Amazon has over 1 million robot workers. What’s next for human employees?",
+      "url": "https://arstechnica.com/ai/2026/10/inside-amazons-robotic-arms-race-and-what-it-means-for-the-future-of-human-work/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-12T12:43:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "7464dc967e18e8c0",
+      "title": "Former HSBC executive launches wealth platform powered by team of AI agents",
+      "url": "https://www.scmp.com/business/money/wealth/article/3370565/former-hsbc-executive-launches-wealth-platform-powered-team-ai-agents?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-12T09:00:09Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "115425295a9b43e348dd80df591ff3d1dc48b00ac8c3a10bf529c936faf16edb",
+  "hash": "420830c7af25f90a431e3970ab39974181878a8df6ceeb6bd6807098c9e3159f"
+}
