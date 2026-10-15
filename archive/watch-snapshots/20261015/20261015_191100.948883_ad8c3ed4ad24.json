@@ -1,0 +1,102 @@
+{
+  "collected_at": "2026-10-15T19:11:00.948883Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 7,
+  "articles": [
+    {
+      "id": "262ee9a088c23d6e",
+      "title": "Russian jet-powered drone hits supermarket in Ukraine’s Odesa",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/15/russian-jet-powered-drone-hits-supermarket-in-ukraines-odesa?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-15T15:13:18Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "72c9fb61eb837aea",
+      "title": "AI agents are coming to Rivian’s cars",
+      "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-15T15:02:36Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "0debf87207f126fc",
+      "title": "Trump says Fort Hood US shooter execution will not be livestreamed",
+      "url": "https://www.aljazeera.com/news/2026/10/15/trump-says-fort-hood-shooter-execution-will-not-be-livestreamed?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-15T14:27:35Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "d7d08535584e1ad7",
+      "title": "Is your boss watching you? The rise of AI surveillance at work - video",
+      "url": "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T11:10:25Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "47d46d1066d4b90b",
+      "title": "Is your boss watching you? The rise of AI surveillance at work – podcast",
+      "url": "https://www.theguardian.com/science/audio/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-podcast",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T04:00:21Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "5a503e3d62a8f45c",
+      "title": "Apate sends AI agents undercover to get scammed so they can gather fraud intelligence",
+      "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-14T18:00:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "9452f98968f0cc70",
+      "title": "Disney offers $20M for Character.AI’s scandal-plagued chatbot tech",
+      "url": "https://arstechnica.com/tech-policy/2026/10/disney-offers-20m-for-character-ais-scandal-plagued-chatbot-tech/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-13T18:23:33Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "7a9a90f197d8b994c21a8a7597619fd9d607dcbdfa3065823ff50da06f3e38f2",
+  "hash": "ad8c3ed4ad2470fefa9e360319cf2cbd82f9c59c40b848e6876201ca61fd30c5"
+}
