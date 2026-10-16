@@ -1,4 +1,6 @@
-# ♃ The Spider's Internet
+# ♃ The Spider's Internet // Six-Chapter Reading Edition
+
+**Read the [original illustrated story and companion film](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/spiders-internet/) first, or continue with this separate prose edition.**
 
 *The D.N.A. Bible | Demons Need Attention*
 
@@ -176,6 +178,6 @@ The embed depends on third-party playback availability and consent. The video is
 
 ## Continue reading
 
-[**Enter the D.N.A. Story Library**](../story-universe/) | [**Begin Death Note 2084**](../DEATH_NOTE_2084.md) | [**Explore CMB™**](../concepts/what-is-cmb.md)
+[**Enter the D.N.A. Story Library**](index.md) | [**Begin Death Note 2084**](../DEATH_NOTE_2084.md) | [**Explore CMB™**](../concepts/what-is-cmb.md)
 
 *Original fable © 2026 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. Flamingoglyph Code (FGC) | Computational Metacognitive Bilingualism™ (CMB™). Original expression subject to repository licensing terms.*
