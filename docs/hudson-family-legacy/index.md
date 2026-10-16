@@ -88,10 +88,15 @@ The tree includes records reporting historical dates reaching back into the sixt
 The following are self-hosted, low-resolution previews of the **original family photographs** provided for this exhibit, not AI-generated replacements. The preview images are separate assets so their URLs can be tested and cached. Full-resolution originals remain with the family.
 
 <div class="hudson-memorial-gallery">
-<figure><img alt="Original family photograph of Grandma Irene outdoors holding a Bible" loading="lazy" width="115" height="115" src="media/grandma-irene.jpg"><figcaption><strong>Grandma Irene</strong><span>Faith and heritage</span></figcaption></figure>
-<figure><img alt="Original family photograph of Mama Margaret Hudson smiling" loading="lazy" width="115" height="115" src="media/mama-margaret-hudson.jpg"><figcaption><strong>Mama Margaret Hudson</strong><span>Love and remembrance</span></figcaption></figure>
-<figure><img alt="Original childhood photograph of Joseph Q. Hudson seated at a classroom desk" loading="lazy" width="115" height="89" src="media/joseph-q-hudson-childhood.jpg"><figcaption><strong>Joseph Q. Hudson</strong><span>Childhood and continuity</span></figcaption></figure>
+<figure><img alt="Original family photograph of Grandma Irene outdoors holding a Bible" loading="lazy" width="115" height="115" src="/computational-metacognitive-bilingualism/hudson-family-legacy/media/grandma-irene.jpg?v=193"><figcaption><strong>Grandma Irene</strong><span>Faith and heritage</span></figcaption></figure>
+<figure><img alt="Original family photograph of Mama Margaret Hudson smiling" loading="lazy" width="115" height="115" src="/computational-metacognitive-bilingualism/hudson-family-legacy/media/mama-margaret-hudson.jpg?v=193"><figcaption><strong>Mama Margaret Hudson</strong><span>Love and remembrance</span></figcaption></figure>
+<figure><img alt="Original childhood photograph of Joseph Q. Hudson seated at a classroom desk" loading="lazy" width="115" height="89" src="/computational-metacognitive-bilingualism/hudson-family-legacy/media/joseph-q-hudson-childhood.jpg?v=193"><figcaption><strong>Joseph Q. Hudson</strong><span>Childhood and continuity</span></figcaption></figure>
 </div>
+<p class="hudson-photo-help">If a portrait fails to load, open its image directly to distinguish an unavailable asset from a page layout problem:
+<a href="/computational-metacognitive-bilingualism/hudson-family-legacy/media/grandma-irene.jpg?v=193">Grandma Irene</a> ·
+<a href="/computational-metacognitive-bilingualism/hudson-family-legacy/media/mama-margaret-hudson.jpg?v=193">Mama Margaret Hudson</a> ·
+<a href="/computational-metacognitive-bilingualism/hudson-family-legacy/media/joseph-q-hudson-childhood.jpg?v=193">Joseph Q. Hudson</a>.
+</p>
 <style>
 .hudson-memorial-gallery{--legacy-gold:#c99842;position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(9px,2vw,22px);margin:2.5rem 0;padding:clamp(18px,3vw,36px);border:5px double #d8ac57;border-radius:20px;background:radial-gradient(ellipse at top,#fff6d9 0%,#e7cd98 65%,#b56c38 130%);box-shadow:0 15px 35px rgba(68,27,14,.17)}
 .hudson-memorial-gallery:before{content:"♃  ROOTS · FAITH · LOVE · LEGACY";position:absolute;top:-17px;left:50%;transform:translateX(-50%);white-space:nowrap;background:#842119;color:#ffdc83;border:2px solid #d8ac57;border-radius:30px;padding:6px 18px;font:700 clamp(.55rem,1.4vw,.85rem) Georgia,serif;letter-spacing:.08em}
