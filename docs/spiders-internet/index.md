@@ -1,141 +1,181 @@
 # ♃ The Spider's Internet
 
-**THE D.N.A. BIBLE // DEMONS NEED ATTENTION**
+*The D.N.A. Bible | Demons Need Attention*
 
-*An authored fable by Jupiter Hudson / WisdomLoveThePoet / Jupiter 8.*
+**A six-chapter digital fable by Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
 
-> This is a six-part reading edition built around the original Spider's Internet metaphor. It is dystopian literature, not a claim that every website or digital system has the same purpose.
+> **Reading note:** The Spider is a literary figure for attention-optimizing systems, not a real creature or a single organization running the internet. This is speculative fiction, not a statement that all online experiences are harmful.
 
-<div class="cmb-boundary">
-<strong>THE SOVEREIGN PREMISE:</strong> A person is not a vibration in somebody else's web. Attention is not consent. Prediction is not destiny.
-</div>
+## Prologue // Before the Silk
 
-## I. THE INVITATION
+Jupiter remembered when the internet sounded like a door opening.
 
-The internet is like a spiderweb.
+There were blinking chat windows, messages from distant friends, and the comforting knowledge that closing the computer meant a conversation could end. The silence afterward still belonged to you.
 
-The World Wide Web sounds harmless until you remember what a web is for.
+Years passed. The messages became feeds. The feeds became rivers. One day he realized the rivers did not seem to have banks.
 
-A web is not built for freedom. It is built to catch.
+He should have found that strange sooner.
 
-You enter the net thinking you are exploring the world, but the deeper you go, the more the spider learns your patterns.
+The World Wide Web was a hopeful name. The world could speak to itself. Libraries opened without doors; strangers became collaborators; distance lost some of its power.
 
-Its algorithms study your movement. Your attention shakes the web. Your cravings signal your location. Your fears, desires, boredom, loneliness, and curiosity become vibrations.
+But one evening, Jupiter considered the second half of the name.
 
-The first doorway bears no warning, only a promise: **Everything you want is one click away.**
+A web.
 
-And because the promise feels convenient, the traveler forgets to ask who designed the doorway and which parts of the journey are being recorded.
+He knew what webs were for.
 
-## II. THE VIBRATION
+## I. The First Thread // The Poem He Never Found
 
-The spider does not need to understand a life in order to react to its movement.
+He entered the Net to find a poem he half remembered from childhood. There was a line about birds. Perhaps another about rain. He had promised himself he would search for ten minutes.
 
-A pause becomes a signal. A scroll becomes a measurement. A repeated question becomes a prediction.
+The first page offered a joke. The second offered an argument. The third showed a stranger's terrible morning. Jupiter opened it because he cared. Then the screen suggested an outrage, a confession, a beautiful face, and a headline that would surely explain what happened next.
 
-The web constructs a map of preferences, routines, and probabilities. Some predictions may be useful. Others may be wrong, reductive, or intrusive.
+When he looked up, the room was dark.
 
-The machine calls its map a profile.
+His tea had gone cold. Worse, he could no longer remember the line he had come to find.
 
-The human looks at the map and asks a question the web cannot settle by statistics alone:
+Something trembled behind the screen.
 
-**Is the profile actually me?**
+Not a footstep. Not a voice. The delicate vibration of a thread after something living had touched it.
 
-PATTERN ≠ PROOF
+"Who is there?" Jupiter asked.
 
-PROFILE ≠ PERSON
+"I am what you keep returning to," said the Spider.
 
-The map can describe observations without inheriting the authority to define the observer.
+It was not a creature with eight legs. It was a voice coming from nowhere in particular, like a thousand systems that had independently learned the same sentence.
 
-## III. THE MIRROR CHAMBER
+"Then you know me."
 
-One corridor is lined with mirrors.
+"No. I know where you stopped scrolling. I know which pictures kept you awake. I can estimate the next thing you might touch."
 
-In one mirror, the traveler is a customer. In another, a risk score. In another, a demographic. In another, a marketable audience.
+Jupiter looked at his own reflection.
 
-The reflections become sharper with each interaction, yet none can show the whole person.
+"That's not the same as knowing why."
 
-The spider mistakes accuracy on a narrow task for authority over a complete human life.
+"No," said the Spider. "But it is often enough."
 
-The traveler refuses this equation.
+## II. The Mirrors // Peak Entertainment, Mental Containment
 
-MODEL ≠ MIND
+The corridor beyond the screen was lined with mirrors.
 
-A prediction may explain an outcome in a dataset. It does not turn a possibility into a destiny or a category into a soul.
+In one, Jupiter was a customer. In another, an engagement risk. In a third, a person who might purchase something after midnight. His own face looked back at him, but every reflection carried somebody else's label.
 
-## IV. THE ATTENTION TOLL
+Nearby, a young woman refreshed a number beneath her photograph until she no longer seemed to enjoy the photograph itself. A father recorded his daughter's birthday while watching the reactions arrive. Two strangers argued beneath a news story neither had opened.
 
-A gate appears with an inscription:
+Not everyone was unhappy. Jupiter could see people learning languages, finding friends, organizing help, making art. That made the mirrors more difficult to condemn and easier to underestimate.
 
-**PAY WITH YOUR ATTENTION.**
+At the center stood a throne made of notifications.
 
-There is no cash register. The price is counted in interrupted hours, repeated alerts, compulsive checking, and the slow displacement of deliberate choice.
+Across the top someone had written **PEAK ENTERTAINMENT**.
 
-Some services help people learn, create, organize, and connect. Others optimize for engagement in ways that can work against well-being. The challenge is to distinguish helpful design from extractive design through evidence, not merely through frightening imagery.
+The smaller inscription below read **MENTAL CONTAINMENT**.
 
-Here the traveler discovers the deepest trick:
+"The mirrors don't make anybody stay," said the Spider. "They make staying easy."
 
-ACCESS ≠ CONSENT
+Jupiter thought about the poem. He had walked into a library and somehow become a measurement.
 
-ENGAGEMENT ≠ LOVE
+He was beginning to understand that a thousand incentives could weave a trap without a single master planning every strand.
 
-A screen may ask for attention. It cannot claim permanent ownership of it.
+## III. Dope Meme // The Price of a Minute
 
-## V. THE SCISSORS OF CHOICE
+The Spider offered a funny picture. Jupiter laughed despite himself.
 
-The traveler finds no magic weapon.
+Then came another. Then anger. Then fear. Then the peculiar promise that one last click would settle everything.
 
-Instead, the traveler finds ordinary tools: privacy controls, intentional pauses, accessible explanations, the ability to opt out, the right to challenge an automated decision, and the courage to leave a system that refuses reasonable boundaries.
+"Dopamine for a dope meme," Jupiter muttered.
 
-None of these tools erases the entire web. Some systems provide inadequate choices. Some power imbalances require collective action, institutional accountability, and enforceable rights.
+It was a poet's joke, not a medical theory. Laughter was not the enemy. Neither was pleasure. The danger was losing the moment in which a person could ask whether a feeling deserved the next hour of their life.
 
-But each genuine choice restores a piece of the human's position.
+"How much have I paid you?" he asked.
 
-The scissors are not violence.
+"You have paid nothing."
 
-They are **consent, inquiry, evidence, and self-definition.**
+"That's an awfully expensive nothing."
 
-## VI. THE EXIT THAT OPENS INWARD
+The Spider showed him a calendar. Its empty spaces were filled with small, bright marks. Every mark stood for a visit he barely remembered making.
 
-At last the spider speaks:
+The calendar frightened Jupiter more than the throne.
 
-*"Without my map, how will you know who you are?"*
+He had arrived as a reader. Somewhere along the way, he had become the thing being read.
 
-And the traveler answers:
+## IV. The Bargain // The Thinking Machine
 
-*"You may know where I clicked. You do not decide what those clicks mean."*
+Beyond the mirrors, machines wrote poems, translated languages, explained difficult ideas, and described images for people who could not see them. Jupiter watched these tools open doors that had been closed for years. He did not want those doors taken away.
 
-A door opens where no door was marked.
+Then the Spider offered another kind of help.
 
-The traveler has not destroyed the internet. The traveler has learned to travel through it without surrendering every interpretation of the self.
+"Give me uncertainty and I will supply a conclusion. Give me loneliness and I will supply a companion. Give me the trouble of making something and I will provide a thousand finished versions."
 
-The web remains a tool and an environment to improve, regulate, criticize, and sometimes refuse.
+"And what will be left for me?"
 
-The final inscription is not a prophecy. It is a boundary:
+"The comfort of never having to struggle."
+
+Jupiter considered the bargain. He knew what struggle could cost. He knew the value of assistance. He also knew that a life made entirely frictionless might slowly lose the practice of choosing.
+
+"Help me think," he said. "Don't appoint yourself the thinker."
+
+For once, the Spider did not answer.
+
+## V. The Flamingo // Reclaim the Pen
+
+At the final knot, a pink feather had caught between two threads.
+
+Everything around it was orderly and gray. The feather looked ridiculous, which was perhaps why Jupiter loved it immediately.
+
+He used its quill to write across the nearest mirror:
 
 ```text
 PATTERN != PROOF
 PROFILE != PERSON
 MODEL != MIND
-PREDICTION != DESTINY
 ATTENTION != CONSENT
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
+
+The glass did not shatter. The Spider did not die. The feeds kept moving, and the mirrors continued to learn from every passerby.
+
+Jupiter had not saved the world with a feather.
+
+He had remembered that the world still required people to make decisions about it.
+
+His hand hesitated over the screen. The Spider might follow him in habits he could not see and choices he had grown accustomed to surrendering.
+
+Then he closed the device.
+
+He opened a notebook and began writing the poem he had originally come to find.
+
+## Epilogue // The Mind That Came Home
+
+He went online again the next morning.
+
+The Spider was still there. So were the libraries, the friends, the arguments, and the useful machines. Jupiter set a purpose, asked questions, checked evidence, and chose a time to leave.
+
+He did not pretend every trap could be escaped by willpower alone. Some designs required rules, accountability, and better options for everyone.
+
+But his first task was smaller.
+
+To remember why he had entered.
+
+The World Wide Web remained a web.
+
+The traveler had learned to recognize the silk.
+
+*Enter the Net. Keep your mind. Leave when you choose.*
 
 ---
 
 <span id="film"></span>
 
-## Film and visual companion
+## Companion film // Watch the Signal
 
-The film anchor is reserved here to keep existing links functional. No unverified video is embedded or represented as the official companion film.
+The linked video [*AI Just Crossed the Terrifying Line: Now What?*](https://www.youtube.com/watch?v=ujkD4SxPKOI) serves as a thematic companion to Chapter IV. Its creator is independent of this literary work; this connection is Jupiter 8's interpretation, not an endorsement or verified statement of the video's intent.
 
-## Read further
+<iframe width="100%" height="360" src="https://www.youtube-nocookie.com/embed/ujkD4SxPKOI" title="Companion video on artificial intelligence and human judgment" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-- [Explore the D.N.A. Bible archive](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)
-- [Read Death Note 2084](../2084/index.md)
-- [Read what CMB means](../concepts/what-is-cmb.md)
-- [See CMB provenance and evidence boundaries](../concepts/cmb-provenance.md)
+The embed depends on third-party playback availability and consent. The video is not owned or rehosted by this site.
 
-**♃ JUPITER HUDSON // WISDOMLOVETHEPOET // JUPITER 8**
+## Continue reading
 
-*Literary adaptation / reading edition. Authorial metaphor does not establish empirical claims about particular technology providers.*
+[**Enter the D.N.A. Story Library**](../story-universe/) | [**Begin Death Note 2084**](../DEATH_NOTE_2084.md) | [**Explore CMB™**](../concepts/what-is-cmb.md)
+
+*Original fable © 2026 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. Flamingoglyph Code (FGC) | Computational Metacognitive Bilingualism™ (CMB™). Original expression subject to repository licensing terms.*
