@@ -82,8 +82,9 @@
 </script>
 
 <section class="cmb-stage" aria-labelledby="cmb-stage-title">
+<img class="cmb-stage-seal" src="media/cmb-red-gold-seal.svg" alt="" width="144" height="144">
 <div class="cmb-stage-copy">
-<p class="cmb-stage-kicker">♃ // CMB ARCHIVE // THE SOVEREIGN HUMAN</p>
+<p class="cmb-stage-kicker">♃ 🦩 // CMB ARCHIVE // THE SOVEREIGN HUMAN</p>
 <h1 id="cmb-stage-title"><span>COMPUTATIONAL</span><span>METACOGNITIVE</span><span>BILINGUALISM<sup>™</sup></span></h1>
 <p class="cmb-stage-description">Created by Jupiter Hudson (WisdomLoveThePoet / Jupiter 8). A living intersection of code-poetry, AI literacy, neurodiversity advocacy, digital rights, and verifiable provenance. Machines can assist human thought. They cannot inherit the authority to define a person.</p>
 <div class="cmb-stage-code" aria-label="Core human-agency principles">
