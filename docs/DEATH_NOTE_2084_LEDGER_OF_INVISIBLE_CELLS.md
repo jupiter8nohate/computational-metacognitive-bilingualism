@@ -26,6 +26,8 @@
 
 The millionth door had opened.
 
+The room beyond was disappointingly ordinary. It smelled of paper and furniture polish. Jupiter had expected the heart of a terrible system to look terrible. Instead it resembled an office where the staff had gone home and the rules had stayed behind.
+
 Inside the chamber, seven chairs surrounded a table. Nia had placed her crooked blue bird on the polished surface. Mara had placed a ledger beside it. Jupiter Hudson had asked the House a question that machines could calculate around without answering:
 
 **WHO PAID TO BUILD THE WALLS?**
@@ -47,6 +49,8 @@ EXIT CONSEQUENCES: UNDISCLOSED
 "No," Mara said. "Show us the first invoices."
 
 A drawer opened beneath the seventh chair.
+
+Nia stepped back. The drawer had moved without a hand touching it, but what frightened her was the yellowed paper inside. Somebody had preserved it. Somebody, once, had understood that a decision might need a witness.
 
 The papers were dated **2026**.
 
