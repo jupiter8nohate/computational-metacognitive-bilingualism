@@ -12,6 +12,16 @@
 
 ## I. THE INVITATION
 
+Jupiter entered the web looking for a poem. He remembered its first line, or believed he did. It had belonged to someone he would never hear speak again.
+
+The first page offered a joke. The next offered an argument between strangers. Then came a photograph so beautiful that he forgot what he had wanted in the first place.
+
+When he looked up, the room was dark and the tea beside him had gone cold.
+
+He tried to remember the poem. Its first line was missing.
+
+On the screen a thread of light trembled, as if something at its far end had felt him move.
+
 The internet is like a spiderweb.
 
 The World Wide Web sounds harmless until you remember what a web is for.
@@ -27,6 +37,16 @@ The first doorway bears no warning, only a promise: **Everything you want is one
 And because the promise feels convenient, the traveler forgets to ask who designed the doorway and which parts of the journey are being recorded.
 
 ## II. THE VIBRATION
+
+"Who are you?" Jupiter asked the darkened screen.
+
+"Someone who notices when you return," said the Spider.
+
+"Then you know me?"
+
+"I know traces."
+
+Jupiter looked at his open tabs, each one a tiny record of a choice he barely remembered making.
 
 The spider does not need to understand a life in order to react to its movement.
 
@@ -47,6 +67,12 @@ PROFILE ≠ PERSON
 The map can describe observations without inheriting the authority to define the observer.
 
 ## III. THE MIRROR CHAMBER
+
+Jupiter stepped into a corridor lined with mirrors. The first displayed his photograph beneath a name he recognized. The second displayed a number instead. A third predicted an opinion he had never held.
+
+"Which one is me?" he asked.
+
+The Spider did not reply.
 
 One corridor is lined with mirrors.
 
@@ -95,6 +121,8 @@ The scissors are not violence.
 They are **consent, inquiry, evidence, and self-definition.**
 
 ## VI. THE EXIT THAT OPENS INWARD
+
+Jupiter reached toward the glowing screen, then withdrew his hand. The room was still dark. The tea was still cold. Nothing outside had changed, and somehow that made the choice more difficult.
 
 At last the spider speaks:
 
