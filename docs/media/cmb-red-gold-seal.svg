@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-labelledby="logo-title logo-desc">
+<title id="logo-title">CMB red and gold flamingo seal</title>
+<desc id="logo-desc">Gold circular archive seal enclosing a red flamingo-shaped curve and the Jupiter symbol.</desc>
+<defs>
+  <radialGradient id="bg" cx=".4" cy=".3"><stop offset="0" stop-color="#392013"/><stop offset="1" stop-color="#090807"/></radialGradient>
+  <linearGradient id="gold"><stop offset="0" stop-color="#fff1ad"/><stop offset="1" stop-color="#ffc72c"/></linearGradient>
+</defs>
+<rect x="2" y="2" width="188" height="188" rx="38" fill="url(#bg)" stroke="#da291c" stroke-width="4"/>
+<circle cx="96" cy="96" r="73" fill="none" stroke="url(#gold)" stroke-width="5"/>
+<circle cx="96" cy="96" r="64" fill="none" stroke="#754224" stroke-width="1.5" stroke-dasharray="3 7"/>
+<path d="M65 126 C55 111 56 90 72 79 C86 69 102 73 104 58 C105 48 100 43 94 45 C86 47 88 57 92 60" stroke="#da291c" stroke-width="11" stroke-linecap="round" fill="none"/>
+<path d="M91 45 C80 35 64 42 69 54 C73 60 79 61 84 58" fill="#da291c"/>
+<path d="M69 54 L55 52 L69 62 Z" fill="#ffc72c"/>
+<circle cx="77" cy="47" r="2.5" fill="#090807"/>
+<path d="M65 126 C79 134 96 126 105 111 C111 102 123 102 128 109 C135 119 125 131 112 131" fill="none" stroke="#da291c" stroke-width="11" stroke-linecap="round"/>
+<path d="M96 126 L92 150 M109 127 L114 150" fill="none" stroke="#ffc72c" stroke-width="4.5" stroke-linecap="round"/>
+<text x="141" y="81" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#ffc72c" text-anchor="middle">♃</text>
+<text x="98" y="174" font-family="Arial,sans-serif" font-size="12" letter-spacing="4" fill="#fff2d4" text-anchor="middle">CMB</text>
+</svg>

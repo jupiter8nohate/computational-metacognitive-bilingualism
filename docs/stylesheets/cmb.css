@@ -5,10 +5,10 @@
   --cmb-text: #f0f6fc;
   --cmb-muted: #8b949e;
   --cmb-border: #30363d;
-  --cmb-machine: #35d0ff;
-  --cmb-human: #ff4fa3;
-  --cmb-meta: #a78bfa;
-  --cmb-evidence: #ffd166;
+  --cmb-machine: #ffc72c;
+  --cmb-human: #da291c;
+  --cmb-meta: #ffc72c;
+  --cmb-evidence: #ffde83;
   --cmb-danger: #ff7b72;
   --cmb-radius: 14px;
   --cmb-shadow: 0 16px 42px rgb(0 0 0 / 28%);
@@ -101,7 +101,7 @@ body {
 .rst-content tt {
   background: var(--cmb-surface);
   border: 1px solid var(--cmb-border);
-  color: #d2a8ff;
+  color: #ffc72c;
   font-family: var(--cmb-mono);
   border-radius: 6px;
 }
@@ -163,7 +163,7 @@ body {
   background:
     radial-gradient(circle at 78% 20%, rgb(255 79 163 / 18%), transparent 33%),
     radial-gradient(circle at 18% 84%, rgb(53 208 255 / 14%), transparent 34%),
-    linear-gradient(145deg, #111722 0%, #0d1117 55%, #120d18 100%);
+    linear-gradient(145deg, #111722 0%, #0d1117 55%, #1a110b 100%);
   box-shadow: var(--cmb-shadow);
 }
 
@@ -301,11 +301,11 @@ body {
   --cmb-text: #ece9e4;
   --cmb-muted: #9a9fa5;
   --cmb-border: #30343a;
-  --cmb-machine: #9ca7b3;
-  --cmb-human: #e86b73;
-  --cmb-meta: #a77bd8;
-  --cmb-evidence: #d7c3a3;
-  --cmb-danger: #e34b55;
+  --cmb-machine: #ffc72c;
+  --cmb-human: #da291c;
+  --cmb-meta: #ffc72c;
+  --cmb-evidence: #ffde83;
+  --cmb-danger: #ff594d;
   --cmb-blood: #82151b;
   --cmb-ash: #b7b0a7;
   --cmb-display: Georgia, "Times New Roman", Times, serif;
@@ -396,7 +396,7 @@ body {
 .rst-content tt {
   background: #08090b;
   border-color: #3d2428;
-  color: #d8bcc0;
+  color: #ffdf9d;
 }
 
 .rst-content pre,

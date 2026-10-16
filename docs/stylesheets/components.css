@@ -116,14 +116,14 @@
 
 .cmb-glitch-level-2 {
   letter-spacing: 0.05em;
-  text-shadow: 1px 0 rgb(156 167 179 / 28%);
+  text-shadow: 1px 0 rgb(255 199 44 / 28%);
 }
 
 .cmb-glitch-level-3 {
   letter-spacing: 0.07em;
   text-shadow:
-    1px 0 rgb(232 107 115 / 34%),
-    -1px 0 rgb(156 167 179 / 22%);
+    1px 0 rgb(218 41 28 / 34%),
+    -1px 0 rgb(255 199 44 / 22%);
 }
 
 .cmb-glitch-level-4 {
@@ -145,8 +145,8 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-shadow:
-    1px 0 rgb(232 107 115 / 45%),
-    -1px 0 rgb(156 167 179 / 30%);
+    1px 0 rgb(218 41 28 / 45%),
+    -1px 0 rgb(255 199 44 / 30%);
 }
 
 .cmb-evidence-note {
