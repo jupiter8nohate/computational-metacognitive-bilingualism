@@ -4,7 +4,7 @@
 
 *An authored fable by Jupiter Hudson / WisdomLoveThePoet / Jupiter 8.*
 
-> This is an alternate six-part reading edition. [Read the original illustrated story and watch its video](../spiders-internet/). It is built around the original Spider's Internet metaphor. It is dystopian literature, not a claim that every website or digital system has the same purpose.
+> This is an alternate six-part reading edition. [Read the original illustrated story and watch its video](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/spiders-internet/). It is built around the original Spider's Internet metaphor. It is dystopian literature, not a claim that every website or digital system has the same purpose.
 
 <div class="cmb-boundary">
 <strong>THE SOVEREIGN PREMISE:</strong> A person is not a vibration in somebody else's web. Attention is not consent. Prediction is not destiny.
@@ -127,7 +127,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Film and visual companion
 
-The original illustrated page contains the film companion. [Open the full story and film](../spiders-internet/#film).
+The original illustrated page contains the film companion. [Open the full story and film](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/spiders-internet/#film).
 
 ## Read further
 
