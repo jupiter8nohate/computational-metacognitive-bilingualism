@@ -28,7 +28,9 @@ The first door had opened.
 
 A million others remained.
 
-The ministry celebrated immediately.
+Nia had imagined freedom would make a sound: a bolt sliding back, perhaps, or a crowd cheering. Instead the unlocked room smelled of floor cleaner. Someone had placed a bowl of wrapped candies beside the terminal.
+
+The Ministry celebrated immediately.
 
 ~~~text
 PUBLIC NOTICE // 2084
@@ -69,6 +71,12 @@ Then the screen presented a button.
 **I AGREE.**
 
 There was no second button.
+
+Nia touched the drawing hidden inside her coat. Her bird's wing bent sharply to the left. Her school had called it an error. She had called it a turn.
+
+"What happens if I do nothing?" she asked.
+
+Jupiter did not answer for her. For once he understood that even an adult's reassuring certainty could be one more thing a child had not agreed to inherit.
 
 ---
 
