@@ -8,7 +8,6 @@ theme:
   name: readthedocs
 nav:
   - Home: index.md
-  - Jupiter Hudson | Biography & Art: jupiter-hudson/index.md
   - CMB Fables:
       - Fable Library: fables/index.md
       - The Phantom Tokenbooth: fables/PHANTOM_TOKENBOOTH.md
@@ -111,7 +110,6 @@ nav:
   - Roadmap: ROADMAP.md
 
 extra_css:
-  - stylesheets/jupiter-hudson.css
   - stylesheets/cmb.css
   - stylesheets/tokens.css
   - stylesheets/components.css
