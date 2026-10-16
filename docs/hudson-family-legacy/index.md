@@ -42,6 +42,36 @@ The original tree is hosted by Ancestry. This page **does not embed or republish
 
 At present, this is a **designed archive shell**, not a verified genealogical reconstruction. No individual family relationships, identities, dates or private media have been imported.
 
+
+## GEDCOM historical collection: October 2026
+
+<div class="hudson-note"><strong>Archive intake completed.</strong> A GEDCOM 5.5.1 export titled <em>Joseph Quinton Hudson Family Tree</em> was assessed for historical coverage. This public summary is intentionally aggregate-only: it does not distribute the raw GEDCOM, living-person records, contact information, invitation tokens, or individual family relationships.</div>
+
+| GEDCOM intake metric | Observed in the submitted export |
+| --- | ---: |
+| Individual records | 691 |
+| Family-group records | 287 |
+| Individual records containing a death event | 458 |
+| Individual records with a parseable death year | 446 |
+| Death-year records dated 1925 or earlier | 396 |
+| Export metadata | GEDCOM 5.5.1, Ancestry family-tree export, October 16, 2026 |
+
+### Historical scope and confidence
+
+The tree includes records reporting historical dates reaching back into the sixteenth century. **Ancestry tree data is not automatically authenticated evidence.** Dates, identities, titles and claimed ancestral connections can be mistaken, transcribed incorrectly or duplicated. Counts represent GEDCOM records, not necessarily distinct people; the export includes repeated-looking historical entries.
+
+**Current public exhibition status:** Data received and structurally assessed. Identity-level genealogy and relationship diagrams are withheld pending duplicate resolution, source-by-source verification, and review of publication permissions.
+
+### Research workflow
+
+1. Normalize names and dates while preserving original evidence.
+2. Identify duplicates and inconsistent parental/partner relationships.
+3. Verify each proposed link using cited independent historical sources.
+4. Screen for living and possibly living people, sensitive facts and copyrighted images.
+5. Publish only reviewed historical profiles with clear source citations, corrections and consent where needed.
+
+**Research invariant:** `TREE_ASSERTION != HISTORICAL_PROOF` · `DEATH_EVENT != VERIFIED_DEATH` · `RECORD_COUNT != UNIQUE_PEOPLE`.
+
 ## Evidence and privacy policy
 
 | Status | Interpretation |
