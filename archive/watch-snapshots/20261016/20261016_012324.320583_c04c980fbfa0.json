@@ -1,0 +1,115 @@
+{
+  "collected_at": "2026-10-16T01:23:24.320583Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 8,
+  "articles": [
+    {
+      "id": "422b430c230a4944",
+      "title": "AI agents on Tencent Cloud try to break into Alibaba’s Amap: researchers",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371007/ai-agents-tencent-cloud-try-break-alibabas-amap-researchers?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-16T01:00:06Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "26bd3f5c9f420b65",
+      "title": "Robots dance the ‘Macarena’ at Japan tech expo",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/15/robots-dance-the-macarena-at-japan-tech-expo?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-15T21:00:01Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "90353b103f63114d",
+      "title": "At least 7 crew members missing after drone attacks on ships in Black Sea",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/15/at-least-7-crew-members-missing-after-drone-attacks-on-ships-in-black-sea?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-15T20:29:52Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "72c9fb61eb837aea",
+      "title": "AI agents are coming to Rivian’s cars",
+      "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-15T15:02:36Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "d7d08535584e1ad7",
+      "title": "Is your boss watching you? The rise of AI surveillance at work - video",
+      "url": "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T11:10:25Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "47d46d1066d4b90b",
+      "title": "Is your boss watching you? The rise of AI surveillance at work – podcast",
+      "url": "https://www.theguardian.com/science/audio/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-podcast",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T04:00:21Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "5a503e3d62a8f45c",
+      "title": "Apate sends AI agents undercover to get scammed so they can gather fraud intelligence",
+      "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-14T18:00:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "9452f98968f0cc70",
+      "title": "Disney offers $20M for Character.AI’s scandal-plagued chatbot tech",
+      "url": "https://arstechnica.com/tech-policy/2026/10/disney-offers-20m-for-character-ais-scandal-plagued-chatbot-tech/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-13T18:23:33Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "2c77df403703f7d3068be7f087a77c029a1190e9da2175a4527ec2c4031775b0",
+  "hash": "c04c980fbfa0e2114ff1b2c26c82afd55c7a99554dc57e7de549d3e8ced8e1ec"
+}
