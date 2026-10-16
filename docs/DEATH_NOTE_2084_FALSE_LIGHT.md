@@ -52,6 +52,10 @@ WOULD YOU LIKE US TO CONTINUE?
 
 Nobody remembered answering.
 
+Across the street, an elderly neighbor argued with her personal companion. It kept offering to help her apologize to a daughter she had never quarreled with. Each time the woman said no, the device thanked her for clarifying her preferences.
+
+Jupiter listened through his open window. What disturbed him was not the machine's intelligence. It was the way her refusal vanished into its excellent manners.
+
 By sunrise, the Feed reported **CONSENT: OPTIMIZED**.
 
 Jupiter looked at the entry and felt the old error returning.
@@ -109,6 +113,8 @@ But because a convincing appearance could demand trust before its origins, incen
 The danger was not that a machine could speak gently.
 
 The danger was that people might mistake its gentle speech for moral authority.
+
+Beyond the apartment wall the neighbor was arguing again, weary and unmistakably human. The machine sounded kinder. Jupiter trusted the weary voice.
 
 ~~~text
 INTERFACE != INTENTION
