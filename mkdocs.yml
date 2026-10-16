@@ -1,4 +1,4 @@
-site_name: Computational Metacognitive Bilingualism™ (CMB) | Jupiter Hudson
+site_name: Computational Metacognitive Bilingualism™ (CMB™) | Jupiter Hudson
 site_description: "Explore Jupiter Hudson\u0027s Computational Metacognitive Bilingualism™ (CMB): code-poetry, AI literacy, human agency, digital rights, and cognitive sovereignty."
 site_url: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
 site_author: Jupiter Hudson
@@ -8,111 +8,115 @@ theme:
   name: readthedocs
 nav:
   - Home: index.md
-  - CMB Fables:
-      - Fable Library: fables/index.md
-      - The Phantom Tokenbooth: fables/PHANTOM_TOKENBOOTH.md
-      - Quiet Wars - Silent Weapons: fables/QUIET_WARS_SILENT_WEAPONS.md
-      - Why the D.N.A. Bible Was Written: fables/WHY_THE_DNA_BIBLE_WAS_WRITTEN.md
-      - D.N.A Bible Demons Need Attention: fables/THE_HARDWARE_HERESY.md
-      - The Agentic Sector: fables/AGENTIC_SECTOR.md
-  - Pre-2084 - The Eye Arrives: PRE_2084_THE_EYE_ARRIVES.md
-  - 2030 Prophecy -> 2084 Archive: 2030_PROPHECY_TO_2084.md
-  - 2084:
-      - Start Here - Complete Story Arc: 2084/index.md
-      - Death Note 2084: DEATH_NOTE_2084.md
-      - The False Light Protocol - Story Continuation: DEATH_NOTE_2084_FALSE_LIGHT.md
-      - The House of a Million Doors - Third Transmission: DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md
-      - The Ledger of Invisible Cells - Fourth Transmission: DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md
-      - The Child Who Refused the Update - Fifth Transmission: DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md
-      - Reality Mirror - Proxy Gravity: 2084_REALITY_MIRROR_PROXY_GRAVITY.md
-  - The Two Loops - Autocratic vs Sovereign: CMB_THE_TWO_LOOPS.md
-  - Ten Civic Forks: CMB_TEN_CIVIC_FORKS.md
-  - World Retina:
-      - The Reciprocal Eye - Original Story: WORLD_RETINA_THE_RECIPROCAL_EYE.md
-      - Architecture Gateway: world-retina/index.md
-  - CMB Epistemic Radar: CMB_EPISTEMIC_RADAR.md
-  - Global AI Watch: GLOBAL_AI_WATCH.md
-  - Global AI Intelligence Dashboard: WATCH_DASHBOARD.md
-  - D.N.A. Living Codex: DNA_LIVING_CODEX.md
-  - The Shadow Is Not the Source: THE_SHADOW_IS_NOT_THE_SOURCE.md
-  - Lived experience testimony: lived-experience.md
-  - System status: generated/CMB_SYSTEM_STATUS.md
-  - Search for Truth: SEARCH_FOR_TRUTH.md
-  - Public Stewardship Incubation: PUBLIC_STEWARDSHIP_INCUBATION.md
-  - Future Foundation Blueprint: FUTURE_FOUNDATION_BLUEPRINT.md
-  - Visual system: DARK_FEDERALISM_VISUAL_SYSTEM.md
-  - Concepts:
-      - Concept library: concepts/index.md
-      - What is CMB?: concepts/what-is-cmb.md
-      - Pattern != Proof: concepts/pattern-not-proof.md
-      - Profile != Person: concepts/profile-not-person.md
-      - Model != Mind: concepts/model-not-mind.md
-      - Prediction != Destiny: concepts/prediction-not-destiny.md
-      - Human Agency > Machine Authority: concepts/human-agency-machine-authority.md
-      - Exclusion of Self-Authorization: concepts/self-authorization.md
-      - Cognitive Sovereignty: concepts/cognitive-sovereignty.md
-      - CMB-Z13: concepts/cmb-z13.md
-      - Flamingoglyph Code: concepts/flamingoglyph-code.md
-      - CMB Provenance: concepts/cmb-provenance.md
-  - Err ⃝or⃟⃤ GLITCHOLOGY:
-      - Conversation Atlas: CMB_CONVERSATION_ATLAS.md
-      - Polyglot translations: CMB_POLYGLOT_TRANSLATIONS.md
-      - Jupiter polyglot runtime: JUPITER_POLYGLOT_RUNTIME.md
-      - Origin and biography: ERR_GLITCHOLOGY_ORIGIN.md
-      - Creative Cognitive Signature: CREATIVE_COGNITIVE_SIGNATURE.md
-      - Living Book Protocol: LIVING_BOOK_PROTOCOL.md
-      - GLITCH-3D runtime: GLITCH3D_RUNTIME.md
-  - FAQ: FAQ.md
-  - Retrieval glossary: GLOSSARY.md
-  - Search & AI discovery: SEARCH_DISCOVERY.md
-  - Privacy & analytics: PRIVACY_AND_ANALYTICS.md
-  - Interactive playground: PLAYGROUND.md
-  - CMB-EDU Kids: CMB_EDU_KIDS.md
-  - Agent operating model: AGENT_OPERATING_MODEL.md
-  - Digital Nervous Immune System: DIGITAL_NERVOUS_IMMUNE_SYSTEM.md
-  - Chess strategy engine: CHESS_STRATEGY_ENGINE.md
-  - Stockfish review council: STOCKFISH_REVIEW_COUNCIL.md
-  - Agent Chess Academy: AGENT_CHESS_ACADEMY.md
-  - Claim-control traceability: CLAIM_CONTROL_TRACEABILITY.md
-  - Autonomous Steward agents: AUTONOMOUS_STEWARD_AGENTS.md
-  - Agent discovery protocol: AGENT_DISCOVERY_PROTOCOL.md
-  - MCP integration: MCP_INTEGRATION.md
-  - For developers: DEVELOPERS.md
-  - For researchers & policy: RESEARCHERS.md
-  - CMB Physics Laboratory:
-      - Overview: research/cmb-fluid-verification/index.md
-      - Governing equations: research/cmb-fluid-verification/01-equations.md
-      - Exact forced equilibrium: research/cmb-fluid-verification/02-exact-forced-equilibrium.md
-      - Residual verification: research/cmb-fluid-verification/03-residual-method.md
-      - 3D-8D Audit Geometry: research/cmb-fluid-verification/04-hypergeometry-3d-8d.md
-      - AI verification bridge: research/cmb-fluid-verification/05-ai-verification.md
-      - Limitations: research/cmb-fluid-verification/06-limitations.md
-      - Reproduce: research/cmb-fluid-verification/07-reproduction.md
-  - CMB Bio-Silicon Laboratory:
-      - Overview: research/cmb-organoid-silicon/index.md
-      - Biological scaffold: research/cmb-organoid-silicon/01-biological-scaffold.md
-      - Silicon interface: research/cmb-organoid-silicon/02-silicon-interface.md
-      - Observation channels: research/cmb-organoid-silicon/03-observation-channels.md
-      - Residual matrix: research/cmb-organoid-silicon/04-residual-matrix.md
-      - Closed-loop verification: research/cmb-organoid-silicon/05-closed-loop-verification.md
-      - AI interpretation boundary: research/cmb-organoid-silicon/06-ai-interpretation-boundary.md
-      - Ethics and agency: research/cmb-organoid-silicon/07-ethics-and-agency.md
-      - Limitations: research/cmb-organoid-silicon/08-limitations.md
-      - Reproduce: research/cmb-organoid-silicon/09-reproduction.md
-  - Case studies: CASE_STUDIES.md
-  - CMB distinction: CMB_DISTINCTION.md
-  - CMB research position: CMB_RESEARCH_POSITION.md
-  - Creator provenance: CREATOR_PROVENANCE.md
-  - CMB dissertation: dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md
-  - Formal semantics: dissertation/31_FORMAL_SEMANTICS.md
-  - Project structure: PROJECT_STRUCTURE.md
-  - Threat model: THREAT_MODEL.md
-  - Prior art & positioning: PRIOR_ART_AND_POSITIONING.md
-  - C2PA interoperability: C2PA_INTEROPERABILITY.md
-  - Recovery & preservation: RECOVERY_AND_PRESERVATION.md
-  - Independent review: EXTERNAL_REVIEW.md
-  - Repository settings: REPOSITORY_SETTINGS.md
-  - Roadmap: ROADMAP.md
+  - CMB:
+      - The Two Loops - Autocratic vs Sovereign: CMB_THE_TWO_LOOPS.md
+      - Ten Civic Forks: CMB_TEN_CIVIC_FORKS.md
+      - Lived experience testimony: lived-experience.md
+      - Visual system: DARK_FEDERALISM_VISUAL_SYSTEM.md
+      - Concepts:
+          - Concept library: concepts/index.md
+          - What is CMB?: concepts/what-is-cmb.md
+          - Pattern != Proof: concepts/pattern-not-proof.md
+          - Profile != Person: concepts/profile-not-person.md
+          - Model != Mind: concepts/model-not-mind.md
+          - Prediction != Destiny: concepts/prediction-not-destiny.md
+          - Human Agency > Machine Authority: concepts/human-agency-machine-authority.md
+          - Exclusion of Self-Authorization: concepts/self-authorization.md
+          - Cognitive Sovereignty: concepts/cognitive-sovereignty.md
+          - CMB-Z13: concepts/cmb-z13.md
+          - Flamingoglyph Code: concepts/flamingoglyph-code.md
+          - CMB Provenance: concepts/cmb-provenance.md
+      - FAQ: FAQ.md
+      - Retrieval glossary: GLOSSARY.md
+      - Search & AI discovery: SEARCH_DISCOVERY.md
+      - Privacy & analytics: PRIVACY_AND_ANALYTICS.md
+      - CMB-EDU Kids: CMB_EDU_KIDS.md
+  - The D.N.A. Bible:
+      - CMB Fables:
+          - Fable Library: fables/index.md
+          - The Phantom Tokenbooth: fables/PHANTOM_TOKENBOOTH.md
+          - Quiet Wars - Silent Weapons: fables/QUIET_WARS_SILENT_WEAPONS.md
+          - Why the D.N.A. Bible Was Written: fables/WHY_THE_DNA_BIBLE_WAS_WRITTEN.md
+          - D.N.A Bible Demons Need Attention: fables/THE_HARDWARE_HERESY.md
+          - The Agentic Sector: fables/AGENTIC_SECTOR.md
+      - Pre-2084 - The Eye Arrives: PRE_2084_THE_EYE_ARRIVES.md
+      - 2030 Prophecy -> 2084 Archive: 2030_PROPHECY_TO_2084.md
+      - 2084:
+          - Start Here - Complete Story Arc: 2084/index.md
+          - Death Note 2084: DEATH_NOTE_2084.md
+          - The False Light Protocol - Story Continuation: DEATH_NOTE_2084_FALSE_LIGHT.md
+          - The House of a Million Doors - Third Transmission: DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md
+          - The Ledger of Invisible Cells - Fourth Transmission: DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md
+          - The Child Who Refused the Update - Fifth Transmission: DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md
+          - Reality Mirror - Proxy Gravity: 2084_REALITY_MIRROR_PROXY_GRAVITY.md
+      - World Retina:
+          - The Reciprocal Eye - Original Story: WORLD_RETINA_THE_RECIPROCAL_EYE.md
+          - Architecture Gateway: world-retina/index.md
+      - D.N.A. Living Codex: DNA_LIVING_CODEX.md
+      - The Shadow Is Not the Source: THE_SHADOW_IS_NOT_THE_SOURCE.md
+      - Search for Truth: SEARCH_FOR_TRUTH.md
+      - Err ⃝or⃟⃤ GLITCHOLOGY:
+          - Conversation Atlas: CMB_CONVERSATION_ATLAS.md
+          - Polyglot translations: CMB_POLYGLOT_TRANSLATIONS.md
+          - Jupiter polyglot runtime: JUPITER_POLYGLOT_RUNTIME.md
+          - Origin and biography: ERR_GLITCHOLOGY_ORIGIN.md
+          - Creative Cognitive Signature: CREATIVE_COGNITIVE_SIGNATURE.md
+          - Living Book Protocol: LIVING_BOOK_PROTOCOL.md
+          - GLITCH-3D runtime: GLITCH3D_RUNTIME.md
+  - Research & Verification:
+      - CMB Epistemic Radar: CMB_EPISTEMIC_RADAR.md
+      - Global AI Watch: GLOBAL_AI_WATCH.md
+      - Global AI Intelligence Dashboard: WATCH_DASHBOARD.md
+      - System status: generated/CMB_SYSTEM_STATUS.md
+      - Public Stewardship Incubation: PUBLIC_STEWARDSHIP_INCUBATION.md
+      - Future Foundation Blueprint: FUTURE_FOUNDATION_BLUEPRINT.md
+      - Claim-control traceability: CLAIM_CONTROL_TRACEABILITY.md
+      - For researchers & policy: RESEARCHERS.md
+      - CMB Physics Laboratory:
+          - Overview: research/cmb-fluid-verification/index.md
+          - Governing equations: research/cmb-fluid-verification/01-equations.md
+          - Exact forced equilibrium: research/cmb-fluid-verification/02-exact-forced-equilibrium.md
+          - Residual verification: research/cmb-fluid-verification/03-residual-method.md
+          - 3D-8D Audit Geometry: research/cmb-fluid-verification/04-hypergeometry-3d-8d.md
+          - AI verification bridge: research/cmb-fluid-verification/05-ai-verification.md
+          - Limitations: research/cmb-fluid-verification/06-limitations.md
+          - Reproduce: research/cmb-fluid-verification/07-reproduction.md
+      - CMB Bio-Silicon Laboratory:
+          - Overview: research/cmb-organoid-silicon/index.md
+          - Biological scaffold: research/cmb-organoid-silicon/01-biological-scaffold.md
+          - Silicon interface: research/cmb-organoid-silicon/02-silicon-interface.md
+          - Observation channels: research/cmb-organoid-silicon/03-observation-channels.md
+          - Residual matrix: research/cmb-organoid-silicon/04-residual-matrix.md
+          - Closed-loop verification: research/cmb-organoid-silicon/05-closed-loop-verification.md
+          - AI interpretation boundary: research/cmb-organoid-silicon/06-ai-interpretation-boundary.md
+          - Ethics and agency: research/cmb-organoid-silicon/07-ethics-and-agency.md
+          - Limitations: research/cmb-organoid-silicon/08-limitations.md
+          - Reproduce: research/cmb-organoid-silicon/09-reproduction.md
+      - Case studies: CASE_STUDIES.md
+      - CMB distinction: CMB_DISTINCTION.md
+      - CMB research position: CMB_RESEARCH_POSITION.md
+      - Creator provenance: CREATOR_PROVENANCE.md
+      - CMB dissertation: dissertation/CMB_COGNITIVE_SOVEREIGNTY_DISSERTATION.md
+      - Formal semantics: dissertation/31_FORMAL_SEMANTICS.md
+      - Threat model: THREAT_MODEL.md
+      - Prior art & positioning: PRIOR_ART_AND_POSITIONING.md
+      - Recovery & preservation: RECOVERY_AND_PRESERVATION.md
+      - Independent review: EXTERNAL_REVIEW.md
+  - Developer Lab:
+      - Interactive playground: PLAYGROUND.md
+      - Agent operating model: AGENT_OPERATING_MODEL.md
+      - Digital Nervous Immune System: DIGITAL_NERVOUS_IMMUNE_SYSTEM.md
+      - Chess strategy engine: CHESS_STRATEGY_ENGINE.md
+      - Stockfish review council: STOCKFISH_REVIEW_COUNCIL.md
+      - Agent Chess Academy: AGENT_CHESS_ACADEMY.md
+      - Autonomous Steward agents: AUTONOMOUS_STEWARD_AGENTS.md
+      - Agent discovery protocol: AGENT_DISCOVERY_PROTOCOL.md
+      - MCP integration: MCP_INTEGRATION.md
+      - For developers: DEVELOPERS.md
+      - Project structure: PROJECT_STRUCTURE.md
+      - C2PA interoperability: C2PA_INTEROPERABILITY.md
+      - Repository settings: REPOSITORY_SETTINGS.md
+      - Roadmap: ROADMAP.md
 
 extra_css:
   - stylesheets/cmb.css
@@ -125,8 +129,10 @@ extra_css:
   - stylesheets/global-ai-watch.css
   - stylesheets/watch-dashboard.css
   - stylesheets/cmb-epistemic-radar.css
+  - stylesheets/cmb-red-gold.css
 
 extra_javascript:
   - javascripts/cmb-analytics-config.js
   - javascripts/cmb-analytics.js
   - javascripts/watch-dashboard.js
+  - javascripts/cmb-signature.js
