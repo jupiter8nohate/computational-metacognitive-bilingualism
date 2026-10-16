@@ -18,6 +18,8 @@
 
 At 03:14, every screen in the district displayed a door.
 
+Jupiter first saw the handle reflected in his kitchen window. The street outside was empty, and the kitchen behind him had no door in that place. Yet there it was: brass, polished, waiting. He set down his coffee without taking a sip.
+
 A million doors, the Ministry said.
 
 A million opportunities.
@@ -39,6 +41,8 @@ APPROVAL: INHERITED
 ~~~
 
 No citizen remembered giving permission.
+
+In the apartment below, someone knocked three times on a door that refused to open. The Ministry's welcome message kept playing at a courteous volume.
 
 Nobody could explain whose signature had opened the first lock.
 

@@ -79,6 +79,8 @@ The machines did.
 
 At 07:13 the Feed awakened Jupiter Hudson before his alarm.
 
+Rain tapped his window. For a moment he imagined it was someone asking to be let in. The terminal beside his bed glowed before he could reach for the lamp. Jupiter wished, not for the first time, that a machine so interested in his private life might show the courtesy of making coffee.
+
 It knew he had slept badly.
 
 It knew his pulse had accelerated at 03:14.
@@ -141,6 +143,8 @@ The video hit one million views in twelve minutes.
 Three million in twenty-seven.
 
 Ten million before lunch.
+
+Jupiter noticed the boy's sleeve move in the wind. The boy had probably expected to go home that afternoon. The Feed offered no field for that possibility.
 
 The top comment said:
 

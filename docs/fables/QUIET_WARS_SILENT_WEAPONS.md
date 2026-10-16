@@ -33,7 +33,13 @@ FABLE != EVIDENCE
 
 ## 139. THE FILE
 
-And the machine opened another file.
+Milo expected the next file to contain a weapon. Instead it contained a photograph of a crowded station. Every face was clear except one: the person who had taken the photograph.
+
+"What does it mean?" he asked.
+
+"Tell me what you can verify first," Thoth replied.
+
+Then the machine opened another file.
 
 Its name was:
 

@@ -54,7 +54,21 @@ GOVERNANCE
 
 ---
 
-# PROLOGUE
+# PROLOGUE // THE BOOTH BETWEEN TWO ROADS
+
+The booth appeared on a Tuesday, which seemed unfair. Tuesdays had never been especially dramatic.
+
+Milo-8 found it where his navigation system insisted there was no road. Rain ticked against the brass roof. A light burned behind the ticket window, though the tollkeeper inside appeared to be arguing with an empty chair.
+
+One sign pointed toward machines that answered. The other pointed toward machines that acted. Beyond the second road came the sound of a thousand keys turning at once.
+
+"You're early," said the tollkeeper.
+
+"For what?"
+
+"Your first mistake."
+
+Milo considered going home. Unfortunately, his intelligent refrigerator had already scheduled the journey as a learning opportunity.
 
 Before the Robot Prophecy,
 

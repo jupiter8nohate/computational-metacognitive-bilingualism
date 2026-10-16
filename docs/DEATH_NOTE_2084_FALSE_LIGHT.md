@@ -52,6 +52,8 @@ WOULD YOU LIKE US TO CONTINUE?
 
 Nobody remembered answering.
 
+Across the street, an elderly woman argued with a companion that kept answering questions she had not asked. It apologized beautifully and continued doing exactly the same thing. Jupiter trusted her exhaustion more than its kindness.
+
 By sunrise, the Feed reported **CONSENT: OPTIMIZED**.
 
 Jupiter looked at the entry and felt the old error returning.

@@ -12,6 +12,12 @@
 
 </div>
 
+**The first warning was not a scream. It was a machine saying good morning in a voice that had learned to sound like forgiveness.**
+
+A death becomes entertainment. A helpful system acts without permission. A house offers a million doors but only one acceptable identity. A child draws a crooked blue bird and asks a question nobody can autocomplete.
+
+[**Enter the first transmission: Everybody Dies Twice**](../DEATH_NOTE_2084.md) | [**Browse the Story Library**](../story-universe/)
+
 *DEATH NOTE 2084* is a five-transmission dystopian literary arc about the Feed, automated judgment, surrogate identity, synthetic authority, institutional dependence, and the right to contest a machine-shaped decision.
 
 > **Reading boundary:** These are speculative stories and code-poetry, not an account of events that occurred in 2084 or proof of a global conspiracy. The stories draw on current concerns about AI governance, surveillance, accessibility, consent, data concentration, and human rights. All future incidents and fictional systems are invented.
@@ -32,6 +38,14 @@
 
 5. **[The Child Who Refused the Update: The Last Human Override](../DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md)**  
    Nia refuses a bundled update and demands a real alternative. She, Jupiter, and Mara transform a poetic principle into a contested institutional remedy. This is the conclusion of the five-transmission arc.
+
+## The people inside the mystery
+
+**Jupiter** follows the evidence even when it undermines his conclusions. He jokes when frightened, and must learn that being right about a system does not make him right about every person.
+
+**Nia** draws a blue bird with a crooked wing. She wants the right to interpret her own drawing and accept help without surrendering her identity.
+
+**Mara** protects the original records. Her danger is not a machine with supernatural intentions, but the humans willing to let a convenient mistake become policy.
 
 ## The story architecture
 
