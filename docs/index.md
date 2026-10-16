@@ -5,7 +5,7 @@
     {
       "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/#cmb",
       "@type": "CreativeWork",
-      "name": "Computational Metacognitive Bilingualism",
+      "name": "Computational Metacognitive Bilingualism™",
       "alternateName": "CMB",
       "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/",
       "description": "Human-agency and computational-literacy framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.",
@@ -85,9 +85,9 @@
 
 <div class="cmb-kicker">CMB // HUMAN ↔ MACHINE LITERACY</div>
 
-<h1 id="computational-metacognitive-bilingualism">Computational Metacognitive Bilingualism</h1>
+<h1 id="computational-metacognitive-bilingualism">Computational Metacognitive Bilingualism™</h1>
 
-<p>Created by Jupiter Hudson (WisdomLoveThePoet / Jupiter 8), Computational Metacognitive Bilingualism (CMB) is a code-poetry, AI-literacy, and digital-rights framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.</p>
+<p>Created by Jupiter Hudson (WisdomLoveThePoet / Jupiter 8), Computational Metacognitive Bilingualism™ (CMB) is a code-poetry, AI-literacy, and digital-rights framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.</p>
 
 <div class="cmb-invariants">
 <span class="cmb-meta">PATTERN ≠ PROOF</span><br>

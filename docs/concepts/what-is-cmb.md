@@ -3,14 +3,14 @@
   "@context": "https://schema.org",
   "@type": "DefinedTerm",
   "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/#term",
-  "name": "What is Computational Metacognitive Bilingualism (CMB)?",
+  "name": "What is Computational Metacognitive Bilingualism™ (CMB)?",
   "termCode": "CMB := HUMAN_MEANING <-> MACHINE_STRUCTURE\nHUMAN_AGENCY > MACHINE_AUTHORITY",
-  "description": "Computational Metacognitive Bilingualism (CMB) is a human-agency and computational-literacy framework for working across human meaning and machine-readable structure while preserving human judgment, consent, authorship, context, and self-definition.",
+  "description": "Computational Metacognitive Bilingualism™ (CMB) is a human-agency and computational-literacy framework for working across human meaning and machine-readable structure while preserving human judgment, consent, authorship, context, and self-definition.",
   "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/what-is-cmb/",
   "inDefinedTermSet": {
     "@type": "DefinedTermSet",
     "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/#cmb-concept-set",
-    "name": "Computational Metacognitive Bilingualism Concept Set",
+    "name": "Computational Metacognitive Bilingualism™ Concept Set",
     "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/"
   },
   "sameAs": [
@@ -19,9 +19,13 @@
 }
 </script>
 
-# What is Computational Metacognitive Bilingualism (CMB)?
+# What is Computational Metacognitive Bilingualism™ (CMB)?
 
-**Canonical definition.** Computational Metacognitive Bilingualism (CMB) is a human-agency and computational-literacy framework for working across human meaning and machine-readable structure while preserving human judgment, consent, authorship, context, and self-definition.
+**Canonical definition.** Computational Metacognitive Bilingualism™ (CMB) is a human-agency and computational-literacy framework for working across human meaning and machine-readable structure while preserving human judgment, consent, authorship, context, and self-definition.
+
+## Trademark and attribution
+
+**Computational Metacognitive Bilingualism™ (CMB)** is presented as a claimed project name mark associated with Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. The ™ symbol indicates a claim of trademark use, not federal registration or a legal finding of exclusivity.
 
 ## Formal expression
 

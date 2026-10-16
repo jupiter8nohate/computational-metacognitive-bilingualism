@@ -10,7 +10,7 @@
   "inDefinedTermSet": {
     "@type": "DefinedTermSet",
     "@id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/#cmb-concept-set",
-    "name": "Computational Metacognitive Bilingualism Concept Set",
+    "name": "Computational Metacognitive Bilingualism™ Concept Set",
     "url": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/"
   },
   "sameAs": [

@@ -84,6 +84,31 @@ REQUIRED_PUBLIC_PATHS = (
 )
 BUILD_MARKER = ".cmb-docs-build"
 
+BRAND_NAME = "Computational Metacognitive Bilingualism"
+BRAND_PATTERN = re.compile(re.escape(BRAND_NAME) + r"(?![™®])", flags=re.IGNORECASE)
+
+
+def apply_cmb_trademark(text: str) -> str:
+    """Mark displayed full framework names once, preserving their original case."""
+    return BRAND_PATTERN.sub(lambda match: match.group(0) + "™", text)
+
+
+def brand_published_pages(site: Path) -> int:
+    """Apply the brand mark to generated HTML and search results, not protocol IDs."""
+    candidates = list(site.rglob("*.html"))
+    search_index = site / "search/search_index.json"
+    if search_index.is_file():
+        candidates.append(search_index)
+    changed = 0
+    for path in candidates:
+        original = path.read_text(encoding="utf-8")
+        updated = apply_cmb_trademark(original)
+        if updated != original:
+            path.write_text(updated, encoding="utf-8")
+            changed += 1
+    return changed
+
+
 
 class PageLinks(HTMLParser):
     def __init__(self) -> None:
@@ -259,6 +284,7 @@ def build_site(destination: Path) -> tuple[int, int]:
             cwd=ROOT, check=True,
         )
         stage_public_assets(stage)
+        brand_published_pages(stage)
         counts = check_site(stage)
         subprocess.run(
             [sys.executable, str(ROOT / "scripts/check_search_discovery.py"),

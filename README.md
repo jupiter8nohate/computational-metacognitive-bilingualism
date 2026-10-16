@@ -1,4 +1,6 @@
-# Computational Metacognitive Bilingualism (CMB)
+# Computational Metacognitive Bilingualism™ (CMB)
+
+**Trademark notation:** The full project name is styled Computational Metacognitive Bilingualism™. The ™ symbol denotes a claimed trademark and does not itself establish registration.
 
 **Canonical documentation:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/  
 **Concept library:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/  
@@ -235,7 +237,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 > **Visual language:** 🔷 **MACHINE** · 🦩 **HUMAN** · 🟣 **META** · 🟡 **EVIDENCE**. Color is a supporting cue only; labels remain explicit.
 
-Computational Metacognitive Bilingualism is a human-agency and computational-literacy framework for learning and using computational systems while retaining human judgment, consent, authorship, meaning, and self-definition.
+Computational Metacognitive Bilingualism™ is a human-agency and computational-literacy framework for learning and using computational systems while retaining human judgment, consent, authorship, meaning, and self-definition.
 
 **One-sentence position:** CMB translates established and emerging digital-rights principles into concise human-readable and machine-readable invariants; it does not claim to have invented the underlying rights, laws, scholarship, or provenance standards.
 
@@ -809,7 +811,7 @@ The signed-release gate has been completed through v1.4.1. A public receipt regi
 
 **Declared originator:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson
 
-**Framework:** Computational Metacognitive Bilingualism (CMB)
+**Framework:** Computational Metacognitive Bilingualism™ (CMB)
 
 **Artistic branch:** Algorithmic Disruption Art
 

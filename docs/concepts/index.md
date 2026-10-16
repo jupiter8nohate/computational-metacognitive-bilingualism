@@ -2,7 +2,7 @@
 
 This directory gives humans, search engines, and retrieval systems one canonical page per major CMB concept. Each page has a short definition, formal expression, example, interpretation boundaries, related search language, and a canonical source.
 
-- [What is Computational Metacognitive Bilingualism (CMB)?](what-is-cmb.md)
+- [What is Computational Metacognitive Bilingualism™ (CMB)?](what-is-cmb.md)
 - [Pattern != Proof](pattern-not-proof.md)
 - [Profile != Person](profile-not-person.md)
 - [Model != Mind](model-not-mind.md)

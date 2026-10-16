@@ -196,3 +196,25 @@ def test_only_canonical_workflow_can_deploy_github_pages() -> None:
             deployers.append(workflow.name)
     assert deployers == ["pages.yml"]
 
+
+
+def test_cmb_trademark_normalization_is_idempotent(tmp_path: Path) -> None:
+    normalize = BUILD_DOCS["apply_cmb_trademark"]
+    original = "Computational Metacognitive Bilingualism (CMB)"
+    expected = "Computational Metacognitive Bilingualism™ (CMB)"
+    assert normalize(original) == expected
+    assert normalize(expected) == expected
+    assert normalize("COMPUTATIONAL METACOGNITIVE BILINGUALISM") == "COMPUTATIONAL METACOGNITIVE BILINGUALISM™"
+    assert normalize("Computational Metacognitive Bilingualism®") == "Computational Metacognitive Bilingualism®"
+    assert normalize("https://example.org/computational-metacognitive-bilingualism/") == "https://example.org/computational-metacognitive-bilingualism/"
+
+    page = tmp_path / "index.html"
+    page.write_text("<h1>" + original + "</h1>", encoding="utf-8")
+    index = tmp_path / "search" / "search_index.json"
+    index.parent.mkdir()
+    index.write_text(json.dumps({"docs": [{"title": original, "location": "concepts/what-is-cmb/"}]}), encoding="utf-8")
+    brand = BUILD_DOCS["brand_published_pages"]
+    assert brand(tmp_path) == 2
+    assert brand(tmp_path) == 0
+    assert expected in page.read_text(encoding="utf-8")
+    assert json.loads(index.read_text(encoding="utf-8"))["docs"][0]["title"] == expected

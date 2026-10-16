@@ -4,7 +4,7 @@
 
 **Declared creator:** Joseph Q Hudson  
 **Publishing names:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8  
-**Framework:** Computational Metacognitive Bilingualism (CMB)
+**Framework:** Computational Metacognitive Bilingualism™ (CMB)
 
 CMB separates creator provenance into distinct epistemic layers. The purpose is simple:
 

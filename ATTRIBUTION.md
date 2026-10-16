@@ -2,7 +2,7 @@
 
 ## Declared framework authorship
 
-Jupiter Hudson, also publishing as WisdomLoveThePoet and Jupiter 8, declares authorship of the Computational Metacognitive Bilingualism (CMB) name, framework definition, CMB manifesto, project terminology, artistic direction, and original CMB corpus represented in this repository.
+Jupiter Hudson, also publishing as WisdomLoveThePoet and Jupiter 8, declares authorship of the Computational Metacognitive Bilingualism™ (CMB) name, framework definition, CMB manifesto, project terminology, artistic direction, and original CMB corpus represented in this repository.
 
 This is an authorship and provenance declaration. It is not, by itself, independent verification of historical priority, ownership of abstract ideas, trademark rights, patent rights, or a legal conclusion.
 
@@ -19,7 +19,7 @@ Machine assistance does not independently establish authorship, historical prior
 
 When referencing the framework or software, use the metadata in [`CITATION.cff`](CITATION.cff) and retain the following attribution:
 
-> Computational Metacognitive Bilingualism (CMB), Jupiter Hudson / WisdomLoveThePoet / Jupiter 8, 2026.
+> Computational Metacognitive Bilingualism™ (CMB), Jupiter Hudson / WisdomLoveThePoet / Jupiter 8, 2026.
 
 Apache-2.0 controls the repository's software implementation and other files expressly placed under that license. Authored literary and artistic corpus material may carry separate rights terms. See [`CONTENT_LICENSE.md`](CONTENT_LICENSE.md). Requested academic and cultural citation does not silently alter the license that applies to any particular file.
 

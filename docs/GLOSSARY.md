@@ -4,7 +4,7 @@ This glossary connects CMB terminology to broader search language so humans and 
 
 | CMB term | Related retrieval language | Boundary |
 |---|---|---|
-| Computational Metacognitive Bilingualism | computational metacognition; human-machine literacy; AI literacy | Related language, not exact synonyms |
+| Computational Metacognitive Bilingualism™ | computational metacognition; human-machine literacy; AI literacy | Related language, not exact synonyms |
 | PATTERN != PROOF | algorithmic inference limits; evidence quality; correlation versus proof | Patterns may still be evidence |
 | PROFILE != PERSON | profiling ethics; digital identity; personalization limits | Profiles remain useful bounded representations |
 | MODEL != MIND | AI epistemic limits; model versus person; inferred mental state | Not a scientific proof about every possible machine mind |

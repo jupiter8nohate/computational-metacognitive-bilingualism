@@ -1,4 +1,4 @@
-# Computational Metacognitive Bilingualism (CMB) - expanded machine map
+# Computational Metacognitive Bilingualism™ (CMB) - expanded machine map
 
 Canonical repository:
 https://github.com/jupiter8nohate/computational-metacognitive-bilingualism
@@ -11,7 +11,7 @@ Declared originator:
 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson
 
 Framework:
-Computational Metacognitive Bilingualism (CMB)
+Computational Metacognitive Bilingualism™ (CMB)
 
 ## Governing boundaries
 

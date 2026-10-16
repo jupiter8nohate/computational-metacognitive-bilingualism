@@ -1,4 +1,4 @@
-# Computational Metacognitive Bilingualism (CMB)
+# Computational Metacognitive Bilingualism™ (CMB)
 
 > Human-agency, computational-literacy, provenance, policy, and code-art framework.
 > Canonical repository: https://github.com/jupiter8nohate/computational-metacognitive-bilingualism

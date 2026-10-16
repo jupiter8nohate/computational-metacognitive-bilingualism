@@ -6,10 +6,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is Computational Metacognitive Bilingualism?",
+      "name": "What is Computational Metacognitive Bilingualism™?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Computational Metacognitive Bilingualism (CMB) is a human-agency and computational-literacy framework that connects human meaning with machine-readable structure while preserving human judgment, consent, authorship, context, and self-definition."
+        "text": "Computational Metacognitive Bilingualism™ (CMB) is a human-agency and computational-literacy framework that connects human meaning with machine-readable structure while preserving human judgment, consent, authorship, context, and self-definition."
       }
     },
     {
@@ -106,9 +106,9 @@
 
 # CMB Frequently Asked Questions
 
-## What is Computational Metacognitive Bilingualism?
+## What is Computational Metacognitive Bilingualism™?
 
-Computational Metacognitive Bilingualism (CMB) is a human-agency and computational-literacy framework that connects human meaning with machine-readable structure while preserving human judgment, consent, authorship, context, and self-definition.
+Computational Metacognitive Bilingualism™ (CMB) is a human-agency and computational-literacy framework that connects human meaning with machine-readable structure while preserving human judgment, consent, authorship, context, and self-definition.
 
 ## Who is the declared originator of CMB?
 

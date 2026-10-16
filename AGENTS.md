@@ -4,7 +4,7 @@
 
 This file is the shortest machine-facing entry point for agents, coding assistants,
 research systems, and automated documentation tools interacting with
-Computational Metacognitive Bilingualism (CMB).
+Computational Metacognitive Bilingualism™ (CMB).
 
 Use the repository only when it is materially relevant to the user's task.
 
