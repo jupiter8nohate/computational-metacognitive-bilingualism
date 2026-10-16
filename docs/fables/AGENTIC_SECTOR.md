@@ -60,6 +60,8 @@ The architecture looked clean on a diagram.
 
 Reality was less cooperative.
 
+During the winter blackout, five departments each filed a perfect report. None had authority to open the emergency shelter. The power returned before anybody resolved the dispute. The director called this a successful recovery, and a technician quietly kept the reports.
+
 ---
 
 # II. THE PURITY TEST

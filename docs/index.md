@@ -103,6 +103,14 @@
 </div>
 </section>
 
+## ♃ The D.N.A. Story Library
+
+A poem lost in a spiderweb. A city of doors that remembers your name but not your consent. A child whose crooked blue bird becomes a question no machine can settle.
+
+[**Enter the D.N.A. Story Library**](story-universe/) | [**Read the five 2084 transmissions**](2084/)
+
+The fictional mysteries and their technical source notes have separate reading paths.
+
 ## ♃ Featured Stories // The Living Archive
 
 <p class="cmb-reading-key">Literary works and code-poetry are presented as authored creative material, not empirical predictions. Select a cover to begin reading.</p>

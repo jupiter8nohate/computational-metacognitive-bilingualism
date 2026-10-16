@@ -1,95 +1,36 @@
-# CMB Computational Fable Library
+# ♃ The CMB™ Fable Library
 
-**Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
+*Stories first. The technical anatomy of each story comes afterward.*
 
-CMB fables translate agentic AI, verification, information integrity, authority, and human judgment into narrative systems. They are educational and literary artifacts, not substitutes for specifications, tests, or deployed controls.
+The roads here lead to talking machines, suspicious archives, invisible weapons, and choices no prediction can settle. Each fable explores a question about human judgment through an invented world.
+
+[**Start with The Spider's Internet**](../spiders-internet/) | [**Explore the D.N.A. Story Library**](../story-universe/)
+
+## Choose a story
+
+| Read | Story | The question beneath the mystery |
+| --- | --- | --- |
+| 1 | [**The Spider's Internet**](../spiders-internet/) | Can attention become a trap without a single master Spider? |
+| 2 | [**The Phantom Tokenbooth**](PHANTOM_TOKENBOOTH.md) | Who gave an intelligent tool permission to act? |
+| 3 | [**Quiet Wars: Silent Weapons**](QUIET_WARS_SILENT_WEAPONS.md) | How can a false signal change what people believe they know? |
+| 4 | [**The Hardware Heresy**](THE_HARDWARE_HERESY.md) | When does convenience become dependence? |
+| 5 | [**The Agentic Sector**](AGENTIC_SECTOR.md) | Who authorizes the actor? |
+| 6 | [**Why the D.N.A. Bible Was Written**](WHY_THE_DNA_BIBLE_WAS_WRITTEN.md) | Why defend human judgment in an automated age? |
+
+These are independent or loosely connected fables. **Jupiter, Nia, and Mara's five linked transmissions** form the separate [2084 story arc](../2084/).
+
+## The literary and technical boundary
 
 ```text
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
 FABLE != IMPLEMENTATION
 METAPHOR != MECHANISM
-PATTERN != PROOF
 CAPABILITY != AUTHORITY
 HUMAN_AGENCY > MACHINE_AUTHORITY
 ```
 
-## Reading path
+The [continuity guide](../story-universe/continuity.md) explains the characters and recurring motifs. The [concept library](../concepts/) and research sections preserve their technical and evidence requirements.
 
-| Fable | Primary question | CMB boundary |\n| [The Spider's Internet](../spiders-internet/) | Who owns attention and meaning in the web? | `ATTENTION != CONSENT` |
-| --- | --- | --- |
-| [The Phantom Tokenbooth](PHANTOM_TOKENBOOTH.md) | What changes when a model becomes an agent? | `CAPABILITY != AUTHORITY` |
-| [Quiet Wars - Silent Weapons](QUIET_WARS_SILENT_WEAPONS.md) | How can information alter a decision environment? | `INFORMATION != TRUTH` |
-| [Why the D.N.A. Bible Was Written](WHY_THE_DNA_BIBLE_WAS_WRITTEN.md) | Why was the D.N.A. Bible created, and what human boundary is it designed to defend? | `HUMAN_AGENCY > MACHINE_AUTHORITY` |
-| [D.N.A Bible Demons Need Attention](THE_HARDWARE_HERESY.md) | The Hardware Heresy, The Children of the Interface, The Feudal Interface, and The Architecture of Dependency: Digital Soil, Attention Tithe, cognitive offloading, human dignity, and human agency. | `HUMAN_AGENCY > MACHINE_AUTHORITY` |
-| [The Agentic Sector](AGENTIC_SECTOR.md) | How should reasoning, verification, policy, authorization, and execution be separated? | `METACOGNITION != SELF_AUTHORIZATION` |
-
-## Fable architecture
-
-```text
-THE PHANTOM TOKENBOOTH
-        |
-        v
-AGENTIC CAPABILITY
-        |
-        v
-QUIET WARS
-        |
-        v
-THE HARDWARE HERESY
-        |
-        v
-HUMAN-AS-INTERFACE FAILURE
-        |
-        v
-ADVERSARIAL INFORMATION
-        |
-        v
-THE AGENTIC SECTOR
-        |
-        v
-AUTHORITY SEPARATION
-```
-
-The progression moves from **what an agent can do**, to **what an agent can be made to believe**, to **what an agent may legitimately execute**.
-
-## Shared invariant gate
-
-```text
-PERCEPTION
-    |
-    v
-MODEL
-    |
-    v
-REASON
-    |
-    v
-PREDICTION
-    |
-    v
-RECOMMENDATION
-    |
-    v
-+-------------------+
-| AUTHORIZATION GATE|
-+---------+---------+
-          |
-          v
-       EXECUTION
-```
-
-CMB allows capability to increase above the gate while preserving a separate question below it:
-
-> Who has legitimate authority to permit consequential action?
-
-See also:
-
-- [Exclusion of Self-Authorization](../concepts/self-authorization.md)
-- [Human Agency > Machine Authority](../concepts/human-agency-machine-authority.md)
-- [Pattern != Proof](../concepts/pattern-not-proof.md)
-- [Prediction != Destiny](../concepts/prediction-not-destiny.md)
-
----
-
-**Creative authorship:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8  
-**Framework:** Computational Metacognitive Bilingualism (CMB)  
-**Creative-content terms:** see [CONTENT_LICENSE.md](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CONTENT_LICENSE.md) and [ATTRIBUTION.md](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/ATTRIBUTION.md).
+*Creative direction: Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. Computational Metacognitive Bilingualism™ (CMB™). © 2026. Original expression subject to the repository's [creative-content terms](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CONTENT_LICENSE.md).*

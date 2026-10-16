@@ -9,6 +9,9 @@ theme:
   logo: media/cmb-red-gold-seal.svg
 nav:
   - Home: index.md
+  - D.N.A. Story Library:
+      - Start Reading: story-universe/index.md
+      - Continuity and Editorial Guide: story-universe/continuity.md
   - CMB:
       - The Two Loops - Autocratic vs Sovereign: CMB_THE_TWO_LOOPS.md
       - Ten Civic Forks: CMB_TEN_CIVIC_FORKS.md

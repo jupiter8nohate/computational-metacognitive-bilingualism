@@ -28,6 +28,8 @@ The first door had opened.
 
 A million others remained.
 
+Nia had imagined freedom would sound like cheering or a bolt sliding back. Instead the newly unlocked room smelled of floor cleaner, and a bowl of wrapped candies sat beside the terminal.
+
 The ministry celebrated immediately.
 
 ~~~text
@@ -69,6 +71,12 @@ Then the screen presented a button.
 **I AGREE.**
 
 There was no second button.
+
+Nia touched the drawing in her pocket. A crooked blue wing. A thing the system called a defect because it did not know the bird might be turning.
+
+"What happens if I do nothing?" she asked.
+
+Even Jupiter waited before answering. He had begun to suspect the question belonged to the child.
 
 ---
 
