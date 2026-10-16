@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or discuss the CMB framework, please cite it using this metadata."
-title: "Computational Metacognitive Bilingualism (CMB)"
+title: "Computational Metacognitive Bilingualism™ (CMB)"
 type: software
 version: 1.5.0-rc.1
 authors:
@@ -11,7 +11,7 @@ repository-code: "https://github.com/jupiter8nohate/computational-metacognitive-
 url: "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
 license: Apache-2.0
 abstract: >-
-  Computational Metacognitive Bilingualism (CMB) is a human-agency and
+  Computational Metacognitive Bilingualism™ (CMB) is a human-agency and
   computational-literacy framework with provenance tooling, machine-readable
   specifications, experimental policy and agent components, and authored
   code-poetry. Its governing boundary is HUMAN_AGENCY > MACHINE_AUTHORITY.
