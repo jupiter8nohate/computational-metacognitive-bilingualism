@@ -123,7 +123,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ---
 
-## Film and visual companion {#film}
+<span id="film"></span>
+
+## Film and visual companion
 
 The film anchor is reserved here to keep existing links functional. No unverified video is embedded or represented as the official companion film.
 
