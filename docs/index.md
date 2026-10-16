@@ -100,6 +100,16 @@
 </div>
 
 
+## Featured D.N.A. Bible story
+
+### ♃ The Spider's Internet
+
+*An illustrated digital fable about the attention economy, the World Wide Web, and human cognitive sovereignty.*
+
+[**Read The Spider's Internet →**](spiders-internet/)
+
+The full six-part story and companion video are published within this CMB website. The story explores why attention is not consent and why a digital profile cannot define a person.
+
 ## Choose your depth
 
 <div class="cmb-entry-lanes">
