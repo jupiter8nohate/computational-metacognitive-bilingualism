@@ -1,20 +1,20 @@
 /* CMB visual tokens: single override layer for the public documentation UI. */
 :root {
-  --cmb-bg: #050607;
-  --cmb-surface: #0b0d10;
-  --cmb-surface-2: #121519;
-  --cmb-text: #ece9e4;
-  --cmb-muted: #a3a7ac;
-  --cmb-border: #34383e;
-  --cmb-machine: #9ca7b3;
-  --cmb-human: #e86b73;
-  --cmb-meta: #a77bd8;
-  --cmb-evidence: #d7c3a3;
-  --cmb-danger: #e34b55;
-  --cmb-blood: #82151b;
-  --cmb-ash: #b7b0a7;
+  --cmb-bg: #090807;
+  --cmb-surface: #17120f;
+  --cmb-surface-2: #231813;
+  --cmb-text: #fff7ea;
+  --cmb-muted: #c8bcab;
+  --cmb-border: #50382b;
+  --cmb-machine: #ffc72c;
+  --cmb-human: #da291c;
+  --cmb-meta: #ffc72c;
+  --cmb-evidence: #ffde83;
+  --cmb-danger: #ff594d;
+  --cmb-blood: #a31f18;
+  --cmb-ash: #e4cfa8;
   --cmb-success: #8fbd91;
-  --cmb-warning: #d9b96e;
+  --cmb-warning: #ffc72c;
   --cmb-radius: 14px;
   --cmb-shadow: 0 18px 44px rgb(0 0 0 / 38%);
   --cmb-display: Georgia, "Times New Roman", Times, serif;
