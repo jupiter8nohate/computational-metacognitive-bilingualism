@@ -9,6 +9,7 @@ theme:
   logo: media/cmb-red-gold-seal.svg
 nav:
   - Home: index.md
+  - Hudson Family Legacy: hudson-family-legacy/index.md
   - D.N.A. Story Library:
       - Start Reading: story-universe/index.md
       - Continuity and Editorial Guide: story-universe/continuity.md
