@@ -31,7 +31,7 @@ body:has(h1#why-i-write-this-way) .wy-nav-content a {
 }
 
 body:has(h1#why-i-write-this-way) .wy-nav-content a:visited {
-  color: #e6c7ff;
+  color: #ffe08a;
 }
 
 body:has(h1#why-i-write-this-way) .wy-nav-content pre,
