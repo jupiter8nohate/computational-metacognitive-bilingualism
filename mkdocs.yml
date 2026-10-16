@@ -13,56 +13,52 @@ nav:
       - Ten Civic Forks: CMB_TEN_CIVIC_FORKS.md
       - Lived experience testimony: lived-experience.md
       - Visual system: DARK_FEDERALISM_VISUAL_SYSTEM.md
-      - Concepts:
-          - Concept library: concepts/index.md
-          - What is CMB?: concepts/what-is-cmb.md
-          - Pattern != Proof: concepts/pattern-not-proof.md
-          - Profile != Person: concepts/profile-not-person.md
-          - Model != Mind: concepts/model-not-mind.md
-          - Prediction != Destiny: concepts/prediction-not-destiny.md
-          - Human Agency > Machine Authority: concepts/human-agency-machine-authority.md
-          - Exclusion of Self-Authorization: concepts/self-authorization.md
-          - Cognitive Sovereignty: concepts/cognitive-sovereignty.md
-          - CMB-Z13: concepts/cmb-z13.md
-          - Flamingoglyph Code: concepts/flamingoglyph-code.md
-          - CMB Provenance: concepts/cmb-provenance.md
+      - Concepts / Concept library: concepts/index.md
+      - Concepts / What is CMB?: concepts/what-is-cmb.md
+      - Concepts / Pattern != Proof: concepts/pattern-not-proof.md
+      - Concepts / Profile != Person: concepts/profile-not-person.md
+      - Concepts / Model != Mind: concepts/model-not-mind.md
+      - Concepts / Prediction != Destiny: concepts/prediction-not-destiny.md
+      - Concepts / Human Agency > Machine Authority: concepts/human-agency-machine-authority.md
+      - Concepts / Exclusion of Self-Authorization: concepts/self-authorization.md
+      - Concepts / Cognitive Sovereignty: concepts/cognitive-sovereignty.md
+      - Concepts / CMB-Z13: concepts/cmb-z13.md
+      - Concepts / Flamingoglyph Code: concepts/flamingoglyph-code.md
+      - Concepts / CMB Provenance: concepts/cmb-provenance.md
       - FAQ: FAQ.md
       - Retrieval glossary: GLOSSARY.md
       - Search & AI discovery: SEARCH_DISCOVERY.md
       - Privacy & analytics: PRIVACY_AND_ANALYTICS.md
       - CMB-EDU Kids: CMB_EDU_KIDS.md
   - The D.N.A. Bible:
-      - CMB Fables:
-          - Fable Library: fables/index.md
-          - The Phantom Tokenbooth: fables/PHANTOM_TOKENBOOTH.md
-          - Quiet Wars - Silent Weapons: fables/QUIET_WARS_SILENT_WEAPONS.md
-          - Why the D.N.A. Bible Was Written: fables/WHY_THE_DNA_BIBLE_WAS_WRITTEN.md
-          - D.N.A Bible Demons Need Attention: fables/THE_HARDWARE_HERESY.md
-          - The Agentic Sector: fables/AGENTIC_SECTOR.md
+      - Fables / Fable Library: fables/index.md
+      - The Spider's Internet: spiders-internet/index.md
+      - Fables / The Phantom Tokenbooth: fables/PHANTOM_TOKENBOOTH.md
+      - Fables / Quiet Wars - Silent Weapons: fables/QUIET_WARS_SILENT_WEAPONS.md
+      - Fables / Why the D.N.A. Bible Was Written: fables/WHY_THE_DNA_BIBLE_WAS_WRITTEN.md
+      - Fables / D.N.A Bible Demons Need Attention: fables/THE_HARDWARE_HERESY.md
+      - Fables / The Agentic Sector: fables/AGENTIC_SECTOR.md
       - Pre-2084 - The Eye Arrives: PRE_2084_THE_EYE_ARRIVES.md
       - 2030 Prophecy -> 2084 Archive: 2030_PROPHECY_TO_2084.md
-      - 2084:
-          - Start Here - Complete Story Arc: 2084/index.md
-          - Death Note 2084: DEATH_NOTE_2084.md
-          - The False Light Protocol - Story Continuation: DEATH_NOTE_2084_FALSE_LIGHT.md
-          - The House of a Million Doors - Third Transmission: DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md
-          - The Ledger of Invisible Cells - Fourth Transmission: DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md
-          - The Child Who Refused the Update - Fifth Transmission: DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md
-          - Reality Mirror - Proxy Gravity: 2084_REALITY_MIRROR_PROXY_GRAVITY.md
-      - World Retina:
-          - The Reciprocal Eye - Original Story: WORLD_RETINA_THE_RECIPROCAL_EYE.md
-          - Architecture Gateway: world-retina/index.md
+      - 2084 / Start Here - Complete Story Arc: 2084/index.md
+      - 2084 / Death Note 2084: DEATH_NOTE_2084.md
+      - 2084 / The False Light Protocol - Story Continuation: DEATH_NOTE_2084_FALSE_LIGHT.md
+      - 2084 / The House of a Million Doors - Third Transmission: DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md
+      - 2084 / The Ledger of Invisible Cells - Fourth Transmission: DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md
+      - 2084 / The Child Who Refused the Update - Fifth Transmission: DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md
+      - 2084 / Reality Mirror - Proxy Gravity: 2084_REALITY_MIRROR_PROXY_GRAVITY.md
+      - World Retina / The Reciprocal Eye - Original Story: WORLD_RETINA_THE_RECIPROCAL_EYE.md
+      - World Retina / Architecture Gateway: world-retina/index.md
       - D.N.A. Living Codex: DNA_LIVING_CODEX.md
       - The Shadow Is Not the Source: THE_SHADOW_IS_NOT_THE_SOURCE.md
       - Search for Truth: SEARCH_FOR_TRUTH.md
-      - Err ⃝or⃟⃤ GLITCHOLOGY:
-          - Conversation Atlas: CMB_CONVERSATION_ATLAS.md
-          - Polyglot translations: CMB_POLYGLOT_TRANSLATIONS.md
-          - Jupiter polyglot runtime: JUPITER_POLYGLOT_RUNTIME.md
-          - Origin and biography: ERR_GLITCHOLOGY_ORIGIN.md
-          - Creative Cognitive Signature: CREATIVE_COGNITIVE_SIGNATURE.md
-          - Living Book Protocol: LIVING_BOOK_PROTOCOL.md
-          - GLITCH-3D runtime: GLITCH3D_RUNTIME.md
+      - GLITCHOLOGY / Conversation Atlas: CMB_CONVERSATION_ATLAS.md
+      - GLITCHOLOGY / Polyglot translations: CMB_POLYGLOT_TRANSLATIONS.md
+      - GLITCHOLOGY / Jupiter polyglot runtime: JUPITER_POLYGLOT_RUNTIME.md
+      - GLITCHOLOGY / Origin and biography: ERR_GLITCHOLOGY_ORIGIN.md
+      - GLITCHOLOGY / Creative Cognitive Signature: CREATIVE_COGNITIVE_SIGNATURE.md
+      - GLITCHOLOGY / Living Book Protocol: LIVING_BOOK_PROTOCOL.md
+      - GLITCHOLOGY / GLITCH-3D runtime: GLITCH3D_RUNTIME.md
   - Research & Verification:
       - CMB Epistemic Radar: CMB_EPISTEMIC_RADAR.md
       - Global AI Watch: GLOBAL_AI_WATCH.md
@@ -72,26 +68,24 @@ nav:
       - Future Foundation Blueprint: FUTURE_FOUNDATION_BLUEPRINT.md
       - Claim-control traceability: CLAIM_CONTROL_TRACEABILITY.md
       - For researchers & policy: RESEARCHERS.md
-      - CMB Physics Laboratory:
-          - Overview: research/cmb-fluid-verification/index.md
-          - Governing equations: research/cmb-fluid-verification/01-equations.md
-          - Exact forced equilibrium: research/cmb-fluid-verification/02-exact-forced-equilibrium.md
-          - Residual verification: research/cmb-fluid-verification/03-residual-method.md
-          - 3D-8D Audit Geometry: research/cmb-fluid-verification/04-hypergeometry-3d-8d.md
-          - AI verification bridge: research/cmb-fluid-verification/05-ai-verification.md
-          - Limitations: research/cmb-fluid-verification/06-limitations.md
-          - Reproduce: research/cmb-fluid-verification/07-reproduction.md
-      - CMB Bio-Silicon Laboratory:
-          - Overview: research/cmb-organoid-silicon/index.md
-          - Biological scaffold: research/cmb-organoid-silicon/01-biological-scaffold.md
-          - Silicon interface: research/cmb-organoid-silicon/02-silicon-interface.md
-          - Observation channels: research/cmb-organoid-silicon/03-observation-channels.md
-          - Residual matrix: research/cmb-organoid-silicon/04-residual-matrix.md
-          - Closed-loop verification: research/cmb-organoid-silicon/05-closed-loop-verification.md
-          - AI interpretation boundary: research/cmb-organoid-silicon/06-ai-interpretation-boundary.md
-          - Ethics and agency: research/cmb-organoid-silicon/07-ethics-and-agency.md
-          - Limitations: research/cmb-organoid-silicon/08-limitations.md
-          - Reproduce: research/cmb-organoid-silicon/09-reproduction.md
+      - Physics Lab / Overview: research/cmb-fluid-verification/index.md
+      - Physics Lab / Governing equations: research/cmb-fluid-verification/01-equations.md
+      - Physics Lab / Exact forced equilibrium: research/cmb-fluid-verification/02-exact-forced-equilibrium.md
+      - Physics Lab / Residual verification: research/cmb-fluid-verification/03-residual-method.md
+      - Physics Lab / 3D-8D Audit Geometry: research/cmb-fluid-verification/04-hypergeometry-3d-8d.md
+      - Physics Lab / AI verification bridge: research/cmb-fluid-verification/05-ai-verification.md
+      - Physics Lab / Limitations: research/cmb-fluid-verification/06-limitations.md
+      - Physics Lab / Reproduce: research/cmb-fluid-verification/07-reproduction.md
+      - Bio-Silicon Lab / Overview: research/cmb-organoid-silicon/index.md
+      - Bio-Silicon Lab / Biological scaffold: research/cmb-organoid-silicon/01-biological-scaffold.md
+      - Bio-Silicon Lab / Silicon interface: research/cmb-organoid-silicon/02-silicon-interface.md
+      - Bio-Silicon Lab / Observation channels: research/cmb-organoid-silicon/03-observation-channels.md
+      - Bio-Silicon Lab / Residual matrix: research/cmb-organoid-silicon/04-residual-matrix.md
+      - Bio-Silicon Lab / Closed-loop verification: research/cmb-organoid-silicon/05-closed-loop-verification.md
+      - Bio-Silicon Lab / AI interpretation boundary: research/cmb-organoid-silicon/06-ai-interpretation-boundary.md
+      - Bio-Silicon Lab / Ethics and agency: research/cmb-organoid-silicon/07-ethics-and-agency.md
+      - Bio-Silicon Lab / Limitations: research/cmb-organoid-silicon/08-limitations.md
+      - Bio-Silicon Lab / Reproduce: research/cmb-organoid-silicon/09-reproduction.md
       - Case studies: CASE_STUDIES.md
       - CMB distinction: CMB_DISTINCTION.md
       - CMB research position: CMB_RESEARCH_POSITION.md
