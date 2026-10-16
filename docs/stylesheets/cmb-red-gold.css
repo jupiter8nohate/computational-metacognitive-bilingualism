@@ -205,3 +205,8 @@ body { background-image:radial-gradient(circle at 84% 8%,rgb(218 41 28 / 13%),tr
   .cmb-stage,.cmb-story,.cmb-atlas,.cmb-atlas-node,.cmb-signature-footer {border-color:#ffc72c;}
   .cmb-story-content p,.cmb-stage-description,.cmb-atlas-node p {color:#fff;}
 }
+
+/* Original red-gold CMB seal */
+.cmb-stage-seal {position:absolute; width:clamp(5rem,11vw,9rem); height:auto; right:clamp(.9rem,3vw,2.5rem); top:clamp(.8rem,2vw,2rem); z-index:0; opacity:.8; filter:drop-shadow(0 8px 20px rgb(0 0 0 / 30%));}
+@media(max-width:850px) {.cmb-stage-seal {width:4rem; opacity:.55;}}
+@media(max-width:620px) {.cmb-stage-seal {display:none;}}
