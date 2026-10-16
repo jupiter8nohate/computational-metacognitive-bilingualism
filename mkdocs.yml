@@ -6,6 +6,7 @@ repo_url: https://github.com/jupiter8nohate/computational-metacognitive-bilingua
 repo_name: jupiter8nohate/computational-metacognitive-bilingualism
 theme:
   name: readthedocs
+  logo: media/cmb-red-gold-seal.svg
 nav:
   - Home: index.md
   - CMB:
