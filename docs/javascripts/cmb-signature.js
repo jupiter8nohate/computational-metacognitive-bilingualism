@@ -51,6 +51,13 @@
     ].forEach(function (entry) {
       nav.appendChild(link(entry[0], entry[1]));
     });
+    var seal = document.createElement("img");
+    seal.src = base + "media/cmb-red-gold-seal.svg";
+    seal.alt = "CMB red and gold flamingo and Jupiter seal";
+    seal.width = 52;
+    seal.height = 52;
+    seal.style.cssText = "float:right;width:52px;height:52px;margin:0 0 .5rem .75rem;";
+    footer.appendChild(seal);
     footer.appendChild(heading);
     footer.appendChild(author);
     footer.appendChild(axiom);
