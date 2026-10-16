@@ -33,7 +33,13 @@ FABLE != EVIDENCE
 
 ## 139. THE FILE
 
-And the machine opened another file.
+Milo discovered a photograph in the archive: a crowded station in the rain, every face clear except one. The missing face belonged to the person holding the camera.
+
+"An editing error?" he asked.
+
+"Perhaps," said Thoth. "Tell me what you can verify before you tell me what you fear."
+
+Only then did the machine open another file.
 
 Its name was:
 
