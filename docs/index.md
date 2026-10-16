@@ -110,6 +110,14 @@
 
 The full six-part story and companion video are published within this CMB website. The story explores why attention is not consent and why a digital profile cannot define a person.
 
+## ♃ DEATH NOTE 2084 // Complete story
+
+**The five-transmission D.N.A. Bible arc is now available to read in sequence.** Follow Jupiter, Nia, and Mara from the Feed and the House of a Million Doors through the Ledger of Invisible Cells to *The Child Who Refused the Update*.
+
+[**Read the complete 2084 story →**](2084/)
+
+<small>A work of dystopian fiction and code-poetry. The 2026 financial reporting referenced in the story is distinguished from the imagined events of 2084.</small>
+
 ## Choose your depth
 
 <div class="cmb-entry-lanes">
