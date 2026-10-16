@@ -14,7 +14,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Reading path
 
-| Fable | Primary question | CMB boundary |
+| Fable | Primary question | CMB boundary |\n| [The Spider's Internet](../spiders-internet/) | Who owns attention and meaning in the web? | `ATTENTION != CONSENT` |
 | --- | --- | --- |
 | [The Phantom Tokenbooth](PHANTOM_TOKENBOOTH.md) | What changes when a model becomes an agent? | `CAPABILITY != AUTHORITY` |
 | [Quiet Wars - Silent Weapons](QUIET_WARS_SILENT_WEAPONS.md) | How can information alter a decision environment? | `INFORMATION != TRUTH` |
