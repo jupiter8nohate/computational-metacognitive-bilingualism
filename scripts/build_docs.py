@@ -21,7 +21,7 @@ from jsonschema.exceptions import SchemaError
 ROOT = Path(__file__).resolve().parents[1]
 SITE_URL = "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/"
 PUBLIC_DIRECTORIES = (
-    "assets", "agents", "datasets", "extensions", "library", "machine", "schemas", "spec",
+    "spiders-internet", "assets", "agents", "datasets", "extensions", "library", "machine", "schemas", "spec",
     "books", "policy", "archive/conversations",
     "conformance/glitch-ir", "research/case-studies", "research/world-retina",
     "examples/world_retina", "examples/polyglot/jupiter_glitchology_runtime",
@@ -31,6 +31,7 @@ PUBLIC_FILES = ("AGENTS.md", "llms.txt", "llms-full.txt", "CITATION.cff", "CITAT
 REQUIRED_PUBLIC_PATHS = (
     *PUBLIC_FILES,
     "sitemap.xml",
+    "spiders-internet/index.html",
     "robots.txt",
     "agents/agent-card.json",
     "agents/registry.json",

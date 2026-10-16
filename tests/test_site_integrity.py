@@ -74,7 +74,7 @@ def published_site(tmp_path: Path) -> Path:
 
 def test_complete_bundle_and_correct_sibling_navigation(published_site: Path) -> None:
     pages, links = check_site(published_site)
-    assert pages == 3
+    assert pages == 4
     assert links > 0
 
 
@@ -133,7 +133,7 @@ def test_knowledge_graph_context_namespace_is_not_a_public_target(published_site
         encoding="utf-8",
     )
     pages, links = check_site(published_site)
-    assert pages == 3
+    assert pages == 4
     assert links > 0
 
 def test_knowledge_graph_urls_must_be_published(published_site: Path) -> None:
