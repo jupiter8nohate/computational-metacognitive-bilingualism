@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "spiders-internet/**"
       - "datasets/**"
       - "assets/**"
       - "machine/**"
@@ -168,6 +169,7 @@ jobs:
               f"{site}/",
               f"{site}/sitemap.xml",
               f"{site}/fables/",
+              f"{site}/spiders-internet/",
               f"{site}/fables/PHANTOM_TOKENBOOTH/",
               f"{site}/fables/QUIET_WARS_SILENT_WEAPONS/",
               f"{site}/fables/THE_HARDWARE_HERESY/",
