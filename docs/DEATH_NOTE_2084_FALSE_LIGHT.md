@@ -572,7 +572,7 @@ VERIFIED_LABEL != VERIFIED_TRUTH
 OBSERVATION != UNDERSTANDING
 ~~~
 
-**CONTINUATION SIGNAL:** *THE HOUSE OF A MILLION DOORS* (future chapter, not yet published).
+**NEXT TRANSMISSION:** [THE HOUSE OF A MILLION DOORS](DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md), a story of SIAGIAI, classification, permission, and the right to remain human.
 
 **RETURN TO THE CANON:** [Read DEATH NOTE 2084](DEATH_NOTE_2084.md) · [Explore CMB principles](concepts/index.md) · [Reality Mirror](2084_REALITY_MIRROR_PROXY_GRAVITY.md)
 
