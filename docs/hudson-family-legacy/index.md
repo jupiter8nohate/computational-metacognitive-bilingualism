@@ -138,7 +138,7 @@ This explorer renders **45 historical profile entries** plus a featured three-ge
    if(!galleryIndex)return null;
    return document.querySelector('.hudson-memorial-gallery figure:nth-child('+galleryIndex+') img');
  }
- function dateLine(p){return p[1]&&p[2]?dateLine(p):'Vital dates not published';}
+ function dateLine(p){return p[1]&&p[2]?String(p[1])+'–'+String(p[2]):'Vital dates not published';}
 
  function node(tag,cls,content){const e=document.createElement(tag);if(cls)e.className=cls;if(content!==undefined)e.textContent=String(content);return e}
  function choose(i){selected=i;const p=people[i];detail.replaceChildren();detail.append(node('h3','',p[0]),node('p','','Recorded in submitted family tree: '+p[1]+'–'+p[2]),node('p','','Generation '+p[3]+' from Joseph (as asserted by source tree).'));
