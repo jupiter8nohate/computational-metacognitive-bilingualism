@@ -18,6 +18,10 @@
 
 At 03:14, every screen in the district displayed a door.
 
+Jupiter first saw it in the reflection of his kitchen window: a brass handle where no door had ever stood. He turned. The kitchen held only a humming refrigerator and his abandoned coffee cup.
+
+In the glass, the handle turned.
+
 A million doors, the Ministry said.
 
 A million opportunities.
@@ -41,6 +45,8 @@ APPROVAL: INHERITED
 No citizen remembered giving permission.
 
 Nobody could explain whose signature had opened the first lock.
+
+Someone in the apartment below knocked three times on a door that would not open. Then the knocking stopped. The advertisement continued at a courteous volume.
 
 Jupiter Hudson watched the doors illuminate one by one.
 
@@ -113,6 +119,8 @@ Every bird was beautiful.
 Every bird looked as if it had been designed by the same invisible hand.
 
 "Why is mine wrong?" she asked.
+
+She had kept the blue bird folded in her pocket until the paper softened at the creases. It was ugly by the school's measurements and beautiful to her for reasons she could not explain. Jupiter preferred her reasons.
 
 The instructor turned toward the classroom monitor.
 
