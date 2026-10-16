@@ -100,13 +100,6 @@
 </div>
 
 
-## Meet the creator
-
-<a class="cmb-card cmb-card--human" href="jupiter-hudson/" aria-label="Read Jupiter Hudson's biography and the Sovereign Gate art archive">
-<strong>♃ Jupiter Hudson / WisdomLoveThePoet / Jupiter 8</strong>
-<span>Visit the creator's encyclopedia-style biography, explore The Sovereign Gate, and follow documented links to CMB, FGC, GLITCHOLOGY and the D.N.A. Bible. Self-published and explicitly labeled as such.</span>
-</a>
-
 ## Choose your depth
 
 <div class="cmb-entry-lanes">
