@@ -1,0 +1,115 @@
+{
+  "collected_at": "2026-10-16T09:14:34.762215Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 8,
+  "articles": [
+    {
+      "id": "74c88b1ab02bab05",
+      "title": "Rubio presses Lebanon on confiscation of weapons from Hezbollah",
+      "url": "https://www.aljazeera.com/news/2026/10/16/rubio-presses-lebanon-on-confiscation-of-weapons-from-hezbollah?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-16T05:28:29Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "7a3f13159f2ba4e9",
+      "title": "Hong Kong vies for role in robotics boom with launch of embodied AI hub",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371095/hong-kong-vies-role-robotics-boom-launch-embodied-ai-hub?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-16T04:00:39Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "422b430c230a4944",
+      "title": "AI agents on Tencent Cloud try to break into Alibaba’s Amap: researchers",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371007/ai-agents-tencent-cloud-try-break-alibabas-amap-researchers?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-16T01:00:06Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "72c9fb61eb837aea",
+      "title": "AI agents are coming to Rivian’s cars",
+      "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-15T15:02:36Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "d7d08535584e1ad7",
+      "title": "Is your boss watching you? The rise of AI surveillance at work - video",
+      "url": "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T11:10:25Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "47d46d1066d4b90b",
+      "title": "Is your boss watching you? The rise of AI surveillance at work – podcast",
+      "url": "https://www.theguardian.com/science/audio/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-podcast",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T04:00:21Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "5a503e3d62a8f45c",
+      "title": "Apate sends AI agents undercover to get scammed so they can gather fraud intelligence",
+      "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-14T18:00:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "9452f98968f0cc70",
+      "title": "Disney offers $20M for Character.AI’s scandal-plagued chatbot tech",
+      "url": "https://arstechnica.com/tech-policy/2026/10/disney-offers-20m-for-character-ais-scandal-plagued-chatbot-tech/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-13T18:23:33Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "7e44259ca3c420924b5608f5a6aa1ccf4947d8a081772195d6397fb86254cb87",
+  "hash": "80ddd6902f7eee7e37f95b7d61f7315e514f793aa9abe14134e6667a8ebec07d"
+}
