@@ -96,12 +96,20 @@
 </div>
 <nav class="cmb-stage-actions" aria-label="Start exploring Computational Metacognitive Bilingualism">
 <a class="cmb-action cmb-action--primary" href="concepts/what-is-cmb/">Understand CMB ↗</a>
-<a class="cmb-action cmb-action--secondary" href="2084/">Enter the Stories ↗</a>
+<a class="cmb-action cmb-action--secondary" href="story-universe/">Enter the Stories ↗</a>
 <a class="cmb-action cmb-action--quiet" href="DEVELOPERS/">Build and Verify ↗</a>
 </nav>
 <p class="cmb-stage-signature">♃ 𓁹 // JUPITER 8 // SEARCH · VERIFY · CHOOSE</p>
 </div>
 </section>
+
+## ♃ The D.N.A. Story Library
+
+A poem disappears in a spiderweb. A city of doors remembers everybody's name but not their consent. A child must decide whether refusing a machine will cost her the things she needs.
+
+[**Enter the complete D.N.A. Story Library →**](story-universe/) | [**Read the five 2084 transmissions →**](2084/)
+
+Follow the story first. Explore research, evidence, and technical specifications in their separate sections.
 
 ## ♃ Featured Stories // The Living Archive
 
