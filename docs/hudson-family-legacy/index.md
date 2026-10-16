@@ -88,9 +88,9 @@ The tree includes records reporting historical dates reaching back into the sixt
 The following are self-hosted, low-resolution previews of the **original family photographs** provided for this exhibit, not AI-generated replacements. The preview images are separate assets so their URLs can be tested and cached. Full-resolution originals remain with the family.
 
 <div class="hudson-memorial-gallery">
-<figure><img alt="Original family photograph of Grandma Irene outdoors holding a Bible" loading="lazy" width="115" height="115" src="media/grandma-irene.svg"><figcaption><strong>Grandma Irene</strong><span>Faith and heritage</span></figcaption></figure>
-<figure><img alt="Original family photograph of Mama Margaret Hudson smiling" loading="lazy" width="115" height="115" src="media/mama-margaret-hudson.svg"><figcaption><strong>Mama Margaret Hudson</strong><span>Love and remembrance</span></figcaption></figure>
-<figure><img alt="Original childhood photograph of Joseph Q. Hudson seated at a classroom desk" loading="lazy" width="115" height="89" src="media/joseph-q-hudson-childhood.svg"><figcaption><strong>Joseph Q. Hudson</strong><span>Childhood and continuity</span></figcaption></figure>
+<figure><img alt="Original family photograph of Grandma Irene outdoors holding a Bible" loading="lazy" width="115" height="115" src="media/grandma-irene.jpg"><figcaption><strong>Grandma Irene</strong><span>Faith and heritage</span></figcaption></figure>
+<figure><img alt="Original family photograph of Mama Margaret Hudson smiling" loading="lazy" width="115" height="115" src="media/mama-margaret-hudson.jpg"><figcaption><strong>Mama Margaret Hudson</strong><span>Love and remembrance</span></figcaption></figure>
+<figure><img alt="Original childhood photograph of Joseph Q. Hudson seated at a classroom desk" loading="lazy" width="115" height="89" src="media/joseph-q-hudson-childhood.jpg"><figcaption><strong>Joseph Q. Hudson</strong><span>Childhood and continuity</span></figcaption></figure>
 </div>
 <style>
 .hudson-memorial-gallery{--legacy-gold:#c99842;position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(9px,2vw,22px);margin:2.5rem 0;padding:clamp(18px,3vw,36px);border:5px double #d8ac57;border-radius:20px;background:radial-gradient(ellipse at top,#fff6d9 0%,#e7cd98 65%,#b56c38 130%);box-shadow:0 15px 35px rgba(68,27,14,.17)}
