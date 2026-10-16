@@ -18,7 +18,7 @@
 
 > **FICTIONAL TRANSMISSION | HISTORICAL EVIDENCE BOUNDARY:** This is dystopian satire, not a claim that technology companies spent $745 billion building literal prisons, or that future events have happened. The $745 billion figure is a reported **2026 capital-spending plan** for Alphabet, Amazon, Meta, and Microsoft, focused heavily on AI-related infrastructure; it is not a completed or exclusively AI spending total. The separate $845 billion figure refers to **estimated wealth gains**, not cash invested, among about 100 technology billionaires through September 30, 2026. SIAGIAI, the House, its policies, and the later timeline are fictional. The chapter examines an *institutional risk*, not a secret plot or inevitable outcome. Sources appear below.
 
-**READING ORDER:** [Original 2084](DEATH_NOTE_2084.md) -> [The False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) -> [The House of a Million Doors](DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md) -> **THE LEDGER OF INVISIBLE CELLS** -> *The Child Who Refused the Update* (forthcoming)
+**READING ORDER:** [Original 2084](DEATH_NOTE_2084.md) -> [The False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) -> [The House of a Million Doors](DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md) -> **THE LEDGER OF INVISIBLE CELLS** -> [The Child Who Refused the Update](DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md)
 
 ---
 
@@ -492,7 +492,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ♃ ⚡︎⚡︎˖ ࣪⏻ᯤ
 ~~~
 
-**NEXT TRANSMISSION // THE CHILD WHO REFUSED THE UPDATE**
+**NEXT TRANSMISSION // [THE CHILD WHO REFUSED THE UPDATE](DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md)**
+
+Nia's refusal turns a poetic declaration into a practical, testable challenge to the House's compulsory update.
 
 ---
 
@@ -502,6 +504,6 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 2. **Estimated wealth gains:** Bloomberg, Dylan Sloan and Jack Witzig, *The Only Billionaires Making Money This Year Are In Tech* (October 5, 2026), reports about $845 billion gained through September 30 among roughly 100 technology fortunes in the Bloomberg Billionaires Index. This is a wealth change, not an AI cash-investment tally. [Read reporting](https://www.bloomberg.com/news/articles/2026-10-05/bloomberg-billionaires-index-ai-boom-puts-musk-zuckerberg-in-top-10-of-ranking).
 3. **Interpretation boundary:** The transition from useful infrastructure to the fictional SIAGIAI House is narrative causality, not an established prediction or evidence of coordination among real individuals. Structural questions worth investigating include governance, accessibility, agency, consent, appeals, concentration of power, and recovery.
 
-**ARCHIVE:** [Original 2084](DEATH_NOTE_2084.md) | [False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) | [House of a Million Doors](DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md) | [Reality Mirror](2084_REALITY_MIRROR_PROXY_GRAVITY.md)
+**ARCHIVE:** [Complete five-transmission arc](2084/index.md) | [The Child Who Refused the Update](DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md) | [Original 2084](DEATH_NOTE_2084.md) | [False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) | [House of a Million Doors](DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md) | [Reality Mirror](2084_REALITY_MIRROR_PROXY_GRAVITY.md)
 
 <small>Original concept, story direction, symbology and declared authorship: **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**. AI-assisted drafting at the author's direction. D.N.A. Bible | Computational Metacognitive Bilingualism | Flamingoglyph Code (FGC). Copyright © 2026 Jupiter Hudson. Original expressive work subject to repository content licensing terms.</small>
