@@ -11,6 +11,7 @@
 **Canon layer:** D.N.A. Bible / Err ⃝or⃟⃤ GLITCHOLOGY  
 **Digital edition:** Compressed gateway to the planned 666-page architecture
 **Reality Mirror:** [Proxy Gravity, AI Power, Surveillance Capitalism, and Human Agency](2084_REALITY_MIRROR_PROXY_GRAVITY.md)  
+**Story continuation:** [The False Light Protocol: The Million Unseen Soldiers](DEATH_NOTE_2084_FALSE_LIGHT.md)  
 **Machine graph:** [2084 Reality Mirror JSON-LD](../machine/2084-reality-mirror.jsonld)
 
 </div>
@@ -2156,3 +2157,12 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 Copyright © Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. All rights reserved for the original literary and artistic expression in this work, subject to the repository's content licensing terms.
 
 </div>
+
+
+---
+
+## NEXT TRANSMISSION // THE FALSE LIGHT PROTOCOL
+
+The original story has a new companion chapter about counterfeit authority, autonomous agents, AI-enabled security risks, creative apathy, and the right to refuse machine decisions.
+
+[**Continue reading: THE FALSE LIGHT PROTOCOL →**](DEATH_NOTE_2084_FALSE_LIGHT.md)
