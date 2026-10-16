@@ -79,6 +79,10 @@ The machines did.
 
 At 07:13 the Feed awakened Jupiter Hudson before his alarm.
 
+Rain tapped the bedroom window in sets of three. For a moment he thought somebody was trying to get in. A ridiculous thought, considering the height of his apartment, but Jupiter had never claimed to be reasonable before breakfast.
+
+The terminal beside his bed brightened. It possessed the punctuality of an undertaker and the cheerfulness of a breakfast commercial.
+
 It knew he had slept badly.
 
 It knew his pulse had accelerated at 03:14.
@@ -141,6 +145,10 @@ The video hit one million views in twelve minutes.
 Three million in twenty-seven.
 
 Ten million before lunch.
+
+Jupiter paused the recording before the camera reached the boy's face. A shoelace hung loose. The boy wore a thin coat, the kind somebody might insist was warm enough before sending a child out the door.
+
+Someone was probably still expecting him home.
 
 The top comment said:
 
