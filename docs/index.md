@@ -81,42 +81,49 @@
 }
 </script>
 
-<div class="cmb-hero">
-
-<div class="cmb-kicker">CMB // HUMAN ↔ MACHINE LITERACY</div>
-
-<h1 id="computational-metacognitive-bilingualism">Computational Metacognitive Bilingualism™</h1>
-
-<p>Created by Jupiter Hudson (WisdomLoveThePoet / Jupiter 8), Computational Metacognitive Bilingualism™ (CMB) is a code-poetry, AI-literacy, and digital-rights framework for working with computational systems while preserving human judgment, consent, authorship, meaning, and self-definition.</p>
-
-<div class="cmb-invariants">
-<span class="cmb-meta">PATTERN ≠ PROOF</span><br>
-<span class="cmb-human">PROFILE ≠ PERSON</span><br>
-<span class="cmb-machine">MODEL ≠ MIND</span><br>
-<span class="cmb-meta">PREDICTION ≠ DESTINY</span><br>
-<strong class="cmb-human">HUMAN_AGENCY</strong> &gt; <strong class="cmb-machine">MACHINE_AUTHORITY</strong>
+<section class="cmb-stage" aria-labelledby="cmb-stage-title">
+<div class="cmb-stage-copy">
+<p class="cmb-stage-kicker">♃ // CMB ARCHIVE // THE SOVEREIGN HUMAN</p>
+<h1 id="cmb-stage-title"><span>COMPUTATIONAL</span><span>METACOGNITIVE</span><span>BILINGUALISM<sup>™</sup></span></h1>
+<p class="cmb-stage-description">Created by Jupiter Hudson (WisdomLoveThePoet / Jupiter 8). A living intersection of code-poetry, AI literacy, neurodiversity advocacy, digital rights, and verifiable provenance. Machines can assist human thought. They cannot inherit the authority to define a person.</p>
+<div class="cmb-stage-code" aria-label="Core human-agency principles">
+<span>PATTERN ≠ PROOF</span>
+<span>PROFILE ≠ PERSON</span>
+<span>MODEL ≠ MIND</span>
+<span>PREDICTION ≠ DESTINY</span>
+<span>HUMAN_AGENCY &gt; MACHINE_AUTHORITY</span>
 </div>
-
+<nav class="cmb-stage-actions" aria-label="Start exploring Computational Metacognitive Bilingualism">
+<a class="cmb-action cmb-action--primary" href="concepts/what-is-cmb/">Understand CMB ↗</a>
+<a class="cmb-action cmb-action--secondary" href="2084/">Enter the Stories ↗</a>
+<a class="cmb-action cmb-action--quiet" href="DEVELOPERS/">Build and Verify ↗</a>
+</nav>
+<p class="cmb-stage-signature">♃ 𓁹 // JUPITER 8 // SEARCH · VERIFY · CHOOSE</p>
 </div>
+</section>
 
+## ♃ Featured Stories // The Living Archive
 
-## Featured D.N.A. Bible story
+<p class="cmb-reading-key">Literary works and code-poetry are presented as authored creative material, not empirical predictions. Select a cover to begin reading.</p>
 
-### ♃ The Spider's Internet
-
-*An illustrated digital fable about the attention economy, the World Wide Web, and human cognitive sovereignty.*
-
-[**Read The Spider's Internet →**](spiders-internet/)
-
-The full six-part story and companion video are published within this CMB website. The story explores why attention is not consent and why a digital profile cannot define a person.
-
-## ♃ DEATH NOTE 2084 // Complete story
-
-**The five-transmission D.N.A. Bible arc is now available to read in sequence.** Follow Jupiter, Nia, and Mara from the Feed and the House of a Million Doors through the Ledger of Invisible Cells to *The Child Who Refused the Update*.
-
-[**Read the complete 2084 story →**](2084/)
-
-<small>A work of dystopian fiction and code-poetry. The 2026 financial reporting referenced in the story is distinguished from the imagined events of 2084.</small>
+<div class="cmb-story-shelf">
+<a class="cmb-story cmb-story--spider" href="spiders-internet/">
+<div class="cmb-story-art" aria-hidden="true"><span class="cmb-story-symbol">🕸</span><span class="cmb-story-art-label">D.N.A. // ATTENTION</span></div>
+<div class="cmb-story-content"><strong>The Spider's Internet</strong><p>A web that seems to offer freedom while learning every vibration of human attention.</p><small>SIX-PART STORY // OPEN ARCHIVE ↗</small></div>
+</a>
+<a class="cmb-story cmb-story--2084" href="2084/">
+<div class="cmb-story-art" aria-hidden="true"><span class="cmb-story-symbol">2084</span><span class="cmb-story-art-label">FUTURE // NOT VERDICT</span></div>
+<div class="cmb-story-content"><strong>Death Note 2084</strong><p>Five transmissions on surveillance, automated identity, and a child who refuses the update.</p><small>FIVE TRANSMISSIONS // READ IN ORDER ↗</small></div>
+</a>
+<a class="cmb-story cmb-story--token" href="fables/PHANTOM_TOKENBOOTH/">
+<div class="cmb-story-art" aria-hidden="true"><span class="cmb-story-symbol">🎟</span><span class="cmb-story-art-label">AGENTS // ACCOUNTABILITY</span></div>
+<div class="cmb-story-content"><strong>The Phantom Tokenbooth</strong><p>An agentic AI literacy fable following the passage from chatbot to autonomous tool use, with human consent as the boundary.</p><small>LONG-FORM FABLE // EXPLORE ↗</small></div>
+</a>
+<a class="cmb-story cmb-story--dna" href="https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md">
+<div class="cmb-story-art" aria-hidden="true"><span class="cmb-story-symbol">♃</span><span class="cmb-story-art-label">THE D.N.A. BIBLE</span></div>
+<div class="cmb-story-content"><strong>Demons Need Attention</strong><p>The literary archive of cognitive sovereignty, human testimony, and the attention economy.</p><small>ORIGINAL MANUSCRIPT ARCHIVE ↗</small></div>
+</a>
+</div>
 
 ## Choose your depth
 
@@ -167,6 +174,8 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 <div class="cmb-status-led cmb-status-led--warn"><strong>DOI / ARCHIVE</strong><span>VERIFYING</span></div>
 
 </div>
+
+<p class="cmb-control-note">Status labels are a published snapshot, not independently live monitoring. <a href="generated/CMB_SYSTEM_STATUS/">Inspect the evidence-backed system status ↗</a></p>
 
 Repository-side specialist audits now publish a [CMB System Status](generated/CMB_SYSTEM_STATUS.md) surface with structured evidence packets. External gates are deliberately kept separate from self-reported automation.
 
@@ -298,6 +307,21 @@ The repository intentionally contains several different kinds of work:
 
 Those layers are labeled instead of being blended into one claim. See [Project structure](PROJECT_STRUCTURE.md) and [Threat model](THREAT_MODEL.md).
 
+
+## ♃ Connected Concepts // The Knowledge Atlas
+
+This interactive concept map connects the human-agency principles to their authored, technical, and research layers. Open a node to inspect its meaning. Relationships represent conceptual connections, not independent evidence.
+
+<div class="cmb-atlas" aria-label="Interactive CMB knowledge atlas">
+<details class="cmb-atlas-node"><summary>♃ HUMAN AGENCY</summary><p>Human judgment, consent, meaning, and self-definition remain authoritative.</p><a href="concepts/human-agency-machine-authority/">View principle ↗</a></details>
+<details class="cmb-atlas-node"><summary>🦩 FLAMINGOGLYPH CODE</summary><p>The authored symbolic layer links narrative, identity, and declared intent without claiming automatic enforcement.</p><a href="concepts/flamingoglyph-code/">View FGC ↗</a></details>
+<details class="cmb-atlas-node"><summary>⌘ MACHINE MODELS</summary><p>A model's classification or prediction is not a person's identity or destiny.</p><a href="concepts/model-not-mind/">View distinction ↗</a></details>
+<details class="cmb-atlas-node"><summary>𓁹 PATTERN / PROOF</summary><p>An observed pattern invites a hypothesis, not an automatic verdict.</p><a href="concepts/pattern-not-proof/">View evidence boundary ↗</a></details>
+<details class="cmb-atlas-node"><summary>⚖ COGNITIVE SOVEREIGNTY</summary><p>Explore the right to independent interpretation, expression, and self-definition.</p><a href="concepts/cognitive-sovereignty/">View concept ↗</a></details>
+<details class="cmb-atlas-node"><summary>✦ PROVENANCE</summary><p>Authorship declarations, cryptographic integrity, and legal rights are separate kinds of evidence.</p><a href="concepts/cmb-provenance/">View verification path ↗</a></details>
+</div>
+
+<p class="cmb-atlas-legend">CONNECTION ≠ CAUSATION // SYMBOL ≠ VERIFICATION // HUMAN_AGENCY &gt; MACHINE_AUTHORITY</p>
 
 ## Canonical concept library
 
