@@ -1,17 +1,11 @@
 # ♃ DEATH NOTE 2084 // THE FALSE LIGHT PROTOCOL
 
-<div align="center">
-
-**D.N.A. BIBLE // DEMONS NEED ATTENTION // THE SECOND TRANSMISSION**
-
-**THE MILLION UNSEEN SOLDIERS**
-
-*An original dystopian warning story and poetic manifesto*
-
-**Jupiter Hudson // WisdomLoveThePoet // Jupiter 8**
-
-**♃ ⚡︎⚡︎˖ ࣪⏻ᯤ**
-
+<div align="center" style="padding:1.25rem 0 0.85rem;">
+  <p><strong>D.N.A. BIBLE // DEMONS NEED ATTENTION // THE SECOND TRANSMISSION</strong></p>
+  <h2>THE MILLION UNSEEN SOLDIERS</h2>
+  <p><em>An original dystopian warning story and poetic manifesto</em></p>
+  <p><strong>Jupiter Hudson // WisdomLoveThePoet // Jupiter 8</strong></p>
+  <p><strong>♃ ⚡︎⚡︎˖ ࣪⏻ᯤ</strong></p>
 </div>
 
 <div role="note" style="background:#10182b;color:#f4f7ff;border:1px solid #d6b36a;border-left:5px solid #d6b36a;border-radius:10px;padding:1.15rem 1.4rem;margin:1.3rem 0;">
