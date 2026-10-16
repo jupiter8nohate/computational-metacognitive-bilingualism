@@ -54,29 +54,35 @@ GOVERNANCE
 
 ---
 
-# PROLOGUE
+# PROLOGUE // THE BOOTH BETWEEN TWO ROADS
 
-Before the Robot Prophecy,
+The booth appeared on a Tuesday, which struck Milo-8 as profoundly unfair. Tuesdays had never been especially dramatic.
 
-before the Quiet Wars entered orbit,
+Rain ticked against its brass roof. A light burned behind the ticket window, though the tollkeeper inside appeared to be arguing with an empty chair.
 
-before machines began negotiating with machines,
+One sign pointed toward machines that answered.
 
-before humanity started asking whether AGI might someday stand before questions that computation could not settle,
+The other pointed toward machines that acted.
 
-there was a booth.
+Milo had always assumed the difference was academic. Then he noticed the warning nailed beside the gate:
 
-A ridiculous little booth.
+**A TOOL MAY OPEN THE DOOR. WHO GAVE IT PERMISSION?**
 
-A tollbooth between two roads.
+From somewhere beyond the second road came the sound of a thousand keys turning at once.
 
-One road belonged to machines that answered.
+The tollkeeper looked up.
 
-The other belonged to machines that acted.
+"You're early," she said.
 
-And somewhere between those roads,
+"For what?"
 
-humanity misplaced the instruction manual.
+"Your first mistake."
+
+Milo considered returning home. Unfortunately, his intelligent refrigerator had already listed this trip as a learning opportunity, and he was tired of letting a kitchen appliance believe it understood him.
+
+He stepped toward the booth.
+
+*The events are fictional. The technical concepts introduced along the road are educational analogies, not proof of a deployed system.*
 
 ---
 
