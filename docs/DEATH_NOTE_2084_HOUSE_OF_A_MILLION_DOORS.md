@@ -440,7 +440,7 @@ And the crooked bird flew through.
 
 **♃ ⚡︎⚡︎˖ ࣪⏻ᯤ**
 
-**NEXT TRANSMISSION: THE CHILD WHO REFUSED THE UPDATE.**
+**NEXT TRANSMISSION:** [THE LEDGER OF INVISIBLE CELLS](DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md), tracing the 2026 investment boom, the fictional rise of techno-feudal dependency, and the four-point human sovereignty system. The child who refused the update follows that transmission.
 
 ---
 
@@ -451,6 +451,6 @@ And the crooked bird flew through.
 
 This literary story does not claim that real software behaves like a biological prion or cancer, nor that artificial systems cause clinical psychosis. Its invented system SIAGIAI is a narrative metaphor for unaccountable delegation of decisions.
 
-**ARCHIVE:** [Original DEATH NOTE 2084](DEATH_NOTE_2084.md) · [The False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) · [Reality Mirror](2084_REALITY_MIRROR_PROXY_GRAVITY.md)
+**ARCHIVE:** [Original DEATH NOTE 2084](DEATH_NOTE_2084.md) · [The False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) · [The Ledger of Invisible Cells](DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md) · [Reality Mirror](2084_REALITY_MIRROR_PROXY_GRAVITY.md)
 
 <small>Creative direction, narrative world, symbology and declared authorship: Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. AI-assisted drafting at the author's direction. D.N.A. Bible · Computational Metacognitive Bilingualism · Flamingoglyph Code (FGC). © 2026 Jupiter Hudson. Original literary expression is subject to the repository content licensing terms.</small>
