@@ -135,6 +135,19 @@ jobs:
           assert data.get("schema_version") == "cmb.watch-health.v1"
           print("Live Global AI Watch:", data.get("status"), data.get("last_successful_collection"))
           PY
+          # Assert that the published design and original illustrated story use the red-gold identity.
+          grep -Fq 'cmb-stage' /tmp/cmb-home.html
+          grep -Fq 'cmb-red-gold.css' /tmp/cmb-home.html
+          curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/stylesheets/cmb-red-gold.css" -o /tmp/cmb-red-gold.css
+          grep -Fq -- '--cmb-gold:#ffc72c' /tmp/cmb-red-gold.css
+          curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/spiders-internet/" -o /tmp/cmb-spider-story.html
+          grep -Fq -- '--accent:#ffc72c' /tmp/cmb-spider-story.html
+          grep -Fq 'id="film"' /tmp/cmb-spider-story.html
+          if grep -Eiq '#(ff70b2|ef75b4|241135|a77bd8|a78bfa)' /tmp/cmb-spider-story.html; then
+            echo "::error::The published illustrated story still contains deprecated purple or pink colors."
+            exit 1
+          fi
+          echo "Published red-gold styling, canonical Spider story, and film anchor verified."
           # Verify every chapter in the five-part 2084 arc, not just the homepage.
           for slug in \
             "2084/" \
