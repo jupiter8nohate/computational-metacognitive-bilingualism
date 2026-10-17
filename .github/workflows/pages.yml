@@ -98,16 +98,8 @@ jobs:
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
 
-      - name: Verify Hudson portraits are in the built Pages artifact
-        shell: bash
-        run: |
-          set -euo pipefail
-          for name in grandma-irene mama-margaret-hudson joseph-q-hudson-childhood; do
-            path="site/hudson-family-legacy/media/$name.jpg"
-            test -s "$path" || { echo "::error::Missing built portrait: $path"; exit 1; }
-            file --mime-type "$path" | grep -q 'image/jpeg' || { echo "::error::Not a JPEG: $path"; exit 1; }
-          done
-          echo "All three native JPEGs are present in the public build."
+      - name: Verify retired page remains absent
+        run: test ! -e site/hudson-family-legacy
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
@@ -172,19 +164,6 @@ jobs:
           curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/2084/" -o /tmp/cmb-2084-arc.html
           grep -Fqi "THE FIVE TRANSMISSIONS" /tmp/cmb-2084-arc.html
           echo "Public homepage, sitemap, verification, Watch health, and all five 2084 transmissions are reachable."
-
-      - name: Verify Hudson family portraits on public Pages
-        shell: bash
-        run: |
-          set -euo pipefail
-          base="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/hudson-family-legacy"
-          curl -fsSL --retry 5 --retry-delay 6 --retry-all-errors --max-time 25 "$base/" -o /tmp/hudson-family.html
-          for name in grandma-irene mama-margaret-hudson joseph-q-hudson-childhood; do
-            grep -Fq "$name.jpg" /tmp/hudson-family.html || { echo "::error::Missing $name image reference"; exit 1; }
-            curl -fsSL --retry 5 --retry-delay 6 --retry-all-errors --max-time 25 "$base/media/$name.jpg?v=194" -o "/tmp/$name.jpg"
-            file --mime-type "/tmp/$name.jpg" | grep -q image/jpeg || { echo "::error::Invalid published JPEG: $name"; exit 1; }
-          done
-          echo "All three Hudson portraits are publicly reachable."
 
       - name: Alert on Watch outage of six hours or longer
         shell: bash
