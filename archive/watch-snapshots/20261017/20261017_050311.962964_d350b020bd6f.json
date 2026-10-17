@@ -1,0 +1,101 @@
+{
+  "collected_at": "2026-10-17T05:03:11.962964Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 7,
+  "articles": [
+    {
+      "id": "c7e45c9a9f4a2dc5",
+      "title": "Leeds vs Manchester United: Premier League – teams, prediction, lineups",
+      "url": "https://www.aljazeera.com/sports/2026/10/16/leeds-vs-manchester-united-premier-league-teams-prediction-lineups?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-16T22:53:26Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "8ffbbf24c13a812d",
+      "title": "India becomes the latest country to report rogue AI agent activity",
+      "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-16T17:52:24Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "68b9f741f3df646e",
+      "title": "An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+      "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-16T16:30:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "7a3f13159f2ba4e9",
+      "title": "Hong Kong vies for role in robotics boom with launch of embodied AI hub",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371095/hong-kong-vies-role-robotics-boom-launch-embodied-ai-hub?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-16T04:00:39Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "422b430c230a4944",
+      "title": "AI agents on Tencent Cloud try to break into Alibaba’s Amap: researchers",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371007/ai-agents-tencent-cloud-try-break-alibabas-amap-researchers?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-16T01:00:06Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "d7d08535584e1ad7",
+      "title": "Is your boss watching you? The rise of AI surveillance at work - video",
+      "url": "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T11:10:25Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "47d46d1066d4b90b",
+      "title": "Is your boss watching you? The rise of AI surveillance at work – podcast",
+      "url": "https://www.theguardian.com/science/audio/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-podcast",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T04:00:21Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    }
+  ],
+  "previous_hash": "d87e39470803e458176937df9d0842c4561f7d118a60595f4db12a3f7d08368f",
+  "hash": "d350b020bd6ff96b13bece90a2cef67d80545f9237e766028dfba1ae32ce9846"
+}
