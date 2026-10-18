@@ -1,0 +1,101 @@
+{
+  "collected_at": "2026-10-18T23:15:34.418881Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 7,
+  "articles": [
+    {
+      "id": "ba4952b9c26c3ab6",
+      "title": "Why the US is holding secret talks with Myanmar’s military ruler",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/18/why-the-us-is-holding-secret-talks-with-myanmars-military-ruler?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-18T18:22:11Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "69530b3dd759b68a",
+      "title": "Residents recount drone strikes in Ethiopia’s northern Tigray region",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/18/residents-recount-drone-strikes-in-ethiopias-northern-tigray-region?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-18T17:20:20Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "484ecf4ffda8c3a5",
+      "title": "The AI promise was automation. The reality? Managing digital workers",
+      "url": "https://www.scmp.com/tech/big-tech/article/3371246/ai-promise-was-automation-reality-managing-digital-workers?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-18T14:00:08Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "aeb73f362c653162",
+      "title": "Black Box: The Chatbots | What I Saw at the Double Six Ranch | Ep 6 - podcast",
+      "url": "https://www.theguardian.com/australia-news/audio/2026/oct/18/black-box-the-chatbots-what-i-saw-at-the-double-six-ranch-ep-6-full-story-podcast",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-17T19:00:39Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "8ffbbf24c13a812d",
+      "title": "India becomes the latest country to report rogue AI agent activity",
+      "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-16T17:52:24Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "68b9f741f3df646e",
+      "title": "An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+      "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-16T16:30:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "7a3f13159f2ba4e9",
+      "title": "Hong Kong vies for role in robotics boom with launch of embodied AI hub",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371095/hong-kong-vies-role-robotics-boom-launch-embodied-ai-hub?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-16T04:00:39Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "97320f5a77455404da20babc1a455e68045aa39e22f13330290b8f7620058ee1",
+  "hash": "53b895444fc9936d8bf5a7c1808dbba05156932c350ba1e5dcbeca3b495c2531"
+}
