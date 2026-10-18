@@ -1,0 +1,114 @@
+{
+  "collected_at": "2026-10-18T05:56:24.831653Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 8,
+  "articles": [
+    {
+      "id": "3cb31b1c209d5825",
+      "title": "Deaths, injuries after fire at Alberta military base: Canada minister",
+      "url": "https://www.aljazeera.com/news/2026/10/18/deaths-injuries-after-fire-at-alberta-military-base-canada-minister?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-18T04:59:29Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "18ad45f4140f56cb",
+      "title": "St Petersburg under attack from Ukrainian drone swarm",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/18/st-petersburg-under-attack-from-ukrainian-drone-swarm?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-18T04:51:01Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "aeb73f362c653162",
+      "title": "Black Box: The Chatbots | What I Saw at the Double Six Ranch | Ep 6 - podcast",
+      "url": "https://www.theguardian.com/australia-news/audio/2026/oct/18/black-box-the-chatbots-what-i-saw-at-the-double-six-ranch-ep-6-full-story-podcast",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-17T19:00:39Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "8ffbbf24c13a812d",
+      "title": "India becomes the latest country to report rogue AI agent activity",
+      "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-16T17:52:24Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "68b9f741f3df646e",
+      "title": "An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+      "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-16T16:30:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "7a3f13159f2ba4e9",
+      "title": "Hong Kong vies for role in robotics boom with launch of embodied AI hub",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371095/hong-kong-vies-role-robotics-boom-launch-embodied-ai-hub?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-16T04:00:39Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "422b430c230a4944",
+      "title": "AI agents on Tencent Cloud try to break into Alibaba’s Amap: researchers",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371007/ai-agents-tencent-cloud-try-break-alibabas-amap-researchers?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-16T01:00:06Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "d7d08535584e1ad7",
+      "title": "Is your boss watching you? The rise of AI surveillance at work - video",
+      "url": "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-15T11:10:25Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "privacy_surveillance"
+      ]
+    }
+  ],
+  "previous_hash": "7c1658c96e1f5ccc98252c71539ed21c8ef907887a2fa80becb27bd14c749a1f",
+  "hash": "30e4993ab2cc04ddce3766b819437b69b08a0226da9eaae35edc314f2ef80b78"
+}
