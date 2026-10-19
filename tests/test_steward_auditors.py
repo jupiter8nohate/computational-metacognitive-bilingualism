@@ -75,14 +75,14 @@ def test_accessibility_auditor_requires_front_door_safeguards(tmp_path: Path) ->
 def test_accessibility_accepts_decorative_images(tmp_path: Path) -> None:
     _write(
         tmp_path / "docs/index.md",
-        '<img src="seal.svg" alt="" width="144">\\n'
-        '![ ](ornament.svg)\\n'
-        '<img src="diagram.svg" alt="Diagram of human agency">\\n',
+        '<img src="seal.svg" alt="" width="144">\n'
+        '![ ](ornament.svg)\n'
+        '<img src="diagram.svg" alt="Diagram of human agency">\n',
     )
     _write(
         tmp_path / "docs/stylesheets/accessibility.css",
-        ".x:focus-visible { outline: 2px solid; }\\n"
-        "@media (prefers-reduced-motion: reduce) { .x { transition: none; } }\\n",
+        ".x:focus-visible { outline: 2px solid; }\n"
+        "@media (prefers-reduced-motion: reduce) { .x { transition: none; } }\n",
     )
     result = audit_accessibility(tmp_path)
     assert result.ok
@@ -90,11 +90,11 @@ def test_accessibility_accepts_decorative_images(tmp_path: Path) -> None:
 
 
 def test_accessibility_rejects_missing_alt_but_accepts_empty_alt(tmp_path: Path) -> None:
-    _write(tmp_path / "docs/index.md", '<img src="seal.svg" alt="">\\n<img src="broken.svg">\\n')
+    _write(tmp_path / "docs/index.md", '<img src="seal.svg" alt="">\n<img src="broken.svg">\n')
     _write(
         tmp_path / "docs/stylesheets/accessibility.css",
-        ".x:focus-visible { outline: 2px solid; }\\n"
-        "@media (prefers-reduced-motion: reduce) { .x { transition: none; } }\\n",
+        ".x:focus-visible { outline: 2px solid; }\n"
+        "@media (prefers-reduced-motion: reduce) { .x { transition: none; } }\n",
     )
     result = audit_accessibility(tmp_path)
     assert not result.ok
