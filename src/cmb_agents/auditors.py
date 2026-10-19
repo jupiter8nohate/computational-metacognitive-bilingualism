@@ -152,9 +152,12 @@ def _image_alt_issues(text: str) -> int:
     issues = 0
     for tag in _HTML_IMG_RE.findall(text):
         match = _ALT_RE.search(tag)
-        if match is None or not match.group(2).strip():
+        # An explicitly empty alt is valid for a decorative image (WCAG).
+        # Missing alt is not: screen readers may announce the filename.
+        if match is None:
             issues += 1
-    issues += sum(1 for alt in _MD_IMG_RE.findall(text) if not alt.strip())
+    # Markdown image syntax always emits an alt attribute, including alt="".
+    # Empty Markdown alt text is likewise valid for decorative imagery.
     return issues
 
 
