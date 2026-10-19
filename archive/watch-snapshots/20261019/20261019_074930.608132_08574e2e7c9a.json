@@ -1,0 +1,88 @@
+{
+  "collected_at": "2026-10-19T07:49:30.608132Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 6,
+  "articles": [
+    {
+      "id": "d13fc3fc3702dec1",
+      "title": "Fast-moving grass fire caused Canada’s military base tragedy",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/19/fast-moving-grass-fire-caused-canadas-military-base-tragedy?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-19T03:07:16Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "fa6fa305a32abe78",
+      "title": "Ukraine launches over 1,000 drones at Russia, setting oil facilities ablaze",
+      "url": "https://www.aljazeera.com/news/2026/10/19/ukrainian-drone-attack-on-russias-st-petersburg-kills-1-hits-energy-sites?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-19T02:10:09Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "484ecf4ffda8c3a5",
+      "title": "The AI promise was automation. The reality? Managing digital workers",
+      "url": "https://www.scmp.com/tech/big-tech/article/3371246/ai-promise-was-automation-reality-managing-digital-workers?utm_source=rss_feed",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-18T14:00:08Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "aeb73f362c653162",
+      "title": "Black Box: The Chatbots | What I Saw at the Double Six Ranch | Ep 6 - podcast",
+      "url": "https://www.theguardian.com/australia-news/audio/2026/oct/18/black-box-the-chatbots-what-i-saw-at-the-double-six-ranch-ep-6-full-story-podcast",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-17T19:00:39Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "8ffbbf24c13a812d",
+      "title": "India becomes the latest country to report rogue AI agent activity",
+      "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-16T17:52:24Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "68b9f741f3df646e",
+      "title": "An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+      "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-16T16:30:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "1f2ae034107ac714b32d1511441cf391e8941d3d3f8052b94db524d7de8a7535",
+  "hash": "08574e2e7c9a75f16ecc54bf815daf06f0f086c090a8fbec82ff8ed1dac96706"
+}
