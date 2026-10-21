@@ -11,8 +11,8 @@ The roads here lead to talking machines, suspicious archives, invisible weapons,
 | Read | Story | The question beneath the mystery |
 | --- | --- | --- |
 | 1 | [**The Spider's Internet**](../spiders-internet/) | Can attention become a trap without a single master Spider? |
-| 3 | [**The Miser and the Spider**](THE_MISER_AND_THE_SPIDER.md) | Who profits when weak people cannot challenge the keeper of the web? |
-| 2 | [**The Phantom Tokenbooth**](PHANTOM_TOKENBOOTH.md) | Who gave an intelligent tool permission to act? |
+| 2 | [**The Miser and the Spider**](THE_MISER_AND_THE_SPIDER.md) | Who profits when weak people cannot challenge the keeper of the web? |
+| 3 | [**The Phantom Tokenbooth**](PHANTOM_TOKENBOOTH.md) | Who gave an intelligent tool permission to act? |
 | 4 | [**Quiet Wars: Silent Weapons**](QUIET_WARS_SILENT_WEAPONS.md) | How can a false signal change what people believe they know? |
 | 5 | [**The Hardware Heresy**](THE_HARDWARE_HERESY.md) | When does convenience become dependence? |
 | 6 | [**The Agentic Sector**](AGENTIC_SECTOR.md) | Who authorizes the actor? |
