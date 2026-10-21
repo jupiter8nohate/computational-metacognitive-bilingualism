@@ -14,6 +14,10 @@ Welcome to Jupiter Hudson's D.N.A. literary universe: eerie speculative fiction,
 
 A man enters the web looking for a poem. He finds mirrors, a patient Spider, and an alarming account of the hours he has surrendered. A complete standalone fable and an ideal first read.
 
+### [The Miser and the Spider: The Economics of Captivity](../fables/THE_MISER_AND_THE_SPIDER.md)
+
+A companion chapter follows the spider from medieval sermons to the digital attention economy. Odo of Cheriton's fables expose selective justice, while Jupiter follows the ledger back to its keeper. Includes an attributed public-domain engraving, scriptural context, and historical sources.
+
 ## The five transmissions
 
 ### [DEATH NOTE 2084: Everybody Dies Twice](../DEATH_NOTE_2084.md)

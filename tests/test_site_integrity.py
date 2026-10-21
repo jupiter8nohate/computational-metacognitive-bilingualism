@@ -218,3 +218,41 @@ def test_cmb_trademark_normalization_is_idempotent(tmp_path: Path) -> None:
     assert brand(tmp_path) == 0
     assert expected in page.read_text(encoding="utf-8")
     assert json.loads(index.read_text(encoding="utf-8"))["docs"][0]["title"] == expected
+
+
+def test_miser_spider_chapter_is_connected_to_reading_paths() -> None:
+    """The illustrated story and both library views must expose the companion chapter."""
+    root = Path(__file__).resolve().parents[1]
+    chapter = root / "docs/fables/THE_MISER_AND_THE_SPIDER.md"
+    assert chapter.is_file()
+    text = chapter.read_text(encoding="utf-8")
+    assert text.startswith("# ♃ The Miser and the Spider")
+    assert "Source notes // History, scripture, and adaptation" in text
+    assert "10.1007/s11061-020-09645-7" in text
+    assert "roaring lion" in text
+    assert "not a prediction of the World Wide Web" in text
+    assert 'alt="Nineteenth-century engraving' in text
+    assert "commons.wikimedia.org/wiki/File:Pur_12_aracne_(2).jpg" in text
+    assert "HUMAN_AGENCY > MACHINE_AUTHORITY" in text
+
+    nav = (root / "mkdocs.yml").read_text(encoding="utf-8")
+    story_library = (root / "docs/story-universe/index.md").read_text(encoding="utf-8")
+    fable_library = (root / "docs/fables/index.md").read_text(encoding="utf-8")
+    original_illustrated_story = (root / "spiders-internet/index.html").read_text(encoding="utf-8")
+    assert "fables/THE_MISER_AND_THE_SPIDER.md" in nav
+    assert "../fables/THE_MISER_AND_THE_SPIDER.md" in story_library
+    assert "(THE_MISER_AND_THE_SPIDER.md)" in fable_library
+    rows = [line for line in fable_library.splitlines() if line.startswith("| ") and line[2:3].isdigit()]
+    assert [int(line.split("|")[1].strip()) for line in rows] == list(range(1, 8))
+    assert 'href="../fables/THE_MISER_AND_THE_SPIDER/"' in original_illustrated_story
+    assert 'id="film"' in original_illustrated_story
+
+
+def test_miser_spider_chapter_is_not_presented_as_literal_history() -> None:
+    """Keep medieval evidence, modern interpretation, and fiction clearly separated."""
+    root = Path(__file__).resolve().parents[1]
+    chapter = (root / "docs/fables/THE_MISER_AND_THE_SPIDER.md").read_text(encoding="utf-8")
+    assert "original fictional allegory" in chapter
+    assert "compared **by analogy only**" in chapter
+    assert "not a medieval depiction of the Devil" in chapter
+    assert "not the literal wording of Peter" in chapter
