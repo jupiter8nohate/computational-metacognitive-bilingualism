@@ -242,6 +242,8 @@ def test_miser_spider_chapter_is_connected_to_reading_paths() -> None:
     assert "fables/THE_MISER_AND_THE_SPIDER.md" in nav
     assert "../fables/THE_MISER_AND_THE_SPIDER.md" in story_library
     assert "(THE_MISER_AND_THE_SPIDER.md)" in fable_library
+    rows = [line for line in fable_library.splitlines() if line.startswith("| ") and line[2:3].isdigit()]
+    assert [int(line.split("|")[1].strip()) for line in rows] == list(range(1, 8))
     assert 'href="../THE_MISER_AND_THE_SPIDER/"' in original_illustrated_story
     assert 'id="film"' in original_illustrated_story
 
