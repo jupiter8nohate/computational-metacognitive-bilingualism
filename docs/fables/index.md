@@ -11,11 +11,12 @@ The roads here lead to talking machines, suspicious archives, invisible weapons,
 | Read | Story | The question beneath the mystery |
 | --- | --- | --- |
 | 1 | [**The Spider's Internet**](../spiders-internet/) | Can attention become a trap without a single master Spider? |
+| 3 | [**The Miser and the Spider**](THE_MISER_AND_THE_SPIDER.md) | Who profits when weak people cannot challenge the keeper of the web? |
 | 2 | [**The Phantom Tokenbooth**](PHANTOM_TOKENBOOTH.md) | Who gave an intelligent tool permission to act? |
-| 3 | [**Quiet Wars: Silent Weapons**](QUIET_WARS_SILENT_WEAPONS.md) | How can a false signal change what people believe they know? |
-| 4 | [**The Hardware Heresy**](THE_HARDWARE_HERESY.md) | When does convenience become dependence? |
-| 5 | [**The Agentic Sector**](AGENTIC_SECTOR.md) | Who authorizes the actor? |
-| 6 | [**Why the D.N.A. Bible Was Written**](WHY_THE_DNA_BIBLE_WAS_WRITTEN.md) | Why defend human judgment in an automated age? |
+| 4 | [**Quiet Wars: Silent Weapons**](QUIET_WARS_SILENT_WEAPONS.md) | How can a false signal change what people believe they know? |
+| 5 | [**The Hardware Heresy**](THE_HARDWARE_HERESY.md) | When does convenience become dependence? |
+| 6 | [**The Agentic Sector**](AGENTIC_SECTOR.md) | Who authorizes the actor? |
+| 7 | [**Why the D.N.A. Bible Was Written**](WHY_THE_DNA_BIBLE_WAS_WRITTEN.md) | Why defend human judgment in an automated age? |
 
 These are independent or loosely connected fables. **Jupiter, Nia, and Mara's five linked transmissions** form the separate [2084 story arc](../2084/).
 
