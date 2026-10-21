@@ -168,6 +168,6 @@ He went back to find her.
 
 ## Continue the D.N.A. Bible
 
-[**Return to The Spider's Internet**](../spiders-internet/) | [**Read the six-chapter edition**](../story-universe/SPIDERS_INTERNET_READING_EDITION.md) | [**Explore the D.N.A. Story Library**](../story-universe/index.md)
+[**Return to The Spider's Internet**](../../spiders-internet/) | [**Read the six-chapter edition**](../story-universe/SPIDERS_INTERNET_READING_EDITION.md) | [**Explore the D.N.A. Story Library**](../story-universe/index.md)
 
 *Original chapter © 2026 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. Computational Metacognitive Bilingualism™ (CMB™) and Flamingoglyph Code (FGC). AI-assisted editorial development. The public-domain artwork and independently authored historical sources are not claimed as original work. Rights in original expression are subject to the repository's [creative-content terms](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CONTENT_LICENSE.md).*
