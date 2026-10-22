@@ -1,4 +1,4 @@
-# ♃ The D.N.A. Story Library
+# ♃ The D.N.A. Bible™ Story Library
 
 *Demons Need Attention™ | Stories from the edge of the human future*
 
