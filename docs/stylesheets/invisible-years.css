@@ -66,7 +66,7 @@
   color: #ffc72c;
   letter-spacing: .1em;
 }
-.rst-content table.docutils td, .rst-content table.docutils th { overflow-wrap: anywhere; }
+/* Global table styling is left to the existing site theme. */
 @media (max-width: 600px) {
   .invisible-years-hero { padding: 1.4rem .65rem; }
   .invisible-years-hero .invisible-years-kicker { letter-spacing: .05em; }
