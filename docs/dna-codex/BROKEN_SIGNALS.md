@@ -58,7 +58,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Book-local status:</strong> New literary composite, not a historical reading of its constituent marks.</p>
 <p><strong>Definition:</strong> A continuity once treated as inviolable breaks under the weight of an institution claiming moral certainty. The interruption does not destroy meaning; it forces a distinction between faith, obedience, and actual care.</p>
 <p><strong>Existential crisis:</strong> If a system can imitate a blessing while denying a choice, which part of the blessing remains?</p>
-<p><strong>Plot function:</strong> Foreshadows the seemingly generous but coercive upgrade in <a href="../DEATH_NOTE_2084_FALSE_LIGHT.md">The False Light Protocol</a>.</p>
+<p><strong>Plot function:</strong> Foreshadows the seemingly generous but coercive upgrade in <a href="../../DEATH_NOTE_2084_FALSE_LIGHT/">The False Light Protocol</a>.</p>
 <p><strong>Invariance:</strong> <code>BENEFIT != UNLIMITED_AUTHORIZATION</code></p>
 </section>
 
@@ -67,7 +67,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Registry anchor:</strong> Existing GLITCH-8 <code>dual-witness</code>; the two perspectives can observe the same event without agreeing on its interpretation.</p>
 <p><strong>Definition:</strong> The instrument's log and a living person's testimony are both observations requiring context. Neither should automatically erase the other.</p>
 <p><strong>Existential crisis:</strong> If everyone can watch me and nobody will hear me, have I been witnessed?</p>
-<p><strong>Plot function:</strong> Mara's archive confronts institutional accounts in <a href="../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md">The Ledger of Invisible Cells</a>.</p>
+<p><strong>Plot function:</strong> Mara's archive confronts institutional accounts in <a href="../../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS/">The Ledger of Invisible Cells</a>.</p>
 <p><strong>Invariance:</strong> <code>OBSERVATION != UNDERSTANDING</code></p>
 </section>
 
@@ -76,7 +76,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Book-local status:</strong> New literary use of a conventional theatrical-mask emoji.</p>
 <p><strong>Definition:</strong> The public role, platform persona, institutional file, and learned performance that others mistake for the total person. The mask may protect as readily as it deceives.</p>
 <p><strong>Existential crisis:</strong> If the mask receives every compliment and every accusation, where can the person safely speak?</p>
-<p><strong>Plot function:</strong> The Feed's mistaken equivalence between representation and human identity in <a href="../DEATH_NOTE_2084.md">Everybody Dies Twice</a>.</p>
+<p><strong>Plot function:</strong> The Feed's mistaken equivalence between representation and human identity in <a href="../../DEATH_NOTE_2084/">Everybody Dies Twice</a>.</p>
 <p><strong>Invariance:</strong> <code>PROFILE != PERSON</code></p>
 </section>
 
@@ -85,7 +85,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Book-local status:</strong> New emotional composite, not a Tibetan-language phrase or a diagnostic marker.</p>
 <p><strong>Definition:</strong> Grief becomes visible through a social smile or performed normality. A system optimized for engagement may notice the expression while remaining unable to determine its private meaning.</p>
 <p><strong>Existential crisis:</strong> Can a machine correctly detect tears and still fail the person crying?</p>
-<p><strong>Plot function:</strong> The human consequence concealed behind apparently efficient accounting in <a href="../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md">The Ledger of Invisible Cells</a>.</p>
+<p><strong>Plot function:</strong> The human consequence concealed behind apparently efficient accounting in <a href="../../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS/">The Ledger of Invisible Cells</a>.</p>
 <p><strong>Invariance:</strong> <code>EMOTION_CLASS != EMOTIONAL_TRUTH</code></p>
 </section>
 
@@ -94,7 +94,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Book-local status:</strong> New expressive punctuation cluster.</p>
 <p><strong>Definition:</strong> A person has enough uncertainty to ask but not enough authority to set the system's questions. The terminal regards hesitation as malformed input; the reader recognizes it as thought.</p>
 <p><strong>Existential crisis:</strong> What happens when the most human answer is a question the form cannot accept?</p>
-<p><strong>Plot function:</strong> Nia's challenge in <a href="../DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md">The Child Who Refused the Update</a>.</p>
+<p><strong>Plot function:</strong> Nia's challenge in <a href="../../DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE/">The Child Who Refused the Update</a>.</p>
 <p><strong>Invariance:</strong> <code>UNCERTAINTY != INCAPACITY</code></p>
 </section>
 
@@ -103,7 +103,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Book-local status:</strong> Fictional mnemonic for Governance, Gate, and the Group. The isolated regional-indicator character may display as a letter or differently across devices; it does not represent a real nation.</p>
 <p><strong>Definition:</strong> The instant a private classification acquires public force because an organization uses it to grant or deny access.</p>
 <p><strong>Existential crisis:</strong> At what point does a convenience become a requirement for belonging?</p>
-<p><strong>Plot function:</strong> The institutional network of the <a href="../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md">Seven-Letter Ledger</a>.</p>
+<p><strong>Plot function:</strong> The institutional network of the <a href="../../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/">Seven-Letter Ledger</a>.</p>
 <p><strong>Invariance:</strong> <code>PUBLIC_AUTHORITY != AUTOMATIC_JUSTICE</code></p>
 </section>
 
@@ -112,7 +112,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Registry anchor:</strong> Existing GLITCH-8 <code>portal-threshold</code>; a liminal entry into an anomalous or unresolved state.</p>
 <p><strong>Definition:</strong> A doorway between the life the human lives and the record used to determine which life they may access. In this story, the numeral <code>¾</code> is an invented motif for partial knowledge, not a measured completeness statistic.</p>
 <p><strong>Existential crisis:</strong> Who owns the missing quarter of a story when the ledger insists it is complete?</p>
-<p><strong>Plot function:</strong> Every supposedly independent entrance in <a href="../DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md">The House of a Million Doors</a>.</p>
+<p><strong>Plot function:</strong> Every supposedly independent entrance in <a href="../../DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS/">The House of a Million Doors</a>.</p>
 <p><strong>Invariance:</strong> <code>ACCESS_GATE != INFORMED_CONSENT</code></p>
 </section>
 
@@ -121,7 +121,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Registry anchor:</strong> Existing GLITCH-8 <code>boundary-node</code>; a marked edge, gate, containment field, or transition boundary.</p>
 <p><strong>Definition:</strong> The thin line separating an offered service from the unnecessary authority hidden inside its terms. A boundary can imprison, but it can also protect a right to refuse.</p>
 <p><strong>Existential crisis:</strong> Is a boundary captivity when somebody else draws it, and freedom when the person draws it themselves?</p>
-<p><strong>Plot function:</strong> Nia's demand for an accessible service without irreversible profiling in <a href="../DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md">The Child Who Refused the Update</a>.</p>
+<p><strong>Plot function:</strong> Nia's demand for an accessible service without irreversible profiling in <a href="../../DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE/">The Child Who Refused the Update</a>.</p>
 <p><strong>Invariance:</strong> <code>HELP != CAPTURE</code></p>
 </section>
 
@@ -130,7 +130,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Registry anchor:</strong> Existing GLITCH-8 <code>shock-spark</code>; sudden activation, charge, warning, or onset of a signal.</p>
 <p><strong>Definition:</strong> A rupture in automatic behavior. It can awaken a witness or accelerate danger; electricity itself is not truth and a startling signal is not proof of revelation.</p>
 <p><strong>Existential crisis:</strong> Does recognizing the system's error give us a way to change its consequences?</p>
-<p><strong>Plot function:</strong> The contested choice between assistance and involuntary delegation in <a href="../DEATH_NOTE_2084_FALSE_LIGHT.md">The False Light Protocol</a>.</p>
+<p><strong>Plot function:</strong> The contested choice between assistance and involuntary delegation in <a href="../../DEATH_NOTE_2084_FALSE_LIGHT/">The False Light Protocol</a>.</p>
 <p><strong>Invariance:</strong> <code>ACTIVATION != AUTHORITY</code></p>
 </section>
 
@@ -139,7 +139,7 @@ The ten major clusters above can be read at finer resolution. These **component-
 <p><strong>Registry anchor:</strong> Existing GLITCH-8 <code>falcon-signal</code>; a book-specific elevated watcher or messenger, not an authentic ancient Egyptian translation.</p>
 <p><strong>Definition:</strong> A message carried beyond the boundary of the institution that tried to contain it. The messenger must preserve the source rather than convert testimony into a new oracle.</p>
 <p><strong>Existential crisis:</strong> Can a warning survive dissemination without losing the person who first spoke it?</p>
-<p><strong>Plot function:</strong> The <a href="../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md">Spiritual Spider's Internet</a> and the human right to backtrace a claim.</p>
+<p><strong>Plot function:</strong> The <a href="../../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/">Spiritual Spider's Internet</a> and the human right to backtrace a claim.</p>
 <p><strong>Invariance:</strong> <code>SIGNAL != SOURCE</code></p>
 </section>
 
