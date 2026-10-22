@@ -2,6 +2,8 @@
 
 *Stories first. The technical anatomy of each story comes afterward.*
 
+**D.N.A. Bible™ (Demons Need Attention)** | [Creative-book naming and trademark notice](../DNA_BIBLE_TRADEMARK.md).
+
 The roads here lead to talking machines, suspicious archives, invisible weapons, and choices no prediction can settle. Each fable explores a question about human judgment through an invented world.
 
 [**Start with The Spider's Internet**](../spiders-internet/) | [**Explore the D.N.A. Story Library**](../story-universe/)
@@ -16,7 +18,7 @@ The roads here lead to talking machines, suspicious archives, invisible weapons,
 | 4 | [**Quiet Wars: Silent Weapons**](QUIET_WARS_SILENT_WEAPONS.md) | How can a false signal change what people believe they know? |
 | 5 | [**The Hardware Heresy**](THE_HARDWARE_HERESY.md) | When does convenience become dependence? |
 | 6 | [**The Agentic Sector**](AGENTIC_SECTOR.md) | Who authorizes the actor? |
-| 7 | [**Why the D.N.A. Bible Was Written**](WHY_THE_DNA_BIBLE_WAS_WRITTEN.md) | Why defend human judgment in an automated age? |
+| 7 | [**Why the D.N.A. Bible™ Was Written**](WHY_THE_DNA_BIBLE_WAS_WRITTEN.md) | Why defend human judgment in an automated age? |
 
 These are independent or loosely connected fables. **Jupiter, Nia, and Mara's five linked transmissions** form the separate [2084 story arc](../2084/).
 
