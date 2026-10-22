@@ -45,6 +45,8 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 **[𓂀 The Ledger of Invisible Years: Nia and the Sovereign Engine](../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_YEARS.md)**. After the five-part original arc's limited victory, the Ministry attempts to convert Nia's refusal into a compressed virtual sentence. Read an original speculative story, ten reconstructed 2084 incidents, an Err ⃝or⃟⃤ GLITCHOLOGY registry, and a linked dossier separating ten real research fields from fictional future claims. This continuation does not erase the fifth transmission's conclusion.
 
+**REAL-WORLD EVIDENCE COMPANION:** [𓂀 The Evidence Ledger: Ten Mechanisms Behind the Fiction](../DEATH_NOTE_2084_EVIDENCE_LEDGER.md) examines documented data collection, employment and credit algorithms, accessible testing, biometric errors, identity dependencies, repair control, and graph modeling. Every entry states both what primary sources support and what remains fictional.
+
 **LITERARY COMPANION:** [The Web Over All Nations // The Veil, the Spider, and the Human Who Refused the Web](../DNA_BIBLE_WEB_OVER_ALL_NATIONS.md). This interlude follows the five-transmission arc as a separate thematic reading, not a sixth transmission.
 
 ## Companion scroll // Revelation 13:18
