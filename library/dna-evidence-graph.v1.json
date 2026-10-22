@@ -1,0 +1,99 @@
+{
+  "schema_version": "cmb.dna-evidence-graph.v1",
+  "disclaimer": "A link documents a literary association or sourced context. An edge is not a causal demonstration, prediction, or allegation.",
+  "nodes": [
+    {
+      "id": "isaiah25",
+      "type": "scripture",
+      "label": "Isaiah 25:7",
+      "url": "https://www.biblegateway.com/verse/en/Isaiah%2025%3A7",
+      "description": "Ancient text in its own setting; the web metaphor is an author's modern re-reading."
+    },
+    {
+      "id": "isaiah59",
+      "type": "scripture",
+      "label": "Isaiah 59:5–6",
+      "url": "https://www.biblegateway.com/passage/?search=Isaiah%2059%3A5-6&version=KJV",
+      "description": "Ancient prophetic spider-web imagery."
+    },
+    {
+      "id": "revelation",
+      "type": "scripture",
+      "label": "Revelation 13:18",
+      "url": "https://www.biblegateway.com/passage/?search=Revelation%2013%3A18&version=KJV",
+      "description": "Biblical verse, not a prediction that a specific technology exists."
+    },
+    {
+      "id": "nist",
+      "type": "documented_context",
+      "label": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "description": "Real AI risk-governance resource; it does not confirm a fictional Ministry."
+    },
+    {
+      "id": "fiction-web",
+      "type": "fiction",
+      "label": "The Web Over All Nations",
+      "url": "DNA_BIBLE_WEB_OVER_ALL_NATIONS/",
+      "description": "A literary interpretation of a world-spanning digital veil."
+    },
+    {
+      "id": "fiction-ledger",
+      "type": "fiction",
+      "label": "The Seven-Letter Ledger",
+      "url": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "description": "Invented dystopian apparatus with sourced context."
+    },
+    {
+      "id": "fiction-revelation",
+      "type": "fiction",
+      "label": "The Mark and the Seven Letters",
+      "url": "DNA_BIBLE_REVELATION_13_18_LUCIFER/",
+      "description": "A fictional reinterpretation of Revelation's number imagery."
+    },
+    {
+      "id": "principle",
+      "type": "principle",
+      "label": "PATTERN ≠ PROOF",
+      "url": "concepts/pattern-not-proof/",
+      "description": "CMB principle separating observation from adequate evidence."
+    }
+  ],
+  "edges": [
+    {
+      "from": "isaiah25",
+      "to": "fiction-web",
+      "relation": "literary_analogy"
+    },
+    {
+      "from": "isaiah59",
+      "to": "fiction-web",
+      "relation": "literary_analogy"
+    },
+    {
+      "from": "revelation",
+      "to": "fiction-revelation",
+      "relation": "literary_analogy"
+    },
+    {
+      "from": "fiction-web",
+      "to": "fiction-ledger",
+      "relation": "shared_fictional_universe"
+    },
+    {
+      "from": "fiction-revelation",
+      "to": "fiction-ledger",
+      "relation": "shared_fictional_universe"
+    },
+    {
+      "from": "nist",
+      "to": "fiction-ledger",
+      "relation": "documented_context_only"
+    },
+    {
+      "from": "principle",
+      "to": "fiction-ledger",
+      "relation": "ethical_framework"
+    }
+  ]
+}

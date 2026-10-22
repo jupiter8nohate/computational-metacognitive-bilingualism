@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "D.N.A. Bible Canon Index v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "title",
+    "author",
+    "entries",
+    "motifs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cmb.dna-canon.v1"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status_note": {
+      "type": "string"
+    },
+    "rights": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "route",
+          "premise"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "kind": {
+            "enum": [
+              "transmission",
+              "companion",
+              "repository_book",
+              "experimental"
+            ]
+          },
+          "number": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "route": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_./-]+$"
+          },
+          "motif": {
+            "type": "string"
+          },
+          "premise": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "motifs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "meaning"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
