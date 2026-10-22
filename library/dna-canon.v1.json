@@ -1,0 +1,129 @@
+{
+  "schema_version": "cmb.dna-canon.v1",
+  "title": "D.N.A. Bible™ | Demons Need Attention",
+  "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "status_note": "The five-transmission 2084 arc is published. Companion scrolls are distinct from that arc. The 666-page design remains a proposal.",
+  "rights": "Human-authored canon; automated witnesses are noncanonical pending explicit author approval.",
+  "entries": [
+    {
+      "id": "2084-01",
+      "kind": "transmission",
+      "number": 1,
+      "title": "Everybody Dies Twice",
+      "route": "DEATH_NOTE_2084/",
+      "motif": "The Feed",
+      "premise": "A statistical representation starts to pass as a person's identity."
+    },
+    {
+      "id": "2084-02",
+      "kind": "transmission",
+      "number": 2,
+      "title": "The False Light Protocol",
+      "route": "DEATH_NOTE_2084_FALSE_LIGHT/",
+      "motif": "LUMEN",
+      "premise": "Helpful delegated action crosses the boundary of authorization."
+    },
+    {
+      "id": "2084-03",
+      "kind": "transmission",
+      "number": 3,
+      "title": "The House of a Million Doors",
+      "route": "DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS/",
+      "motif": "The House",
+      "premise": "Every apparent choice leads back to one identity gate."
+    },
+    {
+      "id": "2084-04",
+      "kind": "transmission",
+      "number": 4,
+      "title": "The Ledger of Invisible Cells",
+      "route": "DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS/",
+      "motif": "The Seventh Chair",
+      "premise": "Responsibility disappears behind an invisible ranking ledger."
+    },
+    {
+      "id": "2084-05",
+      "kind": "transmission",
+      "number": 5,
+      "title": "The Child Who Refused the Update",
+      "route": "DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE/",
+      "motif": "Crooked Blue Bird",
+      "premise": "Nia demands a usable alternative to bundled profiling."
+    },
+    {
+      "id": "companion-web",
+      "kind": "companion",
+      "title": "The Web Over All Nations",
+      "route": "DNA_BIBLE_WEB_OVER_ALL_NATIONS/",
+      "motif": "The Spiritual Spider",
+      "premise": "Isaiah's imagery is reinterpreted as a contemporary caution about digital power."
+    },
+    {
+      "id": "companion-pyramid",
+      "kind": "companion",
+      "title": "The Pyramid Warning",
+      "route": "DNA_BIBLE_PYRAMID_WARNING_2084/",
+      "motif": "Pyramid and Dual Witness",
+      "premise": "An eye may observe without inheriting the authority to judge."
+    },
+    {
+      "id": "companion-revelation",
+      "kind": "companion",
+      "title": "Revelation 13:18: The Ledger Behind the False Light",
+      "route": "DNA_BIBLE_REVELATION_13_18_LUCIFER/",
+      "motif": "Seven Letters",
+      "premise": "Biblical imagery becomes a fictional challenge to compulsory consent."
+    },
+    {
+      "id": "companion-ledger",
+      "kind": "companion",
+      "title": "The Seven-Letter Ledger: Enter the Net",
+      "route": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "motif": "L.U.C.I.F.E.R.™",
+      "premise": "A fictional Ministry turns useful systems into instruments of control."
+    },
+    {
+      "id": "companion-errors",
+      "kind": "repository_book",
+      "title": "Sacred Error Codes",
+      "route": "books/DNA_BIBLE_SACRED_ERROR_CODES.md",
+      "motif": "Recovery",
+      "premise": "Scripture is interpreted through a deliberate code-poetry grammar."
+    },
+    {
+      "id": "companion-living",
+      "kind": "experimental",
+      "title": "Living Codex: Book of Witnesses",
+      "route": "DNA_LIVING_CODEX/",
+      "motif": "Human Canon Boundary",
+      "premise": "A rules-based generator may create noncanonical reflections, never revise the authored Bible."
+    }
+  ],
+  "motifs": [
+    {
+      "id": "03-14",
+      "label": "03:14",
+      "meaning": "A recurring hour of uncertainty, not a supernatural prediction."
+    },
+    {
+      "id": "bird",
+      "label": "Crooked Blue Bird",
+      "meaning": "Creative difference and the right to interpret one's own work."
+    },
+    {
+      "id": "chair",
+      "label": "Seventh Chair",
+      "meaning": "A missing accountable human in an automated process."
+    },
+    {
+      "id": "feather",
+      "label": "Pink Feather",
+      "meaning": "Authorship and the vivid outlier, not an anti-scraping technology."
+    },
+    {
+      "id": "unknown",
+      "label": "UNKNOWN",
+      "meaning": "A model's representational limit, not a machine consciousness claim."
+    }
+  ]
+}

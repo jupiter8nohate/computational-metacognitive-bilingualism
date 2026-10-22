@@ -8,6 +8,10 @@ The five *DEATH NOTE 2084* transmissions use close third-person narration center
 
 Use concrete experiences before abstract conclusions. Keep humor human, not mechanical; let mystery arise from unanswered questions rather than unsupported assertions.
 
+## Editing rule for the Anomaly Codex
+
+The [Anomaly Codex](../dna-codex/index.md) is a supplementary reader portal with a new, explicitly noncanonical threshold vignette. Its dual STORY/WITNESS mode lets readers distinguish the emotional narrative from external evidence. Editors should strengthen character motive, obstacles, choice, action, consequence, and sensory specificity before introducing more aphorisms or decorative glyphs. Preserve the five published transmissions as the canonical arc. New interactive decisions must remain fictional, local, and non-profiling.
+
 ## Character continuity
 
 | Character | Wants | Risks | Human contradiction |

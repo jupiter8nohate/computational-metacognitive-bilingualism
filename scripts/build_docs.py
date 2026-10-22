@@ -31,6 +31,11 @@ PUBLIC_FILES = ("AGENTS.md", "llms.txt", "llms-full.txt", "CITATION.cff", "CITAT
 REQUIRED_PUBLIC_PATHS = (
     *PUBLIC_FILES,
     "sitemap.xml",
+    "library/dna-canon.v1.json",
+    "library/dna-evidence-graph.v1.json",
+    "schemas/cmb.dna-canon.v1.schema.json",
+    "stylesheets/dna-codex.css",
+    "javascripts/dna-codex.js",
     "spiders-internet/index.html",
     "DNA_BIBLE_WEB_OVER_ALL_NATIONS/index.html",
     "DNA_BIBLE_TRADEMARK/index.html",
