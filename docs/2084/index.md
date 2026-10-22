@@ -2,9 +2,11 @@
 
 <div align="center">
 
-## THE D.N.A. BIBLE // THE FUTURE IS NOT A VERDICT
+## THE D.N.A. BIBLE™ // THE FUTURE IS NOT A VERDICT
 
 **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
+
+**D.N.A. Bible™ (Demons Need Attention)** | [Naming and trademark notice](../DNA_BIBLE_TRADEMARK.md)
 
 **♃ ⚡︎⚡︎˖ ࣪⏻ᯤ**
 
