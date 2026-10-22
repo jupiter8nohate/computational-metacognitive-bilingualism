@@ -53,7 +53,15 @@ def test_chapter_title_and_story_boundary() -> None:
         "contested political-economic interpretation",
     ):
         assert excerpt.lower() in content.lower(), excerpt
-    assert len(re.findall(r"^#\s", content, re.MULTILINE)) == 1  # only the first line is H1
+    # Exclude code-poetry comments before counting true Markdown headings.
+    in_fence = False
+    headings = []
+    for line in content.splitlines():
+        if line.startswith(("~~~", "```")):
+            in_fence = not in_fence
+        elif not in_fence and line.startswith("# "):
+            headings.append(line)
+    assert headings == ["# 𓂀 THE SEVEN-LETTER LEDGER"]
 
 
 def test_ten_verses_are_distinct_and_the_ezekiel_reference_is_corrected() -> None:
