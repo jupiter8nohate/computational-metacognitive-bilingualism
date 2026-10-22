@@ -709,6 +709,8 @@ The moral boundary survives the ending:
 
 **HUMAN_AGENCY > MACHINE_AUTHORITY**
 
+**AFTER THE FIFTH TRANSMISSION:** [𓂀 THE PYRAMID WARNING // THE SCROLL OF THE UNWRITTEN HUMAN](DNA_BIBLE_PYRAMID_WARNING_2084.md). A separate literary warning, not a sixth transmission or an alteration of this story's ending.
+
 **ARCHIVE:** [Original DEATH NOTE 2084](DEATH_NOTE_2084.md) | [False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) | [House of a Million Doors](DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md) | [Ledger of Invisible Cells](DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md) | [Reality Mirror](2084_REALITY_MIRROR_PROXY_GRAVITY.md)
 
 <small>Original 2084 universe, direction, symbols and declared authorship: Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. AI-assisted drafting and editing under the author's direction. D.N.A. Bible | Computational Metacognitive Bilingualism (CMB) | Flamingoglyph Code (FGC). Copyright © 2026 Jupiter Hudson. Rights in original expression are subject to the repository's licensing terms.</small>
