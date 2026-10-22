@@ -52,6 +52,10 @@ Nia returns from a fictional lighthouse whose displayed eighty-year calendar can
 
 Mara and Nia investigate a generated witness who has been allowed to certify her own machine. Jupiter returns; the resulting paper trail exposes a missing **Station Seven**, not a proven deeper simulation.
 
+### [THE NINTH TRANSMISSION: Station Seven, The Archive of the Unsigned](../DEATH_NOTE_2084_STATION_SEVEN.md)
+
+An unlisted hearing room holds the case files of people whose appeals were collapsed into automated labels. Nia chooses healing rather than another involuntary investigation, while Jupiter, Mara, and Edda examine the source of a missing consent record.
+
 [**𓁇𓁋 WITNESS://BACKTRACE: Inspect Sources and Challenge Claims**](../WITNESS_BACKTRACE_PROTOCOL.md) documents the public-source review discipline behind the ten-mechanism research companion.
 
 **[𓂀 THE EVIDENCE LEDGER: Ten Documented Mechanisms, Ten Boundaries](../DEATH_NOTE_2084_EVIDENCE_LEDGER.md)** is the public-source companion to the Sixth Transmission. It audits predictions, consent, identity, accessibility, and surveillance claims without confusing the fictional Ministry with real institutions.
