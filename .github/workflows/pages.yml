@@ -24,6 +24,8 @@ on:
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
+      - "scripts/verify_2084_evidence.py"
+      - "tests/test_2084_witness_evidence.py"
       - "scripts/update_global_ai_watch.py"
       - "scripts/build_epistemic_radar.py"
       - "scripts/build_observatory.py"
@@ -94,6 +96,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python scripts/persist_watch_history.py
+
+      - name: Audit 2084 witness registry
+        run: python scripts/verify_2084_evidence.py
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
