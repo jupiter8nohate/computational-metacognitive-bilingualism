@@ -1,10 +1,12 @@
 # ♃ The D.N.A. Story Library
 
-*Demons Need Attention | Stories from the edge of the human future*
+*Demons Need Attention™ | Stories from the edge of the human future*
 
 The first door knew his name. The second knew what he feared. The third offered to choose for him.
 
 None of them knew who he was.
+
+**D.N.A. Bible™ (Demons Need Attention)** is the authored title of this archive. [Naming and trademark notice](../DNA_BIBLE_TRADEMARK.md).
 
 Welcome to Jupiter Hudson's D.N.A. literary universe: eerie speculative fiction, dark humor, code-poetry, and questions about the power humans surrender to their inventions. You do not need to know how to program to enter.
 
@@ -46,7 +48,7 @@ The Feed knows Jupiter's habits. It does not know his reasons. When a stranger's
 
 **STORY MODE:** Follow characters, mysteries, danger, mistakes, and consequences. Symbols and code are part of the fictional experience.
 
-**REFERENCE MODE:** Investigate [CMB™ concepts](../concepts/), [the 2084 Reality Mirror](../2084_REALITY_MIRROR_PROXY_GRAVITY.md), and the [reason the D.N.A. Bible was written](../fables/WHY_THE_DNA_BIBLE_WAS_WRITTEN.md).
+**REFERENCE MODE:** Investigate [CMB™ concepts](../concepts/), [the 2084 Reality Mirror](../2084_REALITY_MIRROR_PROXY_GRAVITY.md), and the [reason the D.N.A. Bible™ was written](../fables/WHY_THE_DNA_BIBLE_WAS_WRITTEN.md).
 
 Fiction makes arguments. It cannot verify historical events merely by telling a gripping story.
 
@@ -54,4 +56,4 @@ The recurring **03:14**, **crooked blue bird**, **pink feather**, **seventh chai
 
 ---
 
-*Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. Computational Metacognitive Bilingualism™ (CMB™), Flamingoglyph Code (FGC), and D.N.A. Bible. AI-assisted editorial development. © 2026. Rights subject to repository licensing terms.*
+*Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. Computational Metacognitive Bilingualism™ (CMB™), Flamingoglyph Code (FGC), and D.N.A. Bible™. AI-assisted editorial development. © 2026. Rights subject to repository licensing terms.*
