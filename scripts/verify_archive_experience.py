@@ -114,7 +114,7 @@ def audit(root: Path) -> list[str]:
         "SEARCH_INDEXING_CHECKLIST/",
         "ARCHIVE_RELEASE_CHECKLIST/",
     ):
-        if f'${{site}}/{slug}' not in pages_workflow:
+        if ('f"{site}/' + slug + '"') not in pages_workflow:
             errors.append(f"IndexNow notification missing archive route: {slug}")
     evidence = read("docs/EVIDENCE_REVIEW_REGISTER.md")
     if "SELF_TEST != INDEPENDENT_REVIEW" not in evidence:
