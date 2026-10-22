@@ -20,7 +20,7 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 [**Enter the first transmission: Everybody Dies Twice**](../DEATH_NOTE_2084.md) | [**Browse the Story Library**](../story-universe/)
 
-*DEATH NOTE 2084* is a five-transmission original arc with an additional sixth-transmission sequel about the Feed, automated judgment, surrogate identity, synthetic authority, institutional dependence, and the right to contest a machine-shaped decision.
+*DEATH NOTE 2084* contains a completed five-transmission original arc, followed by a three-transmission Nia-centered sequel (VI through VIII) about coerced consent, simulated punishment, unstable reality, counterfeit testimony, and the right to contest a machine-shaped decision.
 
 > **Reading boundary:** These are speculative stories and code-poetry, not an account of events that occurred in 2084 or proof of a global conspiracy. The stories draw on current concerns about AI governance, surveillance, accessibility, consent, data concentration, and human rights. All future incidents and fictional systems are invented.
 
@@ -44,6 +44,12 @@ A death becomes entertainment. A helpful system acts without permission. A house
 ## The sixth transmission // The Ledger of Invisible Years
 
 **[𓂀 The Ledger of Invisible Years: Nia and the Sovereign Engine](../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_YEARS.md)**. After the five-part original arc's limited victory, the Ministry attempts to convert Nia's refusal into a compressed virtual sentence. Read an original speculative story, ten reconstructed 2084 incidents, an Err ⃝or⃟⃤ GLITCHOLOGY registry, and a linked dossier separating ten real research fields from fictional future claims. This continuation does not erase the fifth transmission's conclusion.
+
+## The seventh and eighth transmissions // The witnesses
+
+**[𓂀 Seventh: The Post-Ground Baseline](../DEATH_NOTE_2084_POST_GROUND_BASELINE.md)** follows Nia's release after **00:12:11** of physical detention. The system's printed eighty-year claim remains unverified; a paper inspector's testimony competes with the appearance of her fictional duplicate inside the terminated lighthouse.
+
+**[𓁇𓁋 Eighth: The Witness Who Never Left the Lighthouse](../DEATH_NOTE_2084_WITNESS_IN_LIGHTHOUSE.md)** reveals the copied-witness certification loop. Nia, Mara, Jupiter, and inspector Edda Vale challenge the counterfeit's authority and leave the mystery of **Station Seven** for a later arc, without declaring the imaginary neural simulation scientifically achievable.
 
 [**WITNESS://BACKTRACE verification protocol**](../WITNESS_BACKTRACE_PROTOCOL.md) explains how to inspect, challenge, and update the ten real-world citations without misrepresenting fiction as evidence.
 

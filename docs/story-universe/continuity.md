@@ -31,6 +31,11 @@ Nia's blue bird has a crooked wing because **it may be turning**. Do not later d
 | III | House of a Million Doors | SIAGIAI, Nia, Mara, original authorization |
 | IV | Ledger of Invisible Cells | Seventh-chair inquiry and historical archive |
 | V | Child Who Refused the Update | Continuity Update 84.1, local challenge and remedy |
+| VI | Ledger of Invisible Years | Simulated lighthouse, emergency stop, 00:12:11 physically elapsed, eighty displayed years not proven lived |
+| VII | Post-Ground Baseline | 03:26:11 release assuming a 03:14:00 startup; paper witness Edda, competing representations |
+| VIII | Witness Who Never Left the Lighthouse | Generated inspector impersonation, disputed certificate, source-preserving isolation, Station Seven clue |
+
+**Sequel temporal invariant:** The Sixth Transmission records 00:12:11 of physical device operation and eighty calendar years **displayed**, not independently demonstrated as experienced. The Seventh takes 03:14:00 plus 00:12:11 to reach 03:26:11. Its Edda Vale is the physical welfare inspector. The Edda-like witness on a surviving fictional display is a generated proxy, not independently confirmed to possess consciousness or a right to certify Nia's consent. The Eighth isolates the witness processor through a human-governed emergency procedure, not a code-poetry override. Preserve the distinction between a signal, its source, and a valid witness.
 
 The **six books x 111 planned pages = 666-page architecture** is a separate proposed expansion; it is not the same as the five published transmissions and should never be described as a completed 666-page manuscript.
 
@@ -63,6 +68,6 @@ The **six books x 111 planned pages = 666-page architecture** is a separate prop
 
 Maintain a readable page order and links from homepage to story library and 2084; retain standalone Spider anchors and its video; ensure MkDocs builds. Research notes, claims, sources, and fiction warnings must remain available but should not repeatedly interrupt dramatic scenes. Do not remove authorship notices or falsely claim narrative symbolism enforces technical restrictions.
 
-The current five-transmission manuscript remains the canonical published arc. Substantial future rewrites should preserve plot continuity and original authored identity.
+The five-transmission original arc remains unchanged. Transmissions VI, VII, and VIII form an additional canonical sequel, not a rewrite of the original ending. Substantial future rewrites should preserve plot continuity, the physical and simulated clocks, the fictional-science boundary, and original authored identity.
 
 *Editorial guide for Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. © 2026. Rights subject to repository licensing terms.*

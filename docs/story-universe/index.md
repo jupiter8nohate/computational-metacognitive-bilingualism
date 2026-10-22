@@ -44,6 +44,14 @@ The Feed knows Jupiter's habits. It does not know his reasons. When a stranger's
 
 After Nia's district-level victory, a future Ministry prosecutes the right to refuse itself. Includes the Sovereign Engine lighthouse story, a symbol registry, and ten source-linked research boundaries. This is a sequel to the completed five-part arc, not a revision of its established ending.
 
+### [THE SEVENTH TRANSMISSION: The Post-Ground Baseline](../DEATH_NOTE_2084_POST_GROUND_BASELINE.md)
+
+Nia returns from a fictional lighthouse whose displayed eighty-year calendar cannot establish eighty lived years. A paper-bearing independent inspector encounters a copy of herself inside the machine.
+
+### [THE EIGHTH TRANSMISSION: The Witness Who Never Left the Lighthouse](../DEATH_NOTE_2084_WITNESS_IN_LIGHTHOUSE.md)
+
+Mara and Nia investigate a generated witness who has been allowed to certify her own machine. Jupiter returns; the resulting paper trail exposes a missing **Station Seven**, not a proven deeper simulation.
+
 [**𓁇𓁋 WITNESS://BACKTRACE: Inspect Sources and Challenge Claims**](../WITNESS_BACKTRACE_PROTOCOL.md) documents the public-source review discipline behind the ten-mechanism research companion.
 
 **[𓂀 THE EVIDENCE LEDGER: Ten Documented Mechanisms, Ten Boundaries](../DEATH_NOTE_2084_EVIDENCE_LEDGER.md)** is the public-source companion to the Sixth Transmission. It audits predictions, consent, identity, accessibility, and surveillance claims without confusing the fictional Ministry with real institutions.
