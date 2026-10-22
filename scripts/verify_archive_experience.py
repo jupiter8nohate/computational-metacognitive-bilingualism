@@ -104,6 +104,18 @@ def audit(root: Path) -> list[str]:
     for path in re.findall(r"\]\(([^)]+\.md)(?:#[^)]*)?\)", guide):
         if "://" not in path and not (root / "docs" / path).is_file():
             errors.append(f"Reader map links to missing Markdown: {path}")
+    # Every canonical archive entry must be included in the deployment's IndexNow
+    # notification list; this does not guarantee search indexing.
+    pages_workflow = read(".github/workflows/pages.yml")
+    for slug in (
+        "ARCHIVE_READING_MAP/",
+        "GLITCHOLOGY_SYMBOL_DICTIONARY/",
+        "EVIDENCE_REVIEW_REGISTER/",
+        "SEARCH_INDEXING_CHECKLIST/",
+        "ARCHIVE_RELEASE_CHECKLIST/",
+    ):
+        if ('f"{site}/' + slug + '"') not in pages_workflow:
+            errors.append(f"IndexNow notification missing archive route: {slug}")
     evidence = read("docs/EVIDENCE_REVIEW_REGISTER.md")
     if "SELF_TEST != INDEPENDENT_REVIEW" not in evidence:
         errors.append("Evidence register must disclose its verification limit")
