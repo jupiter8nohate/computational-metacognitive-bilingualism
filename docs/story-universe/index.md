@@ -42,6 +42,10 @@ The Feed knows Jupiter's habits. It does not know his reasons. When a stranger's
 
 **[Read the new D.N.A. Bible™ chapter: Revelation 13:18](../DNA_BIBLE_REVELATION_13_18_LUCIFER.md)** to decode the complete glyph inscription, the seven-letter fictional compliance ledger, and Nia's encounter with the Mark of the Beast as an allegory for coercive digital consent. This companion scroll follows the five completed transmissions without renumbering them.
 
+## The Seven-Letter Ledger // The Spiritual Spider's Internet
+
+**[Enter the Net: Ten Biblical Witnesses and the Architecture of Digital Authority](../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md)** is a sourced sequel to the L.U.C.I.F.E.R.™ companion. It separates independently documented technology and privacy concerns from scriptural allegory and invented 2084 events.
+
 ## Side roads
 
 **[The Phantom Tokenbooth](../fables/PHANTOM_TOKENBOOTH.md)** sends Milo-8 down the road between machines that answer and machines that act.
