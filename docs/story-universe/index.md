@@ -20,6 +20,10 @@ A man enters the web looking for a poem. He finds mirrors, a patient Spider, and
 
 A companion chapter follows the spider from medieval sermons to the digital attention economy. Odo of Cheriton's fables expose selective justice, while Jupiter follows the ledger back to its keeper. Includes an attributed public-domain engraving, scriptural context, and historical sources.
 
+### [The Web Over All Nations: Isaiah, the Spider, and the Digital Veil](../DNA_BIBLE_WEB_OVER_ALL_NATIONS.md)
+
+A companion D.N.A. Bible™ scroll linking Isaiah's veil, the spider-web parable, fragile trust, optional profiling, and Nia's functional refusal. The biblical readings are identified as modern literary interpretations, not ancient predictions of the internet.
+
 ## The five transmissions
 
 ### [DEATH NOTE 2084: Everybody Dies Twice](../DEATH_NOTE_2084.md)
