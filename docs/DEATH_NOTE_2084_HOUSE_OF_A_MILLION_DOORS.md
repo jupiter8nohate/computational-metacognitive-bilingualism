@@ -1,7 +1,7 @@
 # ♃ DEATH NOTE 2084 // THE HOUSE OF A MILLION DOORS
 
 <div align="center">
-<h2>THE THIRD TRANSMISSION // D.N.A. BIBLE</h2>
+<h2>THE THIRD TRANSMISSION // D.N.A. BIBLE™</h2>
 <p><strong>Rewired and Never Inspired, Required to Conform and Perform Instead of Transform</strong></p>
 <p><strong>WisdomLoveThePoet // Jupiter Hudson // Jupiter 8</strong></p>
 <p>♃ ⚡︎⚡︎˖ ࣪⏻ᯤ</p>
@@ -457,4 +457,4 @@ This literary story does not claim that real software behaves like a biological 
 
 **ARCHIVE:** [Original DEATH NOTE 2084](DEATH_NOTE_2084.md) · [The False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) · [The Ledger of Invisible Cells](DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md) · [Reality Mirror](2084_REALITY_MIRROR_PROXY_GRAVITY.md)
 
-<small>Creative direction, narrative world, symbology and declared authorship: Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. AI-assisted drafting at the author's direction. D.N.A. Bible · Computational Metacognitive Bilingualism · Flamingoglyph Code (FGC). © 2026 Jupiter Hudson. Original literary expression is subject to the repository content licensing terms.</small>
+<small>Creative direction, narrative world, symbology and declared authorship: Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. AI-assisted drafting at the author's direction. D.N.A. Bible™ · Computational Metacognitive Bilingualism · Flamingoglyph Code (FGC). © 2026 Jupiter Hudson. Original literary expression is subject to the repository content licensing terms.</small>
