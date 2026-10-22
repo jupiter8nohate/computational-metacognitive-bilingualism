@@ -18,6 +18,8 @@ on:
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
+      - "scripts/verify_2084_evidence.py"
+      - "tests/test_2084_witness_evidence.py"
       - "tests/test_site_integrity.py"
       - "mkdocs.yml"
       - "pyproject.toml"
@@ -47,6 +49,8 @@ on:
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
+      - "scripts/verify_2084_evidence.py"
+      - "tests/test_2084_witness_evidence.py"
       - "tests/test_site_integrity.py"
       - "mkdocs.yml"
       - "pyproject.toml"
@@ -82,6 +86,9 @@ jobs:
 
       - name: Install docs dependencies
         run: python -m pip install --upgrade pip ".[docs]"
+
+      - name: Audit 2084 witness registry
+        run: python scripts/verify_2084_evidence.py
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
