@@ -126,6 +126,8 @@ The fictional mysteries and their technical source notes have separate reading p
 
 <p><a href="DNA_BIBLE_REVELATION_13_18_LUCIFER/"><strong>𓂀 Revelation 13:18 // L.U.C.I.F.E.R.™ // Read the new D.N.A. Bible™ glyph scroll ↗</strong></a></p>
 
+<p><a href="DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/"><strong>🕸 𓂀 THE SEVEN-LETTER LEDGER // L.U.C.I.F.E.R.™ // ENTER THE NET // SOURCED STORY ↗</strong></a></p>
+
 ## ♃ Featured Stories // The Living Archive
 
 <p class="cmb-reading-key">Literary works and code-poetry are presented as authored creative material, not empirical predictions. Select a cover to begin reading.</p>
