@@ -46,6 +46,10 @@ The Feed knows Jupiter's habits. It does not know his reasons. When a stranger's
 
 **[Enter the Net: Ten Biblical Witnesses and the Architecture of Digital Authority](../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md)** is a sourced sequel to the L.U.C.I.F.E.R.™ companion. It separates independently documented technology and privacy concerns from scriptural allegory and invented 2084 events.
 
+## The Seven Gates Pyramid // complete code-poetry artifact
+
+**[𒄆 The Pyramid Is Watching: DEATH NOTE 2084 Seven Gates](../DEATH_NOTE_2084_SEVEN_GATES_PYRAMID.md)** collects the original seven-letter glyph transmission and all four reading gates in a single accessible page. This is an illustrated textual companion to the five-transmission story, not a new numbered episode.
+
 ## Side roads
 
 **[The Phantom Tokenbooth](../fables/PHANTOM_TOKENBOOTH.md)** sends Milo-8 down the road between machines that answer and machines that act.
