@@ -70,6 +70,17 @@ STORAGE != BIOLOGICAL_FUNCTION
 
 A safe research specification can cover byte encoding, error correction, nucleotide representation, checksums, and decoding without performing biological modification.
 
+## Deterministic literary reader inventory
+
+The D.N.A. Bible™ reader has a **separate, unsigned** source-inventory export that does not alter the canonical corpus receipts. Run:
+
+```sh
+python scripts/verify_archive_experience.py
+python scripts/export_reader_archive.py --output /tmp/dna-reader-manifest.json
+```
+
+The export lists stable source paths, raw byte lengths and SHA-256 digests. Identical inputs generate identical output. This is a reproducibility aid, not a trusted timestamp or signature. Before release, independently compare an exported copy, secure a signed tag, and test recovery from an offline copy. Follow the [archive release checklist](ARCHIVE_RELEASE_CHECKLIST.md).
+
 ## Recovery rule
 
 Always prefer independently verifiable copies over a single-platform assumption.
