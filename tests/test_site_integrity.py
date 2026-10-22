@@ -74,8 +74,35 @@ def published_site(tmp_path: Path) -> Path:
 
 def test_complete_bundle_and_correct_sibling_navigation(published_site: Path) -> None:
     pages, links = check_site(published_site)
-    assert pages == 4
+    assert pages == 7
     assert links > 0
+
+
+def test_dna_bible_public_pages_are_required(published_site: Path) -> None:
+    """Three named D.N.A. Bible pages must exist in every Pages build."""
+    paths = (
+        "DNA_BIBLE_WEB_OVER_ALL_NATIONS/index.html",
+        "DNA_BIBLE_TRADEMARK/index.html",
+        "DNA_BIBLE_PYRAMID_WARNING_2084/index.html",
+    )
+    for path in paths:
+        assert path in REQUIRED_PUBLIC_PATHS
+        assert (published_site / path).is_file()
+
+    (published_site / paths[0]).unlink()
+    with pytest.raises(ValueError, match="DNA_BIBLE_WEB_OVER_ALL_NATIONS"):
+        check_site(published_site)
+
+
+def test_dna_bible_main_nav_lists_public_pages() -> None:
+    """Don't silently strand an important chapter outside the main menu."""
+    config = (Path(__file__).resolve().parents[1] / "mkdocs.yml").read_text(encoding="utf-8")
+    for path in (
+        "DNA_BIBLE_WEB_OVER_ALL_NATIONS.md",
+        "DNA_BIBLE_TRADEMARK.md",
+        "DNA_BIBLE_PYRAMID_WARNING_2084.md",
+    ):
+        assert f": {path}" in config
 
 
 def test_archive_card_resolves_from_rendered_page_not_markdown_source(published_site: Path) -> None:
@@ -133,7 +160,7 @@ def test_knowledge_graph_context_namespace_is_not_a_public_target(published_site
         encoding="utf-8",
     )
     pages, links = check_site(published_site)
-    assert pages == 4
+    assert pages == 7
     assert links > 0
 
 def test_knowledge_graph_urls_must_be_published(published_site: Path) -> None:
