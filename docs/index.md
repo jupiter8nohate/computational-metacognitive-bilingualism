@@ -103,6 +103,19 @@
 </div>
 </section>
 
+<section class="cmb-archive-gate" aria-labelledby="cmb-archive-gate-title">
+<div class="cmb-archive-pyramid" aria-hidden="true"><span>𓂀</span></div>
+<p class="cmb-archive-kicker">♃ 𓁹 // THE LIVING ARCHIVE // THREE DOORS</p>
+<h2 id="cmb-archive-gate-title">CHOOSE THE HUMAN PATH</h2>
+<p>Every path preserves its own evidence boundary. Fiction may ask the question; human review must verify the answer.</p>
+<nav class="cmb-archive-doors" aria-label="Choose a CMB reading path">
+<a class="cmb-archive-door" href="ARCHIVE_READING_MAP/"><strong>𓂀 STORY // ENTER THE NET</strong><span>Read the D.N.A. Bible™ in canonical order, beginning with the Spider and the original five transmissions.</span><small>OPEN READER MAP ↗</small></a>
+<a class="cmb-archive-door" href="EVIDENCE_REVIEW_REGISTER/"><strong>𓁇𓁋 WITNESS // TRACE THE CLAIM</strong><span>Distinguish historical evidence, interpretation and speculative fiction using source-review records.</span><small>INSPECT THE EVIDENCE ↗</small></a>
+<a class="cmb-archive-door" href="DEVELOPERS/"><strong>⌘ CODE // TEST THE BOUNDARY</strong><span>Explore reproducible tools, schemas, provenance, Recovery and the principle of human authority.</span><small>EXPLORE THE CODE ↗</small></a>
+</nav>
+<p class="cmb-archive-equation">PATTERN ≠ PROOF · PROFILE ≠ PERSON · HUMAN_AGENCY &gt; MACHINE_AUTHORITY</p>
+</section>
+
 ## ♃ The D.N.A. Story Library
 
 **[𓁇𓁋 Book of Broken Signals](dna-codex/BROKEN_SIGNALS.md)**: a glyph legend, existential vignette and ten backtraceable literary patterns in the D.N.A. Bible universe.
