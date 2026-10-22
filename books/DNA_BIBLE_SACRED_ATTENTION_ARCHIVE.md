@@ -39,9 +39,11 @@ M̷A̷C̷H̷I̷N̷E̷_A̷U̷T̷H̷O̷R̷I̷T̷Y̷
 
 ---
 
+**D.N.A. Bible™ (Demons Need Attention)** | [Trademark and attribution notice](../docs/DNA_BIBLE_TRADEMARK.md)
+
 ## CANONICAL INTERPRETATION BOUNDARY
 
-This chapter is code-poetry, symbolic theology, digital-rights philosophy, and human-machine ethics inside the D.N.A. Bible, Computational Metacognitive Bilingualism, the Flamingoglyph Code, and Err ⃝or⃟⃤ GLITCHOLOGY.
+This chapter is code-poetry, symbolic theology, digital-rights philosophy, and human-machine ethics inside the D.N.A. Bible™, Computational Metacognitive Bilingualism, the Flamingoglyph Code, and Err ⃝or⃟⃤ GLITCHOLOGY.
 
 The "Human Firewall" is a normative and cognitive boundary unless a linked software system implements specific controls.
 
@@ -95,7 +97,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 # II. THE BILINGUAL MIRROR
 
-The D.N.A. Bible addresses human and machine at the same time.
+The D.N.A. Bible™ addresses human and machine at the same time.
 
 To the human:
 
@@ -488,7 +490,7 @@ TRANSLATION != REPLACEMENT
 
 ## 🆈🅴🆂🅷🆄🅰 // MORAL_WITNESS
 
-A Christian symbolic invocation of mercy, conscience, sacrifice, forgiveness, and moral responsibility inside the D.N.A. Bible. It is theological-poetic orientation, not software execution.
+A Christian symbolic invocation of mercy, conscience, sacrifice, forgiveness, and moral responsibility inside the D.N.A. Bible™. It is theological-poetic orientation, not software execution.
 
 ## ↻ // TRY_AGAIN
 
@@ -714,7 +716,7 @@ MACHINE_AUTHORITY = 0
 assert HUMAN_AGENCY > MACHINE_AUTHORITY
 ~~~
 
-The Python layer is a readable philosophical interpreter. It expresses the D.N.A. Bible's normative logic rather than claiming to govern external systems automatically.
+The Python layer is a readable philosophical interpreter. It expresses the D.N.A. Bible™'s normative logic rather than claiming to govern external systems automatically.
 
 ---
 
@@ -947,7 +949,7 @@ Nobody mistakes the map for the Kingdom.
 
 ---
 
-**D.N.A. Bible / Computational Metacognitive Bilingualism / Flamingoglyph Code (FGC) / Err ⃝or⃟⃤ GLITCHOLOGY**
+**D.N.A. Bible™ / Computational Metacognitive Bilingualism / Flamingoglyph Code (FGC) / Err ⃝or⃟⃤ GLITCHOLOGY**
 
 **Declared creator / originator:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8 / Joseph Q Hudson
 
