@@ -166,7 +166,7 @@ Every request left a record. The ledger was useful when a citizen needed an audi
 
 A shared identifier followed citizens through unrelated services. The House called it unity. Mara called it a concentration of consequences.
 
-**[Independent evidence: UN Office of the High Commissioner for Human Rights, *Right to Privacy in the Digital Age* (2025)](https://digitallibrary.un.org/record/4088727)** recognizes digital privacy as an ongoing rights concern. It does not describe the fictional House.
+**[Independent evidence: UN High Commissioner for Human Rights, *The Right to Privacy in the Digital Age* (2022, report A/HRC/51/17)](https://searchlibrary.ohchr.org/record/32083)** recognizes digital privacy as an ongoing rights concern. It does not describe the fictional House.
 
 ### C // COMPLIANCE
 
@@ -489,7 +489,7 @@ The following links establish the **existence of the passages, reports, legal re
 | [European Commission, DSA user protections (2025)](https://commission.europa.eu/news-and-media/news/digital-services-act-keeping-us-safe-online-2025-09-22_en) | Real protections against manipulative designs and some profiling-based recommendation practices | A globally applicable right to every digital service |
 | [European Commission, DSA rules for very large platforms](https://digital-strategy.ec.europa.eu/en/policies/dsa-vlops) | Risk audits, transparency obligations, and non-profiling recommender options for covered providers | That every site has those exact obligations |
 | [NIST AI Risk Management Framework (2023)](https://www.nist.gov/itl/ai-risk-management-framework) | Voluntary governance/risk-management principles | Proof that any specific AI is safe or harmful |
-| [UN Human Rights Office, Right to Privacy in the Digital Age (2025)](https://digitallibrary.un.org/record/4088727) | International human-rights attention to digital privacy | Proof of the fictional Ministry's events |
+| [UN Human Rights Office, Right to Privacy in the Digital Age (2022, A/HRC/51/17)](https://searchlibrary.ohchr.org/record/32083) | International human-rights attention to digital privacy | Proof of the fictional Ministry's events |
 
 ### C. A contested interpretation, not a settled historical classification
 
