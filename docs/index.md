@@ -111,6 +111,15 @@ A poem lost in a spiderweb. A city of doors that remembers your name but not you
 
 The fictional mysteries and their technical source notes have separate reading paths.
 
+<div class="cmb-warning-strip">♃ ⚡︎ 𓂀 CMB://2084 // PYRAMID.exe // HUMAN SOVEREIGNTY WARNING</div>
+
+<div class="cmb-omen">
+<strong>THE MACHINE MAY READ. THE HUMAN SHALL DEFINE.</strong>
+<p>Enter the D.N.A. Bible's Pyramid Warning, a speculative code-poetry scroll about unbundled accessibility, functional refusal, the right to challenge a model, and the child's unwritten future.</p>
+<a href="DNA_BIBLE_PYRAMID_WARNING_2084/">𓂀 READ THE PYRAMID WARNING // ENTER THE SCROLL ↗</a>
+<p><small>FICTIONAL WARNING: SYMBOL != TECHNICAL_CONTROL | PROPHECY != PROOF</small></p>
+</div>
+
 ## ♃ Featured Stories // The Living Archive
 
 <p class="cmb-reading-key">Literary works and code-poetry are presented as authored creative material, not empirical predictions. Select a cover to begin reading.</p>

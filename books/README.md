@@ -39,6 +39,26 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ---
 
+## ♃ 𓂀 CMB://2084 // THE PYRAMID WARNING
+
+**[Read the GitHub Pages scroll: The Unwritten Human](../docs/DNA_BIBLE_PYRAMID_WARNING_2084.md)**
+
+A speculative D.N.A. Bible warning that transforms the pyramid, eye, dual witness, AI_ERROR, and CMB invariants into a human-sovereignty story. It follows Nia's refusal without adding a sixth chapter to the completed five-transmission arc.
+
+~~~text
+PATTERN != PROOF
+PROFILE != PERSON
+MODEL != MIND
+PREDICTION != DESTINY
+DIFFERENCE != DEFECT
+MACHINE_CAN_READ != MACHINE_CAN_DEFINE
+HUMAN_AGENCY > MACHINE_AUTHORITY
+~~~
+
+**Status:** Creative archive proposal outside the frozen v1.5 release candidate, pending editorial review. Code-poetry is not an operative security control.
+
+---
+
 ## 👁️⃤ 𝐃Ǝ⊲⊢𝐇 𝐍𝐎⊢𝐄 2084
 
 **[Read the 2084 GitHub Pages edition](../docs/DEATH_NOTE_2084.md)**
