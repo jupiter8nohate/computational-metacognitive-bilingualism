@@ -74,16 +74,18 @@ def published_site(tmp_path: Path) -> Path:
 
 def test_complete_bundle_and_correct_sibling_navigation(published_site: Path) -> None:
     pages, links = check_site(published_site)
-    assert pages == 7
+    assert pages == 3 + sum(name.endswith("/index.html") for name in REQUIRED_PUBLIC_PATHS)
     assert links > 0
 
 
 def test_dna_bible_public_pages_are_required(published_site: Path) -> None:
-    """Three named D.N.A. Bible pages must exist in every Pages build."""
+    """The named D.N.A. Bible and witness pages must exist in every Pages build."""
     paths = (
         "DNA_BIBLE_WEB_OVER_ALL_NATIONS/index.html",
         "DNA_BIBLE_TRADEMARK/index.html",
         "DNA_BIBLE_PYRAMID_WARNING_2084/index.html",
+        "DEATH_NOTE_2084_EVIDENCE_LEDGER/index.html",
+        "WITNESS_BACKTRACE_PROTOCOL/index.html",
     )
     for path in paths:
         assert path in REQUIRED_PUBLIC_PATHS
@@ -101,6 +103,8 @@ def test_dna_bible_main_nav_lists_public_pages() -> None:
         "DNA_BIBLE_WEB_OVER_ALL_NATIONS.md",
         "DNA_BIBLE_TRADEMARK.md",
         "DNA_BIBLE_PYRAMID_WARNING_2084.md",
+        "DEATH_NOTE_2084_EVIDENCE_LEDGER.md",
+        "WITNESS_BACKTRACE_PROTOCOL.md",
     ):
         assert f": {path}" in config
 
@@ -160,7 +164,7 @@ def test_knowledge_graph_context_namespace_is_not_a_public_target(published_site
         encoding="utf-8",
     )
     pages, links = check_site(published_site)
-    assert pages == 7
+    assert pages == 3 + sum(name.endswith("/index.html") for name in REQUIRED_PUBLIC_PATHS)
     assert links > 0
 
 def test_knowledge_graph_urls_must_be_published(published_site: Path) -> None:
