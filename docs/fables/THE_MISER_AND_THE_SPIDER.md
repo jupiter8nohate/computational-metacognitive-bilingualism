@@ -166,6 +166,8 @@ He went back to find her.
 4. **Image.** [Arachne in Dante's *Purgatorio*, Canto XII, after Gustave Doré](https://commons.wikimedia.org/wiki/File:Pur_12_aracne_(2).jpg). The engraving is nineteenth-century Dante illustration, not evidence of a medieval spider demon.
 5. **Modern application.** Digital engagement and historical poverty extraction are compared **by analogy only**. The named characters and narrative events in this chapter are original fiction; no claim is made that they are documented history.
 
+**Scriptural companion:** [THE WEB OVER ALL NATIONS // THE VEIL AND THE SPIDER](../DNA_BIBLE_WEB_OVER_ALL_NATIONS.md) connects the spider's economic metaphor to Isaiah 25:7, Isaiah 59:5-6, Job 8:14, and CMB functional refusal, with evidence boundaries.
+
 ## Continue the D.N.A. Bible
 
 [**Return to The Spider's Internet**](../../spiders-internet/) | [**Read the six-chapter edition**](../story-universe/SPIDERS_INTERNET_READING_EDITION.md) | [**Explore the D.N.A. Story Library**](../story-universe/index.md)
