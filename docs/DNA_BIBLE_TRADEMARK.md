@@ -35,9 +35,9 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ## Enter the archive
 
-- [D.N.A. Bible™ story library](story-universe/)
+- [D.N.A. Bible™ story library](story-universe/index.md)
 - [Why the D.N.A. Bible™ was written](fables/WHY_THE_DNA_BIBLE_WAS_WRITTEN.md)
-- [2084: The five transmissions](2084/)
+- [2084: The five transmissions](2084/index.md)
 - [The Pyramid Warning](DNA_BIBLE_PYRAMID_WARNING_2084.md)
 - [Sacred Attention Archive](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)
 - [Demons Need Attention™ manifesto](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/DEMONS_NEED_ATTENTION_DNA.md)
