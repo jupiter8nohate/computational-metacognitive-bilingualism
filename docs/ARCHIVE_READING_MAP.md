@@ -9,7 +9,7 @@
 
 | Door | Readers begin with | Continue to |
 | --- | --- | --- |
-| **STORY** | [The Spider's Internet](spiders-internet/index.md) | [D.N.A. Story Library](story-universe/index.md) |
+| **STORY** | [The Spider's Internet](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/spiders-internet/) | [D.N.A. Story Library](story-universe/index.md) |
 | **WITNESS** | [The Evidence Ledger](DEATH_NOTE_2084_EVIDENCE_LEDGER.md) | [WITNESS://BACKTRACE](WITNESS_BACKTRACE_PROTOCOL.md) |
 | **CODE** | [What is CMB?](concepts/what-is-cmb.md) | [Developer guide](DEVELOPERS.md) |
 
