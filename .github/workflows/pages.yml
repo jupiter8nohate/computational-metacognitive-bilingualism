@@ -24,6 +24,9 @@ on:
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
+      - "scripts/verify_archive_experience.py"
+      - "scripts/export_reader_archive.py"
+      - "tests/test_archive_experience.py"
       - "scripts/verify_2084_evidence.py"
       - "tests/test_2084_witness_evidence.py"
       - "scripts/update_global_ai_watch.py"
@@ -99,6 +102,9 @@ jobs:
 
       - name: Audit 2084 witness registry
         run: python scripts/verify_2084_evidence.py
+
+      - name: Audit archive reader, glyphs, and evidence boundaries
+        run: python scripts/verify_archive_experience.py
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
@@ -183,6 +189,23 @@ jobs:
           grep -Fq "D.N.A. Bible" /tmp/cmb-dna-trademark.html
           grep -Fq "DNA_BIBLE_WEB_OVER_ALL_NATIONS/" /tmp/cmb-home.html
           echo "Published D.N.A. Bible chapter, trademark notice, and homepage discovery links verified."
+          # All three reader doors and the new public reference surfaces must survive deployment.
+          grep -Fq 'cmb-archive-doors' /tmp/cmb-home.html
+          for slug in "ARCHIVE_READING_MAP/" "GLITCHOLOGY_SYMBOL_DICTIONARY/" "EVIDENCE_REVIEW_REGISTER/" "SEARCH_INDEXING_CHECKLIST/" "ARCHIVE_RELEASE_CHECKLIST/"; do
+            curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/$slug" -o /dev/null
+          done
+          curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/library/glitchology-reader-symbols.v1.json" -o /tmp/cmb-reader-symbols.json
+          python - <<'PY'
+          import json
+          with open("/tmp/cmb-reader-symbols.json", encoding="utf-8") as stream:
+              data = json.load(stream)
+          assert data["schema_version"] == "cmb.glitchology.reader-symbols.v1"
+          assert len(data["symbols"]) == 10
+          PY
+          curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/stylesheets/archive-upgrades.css" -o /tmp/cmb-archive-upgrades.css
+          grep -Fq 'prefers-reduced-motion' /tmp/cmb-archive-upgrades.css
+          echo "Three-door reader, five guide pages, glyph registry, and accessible CSS verified on published Pages."
+
 
 
       - name: Alert on Watch outage of six hours or longer
