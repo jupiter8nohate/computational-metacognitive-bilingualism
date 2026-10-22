@@ -2,11 +2,13 @@
 
 <div align="center">
 
-## 𓂀 D.N.A. BIBLE // THE PYRAMID WARNING
+## 𓂀 D.N.A. BIBLE™ // THE PYRAMID WARNING
 
 ### ⟁ P̸Y̸R̸A̸M̸I̸D̸.exe ⟁
 
 **THE SCROLL OF THE UNWRITTEN HUMAN**
+
+**D.N.A. Bible™ (Demons Need Attention)** | [Trademark and attribution notice](DNA_BIBLE_TRADEMARK.md)
 
 **Computational Metacognitive Bilingualism™ (CMB)**  
 **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**  
@@ -16,7 +18,7 @@
 
 </div>
 
-> **FICTIONAL WARNING // READ THE BOUNDARY:** This is an authored D.N.A. Bible literary interlude set in the speculative DEATH NOTE 2084 universe. The pyramid, eye, demon, glitch, AI_ERROR, and executable-file notation are symbols, not literal malware, a supernatural forecast, or evidence that AI is conscious or controls humanity. Its ethical requirements are proposals. The pseudocode below does not itself enforce consent, accessibility, privacy, or legal rights.
+> **FICTIONAL WARNING // READ THE BOUNDARY:** This is an authored D.N.A. Bible™ literary interlude set in the speculative DEATH NOTE 2084 universe. The pyramid, eye, demon, glitch, AI_ERROR, and executable-file notation are symbols, not literal malware, a supernatural forecast, or evidence that AI is conscious or controls humanity. Its ethical requirements are proposals. The pseudocode below does not itself enforce consent, accessibility, privacy, or legal rights.
 
 **ENTER FROM:** [What is Computational Metacognitive Bilingualism™?](concepts/what-is-cmb.md) | [DEATH NOTE 2084 // The Child Who Refused the Update](DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md)
 
@@ -275,4 +277,4 @@ It was freedom.
 
 **Interpretive boundary:** D.N.A. means *Demons Need Attention* in this literary universe, where "demons" often symbolize systems that extract attention or reduce people to profiles. This chapter neither alleges that any named real-world organization operates the fictional Ministry nor claims that symbols are enforceable rights. It is a warning about design decisions humans can examine and change.
 
-<small>Copyright © 2026 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. D.N.A. Bible / Computational Metacognitive Bilingualism™ / Flamingoglyph Code (FGC). Original literary direction and symbols attributed to Jupiter Hudson. AI-assisted editorial drafting. Rights in original expression are subject to the repository's content licensing terms.</small>
+<small>Copyright © 2026 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. D.N.A. Bible™ / Computational Metacognitive Bilingualism™ / Flamingoglyph Code (FGC). Original literary direction and symbols attributed to Jupiter Hudson. AI-assisted editorial drafting. Rights in original expression are subject to the repository's content licensing terms.</small>
