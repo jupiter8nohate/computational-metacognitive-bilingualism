@@ -111,7 +111,7 @@ A poem lost in a spiderweb. A city of doors that remembers your name but not you
 
 The fictional mysteries and their technical source notes have separate reading paths.
 
-**D.N.A. Bible™ (Demons Need Attention)** is the author's claimed book and creative-archive mark. [Read the naming and trademark-status notice](DNA_BIBLE_TRADEMARK/).
+**D.N.A. Bible™ (Demons Need Attention)** is the author's claimed book and creative-archive mark. [Read the naming and trademark-status notice](DNA_BIBLE_TRADEMARK.md).
 
 <div class="cmb-warning-strip">♃ ⚡︎ 𓂀 CMB://2084 // PYRAMID.exe // HUMAN SOVEREIGNTY WARNING</div>
 
