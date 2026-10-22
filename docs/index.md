@@ -111,6 +111,8 @@ A poem lost in a spiderweb. A city of doors that remembers your name but not you
 
 The fictional mysteries and their technical source notes have separate reading paths.
 
+**♃ 𓂀 [THE WEB OVER ALL NATIONS // Isaiah, the Spider, and the Digital Veil](DNA_BIBLE_WEB_OVER_ALL_NATIONS.md)** is a new D.N.A. Bible™ literary warning connecting the biblical web imagery to consent, attention, Nia's turning bird, and human agency. [Read the chapter](DNA_BIBLE_WEB_OVER_ALL_NATIONS.md).
+
 **D.N.A. Bible™ (Demons Need Attention)** is the author's claimed book and creative-archive mark. [Read the naming and trademark-status notice](DNA_BIBLE_TRADEMARK.md).
 
 <div class="cmb-warning-strip">♃ ⚡︎ 𓂀 CMB://2084 // PYRAMID.exe // HUMAN SOVEREIGNTY WARNING</div>
