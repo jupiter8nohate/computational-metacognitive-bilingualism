@@ -20,6 +20,8 @@
 
 ---
 
+**[Open the human Evidence Review Register](EVIDENCE_REVIEW_REGISTER.md)** for source-by-source review fields, correction history and pending external-validation boundaries. A source link or green CI check is not a substitute for this review.
+
 ## 01 // THE QUESTION BEFORE THE VERDICT
 
 In the fictional lighthouse, Nia had one possession the machine could not convert into an automatic sentence: the right to ask where a claim came from.
