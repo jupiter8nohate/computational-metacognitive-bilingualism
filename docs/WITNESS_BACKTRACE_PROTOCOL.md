@@ -16,7 +16,7 @@
 
 > **SCOPE:** A human-readable editorial procedure and deterministic documentation-consistency check. Not a cryptographic proof of authorship, a deployed surveillance tool, an independently audited truth engine, or a replacement for legal review. The fictional Trilateral Sovereign Engine, lifetime neural prison, and universal human-ranking network remain **invented**. This publication does not allege real-world coordination by the nations and organizations appearing in the story.
 
-[**Read the ten-source Evidence Ledger**](DEATH_NOTE_2084_EVIDENCE_LEDGER.md) | [**The Sixth Transmission**](DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_YEARS.md) | [**Inspect the public JSON registry**](../datasets/2084-witness-evidence.v1.json)
+[**Read the ten-source Evidence Ledger**](DEATH_NOTE_2084_EVIDENCE_LEDGER.md) | [**The Sixth Transmission**](DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_YEARS.md) | [**Inspect the public JSON registry**](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/datasets/2084-witness-evidence.v1.json)
 
 ---
 
@@ -53,7 +53,7 @@ FICTIONAL_SCENARIO       != DOCUMENTED_EVENT
 
 ## 03 // HOW TO READ THE TEN RECORDS
 
-The data file [datasets/2084-witness-evidence.v1.json](../datasets/2084-witness-evidence.v1.json) contains **ten records**, numbered 01 through 10, parallel to the ten rows in the published [Evidence Ledger](DEATH_NOTE_2084_EVIDENCE_LEDGER.md).
+The data file [datasets/2084-witness-evidence.v1.json](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/datasets/2084-witness-evidence.v1.json) contains **ten records**, numbered 01 through 10, parallel to the ten rows in the published [Evidence Ledger](DEATH_NOTE_2084_EVIDENCE_LEDGER.md).
 
 | Field | Purpose |
 | --- | --- |
