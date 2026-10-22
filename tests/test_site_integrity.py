@@ -86,6 +86,8 @@ def test_dna_bible_public_pages_are_required(published_site: Path) -> None:
         "DNA_BIBLE_PYRAMID_WARNING_2084/index.html",
         "DEATH_NOTE_2084_EVIDENCE_LEDGER/index.html",
         "WITNESS_BACKTRACE_PROTOCOL/index.html",
+        "DEATH_NOTE_2084_POST_GROUND_BASELINE/index.html",
+        "DEATH_NOTE_2084_WITNESS_IN_LIGHTHOUSE/index.html", 
     )
     for path in paths:
         assert path in REQUIRED_PUBLIC_PATHS
@@ -105,6 +107,8 @@ def test_dna_bible_main_nav_lists_public_pages() -> None:
         "DNA_BIBLE_PYRAMID_WARNING_2084.md",
         "DEATH_NOTE_2084_EVIDENCE_LEDGER.md",
         "WITNESS_BACKTRACE_PROTOCOL.md",
+        "DEATH_NOTE_2084_POST_GROUND_BASELINE.md",
+        "DEATH_NOTE_2084_WITNESS_IN_LIGHTHOUSE.md",
     ):
         assert f": {path}" in config
 
