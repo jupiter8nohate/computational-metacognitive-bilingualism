@@ -54,7 +54,7 @@ def test_reader_navigation_and_glyph_visuals() -> None:
     codex = (ROOT / "docs/dna-codex/index.md").read_text(encoding="utf-8")
     stylesheet = (ROOT / "docs/stylesheets/dna-codex.css").read_text(encoding="utf-8")
     assert "dna-codex/BROKEN_SIGNALS.md" in mkdocs
-    assert 'href="BROKEN_SIGNALS.md"' in codex
+    assert 'href="BROKEN_SIGNALS/"' in codex
     assert ".dna-signal-grid" in stylesheet
     assert "prefers-reduced-motion" in stylesheet
     assert "aria-label" in PAGE.read_text(encoding="utf-8")
