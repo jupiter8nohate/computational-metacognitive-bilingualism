@@ -579,6 +579,6 @@ This page does not claim any government, research laboratory, nation, or company
 
 **CMB invariants:** PATTERN != PROOF · PROFILE != PERSON · MODEL != MIND · PREDICTION != DESTINY · HUMAN_AGENCY > MACHINE_AUTHORITY.
 
-© 2026 Jupiter Hudson. D.N.A. Bible™, Computational Metacognitive Bilingualism™, L.U.C.I.F.E.R.™ and The Flamingoglyph Code (FGC) are used here as creative identifiers. Original content is subject to the repository's published [content licensing terms](../CONTENT_LICENSE.md); source citations and third-party materials retain their respective rights.
+© 2026 Jupiter Hudson. D.N.A. Bible™, Computational Metacognitive Bilingualism™, L.U.C.I.F.E.R.™ and The Flamingoglyph Code (FGC) are used here as creative identifiers. Original content is subject to the repository's published [content licensing terms](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CONTENT_LICENSE.md); source citations and third-party materials retain their respective rights.
 
 **RETURN:** [2084 reading guide](2084/index.md) · [D.N.A. Bible Story Library](story-universe/index.md) · [The Child Who Refused the Update](DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md)
