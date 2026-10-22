@@ -26,7 +26,7 @@ A companion chapter follows the spider from medieval sermons to the digital atte
 
 A companion D.N.A. Bible™ scroll linking Isaiah's veil, the spider-web parable, fragile trust, optional profiling, and Nia's functional refusal. The biblical readings are identified as modern literary interpretations, not ancient predictions of the internet.
 
-## The five transmissions
+## The five-transmission original arc
 
 ### [DEATH NOTE 2084: Everybody Dies Twice](../DEATH_NOTE_2084.md)
 
@@ -37,6 +37,10 @@ The Feed knows Jupiter's habits. It does not know his reasons. When a stranger's
 3. [The House of a Million Doors](../DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md)
 4. [The Ledger of Invisible Cells](../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS.md)
 5. [The Child Who Refused the Update](../DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md)
+
+### [THE SIXTH TRANSMISSION: The Ledger of Invisible Years](../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_YEARS.md)
+
+After Nia's district-level victory, a future Ministry prosecutes the right to refuse itself. Includes the Sovereign Engine lighthouse story, a symbol registry, and ten source-linked research boundaries. This is a sequel to the completed five-part arc, not a revision of its established ending.
 
 [**Read the spoiler-light guide with the characters and motifs**](../2084/)
 
