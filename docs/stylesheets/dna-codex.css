@@ -1,0 +1,38 @@
+/* Scoped D.N.A. Bible edition. Does not modify the global CMB color scheme. */
+.dna-codex{--dna-ink:#f9eed6;--dna-gold:#ffcf61;--dna-crimson:#eb4436;--dna-panel:#1a100c;--dna-border:#926033;max-width:72rem;color:var(--dna-ink)}
+.dna-codex a{color:var(--dna-gold);text-decoration:underline;text-underline-offset:.2em}
+.dna-kicker{font-size:.82rem;letter-spacing:.13em;color:#ffd78b}
+.dna-portal{position:relative;margin:1.6rem 0 2rem;padding:clamp(1.4rem,5vw,3.4rem);border:1px solid var(--dna-border);border-radius:1.1rem;background:radial-gradient(circle at 82% 22%,#78301a,#1b0d0b 55%,#100b0a);box-shadow:0 24px 50px #0007}
+.dna-portal:before{content:"𓂀";float:right;margin-left:1rem;font-size:clamp(4rem,12vw,8rem);color:#ffce60aa;line-height:1.2}
+.rst-content .dna-portal h2{font-size:clamp(2rem,5vw,3.7rem);line-height:1.15;color:#fff0bd}
+.dna-mark{display:block;font-size:.75em;letter-spacing:.25em;color:#ffd25c}
+.dna-stamp,.dna-equation{font-family:ui-monospace,monospace;letter-spacing:.05em;color:#ffcf69}
+.dna-copyright{font-size:.86rem;color:#e0ceb7}
+.dna-jump{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 2rem}
+.rst-content .dna-jump a{display:inline-block;min-height:44px;padding:.65rem .9rem;border:1px solid #976137;border-radius:.4rem;background:#25140d;text-decoration:none;font-weight:700}
+.dna-codex section:not(.dna-portal){margin:1.5rem 0 3rem}
+.rst-content .dna-codex h2{margin-top:1.3rem;padding-top:1rem;border-top:1px solid #6f4228;line-height:1.3}
+.dna-mode-switch,.dna-filters,.dna-gates,.dna-decisions{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}
+.dna-codex button{min-height:44px;padding:.7rem .9rem;border:1px solid #b77835;border-radius:.5rem;background:#29150e;color:#fff2da;cursor:pointer;font:700 .84rem/1.3 ui-monospace,monospace}
+.dna-codex button:hover,.dna-codex button[aria-pressed=true]{border-color:#ffe19c;background:#8b261b;color:#fff}
+.dna-codex :is(button,a,summary):focus-visible{outline:3px solid #ffd45e;outline-offset:3px}
+.dna-scene{margin:1.4rem 0;padding:1.4rem 1.6rem;border-left:5px solid var(--dna-crimson);background:linear-gradient(120deg,#26140f,#130e0b);font:1.08rem/1.8 Georgia,serif}
+.dna-scene p{margin:0 0 1.1rem}
+.dna-witness,.dna-trial{border:1px solid #9a702e;border-radius:.6rem;padding:1.15rem;background:#23170f}
+.dna-witness[hidden]{display:none}
+.dna-library-list{padding-left:1.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:.85rem}
+.dna-library-list li{padding:1rem;border:1px solid #71482b;background:var(--dna-panel);border-radius:.5rem}
+.dna-library-list p{margin:.5rem 0 0;color:#e5d6c4;line-height:1.55}
+.dna-type{display:inline-block;margin-left:.5rem;color:#eec28b;font:700 .67rem/1.4 ui-monospace,monospace;letter-spacing:.06em}
+.dna-trial{min-height:12rem;border-left:4px solid var(--dna-crimson)}
+.dna-trial #dna-gate-outcome{font-weight:700;color:#ffdc8b}
+.dna-atlas-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:.75rem;padding:0;list-style:none}
+.dna-atlas-list li{margin:0;padding:.9rem;background:#25170e;border:1px solid #835c35;border-radius:.55rem;overflow-wrap:anywhere}
+.dna-atlas-list small{display:block;color:#ebbc80;text-transform:uppercase;letter-spacing:.07em}
+.dna-glyphs{display:grid;gap:.65rem}
+.dna-glyphs details{background:#271610;border:1px solid #8d6037;border-radius:.55rem;padding:1rem}
+.dna-glyphs summary{cursor:pointer;font-weight:750;color:#ffe0a0}
+.dna-footer{border-top:2px solid #b7772b;margin:3rem 0 0;padding:1.2rem;color:#e9d6bd}
+.dna-footer p:first-child{font-weight:800;letter-spacing:.06em;color:#ffce69}
+@media(max-width:640px){.dna-portal:before{font-size:3rem}.dna-scene{padding:1rem}.dna-jump a{flex:1 1 auto;text-align:center}.dna-library-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.dna-codex *, .dna-codex *:before, .dna-codex *:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}

@@ -35,6 +35,8 @@ nav:
       - Privacy & analytics: PRIVACY_AND_ANALYTICS.md
       - CMB-EDU Kids: CMB_EDU_KIDS.md
   - The D.N.A. Bible™:
+      - The Anomaly Codex / Interactive Edition: dna-codex/index.md
+      - Codex Editorial and Recovery Protocol: dna-codex/EDITORIAL_PROTOCOL.md
       - D.N.A. Bible™ / Trademark & Attribution: DNA_BIBLE_TRADEMARK.md
       - D.N.A. Bible™ / Web Over All Nations: DNA_BIBLE_WEB_OVER_ALL_NATIONS.md
       - D.N.A. Bible™ / Pyramid Warning: DNA_BIBLE_PYRAMID_WARNING_2084.md
@@ -135,9 +137,11 @@ extra_css:
   - stylesheets/watch-dashboard.css
   - stylesheets/cmb-epistemic-radar.css
   - stylesheets/cmb-red-gold.css
+  - stylesheets/dna-codex.css
 
 extra_javascript:
   - javascripts/cmb-analytics-config.js
   - javascripts/cmb-analytics.js
   - javascripts/watch-dashboard.js
   - javascripts/cmb-signature.js
+  - javascripts/dna-codex.js

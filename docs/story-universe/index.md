@@ -8,6 +8,8 @@ None of them knew who he was.
 
 **D.N.A. Bible™ (Demons Need Attention)** is the authored title of this archive. [Naming and trademark notice](../DNA_BIBLE_TRADEMARK.md).
 
+[**𓂀 Enter the interactive Anomaly Codex**](../dna-codex/) | [Editorial and Recovery Protocol](../dna-codex/EDITORIAL_PROTOCOL.md)
+
 Welcome to Jupiter Hudson's D.N.A. literary universe: eerie speculative fiction, dark humor, code-poetry, and questions about the power humans surrender to their inventions. You do not need to know how to program to enter.
 
 ## The first thread
