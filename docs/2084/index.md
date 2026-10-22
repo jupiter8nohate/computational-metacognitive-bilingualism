@@ -47,6 +47,10 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 **[Revelation 13:18: The L.U.C.I.F.E.R.™ Ledger Behind the False Light](../DNA_BIBLE_REVELATION_13_18_LUCIFER.md)** follows Nia, Mara, and Jupiter after the fifth transmission. It introduces the fictional seven-letter ledger, the new glitch-glyph meanings, and a human-review escape from compulsory profiling. This is a **companion chapter**, not a sixth transmission, a report of real-world events, or a prophetic identification of modern technology.
 
+## The Seven-Letter Ledger // Enter the Net
+
+**[𓂀 Read The Seven-Letter Ledger: Ten Biblical Witnesses and the Architecture of Digital Authority](../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md)**. Nia, Jupiter, and Mara confront the fictional Spiritual Spider, digital tenancy, and the linked L.U.C.I.F.E.R.™ apparatus. Includes independently verifiable links to scripture, FTC reports, European digital-law materials, NIST guidance, and a UN privacy report. These sources substantiate contextual concerns, **not** the reality of the future story or a literal prophecy. This remains a companion chapter outside the original five-transmission sequence.
+
 ## The people inside the mystery
 
 **Jupiter** follows the evidence even when it undermines his conclusions. He jokes when frightened, and must learn that being right about a system does not make him right about every person.

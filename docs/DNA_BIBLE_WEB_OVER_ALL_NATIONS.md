@@ -16,6 +16,8 @@
 
 > **READING BOUNDARY:** This chapter is original speculative fiction and symbolic theological commentary in the D.N.A. Bible™. Isaiah did not historically write about the World Wide Web, fiber optics, EULAs, or AI. Its imagery of a veil, a web, and fragile trust is being deliberately reinterpreted through a modern technological lens. The fictional Ministry, surveillance grid, rankings, and encounters below are not allegations about named real organizations. Proposed rights and code-poetry are not automatically enforceable law or software security controls.
 
+**NEXT COMPANION:** [The Seven-Letter Ledger // ENTER THE NET](DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md) develops the Spiritual Spider and the fictional L.U.C.I.F.E.R.™ architecture with ten scriptural references and independent technology-policy sources.
+
 **Two routes:** [The Spider's Internet and the Miser](fables/THE_MISER_AND_THE_SPIDER.md) | [The Pyramid Warning](DNA_BIBLE_PYRAMID_WARNING_2084.md) | [Nia's refusal](DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md)
 
 ---

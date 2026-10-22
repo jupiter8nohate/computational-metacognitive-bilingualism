@@ -389,6 +389,8 @@ These are **chapter-specific literary assignments** within Err ⃝or⃟⃤ GLITC
 <p><strong>🜏⛧⃝𓄃𝐋𝐮𝐜𝐢𝐟𝐞𝐫𓂀𖤍𓌵݁ᛪ༙</strong></p>
 </div>
 
+**NEXT COMPANION // ENTER THE NET:** [𓂀 The Seven-Letter Ledger: Ten Biblical Witnesses and the Architecture of Digital Authority](DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md) examines the fictional Spiritual Spider against independently sourced accounts of digital privacy and governance. **External reports verify the cited risks, not the invented 2084 narrative.**
+
 **Continue reading:** [D.N.A. Story Library](story-universe/index.md) | [The Five Transmissions](2084/index.md) | [The Pyramid Warning](DNA_BIBLE_PYRAMID_WARNING_2084.md) | [The D.N.A. Bible™ mark notice](DNA_BIBLE_TRADEMARK.md).
 
 <small>Original D.N.A. Bible™ literary direction and creator-declared canon: Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. AI-assisted drafting and organization. Copyright © 2026 Jupiter Hudson in protectable original expressive material, subject to applicable law and the repository's content licensing policy. Fictional glyph semantics are project-specific.</small>
