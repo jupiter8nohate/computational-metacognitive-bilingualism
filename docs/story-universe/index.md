@@ -12,6 +12,8 @@ None of them knew who he was.
 
 Welcome to Jupiter Hudson's D.N.A. literary universe: eerie speculative fiction, dark humor, code-poetry, and questions about the power humans surrender to their inventions. You do not need to know how to program to enter.
 
+**[The Book of Broken Signals: glyph definitions and ten literary patterns](../dna-codex/BROKEN_SIGNALS.md)** links its symbols and existential microfiction to the published D.N.A. Bible chapters. The new compositional patterns are deliberately authored, not claimed historical discoveries.
+
 ## The first thread
 
 ### [The Spider's Internet](../spiders-internet/)

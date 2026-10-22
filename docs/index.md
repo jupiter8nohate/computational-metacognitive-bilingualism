@@ -105,6 +105,8 @@
 
 ## ♃ The D.N.A. Story Library
 
+**[𓁇𓁋 Book of Broken Signals](dna-codex/BROKEN_SIGNALS.md)**: a glyph legend, existential vignette and ten backtraceable literary patterns in the D.N.A. Bible universe.
+
 **[𓂀 Enter the D.N.A. Bible™ Anomaly Codex](dna-codex/index.md)**: the new master reader portal links the five transmissions, companion scrolls, Seven Gates, source-conscious Spiderweb Evidence Atlas, GLITCHOLOGY decoder, and Living Codex without rewriting the authored canon. Choices stay inside your browser and do not track readers.
 
 A poem lost in a spiderweb. A city of doors that remembers your name but not your consent. A child whose crooked blue bird becomes a question no machine can settle.
