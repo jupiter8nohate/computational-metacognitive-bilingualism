@@ -94,6 +94,24 @@ Jupiter frowned. "What does that mean?"
 
 **AUTHOR'S TERMINOLOGY:** *Techno-federalism* names this story's imagined distribution of authority across public agencies and privately controlled infrastructure. It is not an established claim that federal systems inherently entail digital surveillance. *Technofeudalism* is a **contested political-economic interpretation**, notably advanced by Yanis Varoufakis; it is not a proven scientific classification of every online platform. See [Varoufakis's own explanation (2024)](https://www.yanisvaroufakis.eu/2024/01/13/qa-on-technofeudalism-interviewed-by-lorenzo-tecleme-for-valori-it/).
 
+## 00 // THREE HISTORICAL NAMES, THREE DIFFERENT PURPOSES
+
+Before Nia entered the ledger chamber, Mara found two authenticated historical records bearing an identical-looking name.
+
+The first concerned an **astronomical instrument**, the LUCIFER near-infrared camera and spectrograph at the Large Binocular Telescope in Arizona. Its purpose was to observe astronomical objects. The second concerned **IBM's Lucifer cryptographic work**, developed under Horst Feistel, which helped lead to the Data Encryption Standard (DES) and protect information.
+
+"One gathers light," Mara said. "The other protects messages."
+
+"And ours?" asked Nia.
+
+"Our fictional L.U.C.I.F.E.R.™ describes a machine-shaped institution that overreaches its delegated authority. The shared name doesn't make the three connected."
+
+Jupiter turned the page.
+
+"Then do not make the name itself the indictment. Find the design, the decision, and the person responsible."
+
+**Independent historical sources:** [Max Planck Institute for Astronomy, *Making the Invisible Visible* (2010)](https://www.mpia.de/news/science/2010-04-lucifer); [IBM Research, *Cryptography*](https://research.ibm.com/topics/cryptography); [NIST, history of DES](https://csrc.nist.gov/nist-cyber-history/cryptography/chapter). These establish genuine prior uses of the word *Lucifer*, which **predate this fictional acronym**. They are **not evidence of affiliation or misconduct**.
+
 ## 01 // THE SPIDER'S FIRST CONTRACT
 
 The Ministry's terms arrived in forty-seven languages.
@@ -477,7 +495,17 @@ The following links establish the **existence of the passages, reports, legal re
 
 [**Yanis Varoufakis, "Q&A on Technofeudalism" (2024)**](https://www.yanisvaroufakis.eu/2024/01/13/qa-on-technofeudalism-interviewed-by-lorenzo-tecleme-for-valori-it/) states his theory that concentrated platform ownership and "cloud capital" constitute a new structure of economic power. Other analysts interpret these relations through platform capitalism and monopoly power rather than a post-capitalist feudal system. The D.N.A. Bible uses the terminology as an arguable lens, not a demonstrated universal fact.
 
-### D. Audit classification
+### D. Historical names unrelated to the fictional L.U.C.I.F.E.R.™
+
+| Name | Authentic historical use | Source |
+| --- | --- | --- |
+| LUCIFER astronomy instrument | Near-infrared camera/spectrograph for the Large Binocular Telescope | [Max Planck Institute for Astronomy (2010)](https://www.mpia.de/news/science/2010-04-lucifer) |
+| IBM Lucifer cryptography | Feistel-era encryption work connected to the development of DES | [IBM Research, Cryptography](https://research.ibm.com/topics/cryptography) and [NIST cryptography history](https://csrc.nist.gov/nist-cyber-history/cryptography/chapter) |
+| L.U.C.I.F.E.R.™ (D.N.A. Bible™) | Fictional Ledger, Universal, Compliance, Inference, Forecasting, Extraction, Ranking system | [Original creative chapter](DNA_BIBLE_REVELATION_13_18_LUCIFER.md) |
+
+Identical or similar names across unrelated products, historical periods, fictional settings, and religious texts do not imply a common origin, technological connection, motive, or conspiracy.
+
+### E. Audit classification
 
 ~~~text
 DOCUMENTED:
