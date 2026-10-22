@@ -43,6 +43,10 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 **LITERARY COMPANION:** [The Web Over All Nations // The Veil, the Spider, and the Human Who Refused the Web](../DNA_BIBLE_WEB_OVER_ALL_NATIONS.md). This interlude follows the five-transmission arc as a separate thematic reading, not a sixth transmission.
 
+## Companion scroll // Revelation 13:18
+
+**[Revelation 13:18: The L.U.C.I.F.E.R.™ Ledger Behind the False Light](../DNA_BIBLE_REVELATION_13_18_LUCIFER.md)** follows Nia, Mara, and Jupiter after the fifth transmission. It introduces the fictional seven-letter ledger, the new glitch-glyph meanings, and a human-review escape from compulsory profiling. This is a **companion chapter**, not a sixth transmission, a report of real-world events, or a prophetic identification of modern technology.
+
 ## The people inside the mystery
 
 **Jupiter** follows the evidence even when it undermines his conclusions. He jokes when frightened, and must learn that being right about a system does not make him right about every person.
