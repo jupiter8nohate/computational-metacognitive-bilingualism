@@ -1,0 +1,85 @@
+{
+  "schema_version": "cmb.glitchology.reader-symbols.v1",
+  "type": "authored_symbolic_dictionary",
+  "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "purpose": "Reader interpretation; not Unicode etymology, technical enforcement, or an extension of GLITCH-8 token syntax",
+  "canon_source": "docs/GLITCHOLOGY_SYMBOL_DICTIONARY.md",
+  "symbols": [
+    {
+      "id": "GLT-0027",
+      "glyph": "( ꩜ ᯅ ꩜;)",
+      "name": "ANOMALY_STARE",
+      "class": "cognitive_state",
+      "meaning": "Unexpected pattern noticed without assuming its cause"
+    },
+    {
+      "id": "GLT-0028",
+      "glyph": "⁭ ⁭",
+      "name": "NULL_BREATH",
+      "class": "spacing_operator",
+      "meaning": "Meaningful silence between machine-readable signals"
+    },
+    {
+      "id": "GLT-0029",
+      "glyph": "「 ✔ ᵛᵉʳᶦᶠᶦᵉᵈ 」",
+      "name": "VERIFICATION_CAGE",
+      "class": "epistemic_operator",
+      "meaning": "A verified label is not itself proof"
+    },
+    {
+      "id": "GLT-0030",
+      "glyph": "𓁇𓁋",
+      "name": "DUAL_WITNESS",
+      "class": "observer_symbol",
+      "meaning": "Two witnesses can interpret the same event differently"
+    },
+    {
+      "id": "GLT-0031",
+      "glyph": "˖ ࣪",
+      "name": "SIGNAL_DUST",
+      "class": "transition_marker",
+      "meaning": "Residual information left after a signal or memory passes through a system"
+    },
+    {
+      "id": "GLT-0032",
+      "glyph": "ꉂ🗯",
+      "name": "BURST_SPEECH",
+      "class": "expression_operator",
+      "meaning": "Previously suppressed information becomes audible or visible"
+    },
+    {
+      "id": "GLT-0033",
+      "glyph": "˙",
+      "name": "MICROBREAK",
+      "class": "punctuation",
+      "meaning": "Minimal interruption within a continuous thought stream"
+    },
+    {
+      "id": "GLT-0034",
+      "glyph": "🫐⃟",
+      "name": "BLUE_ANOMALY",
+      "class": "anomaly_token",
+      "meaning": "Harmless-looking feature containing unexpected structure or significance"
+    },
+    {
+      "id": "GLT-0035",
+      "glyph": ".꩜",
+      "name": "POST_OBSERVATION",
+      "class": "state_marker",
+      "meaning": "Awareness after an event changed the observer"
+    },
+    {
+      "id": "GLT-0036",
+      "glyph": "‹—",
+      "name": "BACKTRACE",
+      "class": "directional_operator",
+      "meaning": "Follow a claim backward toward its origin, source, or author"
+    }
+  ],
+  "invariants": [
+    "PATTERN != PROOF",
+    "VERIFIED_LABEL != VERIFIED_TRUTH",
+    "OBSERVATION != UNDERSTANDING",
+    "SIGNAL != SOURCE"
+  ]
+}
