@@ -14,6 +14,10 @@ Welcome to Jupiter Hudson's D.N.A. literary universe: eerie speculative fiction,
 
 **[The Book of Broken Signals: glyph definitions and ten literary patterns](../dna-codex/BROKEN_SIGNALS.md)** links its symbols and existential microfiction to the published D.N.A. Bible chapters. The new compositional patterns are deliberately authored, not claimed historical discoveries.
 
+**[𓂀 OPEN THE CANONICAL READER MAP](../ARCHIVE_READING_MAP.md)** for a nine-transmission chronology, reading routes, companion scrolls and evidence boundaries.
+
+**[𓁇𓁋 OPEN THE SYMBOL DICTIONARY](../GLITCHOLOGY_SYMBOL_DICTIONARY.md)** to decode authored glyph meanings without confusing symbol with historical translation.
+
 ## The first thread
 
 ### [The Spider's Internet](../spiders-internet/)

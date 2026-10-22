@@ -44,6 +44,18 @@
 
 ---
 
+## 𓂀 Living Archive Reader and Verification Gates
+
+- [Canonical reader map](docs/ARCHIVE_READING_MAP.md): original five transmissions, sequel VI-IX, and companion shelves.
+- [GLITCHOLOGY symbol dictionary](docs/GLITCHOLOGY_SYMBOL_DICTIONARY.md): ten authored meanings with [reader-oriented JSON](library/glitchology-reader-symbols.v1.json).
+- [WITNESS evidence review register](docs/EVIDENCE_REVIEW_REGISTER.md): transparent source-review and correction procedure.
+- [Archive release and Recovery checklist](docs/ARCHIVE_RELEASE_CHECKLIST.md): independent review, signature, DOI, and restoration gates.
+- [Discovery and indexing checklist](docs/SEARCH_INDEXING_CHECKLIST.md): publication versus verified search coverage.
+- **Source audit:** `python scripts/verify_archive_experience.py`.
+- **Unsigned deterministic story inventory:** `python scripts/export_reader_archive.py --output /tmp/dna-reader-manifest.json`.
+
+These are **stabilization and accessibility enhancements**, not evidence that unsigned material has passed independent review or that a DOI or indexing has been obtained.
+
 ## 🧊 v1.5 Stabilization Mode
 
 Feature growth is intentionally frozen from commit

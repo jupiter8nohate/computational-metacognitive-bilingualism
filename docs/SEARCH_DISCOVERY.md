@@ -2,6 +2,8 @@
 
 The repository publishes a public documentation origin designed for human readers, search crawlers, LLM retrieval systems, coding assistants, and software agents.
 
+**[Indexing and external verification checklist](SEARCH_INDEXING_CHECKLIST.md)** distinguishes published URLs and metadata from confirmed indexing or ranking.
+
 ## Public origin
 
 - Site: https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
