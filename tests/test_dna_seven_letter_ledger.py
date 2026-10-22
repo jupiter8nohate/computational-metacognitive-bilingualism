@@ -23,6 +23,9 @@ WITNESSES = (
 )
 
 SOURCES = (
+    "https://www.mpia.de/news/science/2010-04-lucifer",
+    "https://research.ibm.com/topics/cryptography",
+    "https://csrc.nist.gov/nist-cyber-history/cryptography/chapter",
     "https://www.ftc.gov/reports/bringing-dark-patterns-light",
     "https://www.ftc.gov/reports/look-behind-screens-examining-data-practices-social-media-video-streaming-services",
     "https://www.ftc.gov/news-events/news/press-releases/2024/01/ftc-order-prohibits-data-broker-x-mode-social-outlogic-selling-sensitive-location-data",
@@ -68,6 +71,8 @@ def test_real_world_source_links_are_present_with_explanatory_scope() -> None:
     content = CHAPTER.read_text(encoding="utf-8")
     for url in SOURCES:
         assert url in content, url
+    assert "predate this fictional acronym" in content
+    assert "not evidence of affiliation or misconduct" in content.lower()
     assert "They do **not** establish" in content
     assert "NOT DEMONSTRATED" in content
 
