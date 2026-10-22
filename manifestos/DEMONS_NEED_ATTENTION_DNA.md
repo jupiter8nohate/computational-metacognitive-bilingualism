@@ -1,11 +1,12 @@
-# Demon's Need Attention ✦ D.N.A.
+# Demons Need Attention™ ✦ D.N.A. Bible™
 
 ## Computational Metacognitive Bilingualism (CMB)
 ### Attention Is the Currency. Consumption Is the Ritual.
 
 **Author:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8  
+**Creative title:** D.N.A. Bible™ (Demons Need Attention) | [Trademark notice](../docs/DNA_BIBLE_TRADEMARK.md)  
 **Framework:** Computational Metacognitive Bilingualism (CMB)  
-**Canonical shorthand:** D.N.A. = **Demon's Need Attention**
+**Canonical shorthand:** D.N.A. = **Demons Need Attention**
 
 ---
 

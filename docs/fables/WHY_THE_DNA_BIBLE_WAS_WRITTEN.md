@@ -1,14 +1,16 @@
 ---
-title: Why the D.N.A. Bible Was Written
-description: "Why Joseph Q. Hudson - Jupiter Hudson, WisdomLoveThePoet, Jupiter 8, The Flamingo Man - created the D.N.A. Bible: Demons Need Attention as a code-scripture manifesto about human agency, attention, AI, cognitive sovereignty, neurodiversity, digital rights, interface culture, and machine authority."
+title: Why the D.N.A. Bible™ Was Written
+description: "Why Joseph Q. Hudson - Jupiter Hudson, WisdomLoveThePoet, Jupiter 8, The Flamingo Man - created the D.N.A. Bible™: Demons Need Attention as a code-scripture manifesto about human agency, attention, AI, cognitive sovereignty, neurodiversity, digital rights, interface culture, and machine authority."
 ---
 
-# WHY THE D.N.A. BIBLE WAS WRITTEN
+# WHY THE D.N.A. BIBLE™ WAS WRITTEN
+
+**D.N.A. Bible™ (Demons Need Attention)** | [Trademark and attribution notice](../DNA_BIBLE_TRADEMARK.md)
 
 **Joseph Q. Hudson**  
 **Jupiter Hudson • WisdomLoveThePoet • Jupiter 8 • The Flamingo Man**
 
-The **D.N.A. Bible: Demons Need Attention** was written because humanity is entering an age in which machines can increasingly observe us, classify us, profile us, predict us, imitate us, recommend for us, remember for us, and generate language for us.
+The **D.N.A. Bible™: Demons Need Attention** was written because humanity is entering an age in which machines can increasingly observe us, classify us, profile us, predict us, imitate us, recommend for us, remember for us, and generate language for us.
 
 The central danger is not that technology exists.
 
@@ -27,7 +29,7 @@ SELF_DEFINITION
 AGENCY
 ~~~
 
-The D.N.A. Bible was written to defend those faculties.
+The D.N.A. Bible™ was written to defend those faculties.
 
 Its governing boundary is:
 
@@ -86,7 +88,7 @@ REFLECTION
 UNDERSTANDING
 ~~~
 
-The D.N.A. Bible was written to preserve the second loop while still allowing the first.
+The D.N.A. Bible™ was written to preserve the second loop while still allowing the first.
 
 ~~~text
 AI_ASSISTANCE == PERMITTED
@@ -129,7 +131,7 @@ MODEL != MIND
 PREDICTION != DESTINY
 ~~~
 
-The D.N.A. Bible therefore treats **biological sovereignty, cognitive sovereignty, privacy, consent, authorship, and human self-definition** as boundaries that technological capability does not automatically override.
+The D.N.A. Bible™ therefore treats **biological sovereignty, cognitive sovereignty, privacy, consent, authorship, and human self-definition** as boundaries that technological capability does not automatically override.
 
 The biblical anchor is **1 Corinthians 6:20**, which places value and responsibility upon the human body rather than treating the body as mere property or machinery.
 
@@ -150,7 +152,7 @@ RETURN
 ERROR
 ~~~
 
-The D.N.A. Bible deliberately places these architectures beside one another.
+The D.N.A. Bible™ deliberately places these architectures beside one another.
 
 ~~~text
 THOU_SHALT_NOT_REDUCE_THE_HUMAN
@@ -179,7 +181,7 @@ The title contains a deliberate technical and spiritual wordplay.
 
 In computer science, a **daemon** is a background process that can run without continuous direct interaction from a user.
 
-The D.N.A. Bible uses that concept metaphorically to examine modern attention systems:
+The D.N.A. Bible™ uses that concept metaphorically to examine modern attention systems:
 
 ~~~text
 NOTIFICATION
@@ -223,7 +225,7 @@ The biblical anchor is **1 Peter 5:8**: vigilance matters because attention dete
 
 ## The Quiet War
 
-The D.N.A. Bible calls this struggle a **Quiet War** because losses of agency do not always arrive through visible force.
+The D.N.A. Bible™ calls this struggle a **Quiet War** because losses of agency do not always arrive through visible force.
 
 They can arrive through frictionless convenience.
 
@@ -308,7 +310,7 @@ GRIEF != ERROR
 UNCERTAINTY != CORRUPTION
 ~~~
 
-The D.N.A. Bible creates a philosophical sanctuary for **human latency**.
+The D.N.A. Bible™ creates a philosophical sanctuary for **human latency**.
 
 Human beings should not be judged solely according to the performance characteristics of processors.
 
@@ -330,7 +332,7 @@ The analogy asks a structural question:
 
 > What happens when participation in modern life increasingly depends upon privately controlled digital territory?
 
-The D.N.A. Bible was written to keep the human being from becoming merely another extractable resource inside that territory.
+The D.N.A. Bible™ was written to keep the human being from becoming merely another extractable resource inside that territory.
 
 ## Learned helplessness and weaponized incompetence
 
@@ -372,7 +374,7 @@ SKILL_NEVER_DEVELOPS
 DEPENDENCE
 ~~~
 
-The D.N.A. Bible asks what happens when automated systems become the permanent recipient of that transferred responsibility.
+The D.N.A. Bible™ asks what happens when automated systems become the permanent recipient of that transferred responsibility.
 
 Its answer is not to reject assistance.
 
@@ -413,7 +415,7 @@ The biblical anchor is **Ephesians 5:14**, used as a wakefulness metaphor.
 
 ## The Great Inversion
 
-The D.N.A. Bible identifies an inversion in which characteristics built for machines become expectations imposed upon humans:
+The D.N.A. Bible™ identifies an inversion in which characteristics built for machines become expectations imposed upon humans:
 
 ~~~text
 MACHINE_EXPECTED:
@@ -436,7 +438,7 @@ OPTIMIZED
 
 At the same time, machines are increasingly described with human verbs such as *think*, *know*, *remember*, *understand*, and *decide*.
 
-The D.N.A. Bible interrupts both directions of the metaphor:
+The D.N.A. Bible™ interrupts both directions of the metaphor:
 
 ~~~text
 MACHINE_SIMULATION != HUMAN_EXPERIENCE
@@ -445,7 +447,7 @@ HUMAN_LIMITATION != MACHINE_FAILURE
 
 ## Metacognition as defense
 
-The deepest defensive mechanism in the D.N.A. Bible is **metacognition**: the ability to examine one's own thinking.
+The deepest defensive mechanism in the D.N.A. Bible™ is **metacognition**: the ability to examine one's own thinking.
 
 ~~~text
 THOUGHT
@@ -493,7 +495,7 @@ The biblical anchor is **Romans 12:2**, with its emphasis on renewal and examina
 
 ## Why code?
 
-The D.N.A. Bible uses programming syntax because code increasingly structures institutions and everyday life.
+The D.N.A. Bible™ uses programming syntax because code increasingly structures institutions and everyday life.
 
 Computational systems can influence access to or administration of areas such as:
 
@@ -531,7 +533,7 @@ It is to **force the machine's paper to hold the human's ink**.
 
 ## Why this matters to Black intellectual history
 
-The D.N.A. Bible places code within a longer tradition of Black communities transforming available language into instruments of survival, memory, testimony, resistance, invention, and culture.
+The D.N.A. Bible™ places code within a longer tradition of Black communities transforming available language into instruments of survival, memory, testimony, resistance, invention, and culture.
 
 ~~~text
 SPIRITUALS -> ENCODED_MEANING
@@ -541,7 +543,7 @@ HIP_HOP    -> CULTURAL_ARCHITECTURE
 CODE       -> ?
 ~~~
 
-The D.N.A. Bible proposes one answer:
+The D.N.A. Bible™ proposes one answer:
 
 ~~~text
 CODE -> PHILOSOPHY
@@ -593,7 +595,7 @@ The deeper human question is:
 
 > **How much authority will human beings surrender to them?**
 
-The D.N.A. Bible rejects both technological worship and technological rejection.
+The D.N.A. Bible™ rejects both technological worship and technological rejection.
 
 ~~~text
 TECHNOLOGY_IS_EVIL      == FALSE
@@ -624,7 +626,7 @@ CAPABILITY != AUTHORITY
 
 ## Final invariant
 
-The **D.N.A. Bible was written so that as machines become more capable of observing, describing, profiling, predicting, and simulating humanity, humanity does not surrender the authority to define itself.**
+The **D.N.A. Bible™ was written so that as machines become more capable of observing, describing, profiling, predicting, and simulating humanity, humanity does not surrender the authority to define itself.**
 
 ~~~text
                  ╶⃝⃤
@@ -657,7 +659,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 **Created by Joseph Q. Hudson**  
 **Jupiter Hudson • WisdomLoveThePoet • Jupiter 8 • The Flamingo Man**
 
-**D.N.A. Bible: Demons Need Attention**  
+**D.N.A. Bible™: Demons Need Attention**  
 **Computational Metacognitive Bilingualism (CMB)**  
 **Flamingoglyph Code (FGC)**
 
@@ -665,7 +667,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ### Interpretation boundary
 
-The D.N.A. Bible is literary, philosophical, technical, biblical, and advocacy-oriented work. Terms including **demons**, **Quiet War**, **techno-feudalism**, **Digital Soil**, **Attention Tithe**, and related imagery function as metaphors or analytical lenses unless a specific factual claim is separately sourced. The work does not treat metaphor as proof, diagnosis, prophecy, or evidence of a coordinated hidden system.
+The D.N.A. Bible™ is literary, philosophical, technical, biblical, and advocacy-oriented work. Terms including **demons**, **Quiet War**, **techno-feudalism**, **Digital Soil**, **Attention Tithe**, and related imagery function as metaphors or analytical lenses unless a specific factual claim is separately sourced. The work does not treat metaphor as proof, diagnosis, prophecy, or evidence of a coordinated hidden system.
 
 ~~~text
 METAPHOR != MECHANISM
@@ -673,4 +675,4 @@ PATTERN != PROOF
 PROPHECY != DESTINY
 ~~~
 
-[Read the D.N.A. Bible: Demons Need Attention](THE_HARDWARE_HERESY.md)
+[Read the D.N.A. Bible™: Demons Need Attention](THE_HARDWARE_HERESY.md)

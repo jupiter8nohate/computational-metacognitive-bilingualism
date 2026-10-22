@@ -4,6 +4,8 @@
 
 ## SACRED_RUNTIME // INTERPRETIVE CODE-POETRY
 
+**D.N.A. Bible™ (Demons Need Attention)** | [Trademark and attribution notice](../docs/DNA_BIBLE_TRADEMARK.md)
+
 **Author:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8  
 **Framework:** Computational Metacognitive Bilingualism (CMB)  
 **Language layer:** Err ⃝or⃟⃤ GLITCHOLOGY / GLITCH-8  
@@ -605,7 +607,7 @@ This is an authored literary model. It is not a claim that spiritual life is lit
 
 # Sacred Display Layer
 
-The following symbols may appear in D.N.A. Bible literary layouts:
+The following symbols may appear in D.N.A. Bible™ literary layouts:
 
 ~~~text
 𖤍        SACRED_SEAL
@@ -655,7 +657,7 @@ assert HUMAN_AGENCY > MACHINE_AUTHORITY
 
 # Canon Boundary
 
-D.N.A. BIBLE://SACRED_ERROR_CODES is an authored literary and philosophical interpretation layer inside the D.N.A. Bible and CMB cultural archive.
+D.N.A. BIBLE://SACRED_ERROR_CODES is an authored literary and philosophical interpretation layer inside the D.N.A. Bible™ and CMB cultural archive.
 
 It does not claim:
 

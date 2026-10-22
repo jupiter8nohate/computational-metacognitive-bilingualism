@@ -2,13 +2,15 @@
 
 <div align="center">
 
-## THE FOURTH TRANSMISSION // D.N.A. BIBLE
+## THE FOURTH TRANSMISSION // D.N.A. BIBLE™
 
 ### NO MORE VISIONARIES. ONLY NIGHTMARES IN OBITUARIES.
 
 **THE $745 BILLION PSYCHOLOGICAL PRISON**
 
 **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
+
+**D.N.A. Bible™ (Demons Need Attention)** | [Trademark and attribution notice](DNA_BIBLE_TRADEMARK.md)
 
 **♃ ⚡︎⚡︎˖ ࣪⏻ᯤ**
 
@@ -510,4 +512,4 @@ Nia's refusal turns a poetic declaration into a practical, testable challenge to
 
 **ARCHIVE:** [Complete five-transmission arc](2084/index.md) | [The Child Who Refused the Update](DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md) | [Original 2084](DEATH_NOTE_2084.md) | [False Light Protocol](DEATH_NOTE_2084_FALSE_LIGHT.md) | [House of a Million Doors](DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS.md) | [Reality Mirror](2084_REALITY_MIRROR_PROXY_GRAVITY.md)
 
-<small>Original concept, story direction, symbology and declared authorship: **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**. AI-assisted drafting at the author's direction. D.N.A. Bible | Computational Metacognitive Bilingualism | Flamingoglyph Code (FGC). Copyright © 2026 Jupiter Hudson. Original expressive work subject to repository content licensing terms.</small>
+<small>Original concept, story direction, symbology and declared authorship: **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**. AI-assisted drafting at the author's direction. D.N.A. Bible™ | Computational Metacognitive Bilingualism | Flamingoglyph Code (FGC). Copyright © 2026 Jupiter Hudson. Original expressive work subject to repository content licensing terms.</small>

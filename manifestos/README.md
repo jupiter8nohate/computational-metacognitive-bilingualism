@@ -1,5 +1,7 @@
 # CMB Manifesto Library
 
+The **D.N.A. Bible™ (Demons Need Attention)** literary corpus uses creator-claimed ™ styling. [See naming and trademark-status notice](../docs/DNA_BIBLE_TRADEMARK.md).
+
 This directory is the human navigation layer for the CMB creative corpus.
 
 The files stay separate on purpose. A manifesto is allowed to have its own voice, metaphor, and artistic rules. This index supplies the map so readers do not have to discover that structure by accident.
@@ -12,7 +14,7 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 
 > **Phantom Tokenbooth boundary:** *The Phantom Tokenbooth* uses real and emerging AI terminology inside an educational fable. Its Robot Prophecy bridge is symbolic and conditional. `PROPHECY != PROOF` and `MODEL != WORLD`.
 
-> **Quiet Wars boundary:** *The Manifesto of Silent Weapons* mixes established AI concepts, active research directions, CMB terminology, speculative systems language, and D.N.A. Bible prophecy. Its claim-status legend keeps those layers explicit. `SIGNAL != THOUGHT`, `INFLUENCE != POSSESSION`, and `FABLE != EVIDENCE`.
+> **Quiet Wars boundary:** *The Manifesto of Silent Weapons* mixes established AI concepts, active research directions, CMB terminology, speculative systems language, and D.N.A. Bible™ prophecy. Its claim-status legend keeps those layers explicit. `SIGNAL != THOUGHT`, `INFLUENCE != POSSESSION`, and `FABLE != EVIDENCE`.
 
 ## Start with one path
 
@@ -20,12 +22,12 @@ The files stay separate on purpose. A manifesto is allowed to have its own voice
 |---|---|---|
 | New to CMB | [CMB // The Sovereign Transmission](CMB_SOVEREIGN_TRANSMISSION.md) | Fast artistic entry into the thesis and visual language |
 | Want agentic-AI literacy | [The Phantom Tokenbooth](../docs/fables/PHANTOM_TOKENBOOTH.md) | Five-act computational fable connecting agents, context, MCP, A2A, verification, world models, governance, AGI, ASI, and cognitive sovereignty |
-| Want Quiet Wars systems literacy | [The Manifesto of Silent Weapons](../docs/fables/QUIET_WARS_SILENT_WEAPONS.md) | D.N.A. Bible prophecy that separates established terms, active research, CMB terms, speculation, and fable while examining attention, authenticity, verification, compute, multimodal systems, and human authority |
+| Want Quiet Wars systems literacy | [The Manifesto of Silent Weapons](../docs/fables/QUIET_WARS_SILENT_WEAPONS.md) | D.N.A. Bible™ prophecy that separates established terms, active research, CMB terms, speculation, and fable while examining attention, authenticity, verification, compute, multimodal systems, and human authority |
 | Want the core philosophy | [../MANIFESTO.md](../MANIFESTO.md) | Foundational human-agency statement |
 | Want the motto and mission in code-poetry | [Reclaiming the Pen](RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) | Eight-language manifesto for authorship, meaning, consent, and cognitive sovereignty |
 | Want the machine/library model | [CMB // The Unclassifiable Index](CMB_UNCLASSIFIABLE_INDEX.md) | MissingNo/Pokédex-inspired model for context, uncertainty, and provenance |
 | Want epistemic triage / perfect-play logic | [HARMONI // Perfect-Play Epistemics](HARMONI_PERFECT_PLAY_EPISTEMICS.md) | Human/machine/axiom triangle, MissingNo Recovery gate, and evidence-bounded claims |
-| Want the HARMONI 666 gospel/runtime | [The Gospel of the HARMONI Disciple](HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md) | D.N.A. Bible code-poetry joining Scripture, cultural mirrors, attention allegory, the CMB travel translator, and a Go covenant runtime |
+| Want the HARMONI 666 gospel/runtime | [The Gospel of the HARMONI Disciple](HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md) | D.N.A. Bible™ code-poetry joining Scripture, cultural mirrors, attention allegory, the CMB travel translator, and a Go covenant runtime |
 | Want CMB-Z13 | [CMB-Z13 Language Specification](CMB_Z13_LANGUAGE_SPEC.md) | Formal symbolic mapping and interpretation boundary |
 | Want attention-economy critique | [Demon's Need Attention](DEMONS_NEED_ATTENTION_DNA.md) | Attention, engagement, profiling, and consent |
 | Want the featured haunting prophecy | [The Prophecy of the Question Mark // 2030](DNA_PROPHECY_QUESTION_MARK_2030.md) | Scroll 666: speculative AI authority, uncertainty, recursive attention, accountability, and human sovereignty |

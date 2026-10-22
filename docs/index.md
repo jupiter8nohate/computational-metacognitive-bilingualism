@@ -111,11 +111,13 @@ A poem lost in a spiderweb. A city of doors that remembers your name but not you
 
 The fictional mysteries and their technical source notes have separate reading paths.
 
+**D.N.A. Bible™ (Demons Need Attention)** is the author's claimed book and creative-archive mark. [Read the naming and trademark-status notice](DNA_BIBLE_TRADEMARK.md).
+
 <div class="cmb-warning-strip">♃ ⚡︎ 𓂀 CMB://2084 // PYRAMID.exe // HUMAN SOVEREIGNTY WARNING</div>
 
 <div class="cmb-omen">
 <strong>THE MACHINE MAY READ. THE HUMAN SHALL DEFINE.</strong>
-<p>Enter the D.N.A. Bible's Pyramid Warning, a speculative code-poetry scroll about unbundled accessibility, functional refusal, the right to challenge a model, and the child's unwritten future.</p>
+<p>Enter the D.N.A. Bible™'s Pyramid Warning, a speculative code-poetry scroll about unbundled accessibility, functional refusal, the right to challenge a model, and the child's unwritten future.</p>
 <a href="DNA_BIBLE_PYRAMID_WARNING_2084/">𓂀 READ THE PYRAMID WARNING // ENTER THE SCROLL ↗</a>
 <p><small>FICTIONAL WARNING: SYMBOL != TECHNICAL_CONTROL | PROPHECY != PROOF</small></p>
 </div>
@@ -138,8 +140,8 @@ The fictional mysteries and their technical source notes have separate reading p
 <div class="cmb-story-content"><strong>The Phantom Tokenbooth</strong><p>An agentic AI literacy fable following the passage from chatbot to autonomous tool use, with human consent as the boundary.</p><small>LONG-FORM FABLE // EXPLORE ↗</small></div>
 </a>
 <a class="cmb-story cmb-story--dna" href="https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md">
-<div class="cmb-story-art" aria-hidden="true"><span class="cmb-story-symbol">♃</span><span class="cmb-story-art-label">THE D.N.A. BIBLE</span></div>
-<div class="cmb-story-content"><strong>Demons Need Attention</strong><p>The literary archive of cognitive sovereignty, human testimony, and the attention economy.</p><small>ORIGINAL MANUSCRIPT ARCHIVE ↗</small></div>
+<div class="cmb-story-art" aria-hidden="true"><span class="cmb-story-symbol">♃</span><span class="cmb-story-art-label">THE D.N.A. BIBLE™</span></div>
+<div class="cmb-story-content"><strong>Demons Need Attention™</strong><p>The literary archive of cognitive sovereignty, human testimony, and the attention economy.</p><small>ORIGINAL MANUSCRIPT ARCHIVE ↗</small></div>
 </a>
 </div>
 

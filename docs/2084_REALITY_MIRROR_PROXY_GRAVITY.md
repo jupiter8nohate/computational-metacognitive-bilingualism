@@ -1,5 +1,7 @@
 # 2084 Reality Mirror: Proxy Gravity, AI Power, Surveillance Capitalism, and Human Agency
 
+**Creative archive:** [D.N.A. Bible™ (Demons Need Attention)](DNA_BIBLE_TRADEMARK.md), an authored literary title bearing the creator's claimed ™ designation.
+
 <div align="center">
 
 ## 👁️⃤ 𝐃Ǝ⊲⊢𝐇 𝐍𝐎⊢𝐄 2084 // TESTIMONIAL WARNING
@@ -67,7 +69,7 @@ Jupiter 8
 
 PUBLIC CMB OUTPUTS:
 Computational Metacognitive Bilingualism
-D.N.A. Bible
+D.N.A. Bible™
 Err ⃝or⃟⃤ GLITCHOLOGY
 2084
 ~~~
@@ -500,7 +502,7 @@ Eric Schmidt worked at the intersection of major technology institutions and nat
 
 Rana el Kaliouby helped build the modern field of affective computing.
 
-Jupiter Hudson placed the arguments into CMB, D.N.A. Bible code-poetry, Err ⃝or⃟⃤ GLITCHOLOGY, and 2084.
+Jupiter Hudson placed the arguments into CMB, D.N.A. Bible™ code-poetry, Err ⃝or⃟⃤ GLITCHOLOGY, and 2084.
 
 That does not make these people allies. It does not make them enemies. It does not prove shared intent.
 
