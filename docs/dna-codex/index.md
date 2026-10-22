@@ -111,7 +111,7 @@
 <details><summary>GLT-0036 · ‹— · BACKTRACE</summary><p>Follow a statement backward to its author, source, and supporting evidence.</p></details>
 </div>
 <p><strong>BOOK-LOCAL SIGNALS:</strong> <a href="BROKEN_SIGNALS/">𓁇𓁋 The Book of Broken Signals</a> defines the ten-part symbolic inscription, five mirrors and ten newly authored patterns. These literary definitions preserve existing GLITCH-8 token semantics.</p>
-<p><a href="../GLITCH8_REGISTRY/">Explore the complete GLITCH-8 registry →</a></p>
+<p><a href="../GLITCHOLOGY_SYMBOL_DICTIONARY/">Decode all ten GLT-0027 to GLT-0036 reader symbols →</a> · <a href="../GLITCH8_REGISTRY/">Explore the separate GLITCH-8 protocol registry →</a></p>
 </section>
 
 <section aria-labelledby="dna-errors-heading">
