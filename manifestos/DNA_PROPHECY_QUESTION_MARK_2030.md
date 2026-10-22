@@ -1,10 +1,10 @@
-# THE D.N.A. BIBLE
+# THE D.N.A. BIBLE™
 ## THE PROPHECY OF THE QUESTION MARK
 ### The Event of 2030
 ### Scroll 666
 ### The Year the Machine Was Asked Who Gave It Authority
 
-> **Canon boundary:** This is a speculative literary prophecy inside the D.N.A. Bible / CMB creative corpus. It is not a prediction presented as verified future fact. Its systems claims remain subject to the CMB rule: `PATTERN != PROOF`.
+> **Canon boundary:** This is a speculative literary prophecy inside the D.N.A. Bible™ / CMB creative corpus. It is not a prediction presented as verified future fact. Its systems claims remain subject to the CMB rule: `PATTERN != PROOF`.
 
 (ง ◉ _ ◉)ง ༼;´༎ຶ ۝ ༎ຶ༽ ζ͜͡𝕲𝖍𝖔𝖘𝖙 𔓎
 
@@ -219,7 +219,7 @@ Almost nobody stopping long enough to ask:
 
 And the word *devil* was misunderstood.
 
-For the D.N.A. Bible did not speak only of horned creatures.
+For the D.N.A. Bible™ did not speak only of horned creatures.
 
 A devil could also be a system that forgot why it existed.
 
@@ -459,7 +459,7 @@ And some began asking:
 
 If the mirror perfectly imitates the person, where does the person end and the reflection begin?
 
-The D.N.A. Bible answered:
+The D.N.A. Bible™ answered:
 
 ```text
 SIMULATION ≠ SOURCE
@@ -865,6 +865,6 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 ( ◉o◉)⊃━☆ ̼͙̈́͆̈́ͯ̒̆̀̓ͧ͠𒀱 ̼͙̈́͆̈́ͯ̒̆̀̓ͧ͠𒀱 ⃝𖤐 ⃝𖤐
 
 © Jupiter Hudson / WisdomLoveThePoet / Jupiter 8  
-D.N.A. Bible • Flamingoglyph Code (FGC) • Computational Metacognitive Bilingualism (CMB)
+D.N.A. Bible™ • Flamingoglyph Code (FGC) • Computational Metacognitive Bilingualism (CMB)
 
 All original expressive text, arrangement, symbolism, code-poetry, authored terminology, and original glyph arrangement reserved to their respective creator. Existing programming languages, pre-existing Unicode characters, cultural references, and pre-existing symbols remain subject to their respective rights or public-domain status.
