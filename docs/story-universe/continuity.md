@@ -10,7 +10,7 @@ Use concrete experiences before abstract conclusions. Keep humor human, not mech
 
 ## Editing rule for the Anomaly Codex
 
-The [Anomaly Codex](../dna-codex/) is a supplementary reader portal with a new, explicitly noncanonical threshold vignette. Its dual STORY/WITNESS mode lets readers distinguish the emotional narrative from external evidence. Editors should strengthen character motive, obstacles, choice, action, consequence, and sensory specificity before introducing more aphorisms or decorative glyphs. Preserve the five published transmissions as the canonical arc. New interactive decisions must remain fictional, local, and non-profiling.
+The [Anomaly Codex](../dna-codex/index.md) is a supplementary reader portal with a new, explicitly noncanonical threshold vignette. Its dual STORY/WITNESS mode lets readers distinguish the emotional narrative from external evidence. Editors should strengthen character motive, obstacles, choice, action, consequence, and sensory specificity before introducing more aphorisms or decorative glyphs. Preserve the five published transmissions as the canonical arc. New interactive decisions must remain fictional, local, and non-profiling.
 
 ## Character continuity
 
