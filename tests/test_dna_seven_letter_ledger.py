@@ -53,7 +53,7 @@ def test_chapter_title_and_story_boundary() -> None:
         "contested political-economic interpretation",
     ):
         assert excerpt.lower() in content.lower(), excerpt
-    assert len(re.findall(r"^#\\s", content, re.MULTILINE)) == 1  # only the first line is H1
+    assert len(re.findall(r"^#\s", content, re.MULTILINE)) == 1  # only the first line is H1
 
 
 def test_ten_verses_are_distinct_and_the_ezekiel_reference_is_corrected() -> None:
