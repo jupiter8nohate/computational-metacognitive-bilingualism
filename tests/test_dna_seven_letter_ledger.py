@@ -48,7 +48,7 @@ def test_chapter_title_and_story_boundary() -> None:
         "ENTER THE NET",
         "invented",
         "not a federally registered trademark",
-        "does not prove the fiction happened",
+        "do not prove the fiction happened",
         "Techno-federalism",
         "contested political-economic interpretation",
     ):
@@ -72,7 +72,7 @@ def test_real_world_source_links_are_present_with_explanatory_scope() -> None:
     for url in SOURCES:
         assert url in content, url
     assert "predate this fictional acronym" in content
-    assert "not evidence of affiliation or misconduct" in content.lower()
+    assert "not evidence of affiliation or misconduct" in content.lower().replace("**", "")
     assert "They do **not** establish" in content
     assert "NOT DEMONSTRATED" in content
 
