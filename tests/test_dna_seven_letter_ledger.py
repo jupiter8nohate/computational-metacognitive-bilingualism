@@ -33,7 +33,7 @@ SOURCES = (
     "https://commission.europa.eu/news-and-media/news/digital-services-act-keeping-us-safe-online-2025-09-22_en",
     "https://digital-strategy.ec.europa.eu/en/policies/dsa-vlops",
     "https://www.nist.gov/itl/ai-risk-management-framework",
-    "https://digitallibrary.un.org/record/4088727",
+    "https://searchlibrary.ohchr.org/record/32083",
     "https://www.yanisvaroufakis.eu/2024/01/13/qa-on-technofeudalism-interviewed-by-lorenzo-tecleme-for-valori-it/",
 )
 
