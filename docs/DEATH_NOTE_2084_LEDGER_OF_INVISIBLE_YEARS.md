@@ -116,7 +116,7 @@ The visor descended. It looked like an obsidian plate, not a screen.
 A forgotten scrap of code-poetry passed across Nia's vision.
 
 ~~~python
-# CMB://SOVEREIGNITY_WITNESS
+# CMB://SOVEREIGNTY_WITNESS
 # Literary pseudocode. It does not control a BCI.
 assert "PATTERN" != "PROOF"
 assert "PROFILE" != "PERSON"
