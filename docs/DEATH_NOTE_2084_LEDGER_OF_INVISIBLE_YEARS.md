@@ -493,6 +493,8 @@ She kept the drawing in her hand and asked the only question with which freedom 
 
 ---
 
+> **SEPARATE THE TWO EVIDENCE TRACKS:** This science dossier evaluates the fictional neural-prison technology. The companion [**2084 Evidence Ledger**](DEATH_NOTE_2084_EVIDENCE_LEDGER.md) evaluates ten documented *real-world governance mechanisms*, such as data brokers, algorithmic credit and hiring, proctoring, biometric identification, and software-dependency risks. Neither track proves the fictional Sovereign Engine exists.
+
 ## RESEARCH DOSSIER // TEN TECHNOLOGIES, TEN EVIDENCE BOUNDARIES
 
 **Research snapshot: October 22, 2026.** Each item separates a real published capability from the narrative extrapolation. Links lead to independent research papers, journals, university/industry research descriptions, government science information, or intergovernmental guidance. Some are clinical demonstrations, not general-purpose consumer technology. **None verifies the fictional prison.**
