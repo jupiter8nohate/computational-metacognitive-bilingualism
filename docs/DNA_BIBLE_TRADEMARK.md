@@ -33,6 +33,12 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - The mark claim does not itself establish registration, priority over other users, exclusive rights to ordinary words, or enforceability in any jurisdiction.
 - Trademarks, copyright in original expression, cryptographic provenance evidence, and legal protection are distinct concepts.
 
+## L.U.C.I.F.E.R.™ // claimed fictional-series designation
+
+Within the D.N.A. Bible™ story, **L.U.C.I.F.E.R.™** expands to **Ledger, Universal, Compliance, Inference, Forecasting, Extraction, Ranking**. The expression identifies a **fictional Ministry apparatus** in the [Revelation 13:18 companion chapter](DNA_BIBLE_REVELATION_13_18_LUCIFER.md). The author claims that stylized expansion as a project designation **within the creative canon**.
+
+This is **not** an assertion of trademark registration, exclusivity in the ordinary name "Lucifer," priority over earlier commercial users, control over the biblical text, or ownership of public-domain symbols. The ™ is a **claim**, not a registration. Trademark protectability and priority would require appropriate real-world assessment, including actual use and potential conflicting marks. The ® symbol must not be used without an applicable registration.
+
 ## Enter the archive
 
 - [D.N.A. Bible™ story library](story-universe/index.md)
