@@ -10,6 +10,7 @@ theme:
 nav:
   - Home: index.md
   - D.N.A. Story Library:
+      - Canonical Reader Map: ARCHIVE_READING_MAP.md
       - Start Reading: story-universe/index.md
       - Continuity and Editorial Guide: story-universe/continuity.md
   - CMB:
@@ -35,6 +36,8 @@ nav:
       - Privacy & analytics: PRIVACY_AND_ANALYTICS.md
       - CMB-EDU Kids: CMB_EDU_KIDS.md
   - The D.N.A. Bible™:
+      - GLITCHOLOGY Symbol Dictionary: GLITCHOLOGY_SYMBOL_DICTIONARY.md
+      - Evidence Review Register: EVIDENCE_REVIEW_REGISTER.md
       - The Anomaly Codex / Interactive Edition: dna-codex/index.md
       - The Book of Broken Signals / Glyph Liturgy: dna-codex/BROKEN_SIGNALS.md
       - Codex Editorial and Recovery Protocol: dna-codex/EDITORIAL_PROTOCOL.md
@@ -80,6 +83,8 @@ nav:
       - GLITCHOLOGY / Living Book Protocol: LIVING_BOOK_PROTOCOL.md
       - GLITCHOLOGY / GLITCH-3D runtime: GLITCH3D_RUNTIME.md
   - Research & Verification:
+      - Search Indexing Checklist: SEARCH_INDEXING_CHECKLIST.md
+      - Archive Release Checklist: ARCHIVE_RELEASE_CHECKLIST.md
       - WITNESS BACKTRACE - Source Audit: WITNESS_BACKTRACE_PROTOCOL.md
       - CMB Epistemic Radar: CMB_EPISTEMIC_RADAR.md
       - Global AI Watch: GLOBAL_AI_WATCH.md
@@ -134,6 +139,7 @@ nav:
       - Roadmap: ROADMAP.md
 
 extra_css:
+  - stylesheets/archive-upgrades.css
   - stylesheets/cmb.css
   - stylesheets/tokens.css
   - stylesheets/components.css
