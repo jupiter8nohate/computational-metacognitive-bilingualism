@@ -270,6 +270,8 @@ It was freedom.
 
 ---
 
+**PARALLEL WARNING:** [THE WEB OVER ALL NATIONS // THE VEIL AND THE SPIDER](DNA_BIBLE_WEB_OVER_ALL_NATIONS.md) explores the eye as both surveillance emblem and accountable witness without treating Isaiah as a literal internet forecast.
+
 ## TWO DOORS FOR THE READER
 
 - **Understand the principle:** [Computational Metacognitive Bilingualism™](concepts/what-is-cmb.md)

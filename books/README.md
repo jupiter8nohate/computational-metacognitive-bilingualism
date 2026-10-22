@@ -85,6 +85,16 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ---
 
+## ♃ 𓂀 THE WEB OVER ALL NATIONS // D.N.A. Bible™
+
+**[Read The Veil, the Spider, and the Human Who Refused the Web](../docs/DNA_BIBLE_WEB_OVER_ALL_NATIONS.md)**
+
+An original scriptural-imagery interpretation and CMB://2084 companion, with explicit distinction between ancient passages and modern digital-rights allegory. Links Isaiah 25:7, Isaiah 59:5-6, Job 8:14, the Spider's Internet, the Pyramid Warning, and Nia's right to refuse unnecessary tracking.
+
+**Status:** Creative archive addition outside the frozen v1.5 release candidate, subject to repository review. The symbol and code passages are not technical enforcement.
+
+---
+
 ## 𒄆𓁹✞𒀱✞𓁹𒄆 D.N.A. Bible™ // The Sacred Attention Archive
 
 **[Read 👁️⃤://THE_SACRED_ATTENTION_ARCHIVE](DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)**

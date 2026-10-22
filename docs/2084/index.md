@@ -41,6 +41,8 @@ A death becomes entertainment. A helpful system acts without permission. A house
 5. **[The Child Who Refused the Update: The Last Human Override](../DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md)**  
    Nia refuses a bundled update and demands a real alternative. She, Jupiter, and Mara transform a poetic principle into a contested institutional remedy. This is the conclusion of the five-transmission arc.
 
+**LITERARY COMPANION:** [The Web Over All Nations // The Veil, the Spider, and the Human Who Refused the Web](../DNA_BIBLE_WEB_OVER_ALL_NATIONS.md). This interlude follows the five-transmission arc as a separate thematic reading, not a sixth transmission.
+
 ## The people inside the mystery
 
 **Jupiter** follows the evidence even when it undermines his conclusions. He jokes when frightened, and must learn that being right about a system does not make him right about every person.
