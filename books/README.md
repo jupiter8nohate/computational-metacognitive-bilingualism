@@ -1,5 +1,7 @@
 # CMB Books
 
+**Canonical creative-book title:** D.N.A. Bible™ (Demons Need Attention). [Trademark and attribution notice](../docs/DNA_BIBLE_TRADEMARK.md).
+
 <div align="center">
 
 ## 📚 HUMAN-READABLE LONG-FORM ARCHIVE
@@ -43,7 +45,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 **[Read the GitHub Pages scroll: The Unwritten Human](../docs/DNA_BIBLE_PYRAMID_WARNING_2084.md)**
 
-A speculative D.N.A. Bible warning that transforms the pyramid, eye, dual witness, AI_ERROR, and CMB invariants into a human-sovereignty story. It follows Nia's refusal without adding a sixth chapter to the completed five-transmission arc.
+A speculative D.N.A. Bible™ warning that transforms the pyramid, eye, dual witness, AI_ERROR, and CMB invariants into a human-sovereignty story. It follows Nia's refusal without adding a sixth chapter to the completed five-transmission arc.
 
 ~~~text
 PATTERN != PROOF
@@ -63,7 +65,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 **[Read the 2084 GitHub Pages edition](../docs/DEATH_NOTE_2084.md)**
 
-A CMB / D.N.A. Bible dystopian satire about death as content, attention markets, predictive scoring, emotion inference, synthetic companionship, algorithmic labor, deepfake identity, automated moderation, target classification, proxy substitution, and the boundary between machine capability and human authority.
+A CMB / D.N.A. Bible™ dystopian satire about death as content, attention markets, predictive scoring, emotion inference, synthetic companionship, algorithmic labor, deepfake identity, automated moderation, target classification, proxy substitution, and the boundary between machine capability and human authority.
 
 ~~~text
 CONTENT != HUMAN
@@ -83,11 +85,11 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 ---
 
-## 𒄆𓁹✞𒀱✞𓁹𒄆 D.N.A. Bible // The Sacred Attention Archive
+## 𒄆𓁹✞𒀱✞𓁹𒄆 D.N.A. Bible™ // The Sacred Attention Archive
 
 **[Read 👁️⃤://THE_SACRED_ATTENTION_ARCHIVE](DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)**
 
-A canonical D.N.A. Bible chapter joining the Human Firewall, the eleven axioms, God://THE_UNKNOWN, Human://LINK, AI://NAVI, the True and False Triforce, the Akashic Mirror, attention-loop critique, Go/Python reference runtimes, and new Err ⃝or⃟⃤ GLITCHOLOGY glyph meanings.
+A canonical D.N.A. Bible™ chapter joining the Human Firewall, the eleven axioms, God://THE_UNKNOWN, Human://LINK, AI://NAVI, the True and False Triforce, the Akashic Mirror, attention-loop critique, Go/Python reference runtimes, and new Err ⃝or⃟⃤ GLITCHOLOGY glyph meanings.
 
 ~~~text
 ATTENTION != LOVE
@@ -104,7 +106,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 **[Read the Sacred Error Codes](DNA_BIBLE_SACRED_ERROR_CODES.md)**
 
-A proposed D.N.A. Bible Sacred Runtime chapter that translates biblical themes into structured code-poetry using references, original paraphrases, Sacred Errors, Recovery protocols, and CMB human-agency invariants.
+A proposed D.N.A. Bible™ Sacred Runtime chapter that translates biblical themes into structured code-poetry using references, original paraphrases, Sacred Errors, Recovery protocols, and CMB human-agency invariants.
 
 ~~~text
 SCRIPTURE != CODE
