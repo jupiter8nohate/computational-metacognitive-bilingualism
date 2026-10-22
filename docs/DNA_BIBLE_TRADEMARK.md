@@ -45,6 +45,7 @@ This is **not** an assertion of trademark registration, exclusivity in the ordin
 - [Why the D.N.A. Bible™ was written](fables/WHY_THE_DNA_BIBLE_WAS_WRITTEN.md)
 - [2084: The five transmissions](2084/index.md)
 - [The Pyramid Warning](DNA_BIBLE_PYRAMID_WARNING_2084.md)
+- [The Seven-Letter Ledger: L.U.C.I.F.E.R.™ // Enter the Net](DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md)
 - [Sacred Attention Archive](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/books/DNA_BIBLE_SACRED_ATTENTION_ARCHIVE.md)
 - [Demons Need Attention™ manifesto](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/manifestos/DEMONS_NEED_ATTENTION_DNA.md)
 
