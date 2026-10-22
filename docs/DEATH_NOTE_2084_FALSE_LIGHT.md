@@ -1,7 +1,7 @@
 # ♃ DEATH NOTE 2084 // THE FALSE LIGHT PROTOCOL
 
 <div align="center" style="padding:1.25rem 0 0.85rem;">
-  <p><strong>D.N.A. BIBLE // DEMONS NEED ATTENTION // THE SECOND TRANSMISSION</strong></p>
+  <p><strong>D.N.A. BIBLE™ // DEMONS NEED ATTENTION™ // THE SECOND TRANSMISSION</strong></p>
   <h2>THE MILLION UNSEEN SOLDIERS</h2>
   <p><em>An original dystopian warning story and poetic manifesto</em></p>
   <p><strong>Jupiter Hudson // WisdomLoveThePoet // Jupiter 8</strong></p>
@@ -587,4 +587,6 @@ OBSERVATION != UNDERSTANDING
 
 ---
 
-<small>Original story and concept: **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**. AI-assisted drafting and formatting under the author's direction. **Computational Metacognitive Bilingualism (CMB)** · **Flamingoglyph Code (FGC)** · **D.N.A. Bible**. Copyright © 2026 Jupiter Hudson. Original creative expression subject to this repository's content licensing terms. This publication does not claim exclusive rights over Biblical texts, common cybersecurity concepts, or existing software practices.</small>
+<small>Original story and concept: **Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
+
+**D.N.A. Bible™ (Demons Need Attention)** | [Trademark and attribution notice](DNA_BIBLE_TRADEMARK.md). AI-assisted drafting and formatting under the author's direction. **Computational Metacognitive Bilingualism (CMB)** · **Flamingoglyph Code (FGC)** · **D.N.A. Bible™**. Copyright © 2026 Jupiter Hudson. Original creative expression subject to this repository's content licensing terms. This publication does not claim exclusive rights over Biblical texts, common cybersecurity concepts, or existing software practices.</small>
