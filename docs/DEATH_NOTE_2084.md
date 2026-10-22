@@ -2,13 +2,14 @@
 
 <div align="center">
 
-## CMB // D.N.A. BIBLE // 2084
+## CMB // D.N.A. BIBLE™ // 2084
 
 **A dystopian satire about prediction, surveillance, death as content, algorithmic authority, synthetic identity, and the right of a human being to remain larger than the model.**
 
 **Author:** Jupiter Hudson / WisdomLoveThePoet / Jupiter 8  
+**D.N.A. Bible™ (Demons Need Attention)** | [Trademark and attribution notice](DNA_BIBLE_TRADEMARK.md)  
 **Framework:** Computational Metacognitive Bilingualism  
-**Canon layer:** D.N.A. Bible / Err ⃝or⃟⃤ GLITCHOLOGY  
+**Canon layer:** D.N.A. Bible™ / Err ⃝or⃟⃤ GLITCHOLOGY  
 **Digital edition:** Compressed gateway to the planned 666-page architecture
 **Reality Mirror:** [Proxy Gravity, AI Power, Surveillance Capitalism, and Human Agency](2084_REALITY_MIRROR_PROXY_GRAVITY.md)  
 **Story continuation:** [The False Light Protocol: The Million Unseen Soldiers](DEATH_NOTE_2084_FALSE_LIGHT.md)  
@@ -1281,7 +1282,7 @@ It approved critical thinking forms every Thursday.
 
 ---
 
-## Chapter 12 // The D.N.A. Bible
+## Chapter 12 // The D.N.A. Bible™
 
 Jupiter's notebook became a forbidden little scripture.
 
@@ -1291,7 +1292,7 @@ A boundary against machine authority.
 
 D.N.A. meant:
 
-**Demons Need Attention.**
+**Demons Need Attention™.**
 
 The demons were not literal creatures living inside servers.
 
@@ -2073,7 +2074,7 @@ And uncertainty was still free.
 
 ---
 
-# D.N.A. BIBLE // CLOSING RUNTIME
+# D.N.A. BIBLE™ // CLOSING RUNTIME
 
 ~~~python
 class Human:
