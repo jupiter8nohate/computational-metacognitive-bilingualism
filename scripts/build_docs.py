@@ -44,6 +44,7 @@ REQUIRED_PUBLIC_PATHS = (
     "WITNESS_BACKTRACE_PROTOCOL/index.html",
     "DEATH_NOTE_2084_POST_GROUND_BASELINE/index.html",
     "DEATH_NOTE_2084_WITNESS_IN_LIGHTHOUSE/index.html",
+    "DEATH_NOTE_2084_STATION_SEVEN/index.html",
     "datasets/2084-witness-evidence.v1.json",
     "robots.txt",
     "agents/agent-card.json",

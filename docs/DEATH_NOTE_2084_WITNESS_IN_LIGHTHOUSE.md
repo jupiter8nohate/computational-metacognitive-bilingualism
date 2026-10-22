@@ -586,4 +586,6 @@ The Seventh and Eighth Transmissions are extensions beyond the completed five-tr
 
 © 2026 Jupiter Hudson. D.N.A. Bible™, Computational Metacognitive Bilingualism™, and L.U.C.I.F.E.R.™ are creator-designated marks, not statements of verified trademark registration. Rights to original expression are subject to the repository's [content-license terms](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CONTENT_LICENSE.md).
 
+**CONTINUE:** [Ninth Transmission // Station Seven](DEATH_NOTE_2084_STATION_SEVEN.md).
+
 **BACKTRACE:** [Seventh Transmission](DEATH_NOTE_2084_POST_GROUND_BASELINE.md) · [2084 Reading Guide](2084/index.md) · [Story Library](story-universe/index.md) · [WITNESS://BACKTRACE Protocol](WITNESS_BACKTRACE_PROTOCOL.md).
