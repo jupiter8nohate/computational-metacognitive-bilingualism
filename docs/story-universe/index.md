@@ -44,6 +44,8 @@ The Feed knows Jupiter's habits. It does not know his reasons. When a stranger's
 
 After Nia's district-level victory, a future Ministry prosecutes the right to refuse itself. Includes the Sovereign Engine lighthouse story, a symbol registry, and ten source-linked research boundaries. This is a sequel to the completed five-part arc, not a revision of its established ending.
 
+[**𓁇𓁋 WITNESS://BACKTRACE: Inspect Sources and Challenge Claims**](../WITNESS_BACKTRACE_PROTOCOL.md) documents the public-source review discipline behind the ten-mechanism research companion.
+
 **[𓂀 THE EVIDENCE LEDGER: Ten Documented Mechanisms, Ten Boundaries](../DEATH_NOTE_2084_EVIDENCE_LEDGER.md)** is the public-source companion to the Sixth Transmission. It audits predictions, consent, identity, accessibility, and surveillance claims without confusing the fictional Ministry with real institutions.
 
 [**Read the spoiler-light guide with the characters and motifs**](../2084/)

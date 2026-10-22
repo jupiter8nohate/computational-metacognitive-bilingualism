@@ -1,0 +1,174 @@
+{
+  "schema_version": "cmb.2084-witness.v1",
+  "as_of": "2026-10-22",
+  "title": "WITNESS://BACKTRACE - 2084 evidence registry",
+  "story_is_fictional": true,
+  "scope_note": "This registry traces published public claims. It cannot verify the 2084 Sovereign Engine, a neural lifetime prison, or a universal civic ledger. Source links and the associated real-world claims require periodic human re-review.",
+  "entries": [
+    {
+      "id": "01",
+      "mechanism": "Behavioral tracking and data brokerage",
+      "evidence_status": "documented",
+      "supported_claim": "FTC reports and consent actions document substantial data collection and sensitive location-data sales.",
+      "limitation": "Zero-party data is volunteered; the evidence does not demonstrate universal monitoring of every action.",
+      "sources": [
+        {
+          "title": "FTC surveillance report",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-staff-report-finds-large-social-media-video-streaming-companies-have-engaged-vast-surveillance",
+          "source_type": "agency_report"
+        },
+        {
+          "title": "FTC Mobilewalla proceedings",
+          "url": "https://www.ftc.gov/legal-library/browse/cases-proceedings/202-3196-mobilewalla-inc-matter",
+          "source_type": "agency_case"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "mechanism": "Predictive credit and worker assessment",
+      "evidence_status": "documented",
+      "supported_claim": "CFPB explains existing algorithmic decision practices and applicable obligations.",
+      "limitation": "Not every model is a deep neural network, and an algorithm is not exempt from applicable adverse-action explanation rules.",
+      "sources": [
+        {
+          "title": "CFPB Circular 2022-03",
+          "url": "https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/",
+          "source_type": "agency_guidance"
+        },
+        {
+          "title": "CFPB Circular 2024-06",
+          "url": "https://www.consumerfinance.gov/compliance/circulars/consumer-financial-protection-circular-2024-06-background-dossiers-and-algorithmic-scores-for-hiring-promotion-and-other-employment-decisions/",
+          "source_type": "agency_guidance"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "mechanism": "Emotion inference and algorithmic hiring",
+      "evidence_status": "context_dependent",
+      "supported_claim": "Regulators recognize disability risks in algorithmic hiring; EU law prohibits specified emotion-recognition practices.",
+      "limitation": "This does not establish that all employers deploy valid micro-expression detectors.",
+      "sources": [
+        {
+          "title": "DOJ AI hiring guidance",
+          "url": "https://www.ada.gov/resources/ai-guidance/",
+          "source_type": "agency_guidance"
+        },
+        {
+          "title": "EU AI Act Article 5",
+          "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5",
+          "source_type": "legal_text"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "mechanism": "Workplace language monitoring",
+      "evidence_status": "context_dependent",
+      "supported_claim": "Documented communication-compliance tools can screen selected organizational messages.",
+      "limitation": "Product capabilities do not establish universal automated punishment for employee dissent.",
+      "sources": [
+        {
+          "title": "Microsoft Purview communication compliance",
+          "url": "https://learn.microsoft.com/en-us/purview/communication-compliance",
+          "source_type": "vendor_documentation"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "mechanism": "Identity authorization and SSO dependency",
+      "evidence_status": "context_dependent",
+      "supported_claim": "Delegated authorization protocols and centralized identity dependencies are real.",
+      "limitation": "OAuth 2.0 alone does not mandate behavioral surveillance or deny essential services.",
+      "sources": [
+        {
+          "title": "OAuth 2.0 RFC 6749",
+          "url": "https://www.rfc-editor.org/rfc/rfc6749",
+          "source_type": "technical_standard"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "mechanism": "Remote proctoring and accessibility",
+      "evidence_status": "documented",
+      "supported_claim": "Research and accommodations guidance support concerns about false flags and access barriers.",
+      "limitation": "A gaze alert is not proof of cheating; not all grading systems penalize neurodivergence.",
+      "sources": [
+        {
+          "title": "USENIX proctoring research",
+          "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/burgess",
+          "source_type": "research"
+        },
+        {
+          "title": "DOJ testing accommodations",
+          "url": "https://www.ada.gov/resources/testing-accommodations/",
+          "source_type": "agency_guidance"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "mechanism": "Consumer reporting and linked decisions",
+      "evidence_status": "documented",
+      "supported_claim": "Third-party employment dossiers and algorithmic scoring can fall under consumer-reporting law.",
+      "limitation": "No evidence of instantaneous legal access to every health, social, and payment record.",
+      "sources": [
+        {
+          "title": "CFPB Circular 2024-06",
+          "url": "https://www.consumerfinance.gov/compliance/circulars/consumer-financial-protection-circular-2024-06-background-dossiers-and-algorithmic-scores-for-hiring-promotion-and-other-employment-decisions/",
+          "source_type": "agency_guidance"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "mechanism": "Software-mediated repair restrictions",
+      "evidence_status": "documented",
+      "supported_claim": "FTC's specific Deere proceeding concerns software and repair access.",
+      "limitation": "This is not proof that all vendors arbitrarily remotely disable purchased devices.",
+      "sources": [
+        {
+          "title": "FTC Deere repair settlement announcement",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-states-secure-settlement-deere-company-advancing-farmers-right-repair",
+          "source_type": "agency_case"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "mechanism": "Face matching and false identifications",
+      "evidence_status": "documented",
+      "supported_claim": "NIST documented error-rate variation and FTC filed a facial-recognition enforcement case.",
+      "limitation": "No unified public-private civic-ranking index has been demonstrated by these sources.",
+      "sources": [
+        {
+          "title": "NIST facial recognition demographic study",
+          "url": "https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software",
+          "source_type": "agency_report"
+        },
+        {
+          "title": "FTC Rite Aid case",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without",
+          "source_type": "agency_case"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "mechanism": "Graph models for connected financial risk",
+      "evidence_status": "research",
+      "supported_claim": "Graph-based transaction analysis is demonstrated in published financial fraud research.",
+      "limitation": "Research does not prove political guilt-by-association or universal friend-based credit punishment.",
+      "sources": [
+        {
+          "title": "IBM FraudGT",
+          "url": "https://research.ibm.com/publications/fraudgt-a-simple-effective-and-efficient-graph-transformer-for-financial-fraud-detection",
+          "source_type": "research"
+        }
+      ]
+    }
+  ]
+}

@@ -18,6 +18,8 @@
 
 **Source-check snapshot:** October 22, 2026. **Method:** Prefer agency reports, regulatory text, published product documentation, university research, and peer-reviewed papers. An allegation in an agency complaint is identified as an allegation, not automatically as an adjudicated fact. Jurisdiction and specific use matter.
 
+**AUDITABLE CLAIM REGISTER:** [WITNESS://BACKTRACE source protocol](WITNESS_BACKTRACE_PROTOCOL.md) | [Public machine-readable evidence records](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/datasets/2084-witness-evidence.v1.json). This paired registry is a consistency map, not independent proof of a source's truth.
+
 **START HERE:** [The sixth transmission](DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_YEARS.md) | [Five-transmission reading guide](2084/index.md) | [The Seven-Letter Ledger](DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md) | [Author's trademark notice](DNA_BIBLE_TRADEMARK.md).
 
 ---
