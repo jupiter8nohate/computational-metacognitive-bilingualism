@@ -1,6 +1,6 @@
 # ♃ The Miser and the Spider: The Economics of Captivity
 
-*The D.N.A. Bible | Demons Need Attention | The Spider's Internet cycle*
+*The D.N.A. Bible™ | Demons Need Attention™ | The Spider's Internet cycle*
 
 **An original literary chapter by Jupiter Hudson / WisdomLoveThePoet / Jupiter 8**
 
@@ -168,7 +168,7 @@ He went back to find her.
 
 **Scriptural companion:** [THE WEB OVER ALL NATIONS // THE VEIL AND THE SPIDER](../DNA_BIBLE_WEB_OVER_ALL_NATIONS.md) connects the spider's economic metaphor to Isaiah 25:7, Isaiah 59:5-6, Job 8:14, and CMB functional refusal, with evidence boundaries.
 
-## Continue the D.N.A. Bible
+## Continue the D.N.A. Bible™
 
 [**Return to The Spider's Internet**](../../spiders-internet/) | [**Read the six-chapter edition**](../story-universe/SPIDERS_INTERNET_READING_EDITION.md) | [**Explore the D.N.A. Story Library**](../story-universe/index.md)
 
