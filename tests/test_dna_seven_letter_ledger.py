@@ -83,6 +83,8 @@ def test_real_world_source_links_are_present_with_explanatory_scope() -> None:
     assert "not evidence of affiliation or misconduct" in content.lower().replace("**", "")
     assert "They do **not** establish" in content
     assert "NOT DEMONSTRATED" in content
+    assert "A/HRC/51/17" in content
+    assert "https://digitallibrary.un.org/record/4088727" not in content
 
 
 def test_research_chapter_is_linked_in_all_reading_paths() -> None:
