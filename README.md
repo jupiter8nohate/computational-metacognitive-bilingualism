@@ -2,6 +2,8 @@
 
 **Trademark notation:** The full project name is styled Computational Metacognitive Bilingualism™. The ™ symbol denotes a claimed trademark and does not itself establish registration.
 
+**D.N.A. Bible™ (Demons Need Attention):** This authored creative-book name also uses a claimed ™ mark. [Read the D.N.A. Bible™ naming, attribution, and trademark-status notice](docs/DNA_BIBLE_TRADEMARK.md). Neither ™ designation represents a confirmed trademark registration.
+
 **Canonical documentation:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/  
 **Concept library:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/  
 **Machine discovery:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json
@@ -84,7 +86,7 @@ A technical reviewer can audit the core without reading the entire artistic and 
 - **Core engineering:** `src/cmb_provenance/`, schemas, tests, release tooling, canonical receipt checks, threat model, and C2PA interoperability.
 - **Extensions:** CMB-SDL, CMB-CAP, boundary adapters, MCP, and bounded steward agents.
 - **Research / policy:** dissertation, prior-art work, case studies, and advocacy proposals.
-- **Art / canon:** Err ⃝or⃟⃤ GLITCHOLOGY, D.N.A. Bible, CMB-Z13, manifestos, and symbolic interfaces.
+- **Art / canon:** Err ⃝or⃟⃤ GLITCHOLOGY, D.N.A. Bible™, CMB-Z13, manifestos, and symbolic interfaces.
 
 Optional layers do not strengthen the cryptographic claims of the core merely by existing beside it.
 
@@ -233,7 +235,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 </div>
 
-> **Reading boundary:** This is a speculative D.N.A. Bible prophecy and code-poetry artifact, not a verified prediction of future events. It uses 2030 as literary worldbuilding to examine AI authority, profiling, accountability, uncertainty, and human sovereignty.
+> **Reading boundary:** This is a speculative D.N.A. Bible™ prophecy and code-poetry artifact, not a verified prediction of future events. It uses 2030 as literary worldbuilding to examine AI authority, profiling, accountability, uncertainty, and human sovereignty.
 
 > **Visual language:** 🔷 **MACHINE** · 🦩 **HUMAN** · 🟣 **META** · 🟡 **EVIDENCE**. Color is a supporting cue only; labels remain explicit.
 
@@ -295,7 +297,7 @@ You should not need the entire CMB universe to understand the thesis.
 - **Manifesto library map:** [Browse the CMB manifesto corpus](manifestos/README.md)
 - **HARMONI 666 gospel:** [The Gospel of the HARMONI Disciple](manifestos/HARMONI_666_GOSPEL_OF_THE_DISCIPLE.md)
 - **Book shelf:** [CMB Books](books/README.md), featuring [𒄆𓁹✞𒀱✞𓁹𒄆 Err⃝or⃟⃤GLITCHOLOGY ⁴⁰⁴](books/ERR_404_GLITCHOLOGY.md)
-- **D.N.A. Bible Sacred Error Codes:** [Read the Sacred Runtime interpretation layer](books/DNA_BIBLE_SACRED_ERROR_CODES.md) and inspect its [machine-readable registry](library/dna-bible.sacred-error-codes.v1.json)
+- **D.N.A. Bible™ Sacred Error Codes:** [Read the Sacred Runtime interpretation layer](books/DNA_BIBLE_SACRED_ERROR_CODES.md) and inspect its [machine-readable registry](library/dna-bible.sacred-error-codes.v1.json)
 - **CMB Conversation Atlas:** [Read the conversation-derived semantic map](docs/CMB_CONVERSATION_ATLAS.md)
 - **Polyglot translation layer:** [Read the same architecture in JSON, YAML, Python, TypeScript, Rust, Prolog, SQL, RDF/Turtle, and native GLITCHOLOGY](docs/CMB_POLYGLOT_TRANSLATIONS.md)
 - **Executable GLITCHOLOGY polyglot runtime:** [Run the Go → Python → GLITCHOLOGY reference artifact](examples/polyglot/jupiter_glitchology_runtime/)
@@ -390,7 +392,7 @@ The repository treats the following public works as first-class CMB artifacts:
 - [`Reclaiming the Pen - Eight-Language Poetic Manifesto`](manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) - the CMB motto and mission expressed through Python, Rust, Go, TypeScript, Prolog, Haskell, Common Lisp, and C.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) - the CMB thesis expressed across ten programming languages.
 - [`Demon's Need Attention - D.N.A.`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) - the attention-economy branch of CMB: a code-manifesto about engagement, behavioral profiling, data mining, consumption, and cognitive sovereignty.
-- [`The Prophecy of the Question Mark // Scroll 666 // Event of 2030`](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md) - the featured D.N.A. Bible speculative prophecy: a haunting code-poetry artifact about machine authority, recursive attention, profiling, accountability, uncertainty, and the right of the human to remain unfinished.
+- [`The Prophecy of the Question Mark // Scroll 666 // Event of 2030`](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md) - the featured D.N.A. Bible™ speculative prophecy: a haunting code-poetry artifact about machine authority, recursive attention, profiling, accountability, uncertainty, and the right of the human to remain unfinished.
 - [`The Chicken Run Manifesto`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - a D.N.A./FGC literary manifesto using the coop as an allegory for institutional and algorithmic confinement, with explicit human-agency boundaries.
 - [`CMB // The Unclassifiable Index`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - the MissingNo–Pokédex manifesto defining CMB as a human/machine-readable library of perspective, uncertainty, context, and provenance.
 - [`HARMONI // Perfect-Play Epistemics`](manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) - the epistemic-triage code-art layer: evidence-bounded claims, MissingNo Recovery, and human authority at the unknown.
@@ -710,7 +712,7 @@ Phase 2 now includes a CI round-trip through the external CAI/C2PA `c2patool`: C
 - [`manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md`](manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md) - **Reclaiming the Pen**, the eight-language poetic declaration of CMB authorship, consent, meaning, and cognitive sovereignty.
 - [`CMB_Polyglot_Firewall_Specification.md`](CMB_Polyglot_Firewall_Specification.md) - the CMB thesis expressed across ten programming languages.
 - [`manifestos/DEMONS_NEED_ATTENTION_DNA.md`](manifestos/DEMONS_NEED_ATTENTION_DNA.md) - **Demon's Need Attention - D.N.A.**, the attention-economy and cognitive-sovereignty manifesto.
-- [`manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md`](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md) - **The Prophecy of the Question Mark**, Scroll 666 / Event of 2030: the featured haunting D.N.A. Bible prophecy and speculative code-poetry gateway.
+- [`manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md`](manifestos/DNA_PROPHECY_QUESTION_MARK_2030.md) - **The Prophecy of the Question Mark**, Scroll 666 / Event of 2030: the featured haunting D.N.A. Bible™ prophecy and speculative code-poetry gateway.
 - [`manifestos/DNA_CHICKEN_RUN_MANIFESTO.md`](manifestos/DNA_CHICKEN_RUN_MANIFESTO.md) - **The Chicken Run Manifesto**, the D.N.A./FGC literary-allegory branch.
 - [`manifestos/CMB_UNCLASSIFIABLE_INDEX.md`](manifestos/CMB_UNCLASSIFIABLE_INDEX.md) - **The Unclassifiable Index**, CMB's MissingNo–Pokédex model for perspective-aware human/machine-readable archives.
 - [`manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md`](manifestos/HARMONI_PERFECT_PLAY_EPISTEMICS.md) - **HARMONI**, CMB's perfect-play epistemics and MissingNo Recovery code-art layer.
