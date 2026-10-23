@@ -535,6 +535,8 @@ NOT DEMONSTRATED:
 
 **CMB source rule:** **PATTERN ≠ PROOF. PROFILE ≠ PERSON. SYMBOL ≠ ENFORCEMENT. LITERATURE ≠ INVESTIGATION.**
 
+**Complete glyph transmission:** [𒄆 DEATH NOTE 2084 // The Seven Gates Pyramid](DEATH_NOTE_2084_SEVEN_GATES_PYRAMID.md) collects the pyramid artwork, source links, seven-letter acronym, and human-agency refrain in one companion page.
+
 **Previous chapters:** [The Seven-Letter L.U.C.I.F.E.R.™ Inscription](DNA_BIBLE_REVELATION_13_18_LUCIFER.md) · [The Web Over All Nations](DNA_BIBLE_WEB_OVER_ALL_NATIONS.md) · [The Child Who Refused the Update](DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE.md) · [Story Library](story-universe/index.md).
 
 <small>Original creative direction, project universe, and creator-declared canon: Jupiter Hudson / WisdomLoveThePoet / Jupiter 8. AI-assisted literary composition, source selection, and editorial organization. Copyright © 2026 Jupiter Hudson in protectable original expression, subject to applicable law and the repository's content licensing terms. The KJV biblical passages and preexisting symbols are not claimed as new inventions. L.U.C.I.F.E.R.™ is a creator-claimed story designation, not a registered trademark.</small>

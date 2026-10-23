@@ -145,6 +145,8 @@ The fictional mysteries and their technical source notes have separate reading p
 
 <p><a href="DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/"><strong>🕸 𓂀 THE SEVEN-LETTER LEDGER // L.U.C.I.F.E.R.™ // ENTER THE NET // SOURCED STORY ↗</strong></a></p>
 
+<p><a href="DEATH_NOTE_2084_SEVEN_GATES_PYRAMID/"><strong>𒄆 𓂀 DEATH NOTE 2084 // THE SEVEN GATES PYRAMID // FULL GLYPH TRANSMISSION ↗</strong></a> · The original seven-letter pyramid code-poem, its four gates, and an accessible reading map.</p>
+
 ## ♃ Featured Stories // The Living Archive
 
 <p class="cmb-reading-key">Literary works and code-poetry are presented as authored creative material, not empirical predictions. Select a cover to begin reading.</p>
