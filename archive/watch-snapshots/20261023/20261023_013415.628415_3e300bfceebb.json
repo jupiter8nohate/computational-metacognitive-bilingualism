@@ -1,0 +1,114 @@
+{
+  "collected_at": "2026-10-23T01:34:15.628415Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 8,
+  "articles": [
+    {
+      "id": "fee5d6bca690475f",
+      "title": "Left alone with nothing to do, AI agents started playing",
+      "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-23T00:45:37Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "e461638bee7cde46",
+      "title": "IEA chief warns energy is becoming a geopolitical weapon",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/22/aje-onl-nf_iea-warns-energy-becoming-a-geopolitical-weapon-221026?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-22T20:51:26Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "264af0525447e45c",
+      "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+      "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-22T19:07:09Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "d7df8d6ef6480f19",
+      "title": "Unitree developing AI system to let humanoid robots improve themselves",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371818/unitree-developing-ai-system-let-humanoid-robots-improve-themselves",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-22T13:30:12Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "6ce7e996eaa8b15c",
+      "title": "‘I’d consider replacing one of my children’: Taika Waititi on robot kids, his cheese-o-meter and Klara and the Sun",
+      "url": "https://www.theguardian.com/film/2026/oct/22/taika-waititi-kazuo-ishiguro-robot-friend-klara-and-the-sun",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-22T04:00:06Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "children_wellbeing"
+      ]
+    },
+    {
+      "id": "d431dab99df9b453",
+      "title": "China’s Unitree unveils ‘guardian’ robot that can disarm attackers, lift cars",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371683/chinese-firm-unveils-guardian-robot-can-disarm-attackers-lift-cars",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-22T00:00:15Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "369e9fe44cde6862",
+      "title": "As fans reject AI-generated music, even boosters are drawing the line",
+      "url": "https://www.theguardian.com/music/2026/oct/21/artificial-intelligence-music-grimes-asap-rocky",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-21T13:22:51Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "7b93b8c0d8e313e1",
+      "title": "Ukraine’s drone rescue of wounded soldier puts much touted idea into practice",
+      "url": "https://arstechnica.com/gadgets/2026/10/ukraines-drone-rescue-of-wounded-soldier-puts-much-touted-idea-into-practice/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-20T18:22:54Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    }
+  ],
+  "previous_hash": "84c149f2ef50feedfd94a65c8ca6f6512655c1507adc6cd3bf438cdc350944bf",
+  "hash": "3e300bfceebbe47291bb647395db7dbdfc15520a6a72578a30a4b27aeb80cba6"
+}
