@@ -1,0 +1,127 @@
+{
+  "collected_at": "2026-10-23T22:14:54.283650Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 9,
+  "articles": [
+    {
+      "id": "739797ca19c060e4",
+      "title": "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell",
+      "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-23T21:59:19Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "a275604a0e437b40",
+      "title": "Aston Villa vs Manchester City: Premier League – teams, prediction, lineups",
+      "url": "https://www.aljazeera.com/sports/2026/10/23/aston-villa-vs-manchester-city-premier-league-teams-prediction-lineups?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-23T18:55:18Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "b6eb5852986f8390",
+      "title": "Romania blames Russia after drone sinks ship in the Black Sea",
+      "url": "https://www.aljazeera.com/news/2026/10/23/romania-blames-russia-after-drone-sinks-ship-in-the-black-sea?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-23T17:26:13Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "1e9b03cbb67bfe99",
+      "title": "Intel gets waiver after worries fuzzy US ban on foreign-made robots may hit fabs",
+      "url": "https://arstechnica.com/ai/2026/10/intel-gets-waiver-after-worries-fuzzy-us-ban-on-foreign-made-robots-may-hit-fabs/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-23T17:18:31Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "54fa33209d8b79e7",
+      "title": "Opposition deepfake video sparks outrage in Spain ahead of election",
+      "url": "https://www.theguardian.com/world/2026/oct/23/opposition-deepfake-video-spain-election",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-23T16:35:48Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "elections_information"
+      ]
+    },
+    {
+      "id": "759e906b4e537475",
+      "title": "China’s humanoid robots hunt for work in South Korea as Seoul bets on physical AI",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371888/chinas-humanoid-robots-hunt-work-south-korea-seoul-bets-physical-ai",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-23T08:00:33Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "3e437b18302bd344",
+      "title": "Can AI really predict cancer survival better than a doctor? I have my doubts | Devi Sridhar",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/23/ai-cancer-survival-doctor-selfie-health-research",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-23T07:00:03Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "cf51e24baa15d2e1",
+      "title": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony AI and Nvidia",
+      "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-23T04:00:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "101f350c9f6b6f56",
+      "title": "Asia-Pacific AI agent market to surge 14-fold to US$11.2 billion by 2030, Omdia says",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371814/asia-pacific-ai-agent-market-surge-14-fold-us112-billion-2030-omdia-says",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-23T02:30:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "d6a59788a1f0bd07d8ac17a70b01cd9627098efda6f2140d0c49993188e56d87",
+  "hash": "4d403867e2270b92dd1ec4fd4d14e22b5fefd6965f1eb75fb68b4c9fd357c32a"
+}
