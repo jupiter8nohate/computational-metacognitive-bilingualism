@@ -1,0 +1,101 @@
+{
+  "collected_at": "2026-10-24T14:36:31.894326Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 7,
+  "articles": [
+    {
+      "id": "ba1e969f5ed16b52",
+      "title": "Here are the top AI agents that can live in your text messages",
+      "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-24T14:00:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "54fa33209d8b79e7",
+      "title": "Opposition deepfake video of Spanish PM’s wife sparks outrage before election",
+      "url": "https://www.theguardian.com/world/2026/oct/23/opposition-deepfake-video-spain-election",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-24T06:51:53Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "elections_information"
+      ]
+    },
+    {
+      "id": "739797ca19c060e4",
+      "title": "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell",
+      "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-23T21:59:19Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "1e9b03cbb67bfe99",
+      "title": "Intel gets waiver after worries fuzzy US ban on foreign-made robots may hit fabs",
+      "url": "https://arstechnica.com/ai/2026/10/intel-gets-waiver-after-worries-fuzzy-us-ban-on-foreign-made-robots-may-hit-fabs/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-23T17:18:31Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "759e906b4e537475",
+      "title": "China’s humanoid robots hunt for work in South Korea as Seoul bets on physical AI",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371888/chinas-humanoid-robots-hunt-work-south-korea-seoul-bets-physical-ai",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-23T08:00:33Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "3e437b18302bd344",
+      "title": "Can AI really predict cancer survival better than a doctor? I have my doubts | Devi Sridhar",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/23/ai-cancer-survival-doctor-selfie-health-research",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-23T07:00:03Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "101f350c9f6b6f56",
+      "title": "Asia-Pacific AI agent market to surge 14-fold to US$11.2 billion by 2030, Omdia says",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371814/asia-pacific-ai-agent-market-surge-14-fold-us112-billion-2030-omdia-says",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-23T02:30:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "570eb55a9546daa0449f949f6ccdfeea68eaa35158209db4cb3fdb4a333b166f",
+  "hash": "86979feed1e4d4a5594206173045241234890936f73ca475cdb5cf6350389b9f"
+}
