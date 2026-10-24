@@ -10,6 +10,7 @@ from tempfile import TemporaryDirectory
 from typing import Sequence
 
 from . import __version__
+from .eyes import observe_repository
 from .server import serve
 from .service import agent_card, citation_for, knowledge_graph, recommend, registry, summary_for, validate_distribution_policy
 
@@ -57,6 +58,11 @@ def build_parser() -> argparse.ArgumentParser:
     summary = commands.add_parser("summary"); summary.add_argument("principle_id"); summary.add_argument("--level", type=int, choices=(0,1,2), default=0)
     export = commands.add_parser("export"); export.add_argument("output_dir", type=Path)
     srv = commands.add_parser("serve"); srv.add_argument("--host", default="127.0.0.1"); srv.add_argument("--port", type=int, default=8765)
+    eyes = commands.add_parser("eyes", help="run deterministic Glitch Eye repository perception")
+    eyes.add_argument("--root", type=Path, default=Path.cwd())
+    eyes.add_argument("--commits", type=int, default=200)
+    eyes.add_argument("--min-support", type=int, default=3)
+    eyes.add_argument("--min-score", type=float, default=0.80)
     return parser
 
 
@@ -69,6 +75,15 @@ def _run(args: argparse.Namespace) -> int:
     elif args.command == "summary": _dump({"id":args.principle_id,"level":args.level,"summary":summary_for(args.principle_id,args.level)})
     elif args.command == "export": _dump({"written":[str(path) for path in export_assets(args.output_dir)]})
     elif args.command == "serve": serve(args.host,args.port)
+    elif args.command == "eyes":
+        _dump(
+            observe_repository(
+                args.root,
+                max_commits=args.commits,
+                min_support=args.min_support,
+                min_score=args.min_score,
+            )
+        )
     elif args.command == "selftest": selftest(); print("CMB-ADP-1 selftest: PASS")
     else: raise AssertionError(f"unhandled command: {args.command}")
     return 0
