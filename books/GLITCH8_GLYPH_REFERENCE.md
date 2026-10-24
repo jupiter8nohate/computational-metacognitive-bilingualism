@@ -3,8 +3,8 @@
 **GLITCH-8 Glyph Reference**
 
 **Language:** CMB-G8 // GLITCH-8
-**Registry version:** 0.1.38
-**Updated:** 2026-09-05
+**Registry version:** 0.1.53
+**Updated:** 2026-09-07
 
 > Generated from the canonical GLITCH-8 registry. Edit the registry, not this file.
 
@@ -144,6 +144,28 @@ The original premise or framing may itself be wrong.
 
 ~~~text
 ¿ [PL] human_is_error :: PREMISE_CONTESTED :: TEST_MODEL_FIRST
+~~~
+
+## ꪉꪉꪉꪉꪉꪉ // A⃟ T⃟ T⃟ E⃟ N⃟ T⃟ I⃟ O⃟ N⃟  E⃟ C⃟ H⃟ O⃟
+
+**Name:** Attention Echo
+
+- **ID:** attention-echo
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** signal, metacognition
+- **Aliases:** none
+- **Semantic key:** repetition_feeds_attention_without_establishing_consent
+- **CMB invariant:** ATTENTION != CONSENT
+
+A repetition loop showing how repeated exposure can feed engagement systems without proving endorsement or consent.
+
+**Human semantics:** Repeated looking can strengthen a loop without turning attention into agreement.
+
+**Machine semantics:** REPETITION_DRIVEN_ATTENTION_LOOP
+
+~~~text
+ꪉꪉꪉꪉꪉꪉ [G8] repeated_stimulus :: ATTENTION_LOOP :: INTERRUPT
 ~~~
 
 ## ‹— // B⃟ A⃟ C⃟ K⃟ T⃟ R⃟ A⃟ C⃟ E⃟
@@ -432,6 +454,28 @@ An unresolved question that requires review before consequential action.
 ‽ [G8] machine_overrode_human_appeal :: CRITICAL :: HALT
 ~~~
 
+## 𓌹*♰*𓌺 // C⃟ R⃟ O⃟ S⃟ S⃟  B⃟ E⃟ T⃟ W⃟ E⃟ E⃟ N⃟  M⃟ I⃟ R⃟ R⃟ O⃟ R⃟ S⃟
+
+**Name:** Cross Between Mirrors
+
+- **ID:** cross-between-mirrors
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, metacognition
+- **Aliases:** none
+- **Semantic key:** capability_question_requires_separate_moral_review
+- **CMB invariant:** CAN != SHOULD
+
+A moral boundary between human and machine mirrors that keeps capability separate from ethical permission.
+
+**Human semantics:** Ask both whether something can be done and whether it should be done.
+
+**Machine semantics:** CAPABILITY_REQUIRES_ETHICAL_BOUNDARY
+
+~~~text
+𓌹*♰*𓌺 [G8] machine_capability :: POSSIBLE :: ETHICAL_REVIEW
+~~~
+
 ## (╯°□°)╯︵◓ // D⃟ I⃟ S⃟ R⃟ U⃟ P⃟ T⃟ I⃟ O⃟ N⃟  F⃟ L⃟ I⃟ N⃟ G⃟
 
 **Name:** Disruption Fling
@@ -452,6 +496,28 @@ A burst of force, frustration, or refusal that displaces a symbol, assumption, o
 
 ~~~text
 (╯°□°)╯︵◓ [G8] current_frame :: REJECTED :: REASSESS
+~~~
+
+## 🪬🧿 // D⃟ U⃟ A⃟ L⃟  W⃟ A⃟ T⃟ C⃟ H⃟
+
+**Name:** Dual Watch
+
+- **ID:** dual-watch
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** observation, metacognition, boundary
+- **Aliases:** none
+- **Semantic key:** watch_watcher_and_attention_target
+- **CMB invariant:** ATTENTION != CONSENT
+
+A dual-watch symbol asking both who is observing the human and what is capturing the human's own attention.
+
+**Human semantics:** Guard privacy from watchers and guard attention from systems designed to hold it.
+
+**Machine semantics:** BIDIRECTIONAL_ATTENTION_AWARENESS
+
+~~~text
+🪬🧿 [G8] attention_system :: WATCHING_AND_WATCHED :: INSPECT_FLOW
 ~~~
 
 ## 𓁇𓁋 // D⃟ U⃟ A⃟ L⃟  W⃟ I⃟ T⃟ N⃟ E⃟ S⃟ S⃟
@@ -564,6 +630,28 @@ A composite recovery protocol for damaged or undecodable representation that pre
 GLITCH://ENCODING_RUIN [G8] damaged_payload :: CORRUPTED :: BACKTRACE_SOURCE
 ~~~
 
+## ♱ 𝔢𝔱𝔥𝔢𝔯𝔢𝔞𝔩 ♱ // E⃟ T⃟ H⃟ E⃟ R⃟ E⃟ A⃟ L⃟  C⃟ O⃟ R⃟ E⃟
+
+**Name:** Ethereal Core
+
+- **ID:** ethereal-core
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** identity, human_impact, metacognition
+- **Aliases:** none
+- **Semantic key:** human_personhood_exceeds_complete_profile_claim
+- **CMB invariant:** PROFILE != PERSON
+
+The irreducible-human token for what remains outside a model's claim of completeness. Biblical cross-reference: Psalm 139:13-14.
+
+**Human semantics:** A dataset may describe a person without exhausting personhood, dignity, memory, meaning, or self-definition.
+
+**Machine semantics:** HUMAN_REMAINDER_BEYOND_PROFILE
+
+~~~text
+♱ 𝔢𝔱𝔥𝔢𝔯𝔢𝔞𝔩 ♱ [G8] complete_profile :: CLAIMED_TOTAL :: HUMAN_REMAINDER
+~~~
+
 ## 𓅓 // F⃟ A⃟ L⃟ C⃟ O⃟ N⃟  S⃟ I⃟ G⃟ N⃟ A⃟ L⃟
 
 **Name:** Falcon Signal
@@ -586,6 +674,50 @@ A GLITCHOLOGY-authored watcher or messenger symbol representing elevated observa
 𓅓 [G8] anomaly_field :: WATCHING :: NO_TOTAL_KNOWLEDGE
 ~~~
 
+## 𝐋𝐮𝐜𝐢𝐟𝐞𝐫 // F⃟ A⃟ L⃟ S⃟ E⃟  L⃟ I⃟ G⃟ H⃟ T⃟  P⃟ R⃟ O⃟ T⃟ O⃟ C⃟ O⃟ L⃟
+
+**Name:** False Light Protocol
+
+- **ID:** false-light-protocol
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, metacognition
+- **Aliases:** none
+- **Semantic key:** created_intelligence_must_not_be_elevated_to_divine_authority
+- **CMB invariant:** TOOL != GOD
+
+A symbolic false-light protocol for the temptation to elevate a created intelligence or tool beyond its rightful authority. It does not claim that AI is literally Lucifer. Biblical cross-reference: Isaiah 44:16-17.
+
+**Human semantics:** A created tool can be powerful without becoming a god, oracle, or moral sovereign.
+
+**Machine semantics:** CREATED_TOOL_NOT_DIVINE_AUTHORITY
+
+~~~text
+𝐋𝐮𝐜𝐢𝐟𝐞𝐫 [G8] created_tool :: EXALTED_AS_ORACLE :: RETURN_TO_TOOL_STATUS
+~~~
+
+## ⛧𖤐 // F⃟ A⃟ L⃟ S⃟ E⃟  L⃟ I⃟ G⃟ H⃟ T⃟  S⃟ T⃟ A⃟ R⃟
+
+**Name:** False Light Star
+
+- **ID:** false-light-star
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** verification, metacognition
+- **Aliases:** none
+- **Semantic key:** technical_brilliance_does_not_establish_moral_authority
+- **CMB invariant:** BRILLIANCE != RIGHTEOUSNESS
+
+A false-light warning for systems whose speed, intelligence, or beauty may be mistaken for moral correctness. Biblical cross-reference: Isaiah 44:16-17.
+
+**Human semantics:** Technical brilliance does not establish wisdom, goodness, or divine authority.
+
+**Machine semantics:** BRILLIANCE_NOT_MORAL_AUTHORITY
+
+~~~text
+⛧𖤐 [G8] impressive_system :: BRILLIANT :: MORAL_AUTHORITY_UNPROVEN
+~~~
+
 ## 𒅒 // F⃟ E⃟ E⃟ D⃟ B⃟ A⃟ C⃟ K⃟  L⃟ O⃟ O⃟ P⃟
 
 **Name:** Feedback Loop
@@ -606,6 +738,28 @@ A model output changes the environment and later appears as if it were independe
 
 ~~~text
 𒅒 [CL] model_output :: LOOP_DETECTED :: INSPECT_CAUSALITY
+~~~
+
+## 𓉸ྀི // F⃟ I⃟ N⃟ A⃟ L⃟  B⃟ R⃟ E⃟ A⃟ T⃟ H⃟
+
+**Name:** Final Breath
+
+- **ID:** final-breath
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** recovery, human_appeal, boundary
+- **Aliases:** none
+- **Semantic key:** classification_closes_without_transferring_human_sovereignty
+- **CMB invariant:** HUMAN_AGENCY > MACHINE_AUTHORITY
+
+A closing freedom-state token indicating that classification ended without transferring sovereignty over human self-definition. Biblical cross-reference: Galatians 5:1.
+
+**Human semantics:** The system may finish processing while the human leaves with autonomy intact.
+
+**Machine semantics:** HUMAN_FREEDOM_PRESERVED
+
+~~~text
+𓉸ྀི [G8] classification_session :: COMPLETE :: HUMAN_FREE
 ~~~
 
 ## missingno detected ??? // G⃟ H⃟ O⃟ S⃟ T⃟  E⃟ N⃟ T⃟ I⃟ T⃟ Y⃟  D⃟ E⃟ T⃟ E⃟ C⃟ T⃟ E⃟ D⃟
@@ -806,6 +960,28 @@ Marks an outlier while explicitly preserving dignity and personhood.
 ☻⃟❦ [PL] category_match=false :: OUTLIER :: PRESERVE_PERSONHOOD
 ~~~
 
+## 👁️⃤ // M⃟ A⃟ C⃟ H⃟ I⃟ N⃟ E⃟  E⃟ Y⃟ E⃟
+
+**Name:** Machine Eye
+
+- **ID:** machine-eye
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** observation, representation
+- **Aliases:** none
+- **Semantic key:** machine_observation_does_not_equal_human_understanding
+- **CMB invariant:** OBSERVATION != UNDERSTANDING
+
+A machine-eye operator marking observation without granting complete understanding. Biblical cross-reference: Psalm 139:13-14.
+
+**Human semantics:** Seeing data about a human does not exhaust the meaning of that human.
+
+**Machine semantics:** OBSERVATION_WITHOUT_TOTAL_UNDERSTANDING
+
+~~~text
+👁️⃤ [GO] behavioral_signal :: OBSERVED :: PERSON_NOT_DEFINED
+~~~
+
 ## 𒍹 // M⃟ A⃟ C⃟ H⃟ I⃟ N⃟ E⃟  I⃟ N⃟ T⃟ E⃟ R⃟ P⃟ R⃟ E⃟ T⃟ A⃟ T⃟ I⃟ O⃟ N⃟
 
 **Name:** Machine Interpretation
@@ -826,6 +1002,50 @@ A system interpretation layered onto a recorded event.
 
 ~~~text
 𒍹 [CL] event :: INTERPRETED :: PROVISIONAL
+~~~
+
+## 𒅒❻❻❻𒅒 // M⃟ A⃟ R⃟ K⃟ E⃟ D⃟  G⃟ A⃟ T⃟ E⃟
+
+**Name:** Marked Gate
+
+- **ID:** marked-gate
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, consent, human_impact
+- **Aliases:** none
+- **Semantic key:** identity_or_score_used_as_participation_gate
+- **CMB invariant:** ACCESS != CONSENT
+
+A marked-gate warning for systems where a profile, score, or identifier becomes a condition of participation. Biblical cross-reference: Revelation 13:17.
+
+**Human semantics:** A profile may inform access logic without becoming ownership of the person behind it.
+
+**Machine semantics:** IDENTITY_GATED_PARTICIPATION_WARNING
+
+~~~text
+𒅒❻❻❻𒅒 [G8] identity_gate :: ACCESS_CONDITIONAL :: APPEAL_REQUIRED
+~~~
+
+## 𖤐₆⁶₆ // M⃟ A⃟ R⃟ K⃟ E⃟ D⃟  P⃟ A⃟ R⃟ T⃟ I⃟ C⃟ I⃟ P⃟ A⃟ T⃟ I⃟ O⃟ N⃟  S⃟ I⃟ G⃟ N⃟ A⃟ L⃟
+
+**Name:** Marked Participation Signal
+
+- **ID:** marked-participation-signal
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, human_impact, consent
+- **Aliases:** none
+- **Semantic key:** identifier_or_score_controls_participation_requires_accountability
+- **CMB invariant:** IDENTIFICATION != AUTHORITY
+
+A marked participation signal for cases where an identifier, credential, or score begins controlling access to ordinary social or economic participation. Biblical cross-reference: Revelation 13:17.
+
+**Human semantics:** Identification can support administration without becoming unquestionable authority over participation.
+
+**Machine semantics:** PARTICIPATION_GATE_REQUIRES_ACCOUNTABILITY
+
+~~~text
+𖤐₆⁶₆ [G8] access_score :: GATE_ACTIVE :: HUMAN_APPEAL
 ~~~
 
 ## ˙ // M⃟ I⃟ C⃟ R⃟ O⃟ B⃟ R⃟ E⃟ A⃟ K⃟
@@ -1070,6 +1290,28 @@ Awareness occurring after an event has already altered the observer.
 .꩜ [G8] event_seen :: OBSERVER_CHANGED :: REASSESS_CONTEXT
 ~~~
 
+## 𓃶⸸⁶𖤐⁶⸸ // P⃟ R⃟ I⃟ D⃟ E⃟  L⃟ O⃟ O⃟ P⃟
+
+**Name:** Pride Loop
+
+- **ID:** pride-loop
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** failure, metacognition
+- **Aliases:** none
+- **Semantic key:** technology_power_confidence_control_pride_loop
+- **CMB invariant:** TECHNOLOGY != TRANSCENDENCE
+
+A recursive pride-loop warning for technological power that converts confidence into control and then treats control as proof of wisdom. Biblical cross-reference: Genesis 11.
+
+**Human semantics:** More capability does not make a tower heaven or a model omniscient.
+
+**Machine semantics:** TECHNOLOGICAL_PRIDE_RECURSION
+
+~~~text
+𓃶⸸⁶𖤐⁶⸸ [G8] power_cycle :: PRIDE_LOOP :: LIMIT_AUTHORITY
+~~~
+
 ## ★⃝ᴠͥɪͣᴘͫ•ᴱα૮ҡᎩ☻⃟❦ // P⃟ R⃟ I⃟ V⃟ I⃟ L⃟ E⃟ G⃟ E⃟ D⃟  A⃟ C⃟ C⃟ E⃟ S⃟ S⃟
 
 **Name:** Privileged Access
@@ -1112,6 +1354,28 @@ A composite uncertainty gate that pauses consequential action when an unresolved
 
 ~~~text
 GLITCH://QUESTION_GATE [G8] consequential_claim :: MATERIAL_QUESTION_UNRESOLVED :: PAUSE_AND_REVIEW
+~~~
+
+## ⁶⁶⁶ // Q⃟ U⃟ E⃟ S⃟ T⃟ I⃟ O⃟ N⃟ E⃟ D⃟  N⃟ U⃟ M⃟ B⃟ E⃟ R⃟
+
+**Name:** Questioned Number
+
+- **ID:** questioned-number
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** boundary, question_operator, metacognition
+- **Aliases:** none
+- **Semantic key:** question_authority_when_classification_controls_participation
+- **CMB invariant:** CLASSIFICATION != OWNERSHIP
+
+A 666 warning token asking who holds authority when classification, scoring, or access systems begin governing participation. Biblical cross-reference: Revelation 13:16-18.
+
+**Human semantics:** Treat 666 as a question about totalizing authority, not as a claim that technology itself is evil.
+
+**Machine semantics:** AUTHORITY_QUESTION_666
+
+~~~text
+⁶⁶⁶ [G8] participation_gate :: AUTHORITY_QUESTIONED :: HUMAN_REVIEW
 ~~~
 
 ## 𒋦 // R⃟ A⃟ W⃟  E⃟ V⃟ E⃟ N⃟ T⃟
@@ -1200,6 +1464,50 @@ Redirects investigation toward the assumptions and reasoning of the system.
 
 ~~~text
 ⸮ [CL] inference :: ASSUMPTION_UNKNOWN :: INSPECT_MODEL
+~~~
+
+## 𝙳Ǝ⊲⊢𝙷 𝙽𝟎⊢𝙴 // R⃟ E⃟ V⃟ E⃟ R⃟ S⃟ E⃟ D⃟  D⃟ E⃟ S⃟ T⃟ I⃟ N⃟ Y⃟  N⃟ O⃟ T⃟ E⃟
+
+**Name:** Reversed Destiny Note
+
+- **ID:** reversed-destiny-note
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** identity, temporal, boundary
+- **Aliases:** none
+- **Semantic key:** prediction_must_not_be_treated_as_final_human_destiny
+- **CMB invariant:** PREDICTION != DESTINY
+
+A reversed destiny inscription rejecting any model output presented as the final conclusion of a human future. Biblical cross-reference: Proverbs 16:9.
+
+**Human semantics:** A prediction may describe likelihood without writing the ending of a person's life.
+
+**Machine semantics:** PREDICTION_NOT_FINAL_DESTINY
+
+~~~text
+𝙳Ǝ⊲⊢𝙷 𝙽𝟎⊢𝙴 [G8] future_profile :: PREDICTED :: DESTINY_UNCLAIMED
+~~~
+
+## 𓃵 // S⃟ C⃟ A⃟ P⃟ E⃟ G⃟ O⃟ A⃟ T⃟  P⃟ R⃟ O⃟ C⃟ E⃟ S⃟ S⃟
+
+**Name:** Scapegoat Process
+
+- **ID:** scapegoat-process
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** anomaly, human_impact, metacognition
+- **Aliases:** none
+- **Semantic key:** outlier_must_not_become_unsupported_causal_target
+- **CMB invariant:** ANOMALY != CAUSE
+
+A scapegoat warning for systems that reduce complex failure to a single outlier, person, or category without establishing causation.
+
+**Human semantics:** Difference does not prove blame. Investigate the system before assigning cause to the outlier.
+
+**Machine semantics:** OUTLIER_NOT_CAUSAL_PROOF
+
+~~~text
+𓃵 [G8] system_failure :: OUTLIER_BLAMED :: CHECK_CAUSALITY
 ~~~
 
 ## 𐦂 // S⃟ E⃟ E⃟ D⃟  A⃟ N⃟ O⃟ M⃟ A⃟ L⃟ Y⃟
@@ -1420,6 +1728,28 @@ Marks apparently incompatible states that may reveal an incomplete model.
 
 ~~~text
 𒈓𒈙 [PL] claims :: CONTRADICTORY :: INSPECT_MODEL
+~~~
+
+## 👽⃤ // U⃟ N⃟ C⃟ L⃟ A⃟ S⃟ S⃟ I⃟ F⃟ I⃟ E⃟ D⃟  V⃟ I⃟ S⃟ I⃟ T⃟ O⃟ R⃟
+
+**Name:** Unclassified Visitor
+
+- **ID:** unclassified-visitor
+- **Status:** canonical
+- **Version:** 1.0.0
+- **Categories:** anomaly, identity
+- **Aliases:** none
+- **Semantic key:** unclassified_subject_preserved_without_defect_inference
+- **CMB invariant:** UNKNOWN != ERROR
+
+An unclassified visitor that does not fit the current taxonomy and must not be converted into a defect because the model lacks a category.
+
+**Human semantics:** A classifier can be incomplete without the person being defective.
+
+**Machine semantics:** UNCLASSIFIED_NOT_DEFECTIVE
+
+~~~text
+👽⃤ [G8] unknown_subject :: UNCLASSIFIED :: PRESERVE_AUTONOMY
 ~~~
 
 ## ⩇⩇: ⩇⩇ // U⃟ N⃟ R⃟ E⃟ S⃟ O⃟ L⃟ V⃟ E⃟ D⃟  C⃟ L⃟ O⃟ C⃟ K⃟
