@@ -1,0 +1,23 @@
+{
+  "record_type": "noncanonical_rule_based_allegory",
+  "canonical_author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "generated_by": "CMB deterministic rule-based generator",
+  "chapter": {
+    "id": "witness-08ec5c76056e",
+    "theme": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+    "source_url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+    "source_domain": "techcrunch.com",
+    "boundaries": [
+      "GENERATE"
+    ],
+    "status": "fictional_allegory_not_fact_checked",
+    "question": "What evidence separates the generated signal from its source?",
+    "passage": [
+      "And the Watcher heard a new account arise from the public square.",
+      "Yet the Scribe refused to place a headline upon the throne of Truth.",
+      "For a machine may recognize a pattern, but a pattern is not proof.",
+      "And the Adversary asked for the source before drawing any conclusion.",
+      "So the Guardian left the question open, and the human kept the pen."
+    ]
+  }
+}
