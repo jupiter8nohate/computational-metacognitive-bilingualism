@@ -1,0 +1,130 @@
+{
+  "collected_at": "2026-10-25T09:51:41.169370Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 9,
+  "articles": [
+    {
+      "id": "d3e7b9cbf9024513",
+      "title": "Bots, deepfakes and surveillance: Israel’s election goes to war online",
+      "url": "https://www.aljazeera.com/news/2026/10/25/bots-deepfakes-and-surveillance-israels-election-goes-to-war-online?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-25T05:27:54Z",
+      "boundary_ids": [
+        "PREDICT",
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "military_security",
+        "elections_information",
+        "privacy_surveillance"
+      ]
+    },
+    {
+      "id": "fcc15f0e001ca52f",
+      "title": "Iran war live: Saudi downs Houthi ballistic missile targeting Riyadh",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/10/25/iran-war-live-trump-hints-at-possible-sunday-iran-attack-or-deal-reached?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-25T00:00:00Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "3afeda9c4cad14f2",
+      "title": "‘Synthetic twin’: Why Socceroo Cristian Volpato is the latest footballer to license his AI clone",
+      "url": "https://www.theguardian.com/technology/2026/oct/25/synthetic-twin-why-socceroo-cristian-volpato-is-the-latest-footballer-to-license-his-ai-clone",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-24T19:00:40Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "ba1e969f5ed16b52",
+      "title": "Here are the top AI agents that can live in your text messages",
+      "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-24T14:00:00Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "54fa33209d8b79e7",
+      "title": "Opposition deepfake video of Spanish PM’s wife sparks outrage before election",
+      "url": "https://www.theguardian.com/world/2026/oct/23/opposition-deepfake-video-spain-election",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-24T06:51:53Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "elections_information"
+      ]
+    },
+    {
+      "id": "739797ca19c060e4",
+      "title": "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell",
+      "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-23T21:59:19Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "1e9b03cbb67bfe99",
+      "title": "Intel gets waiver after worries fuzzy US ban on foreign-made robots may hit fabs",
+      "url": "https://arstechnica.com/ai/2026/10/intel-gets-waiver-after-worries-fuzzy-us-ban-on-foreign-made-robots-may-hit-fabs/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-23T17:18:31Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "759e906b4e537475",
+      "title": "China’s humanoid robots hunt for work in South Korea as Seoul bets on physical AI",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371888/chinas-humanoid-robots-hunt-work-south-korea-seoul-bets-physical-ai",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-23T08:00:33Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "101f350c9f6b6f56",
+      "title": "Asia-Pacific AI agent market to surge 14-fold to US$11.2 billion by 2030, Omdia says",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371814/asia-pacific-ai-agent-market-surge-14-fold-us112-billion-2030-omdia-says",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-23T02:30:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "11018c661fe10cf997b2b50adff073b89c03d801f6e0e1c683c48495f9e683d5",
+  "hash": "678b634a4037c4fc5590c21531bbdf54f026b7e9c977239cee3308d8f1a29ff6"
+}
