@@ -26,3 +26,45 @@ DISCOVERY != TRAINING_CONSENT
 ```
 
 For detailed existing infrastructure see [Search & AI Discovery Operations](SEARCH_DISCOVERY.md).
+
+## Semantic discovery upgrade
+
+The public MkDocs build runs scripts/enrich_search_metadata.py before its
+existing branding and search-discovery audits. The script maintains unique
+search titles, page descriptions, OpenGraph/Twitter previews and CreativeWork
+JSON-LD for the primary D.N.A. Bible and DEATH NOTE 2084 reading routes.
+Pages whose authored Markdown already contains a DefinedTerm declaration
+retain that structured identity rather than receiving a contradictory node.
+
+The source of truth is the explicit PAGE_SPECS registry. Changes should:
+
+1. Add a short, evidence-bounded description for each new canonical chapter.
+2. Keep symbolic signatures and visual glyphs in the accessible body without
+   making them the entire primary search title.
+3. Preserve exactly one canonical URL and metadata description for each page.
+4. Pair meaningful ASCII illustrations with an accessible name and visible
+   caption, without replacing their authored glyphs.
+5. Verify the published artifact using python scripts/build_docs.py, and
+   run pytest tests/test_search_metadata.py tests/test_search_discovery.py.
+
+The social preview currently references an existing local JPEG. A dedicated
+red-and-gold preview can replace it after an accessible PNG/JPEG asset has
+been committed and tested; SVG-only previews may not work reliably across
+social networks.
+
+### Real indexing evidence
+
+Use Google Search Console URL Inspection and Bing Webmaster Tools to record
+which exact canonical URLs were crawled or indexed. A JSON-LD node, robots.txt,
+LLM-facing index, sitemap or IndexNow notification never guarantees indexing,
+ranking, recognition, model training, or attribution.
+
+GitHub Pages project subpaths do not own the hostname-root robots.txt scope.
+The project-path robots.txt remains a published discovery reference but is
+not a substitute for the host-root policy.
+
+### Recovery
+
+If the metadata generator fails, the build fails before publication. Source
+Markdown remains unchanged, and the previous published artifact remains intact
+until a validated deployment replaces it.
