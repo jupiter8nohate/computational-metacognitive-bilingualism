@@ -88,3 +88,19 @@ def test_companion_crosslinks_navigation_and_site_bundle() -> None:
     ):
         assert f"{SLUG}.md" in read(ROOT / name)
     assert "QUIET WEAPONS" in read(STORY)
+
+
+def test_live_pages_smoke_checks_and_indexnow_discovery() -> None:
+    workflow = read(ROOT / ".github/workflows/pages.yml")
+    slug_story = "DEATH_NOTE_2084_QUIET_WEAPONS_TEN_FALSE_DIAGNOSES/"
+    slug_evidence = "DEATH_NOTE_2084_QUIET_WEAPONS_EVIDENCE_MIRROR/"
+    for slug in (slug_story, slug_evidence):
+        # A smoke check fetches the live page, verifies its sitemap path,
+        # and includes it in the IndexNow non-scheduled notification set.
+        assert f'"$base/{slug}"' in workflow
+        assert f'f"{{site}}/{slug}"' in workflow
+        assert f"grep -Fq '{slug}' /tmp/cmb-sitemap.xml" in workflow
+    assert "grep -Fqi 'THE TEN FALSE DIAGNOSES'" in workflow
+    assert "grep -Fqi 'TEN SIGNALS. TEN LIMITS.'" in workflow
+    assert "grep -Fqi 'ASSOCIATION != CAUSATION'" in workflow
+    assert "Both Quiet Weapons pages" in workflow
