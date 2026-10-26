@@ -1,0 +1,55 @@
+name: Evolution visual and accessibility
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "library/cmb-gate-claims.v1.json"
+      - "scripts/audit_evolution.py"
+      - "tests/browser/evolution-visual.mjs"
+      - ".github/workflows/evolution-visual.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual-accessibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+      - name: Install documentation dependencies
+        run: python -m pip install --upgrade pip ".[docs]"
+      - name: Build verified site
+        run: |
+          python scripts/audit_evolution.py
+          python scripts/build_docs.py
+      - name: Install isolated browser test dependencies
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.56.0 axe-core@4.10.3
+          npx playwright install --with-deps chromium
+      - name: Verify desktop and mobile reader
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m http.server 8000 --bind 127.0.0.1 --directory site >/tmp/cmb-visual-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server" || true' EXIT
+          node tests/browser/evolution-visual.mjs
+      - name: Upload comparison screenshots
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: evolution-visual-screenshots
+          path: artifacts/evolution/
+          if-no-files-found: ignore
