@@ -70,4 +70,4 @@ def test_trademark_claim_does_not_imply_registration_or_clinical_authority() -> 
     for mark in MARKS:
         assert mark in trademark
     assert "not validated conditions" in trademark
-    assert "not been represented here as filed or registered marks" in trademark
+    assert "**not** been represented here as filed or registered marks" in trademark
