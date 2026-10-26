@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.gate-claim-ledger.v1.schema.json",
+  "title": "CMB fictional gate research crosswalk",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "type",
+    "author",
+    "disclaimer",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cmb.gate-claim-ledger.v1"
+    },
+    "type": {
+      "const": "fiction-to-evidence-crosswalk"
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disclaimer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "gate",
+          "name",
+          "question",
+          "fiction_route",
+          "context_route",
+          "classification",
+          "review_status",
+          "independently_reviewed",
+          "counterevidence"
+        ],
+        "properties": {
+          "gate": {
+            "enum": [
+              "L",
+              "U",
+              "C",
+              "I",
+              "F",
+              "E",
+              "R"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fiction_route": {
+            "type": "string",
+            "minLength": 1
+          },
+          "context_route": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classification": {
+            "enum": [
+              "literary_analogy",
+              "ethical_framework",
+              "documented_context_only"
+            ]
+          },
+          "review_status": {
+            "enum": [
+              "pending",
+              "reviewed",
+              "contested"
+            ]
+          },
+          "independently_reviewed": {
+            "type": "boolean"
+          },
+          "counterevidence": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
