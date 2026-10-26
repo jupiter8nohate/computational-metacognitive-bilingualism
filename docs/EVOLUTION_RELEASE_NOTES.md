@@ -25,18 +25,18 @@ README.md declares the v1.5 feature freeze. The interactive reader and new visua
 
 ## Required acceptance checks
 
-1. Run \`python scripts/audit_evolution.py\` and \`python scripts/verify_archive_experience.py\`.
-2. Run \`python scripts/build_docs.py\` and existing search and link audits.
+1. Run `python scripts/audit_evolution.py` and `python scripts/verify_archive_experience.py`.
+2. Run `python scripts/build_docs.py` and existing search and link audits.
 3. Inspect the optional Playwright/axe-core output in desktop and mobile layouts; test keyboard navigation and at least one screen reader manually.
 4. Review claimed context and counterevidence before any ledger record becomes marked independently reviewed.
 5. Review commit tree, PR discussion, package dependencies, and any freeze-boundary exceptions before merge.
 6. Keep the v1.5 release candidate immutable. Do not claim a later commit is covered by its older release receipt.
 7. Verify any future signed tags and DOI externally, including a restoration test.
 
-\`\`\`text
+```text
 PUBLISHED != INDEXED
 FICTION != EVIDENCE
 SELF_TEST != INDEPENDENT_AUDIT
 HASH != AUTHORSHIP_PROOF
 HUMAN_AGENCY > MACHINE_AUTHORITY
-\`\`\`
+```
