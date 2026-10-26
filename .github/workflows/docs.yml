@@ -18,6 +18,8 @@ on:
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
+      - "scripts/enrich_search_metadata.py"
+      - "tests/test_search_metadata.py"
       - "scripts/verify_archive_experience.py"
       - "scripts/export_reader_archive.py"
       - "tests/test_archive_experience.py"
