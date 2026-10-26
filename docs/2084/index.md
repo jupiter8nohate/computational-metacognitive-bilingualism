@@ -55,6 +55,10 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 **[𓂀 Ninth: Station Seven, The Archive of the Unsigned](../DEATH_NOTE_2084_STATION_SEVEN.md)** investigates the suppressed human appeals office behind the synthetic witness system. Mara, Edda, and Jupiter trace Nia's original notice while respecting her decision not to return to the facility. The investigation uncovers an unsigned archive and ends with a new question about **Station Zero**, without treating a fictional anomaly as proof of a real conspiracy.
 
+## Companion dossier // Quiet Weapons, Silent Wars
+
+**[𓂀 Quiet Weapons, Silent Wars: The Ten False Diagnoses](../DEATH_NOTE_2084_QUIET_WEAPONS_TEN_FALSE_DIAGNOSES.md)** introduces ten named fictional phenomena, original narrative testimony, and a plain-language glossary about predictive systems and psychological capture. Its ten labels are **literary inventions, not clinically recognized disorders**. The chapter follows Station Seven as a **companion**, not a tenth transmission.
+
 [**WITNESS://BACKTRACE verification protocol**](../WITNESS_BACKTRACE_PROTOCOL.md) explains how to inspect, challenge, and update the ten real-world citations without misrepresenting fiction as evidence.
 
 **REAL-WORLD EVIDENCE COMPANION:** [𓂀 The Evidence Ledger: Ten Mechanisms Behind the Fiction](../DEATH_NOTE_2084_EVIDENCE_LEDGER.md) examines documented data collection, employment and credit algorithms, accessible testing, biometric errors, identity dependencies, repair control, and graph modeling. Every entry states both what primary sources support and what remains fictional.
