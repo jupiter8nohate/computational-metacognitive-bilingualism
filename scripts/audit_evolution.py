@@ -75,9 +75,9 @@ def audit(root: Path = ROOT) -> list[str]:
         errors.append("Reader must not track or retain completed choices")
     if len(re.findall(r'data-chapter="\d+"', reader)) != 9 or len(re.findall(r'data-era="sequel"', reader)) != 4:
         errors.append("Canonical nine-transmission reader or sequel distinction missing")
-    from enrich_search_metadata import PAGE_SPECS
+    seo_specs = load("scripts/enrich_search_metadata.py")
     for route in NINE:
-        if route + "/" not in PAGE_SPECS:
+        if f'"{route}/": PageSpec(' not in seo_specs:
             errors.append(f"SEO page registry missing canonical route: {route}")
         if f'../{route}/' not in reader or not (root / "docs" / f"{route}.md").is_file():
             errors.append(f"Missing canonical transmission route: {route}")
