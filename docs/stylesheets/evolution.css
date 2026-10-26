@@ -1,0 +1,120 @@
+/* CMB evolution visual layer. Stable MkDocs markup, no remote fonts or trackers. */
+:root {
+  --evo-gold: #ffc72c;
+  --evo-red: #da291c;
+  --evo-ink: #090807;
+  --evo-cream: #fff7ea;
+}
+.cmb-evolution {
+  margin: 2rem 0;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border: 1px solid #bd8125;
+  border-radius: 1.15rem;
+  background: linear-gradient(155deg, #25130e, #0d0a09 58%, #39130b);
+  color: var(--evo-cream);
+}
+.cmb-evolution__eyebrow {
+  font-weight: 750;
+  font-size: .82rem;
+  color: var(--evo-gold);
+  letter-spacing: .13em;
+}
+.rst-content .cmb-evolution h2,
+.rst-content .cmb-reader h2 { color: var(--evo-cream); }
+.cmb-evolution__intro { max-width: 65ch; line-height: 1.65; }
+.cmb-evolution__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.35rem;
+}
+.rst-content .cmb-evolution__link {
+  display: block;
+  padding: 1.25rem;
+  min-width: 0;
+  text-decoration: none;
+  color: var(--evo-cream);
+  background: #25140f;
+  border: 1px solid #98642c;
+  border-left: .3rem solid var(--evo-red);
+  border-radius: .75rem;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.cmb-evolution__link strong {
+  display: block;
+  margin-bottom: .5rem;
+  color: #ffdc72;
+  font-size: 1.05rem;
+}
+.cmb-evolution__link span { display: block; line-height: 1.6; }
+.rst-content .cmb-evolution__link:hover,
+.rst-content .cmb-evolution__link:focus-visible {
+  color: #fff;
+  border-color: var(--evo-gold);
+  transform: translateY(-2px);
+}
+.cmb-reader {
+  margin: 2rem 0;
+  padding: clamp(1rem, 3vw, 2rem);
+  border-radius: 1rem;
+  border: 1px solid #956026;
+  background: linear-gradient(135deg, #1b0e0a, #130c0b);
+  color: var(--evo-cream);
+}
+.cmb-reader ol {
+  counter-reset: chapter;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.cmb-reader li {
+  display: flex;
+  align-items: start;
+  gap: .85rem;
+  padding: .9rem;
+  margin: .45rem 0;
+  border: 1px solid #795029;
+  border-radius: .6rem;
+}
+.cmb-reader li[data-era="sequel"] { border-style: dashed; }
+.cmb-reader li label {
+  flex: 1;
+  line-height: 1.6;
+  color: var(--evo-cream);
+}
+.cmb-reader li input { width: 1.15rem; height: 1.15rem; margin-top: .3rem; flex: none; accent-color: var(--evo-gold); }
+.rst-content .cmb-reader a,
+.rst-content .cmb-chapter-nav a { color: #ffdc72; }
+.cmb-reader__progress { font-weight: 700; color: var(--evo-gold); }
+.cmb-reader__notice { font-size: .88rem; color: #eee0d0; }
+.cmb-chapter-nav {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 2px solid #9b672f;
+  border-radius: .85rem;
+  background: #190e0b;
+  color: #fff7ea;
+}
+.cmb-chapter-nav__links { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.cmb-evolution__link:focus-visible,
+.cmb-reader input:focus-visible,
+.cmb-reader a:focus-visible,
+.cmb-chapter-nav a:focus-visible,
+.dna-gate-research a:focus-visible {
+  outline: 3px solid #ffde83;
+  outline-offset: 4px;
+}
+.dna-gate-research { margin: 1.5rem 0; border-left: .25rem solid var(--evo-gold); padding: .8rem 1.1rem; }
+.dna-gate-research ul { margin-bottom: 0; }
+@media (max-width: 780px) {
+  .cmb-evolution__grid { grid-template-columns: 1fr; }
+  .cmb-evolution, .cmb-reader { padding: 1rem; }
+  .cmb-reader li { padding: .65rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cmb-evolution__link { transition: none !important; transform: none !important; }
+  .cmb-evolution__link:hover, .cmb-evolution__link:focus-visible { transform: none !important; }
+}
+@media (prefers-contrast: more) {
+  .cmb-evolution__link, .cmb-reader li, .cmb-chapter-nav { border-color: #ffda72; }
+}
