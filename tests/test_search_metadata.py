@@ -3,23 +3,27 @@
 from __future__ import annotations
 
 from html.parser import HTMLParser
+import importlib.util
 import json
 from pathlib import Path
-import re
-import xml.etree.ElementTree as ET
+import sys
 
 import pytest
 
-from scripts.enrich_search_metadata import (
-    PAGE_SPECS,
-    PREVIEW_IMAGE,
-    SITE_URL,
-    PageSpec,
-    enrich_html,
-    enrich_site,
-)
-
 ROOT = Path(__file__).resolve().parents[1]
+MODULE_PATH = ROOT / "scripts/enrich_search_metadata.py"
+MODULE_SPEC = importlib.util.spec_from_file_location("cmb_search_metadata", MODULE_PATH)
+assert MODULE_SPEC is not None and MODULE_SPEC.loader is not None
+SEO = importlib.util.module_from_spec(MODULE_SPEC)
+sys.modules[MODULE_SPEC.name] = SEO
+MODULE_SPEC.loader.exec_module(SEO)
+
+PAGE_SPECS = SEO.PAGE_SPECS
+PREVIEW_IMAGE = SEO.PREVIEW_IMAGE
+SITE_URL = SEO.SITE_URL
+PageSpec = SEO.PageSpec
+enrich_html = SEO.enrich_html
+enrich_site = SEO.enrich_site
 
 
 class HeadInspector(HTMLParser):
