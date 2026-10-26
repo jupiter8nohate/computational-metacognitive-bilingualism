@@ -5,7 +5,11 @@ import json
 import tempfile
 from pathlib import Path
 
-from scripts.audit_evolution import ROOT, audit
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from audit_evolution import audit
 
 
 def test_canonical_upgrade_audit() -> None:
