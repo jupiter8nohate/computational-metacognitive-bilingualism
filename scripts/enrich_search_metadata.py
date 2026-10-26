@@ -109,7 +109,7 @@ REPLACED_META = {
 META_RE = re.compile(r"<meta\b[^>]*>", flags=re.IGNORECASE | re.DOTALL)
 ATTR_RE = re.compile(r"\b(?:name|property)\s*=\s*([\"'])(.*?)\1", flags=re.IGNORECASE | re.DOTALL)
 TITLE_RE = re.compile(r"<title\b[^>]*>.*?</title\s*>", flags=re.IGNORECASE | re.DOTALL)
-MANAGED_RE = re.compile(re.escape(START) + r".*?" + re.escape(END), flags=re.DOTALL)
+MANAGED_RE = re.compile(re.escape(START) + r".*?" + re.escape(END) + r"\n?", flags=re.DOTALL)
 HEAD_CLOSE_RE = re.compile(r"</head\s*>", flags=re.IGNORECASE)
 
 
