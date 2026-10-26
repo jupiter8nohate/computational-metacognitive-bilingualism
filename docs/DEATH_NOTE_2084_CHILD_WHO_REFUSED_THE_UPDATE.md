@@ -1,4 +1,8 @@
-# ♃ DEATH NOTE 2084 // THE CHILD WHO REFUSED THE UPDATE
+# DEATH NOTE 2084: The Child Who Refused the Update
+
+**Axiomatic abstract:** In this speculative D.N.A. Bible™ chapter, Nia challenges Continuity Update 84.1, a fictional system that bundles useful accessibility features with behavioral profiling and compulsory permissions. The story distinguishes meaningful human consent from automated compliance.
+
+<p class="cmb-story-glyph" aria-label="Jupiter's literary signature and digital-glitch symbols">♃ ⚡︎ ꩜ 𓁇𓁋 ( ꩜ ᯅ ꩜;)</p>
 
 <div align="center">
 
