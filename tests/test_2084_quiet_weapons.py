@@ -1,6 +1,8 @@
 """Publication and clinical-boundary guards for the fictional Quiet Weapons dossier."""
 
 from pathlib import Path
+import re
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = "DEATH_NOTE_2084_QUIET_WEAPONS_TEN_FALSE_DIAGNOSES"
@@ -43,7 +45,8 @@ def test_emergency_boundaries_and_source_requirements() -> None:
     assert "no evidence that the street had become a rendering" in text.lower()
     assert "National Institute of Mental Health" in text
     assert "World Health Organization" in text
-    assert "uspto.gov" in text
+    source_links = re.findall(r"\]\((https://[^)\s]+)\)", text)
+    assert any(urlsplit(url).hostname == "www.uspto.gov" for url in source_links)
     assert "AI-assisted development" in text
     assert "HUMAN_AGENCY > MACHINE_AUTHORITY" in text
 
