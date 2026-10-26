@@ -1,0 +1,53 @@
+"""Glitch Eye perception subsystem for CMB agents."""
+
+from .collectors import (
+    CollectorError,
+    GitCommit,
+    build_cochange_relations,
+    collect_git_commits,
+    collect_provenance_drift,
+    collect_python_import_pairs,
+    collect_repository_state,
+    extract_invariant_signature,
+    observe_repository,
+    parse_git_log,
+    perception_to_dict,
+)
+from .engine import (
+    EXPERIMENTAL,
+    OBSERVE_ONLY,
+    Eye,
+    EyeProposal,
+    GlitchEyeEngine,
+    Perception,
+    build_default_engine,
+    hidden_coupling_detector,
+    propose_composite_eye,
+    provenance_drift_detector,
+    semantic_parallax_detector,
+)
+
+__all__ = [
+    "EXPERIMENTAL",
+    "OBSERVE_ONLY",
+    "CollectorError",
+    "Eye",
+    "EyeProposal",
+    "GitCommit",
+    "GlitchEyeEngine",
+    "Perception",
+    "build_cochange_relations",
+    "build_default_engine",
+    "collect_git_commits",
+    "collect_provenance_drift",
+    "collect_python_import_pairs",
+    "collect_repository_state",
+    "extract_invariant_signature",
+    "hidden_coupling_detector",
+    "observe_repository",
+    "parse_git_log",
+    "perception_to_dict",
+    "propose_composite_eye",
+    "provenance_drift_detector",
+    "semantic_parallax_detector",
+]
