@@ -1,0 +1,74 @@
+/* Quiet Weapons // Silent Wars. Scoped D.N.A. Bible visual system.
+   Red, gold, and deep charcoal; no dependencies or motion required. */
+.quiet-weapons-hero {
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  margin: 1.4rem 0 1.8rem;
+  padding: clamp(1.4rem, 5vw, 3.5rem) clamp(.9rem, 4vw, 2rem);
+  color: #fff8e7;
+  border: 2px solid #ffc72c;
+  border-radius: 13px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% -15%, rgba(255,199,44,.26), transparent 50%),
+    repeating-linear-gradient(130deg, transparent 0, transparent 25px, rgba(255,199,44,.035) 26px, transparent 27px),
+    linear-gradient(148deg, #0b0b0c 0%, #3a110a 53%, #0b0b0c 100%);
+  box-shadow: 0 14px 30px rgba(0,0,0,.23), inset 0 0 0 6px rgba(218,41,28,.2);
+}
+.quiet-weapons-hero::before {
+  content: "";
+  position: absolute;
+  width: min(30vw, 190px);
+  aspect-ratio: 1;
+  left: 50%;
+  bottom: -10%;
+  transform: translateX(-50%);
+  border: 2px solid rgba(255,199,44,.15);
+  clip-path: polygon(50% 1%, 99% 100%, 1% 100%);
+  pointer-events: none;
+}
+.quiet-weapons-hero .quiet-weapons-eyes {
+  font-size: clamp(1rem, 3.5vw, 2rem);
+  line-height: 1.6;
+  color: #ffd66b;
+  overflow-wrap: anywhere;
+}
+.quiet-weapons-hero .quiet-weapons-kicker {
+  color: #ffe3a5;
+  font-size: .79rem;
+  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.quiet-weapons-hero h2 {
+  color: #fffdf6;
+  border: 0;
+  text-shadow: 2px 3px 0 #a9160d;
+  font-size: clamp(1.85rem, 5.6vw, 3.8rem);
+  line-height: 1.07;
+  letter-spacing: .045em;
+  margin: .75rem 0 1.1rem;
+}
+.quiet-weapons-hero h2::after { display: none; }
+.quiet-weapons-hero .quiet-weapons-subtitle {
+  color: #ffc72c;
+  font-size: clamp(.94rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  margin: 1rem auto;
+  max-width: 42rem;
+}
+.quiet-weapons-hero .quiet-weapons-byline { color: #fff0d2; font-size: .95rem; }
+.quiet-weapons-hero .quiet-weapons-glyph {
+  color: #ffd66b;
+  font-size: clamp(1rem, 4vw, 1.65rem);
+  overflow-wrap: anywhere;
+}
+@media(max-width: 640px) {
+  .quiet-weapons-hero { padding: 1.45rem .75rem; }
+  .quiet-weapons-hero .quiet-weapons-kicker { letter-spacing: .035em; }
+  .quiet-weapons-hero h2 { letter-spacing: 0; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .quiet-weapons-hero, .quiet-weapons-hero * { animation: none !important; transition: none !important; }
+}
