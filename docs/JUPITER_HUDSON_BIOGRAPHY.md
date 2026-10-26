@@ -28,7 +28,7 @@ description: "A source-aware biography of Jupiter Hudson (Joseph Q. Hudson / Wis
 *American writer, creative technologist, and neurodiversity advocate*
 
 <figure>
-  <img src="media/cmb-red-gold-seal.svg" width="120" height="120" alt="Red-and-gold seal of the Computational Metacognitive Bilingualism project">
+  <img src="../media/cmb-red-gold-seal.svg" width="120" height="120" alt="Red-and-gold seal of the Computational Metacognitive Bilingualism project">
   <figcaption>♃ CMB™ / WisdomLoveThePoet / Jupiter 8</figcaption>
 </figure>
 
