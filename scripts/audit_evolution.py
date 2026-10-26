@@ -64,10 +64,8 @@ def audit(root: Path = ROOT) -> list[str]:
 
     gateway = re.search(r'<nav id="cmb-evolution-gates"[^>]*>(.*?)</nav>', home, re.S)
     routes = re.findall(r'<a class="cmb-evolution__link" href="([^"]+)"', gateway.group(1)) if gateway else []
-    if routes != ("2084/", "concepts/what-is-cmb/", "GLITCHOLOGY_SYMBOL_DICTIONARY/", "EVIDENCE_REVIEW_REGISTER/"):
-        # Tuple comparison is intentional: explicit order is part of the entry design.
-        if routes != ["2084/", "concepts/what-is-cmb/", "GLITCHOLOGY_SYMBOL_DICTIONARY/", "EVIDENCE_REVIEW_REGISTER/"]:
-            errors.append("Four-gateway navigation missing or out of order")
+    if routes != ["2084/", "concepts/what-is-cmb/", "GLITCHOLOGY_SYMBOL_DICTIONARY/", "EVIDENCE_REVIEW_REGISTER/"]:
+        errors.append("Four-gateway navigation missing or out of order")
     if 'stylesheets/evolution.css' not in config or 'javascripts/evolution-reader.js' not in config:
         errors.append("Evolution assets not registered in MkDocs")
     for requirement in ("prefers-reduced-motion", ":focus-visible", "max-width: 780px"):
@@ -77,7 +75,10 @@ def audit(root: Path = ROOT) -> list[str]:
         errors.append("Reader must not track or retain completed choices")
     if len(re.findall(r'data-chapter="\d+"', reader)) != 9 or len(re.findall(r'data-era="sequel"', reader)) != 4:
         errors.append("Canonical nine-transmission reader or sequel distinction missing")
+    from enrich_search_metadata import PAGE_SPECS
     for route in NINE:
+        if route + "/" not in PAGE_SPECS:
+            errors.append(f"SEO page registry missing canonical route: {route}")
         if f'../{route}/' not in reader or not (root / "docs" / f"{route}.md").is_file():
             errors.append(f"Missing canonical transmission route: {route}")
         if route not in js:
