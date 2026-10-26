@@ -59,6 +59,8 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 **[𓂀 Quiet Weapons, Silent Wars: The Ten False Diagnoses](../DEATH_NOTE_2084_QUIET_WEAPONS_TEN_FALSE_DIAGNOSES.md)** introduces ten named fictional phenomena, original narrative testimony, and a plain-language glossary about predictive systems and psychological capture. Its ten labels are **literary inventions, not clinically recognized disorders**. The chapter follows Station Seven as a **companion**, not a tenth transmission.
 
+**[Scientific Evidence Mirror: Ten Signals, Ten Limits](../DEATH_NOTE_2084_QUIET_WEAPONS_EVIDENCE_MIRROR.md)** examines ten real research fields related to the Quiet Weapons fiction, with primary-study links and explicit boundaries against invented psychiatric and neurobiological claims.
+
 [**WITNESS://BACKTRACE verification protocol**](../WITNESS_BACKTRACE_PROTOCOL.md) explains how to inspect, challenge, and update the ten real-world citations without misrepresenting fiction as evidence.
 
 **REAL-WORLD EVIDENCE COMPANION:** [𓂀 The Evidence Ledger: Ten Mechanisms Behind the Fiction](../DEATH_NOTE_2084_EVIDENCE_LEDGER.md) examines documented data collection, employment and credit algorithms, accessible testing, biometric errors, identity dependencies, repair control, and graph modeling. Every entry states both what primary sources support and what remains fictional.
