@@ -53,6 +53,7 @@ REQUIRED_PUBLIC_PATHS = (
     "DEATH_NOTE_2084_WITNESS_IN_LIGHTHOUSE/index.html",
     "DEATH_NOTE_2084_STATION_SEVEN/index.html",
     "DEATH_NOTE_2084_QUIET_WEAPONS_TEN_FALSE_DIAGNOSES/index.html",
+    "DEATH_NOTE_2084_QUIET_WEAPONS_EVIDENCE_MIRROR/index.html",
     "stylesheets/quiet-weapons.css",
     "datasets/2084-witness-evidence.v1.json",
     "robots.txt",

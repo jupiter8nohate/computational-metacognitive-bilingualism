@@ -15,6 +15,8 @@
 
 **Placement:** A separate companion dossier following [Station Seven](DEATH_NOTE_2084_STATION_SEVEN.md); not a numbered tenth transmission and not a claim about real events.
 
+**Research companion:** [𓂀 The Scientific Evidence Mirror: Ten Signals, Ten Limits](DEATH_NOTE_2084_QUIET_WEAPONS_EVIDENCE_MIRROR.md) audits which real findings inform these fictional designations and which causal claims remain unsupported.
+
 **Explore:** [2084 reading order](2084/index.md) · [Story library](story-universe/index.md) · [Trademark and authorship notice](DNA_BIBLE_TRADEMARK.md) · [Real-world evidence ledger](DEATH_NOTE_2084_EVIDENCE_LEDGER.md)
 
 <script type="application/ld+json">
