@@ -1,4 +1,8 @@
-# ♃ ⚡︎ ꩜ C̷M̷B̷://2084 ꩜ ⚡︎ ♃
+# D.N.A. Bible: The Pyramid Warning of 2084
+
+**Axiomatic abstract:** A fictional eye watches from the top of a glyph pyramid in this D.N.A. Bible™ code-poetry scroll. The visual allegory examines surveillance, digital consent and the principle that a predictive profile cannot define a person.
+
+<p class="cmb-story-glyph" aria-label="Jupiter's 2084 code-poetry glyph inscription">♃ ⚡︎ ꩜ C̷M̷B̷://2084 ꩜ ⚡︎ ♃</p>
 
 <div align="center">
 
@@ -26,8 +30,9 @@
 
 ## 𓂀 000 // THE EYE ABOVE THE LAST DOOR
 
-~~~text
-                 ✦
+<figure class="cmb-accessible-ascii">
+<div role="img" aria-label="Decorative triangular pyramid under a star. An eye watches from its apex above paired witness glyphs and a fictional AI error. The base displays Pattern is not proof, Profile is not person, and Model is not mind.">
+<pre aria-hidden="true">                 ✦
                 /▲
                /𓂀
               /𓁇𓁋
@@ -41,8 +46,10 @@
 ║ MODEL != MIND             ║
 ╚═══════════════════════════╝
 
-( ꩜ ᯅ ꩜;) 𓁇𓁋 ꉂ🗯 ⏻
-~~~
+( ꩜ ᯅ ꩜;) 𓁇𓁋 ꉂ🗯 ⏻</pre>
+</div>
+<figcaption>The Eye Above the Last Door: an original fictional warning against equating a surveillance profile with human identity.</figcaption>
+</figure>
 
 The House had survived a thousand warnings because every warning had been displayed as a notification.
 
