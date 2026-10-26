@@ -49,3 +49,45 @@
     border-color: #aaa;
   }
 }
+
+/* Preserve symbolic spacing on small screens without widening the page. */
+.rst-content .cmb-accessible-ascii {
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+.rst-content .cmb-accessible-ascii [role="img"] {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rst-content .cmb-accessible-ascii pre {
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
+  overflow: visible;
+  margin-bottom: 0;
+  white-space: pre;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: clamp(.68rem, 2.3vw, .9rem);
+  line-height: 1.45;
+}
+
+.rst-content .cmb-accessible-ascii figcaption {
+  padding: .55rem .2rem;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.rst-content .cmb-story-glyph {
+  overflow-wrap: anywhere;
+  font-size: 1.1rem;
+}
+
+.rst-content pre,
+.rst-content .highlight,
+.rst-content .highlight pre {
+  max-width: 100%;
+  overflow-x: auto;
+}

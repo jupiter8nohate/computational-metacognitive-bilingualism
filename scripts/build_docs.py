@@ -308,6 +308,11 @@ def build_site(destination: Path) -> tuple[int, int]:
             cwd=ROOT, check=True,
         )
         stage_public_assets(stage)
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts/enrich_search_metadata.py"),
+             "--site-dir", str(stage)],
+            cwd=ROOT, check=True,
+        )
         brand_published_pages(stage)
         counts = check_site(stage)
         subprocess.run(
