@@ -90,6 +90,20 @@
 <p id="dna-gate-outcome" role="status" aria-live="polite">Your selections are not transmitted, saved, scored, or tracked by this interactive story.</p>
 </div>
 <p><a href="../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/">Read the full Seven-Letter Ledger →</a></p>
+<aside class="dna-gate-research" aria-label="Evidence boundaries for the seven fictional gates">
+<h3>𓁇𓁋 SEVEN GATES // RESEARCH CROSSWALK</h3>
+<p><strong>Fiction is not evidence.</strong> The seven letters are an authored story structure, not evidence of a single functioning technology or institution. Every linked subject is context, not independent confirmation of the fictional Ministry.</p>
+<ul>
+<li><strong>L / Ledger:</strong> <a href="../DEATH_NOTE_2084_EVIDENCE_LEDGER/">Records, evidence and correction</a></li>
+<li><strong>U / Universal:</strong> <a href="../WITNESS_BACKTRACE_PROTOCOL/">Tracing source and authority</a></li>
+<li><strong>C / Compliance:</strong> <a href="../concepts/cognitive-sovereignty/">Accessibility, consent and agency</a></li>
+<li><strong>I / Inference:</strong> <a href="../concepts/pattern-not-proof/">Inference is not first-person testimony</a></li>
+<li><strong>F / Forecasting:</strong> <a href="../DEATH_NOTE_2084_EVIDENCE_LEDGER/">Prediction and decision boundaries</a></li>
+<li><strong>E / Extraction:</strong> <a href="../PRIVACY_AND_ANALYTICS/">Privacy and necessity of collection</a></li>
+<li><strong>R / Ranking:</strong> <a href="../EVIDENCE_REVIEW_REGISTER/">Contestability and human review</a></li>
+</ul>
+<p><a href="../library/cmb-gate-claims.v1.json">Download the machine-readable seven-gate editorial crosswalk</a> (all records pending independent review).</p>
+</aside>
 </section>
 
 <section aria-labelledby="dna-atlas-heading">
