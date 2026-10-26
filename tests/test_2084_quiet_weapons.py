@@ -39,7 +39,7 @@ def test_emergency_boundaries_and_source_requirements() -> None:
     assert "prompt medical attention" in text
     assert "Real catatonia/unresponsiveness" in text
     assert "no evidence that the street had become a rendering" in text.lower()
-    assert "NIMH" in text
+    assert "National Institute of Mental Health" in text
     assert "World Health Organization" in text
     assert "uspto.gov" in text
     assert "AI-assisted development" in text
