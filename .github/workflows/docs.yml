@@ -54,6 +54,8 @@ on:
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
+      - "scripts/enrich_search_metadata.py"
+      - "tests/test_search_metadata.py"
       - "scripts/verify_2084_evidence.py"
       - "tests/test_2084_witness_evidence.py"
       - "tests/test_site_integrity.py"
