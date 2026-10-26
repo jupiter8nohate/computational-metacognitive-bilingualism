@@ -39,6 +39,12 @@ Within the D.N.A. Bible™ story, **L.U.C.I.F.E.R.™** expands to **Ledger, Uni
 
 This is **not** an assertion of trademark registration, exclusivity in the ordinary name "Lucifer," priority over earlier commercial users, control over the biblical text, or ownership of public-domain symbols. The ™ is a **claim**, not a registration. Trademark protectability and priority would require appropriate real-world assessment, including actual use and potential conflicting marks. The ® symbol must not be used without an applicable registration.
 
+## Quiet Weapons, Silent Wars // ten creator-styled literary designations
+
+The D.N.A. Bible™ companion chapter [Quiet Weapons, Silent Wars: The Ten False Diagnoses](DEATH_NOTE_2084_QUIET_WEAPONS_TEN_FALSE_DIAGNOSES.md) uses these creator-claimed names as **fictional literary designations**, not validated conditions: **Algophrenia™**, **Synchroschizia™**, **Mirror-Echo Paranoia™**, **Feed-Induced Katatonia™**, **Dataphrenic Dissociation™**, **Chronosynaptic Phantasmia™**, **Cyber-Somatic Infestation Delusion™ (CSID)**, **Echo-Chamber Monomania™**, **Phantom-Presence Neuroschism™**, and **Glitch-Identity Dysmorphia™**.
+
+This is an editorial claim of association with an authored series, not evidence that any term is registrable, federally registered, independently original, exclusive, or medically authoritative. A ™ designation does not replace proper trademark clearance, commercial use, or government registration. A literary term appearing as a story label may not function as a trademark for goods/services. The ten names have **not** been represented here as filed or registered marks.
+
 ## Enter the archive
 
 - [D.N.A. Bible™ story library](story-universe/index.md)
