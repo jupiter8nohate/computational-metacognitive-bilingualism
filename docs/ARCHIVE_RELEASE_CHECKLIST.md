@@ -24,6 +24,16 @@
 - [ ] Record exported canonical files, SHA-256, tag/commit, title, creator, license and recovery instructions.
 - [ ] Test restoration of a copy independent of GitHub Pages.
 
+## Ten-upgrade review branch (not part of the frozen release candidate)
+
+[Read the scope and exceptions](EVOLUTION_RELEASE_NOTES.md). Reader enhancements, a unified visual layer, navigation, seven-gate editorial metadata, and browser regression tests are proposals for review outside the existing frozen v1.5.0-rc.1 commit. They must not be mislabeled as changes covered by its preexisting signatures.
+
+- [ ] Review the usability and visual modifications as explicit stabilization-freeze exceptions, or defer them to a post-v1.5 release.
+- [ ] Confirm existing canonical chapters, IDs, and JSON semantics are not rewritten.
+- [ ] Review all new dependencies and screenshot artifacts for privacy and accessibility.
+- [ ] Keep project-provided evidence distinct from independently inspected sources.
+- [ ] Merge only after protected-branch checks and required human approvals succeed.
+
 ## Recovery contract
 
 A future export manifest should be deterministic and source-path-preserving. An SHA-256 digest detects modification of archived bytes; it does not establish original human authorship, license ownership, permanent availability, or legal enforceability.
