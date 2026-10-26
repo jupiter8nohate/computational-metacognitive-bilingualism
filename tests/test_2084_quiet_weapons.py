@@ -31,7 +31,9 @@ def test_all_ten_coined_terms_present_and_marked_as_literary() -> None:
     assert "not recognized psychiatric diagnoses" in text
     assert "FICTIONAL MISCLASSIFICATION" in text
     assert "not a numbered tenth transmission" in text.lower()
-    assert "®" not in text
+    assert "No ® is claimed" in text
+    for mark in MARKS:
+        assert mark.replace("™", "®") not in text
 
 
 def test_emergency_boundaries_and_source_requirements() -> None:
