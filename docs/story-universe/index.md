@@ -64,6 +64,8 @@ An unlisted hearing room holds the case files of people whose appeals were colla
 
 After Station Seven, a fictional Wellness Mirror manufactures ten clinical-sounding labels and mistakes marketing for medicine. Jupiter, Nia, Mara, and Edda confront the false diagnosis machinery. Includes ten creator-styled literary terms with ™, a glossary, and explicit medical and evidence boundaries. **Not a numbered tenth transmission.**
 
+**[Research companion: The Evidence Mirror - Ten Signals, Ten Limits](../DEATH_NOTE_2084_QUIET_WEAPONS_EVIDENCE_MIRROR.md)** connects all ten story labels to carefully bounded original studies and clinical references. The literary labels are not medical diagnoses.
+
 [**𓁇𓁋 WITNESS://BACKTRACE: Inspect Sources and Challenge Claims**](../WITNESS_BACKTRACE_PROTOCOL.md) documents the public-source review discipline behind the ten-mechanism research companion.
 
 **[𓂀 THE EVIDENCE LEDGER: Ten Documented Mechanisms, Ten Boundaries](../DEATH_NOTE_2084_EVIDENCE_LEDGER.md)** is the public-source companion to the Sixth Transmission. It audits predictions, consent, identity, accessibility, and surveillance claims without confusing the fictional Ministry with real institutions.
