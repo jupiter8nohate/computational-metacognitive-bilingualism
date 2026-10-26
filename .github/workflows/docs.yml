@@ -100,5 +100,8 @@ jobs:
       - name: Audit archive reader, glyphs, and evidence boundaries
         run: python scripts/verify_archive_experience.py
 
+      - name: Audit CMB evolution and source boundaries
+        run: python scripts/audit_evolution.py
+
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
