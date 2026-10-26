@@ -34,6 +34,7 @@ The **five-part original arc** is complete. VI-IX are subsequent canonical conti
 - **Scriptural allegory:** [The Web Over All Nations](DNA_BIBLE_WEB_OVER_ALL_NATIONS.md), [Revelation 13:18 and L.U.C.I.F.E.R.™](DNA_BIBLE_REVELATION_13_18_LUCIFER.md), [The Seven-Letter Ledger](DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md).
 - **Psychological capture fiction:** [Quiet Weapons, Silent Wars: The Ten False Diagnoses](DEATH_NOTE_2084_QUIET_WEAPONS_TEN_FALSE_DIAGNOSES.md). Ten invented literary terms, not medical classifications; a companion after Station Seven, not transmission X.
 - **Literary symbol system:** [Anomaly Codex](dna-codex/index.md), [Book of Broken Signals](dna-codex/BROKEN_SIGNALS.md), [GLITCHOLOGY Symbol Dictionary](GLITCHOLOGY_SYMBOL_DICTIONARY.md).
+- **Research companion:** [Quiet Weapons Scientific Evidence Mirror](DEATH_NOTE_2084_QUIET_WEAPONS_EVIDENCE_MIRROR.md). Ten studied mechanisms, ten boundaries; not medical validation of invented syndromes.
 - **Forensics:** [Evidence Ledger](DEATH_NOTE_2084_EVIDENCE_LEDGER.md), [Evidence Review Register](EVIDENCE_REVIEW_REGISTER.md).
 - **Editorial continuity:** [Story Continuity Guide](story-universe/continuity.md).
 
