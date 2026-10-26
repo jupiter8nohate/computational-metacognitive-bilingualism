@@ -1,0 +1,85 @@
+{
+  "schema_version": "cmb.gate-claim-ledger.v1",
+  "type": "fiction-to-evidence-crosswalk",
+  "author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "disclaimer": "Gate scenarios are fiction; linked research surfaces provide context only. None of these entries certifies misconduct, a unified L.U.C.I.F.E.R. technology, or independent human review.",
+  "entries": [
+    {
+      "gate": "L",
+      "name": "LEDGER",
+      "question": "Can a person inspect and correct consequential records?",
+      "fiction_route": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "context_route": "DEATH_NOTE_2084_EVIDENCE_LEDGER/",
+      "classification": "literary_analogy",
+      "review_status": "pending",
+      "independently_reviewed": false,
+      "counterevidence": "Review pending; no conclusive claim asserted."
+    },
+    {
+      "gate": "U",
+      "name": "UNIVERSAL",
+      "question": "Are identity signals reused across services without a meaningful alternative?",
+      "fiction_route": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "context_route": "WITNESS_BACKTRACE_PROTOCOL/",
+      "classification": "literary_analogy",
+      "review_status": "pending",
+      "independently_reviewed": false,
+      "counterevidence": "Review pending; no conclusive claim asserted."
+    },
+    {
+      "gate": "C",
+      "name": "COMPLIANCE",
+      "question": "Is accessibility bundled with unnecessary collection?",
+      "fiction_route": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "context_route": "concepts/cognitive-sovereignty/",
+      "classification": "ethical_framework",
+      "review_status": "pending",
+      "independently_reviewed": false,
+      "counterevidence": "Review pending; no conclusive claim asserted."
+    },
+    {
+      "gate": "I",
+      "name": "INFERENCE",
+      "question": "Are predictions confused with first-person testimony?",
+      "fiction_route": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "context_route": "concepts/pattern-not-proof/",
+      "classification": "ethical_framework",
+      "review_status": "pending",
+      "independently_reviewed": false,
+      "counterevidence": "Review pending; no conclusive claim asserted."
+    },
+    {
+      "gate": "F",
+      "name": "FORECASTING",
+      "question": "What uncertainty accompanies a future risk estimate?",
+      "fiction_route": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "context_route": "DEATH_NOTE_2084_EVIDENCE_LEDGER/",
+      "classification": "documented_context_only",
+      "review_status": "pending",
+      "independently_reviewed": false,
+      "counterevidence": "Review pending; no conclusive claim asserted."
+    },
+    {
+      "gate": "E",
+      "name": "EXTRACTION",
+      "question": "Can a reader refuse nonessential behavioral collection?",
+      "fiction_route": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "context_route": "PRIVACY_AND_ANALYTICS/",
+      "classification": "ethical_framework",
+      "review_status": "pending",
+      "independently_reviewed": false,
+      "counterevidence": "Review pending; no conclusive claim asserted."
+    },
+    {
+      "gate": "R",
+      "name": "RANKING",
+      "question": "How can a contested score receive accountable human review?",
+      "fiction_route": "DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET/",
+      "context_route": "EVIDENCE_REVIEW_REGISTER/",
+      "classification": "ethical_framework",
+      "review_status": "pending",
+      "independently_reviewed": false,
+      "counterevidence": "Review pending; no conclusive claim asserted."
+    }
+  ]
+}
