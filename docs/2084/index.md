@@ -94,6 +94,10 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 **[𓂀 Read The Seven-Letter Ledger: Ten Biblical Witnesses and the Architecture of Digital Authority](../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md)**. Nia, Jupiter, and Mara confront the fictional Spiritual Spider, digital tenancy, and the linked L.U.C.I.F.E.R.™ apparatus. Includes independently verifiable links to scripture, FTC reports, European digital-law materials, NIST guidance, and a UN privacy report. These sources substantiate contextual concerns, **not** the reality of the future story or a literal prophecy. This remains a companion chapter outside the original five-transmission sequence.
 
+## 𓂀 The Seven Gates Pyramid // Complete Glyph Transmission
+
+**[𒄆 Read DEATH NOTE 2084: The Seven Gates Pyramid](../DEATH_NOTE_2084_SEVEN_GATES_PYRAMID.md)** preserves the complete symbolic pyramid, L.U.C.I.F.E.R.™ acronym, glitch-code, and the four cross-linked gates as one shareable companion artwork. Its fictional metaphors are explicitly separated from claims about real-world technology. This is not a sixth transmission.
+
 ## The people inside the mystery
 
 **Jupiter** follows the evidence even when it undermines his conclusions. He jokes when frightened, and must learn that being right about a system does not make him right about every person.
