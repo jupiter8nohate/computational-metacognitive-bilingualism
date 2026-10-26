@@ -9,6 +9,7 @@ theme:
   logo: media/cmb-red-gold-seal.svg
 nav:
   - Home: index.md
+  - Jupiter Hudson / Biography: JUPITER_HUDSON_BIOGRAPHY.md
   - D.N.A. Story Library:
       - Canonical Reader Map: ARCHIVE_READING_MAP.md
       - Start Reading: story-universe/index.md

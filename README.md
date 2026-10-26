@@ -5,6 +5,7 @@
 **D.N.A. Bible™ (Demons Need Attention):** This authored creative-book name also uses a claimed ™ mark. [Read the D.N.A. Bible™ naming, attribution, and trademark-status notice](docs/DNA_BIBLE_TRADEMARK.md). Neither ™ designation represents a confirmed trademark registration.
 
 **Canonical documentation:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/  
+**Creator biography:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_HUDSON_BIOGRAPHY/  
 **Concept library:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/  
 **Machine discovery:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json
 
