@@ -98,6 +98,7 @@
 <a class="cmb-action cmb-action--primary" href="concepts/what-is-cmb/">Understand CMB ↗</a>
 <a class="cmb-action cmb-action--secondary" href="2084/">Enter the Stories ↗</a>
 <a class="cmb-action cmb-action--quiet" href="DEVELOPERS/">Build and Verify ↗</a>
+<a class="cmb-action cmb-action--quiet" href="JUPITER_HUDSON_BIOGRAPHY/">Meet the Creator ↗</a>
 </nav>
 <p class="cmb-stage-signature">♃ 𓁹 // JUPITER 8 // SEARCH · VERIFY · CHOOSE</p>
 </div>
