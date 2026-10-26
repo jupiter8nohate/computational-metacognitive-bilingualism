@@ -57,6 +57,10 @@
 
 These are **stabilization and accessibility enhancements**, not evidence that unsigned material has passed independent review or that a DOI or indexing has been obtained.
 
+## ♃ Ten-upgrade evolution proposal
+
+An independent review branch proposes four clear reading entrances, nine-transmission progress, a red-gold accessible design layer, a seven-gate editorial evidence crosswalk, registry consistency checks, Chromium/axe-core screenshots and a release-boundary review. See [the evolution release notes](docs/EVOLUTION_RELEASE_NOTES.md) for precise status and limitations. These proposed UX features are not part of the frozen v1.5 release candidate and are not externally validated by their appearance in a PR.
+
 ## 🧊 v1.5 Stabilization Mode
 
 Feature growth is intentionally frozen from commit

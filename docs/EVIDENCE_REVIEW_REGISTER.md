@@ -4,6 +4,12 @@
 
 This register complements the existing [ten-record evidence dataset](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/datasets/2084-witness-evidence.v1.json) and the [WITNESS://BACKTRACE protocol](WITNESS_BACKTRACE_PROTOCOL.md). A structural CI pass does not mean any current source link or claim has been independently reviewed.
 
+## Fiction-to-evidence crosswalk: seven gates
+
+The D.N.A. Bible™ interactive Seven Gates companion now includes [a seven-record machine-readable crosswalk](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/cmb-gate-claims.v1.json). Each record contains a fictional letter, a falsifiable research question, a story route, a context route, and a pending human-review state. The crosswalk's existence **does not independently validate the contextual sources**. Readers should challenge misleading links and request a documented correction.
+
+A claim can advance from **pending** only after a named human reviewer records the exact claim, original source, date examined, direct support, counterevidence, and a review or correction link. Structural automation may detect inconsistencies but may not award independent-review status.
+
 ## Claim categories
 
 | Category | Rule |

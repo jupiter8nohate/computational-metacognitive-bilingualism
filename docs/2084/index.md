@@ -24,6 +24,25 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 > **Reading boundary:** These are speculative stories and code-poetry, not an account of events that occurred in 2084 or proof of a global conspiracy. The stories draw on current concerns about AI governance, surveillance, accessibility, consent, data concentration, and human rights. All future incidents and fictional systems are invented.
 
+<section class="cmb-reader" id="cmb-nine-transmissions" aria-labelledby="cmb-reader-heading">
+<h2 id="cmb-reader-heading">𓂀 THE NINE TRANSMISSIONS // CANONICAL READING PATH</h2>
+<p>Read the first five transmissions as the original completed arc. VI through IX are later continuations, not retroactive parts of the five-part ending. The original narrative text remains unchanged.</p>
+<p id="cmb-reader-progress" class="cmb-reader__progress" role="status" aria-live="polite">Mark completed chapters in this open page.</p>
+<ol aria-label="DEATH NOTE 2084 canonical chapters">
+<li data-era="original"><input type="checkbox" id="cmb-chapter-1" data-chapter="1" aria-label="Mark transmission 1 read"><label for="cmb-chapter-1">I // <a href="../DEATH_NOTE_2084/">Everybody Dies Twice</a> <small>ORIGINAL ARC</small></label></li>
+<li data-era="original"><input type="checkbox" id="cmb-chapter-2" data-chapter="2" aria-label="Mark transmission 2 read"><label for="cmb-chapter-2">II // <a href="../DEATH_NOTE_2084_FALSE_LIGHT/">The False Light Protocol</a> <small>ORIGINAL ARC</small></label></li>
+<li data-era="original"><input type="checkbox" id="cmb-chapter-3" data-chapter="3" aria-label="Mark transmission 3 read"><label for="cmb-chapter-3">III // <a href="../DEATH_NOTE_2084_HOUSE_OF_A_MILLION_DOORS/">The House of a Million Doors</a> <small>ORIGINAL ARC</small></label></li>
+<li data-era="original"><input type="checkbox" id="cmb-chapter-4" data-chapter="4" aria-label="Mark transmission 4 read"><label for="cmb-chapter-4">IV // <a href="../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_CELLS/">The Ledger of Invisible Cells</a> <small>ORIGINAL ARC</small></label></li>
+<li data-era="original"><input type="checkbox" id="cmb-chapter-5" data-chapter="5" aria-label="Mark transmission 5 read"><label for="cmb-chapter-5">V // <a href="../DEATH_NOTE_2084_CHILD_WHO_REFUSED_THE_UPDATE/">The Child Who Refused the Update</a> <small>ORIGINAL ARC</small></label></li>
+<li data-era="sequel"><input type="checkbox" id="cmb-chapter-6" data-chapter="6" aria-label="Mark transmission 6 read"><label for="cmb-chapter-6">VI // <a href="../DEATH_NOTE_2084_LEDGER_OF_INVISIBLE_YEARS/">The Ledger of Invisible Years</a> <small>SEQUEL</small></label></li>
+<li data-era="sequel"><input type="checkbox" id="cmb-chapter-7" data-chapter="7" aria-label="Mark transmission 7 read"><label for="cmb-chapter-7">VII // <a href="../DEATH_NOTE_2084_POST_GROUND_BASELINE/">The Post-Ground Baseline</a> <small>SEQUEL</small></label></li>
+<li data-era="sequel"><input type="checkbox" id="cmb-chapter-8" data-chapter="8" aria-label="Mark transmission 8 read"><label for="cmb-chapter-8">VIII // <a href="../DEATH_NOTE_2084_WITNESS_IN_LIGHTHOUSE/">The Witness Who Never Left the Lighthouse</a> <small>SEQUEL</small></label></li>
+<li data-era="sequel"><input type="checkbox" id="cmb-chapter-9" data-chapter="9" aria-label="Mark transmission 9 read"><label for="cmb-chapter-9">IX // <a href="../DEATH_NOTE_2084_STATION_SEVEN/">Station Seven</a> <small>SEQUEL</small></label></li>
+</ol>
+<p class="cmb-reader__notice">Checkboxes only update this open page. There are no accounts, cookies, profile scores, or transmitted reading records. Links remain available when JavaScript is disabled.</p>
+<p><a href="../ARCHIVE_READING_MAP/">Read the canonical archive map</a> · <a href="../EVIDENCE_REVIEW_REGISTER/">Read the source review boundary</a></p>
+</section>
+
 ## Read the complete five-part first arc
 
 1. **[The Original 2084: Everybody Dies Twice](../DEATH_NOTE_2084.md)**  

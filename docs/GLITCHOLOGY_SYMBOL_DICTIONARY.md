@@ -17,6 +17,10 @@
 | GLT-0035 | .꩜ | POST_OBSERVATION | Reflection after an event has changed the observer |
 | GLT-0036 | ‹— | BACKTRACE | Follow a claim toward its original source |
 
+## Canonical data boundary
+
+The [versioned reader-symbol JSON](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/library/glitchology-reader-symbols.v1.json) is the single authoritative source for GLT-0027 through GLT-0036 IDs, names, Unicode spellings, and creator-defined meanings. This Markdown edition is a human-readable mirror. `scripts/audit_evolution.py` validates names and order to detect schema drift; changes require a reviewed revision. GLITCHOLOGY is symbolic authorship, not an inherent Unicode translation or cryptographic enforcement mechanism.
+
 ## Reader grammar
 
 ```text

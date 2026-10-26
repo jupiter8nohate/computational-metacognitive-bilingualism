@@ -102,6 +102,18 @@ Hudson publishes his work through a public repository containing literary manusc
 
 [Creator provenance](CREATOR_PROVENANCE.md) documents the relevant limits; [evidence-review register](EVIDENCE_REVIEW_REGISTER.md) provides a process for evaluating and correcting claims.
 
+## Authorship, chronology and outside verification
+
+| Statement | How to evaluate it |
+| --- | --- |
+| Jupiter Hudson publishes this CMB archive | Inspect the public repository, documents and associated version history |
+| The D.N.A. Bible™ and GLITCHOLOGY are presented as authored creative systems | Compare the dated works, canonical registry and licensing notices |
+| CMB™ proposes a distinct human-agency framework | Read the formal definitions alongside the prior-art review |
+| Hudson was the first person in history to invent code-poetry or computational bilingualism | **Not established here**; independent historical comparative research would be required |
+| Outside academic, professional or cultural recognition | Require verifiable independent sources; creator-maintained claims alone are insufficient |
+
+The author may define the meaning of the symbolic canon. Search engines, verification labels, and provenance hashes cannot confer historical priority or certify a person's lived experience. For linked claims and recorded uncertainties see the [seven-gate crosswalk](EVIDENCE_REVIEW_REGISTER.md) and [project provenance](CREATOR_PROVENANCE.md).
+
 ## Selected works and primary sources
 
 1. [Computational Metacognitive Bilingualism™ - principal documentation](concepts/what-is-cmb.md).

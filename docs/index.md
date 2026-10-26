@@ -104,6 +104,19 @@
 </div>
 </section>
 
+<section class="cmb-evolution" aria-labelledby="cmb-evolution-heading">
+<p class="cmb-evolution__eyebrow">♃ 𓂀 𓁇𓁋 // THE HUMAN SOVEREIGNTY ARCHIVE</p>
+<h2 id="cmb-evolution-heading">FOUR GATEWAYS // ONE HUMAN VOICE</h2>
+<p class="cmb-evolution__intro">Choose the form of knowledge you want to examine. A story is not a source. A source is not a verdict. A computer can assist interpretation without taking the right to define the human experience.</p>
+<nav id="cmb-evolution-gates" class="cmb-evolution__grid" aria-label="Four ways into the CMB archive">
+<a class="cmb-evolution__link" href="2084/"><strong>𓂀 01 // ENTER THE STORY</strong><span>Read all nine DEATH NOTE 2084 transmissions in canonical sequence, from Everybody Dies Twice to Station Seven.</span></a>
+<a class="cmb-evolution__link" href="concepts/what-is-cmb/"><strong>♃ 02 // EXPLORE CMB™</strong><span>Study computational metacognitive bilingualism, cognitive sovereignty, and human-agency design boundaries.</span></a>
+<a class="cmb-evolution__link" href="GLITCHOLOGY_SYMBOL_DICTIONARY/"><strong>🦩 03 // DECODE GLITCHOLOGY</strong><span>Trace the ten authored symbols through their stable registry IDs, literary meanings, and original canon.</span></a>
+<a class="cmb-evolution__link" href="EVIDENCE_REVIEW_REGISTER/"><strong>𓁇𓁋 04 // VERIFY THE EVIDENCE</strong><span>Inspect claims, context, counterevidence, review status and the limits of automated verification.</span></a>
+</nav>
+<p class="cmb-evolution__eyebrow">PATTERN ≠ PROOF · PROFILE ≠ PERSON · HUMAN_AGENCY &gt; MACHINE_AUTHORITY</p>
+</section>
+
 <section class="cmb-archive-gate" aria-labelledby="cmb-archive-gate-title">
 <div class="cmb-archive-pyramid" aria-hidden="true"><span>𓂀</span></div>
 <p class="cmb-archive-kicker">♃ 𓁹 // THE LIVING ARCHIVE // THREE DOORS</p>

@@ -68,3 +68,10 @@ not a substitute for the host-root policy.
 If the metadata generator fails, the build fails before publication. Source
 Markdown remains unchanged, and the previous published artifact remains intact
 until a validated deployment replaces it.
+
+## Evolution review: new reader and discovery routes
+
+The homepage now proposes four fixed editorial pathways: `2084/`, `concepts/what-is-cmb/`, `GLITCHOLOGY_SYMBOL_DICTIONARY/`, and `EVIDENCE_REVIEW_REGISTER/`. These use existing published routes rather than inventing aliases or competing canonical pages.
+
+The new `scripts/audit_evolution.py` source audit validates the nine reader slugs and the seven-gate editorial ledger. The existing `scripts/enrich_search_metadata.py` generator remains responsible for canonical titles, descriptions and JSON-LD; `scripts/build_docs.py` remains responsible for link integrity. Actual indexing must still be verified through Google Search Console or equivalent crawler logs.
+
