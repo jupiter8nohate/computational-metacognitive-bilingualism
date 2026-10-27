@@ -1,0 +1,55 @@
+name: Watch Published Endpoint Health
+
+on:
+  schedule:
+    - cron: "43 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: watch-published-endpoint-health
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Read the public health and research endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://jupiter8nohate.github.io/computational-metacognitive-bilingualism"
+          curl -fLSs --retry 3 --retry-delay 3 --max-time 20 "$base/machine/global-ai-watch-health.json" -o /tmp/health.json
+          curl -fLSs --retry 3 --retry-delay 3 --max-time 20 "$base/machine/global-ai-watch-intelligence.json" -o /tmp/research.json
+          python - <<'PY'
+          from datetime import datetime, timezone
+          import json
+          from pathlib import Path
+          health = json.loads(Path("/tmp/health.json").read_text())
+          research = json.loads(Path("/tmp/research.json").read_text())
+          assert health["schema_version"] == "cmb.watch-health.v1"
+          assert research["schema_version"] == "cmb.watch-intelligence.v1"
+          assert research["snapshot_generated_at"] == health["last_successful_collection"]
+          assert research["health_checked_at"] == health["checked_at"]
+          assert research["coverage"]["published_links"] == len(research["dossiers"])
+          now = datetime.now(timezone.utc)
+          def age_seconds(value):
+              if not value:
+                  raise ValueError("Watch timestamp is missing")
+              stamp = datetime.fromisoformat(value.replace("Z", "+00:00"))
+              if stamp.tzinfo is None:
+                  raise ValueError("Watch timestamps require a UTC offset")
+              return (now - stamp.astimezone(timezone.utc)).total_seconds()
+          checked_age = age_seconds(health["checked_at"])
+          collection_age = age_seconds(health["last_successful_collection"])
+          if min(checked_age, collection_age) < -7200:
+              raise ValueError("Watch timestamps are more than two hours in the future")
+          if checked_age > 7200:
+              raise ValueError("Published Watch health report is older than two hours")
+          if collection_age > 21600:
+              raise ValueError("Global AI Watch collection is older than six hours")
+          print("Published Watch verified: " + str(int(collection_age // 60)) + " min since collection")
+          PY
