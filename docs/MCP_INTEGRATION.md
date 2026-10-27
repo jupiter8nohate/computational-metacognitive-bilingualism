@@ -55,6 +55,33 @@ cmb-mcp
 
 There is one semantic engine. MCP is an interoperability surface.
 
+## Registry publication readiness
+
+The existing adapter is the distribution target. CMB should not create a
+parallel MCP implementation merely for registry publication.
+
+During v1.5 stabilization, registry publication is preparation-only. After the
+exact reviewed release is signed and archived, publish the released adapter
+with metadata that points back to this repository and documentation.
+
+Required publication checks:
+
+- package version equals the signed release version;
+- MCP compatibility CI passes on the released commit;
+- tool names and the `cmb://registry` resource match this document;
+- source, license, documentation, and issue tracker are linked;
+- registry metadata does not imply certification, endorsement, or independent
+  security review.
+
+~~~text
+RELEVANCE > REACH
+ONE_SEMANTIC_ENGINE > DUPLICATED_INTERPRETATION
+REGISTRY_PRESENCE != CERTIFICATION
+DISCOVERY != ENDORSEMENT
+~~~
+
+See [CMB Distribution Execution Board](DISTRIBUTION_EXECUTION_BOARD.md).
+
 ## Standards boundary
 
 The adapter uses the official SDK, but CMB does not claim that the existence of
