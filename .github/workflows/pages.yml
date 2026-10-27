@@ -83,7 +83,7 @@ jobs:
           cache: pip
 
       - name: Install documentation dependencies
-        run: python -m pip install --upgrade pip ".[docs]"
+        run: python -m pip install --upgrade pip ".[docs]" "pytest>=8,<10"
 
       - name: Refresh Global AI Watch snapshot
         run: python scripts/update_global_ai_watch.py --allow-stale
