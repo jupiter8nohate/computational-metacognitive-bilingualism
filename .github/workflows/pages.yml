@@ -97,6 +97,29 @@ jobs:
       - name: Test Watch data, historical records and research triage
         run: python -m pytest -q tests/test_global_ai_watch.py tests/test_watch_observatory.py tests/test_epistemic_radar.py tests/test_watch_intelligence.py
 
+      - name: Verify generated collection, dossiers, and health are synchronized
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          def read(name):
+              return json.loads(Path("machine", name).read_text(encoding="utf-8"))
+
+          watch = read("global-ai-watch.json")
+          health = read("global-ai-watch-health.json")
+          dossiers = read("global-ai-watch-intelligence.json")
+          assert watch["generated_at"] == health["last_successful_collection"]
+          assert watch["generated_at"] == dossiers["snapshot_generated_at"]
+          assert health["checked_at"] == dossiers["health_checked_at"]
+          assert len(watch["articles"]) == watch["article_count"]
+          assert len(dossiers["dossiers"]) == watch["article_count"]
+          assert all(entry["claim_verification"] == "NOT_INDEPENDENTLY_CHECKED"
+                     for entry in dossiers["dossiers"])
+          print("Generated Watch snapshot, health and evidence-bounded dossiers are synchronized.")
+          PY
+
       - name: Build CMB Epistemic Radar from shared evidence
         run: python scripts/build_epistemic_radar.py --use-watch-snapshot
 

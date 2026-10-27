@@ -297,6 +297,11 @@ def test_fallback_keeps_newer_published_snapshot(monkeypatch, tmp_path: Path) ->
     old_snapshot = json.loads(
         (ROOT / "machine/global-ai-watch.json").read_text(encoding="utf-8")
     )
+    # The published Watch snapshot may have been refreshed earlier in this run.
+    # Create a deterministic older local candidate instead of assuming its date.
+    old_snapshot["generated_at"] = (
+        datetime.now(timezone.utc) - timedelta(hours=5)
+    ).isoformat().replace("+00:00", "Z")
     new_snapshot = json.loads(json.dumps(old_snapshot))
     new_snapshot["generated_at"] = (
         datetime.now(timezone.utc) - timedelta(minutes=45)
@@ -327,4 +332,4 @@ def test_stale_marker_displays_last_collection_time() -> None:
     )
     assert "cmb-watch-stale" in result
     assert "STALE - LIVE SOURCES UNAVAILABLE" in result
-    assert "2026-09-23" in result
+    assert data["generated_at"][:10] in result

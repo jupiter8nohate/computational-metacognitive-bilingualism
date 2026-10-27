@@ -196,7 +196,9 @@ def test_checked_in_snapshot_is_valid_radar_fallback() -> None:
 
     articles = load_fallback_articles(ROOT / "machine/global-ai-watch.json")
 
-    assert len(articles) == 10
+    snapshot = json.loads((ROOT / "machine/global-ai-watch.json").read_text(encoding="utf-8"))
+    assert len(articles) == snapshot["article_count"]
+    assert articles
     assert all(item["title"] for item in articles)
     assert all(item["url"].startswith("https://") for item in articles)
     assert all(item["boundary_ids"] for item in articles)

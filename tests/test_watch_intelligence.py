@@ -120,9 +120,13 @@ def test_output_validates_against_public_schema():
     assert not errors, [error.message for error in errors]
 
 
-def test_committed_watch_seed_is_not_misrepresented_as_current():
-    seed = json.loads((ROOT / "machine/global-ai-watch.json").read_text())
-    assert seed["generated_at"] < "2026-10-27T00:00:00Z"
+def test_curated_watch_seed_is_identified_as_a_historical_test_fixture():
+    # Deployment writes a live snapshot to machine/global-ai-watch.json.
+    # The dedicated seed record is immutable and remains the test fixture.
+    seed = json.loads((ROOT / "machine/global-ai-watch-seed.json").read_text())
+    assert seed["generated_at"] == "2026-09-23T00:00:00Z"
+    assert len(seed["links"]) == 10
+    assert "test corpus" in seed["purpose"]
     assert "HEADLINE != INCIDENT_PROOF" in BUILD(*fixture())["boundaries"]
 
 def test_oop_slogan_is_canonical_and_agency_is_not_confused_with_agi():
