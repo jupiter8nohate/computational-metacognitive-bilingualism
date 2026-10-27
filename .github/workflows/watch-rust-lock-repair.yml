@@ -1,0 +1,61 @@
+name: Repair Rust Actix lockfile for Watch security gate
+
+on:
+  push:
+    branches:
+      - "feature/global-ai-watch-intelligence-2026-10"
+    paths:
+      - "adapters/rust-actix/Cargo.toml"
+      - ".github/workflows/watch-rust-lock-repair.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: watch-rust-lock-repair
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    if: github.repository == 'jupiter8nohate/computational-metacognitive-bilingualism' && github.ref == 'refs/heads/feature/global-ai-watch-intelligence-2026-10'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout authorized feature branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          ref: "feature/global-ai-watch-intelligence-2026-10"
+      - name: Ensure recent stable Rust
+        shell: bash
+        run: |
+          set -euo pipefail
+          rustup update stable
+          rustup default stable
+          cargo --version
+      - name: Regenerate lockfile using Cargo and test Rust adapter
+        shell: bash
+        working-directory: adapters/rust-actix
+        run: |
+          set -euo pipefail
+          cargo update
+          cargo test --locked
+          if grep -Eq '^name = "(zstd|zstd-safe|zstd-sys)"$' Cargo.lock; then
+            echo "::error::Vulnerable zstd dependencies remain in the lockfile"
+            exit 1
+          fi
+          echo "Rust Actix lockfile no longer selects the vulnerable optional zstd chain."
+      - name: Commit reviewed Cargo-generated lockfile on feature branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- adapters/rust-actix/Cargo.lock; then
+            echo "Cargo.lock already reproducible: no update needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add adapters/rust-actix/Cargo.lock
+          git commit -m "fix(security): regenerate Rust adapter lockfile without vulnerable zstd feature"
+          git push origin HEAD:refs/heads/feature/global-ai-watch-intelligence-2026-10
