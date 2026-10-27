@@ -1,0 +1,26 @@
+{
+  "schema_version": "cmb.watch-intelligence.v1",
+  "snapshot_generated_at": null,
+  "health_checked_at": null,
+  "collection_status": "AWAITING_BUILD",
+  "method": "Explicit placeholder. Generated on deployment; never a verified incident or fact check.",
+  "boundaries": [
+    "HEADLINE != INCIDENT_PROOF",
+    "TRIAGE_PRIORITY != SEVERITY",
+    "SOURCE_DOMAIN != INDEPENDENT_CORROBORATION",
+    "NEWS_REPORT != VERIFIED_FACT",
+    "SOURCE_COUNTRY != INCIDENT_LOCATION",
+    "PATTERN != PROOF",
+    "HUMAN_AGENCY > MACHINE_AUTHORITY"
+  ],
+  "coverage": {
+    "published_links": 0,
+    "distinct_publisher_domains": 0,
+    "languages": {},
+    "source_countries": {},
+    "rights_lenses": {},
+    "triage_priorities": {}
+  },
+  "history": [],
+  "dossiers": []
+}
