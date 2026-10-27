@@ -94,7 +94,7 @@ jobs:
           cache: pip
 
       - name: Install docs dependencies
-        run: python -m pip install --upgrade pip ".[docs]"
+        run: python -m pip install --upgrade pip ".[docs]" "pytest>=8,<10"
 
       - name: Audit 2084 witness registry
         run: python scripts/verify_2084_evidence.py
