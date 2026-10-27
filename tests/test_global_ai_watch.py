@@ -295,7 +295,7 @@ def test_fallback_keeps_newer_published_snapshot(monkeypatch, tmp_path: Path) ->
     from datetime import datetime, timedelta, timezone
 
     old_snapshot = json.loads(
-        (ROOT / "machine/global-ai-watch.json").read_text(encoding="utf-8")
+        (ROOT / "tests/fixtures/global-ai-watch-static-snapshot.json").read_text(encoding="utf-8")
     )
     new_snapshot = json.loads(json.dumps(old_snapshot))
     new_snapshot["generated_at"] = (
@@ -320,7 +320,7 @@ def test_fallback_keeps_newer_published_snapshot(monkeypatch, tmp_path: Path) ->
 
 def test_stale_marker_displays_last_collection_time() -> None:
     data = json.loads(
-        (ROOT / "machine/global-ai-watch.json").read_text(encoding="utf-8")
+        (ROOT / "tests/fixtures/global-ai-watch-static-snapshot.json").read_text(encoding="utf-8")
     )
     result = WATCH["render_generated_block"](
         data, CONFIG, state="STALE - LIVE SOURCES UNAVAILABLE"

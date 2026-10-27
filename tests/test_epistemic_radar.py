@@ -194,7 +194,7 @@ def test_radar_rendering_escapes_untrusted_headline_html() -> None:
 def test_checked_in_snapshot_is_valid_radar_fallback() -> None:
     load_fallback_articles = RADAR["load_fallback_articles"]
 
-    articles = load_fallback_articles(ROOT / "machine/global-ai-watch.json")
+    articles = load_fallback_articles(ROOT / "tests/fixtures/global-ai-watch-static-snapshot.json")
 
     assert len(articles) == 10
     assert all(item["title"] for item in articles)
