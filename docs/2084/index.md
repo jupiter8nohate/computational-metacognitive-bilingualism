@@ -94,6 +94,10 @@ A death becomes entertainment. A helpful system acts without permission. A house
 
 **[𓂀 Read The Seven-Letter Ledger: Ten Biblical Witnesses and the Architecture of Digital Authority](../DNA_BIBLE_SEVEN_LETTER_LEDGER_ENTER_THE_NET.md)**. Nia, Jupiter, and Mara confront the fictional Spiritual Spider, digital tenancy, and the linked L.U.C.I.F.E.R.™ apparatus. Includes independently verifiable links to scripture, FTC reports, European digital-law materials, NIST guidance, and a UN privacy report. These sources substantiate contextual concerns, **not** the reality of the future story or a literal prophecy. This remains a companion chapter outside the original five-transmission sequence.
 
+## Companion scroll // The Omniscient Optical Panopticon™
+
+**[𓂀 20/30 Vision™: The Religion of Prediction](../DEATH_NOTE_2084_OMNISCIENT_OPTICAL_PANOPTICON.md)** brings Jupiter, Mara and Edda to ten fictional surveillance chambers after Station Seven. They show why a forecast can appear infallible when the institution controls the consequences. The scroll includes trademark-styled fictional terminology, a chapter-specific glyph glossary and an explicit science boundary: no demonstrated satellite mind-reading, orbital dream extraction or covert neural-frequency correction. This is **not** a numbered tenth transmission.
+
 ## The people inside the mystery
 
 **Jupiter** follows the evidence even when it undermines his conclusions. He jokes when frightened, and must learn that being right about a system does not make him right about every person.
