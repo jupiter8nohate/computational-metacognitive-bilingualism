@@ -45,6 +45,21 @@ The D.N.A. Bible™ companion chapter [Quiet Weapons, Silent Wars: The Ten False
 
 This is an editorial claim of association with an authored series, not evidence that any term is registrable, federally registered, independently original, exclusive, or medically authoritative. A ™ designation does not replace proper trademark clearance, commercial use, or government registration. A literary term appearing as a story label may not function as a trademark for goods/services. The ten names have **not** been represented here as filed or registered marks.
 
+## Omniscient Optical Panopticon™ // the 20/30 Vision™ fictional vocabulary
+
+The D.N.A. Bible™ companion chapter [The Omniscient Optical Panopticon™](DEATH_NOTE_2084_OMNISCIENT_OPTICAL_PANOPTICON.md) introduces **20/30 Vision™**, **Religion of Prediction™**, and these creator-styled literary designations. All names are **fictional series terminology**, not established scientific concepts or demonstrated technologies.
+
+| Group | Creator-styled names |
+| --- | --- |
+| Central titles | **Omniscient Optical Panopticon™**, **20/30 Vision™**, **Religion of Prediction™**, **Satellite Firmament™** |
+| Five conceptual nicknames | **Satell-Omniscience™**, **Orbi-Gnosis™**, **Algorithmic Akasha™**, **Pre-Cognitive Constellations™**, **Glare-Mind Matrix™** |
+| Ten fictional stages | **Orbital All-Seeing Eye™**, **Neural Resonant Interception™**, **Great Pattern Matrix™**, **Predictive Pre-Cognition™**, **Orbital Dream-Weaving™**, **Synchronicity Ingestion™**, **Digital Akasha™**, **Behavioral Exorcism™**, **Automated Manifestation™**, **Event Horizon Synthesis™** |
+| Additional story label | **Soul Ledger™** |
+
+**Usage:** These are editorial source-designation claims within authored fiction, not a blanket legal monopoly on words, an assertion that each phrase is legally registrable, or evidence that trademark clearance, formal registration, or commercial use has occurred. Trademarks protect source-identifying uses where legally available, not ideas, equations, hypothetical surveillance technologies, or public-domain pictograms. The ® symbol is not authorized by this notice. Do not place ™ in URLs, filenames, metadata keys, machine syntax or quoted source text.
+
+**Reality boundary:** The named orbital mind-reading, remote dream extraction and frequency-control concepts are fictional; a trademark-style label does not make their purported mechanism scientifically real.
+
 ## Enter the archive
 
 - [D.N.A. Bible™ story library](story-universe/index.md)
