@@ -31,6 +31,7 @@ on:
       - "tests/test_2084_witness_evidence.py"
       - "scripts/update_global_ai_watch.py"
       - "scripts/build_epistemic_radar.py"
+      - "scripts/build_watch_intelligence.py"
       - "scripts/build_observatory.py"
       - "scripts/generate_dna_witness.py"
       - "scripts/persist_watch_history.py"
@@ -38,6 +39,7 @@ on:
       - "tests/test_site_integrity.py"
       - "tests/test_global_ai_watch.py"
       - "tests/test_epistemic_radar.py"
+      - "tests/test_watch_intelligence.py"
       - "mkdocs.yml"
       - "pyproject.toml"
       - "AGENTS.md"
@@ -88,6 +90,12 @@ jobs:
 
       - name: Preserve historical collections and assess sources
         run: python scripts/build_observatory.py
+
+      - name: Build evidence-bounded Watch research dossiers
+        run: python scripts/build_watch_intelligence.py
+
+      - name: Test Watch data, historical records and research triage
+        run: python -m pytest -q tests/test_global_ai_watch.py tests/test_watch_observatory.py tests/test_epistemic_radar.py tests/test_watch_intelligence.py
 
       - name: Build CMB Epistemic Radar from shared evidence
         run: python scripts/build_epistemic_radar.py --use-watch-snapshot
@@ -177,7 +185,20 @@ jobs:
           done
           curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/2084/" -o /tmp/cmb-2084-arc.html
           grep -Fqi "THE FIVE TRANSMISSIONS" /tmp/cmb-2084-arc.html
-          echo "Public homepage, sitemap, verification, Watch health, and all five 2084 transmissions are reachable."
+          curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 "$base/machine/global-ai-watch-intelligence.json" -o /tmp/cmb-watch-intelligence.json
+          python - <<'PY'
+          import json
+          with open("/tmp/cmb-watch-intelligence.json", encoding="utf-8") as stream:
+              intelligence = json.load(stream)
+          with open("/tmp/cmb-watch-health.json", encoding="utf-8") as stream:
+              health = json.load(stream)
+          assert intelligence["schema_version"] == "cmb.watch-intelligence.v1"
+          assert intelligence["snapshot_generated_at"] == health["last_successful_collection"]
+          assert intelligence["health_checked_at"] == health["checked_at"]
+          assert intelligence["coverage"]["published_links"] == len(intelligence["dossiers"])
+          print("Public Watch research dossiers and collection provenance match")
+          PY
+          echo "Public homepage, sitemap, Watch intelligence, and five 2084 transmissions verified."
 
           # Check both Quiet Weapons companion pages and their links in the live reading hub.
           curl -fsSL --retry 5 --retry-delay 5 --retry-all-errors --max-time 20 \
