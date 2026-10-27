@@ -72,6 +72,8 @@ REQUIRED_PUBLIC_PATHS = (
     "schemas/cmb.discovery.v1.schema.json",
     "schemas/cmb.global-ai-watch.v1.schema.json",
     "schemas/cmb.epistemic-radar.v1.schema.json",
+    "schemas/cmb.watch-intelligence.v1.schema.json",
+    "machine/global-ai-watch-intelligence.json",
     "machine/global-ai-watch-config.json",
     "machine/global-ai-watch.json",
     "machine/global-ai-watch-history.json",
@@ -183,6 +185,30 @@ def validate_discovery_manifest(site: Path, errors: set[str]) -> None:
         errors.add(f"Discovery manifest schema violation at {location}: {error.message}")
 
 
+def validate_watch_intelligence(site: Path, errors: set[str]) -> None:
+    """Check the public research feed against its evidence-bounded contract."""
+    payload_file = site / "machine/global-ai-watch-intelligence.json"
+    schema_file = site / "schemas/cmb.watch-intelligence.v1.schema.json"
+    if not payload_file.is_file() or not schema_file.is_file():
+        errors.add("Missing Watch intelligence JSON or Schema")
+        return
+    try:
+        payload = json.loads(payload_file.read_text(encoding="utf-8"))
+        schema = json.loads(schema_file.read_text(encoding="utf-8"))
+        Draft202012Validator.check_schema(schema)
+        validator = Draft202012Validator(schema, format_checker=FormatChecker())
+        for issue in validator.iter_errors(payload):
+            errors.add("Watch intelligence schema: " + issue.message)
+        records = payload.get("dossiers", [])
+        if payload.get("coverage", {}).get("published_links") != len(records):
+            errors.add("Watch intelligence dossier count mismatch")
+        if any(item.get("claim_verification") != "NOT_INDEPENDENTLY_CHECKED"
+               for item in records):
+            errors.add("Watch intelligence must not automatically assert claim verification")
+    except (OSError, ValueError, TypeError, SchemaError) as exc:
+        errors.add("Watch intelligence validation failed: " + str(exc))
+
+
 def local_target(site: Path, source: str, link: str) -> Path | None:
     """Resolve links with browser URL rules, including the Pages project prefix."""
     url = urlsplit(urljoin(urljoin(SITE_URL, source), link))
@@ -230,6 +256,7 @@ def check_site(site: Path) -> tuple[int, int]:
         check("index.html", path)
 
     validate_discovery_manifest(site, errors)
+    validate_watch_intelligence(site, errors)
 
     for filename in ("machine/discovery-manifest.json", "machine/index.json", "machine/recovery-map.json", "machine/knowledge-graph.jsonld"):
         path = site / filename

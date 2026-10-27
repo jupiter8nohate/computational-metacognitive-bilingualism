@@ -18,6 +18,8 @@ on:
       - "src/cmb_machine/**"
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
+      - "scripts/build_watch_intelligence.py"
+      - "tests/test_watch_intelligence.py"
       - "scripts/enrich_search_metadata.py"
       - "tests/test_search_metadata.py"
       - "scripts/verify_archive_experience.py"
@@ -92,7 +94,7 @@ jobs:
           cache: pip
 
       - name: Install docs dependencies
-        run: python -m pip install --upgrade pip ".[docs]"
+        run: python -m pip install --upgrade pip ".[docs]" "pytest>=8,<10"
 
       - name: Audit 2084 witness registry
         run: python scripts/verify_2084_evidence.py
@@ -102,6 +104,9 @@ jobs:
 
       - name: Audit CMB evolution and source boundaries
         run: python scripts/audit_evolution.py
+
+      - name: Test Watch research and evidence boundaries
+        run: python -m pytest -q tests/test_watch_intelligence.py tests/test_watch_observatory.py tests/test_global_ai_watch.py
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py

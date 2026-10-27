@@ -139,3 +139,69 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* OOP 20/30 Vision is a creative framing, not a machine capability claim. */
+.cmb-oop-manifesto {
+  position: relative;
+  margin: 1.1rem 0 1.7rem;
+  padding: clamp(1.1rem, 3vw, 2.4rem);
+  color: #fff9e7;
+  border: 2px solid #ffc72c;
+  border-left: 9px solid #ffc72c;
+  background: linear-gradient(135deg, #530d0b 0%, #a21a12 62%, #66130b 100%);
+  box-shadow: 0 7px 0 #ffc72c;
+  overflow-wrap: anywhere;
+}
+.cmb-oop-kicker {
+  margin: 0 0 .5rem;
+  font: 700 .74rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: #ffe494;
+}
+.cmb-oop-manifesto h2 {
+  margin: 0;
+  color: #ffdc56;
+  font-size: clamp(1.65rem, 3.6vw, 2.8rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.cmb-oop-series {
+  margin: .65rem 0 1.15rem;
+  font-weight: 800;
+  font-size: clamp(.94rem, 2vw, 1.2rem);
+  letter-spacing: .035em;
+}
+.cmb-oop-quote {
+  margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid #ffc72c;
+  background: rgba(0, 0, 0, .28);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.65;
+  font-weight: 600;
+}
+.cmb-oop-quote p { margin: 0; }
+.cmb-oop-glyphs {
+  margin: 1rem 0 .4rem;
+  color: #ffdc56;
+  text-align: center;
+  font-size: clamp(1rem, 2.7vw, 1.7rem);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.cmb-oop-meaning { margin: .25rem 0; text-align: center; font-style: italic; }
+.cmb-oop-credit {
+  margin: .9rem 0 .2rem;
+  font: 700 .8rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.cmb-oop-reality {
+  margin: .75rem 0 0;
+  padding-top: .75rem;
+  border-top: 1px solid rgba(255, 220, 86, .65);
+  font-size: .8rem;
+  line-height: 1.55;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cmb-oop-manifesto { scroll-behavior: auto; }
+}

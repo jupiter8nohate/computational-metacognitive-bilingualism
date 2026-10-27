@@ -7,7 +7,11 @@ description = "Reference Actix adapter for the CMB boundary-event v1 contract."
 license = "Apache-2.0"
 
 [dependencies]
-# Preserve the Actix Web default feature set except HTTP/2.
+# Enable only explicitly audited Actix features. Disable HTTP/2 (h2 0.3)
+# and temporarily disable optional Zstandard HTTP compression while the
+# zstd 0.13.x dependency remains affected by RustSec 2026-0391 et al.
+# gzip and Brotli compression remain enabled. Restore zstd only once
+# Actix resolves a non-vulnerable zstd >= 0.14.3 dependency graph.
 # actix-http 3.13.x still selects h2 0.3.x when the http2 feature is enabled,
 # and that line is affected by RUSTSEC-2026-0258. This reference adapter
 # binds plain TCP and does not require HTTP/2 or h2c.
@@ -15,7 +19,6 @@ actix-web = { version = "4", default-features = false, features = [
     "macros",
     "compress-brotli",
     "compress-gzip",
-    "compress-zstd",
     "cookies",
     "unicode",
     "compat",
