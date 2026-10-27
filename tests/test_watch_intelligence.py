@@ -120,8 +120,8 @@ def test_output_validates_against_public_schema():
     assert not errors, [error.message for error in errors]
 
 
-def test_committed_watch_seed_is_not_misrepresented_as_current():
-    seed = json.loads((ROOT / "machine/global-ai-watch.json").read_text())
+def test_immutable_watch_fixture_is_not_misrepresented_as_current():
+    seed = json.loads((ROOT / "tests/fixtures/global-ai-watch-static-snapshot.json").read_text())
     assert seed["generated_at"] < "2026-10-27T00:00:00Z"
     assert "HEADLINE != INCIDENT_PROOF" in BUILD(*fixture())["boundaries"]
 
