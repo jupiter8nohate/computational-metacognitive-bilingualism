@@ -65,6 +65,9 @@ def published_site(tmp_path: Path) -> Path:
     files.update({name: "CMB\n" for name in BUILD_DOCS["PUBLIC_FILES"]})
     for name in REQUIRED_PUBLIC_PATHS:
         files.setdefault(name, "{}")
+    for asset in ("machine/global-ai-watch-intelligence.json",
+                  "schemas/cmb.watch-intelligence.v1.schema.json"):
+        files[asset] = (Path(__file__).resolve().parents[1] / asset).read_text(encoding="utf-8")
     for name, content in files.items():
         path = tmp_path / name
         path.parent.mkdir(parents=True, exist_ok=True)
