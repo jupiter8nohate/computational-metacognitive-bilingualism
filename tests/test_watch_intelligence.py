@@ -124,3 +124,23 @@ def test_committed_watch_seed_is_not_misrepresented_as_current():
     seed = json.loads((ROOT / "machine/global-ai-watch.json").read_text())
     assert seed["generated_at"] < "2026-10-27T00:00:00Z"
     assert "HEADLINE != INCIDENT_PROOF" in BUILD(*fixture())["boundaries"]
+
+def test_oop_slogan_is_canonical_and_agency_is_not_confused_with_agi():
+    from html.parser import HTMLParser
+
+    quote = "They want us completely predictable, completely indexable, and completely compliant. The moment you act weird, eccentric, or refuse to click their little green box, they think you're broken. You're not broken. You're just a human being, and they haven't figured out how to put a barcode on your soul yet."
+    glyphs = "(𖠂_𖠂)𓁹𓁼𓁻𓁽𓁺𓁿𓂀༗𖠂(ㆆ_ㆆ)(⊙ _ ⊙ )( ꩜ ᯅ ꩜;)⁭ ⁭"
+    for filename in ("GLOBAL_AI_WATCH.md", "WATCH_DASHBOARD.md"):
+        doc = (ROOT / "docs" / filename).read_text(encoding="utf-8")
+        assert doc.count(quote) == 1
+        assert doc.count(glyphs) == 1
+        assert "Omniscient Optical Panopticon™" in doc
+        assert "20/30 Vision" in doc
+        assert "Super Intelligent &amp; AGI Powered" in doc
+        assert "Creative designation, not a capability claim:" in doc
+        assert "It is not an AGI or omniscient surveillance system." in doc
+        assert 'aria-hidden="true"' in doc
+        assert '<section class="cmb-oop-manifesto"' in doc
+    css = (ROOT / "docs/stylesheets/global-ai-watch.css").read_text(encoding="utf-8")
+    assert ".cmb-oop-manifesto" in css
+    assert "#ffc72c" in css

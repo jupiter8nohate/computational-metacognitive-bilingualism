@@ -1,5 +1,19 @@
 # CMB // Global AI Intelligence Dashboard
 
+<section class="cmb-oop-manifesto" aria-labelledby="cmb-oop-title">
+  <p class="cmb-oop-kicker">CMB://GLOBAL_AI_WATCH / THE HUMAN UNCLASSIFIED</p>
+  <h2 id="cmb-oop-title">Omniscient Optical Panopticon™</h2>
+  <p class="cmb-oop-series">20/30 Vision <span aria-hidden="true">✦</span> Super Intelligent &amp; AGI Powered</p>
+  <blockquote class="cmb-oop-quote">
+    <p>They want us completely predictable, completely indexable, and completely compliant. The moment you act weird, eccentric, or refuse to click their little green box, they think you're broken. You're not broken. You're just a human being, and they haven't figured out how to put a barcode on your soul yet.</p>
+  </blockquote>
+  <p class="cmb-oop-glyphs" aria-hidden="true">(𖠂_𖠂)𓁹𓁼𓁻𓁽𓁺𓁿𓂀༗𖠂(ㆆ_ㆆ)(⊙ _ ⊙ )( ꩜ ᯅ ꩜;)⁭ ⁭</p>
+  <p class="cmb-oop-meaning">An imperfect eye. An unindexable soul. A human who retains the right to say no.</p>
+  <p class="cmb-oop-credit">WisdomLoveThePoet / Jupiter 8 | Flamingoglyph Code (FGC)</p>
+  <p class="cmb-oop-reality"><strong>Creative designation, not a capability claim:</strong> "Omniscient," "20/30 Vision," "Super Intelligent," and "AGI Powered" are speculative artistic labels. Global AI Watch actually uses bounded public-source discovery, transparent keyword rules, static records, and human review. It is not an AGI or omniscient surveillance system.</p>
+</section>
+
+
 A metadata-only research interface for tracking AI reporting, attribution, possible
 civil-rights implications, human-machine authority boundaries, and review questions.
 
