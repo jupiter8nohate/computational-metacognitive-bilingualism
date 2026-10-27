@@ -1,0 +1,102 @@
+{
+  "collected_at": "2026-10-27T18:46:47.164186Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 7,
+  "articles": [
+    {
+      "id": "cf2eeae66cc6d0fb",
+      "title": "Israeli military detains Egyptian national who crossed border",
+      "url": "https://www.aljazeera.com/news/2026/10/27/israeli-military-detains-egyptian-national-who-crossed-border?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-27T15:10:27Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "7cd28d7a0d44826d",
+      "title": "Lebanon’s lost olive season: harvesting olives under drones and warplanes",
+      "url": "https://www.aljazeera.com/features/2026/10/27/lebanons-lost-olive-season-harvesting-olives-under-drones-and-warplanes?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-27T13:54:43Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "ec4fabfdd8d1edd8",
+      "title": "AI-driven disinformation running rampant on social media before US midterms, experts warn",
+      "url": "https://www.theguardian.com/us-news/2026/oct/27/ai-disinformation-social-media-midterm-elections",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-27T10:00:10Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "military_security",
+        "elections_information"
+      ]
+    },
+    {
+      "id": "5c00df488c69c6e0",
+      "title": "‘Autonomy, not flesh’: RAF chief outlines AI drone-powered future",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/26/royal-air-force-harv-smyth-ai-drone-future",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-26T19:09:51Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "1e663d1fa1b08d3e",
+      "title": "ICE plan to buy robot dogs spurs protest from hundreds of Boston Dynamics employees",
+      "url": "https://arstechnica.com/ai/2026/10/boston-dynamics-employees-want-to-block-sale-of-robot-dogs-to-ice/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-26T18:50:41Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "0622d97261ee3a1b",
+      "title": "Weapon or armour? The contentious debate over China’s open-weight AI",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371961/weapon-or-armour-contentious-debate-over-chinas-open-weight-ai",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-26T02:00:12Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "08ec5c76056e031d",
+      "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+      "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-25T21:31:16Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "5c1959c5a8a9c366010a3b7785d1a31d294a6f20799d12b244219071f46bd827",
+  "hash": "c3a5b36fe5687e54255f686933657495dddcd513a7255cadc0d55af88ce68aab"
+}
