@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.watch-intelligence.v1.schema.json",
+  "title": "CMB Watch Intelligence - evidence-bounded public research metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "snapshot_generated_at",
+    "health_checked_at",
+    "collection_status",
+    "method",
+    "boundaries",
+    "coverage",
+    "history",
+    "dossiers"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "cmb.watch-intelligence.v1"
+    },
+    "snapshot_generated_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "health_checked_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "collection_status": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "boundaries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "published_links",
+        "distinct_publisher_domains",
+        "languages",
+        "source_countries",
+        "rights_lenses",
+        "triage_priorities"
+      ],
+      "properties": {
+        "published_links": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "distinct_publisher_domains": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "languages": {
+          "$ref": "#/$defs/counts"
+        },
+        "source_countries": {
+          "$ref": "#/$defs/counts"
+        },
+        "rights_lenses": {
+          "$ref": "#/$defs/counts"
+        },
+        "triage_priorities": {
+          "$ref": "#/$defs/counts"
+        }
+      }
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "day",
+          "collections",
+          "observed_links",
+          "distinct_links_within_day"
+        ],
+        "properties": {
+          "day": {
+            "type": "string"
+          },
+          "collections": {
+            "type": "integer"
+          },
+          "observed_links": {
+            "type": "integer"
+          },
+          "distinct_links_within_day": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "dossiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dossier_id",
+          "article_id",
+          "title",
+          "url",
+          "publisher_domain",
+          "seen_at",
+          "language",
+          "source_country",
+          "cluster_id",
+          "boundary_ids",
+          "sector_ids",
+          "rights_lenses",
+          "legal_watch_candidate",
+          "triage_priority",
+          "triage_reasons",
+          "traceability_grade",
+          "claim_verification",
+          "correction_status",
+          "independent_corroboration",
+          "reported_incident_status",
+          "review_questions",
+          "source_links"
+        ],
+        "properties": {
+          "dossier_id": {
+            "type": "string",
+            "pattern": "^watch-[a-f0-9]{16}$"
+          },
+          "article_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "publisher_domain": {
+            "type": "string"
+          },
+          "seen_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "language": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_country": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cluster_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "boundary_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sector_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rights_lenses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "legal_watch_candidate": {
+            "type": "boolean"
+          },
+          "triage_priority": {
+            "enum": [
+              "REVIEW_FIRST",
+              "ROUTINE_REVIEW"
+            ]
+          },
+          "triage_reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "traceability_grade": {
+            "type": "string"
+          },
+          "claim_verification": {
+            "const": "NOT_INDEPENDENTLY_CHECKED"
+          },
+          "correction_status": {
+            "const": "NOT_CHECKED"
+          },
+          "independent_corroboration": {
+            "const": "NOT_CHECKED"
+          },
+          "reported_incident_status": {
+            "const": "NOT_ESTABLISHED_FROM_HEADLINE"
+          },
+          "review_questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "type",
+                "url"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "publisher",
+                    "archive_lookup"
+                  ]
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  }
+}

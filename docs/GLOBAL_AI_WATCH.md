@@ -54,7 +54,7 @@ Each deployment tries a bounded GDELT metadata sample, then direct publisher RSS
 
 <!-- CMB_GLOBAL_AI_WATCH_GENERATED_START -->
 
-<div id="cmb-watch-status" class="cmb-watch-status">CURATED TEST LEDGER // 10 verified outbound links // no article bodies stored</div>
+<div id="cmb-watch-status" class="cmb-watch-status">CURATED TEST LEDGER // 10 traceable outbound links // claims not independently verified // no article bodies stored</div>
 
 <ul class="cmb-news-links">
 <li><a href="https://keyt.com/politics/cnn-us-politics/2026/09/18/exclusive-us-military-had-close-call-after-using-ai-for-false-intelligence-report-sources-say/" rel="noopener noreferrer">Exclusive: US military had close call after using AI for false intelligence report, sources say</a> <small>CNN via KEYT News Channel 3-12 · 2026-09-18 · PREDICT + ACT</small></li>
@@ -69,9 +69,43 @@ Each deployment tries a bounded GDELT metadata sample, then direct publisher RSS
 <li><a href="https://www.interpol.int/en/News-and-Events/News/2026/Counter-terrorism-operation-leverages-artificial-intelligence-to-identify-126-terrorism-suspects" rel="noopener noreferrer">Counter-terrorism operation leverages artificial intelligence to identify 126 terrorism suspects</a> <small>INTERPOL · 2026-09-18 · PREDICT + ACT</small></li>
 </ul>
 
-<p class="cmb-watch-method-note"><strong>Seed rule:</strong> these ten links exercise distinct CMB boundaries. Scheduled refreshes may rotate the public ledger, but the publication budget remains ten links.</p>
+<p class="cmb-watch-method-note"><strong>Seed rule:</strong> these ten links exercise distinct CMB boundaries. Scheduled refreshes may rotate the public ledger, but the publication budget follows the configured maximum (currently twelve links).</p>
 
 <!-- CMB_GLOBAL_AI_WATCH_GENERATED_END -->
+
+## Watch Intelligence v1: evidence-bounded research dossiers
+
+The [Intelligence Dashboard](WATCH_DASHBOARD.md) now supports an additional, deterministic
+[research dossier feed](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/global-ai-watch-intelligence.json).
+Each dossier is based on **one source link**, not a verified real-world incident. The layer
+records the headline, source URL, source-country metadata, CMB boundaries, possible
+civil-rights lenses, legal-watch candidates, and questions for **human review**. It
+does **not** independently confirm claims or infer an incident's location.
+
+- **REVIEW_FIRST** indicates multiple documented triage triggers in a headline
+  (rights terms, sensitive sector, legal terms, or multi-boundary architecture).
+  It is **not** an automatic risk, guilt, or severity score.
+- **ROUTINE_REVIEW** is still unverified; absence of triggers is not evidence of safety.
+- Source-domain consistency measures URL attribution, **not** publication reliability.
+- The history chart counts collected links. Duplicates across collection runs are
+  not counted as newly proven incidents.
+- Country fields describe reported **source countries**, not incident locations.
+- Legal-watch and disability-rights labels are **research prompts**, not findings
+  of liability, diagnosis, regulatory jurisdiction, or human-rights violations.
+- Primary legal documents, corrections, independent confirmations, external alerts,
+  and human-reviewed case outcomes are not automatically gathered by this build.
+
+Public research assets:
+[JSON Schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.watch-intelligence.v1.schema.json) and
+[builder source](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/scripts/build_watch_intelligence.py).
+
+~~~text
+HEADLINE != INCIDENT
+TRIAGE_PRIORITY != SEVERITY
+LEGAL_KEYWORD != LEGAL_VIOLATION
+SOURCE_COUNTRY != INCIDENT_LOCATION
+HUMAN_JUDGMENT > AUTOMATED_VERDICT
+~~~
 
 ## CMB interpretation layer
 

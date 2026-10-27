@@ -11,3 +11,12 @@
 .cmb-observatory-chart > div { display: grid; grid-template-columns: 90px minmax(60px,1fr) 40px; gap: .4rem; align-items: center; margin: .3rem 0; font-size: .75rem; }
 .cmb-observatory-bar { min-height: .75rem; background: currentColor; opacity: .6; }
 .cmb-observatory-warning { border: 2px solid #b45309; padding: .7rem; font-weight: bold; }
+
+.cmb-observatory-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin: .5rem 0 1rem; }
+.cmb-observatory-actions button { min-height: 2.7rem; border: 2px solid #8c1508; background: #ffc72c; color: #24120a; font-weight: 700; cursor: pointer; padding: .45rem .8rem; }
+.cmb-observatory-actions button:focus-visible, .cmb-observatory-filters :focus-visible { outline: 3px solid #b91c1c; outline-offset: 3px; }
+.cmb-observatory-results details { margin: .7rem 0; padding: .45rem; border-left: 3px solid #b91c1c; }
+.cmb-observatory-results summary { cursor: pointer; font-weight: 650; }
+.cmb-observatory-results article > a { display: inline-block; margin-right: 1rem; margin-top: .35rem; }
+.cmb-review-priority { font-weight: 700; }
+@media (max-width: 550px) { .cmb-observatory-chart > div { grid-template-columns: 85px minmax(35px,1fr) 35px; } }
