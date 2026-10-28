@@ -1,0 +1,128 @@
+{
+  "collected_at": "2026-10-28T09:45:54.598467Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 9,
+  "articles": [
+    {
+      "id": "e0e1348f78af60fa",
+      "title": "The next phase of military rule in Egypt is here",
+      "url": "https://www.aljazeera.com/opinions/2026/10/28/the-next-phase-of-military-rule-in-egypt-is-here?traffic_source=rss",
+      "domain": "www.aljazeera.com",
+      "seen_at": "2026-10-28T06:36:59Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "f53c7c72ecdfd954",
+      "title": "‘Emotional intimacy’ from AI chatbots would be banned under Australia’s digital duty of care laws",
+      "url": "https://www.theguardian.com/australia-news/2026/oct/28/emotional-intimacy-ai-chatbots-ban-digital-duty-of-care-laws-australian-politics",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-28T05:31:55Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "3a0e725839a217b3",
+      "title": "ByteDance accelerates robotics commercialisation with new recruitment drive",
+      "url": "https://www.scmp.com/tech/big-tech/article/3372295/bytedance-accelerates-robotics-commercialisation-new-recruitment-drive",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-28T03:00:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "2c43e290abc0f3c1",
+      "title": "'An annoying buzz': The search for stealthier drones",
+      "url": "https://www.bbc.co.uk/news/articles/ck1exgejq3xvo?at_medium=RSS&at_campaign=rss",
+      "domain": "www.bbc.co.uk",
+      "seen_at": "2026-10-28T00:01:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "f45c7980de26dbce",
+      "title": "\"No human at the helm\": Delaware plan would let AI agents run entire businesses",
+      "url": "https://arstechnica.com/tech-policy/2026/10/no-human-at-the-helm-delaware-plan-would-let-ai-agents-run-entire-businesses/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-27T21:50:04Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "ec4fabfdd8d1edd8",
+      "title": "AI-driven disinformation running rampant on social media before US midterms, experts warn",
+      "url": "https://www.theguardian.com/us-news/2026/oct/27/ai-disinformation-social-media-midterm-elections",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-27T10:00:10Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "military_security",
+        "elections_information"
+      ]
+    },
+    {
+      "id": "1e663d1fa1b08d3e",
+      "title": "ICE plan to buy robot dogs spurs protest from hundreds of Boston Dynamics employees",
+      "url": "https://arstechnica.com/ai/2026/10/boston-dynamics-employees-want-to-block-sale-of-robot-dogs-to-ice/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-26T18:50:41Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "0622d97261ee3a1b",
+      "title": "Weapon or armour? The contentious debate over China’s open-weight AI",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3371961/weapon-or-armour-contentious-debate-over-chinas-open-weight-ai",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-26T02:00:12Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "08ec5c76056e031d",
+      "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+      "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-25T21:31:16Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "12039a07feff035162b18819a21c04f45a5a22e0e364f15b6b63be880da3015f",
+  "hash": "9add94db87d2f017a27350df0e3f699cf61335c72d701718ea982f2da0ceb3ea"
+}
