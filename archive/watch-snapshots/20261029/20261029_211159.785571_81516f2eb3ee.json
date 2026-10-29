@@ -1,0 +1,142 @@
+{
+  "collected_at": "2026-10-29T21:11:59.785571Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 10,
+  "articles": [
+    {
+      "id": "85248bd11eaa5ccd",
+      "title": "Trump declares robot imports a national security threat",
+      "url": "https://arstechnica.com/gadgets/2026/10/trump-declares-robot-imports-a-national-security-threat/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-29T19:07:53Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "b138df71b1659a33",
+      "title": "Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity",
+      "url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-29T17:00:00Z",
+      "boundary_ids": [
+        "PREDICT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "26198e1f3b823d9d",
+      "title": "What is it like to work when your co-workers are AI agents?",
+      "url": "https://www.theguardian.com/technology/2026/oct/29/ai-agent-coworker",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-29T15:00:46Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "bc01622ffa1cd4de",
+      "title": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
+      "url": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-29T14:35:26Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "aa0e236b961bfecd",
+      "title": "Tencent targets Southeast Asia as launch pad for AI agent WorkBuddy amid tough local market",
+      "url": "https://www.scmp.com/tech/big-tech/article/3372550/tencent-targets-southeast-asia-launch-pad-ai-agent-workbuddy-amid-tough-local-market",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-29T07:30:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "e19bd8c686545cca",
+      "title": "Details of thousands of US immigration agents leaked in major hack",
+      "url": "https://www.bbc.co.uk/news/articles/cq8jzkpjr28vo?at_medium=RSS&at_campaign=rss",
+      "domain": "www.bbc.co.uk",
+      "seen_at": "2026-10-29T01:30:43Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "3a0e725839a217b3",
+      "title": "ByteDance accelerates robotics commercialisation with new recruitment drive",
+      "url": "https://www.scmp.com/tech/big-tech/article/3372295/bytedance-accelerates-robotics-commercialisation-new-recruitment-drive",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-28T03:00:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "2c43e290abc0f3c1",
+      "title": "'An annoying buzz': The search for stealthier drones",
+      "url": "https://www.bbc.co.uk/news/articles/ck1exgejq3xvo?at_medium=RSS&at_campaign=rss",
+      "domain": "www.bbc.co.uk",
+      "seen_at": "2026-10-28T00:01:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "f45c7980de26dbce",
+      "title": "\"No human at the helm\": Delaware plan would let AI agents run entire businesses",
+      "url": "https://arstechnica.com/tech-policy/2026/10/no-human-at-the-helm-delaware-plan-would-let-ai-agents-run-entire-businesses/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-27T21:50:04Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "ec4fabfdd8d1edd8",
+      "title": "AI-driven disinformation running rampant on social media before US midterms, experts warn",
+      "url": "https://www.theguardian.com/us-news/2026/oct/27/ai-disinformation-social-media-midterm-elections",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-27T10:00:10Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "military_security",
+        "elections_information"
+      ]
+    }
+  ],
+  "previous_hash": "e8f602e2e9e55cbad4e38a22f8144f7262b25529d199e1ca75c04c2bb7e97898",
+  "hash": "81516f2eb3ee3f9a606f0aab65f1ec55d85e9760fb14f05ad12cddeb92885333"
+}
