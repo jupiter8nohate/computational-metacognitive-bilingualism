@@ -1,0 +1,142 @@
+{
+  "collected_at": "2026-10-29T16:12:32.788138Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 10,
+  "articles": [
+    {
+      "id": "26198e1f3b823d9d",
+      "title": "What is it like to work when your co-workers are AI agents?",
+      "url": "https://www.theguardian.com/technology/2026/oct/29/ai-agent-coworker",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-29T15:00:46Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "bc01622ffa1cd4de",
+      "title": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
+      "url": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-29T14:35:26Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "aa0e236b961bfecd",
+      "title": "Tencent targets Southeast Asia as launch pad for AI agent WorkBuddy amid tough local market",
+      "url": "https://www.scmp.com/tech/big-tech/article/3372550/tencent-targets-southeast-asia-launch-pad-ai-agent-workbuddy-amid-tough-local-market",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-29T07:30:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "e19bd8c686545cca",
+      "title": "Details of thousands of US immigration agents leaked in major hack",
+      "url": "https://www.bbc.co.uk/news/articles/cq8jzkpjr28vo?at_medium=RSS&at_campaign=rss",
+      "domain": "www.bbc.co.uk",
+      "seen_at": "2026-10-29T01:30:43Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "776aed39bd32c423",
+      "title": "South Korea’s financial industry hit by fresh wave of cyberattacks",
+      "url": "https://techcrunch.com/2026/10/28/south-koreas-financial-industry-hit-by-fresh-wave-of-cyberattacks/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-10-28T15:41:18Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "cybercrime",
+        "finance"
+      ]
+    },
+    {
+      "id": "3a0e725839a217b3",
+      "title": "ByteDance accelerates robotics commercialisation with new recruitment drive",
+      "url": "https://www.scmp.com/tech/big-tech/article/3372295/bytedance-accelerates-robotics-commercialisation-new-recruitment-drive",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-10-28T03:00:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "2c43e290abc0f3c1",
+      "title": "'An annoying buzz': The search for stealthier drones",
+      "url": "https://www.bbc.co.uk/news/articles/ck1exgejq3xvo?at_medium=RSS&at_campaign=rss",
+      "domain": "www.bbc.co.uk",
+      "seen_at": "2026-10-28T00:01:10Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "f45c7980de26dbce",
+      "title": "\"No human at the helm\": Delaware plan would let AI agents run entire businesses",
+      "url": "https://arstechnica.com/tech-policy/2026/10/no-human-at-the-helm-delaware-plan-would-let-ai-agents-run-entire-businesses/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-27T21:50:04Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "ec4fabfdd8d1edd8",
+      "title": "AI-driven disinformation running rampant on social media before US midterms, experts warn",
+      "url": "https://www.theguardian.com/us-news/2026/oct/27/ai-disinformation-social-media-midterm-elections",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-10-27T10:00:10Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "military_security",
+        "elections_information"
+      ]
+    },
+    {
+      "id": "1e663d1fa1b08d3e",
+      "title": "ICE plan to buy robot dogs spurs protest from hundreds of Boston Dynamics employees",
+      "url": "https://arstechnica.com/ai/2026/10/boston-dynamics-employees-want-to-block-sale-of-robot-dogs-to-ice/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-10-26T18:50:41Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "58627a2ef73147a69d49b83cad6d5b42731534ea5e8e796d1486f2774deefa6b",
+  "hash": "e8f602e2e9e55cbad4e38a22f8144f7262b25529d199e1ca75c04c2bb7e97898"
+}
