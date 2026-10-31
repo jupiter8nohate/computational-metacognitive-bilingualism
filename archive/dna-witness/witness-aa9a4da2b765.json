@@ -1,0 +1,23 @@
+{
+  "record_type": "noncanonical_rule_based_allegory",
+  "canonical_author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "generated_by": "CMB deterministic rule-based generator",
+  "chapter": {
+    "id": "witness-aa9a4da2b765",
+    "theme": "Is AI your new wingman? How chatbots are transforming dating",
+    "source_url": "https://www.theguardian.com/lifeandstyle/2026/oct/31/ai-your-wingman-chatbots-transforming-dating",
+    "source_domain": "www.theguardian.com",
+    "boundaries": [
+      "GENERATE"
+    ],
+    "status": "fictional_allegory_not_fact_checked",
+    "question": "What evidence separates the generated signal from its source?",
+    "passage": [
+      "And the Watcher heard a new account arise from the public square.",
+      "Yet the Scribe refused to place a headline upon the throne of Truth.",
+      "For a machine may recognize a pattern, but a pattern is not proof.",
+      "And the Adversary asked for the source before drawing any conclusion.",
+      "So the Guardian left the question open, and the human kept the pen."
+    ]
+  }
+}
