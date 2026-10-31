@@ -1,3 +1,8 @@
+---
+title: "Global AI Watch: Sources and Human Review | CMB"
+description: "Explore public-source AI reporting, transparent classification rules and evidence records through CMB Global AI Watch, with human review and explicit limits."
+---
+
 # CMB Global AI Watch
 
 <section class="cmb-oop-manifesto" aria-labelledby="cmb-oop-title">

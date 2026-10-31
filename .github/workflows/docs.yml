@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "spiders-internet/**"
       - "datasets/**"
       - "assets/**"
       - "machine/**"
@@ -21,7 +22,9 @@ on:
       - "scripts/build_watch_intelligence.py"
       - "tests/test_watch_intelligence.py"
       - "scripts/enrich_search_metadata.py"
+      - "scripts/check_search_discovery.py"
       - "tests/test_search_metadata.py"
+      - "tests/test_search_discovery.py"
       - "scripts/verify_archive_experience.py"
       - "scripts/export_reader_archive.py"
       - "tests/test_archive_experience.py"
@@ -43,6 +46,7 @@ on:
     branches: ["main"]
     paths:
       - "docs/**"
+      - "spiders-internet/**"
       - "datasets/**"
       - "assets/**"
       - "machine/**"
@@ -57,7 +61,9 @@ on:
       - "src/cmb_agents/**"
       - "scripts/build_docs.py"
       - "scripts/enrich_search_metadata.py"
+      - "scripts/check_search_discovery.py"
       - "tests/test_search_metadata.py"
+      - "tests/test_search_discovery.py"
       - "scripts/verify_2084_evidence.py"
       - "tests/test_2084_witness_evidence.py"
       - "tests/test_site_integrity.py"
@@ -87,6 +93,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          fetch-depth: 0
 
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -110,3 +117,6 @@ jobs:
 
       - name: Build and verify public documentation bundle
         run: python scripts/build_docs.py
+
+      - name: Test search metadata, sitemap dates and discovery boundaries
+        run: python -m pytest -q tests/test_search_metadata.py tests/test_search_discovery.py
