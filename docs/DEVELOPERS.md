@@ -1,3 +1,8 @@
+---
+title: "CMB Developer Guide: Provenance and Boundaries"
+description: "Build and verify CMB provenance records, boundary-policy examples and the public documentation bundle, with clear distinctions between stable and experimental tools."
+---
+
 # For developers
 
 ## Stable engineering

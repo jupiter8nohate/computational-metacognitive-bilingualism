@@ -1,3 +1,8 @@
+---
+title: "CMB Research, Evidence and Policy | Jupiter Hudson"
+description: "A guide for researchers, journalists and policy readers to CMB's claims, primary sources, evidence boundaries and opportunities for independent review."
+---
+
 # For researchers, journalists, and policy readers
 
 CMB should be evaluated against prior work, not as if automated-decision rights, profiling criticism, algorithmic accountability, or provenance began here.

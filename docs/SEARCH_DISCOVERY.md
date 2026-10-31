@@ -105,7 +105,7 @@ SEARCH_SUMMARY != DOCUMENTED_HISTORY
 
 ## Automated IndexNow
 
-Every successful GitHub Pages deployment performs one best-effort IndexNow bulk notification for the canonical homepage, concept pages, FAQ, LLM maps, agent endpoints, and machine discovery files.
+Successful content-triggered GitHub Pages deployments perform one best-effort IndexNow bulk notification for the canonical homepage, concept pages, FAQ, LLM maps, agent endpoints, and machine discovery files. Scheduled hourly refreshes skip this notification. IndexNow is separate from Google's sitemap and Search Console inspection workflow.
 
 Verification key location:
 
@@ -130,6 +130,18 @@ The public bundle includes `library/catalog.json`,
 `extensions/cmb-cap/agent-extension.json`, and `machine/generated/manifest.json`.
 Generated artifact paths resolve relative to that manifest's directory.
 This verifies publication consistency; it does not measure indexing or adoption.
+
+The metadata hook now covers every Markdown page and honors authored front
+matter. Standalone HTML landing pages are finalized after staging and included
+in both sitemap formats. Source-history modification dates replace checkout
+dates. The search checker rejects missing descriptions, duplicate titles,
+conflicting canonicals, unintended indexing directives, omitted public HTML
+and stale compressed sitemaps across the whole bundle.
+
+`python scripts/check_search_discovery.py --live` checks priority HTTP responses,
+indexing headers and the hostname-root robots policy after publication. Its
+report explicitly leaves Google index status unknown. Keep actual Search Console
+results in the [Google inspection evidence log](SEARCH_INDEXING_CHECKLIST.md#google-inspection-evidence-log).
 
 
 ## Current operating-status discovery

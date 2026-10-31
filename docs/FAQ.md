@@ -1,3 +1,8 @@
+---
+title: "CMB Frequently Asked Questions | Jupiter Hudson"
+description: "Answers about Computational Metacognitive Bilingualism, human agency, provenance, CMB-Z13 symbolism and the limits of machine-generated judgments."
+---
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

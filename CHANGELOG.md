@@ -4,6 +4,13 @@ All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
 
+### Search publication repair
+
+- Emit titles, descriptions, canonicals and social metadata for every documentation page, honoring authored front matter and retaining existing structured identities and body glyphs.
+- Include the standalone Spider story and interactive playground in the sitemap; derive modification dates from committed page history and keep XML/gzip sitemaps synchronized.
+- Verify every public HTML landing page before publication and check live priority URLs, indexing headers and host-root robots policy after deployment. These checks establish publication health, not Google indexing.
+- Document a Search Console inspection evidence log with unknown status until actual Google inspection results are recorded.
+
 ### Release candidate
 
 - Prepared package, tool, CFF, and BibTeX metadata for `1.5.0-rc.1` on the dedicated release-candidate branch.

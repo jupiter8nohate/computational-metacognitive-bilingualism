@@ -29,14 +29,22 @@ For detailed existing infrastructure see [Search & AI Discovery Operations](SEAR
 
 ## Semantic discovery upgrade
 
-The public MkDocs build runs scripts/enrich_search_metadata.py before its
-existing branding and search-discovery audits. The script maintains unique
-search titles, page descriptions, OpenGraph/Twitter previews and CreativeWork
-JSON-LD for the primary D.N.A. Bible and DEATH NOTE 2084 reading routes.
-Pages whose authored Markdown already contains a DefinedTerm declaration
-retain that structured identity rather than receiving a contradictory node.
+The MkDocs `on_post_page` hook in `scripts/enrich_search_metadata.py` now emits
+one canonical, one title, one description and social previews for every
+Markdown page. Authored front-matter titles and descriptions take precedence;
+the existing `PAGE_SPECS` registry supplies curated chapter metadata. Other
+pages use concise navigation titles and a bounded excerpt of their own visible
+article prose. Add an authored description when that excerpt is not suitable.
+Navigation, scripts, code blocks and hidden glyph art are excluded from excerpts.
+The hook changes the HTML head, preserving the authored body and its glyphs.
 
-The source of truth is the explicit PAGE_SPECS registry. Changes should:
+Existing DefinedTerm, ProfilePage and other authored structured identities are
+preserved. Generic documentation pages are not automatically labelled fiction.
+The post-build pass handles the standalone illustrated Spider story and browser
+playground, then adds both routes to the generated sitemap. The playground guide
+at `PLAYGROUND/` and the functional tool at `playground/` have distinct canonicals.
+
+Changes should:
 
 1. Add a short, evidence-bounded description for each new canonical chapter.
 2. Keep symbolic signatures and visual glyphs in the accessible body without
@@ -44,8 +52,36 @@ The source of truth is the explicit PAGE_SPECS registry. Changes should:
 3. Preserve exactly one canonical URL and metadata description for each page.
 4. Pair meaningful ASCII illustrations with an accessible name and visible
    caption, without replacing their authored glyphs.
-5. Verify the published artifact using python scripts/build_docs.py, and
-   run pytest tests/test_search_metadata.py tests/test_search_discovery.py.
+5. Verify the published artifact using `python scripts/build_docs.py`, and
+   run `pytest tests/test_search_metadata.py tests/test_search_discovery.py`.
+
+The build checks all public HTML landing pages in both directions against the
+sitemap, including unique titles, nonempty descriptions, self-canonicals and
+indexing directives. Search/error utilities and the ownership-verification
+file stay out of the sitemap. Search and error utilities receive `noindex,follow`.
+Missing metadata is a publishing defect; a meta description is not a prerequisite
+for Google indexing and Google may choose another snippet.
+
+### Source dates and deployment checks
+
+Sitemap `lastmod` values come from the last committed change to each authored
+page source, not its checkout time or the hourly build clock. Untracked, dirty
+or shallow-history sources receive no date rather than an invented timestamp.
+Documentation workflows fetch full history. The compressed sitemap is regenerated
+from the same XML and checked for equality.
+
+After deployment, run:
+
+```bash
+python scripts/check_search_discovery.py --live --report-path /tmp/cmb-live-search.json
+```
+
+The deployment does this automatically. It checks priority URL responses,
+canonical metadata, `X-Robots-Tag`, sitemap inclusion and the **host-root**
+robots policy. Its report identifies the evidence as `publisher_http_checks`
+and leaves `google_index_status` as `UNKNOWN`. A host-root robots response of
+404 does not itself block Googlebot. Publication success is not an inspection
+by Google and cannot replace Search Console.
 
 The social preview currently references an existing local JPEG. A dedicated
 red-and-gold preview can replace it after an accessible PNG/JPEG asset has
@@ -63,10 +99,37 @@ GitHub Pages project subpaths do not own the hostname-root robots.txt scope.
 The project-path robots.txt remains a published discovery reference but is
 not a substitute for the host-root policy.
 
+### Google inspection evidence log
+
+Use the URL-prefix property for the canonical origin above. Confirm ownership
+and the sitemap's processing result, then inspect these pages first. Record
+the actual inspected timestamp, coverage reason, last crawl and Google-selected
+canonical from Search Console; do not infer them from a build or search query.
+
+| Canonical route | Google inspection time (UTC) | Google coverage | Google-selected canonical |
+| --- | --- | --- | --- |
+| [Homepage](index.md) | Not recorded | Unknown | Unknown |
+| [What Is CMB](concepts/what-is-cmb.md) | Not recorded | Unknown | Unknown |
+| [Jupiter Hudson biography](JUPITER_HUDSON_BIOGRAPHY.md) | Not recorded | Unknown | Unknown |
+| [Global AI Watch](GLOBAL_AI_WATCH.md) | Not recorded | Unknown | Unknown |
+| [Story Library](story-universe/index.md) | Not recorded | Unknown | Unknown |
+| [The Spider's Internet](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/spiders-internet/) | Not recorded | Unknown | Unknown |
+
+For discovered-but-not-indexed pages, check discovery and internal links.
+For crawled-but-not-indexed pages, review distinct usefulness, duplication and
+content quality. Resolve robots/noindex/HTTP errors and conflicting canonicals
+when the inspection reports them. After a meaningful repair, request indexing
+for the affected priority URLs and record a later inspection result. Repeated
+requests do not force indexing or accelerate the same URL's crawl.
+
+The October 31 audit could not retrieve Search Console results because the GSC
+Wizard account reported an inactive trial/subscription. Restore the connector's
+active plan/trial and reconnect if needed, or use Google Search Console directly.
+That connector error is not evidence that the site is absent from Google's index.
+
 ### Recovery
 
-If the metadata generator fails, the build fails before publication. Source
-Markdown remains unchanged, and the previous published artifact remains intact
+If the metadata generator fails, the build fails before publication. The previous published artifact remains intact
 until a validated deployment replaces it.
 
 ## Evolution review: new reader and discovery routes
