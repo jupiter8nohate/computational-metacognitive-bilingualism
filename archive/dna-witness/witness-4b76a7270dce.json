@@ -1,0 +1,23 @@
+{
+  "record_type": "noncanonical_rule_based_allegory",
+  "canonical_author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "generated_by": "CMB deterministic rule-based generator",
+  "chapter": {
+    "id": "witness-4b76a7270dce",
+    "theme": "DeepSeek unveils AI ‘super agent’ in coding race with OpenAI, Anthropic",
+    "source_url": "https://www.scmp.com/tech/article/3372884/deepseek-unveils-ai-super-agent-coding-race-openai-anthropic",
+    "source_domain": "www.scmp.com",
+    "boundaries": [
+      "ACT"
+    ],
+    "status": "fictional_allegory_not_fact_checked",
+    "question": "Who authorized the action, and how can a human contest it?",
+    "passage": [
+      "And the Watcher heard a new account arise from the public square.",
+      "Yet the Scribe refused to place a headline upon the throne of Truth.",
+      "For a machine may recognize a pattern, but a pattern is not proof.",
+      "And the Adversary asked for the source before drawing any conclusion.",
+      "So the Guardian left the question open, and the human kept the pen."
+    ]
+  }
+}
