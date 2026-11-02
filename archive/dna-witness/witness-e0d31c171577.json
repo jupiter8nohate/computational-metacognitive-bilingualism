@@ -1,0 +1,23 @@
+{
+  "record_type": "noncanonical_rule_based_allegory",
+  "canonical_author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "generated_by": "CMB deterministic rule-based generator",
+  "chapter": {
+    "id": "witness-e0d31c171577",
+    "theme": "Coming in 2027: Apple’s $1,000 home robot for FaceTime and switching on lights",
+    "source_url": "https://arstechnica.com/apple/2026/11/apples-roaming-home-robot-may-do-facetime-switch-lights-on-and-yell-at-your-cat/",
+    "source_domain": "arstechnica.com",
+    "boundaries": [
+      "ACT"
+    ],
+    "status": "fictional_allegory_not_fact_checked",
+    "question": "Who authorized the action, and how can a human contest it?",
+    "passage": [
+      "And the Watcher heard a new account arise from the public square.",
+      "Yet the Scribe refused to place a headline upon the throne of Truth.",
+      "For a machine may recognize a pattern, but a pattern is not proof.",
+      "And the Adversary asked for the source before drawing any conclusion.",
+      "So the Guardian left the question open, and the human kept the pen."
+    ]
+  }
+}
