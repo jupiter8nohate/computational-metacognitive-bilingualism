@@ -1,0 +1,103 @@
+{
+  "collected_at": "2026-11-03T21:05:56.390667Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 7,
+  "articles": [
+    {
+      "id": "c172670df3bbada1",
+      "title": "Ukraine’s drone strikes spur hasty Russian plans for underground data centers",
+      "url": "https://arstechnica.com/ai/2026/11/russia-looks-to-hide-data-centers-underground-as-ukrainian-drones-strike-back/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-11-03T20:39:55Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "661f7cba25c7352c",
+      "title": "Hackers behind $6.3bn Binance heist ‘used malware and bogus job interviews’",
+      "url": "https://www.theguardian.com/business/2026/nov/03/hackers-63bn-binance-heist-malware-bogus-job-interviews-cryptocurrency",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-11-03T19:00:23Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "23abe1f1b0a2b246",
+      "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+      "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-11-03T03:30:00Z",
+      "boundary_ids": [
+        "GENERATE"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "dfb1d49114f0805e",
+      "title": "Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+      "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-11-03T00:35:52Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "2dd3e3235cd194d1",
+      "title": "AI-powered malware ‘highly likely’ to be used to hack UK infrastructure by 2028",
+      "url": "https://www.theguardian.com/technology/2026/nov/03/ai-powered-malware-artificial-intelligence-hacking-critical-uk-infrastructure",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-11-03T00:01:32Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "e0d31c17157775e2",
+      "title": "Coming in 2027: Apple’s $1,000 home robot for FaceTime and switching on lights",
+      "url": "https://arstechnica.com/apple/2026/11/apples-roaming-home-robot-may-do-facetime-switch-lights-on-and-yell-at-your-cat/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-11-02T18:32:21Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "4b76a7270dcedb60",
+      "title": "DeepSeek unveils AI ‘super agent’ in coding race with OpenAI, Anthropic",
+      "url": "https://www.scmp.com/tech/article/3372884/deepseek-unveils-ai-super-agent-coding-race-openai-anthropic",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-11-01T10:00:26Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "2b0a24f41637353dc8962dafde9ac4516a0c2393cb650d71e8e03212ea09c36d",
+  "hash": "2d5502e544d1fe5cdee12402cc48c9fc3571adcd2aecb111383bc7b6357cceaf"
+}
