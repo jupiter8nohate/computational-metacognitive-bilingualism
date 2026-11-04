@@ -1,0 +1,90 @@
+{
+  "collected_at": "2026-11-04T23:44:06.215232Z",
+  "source_name": "Direct publisher RSS fallback: BBC News Technology, TechCrunch AI, Ars Technica AI, The Guardian AI, South China Morning Post Technology, Al Jazeera English",
+  "timespan": "72h",
+  "article_count": 6,
+  "articles": [
+    {
+      "id": "b314cbc6665b0c27",
+      "title": "Almost no one uses AI agents to book their Uber, company says",
+      "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
+      "domain": "techcrunch.com",
+      "seen_at": "2026-11-04T21:56:01Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "c2173d99d5813ac5",
+      "title": "Baidu’s new AI simulator gives robotaxis a crash course in rare road hazards",
+      "url": "https://www.scmp.com/tech/big-tech/article/3373173/baidus-new-ai-simulator-gives-robotaxis-crash-course-rare-road-hazards",
+      "domain": "www.scmp.com",
+      "seen_at": "2026-11-04T01:30:05Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    },
+    {
+      "id": "c172670df3bbada1",
+      "title": "Ukraine’s drone strikes spur hasty Russian plans for underground data centers",
+      "url": "https://arstechnica.com/ai/2026/11/russia-looks-to-hide-data-centers-underground-as-ukrainian-drones-strike-back/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-11-03T20:39:55Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security"
+      ]
+    },
+    {
+      "id": "661f7cba25c7352c",
+      "title": "Hackers behind $6.3bn Binance heist ‘used malware and bogus job interviews’",
+      "url": "https://www.theguardian.com/business/2026/nov/03/hackers-63bn-binance-heist-malware-bogus-job-interviews-cryptocurrency",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-11-03T19:00:23Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "2dd3e3235cd194d1",
+      "title": "AI-powered malware ‘highly likely’ to be used to hack UK infrastructure by 2028",
+      "url": "https://www.theguardian.com/technology/2026/nov/03/ai-powered-malware-artificial-intelligence-hacking-critical-uk-infrastructure",
+      "domain": "www.theguardian.com",
+      "seen_at": "2026-11-03T00:01:32Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "military_security",
+        "cybercrime"
+      ]
+    },
+    {
+      "id": "e0d31c17157775e2",
+      "title": "Coming in 2027: Apple’s $1,000 home robot for FaceTime and switching on lights",
+      "url": "https://arstechnica.com/apple/2026/11/apples-roaming-home-robot-may-do-facetime-switch-lights-on-and-yell-at-your-cat/",
+      "domain": "arstechnica.com",
+      "seen_at": "2026-11-02T18:32:21Z",
+      "boundary_ids": [
+        "ACT"
+      ],
+      "sector_ids": [
+        "general"
+      ]
+    }
+  ],
+  "previous_hash": "1677ef5b95fa67c4621707c19cf7f037aec86944ecf445b9b2caed7122dc38f9",
+  "hash": "5b8757386531571a8a84f053c10542c4778e39c79697e9005ee9321bd9904a5f"
+}
