@@ -3,16 +3,25 @@ import sys
 import tempfile
 import unittest
 from datetime import datetime, timedelta, timezone
+from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 from unittest.mock import patch
 from urllib.error import HTTPError, URLError
 
-from scripts import build_observatory as observatory
-from scripts import persist_watch_history as archive
-from scripts import update_global_ai_watch as collector
-
-
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_script(name: str):
+    spec = spec_from_file_location(name, ROOT / "scripts" / f"{name}.py")
+    assert spec and spec.loader
+    module = module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+observatory = load_script("build_observatory")
+archive = load_script("persist_watch_history")
+collector = load_script("update_global_ai_watch")
 
 
 def sample(hours_old: int) -> dict:
