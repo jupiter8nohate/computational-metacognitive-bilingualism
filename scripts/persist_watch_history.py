@@ -1,7 +1,7 @@
 """Preserve each new Global AI Watch collection in a dedicated Git history branch.
 
-No human-written canon is modified. The Pages archive is a fast public
-checkpoint, while individual source-linked entries are committed to Git.
+Commit the new collection record and the full recovery checkpoint together.
+The noncanonical literary witness has its own archive entry.
 Requires GITHUB_TOKEN with contents:write in the publishing workflow.
 """
 from __future__ import annotations
@@ -12,7 +12,6 @@ import os
 import sys
 from pathlib import Path
 from urllib.error import HTTPError
-from urllib.parse import quote
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,7 +22,10 @@ HISTORY = ROOT / "machine/global-ai-watch-history.json"
 WATCH = ROOT / "machine/global-ai-watch.json"
 
 
-def request(method: str, url: str, token: str, data: dict | None = None) -> dict:
+def request(
+    method: str, url: str, token: str, data: dict | None = None, *,
+    accept: str = "application/vnd.github+json",
+) -> dict:
     body = json.dumps(data).encode("utf-8") if data is not None else None
     req = Request(
         url,
@@ -31,7 +33,7 @@ def request(method: str, url: str, token: str, data: dict | None = None) -> dict
         method=method,
         headers={
             "Authorization": "Bearer " + token,
-            "Accept": "application/vnd.github+json",
+            "Accept": accept,
             "Content-Type": "application/json",
             "User-Agent": "CMB-Watch-Archive/1.0",
             "X-GitHub-Api-Version": "2022-11-28",
@@ -41,35 +43,67 @@ def request(method: str, url: str, token: str, data: dict | None = None) -> dict
         return json.loads(response.read().decode("utf-8"))
 
 
-def archive_entry(token: str, current_sha: str, record: dict) -> bool:
+def archive_collection(token: str, current_sha: str, checkpoint: dict) -> bool:
+    from build_observatory import check_checkpoint
+
+    check_checkpoint(checkpoint)
+    record = checkpoint["history"]["entries"][-1]
+    ref_url = API + "/git/refs/heads/" + BRANCH
     try:
-        request("GET", API + "/git/ref/heads/" + BRANCH, token)
+        ref = request("GET", API + "/git/ref/heads/" + BRANCH, token)
     except HTTPError as exc:
         if exc.code != 404:
             raise
-        request(
+        ref = request(
             "POST", API + "/git/refs", token,
             {"ref": "refs/heads/" + BRANCH, "sha": current_sha},
         )
-    timestamp = record["collected_at"].replace(":", "").replace("-", "")
-    timestamp = timestamp.replace("T", "_").replace("Z", "")
-    path = "archive/watch-snapshots/" + timestamp[:8] + "/" + timestamp + "_" + record["hash"][:12] + ".json"
-    url = API + "/contents/" + quote(path, safe="/")
+    head = ref["object"]["sha"]
+    checkpoint_path = "archive/watch-checkpoint.json"
     try:
-        request("GET", url + "?ref=" + BRANCH, token)
-        return False
+        previous = request(
+            "GET", API + "/contents/" + checkpoint_path + "?ref=" + head, token,
+            accept="application/vnd.github.raw+json",
+        )
     except HTTPError as exc:
         if exc.code != 404:
             raise
-    content = json.dumps(record, indent=2, ensure_ascii=False) + "\n"
-    request(
-        "PUT", url, token,
+    else:
+        check_checkpoint(previous)
+        previous_tip = previous["history"]["entries"][-1]["hash"]
+        if record["hash"] == previous_tip:
+            if checkpoint["snapshot_sha256"] != previous["snapshot_sha256"]:
+                raise ValueError("Existing collection has a different full snapshot digest")
+            return False
+        if record["previous_hash"] != previous_tip:
+            raise ValueError("New collection does not extend the current Git checkpoint")
+
+    timestamp = record["collected_at"].replace(":", "").replace("-", "")
+    timestamp = timestamp.replace("T", "_").replace("Z", "")
+    record_path = f"archive/watch-snapshots/{timestamp[:8]}/{timestamp}_{record['hash'][:12]}.json"
+    base = request("GET", API + "/git/commits/" + head, token)
+    tree = request(
+        "POST", API + "/git/trees", token,
         {
-            "message": "archive: preserve evidence-linked Global AI Watch collection",
-            "branch": BRANCH,
-            "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
+            "base_tree": base["tree"]["sha"],
+            "tree": [
+                {
+                    "path": path, "mode": "100644", "type": "blob",
+                    "content": json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n",
+                }
+                for path, data in ((record_path, record), (checkpoint_path, checkpoint))
+            ],
         },
     )
+    commit = request(
+        "POST", API + "/git/commits", token,
+        {
+            "message": "archive: preserve Global AI Watch collection and recovery checkpoint",
+            "tree": tree["sha"],
+            "parents": [head],
+        },
+    )
+    request("PATCH", ref_url, token, {"sha": commit["sha"], "force": False})
     return True
 
 
@@ -119,20 +153,23 @@ def main() -> int:
     if not token or not sha:
         print("Git history branch requires GITHUB_TOKEN and GITHUB_SHA", file=sys.stderr)
         return 2
-    from build_observatory import check_history
-    history = json.loads(HISTORY.read_text(encoding="utf-8"))
-    check_history(history)
-    if not history["entries"]:
-        return 0
-    record = history["entries"][-1]
-    current = json.loads(WATCH.read_text(encoding="utf-8"))
-    if record["collected_at"] != current["generated_at"]:
-        print("No new live collection; Git history is unchanged")
-        return 0
+    from build_observatory import check_history, digest
+
     try:
-        saved = archive_entry(token, sha, record)
+        history = json.loads(HISTORY.read_text(encoding="utf-8"))
+        check_history(history)
+        current = json.loads(WATCH.read_text(encoding="utf-8"))
+        if not history["entries"] or history["entries"][-1]["collected_at"] != current["generated_at"]:
+            print("No collection matches the history tip; Git history is unchanged")
+            return 0
+        saved = archive_collection(token, sha, {
+            "schema_version": "cmb.watch-checkpoint.v1",
+            "snapshot_sha256": digest(current),
+            "snapshot": current,
+            "history": history,
+        })
         witness_saved = archive_first_witness(token)
-    except (HTTPError, OSError, ValueError) as exc:
+    except (OSError, ValueError, KeyError, TypeError) as exc:
         print(f"Git history preservation failed: {exc}", file=sys.stderr)
         return 2
     print("Git collection " + ("preserved" if saved else "already present") + " on " + BRANCH)

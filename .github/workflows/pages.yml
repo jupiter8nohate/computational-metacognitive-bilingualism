@@ -40,6 +40,7 @@ on:
       - "scripts/generate_dna_witness.py"
       - "scripts/persist_watch_history.py"
       - "tests/test_watch_observatory.py"
+      - "tests/test_watch_recovery.py"
       - "tests/test_site_integrity.py"
       - "tests/test_global_ai_watch.py"
       - "tests/test_epistemic_radar.py"
@@ -90,17 +91,32 @@ jobs:
       - name: Install documentation dependencies
         run: python -m pip install --upgrade pip ".[docs]" "pytest>=8,<10"
 
+      - name: Check out the independent Watch recovery archive
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: watch-history
+          path: .cmb-watch-recovery
+          persist-credentials: false
+          sparse-checkout: |
+            archive/watch-checkpoint.json
+            archive/watch-snapshots/
+          sparse-checkout-cone-mode: false
+
       - name: Refresh Global AI Watch snapshot
-        run: python scripts/update_global_ai_watch.py --allow-stale
+        run: >-
+          python scripts/update_global_ai_watch.py --allow-stale
+          --recovery-checkpoint .cmb-watch-recovery/archive/watch-checkpoint.json
 
       - name: Preserve historical collections and assess sources
-        run: python scripts/build_observatory.py
+        run: python scripts/build_observatory.py --archive-dir .cmb-watch-recovery/archive
 
       - name: Build evidence-bounded Watch research dossiers
         run: python scripts/build_watch_intelligence.py
 
       - name: Test Watch data, historical records and research triage
-        run: python -m pytest -q tests/test_global_ai_watch.py tests/test_watch_observatory.py tests/test_epistemic_radar.py tests/test_watch_intelligence.py
+        run: >-
+          python -m pytest -q tests/test_global_ai_watch.py tests/test_watch_observatory.py
+          tests/test_watch_recovery.py tests/test_epistemic_radar.py tests/test_watch_intelligence.py
 
       - name: Build CMB Epistemic Radar from shared evidence
         run: python scripts/build_epistemic_radar.py --use-watch-snapshot
@@ -151,6 +167,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+      - name: Record successful publication time
+        run: printf 'Pages deployment completion observed at %s UTC\n' "$(date -u +%Y-%m-%dT%H:%M:%S)"
 
       # A successful deploy is not proof that the published URLs are reachable.
       # Retry around CDN propagation and fail visibly if the public site is unreachable.

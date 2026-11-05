@@ -447,8 +447,18 @@ def usable_snapshot(data: dict[str, Any]) -> bool:
     )
 
 
-def best_available_snapshot(local_path: Path, *, timeout: float = 8.0) -> dict[str, Any]:
+def best_available_snapshot(
+    local_path: Path, *, recovery_checkpoint: Path | None = None, timeout: float = 8.0
+) -> dict[str, Any]:
     """Preserve the newest valid deployed snapshot across stateless Actions runs."""
+    if recovery_checkpoint is not None and recovery_checkpoint.is_file():
+        checkpoint = load_json(recovery_checkpoint)
+        archived = checkpoint.get("snapshot")
+        if not isinstance(archived, dict) or not usable_snapshot(archived):
+            raise WatchError("Git recovery checkpoint has no usable Watch snapshot")
+        # The observatory checks the digest and matching history before publication.
+        return archived
+
     local = load_json(local_path)
     selected = local if usable_snapshot(local) else None
     try:
@@ -587,6 +597,7 @@ def main() -> int:
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--output-doc", type=Path, default=DEFAULT_DOC)
     parser.add_argument("--output-json", type=Path, default=DEFAULT_JSON)
+    parser.add_argument("--recovery-checkpoint", type=Path)
     parser.add_argument(
         "--fixture",
         type=Path,
@@ -595,7 +606,7 @@ def main() -> int:
     parser.add_argument(
         "--allow-stale",
         action="store_true",
-        help="Preserve the checked-in snapshot when the external GDELT fetch is unavailable.",
+        help="Preserve the last usable snapshot if live sources are unavailable.",
     )
     args = parser.parse_args()
 
@@ -635,7 +646,9 @@ def main() -> int:
                     raise WatchError(
                         f"GDELT and RSS failed: {gdelt_error}; {rss_error}"
                     ) from rss_error
-                data = best_available_snapshot(args.output_json)
+                data = best_available_snapshot(
+                    args.output_json, recovery_checkpoint=args.recovery_checkpoint
+                )
                 document = args.output_doc.read_text(encoding="utf-8")
                 updated_document = replace_generated_section(
                     document,

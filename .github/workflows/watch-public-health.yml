@@ -49,7 +49,10 @@ jobs:
               raise ValueError("Watch timestamps are more than two hours in the future")
           if checked_age > 7200:
               raise ValueError("Published Watch health report is older than two hours")
-          if collection_age > 21600:
+          if collection_age >= 21600:
               raise ValueError("Global AI Watch collection is older than six hours")
+          print("Collection timestamp:", health["last_successful_collection"])
+          print("Health report generated at:", health["checked_at"])
+          print("Endpoint probe observed at:", now.isoformat())
           print("Published Watch verified: " + str(int(collection_age // 60)) + " min since collection")
           PY
