@@ -64,39 +64,13 @@ In **Settings → Security / Code security and analysis**:
 - enable push protection where available;
 - enable private vulnerability reporting.
 
-The committed Dependency Review workflow currently degrades cleanly when Dependency Graph is disabled. After enabling the graph, remove `continue-on-error: true` so high-severity dependency changes become a blocking PR check.
+The Dependency Review workflow uses GitHub Dependency Review when the Dependency Graph is available. Its fallback runs strict Python and lockfile vulnerability scans. The active ruleset requires the `dependency-review` check.
 
 ## Protect `main`
 
-In **Settings → Branches / Rulesets**, prefer:
+GitHub reported `main` protected by the active [Protect main ruleset](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/rules/22362595) on November 5, 2026. The ruleset requires pull requests, squash merges, linear history, resolved review threads, and up-to-date passing checks. It blocks force pushes and deletion.
 
-- require a pull request before merging;
-- require status checks to pass;
-- require conversation resolution;
-- block force pushes;
-- block branch deletion;
-- require linear history if it matches the project's squash-merge workflow.
-
-### Audit note — 2026-09-05 (America/New_York)
-
-The GitHub branch API currently reports `main` as `protected: false`, with protection disabled and no required status checks. The repository rulesets endpoint also returns an empty ruleset list.
-
-This is now a verified configuration gap rather than an unknown state. Repository files cannot enable that platform control through the available integration. Configure a GitHub ruleset or classic branch protection for `main` and require the critical workflows before treating the branch as protected.
-
-Recommended required checks after the ruleset is created:
-
-- CI
-- CMB Sovereignty Gate
-- CodeQL
-- Documentation
-- OpenSSF Scorecard
-- any release-specific checks that are required for release branches or tags
-
-```text
-PROTECTED_FALSE == VERIFIED_CONFIGURATION_GAP
-PLATFORM_SETTING != REPOSITORY_FILE
-GREEN_CI != PROTECTED_BRANCH
-```
+The required checks are Python 3.10 through 3.13, Canonical CMB receipt, CMB SRP-2, CodeQL Python, and dependency review. The ruleset requires zero approving reviews. The separate independent-review gate for the final v1.5 release is tracked in [issue #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63).
 
 ## Release and DOI gate
 

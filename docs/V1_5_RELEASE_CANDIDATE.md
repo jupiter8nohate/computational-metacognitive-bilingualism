@@ -1,15 +1,18 @@
 # CMB v1.5 Release Candidate Brief
 
-**Status:** FROZEN REVIEW CANDIDATE  
-**Latest published signed release:** `v1.4.1`  
-**Frozen candidate commit:** `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5`  
-**Immutable review branch:** `review/v1.5.0-rc.1-e725bb6`  
-**Candidate source/tool version:** `1.5.0-rc.1`  
-**Candidate tag:** `v1.5.0-rc.1`  
-**Final target:** `v1.5.0`
+| Field | Value |
+| --- | --- |
+| Latest published signed release | `v1.4.1` |
+| Candidate source and tool version | `1.5.0-rc.2` |
+| Candidate tag | `v1.5.0-rc.2` |
+| Exact commit and review branch | [Review ticket #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) |
+| Tag and signed assets | [Publication ticket #138](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/138) |
+| Final target | `v1.5.0` |
 
 This document is the short technical handoff for the v1.5 release candidate.
 It is deliberately narrower than the full CMB universe.
+
+The unpublished `rc.1` review commit `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5` pinned a Zstandard dependency affected by [RUSTSEC-2026-0391](https://rustsec.org/advisories/RUSTSEC-2026-0391.html). The `rc.2` source includes the subsequent Actix remediation and its regression check.
 
 ## Candidate purpose
 
@@ -66,22 +69,16 @@ educational experiment, or research subsystem.
 
 ## Candidate gates
 
-Before tagging `v1.5.0-rc.1`:
+Record the following evidence for the exact `rc.2` tree in [issue #138](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/138) before tagging.
 
-- [x] stabilization / RC reconciliation PR is merged into `main`;
-- [x] package/tool/citation versions are synchronized to the SemVer release-candidate version;
-- [x] Python 3.10–3.13 CI passes;
-- [x] canonical receipt generation passes;
-- [x] CodeQL and dependency review pass;
-- [x] TypeScript uses the committed npm lock through `npm ci`;
-- [x] Rust uses the committed Cargo lock through `--locked`;
-- [ ] Go and GLT-8101 conformance pass;
-- [x] Recovery audit passes;
-- [x] README, CHANGELOG, SECURITY, and RELEASE surfaces agree on maturity after this reconciliation PR.
+- synchronized package, tool and citation versions;
+- successful Python 3.10–3.13 tests, canonical receipt, Recovery audit and CodeQL;
+- passing dependency review and a passing Actix Zstandard regression check;
+- passing locked TypeScript and Rust tests, Go boundary conformance, and GLT-8101 conformance.
 
 ## Review-target repin
 
-Issue #63 is repinned to the frozen candidate commit `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5` and immutable branch `review/v1.5.0-rc.1-e725bb6`. The prior review target is superseded. Any later `main` documentation or maintenance commits are outside this candidate unless a new candidate is deliberately cut.
+[Issue #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) records the exact `rc.2` candidate commit and its review branch. A reviewer can verify the commit directly even as `main` advances.
 
 ~~~text
 OLD_REVIEW_TARGET != CURRENT_CANDIDATE_TREE
@@ -90,7 +87,7 @@ EXACT_COMMIT > MOVING_TARGET
 
 ## RC publication state
 
-The candidate tree is frozen and independently addressable by exact commit and review branch. The signed GitHub release is still pending creation of tag `v1.5.0-rc.1` at exactly `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5`. Issue #138 tracks that tag-only action.
+The `v1.5.0-rc.2` tag must point to the exact candidate commit in [issue #138](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/138). The tag workflow publishes a signed prerelease after its gates succeed.
 
 ~~~text
 TAG_COMMIT == REVIEW_COMMIT
@@ -100,7 +97,7 @@ RC != FINAL_RELEASE
 
 ## Final v1.5.0 gate
 
-The release candidate is a review object, not the final validation claim. Python build tooling may normalize `1.5.0-rc.1` to `1.5.0rc1` in wheel/sdist metadata and filenames; the CMB receipt/tool source version remains SemVer `1.5.0-rc.1`.
+The candidate is the exact tree for independent review. Python build tooling normalizes `1.5.0-rc.2` to `1.5.0rc2` in wheel and sdist metadata. The CMB tool and receipt record the SemVer form `1.5.0-rc.2`.
 
 Before final `v1.5.0`:
 

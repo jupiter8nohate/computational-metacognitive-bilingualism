@@ -3,6 +3,7 @@ name: Polyglot boundary conformance
 on:
   push:
     paths:
+      - "pyproject.toml"
       - "adapters/**"
       - "conformance/**"
       - "src/cmb_provenance/boundary.py"
@@ -16,6 +17,7 @@ on:
       - ".github/workflows/polyglot-conformance.yml"
   pull_request:
     paths:
+      - "pyproject.toml"
       - "adapters/**"
       - "conformance/**"
       - "src/cmb_provenance/boundary.py"

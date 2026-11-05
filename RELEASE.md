@@ -9,7 +9,7 @@ CMB signed releases use a tag-triggered GitHub Actions release with keyless Sigs
 3. Polyglot boundary conformance passes for TypeScript, Rust, and Go against the shared v1 fixtures, with committed TypeScript/Rust lockfiles and locked dependency installation.
 4. The MCP compatibility workflow imports the optional MCP 2.x server and the CMB-ADP self-test passes.
 5. `python -m build` produces one source distribution and one wheel.
-6. The tag exactly matches the package version, for example `v1.5.0-rc.1` for the release candidate.
+6. The tag exactly matches the package version, for example `v1.5.0-rc.2` for the current candidate.
 7. The tag points to the reviewed commit that should appear in the artifact seal receipt.
 8. The canonical public CMB artifact set is present and committed:
    - `MANIFESTO.md`
@@ -48,7 +48,7 @@ CMB signed releases use a tag-triggered GitHub Actions release with keyless Sigs
 The v1.5 stabilization sequence is:
 
 ```text
-v1.5.0-rc.1
+v1.5.0-rc.2
     ↓
 independent review of the exact candidate commit
     ↓
@@ -57,15 +57,14 @@ material findings reproduced and resolved
 v1.5.0
 ```
 
-For a release candidate, first set the package/tool version consistently to the
-SemVer form `1.5.0-rc.1`, then tag the exact reviewed candidate commit:
+For a release candidate, synchronize the source/tool and citation versions. Confirm that the dependency and polyglot conformance gates passed on the exact commit recorded in [issue #138](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/138). Set `CMB_RC_COMMIT` to that full commit hash before running the tag commands.
 
 ```bash
-git tag v1.5.0-rc.1
-git push origin v1.5.0-rc.1
+git tag v1.5.0-rc.2 "$CMB_RC_COMMIT"
+git push origin refs/tags/v1.5.0-rc.2
 ```
 
-Python packaging may normalize `1.5.0-rc.1` to `1.5.0rc1` in built distribution metadata/filenames. The source/tool version and Git tag remain SemVer-compatible.
+Python packaging normalizes `1.5.0-rc.2` to `1.5.0rc2` in distribution metadata and filenames. GitHub publishes the candidate as a prerelease.
 
 Do not publish final `v1.5.0` until the independent-review gate in
 `docs/EXTERNAL_REVIEW.md` and issue #63 has been satisfied.

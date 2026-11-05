@@ -95,7 +95,8 @@
 <span>HUMAN_AGENCY &gt; MACHINE_AUTHORITY</span>
 </div>
 <nav class="cmb-stage-actions" aria-label="Start exploring Computational Metacognitive Bilingualism">
-<a class="cmb-action cmb-action--primary" href="concepts/what-is-cmb/">Understand CMB ↗</a>
+<a class="cmb-action cmb-action--primary" href="playground/#human-review-example">Try the Human Review Demo ↗</a>
+<a class="cmb-action cmb-action--quiet" href="concepts/what-is-cmb/">Understand CMB ↗</a>
 <a class="cmb-action cmb-action--secondary" href="2084/">Enter the Stories ↗</a>
 <a class="cmb-action cmb-action--quiet" href="DEVELOPERS/">Build and Verify ↗</a>
 <a class="cmb-action cmb-action--quiet" href="JUPITER_HUDSON_BIOGRAPHY/">Meet the Creator ↗</a>
@@ -226,13 +227,16 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 
 <div class="cmb-control-room">
 
-<div class="cmb-status-led cmb-status-led--warn"><strong>RELEASE</strong><span>v1.5.0-rc.1 CANDIDATE</span></div>
-<div class="cmb-status-led cmb-status-led--warn"><strong>EXTERNAL REVIEW</strong><span>PENDING</span></div>
-<div class="cmb-status-led cmb-status-led--warn"><strong>DOI / ARCHIVE</strong><span>VERIFYING</span></div>
+<a class="cmb-status-led" href="https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/releases/tag/v1.4.1"><strong>LAST SIGNED RELEASE</strong><span>v1.4.1</span></a>
+<a class="cmb-status-led cmb-status-led--warn" href="V1_5_RELEASE_CANDIDATE/"><strong>RELEASE CANDIDATE</strong><span>v1.5.0-rc.2</span></a>
+<a class="cmb-status-led cmb-status-led--warn" href="https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63"><strong>EXTERNAL REVIEW</strong><span>PENDING</span></a>
+<a class="cmb-status-led cmb-status-led--warn" href="https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/44"><strong>DOI / ARCHIVE</strong><span>PUBLIC VERIFICATION PENDING</span></a>
+<a class="cmb-status-led cmb-status-led--warn" href="SEARCH_INDEXING_CHECKLIST/"><strong>GOOGLE INDEXING</strong><span>INSPECTION PENDING</span></a>
+<a class="cmb-status-led cmb-status-led--pass" href="REPOSITORY_SETTINGS/#protect-main"><strong>DEFAULT BRANCH</strong><span>ACTIVE RULESET</span></a>
 
 </div>
 
-<p class="cmb-control-note">Status labels are a published snapshot, not independently live monitoring. <a href="generated/CMB_SYSTEM_STATUS/">Inspect the evidence-backed system status ↗</a></p>
+<p class="cmb-control-note">Status snapshot checked <time datetime="2026-11-05">November 5, 2026</time>. Each badge opens its evidence or tracking record. <a href="generated/CMB_SYSTEM_STATUS/">Inspect the repository-side checks ↗</a></p>
 
 Repository-side specialist audits now publish a [CMB System Status](generated/CMB_SYSTEM_STATUS.md) surface with structured evidence packets. External gates are deliberately kept separate from self-reported automation.
 

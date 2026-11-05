@@ -150,18 +150,18 @@ RC_READY != FINAL_RELEASE_VALIDATED
 GREEN_CI != INDEPENDENT_AUDIT
 ~~~
 
-## Frozen v1.5.0-rc.1 review object
+## Historical v1.5.0-rc.1 review object
 
-The release-candidate review object is frozen at:
+The original release candidate was frozen at:
 
 ~~~text
 COMMIT = e725bb6a819a8c48ed16558d88c58e17cbf9b3d5
 REVIEW_BRANCH = review/v1.5.0-rc.1-e725bb6
 VERSION = 1.5.0-rc.1
-TAG = v1.5.0-rc.1 (pending creation)
+TAG = v1.5.0-rc.1 (unpublished)
 ~~~
 
-Issue #63 is repinned to this exact commit. Issue #138 tracks creation of the tag at the same commit. Later `main` documentation or maintenance commits do not silently change the candidate bytes.
+The current [v1.5 candidate brief](V1_5_RELEASE_CANDIDATE.md) covers `rc.2`, which includes the subsequent Actix security remediation. The [independent review ticket](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) and [publication ticket](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/138) track the current exact commit and tag.
 
 ~~~text
 EXACT_COMMIT > MOVING_TARGET
