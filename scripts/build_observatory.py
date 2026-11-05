@@ -1,8 +1,7 @@
 """Build an auditable, source-linked CMB observatory from the collected Watch snapshot.
 
-The previous publicly deployed history is the checkpoint for this stateless
-GitHub Pages build. A read failure fails closed rather than erasing history.
-GitHub Actions may additionally preserve snapshots in a Git history branch.
+The Git archive supplies the recovery checkpoint for the stateless Pages build.
+Previously published history and legacy Git records can bootstrap the checkpoint.
 """
 
 from __future__ import annotations
@@ -29,6 +28,7 @@ PUBLIC_HISTORY = (
     "computational-metacognitive-bilingualism/machine/global-ai-watch-history.json"
 )
 GENESIS = "0" * 64
+HISTORY_LIMIT = 360
 
 
 class ObservatoryError(ValueError):
@@ -102,6 +102,103 @@ def load_prior(path: Path | None, *, url: str = PUBLIC_HISTORY) -> dict:
     return history
 
 
+def recover_git_history(directory: Path) -> dict | None:
+    """Recover the latest connected chain from pre-checkpoint Git records."""
+    records = {}
+    for path in sorted(directory.glob("*/*.json")):
+        record = json.loads(path.read_text(encoding="utf-8"))
+        records[record["hash"]] = record
+    if not records:
+        return None
+
+    tip = max(records.values(), key=lambda record: parse_time(record["collected_at"]))
+    chain = []
+    seen = set()
+    while tip is not None:
+        if tip["hash"] in seen:
+            raise ObservatoryError("Git archive contains a cyclic history")
+        seen.add(tip["hash"])
+        chain.append(tip)
+        tip = records.get(tip["previous_hash"])
+    chain.reverse()
+    history = {
+        **new_history(),
+        "genesis_hash": chain[0]["previous_hash"],
+        "total_collections": len(chain),
+        "entries": chain,
+    }
+    check_history(history)
+    retained = chain[-HISTORY_LIMIT:]
+    history["genesis_hash"] = retained[0]["previous_hash"]
+    history["entries"] = retained
+    return history
+
+
+def load_recovery_history(archive: Path) -> dict:
+    checkpoint = archive / "watch-checkpoint.json"
+    if checkpoint.is_file():
+        data = json.loads(checkpoint.read_text(encoding="utf-8"))
+        check_checkpoint(data)
+        return data["history"]
+
+    try:
+        published = load_prior(None)
+    except ObservatoryError:
+        recovered = recover_git_history(archive / "watch-snapshots")
+        if recovered is None:
+            raise
+        return recovered
+    if published["entries"]:
+        return published
+    recovered = recover_git_history(archive / "watch-snapshots")
+    if recovered is None and not archive.is_dir():
+        raise ObservatoryError("Neither published history nor the Git archive is available")
+    return recovered if recovered is not None else published
+
+
+def collection_record(snapshot: dict, previous_hash: str) -> dict:
+    articles = [
+        {
+            "id": article["id"],
+            "title": article["title"],
+            "url": article["url"],
+            "domain": article["domain"],
+            "seen_at": article.get("seen_at"),
+            "boundary_ids": article["boundary_ids"],
+            "sector_ids": article["sector_ids"],
+        }
+        for article in snapshot["articles"]
+    ]
+    payload = {
+        "collected_at": snapshot["generated_at"],
+        "source_name": snapshot["source"]["name"],
+        "timespan": snapshot["timespan"],
+        "article_count": len(articles),
+        "articles": articles,
+        "previous_hash": previous_hash,
+    }
+    return {**payload, "hash": digest(payload)}
+
+
+def check_checkpoint(data: dict) -> None:
+    if not isinstance(data, dict) or data.get("schema_version") != "cmb.watch-checkpoint.v1":
+        raise ObservatoryError("Unexpected Watch recovery checkpoint schema")
+    history = data["history"]
+    check_history(history)
+    snapshot = data["snapshot"]
+    if not isinstance(snapshot, dict) or snapshot.get("schema_version") != "cmb.global-ai-watch.v1":
+        raise ObservatoryError("Unexpected Watch snapshot schema in recovery checkpoint")
+    if snapshot.get("article_count") != len(snapshot["articles"]):
+        raise ObservatoryError("Watch recovery snapshot article count mismatch")
+    if data["snapshot_sha256"] != digest(snapshot):
+        raise ObservatoryError("Watch recovery snapshot digest mismatch")
+    if not history["entries"]:
+        raise ObservatoryError("Watch recovery checkpoint has no collection")
+    tip = history["entries"][-1]
+    if tip != collection_record(snapshot, tip["previous_hash"]):
+        raise ObservatoryError("Watch recovery snapshot does not match its history tip")
+
+
 def record_snapshot(history: dict, snapshot: dict, *, stale: bool) -> bool:
     """Append only a genuinely newer, nonstale collection."""
     check_history(history)
@@ -122,29 +219,9 @@ def record_snapshot(history: dict, snapshot: dict, *, stale: bool) -> bool:
         if current <= last:
             # Replaying a previous collection must not produce a new archive claim.
             return False
-    slim = [
-        {
-            "id": article["id"],
-            "title": article["title"],
-            "url": article["url"],
-            "domain": article["domain"],
-            "seen_at": article.get("seen_at"),
-            "boundary_ids": article["boundary_ids"],
-            "sector_ids": article["sector_ids"],
-        }
-        for article in articles
-    ]
-    payload = {
-        "collected_at": collected_at,
-        "source_name": snapshot["source"]["name"],
-        "timespan": snapshot["timespan"],
-        "article_count": len(slim),
-        "articles": slim,
-        "previous_hash": entries[-1]["hash"] if entries else GENESIS,
-    }
-    entries.append({**payload, "hash": digest(payload)})
+    entries.append(collection_record(snapshot, entries[-1]["hash"] if entries else GENESIS))
     history["total_collections"] = int(history.get("total_collections", len(entries) - 1)) + 1
-    if len(entries) > 360:
+    if len(entries) > HISTORY_LIMIT:
         removed = entries.pop(0)
         history["genesis_hash"] = removed["hash"]
     return True
@@ -187,7 +264,7 @@ def health_report(snapshot: dict, history: dict, *, stale: bool, target_minutes:
     now = datetime.now(timezone.utc)
     last = parse_time(snapshot["generated_at"])
     age_minutes = max(0, int((now - last).total_seconds() // 60))
-    if stale or age_minutes > 360:
+    if stale or age_minutes >= 360:
         status = "STALE"
     elif age_minutes > 2 * target_minutes:
         status = "DELAYED"
@@ -221,7 +298,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--watch", type=Path, default=DEFAULT_WATCH)
     parser.add_argument("--watch-doc", type=Path, default=DEFAULT_DOC)
-    parser.add_argument("--prior", type=Path, default=None)
+    prior = parser.add_mutually_exclusive_group()
+    prior.add_argument("--prior", type=Path)
+    prior.add_argument("--archive-dir", type=Path, help="Read the Watch recovery checkout's archive directory")
     parser.add_argument("--history", type=Path, default=HISTORY)
     parser.add_argument("--health", type=Path, default=HEALTH)
     parser.add_argument("--assessments", type=Path, default=ASSESSMENTS)
@@ -232,7 +311,11 @@ def main() -> int:
         doc = args.watch_doc.read_text(encoding="utf-8")
         stale = ("STALE - LIVE SOURCES UNAVAILABLE" in doc or
                  datetime.now(timezone.utc) - parse_time(snapshot["generated_at"]) > timedelta(hours=6))
-        history = load_prior(args.prior)
+        history = load_recovery_history(args.archive_dir) if args.archive_dir else load_prior(args.prior)
+        if args.archive_dir and history["entries"]:
+            latest = parse_time(history["entries"][-1]["collected_at"])
+            if parse_time(snapshot["generated_at"]) < latest:
+                raise ObservatoryError("Selected snapshot would roll back the Git collection history")
         appended = record_snapshot(history, snapshot, stale=stale)
         health = health_report(
             snapshot, history, stale=stale, target_minutes=args.target_minutes
