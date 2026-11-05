@@ -40,6 +40,7 @@ on:
       - "scripts/generate_dna_witness.py"
       - "scripts/persist_watch_history.py"
       - "tests/test_watch_observatory.py"
+      - "tests/test_watch_recovery.py"
       - "tests/test_site_integrity.py"
       - "tests/test_global_ai_watch.py"
       - "tests/test_epistemic_radar.py"
@@ -92,7 +93,6 @@ jobs:
 
       - name: Check out the independent Watch recovery archive
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        continue-on-error: true
         with:
           ref: watch-history
           path: .cmb-watch-recovery

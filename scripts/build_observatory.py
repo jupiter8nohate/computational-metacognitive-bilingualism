@@ -102,16 +102,19 @@ def load_prior(path: Path | None, *, url: str = PUBLIC_HISTORY) -> dict:
     return history
 
 
-def recover_git_history(directory: Path) -> dict | None:
-    """Recover the latest connected chain from pre-checkpoint Git records."""
-    records = {}
+def recover_git_history(directory: Path, published: dict) -> dict:
+    """Recover the newest connected chain across the two legacy archives."""
+    published_entries = published["entries"]
+    records = {record["hash"]: record for record in published_entries}
     for path in sorted(directory.glob("*/*.json")):
         record = json.loads(path.read_text(encoding="utf-8"))
-        records[record["hash"]] = record
+        records.setdefault(record["hash"], record)
     if not records:
-        return None
+        return published
 
     tip = max(records.values(), key=lambda record: parse_time(record["collected_at"]))
+    if published_entries and tip["hash"] == published_entries[-1]["hash"]:
+        return published
     chain = []
     seen = set()
     while tip is not None:
@@ -121,10 +124,20 @@ def recover_git_history(directory: Path) -> dict | None:
         chain.append(tip)
         tip = records.get(tip["previous_hash"])
     chain.reverse()
+    earlier = max(0, int(published.get("total_collections", len(published_entries))) - len(published_entries))
+    published_counts = {
+        record["hash"]: earlier + index
+        for index, record in enumerate(published_entries, start=1)
+    }
+    published_counts[published.get("genesis_hash", GENESIS)] = earlier
+    total = published_counts.get(chain[0]["previous_hash"], 0) + len(chain)
+    for index, record in enumerate(chain, start=1):
+        if record["hash"] in published_counts:
+            total = max(total, published_counts[record["hash"]] + len(chain) - index)
     history = {
         **new_history(),
         "genesis_hash": chain[0]["previous_hash"],
-        "total_collections": len(chain),
+        "total_collections": total,
         "entries": chain,
     }
     check_history(history)
@@ -144,16 +157,14 @@ def load_recovery_history(archive: Path) -> dict:
     try:
         published = load_prior(None)
     except ObservatoryError:
-        recovered = recover_git_history(archive / "watch-snapshots")
-        if recovered is None:
+        recovered = recover_git_history(archive / "watch-snapshots", new_history())
+        if not recovered["entries"]:
             raise
         return recovered
-    if published["entries"]:
-        return published
-    recovered = recover_git_history(archive / "watch-snapshots")
-    if recovered is None and not archive.is_dir():
+    recovered = recover_git_history(archive / "watch-snapshots", published)
+    if not recovered["entries"] and not archive.is_dir():
         raise ObservatoryError("Neither published history nor the Git archive is available")
-    return recovered if recovered is not None else published
+    return recovered
 
 
 def collection_record(snapshot: dict, previous_hash: str) -> dict:

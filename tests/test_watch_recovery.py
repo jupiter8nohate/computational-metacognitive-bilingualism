@@ -73,6 +73,19 @@ class WatchRecoveryTests(unittest.TestCase):
         self.assertEqual(list(blobs.values()), [recovered["entries"][-1]])
         self.assertEqual(request.call_args.args[3], {"sha": "new", "force": False})
 
+    def test_migration_keeps_newer_git_collection_when_pages_is_behind(self):
+        published = observatory.new_history()
+        observatory.record_snapshot(published, sample(3), stale=False)
+        published["total_collections"] = 15
+        history = {**published, "entries": published["entries"].copy()}
+        observatory.record_snapshot(history, sample(2), stale=False)
+        with tempfile.TemporaryDirectory() as folder:
+            checkout = Path(folder)
+            git_record = history["entries"][-1]
+            observatory.save_json(checkout / "watch-snapshots" / "legacy" / "new.json", git_record)
+            with patch.object(observatory, "load_prior", return_value=published):
+                self.assertEqual(observatory.load_recovery_history(checkout), history)
+
     def test_source_failure_reuses_git_snapshot_without_contacting_pages(self):
         saved = sample(8)
         history = observatory.new_history()
