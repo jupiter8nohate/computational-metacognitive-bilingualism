@@ -19,7 +19,7 @@ All notable changes to the CMB provenance tool are documented here.
 ### Release candidate
 
 - Prepare `1.5.0-rc.2` with the Actix dependency remediation already on `main`, synchronizing package, tool, CFF, and BibTeX metadata.
-- Run polyglot conformance when package metadata changes and publish RC tags as GitHub prereleases.
+- Run polyglot conformance when package metadata changes.
 - Added regression tests that fail if release version metadata drifts or TypeScript/Rust dependency locking is weakened.
 - This candidate is not the final v1.5.0 validation claim; independent review under issue #63 remains required before the final release.
 

@@ -64,7 +64,7 @@ git tag v1.5.0-rc.2 "$CMB_RC_COMMIT"
 git push origin refs/tags/v1.5.0-rc.2
 ```
 
-Python packaging normalizes `1.5.0-rc.2` to `1.5.0rc2` in distribution metadata and filenames. GitHub publishes the candidate as a prerelease.
+Python packaging normalizes `1.5.0-rc.2` to `1.5.0rc2` in distribution metadata and filenames. Verify the GitHub prerelease workflow change is approved and merged before pushing the candidate tag.
 
 Do not publish final `v1.5.0` until the independent-review gate in
 `docs/EXTERNAL_REVIEW.md` and issue #63 has been satisfied.

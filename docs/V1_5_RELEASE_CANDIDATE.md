@@ -87,7 +87,7 @@ EXACT_COMMIT > MOVING_TARGET
 
 ## RC publication state
 
-The `v1.5.0-rc.2` tag must point to the exact candidate commit in [issue #138](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/138). The tag workflow publishes a signed prerelease after its gates succeed.
+The `v1.5.0-rc.2` tag must point to the exact candidate commit in [issue #138](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/138). Before tagging, verify that the production release workflow is authorized to publish the candidate as a signed prerelease.
 
 ~~~text
 TAG_COMMIT == REVIEW_COMMIT
