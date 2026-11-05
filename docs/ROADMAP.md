@@ -17,7 +17,7 @@ Any canonical artifact changed after `v1.4.1` must wait for a later version-matc
 
 ## P0 ✦ one independent reviewer
 
-Issue #5 is the primary outside-validation gate.
+[Issue #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) tracks independent review of the exact v1.5 candidate commit.
 
 The project wants one serious security/provenance review before seeking broad endorsement.
 
@@ -34,11 +34,7 @@ Completed in-repository controls include:
 - OpenSSF Scorecard
 - explicit threat model
 
-Platform-side controls still require repository settings:
-
-- Dependency Graph;
-- private vulnerability reporting;
-- branch protections described in [Repository settings](REPOSITORY_SETTINGS.md).
+The active default-branch ruleset requires pull requests and critical checks. The [repository settings audit](REPOSITORY_SETTINGS.md) records the checks and the security settings that still need account-level verification.
 
 ## P1 ✦ interactive human/machine front door
 

@@ -116,10 +116,14 @@ HUMAN_AGENCY &gt; MACHINE_AUTHORITY</div>
     <div id="lenses"></div>
   </section>
 
-  <section class="panel" style="margin-top:1rem">
+  <section id="human-review-example" class="panel" style="margin-top:1rem">
     <h2>5. Explicit policy boundary</h2>
     <p class="muted">The engine evaluates declared facts. It does not infer identity or intent from the sentence above.</p>
-    <div class="checks">
+    <h3>Try a decision without a human review path</h3>
+    <p>A workflow is ready to issue a consequential decision. Load the example to see which rule blocks it. Then enable human review and evaluate the same decision again.</p>
+    <button id="run-human-review-example" type="button">Run the human review example</button>
+    <p class="small muted">This example uses the same inputs as the shared <a href="https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/conformance/boundary.v1.cases.json#L70-L92">human review conformance case</a>.</p>
+    <div id="boundary-facts" class="checks">
       <label><input id="aiInvolved" type="checkbox"> AI is involved</label>
       <label><input id="aiDisclosed" type="checkbox"> AI involvement is disclosed</label>
       <label><input id="consequential" type="checkbox"> Decision is consequential</label>
@@ -130,7 +134,7 @@ HUMAN_AGENCY &gt; MACHINE_AUTHORITY</div>
       <label><input id="consentPresent" type="checkbox"> Required consent is present</label>
     </div>
     <button id="evaluate">Evaluate boundary</button>
-    <pre id="boundary">No evaluation yet.</pre>
+    <pre id="boundary" aria-live="polite">No evaluation yet.</pre>
   </section>
 
   <section class="panel small muted" style="margin-top:1rem">
@@ -235,6 +239,12 @@ document.getElementById("run").addEventListener("click", () => {
   });
 });
 document.getElementById("evaluate").addEventListener("click", evaluateBoundary);
+document.getElementById("run-human-review-example").addEventListener("click", () => {
+  document.querySelectorAll("#boundary-facts input").forEach(input => {
+    input.checked = input.id === "consequential";
+  });
+  evaluateBoundary();
+});
 project();
 </script>
 </body>

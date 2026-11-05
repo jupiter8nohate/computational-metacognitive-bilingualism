@@ -6,6 +6,8 @@ The repository now includes a zero-dependency browser playground at:
 
 It is designed to make CMB understandable before a visitor reads the full specifications.
 
+The [human review example](playground/index.html#human-review-example) evaluates a consequential decision with no review path. It returns `HUMAN_REVIEW_REQUIRED`. Enable human review and evaluate again to compare the result against the [shared conformance case](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/conformance/boundary.v1.cases.json#L70-L92).
+
 ## What it does
 
 - accepts a human statement;
@@ -26,6 +28,6 @@ The browser tool runs locally and has no analytics or external JavaScript depend
 
 ## Deployment
 
-MkDocs copies the standalone page into the generated documentation site. Once GitHub Pages is enabled for this repository, the same artifact can function as the public CMB interactive front door.
+MkDocs copies the standalone page into the public documentation site. The CMB homepage links directly to the human review example.
 
 For the executable Python policy engine, see [For developers](DEVELOPERS.md).

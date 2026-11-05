@@ -59,7 +59,7 @@ These are **stabilization and accessibility enhancements**, not evidence that un
 
 ## ♃ Ten-upgrade evolution proposal
 
-An independent review branch proposes four clear reading entrances, nine-transmission progress, a red-gold accessible design layer, a seven-gate editorial evidence crosswalk, registry consistency checks, Chromium/axe-core screenshots and a release-boundary review. See [the evolution release notes](docs/EVOLUTION_RELEASE_NOTES.md) for precise status and limitations. These proposed UX features are not part of the frozen v1.5 release candidate and are not externally validated by their appearance in a PR.
+The [evolution release notes](docs/EVOLUTION_RELEASE_NOTES.md) record the reading entrances, nine-transmission progress, accessible design, editorial evidence crosswalk, registry checks and browser validation with their publication and review boundaries.
 
 ## 🧊 v1.5 Stabilization Mode
 
@@ -75,7 +75,7 @@ explicitly reviewed as a freeze-boundary exception.
 
 **Stabilization contract:** [CMB v1.5 Stabilization Cycle](docs/STABILIZATION_CYCLE.md)
 **Release-candidate handoff:** [CMB v1.5 Release Candidate Brief](docs/V1_5_RELEASE_CANDIDATE.md)  
-**Frozen candidate:** `1.5.0-rc.1` at `e725bb6a819a8c48ed16558d88c58e17cbf9b3d5` on `review/v1.5.0-rc.1-e725bb6`; signed RC tag is still pending.  
+**Candidate source version:** `1.5.0-rc.2`. The [candidate publication ticket](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/138) tracks the exact candidate commit, tag, and signed assets.  
 **Tracked gates:** [dependency reproducibility #62](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/62) · [independent review #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) · [Zenodo/DOI #44](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/44)
 
 ```text
@@ -91,7 +91,7 @@ This repository separates the published baseline, the current release candidate,
 | Surface | Current state | Meaning |
 | --- | --- | --- |
 | Published signed baseline | `v1.4.1` | Last published signed release |
-| Frozen RC candidate | `1.5.0-rc.1` @ `e725bb6a` | Exact review object; later `main` commits are not part of this candidate |
+| RC candidate | `1.5.0-rc.2` | [Issue #63](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/issues/63) records the exact candidate and review status |
 | Independent technical review | **Pending** | Self-tests and CI are not external validation |
 | Default-branch governance | **Active ruleset** | Pull request, linear-history, review-thread, and required-check gates protect `main` |
 | External archive / DOI | **Pending public verification** | Citation metadata must not claim a DOI until the record resolves publicly |

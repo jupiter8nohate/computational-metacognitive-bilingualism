@@ -4,6 +4,11 @@ All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
 
+### Watch recovery and site status
+
+- Preserve a complete Watch recovery checkpoint and its hash-linked collection on the Git archive branch in one commit.
+- Add a runnable human-review example to the existing playground and link repository, release, review, indexing and archive status to their evidence.
+
 ### Search publication repair
 
 - Emit titles, descriptions, canonicals and social metadata for every documentation page, honoring authored front matter and retaining existing structured identities and body glyphs.
@@ -13,7 +18,8 @@ All notable changes to the CMB provenance tool are documented here.
 
 ### Release candidate
 
-- Prepared package, tool, CFF, and BibTeX metadata for `1.5.0-rc.1` on the dedicated release-candidate branch.
+- Prepare `1.5.0-rc.2` with the Actix dependency remediation already on `main`, synchronizing package, tool, CFF, and BibTeX metadata.
+- Run polyglot conformance when package metadata changes.
 - Added regression tests that fail if release version metadata drifts or TypeScript/Rust dependency locking is weakened.
 - This candidate is not the final v1.5.0 validation claim; independent review under issue #63 remains required before the final release.
 
