@@ -362,5 +362,5 @@ def test_homepage_visible_heading_preserves_word_boundaries() -> None:
     source = (ROOT / "docs/index.md").read_text(encoding="utf-8")
     parser = HomeHeadingParser()
     parser.feed(source)
-    heading = re.sub(r"\\s+", " ", "".join(parser.tokens)).strip()
+    heading = re.sub(r"\s+", " ", "".join(parser.tokens)).strip()
     assert heading == "COMPUTATIONAL METACOGNITIVE BILINGUALISM™"
