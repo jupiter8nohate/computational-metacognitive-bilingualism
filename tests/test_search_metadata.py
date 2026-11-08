@@ -334,3 +334,33 @@ def test_sitemap_finalization_adds_static_routes_and_synchronizes_gzip(
     before = sitemap.read_bytes()
     SEO.finalize_sitemap(tmp_path)
     assert sitemap.read_bytes() == before
+
+
+def test_homepage_visible_heading_preserves_word_boundaries() -> None:
+    """Search and accessibility text must not collapse adjacent span labels."""
+    from html.parser import HTMLParser
+    import re
+
+    class HomeHeadingParser(HTMLParser):
+        def __init__(self) -> None:
+            super().__init__()
+            self.in_heading = False
+            self.tokens: list[str] = []
+
+        def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+            if tag == "h1" and dict(attrs).get("id") == "cmb-stage-title":
+                self.in_heading = True
+
+        def handle_endtag(self, tag: str) -> None:
+            if tag == "h1":
+                self.in_heading = False
+
+        def handle_data(self, data: str) -> None:
+            if self.in_heading:
+                self.tokens.append(data)
+
+    source = (ROOT / "docs/index.md").read_text(encoding="utf-8")
+    parser = HomeHeadingParser()
+    parser.feed(source)
+    heading = re.sub(r"\s+", " ", "".join(parser.tokens)).strip()
+    assert heading == "COMPUTATIONAL METACOGNITIVE BILINGUALISM™"

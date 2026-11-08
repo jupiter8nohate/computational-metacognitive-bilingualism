@@ -1,5 +1,9 @@
 # Computational Metacognitive Bilingualism™ (CMB)
 
+Computational Metacognitive Bilingualism™ (CMB) is a creator-authored human-agency and computational-literacy framework by **Jupiter Hudson** (also publishing as **WisdomLoveThePoet** and **Jupiter 8**). It brings together code poetry, AI ethics, neurodiversity advocacy, digital rights, and verifiable artifact provenance. Its philosophical principles are not, by themselves, technical enforcement or legal guarantees.
+
+**Start here:** [What is CMB?](docs/concepts/what-is-cmb.md) · [Creator biography](docs/JUPITER_HUDSON_BIOGRAPHY.md) · [Interactive playground](docs/PLAYGROUND.md) · [Developers](docs/DEVELOPERS.md) · [Researchers](docs/RESEARCHERS.md) · [Search and citation guidance](docs/SEARCH_DISCOVERY.md)
+
 **Trademark notation:** The full project name is styled Computational Metacognitive Bilingualism™. The ™ symbol denotes a claimed trademark and does not itself establish registration.
 
 **D.N.A. Bible™ (Demons Need Attention):** This authored creative-book name also uses a claimed ™ mark. [Read the D.N.A. Bible™ naming, attribution, and trademark-status notice](docs/DNA_BIBLE_TRADEMARK.md). Neither ™ designation represents a confirmed trademark registration.
