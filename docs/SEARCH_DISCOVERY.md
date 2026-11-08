@@ -67,30 +67,42 @@ These actions require control of third-party accounts and cannot be completed by
 5. Connect GitHub to Zenodo and archive a signed release to obtain a DOI.
 6. Configure GitHub Topics and the repository social-preview image in repository settings.
 
-## Recommended GitHub Topics
+## GitHub repository discovery settings (owner action required)
+
+The searchable repository **About** description, website, topics and social preview are GitHub-hosted account settings. Committing this documentation does not activate them.
+
+**Suggested About description (copy into GitHub's repository About editor):**
+
+> Computational Metacognitive Bilingualism (CMB): human agency, AI ethics, digital rights, neurodiversity, code poetry, and verifiable provenance.
+
+**Website:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/
+
+**Recommended GitHub Topics (select relevant topics in the About editor):**
 
 ```text
-artificial-intelligence
 ai-ethics
 digital-rights
 human-agency
 metacognition
 cognitive-sovereignty
+neurodiversity
+computational-literacy
+code-poetry
+artificial-intelligence
 provenance
 content-authenticity
 c2pa
-cryptography
-neurodiversity
-computational-literacy
-ai-agents
-mcp
+privacy
 python
-rust
-golang
-digital-identity
 ai-safety
-human-computer-interaction
+digital-identity
 ```
+
+**Social preview:** Upload a legible 1280 x 640 PNG or JPEG from the repository's Settings > Social preview. Use the full project name, human-agency principle and the credited creator name; avoid suggesting an independent certification or endorsement. A preview asset in GitHub's settings is separate from the site's Open Graph image.
+
+**External confirmation:** After saving GitHub settings, verify the public repository About box, the selected topics, and the social preview directly. These settings have not been confirmed by source-controlled documentation.
+
+**Google indexing:** The sitemap and metadata are publication signals, not Search Console verdicts. Verify the homepage, [What Is CMB](concepts/what-is-cmb.md), [Jupiter Hudson biography](JUPITER_HUDSON_BIOGRAPHY.md), and [FAQ](FAQ.md) by inspecting their **published canonical URLs** in Google Search Console. Record indexed status, selected canonical, last crawl time and inspection date in [SEARCH_INDEXING_CHECKLIST.md](SEARCH_INDEXING_CHECKLIST.md). Do not infer index coverage from a search result snippet alone.
 
 ## Measurement
 
