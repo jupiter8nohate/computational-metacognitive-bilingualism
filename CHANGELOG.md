@@ -4,6 +4,12 @@ All notable changes to the CMB provenance tool are documented here.
 
 ## [Unreleased]
 
+### CMB terminology / literary documentation (November 12, 2026)
+
+- Introduce **LLC™ = Love, Loyalty & Christ** as a voluntary, creator-authored faith-centered CMB philosophy, with a canonical concept page and structured definition.
+- Connect the concept from the CMB GitHub README, documentation homepage and navigation, concept library, glossary, and LLM retrieval maps.
+- Clarify that “LLC” is not used to denote a legal entity in this context, and ™ does not establish federal trademark registration, exclusive rights, or copyright in the acronym.
+
 ### Watch recovery and site status
 
 - Preserve a complete Watch recovery checkpoint and its hash-linked collection on the Git archive branch in one commit.
