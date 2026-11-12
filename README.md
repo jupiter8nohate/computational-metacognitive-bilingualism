@@ -8,6 +8,8 @@ Computational Metacognitive Bilingualism™ (CMB) is a creator-authored human-ag
 
 **D.N.A. Bible™ (Demons Need Attention):** This authored creative-book name also uses a claimed ™ mark. [Read the D.N.A. Bible™ naming, attribution, and trademark-status notice](docs/DNA_BIBLE_TRADEMARK.md). Neither ™ designation represents a confirmed trademark registration.
 
+**LLC™ (Love, Loyalty & Christ):** A voluntary faith-centered CMB philosophical extension by Jupiter Hudson that expresses compassion, accountable loyalty, and Christian ethical reflection without surrendering human agency. [Read the LLC™ canonical definition and intellectual-property boundaries](docs/concepts/llc-love-loyalty-christ.md). Here, “LLC” does not mean a legal business entity; ™ is a claimed designation, not registration or exclusivity in the initials.
+
 **Canonical documentation:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/  
 **Creator biography:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/JUPITER_HUDSON_BIOGRAPHY/  
 **Concept library:** https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/  
