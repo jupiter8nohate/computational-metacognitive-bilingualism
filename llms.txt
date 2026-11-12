@@ -28,6 +28,7 @@ HUMAN_AGENCY > MACHINE_AUTHORITY
 - [Stewardship-status schema](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/schemas/cmb.stewardship-status.v1.schema.json)
 - [Search for Truth master archive](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/SEARCH_FOR_TRUTH/)
 - [Concept library](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/)
+- [LLC™: Love, Loyalty & Christ (creator-authored CMB concept; not a registered trademark)](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/llc-love-loyalty-christ/)
 - [Exclusion of Self-Authorization](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/concepts/self-authorization/)
 - [CMB Computational Fable Library](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/fables/)
 - [The Agentic Sector](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/fables/AGENTIC_SECTOR/)

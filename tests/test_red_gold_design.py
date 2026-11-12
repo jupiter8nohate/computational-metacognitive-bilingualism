@@ -59,7 +59,9 @@ def test_homepage_references_red_gold_art_and_all_destinations() -> None:
     assert 'class="cmb-stage"' in homepage
     assert 'media/cmb-red-gold-seal.svg' in homepage
     assert homepage.count('class="cmb-story cmb-story--') == 4
-    assert homepage.count('class="cmb-atlas-node"') == 6
+    assert homepage.count('class="cmb-atlas-node"') == 7
+    assert 'LLC™ · LOVE, LOYALTY & CHRIST' in homepage
+    assert 'href="concepts/llc-love-loyalty-christ/"' in homepage
     assert 'href="spiders-internet/"' in homepage
     assert 'href="2084/"' in homepage
     assert 'href="DEVELOPERS/"' in homepage

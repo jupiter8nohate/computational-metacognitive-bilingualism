@@ -97,6 +97,7 @@
 <nav class="cmb-stage-actions" aria-label="Start exploring Computational Metacognitive Bilingualism">
 <a class="cmb-action cmb-action--primary" href="playground/#human-review-example">Try the Human Review Demo ↗</a>
 <a class="cmb-action cmb-action--quiet" href="concepts/what-is-cmb/">Understand CMB ↗</a>
+<a class="cmb-action cmb-action--quiet" href="concepts/llc-love-loyalty-christ/">LLC™ · Love, Loyalty & Christ ↗</a>
 <a class="cmb-action cmb-action--secondary" href="2084/">Enter the Stories ↗</a>
 <a class="cmb-action cmb-action--quiet" href="DEVELOPERS/">Build and Verify ↗</a>
 <a class="cmb-action cmb-action--quiet" href="JUPITER_HUDSON_BIOGRAPHY/">Meet the Creator ↗</a>
@@ -379,6 +380,7 @@ This interactive concept map connects the human-agency principles to their autho
 <details class="cmb-atlas-node"><summary>⌘ MACHINE MODELS</summary><p>A model's classification or prediction is not a person's identity or destiny.</p><a href="concepts/model-not-mind/">View distinction ↗</a></details>
 <details class="cmb-atlas-node"><summary>𓁹 PATTERN / PROOF</summary><p>An observed pattern invites a hypothesis, not an automatic verdict.</p><a href="concepts/pattern-not-proof/">View evidence boundary ↗</a></details>
 <details class="cmb-atlas-node"><summary>⚖ COGNITIVE SOVEREIGNTY</summary><p>Explore the right to independent interpretation, expression, and self-definition.</p><a href="concepts/cognitive-sovereignty/">View concept ↗</a></details>
+<details class="cmb-atlas-node"><summary>✝ LLC™ · LOVE, LOYALTY & CHRIST</summary><p>A voluntary faith-centered CMB values expression: compassion, accountable trust, and Christian ethical reflection without coercion or surrendered human agency. The ™ is a claimed designation, not a registration.</p><a href="concepts/llc-love-loyalty-christ/">Read LLC™ philosophy and IP boundaries ↗</a></details>
 <details class="cmb-atlas-node"><summary>✦ PROVENANCE</summary><p>Authorship declarations, cryptographic integrity, and legal rights are separate kinds of evidence.</p><a href="concepts/cmb-provenance/">View verification path ↗</a></details>
 </div>
 
@@ -387,5 +389,7 @@ This interactive concept map connects the human-agency principles to their autho
 ## Canonical concept library
 
 For concise retrieval-oriented definitions, use the [CMB Concept Library](concepts/index.md), [FAQ](FAQ.md), and [Retrieval Glossary](GLOSSARY.md).
+
+**New terminology:** [LLC™ | Love, Loyalty & Christ](concepts/llc-love-loyalty-christ.md) joins the authored CMB concept library as a *voluntary Christian ethical expression*. It is not a legal company, registered mark, or machine-enforced faith requirement.
 
 Machine consumers can use the [knowledge graph](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/knowledge-graph.jsonld), [discovery manifest](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/machine/discovery-manifest.json), [agent card](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/agent-card.json), and [agent registry](https://jupiter8nohate.github.io/computational-metacognitive-bilingualism/agents/registry.json).
