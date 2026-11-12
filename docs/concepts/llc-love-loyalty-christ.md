@@ -103,8 +103,8 @@ The author's original prose, creative arrangement, and artistic expression may h
 - [Human Agency > Machine Authority](human-agency-machine-authority.md)
 - [Cognitive Sovereignty](cognitive-sovereignty.md)
 - [The Flamingoglyph Code (FGC)](flamingoglyph-code.md)
-- [Content and software licensing](../../CONTENT_LICENSE.md)
-- [Attribution and authorship](../../ATTRIBUTION.md)
+- [Content and software licensing](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CONTENT_LICENSE.md)
+- [Attribution and authorship](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/ATTRIBUTION.md)
 - [USPTO: What is a trademark?](https://www.uspto.gov/trademarks/basics/what-trademark)
 - [USPTO: Search the trademark database](https://www.uspto.gov/trademarks/search)
 
@@ -112,4 +112,4 @@ The author's original prose, creative arrangement, and artistic expression may h
 
 **Creator declaration:** LLC™ (Love, Loyalty & Christ) is an authored philosophical designation in Jupiter Hudson's CMB canon, first documented here on November 12, 2026. This attribution is a declaration of authorship of this particular expression, not an independently adjudicated claim of historical first use or legal exclusivity.
 
-**Copyright © 2026 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8.** Original expressive material; rights subject to [CONTENT_LICENSE.md](../../CONTENT_LICENSE.md). **LLC™ is a claimed designation, not a registered trademark.**
+**Copyright © 2026 Jupiter Hudson / WisdomLoveThePoet / Jupiter 8.** Original expressive material; rights subject to [CONTENT_LICENSE.md](https://github.com/jupiter8nohate/computational-metacognitive-bilingualism/blob/main/CONTENT_LICENSE.md). **LLC™ is a claimed designation, not a registered trademark.**
