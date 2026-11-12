@@ -5,7 +5,7 @@ This glossary connects CMB terminology to broader search language so humans and 
 | CMB term | Related retrieval language | Boundary |
 |---|---|---|
 | Computational Metacognitive Bilingualism™ | computational metacognition; human-machine literacy; AI literacy | Related language, not exact synonyms |
-| LLC™ (Love, Loyalty & Christ) | faith-centered CMB ethics; accountable loyalty; compassionate design; Christian code-poetry | Optional creator-authored values expression, not a limited liability company, registered trademark, or universal religious requirement; [definition](concepts/llc-love-loyalty-christ.md) |
+| LLC™ (Love, Loyalty & Christ) | last-days scripture; Christian code-poetry; spiritual creativity; AI copyright and digital literacy; creator provenance | Optional creator-authored ethical covenant contrasted with limited liability company; not a legal entity, registered trademark, or universal religious requirement; [definition](concepts/llc-love-loyalty-christ.md) |
 | PATTERN != PROOF | algorithmic inference limits; evidence quality; correlation versus proof | Patterns may still be evidence |
 | PROFILE != PERSON | profiling ethics; digital identity; personalization limits | Profiles remain useful bounded representations |
 | MODEL != MIND | AI epistemic limits; model versus person; inferred mental state | Not a scientific proof about every possible machine mind |
