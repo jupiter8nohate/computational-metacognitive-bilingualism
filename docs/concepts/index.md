@@ -3,7 +3,7 @@
 This directory gives humans, search engines, and retrieval systems one canonical page per major CMB concept. Each page has a short definition, formal expression, example, interpretation boundaries, related search language, and a canonical source.
 
 - [What is Computational Metacognitive Bilingualism™ (CMB)?](what-is-cmb.md)
-- [LLC™ | Love, Loyalty & Christ](llc-love-loyalty-christ.md) - a voluntary Christian ethical expression within CMB, with clear trademark and agency boundaries
+- [LLC™ | Love, Loyalty & Christ](llc-love-loyalty-christ.md) - a voluntary Christian last-days reflection using KJV Bible passages, computer-literacy practices, creator provenance, and carefully bounded trademark claims
 - [Pattern != Proof](pattern-not-proof.md)
 - [Profile != Person](profile-not-person.md)
 - [Model != Mind](model-not-mind.md)
