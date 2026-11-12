@@ -106,7 +106,13 @@ docs/DEATH_NOTE_2084.md
 docs/2084_REALITY_MIRROR_PROXY_GRAVITY.md
 machine/2084-reality-mirror.jsonld
 docs/concepts/self-authorization.md
+docs/concepts/llc-love-loyalty-christ.md
 manifestos/RECLAIMING_THE_PEN_EIGHT_LANGUAGES.md
+
+LLC™ = Love, Loyalty & Christ: a voluntary, creator-authored CMB ethical expression.
+Trademark notation is a creator claim, not registration or exclusivity in the letters "LLC".
+It does not form a legal business entity or impose Christian faith as a condition of human dignity.
+
 library/creator-provenance.json
 schemas/cmb.creator-provenance.v1.schema.json
 
