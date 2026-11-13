@@ -1,0 +1,23 @@
+{
+  "record_type": "noncanonical_rule_based_allegory",
+  "canonical_author": "Jupiter Hudson / WisdomLoveThePoet / Jupiter 8",
+  "generated_by": "CMB deterministic rule-based generator",
+  "chapter": {
+    "id": "witness-33bf12a1540d",
+    "theme": "Have we finally found a valid use case for AI? Meet Pino the autonomous virtual kiwi | First Dog on the Moon",
+    "source_url": "https://www.theguardian.com/commentisfree/picture/2026/nov/13/have-we-finally-found-a-valid-use-case-for-ai-meet-pino-the-autonomous-virtual-kiwi",
+    "source_domain": "www.theguardian.com",
+    "boundaries": [
+      "ACT"
+    ],
+    "status": "fictional_allegory_not_fact_checked",
+    "question": "Who authorized the action, and how can a human contest it?",
+    "passage": [
+      "And the Watcher heard a new account arise from the public square.",
+      "Yet the Scribe refused to place a headline upon the throne of Truth.",
+      "For a machine may recognize a pattern, but a pattern is not proof.",
+      "And the Adversary asked for the source before drawing any conclusion.",
+      "So the Guardian left the question open, and the human kept the pen."
+    ]
+  }
+}
